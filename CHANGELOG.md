@@ -9,7 +9,19 @@ All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning follows
 [Semantic Versioning](https://semver.org/).
 
-## [Unreleased]
+## [1.1.0] — 2026-06-19
+
+### Added
+
+- **Nine new packs**, all Tier-1 public-domain or Tier-2 open:
+  - `nasa-npr-7123` (NASA SE process requirements), `nasa-risk` (Risk Management Handbook),
+    `nasa-system-safety` (System Safety Handbook v2), `nasa-hsi` (Human Systems Integration).
+  - `nist-ai-rmf` (AI Risk Management Framework 1.0), `nist-ssdf` (SP 800-218), `nist-csf` (CSF 2.0).
+  - `mil-std-882` (DoD System Safety).
+  - `requirements-writing` (original guidance: EARS patterns + requirement quality, CC BY 4.0 —
+    cites methods rather than reproducing ISO 29148 / the EARS paper).
+- `docs/PACK-BACKLOG.md` source ledger; `docs/SOURCE-VETTING.md` Excluded list extended
+  (OMG `formal/` corpus, NAF, DAU). `eu-ai-act` and `dodaf` deferred (source download blocked).
 
 ### Removed
 

@@ -91,6 +91,23 @@ Third-party source attributions (one block per shipped pack)
   Terms  : public domain, no copyright. Attribution to NASA is courtesy, not
            obligation; NASA does not endorse this pack. See packs/nasa-hsi/LICENSE.
 
+[pack: mil-std-882]
+  Source : MIL-STD-882E — DoD Standard Practice: System Safety (w/Change 1)
+  Author : US Department of Defense
+  Licence: Public Domain -- US Government work (17 U.S.C. 105); Distribution A
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. Attribution to the US DoD is courtesy, not
+           obligation; the DoD does not endorse this pack. See packs/mil-std-882/LICENSE.
+
+[pack: requirements-writing]
+  Source : Requirements Writing Guidance: EARS syntax and requirement quality
+  Author : JG Systems Consulting Ltd. (original synthesis)
+  Licence: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
+  Changes: original synthesis -- methods CITED not reproduced (EARS / Mavin et al. 2009;
+           quality & verification per NASA public-domain guidance)
+  Terms  : original guidance under CC BY 4.0; not a reproduction of ISO/IEC/IEEE 29148,
+           the INCOSE GtWR, or the EARS paper. See packs/requirements-writing/LICENSE.
+
 -----------------------------------------------------------------------------------
 The build pipeline uses the book-to-skill extraction engine (MIT License),
 © the book-to-skill authors. It is a build tool, not a packaged source.

@@ -1,0 +1,21 @@
+mil-std-882 pack — content licence
+===================================
+
+This pack is derived from:
+    MIL-STD-882E — DoD Standard Practice: System Safety (w/Change 1)
+    US Department of Defense, Rev E w/Change 1 (2023)
+
+Source licence: Public Domain (US Government work); Distribution A (public release, unlimited)  (tier 1 — see ../../docs/SOURCE-VETTING.md)
+No source-material download link is published (see ../../docs/LICENSING.md).
+
+This source is a work of the United States Government, prepared by the US
+Department of Defense, and is therefore NOT subject to copyright protection in the
+United States (17 U.S.C. 105). It is marked Distribution A (approved for public
+release; distribution unlimited): anyone may reproduce, transform, and redistribute it
+for any purpose, including commercially, without permission.
+
+Attribution to the US Department of Defense is provided as a courtesy (see the
+repository NOTICE), not a legal obligation. The DoD does not endorse this pack.
+
+NOTE: This file governs the CONTENT of this pack. The repository tooling is licensed
+separately under MIT (see ../../LICENSE).

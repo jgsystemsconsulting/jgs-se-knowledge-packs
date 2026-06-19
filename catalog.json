@@ -102,6 +102,28 @@
       "commercial_use": true,
       "chapters": 9,
       "status": "live"
+    },
+    {
+      "slug": "mil-std-882",
+      "title": "MIL-STD-882E \u2014 DoD Standard Practice: System Safety (w/Change 1)",
+      "publisher": "US Department of Defense",
+      "source_version": "Rev E w/Change 1 (2023)",
+      "license": "Public Domain (US Government work)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 8,
+      "status": "live"
+    },
+    {
+      "slug": "requirements-writing",
+      "title": "Requirements Writing Guidance: EARS syntax and requirement quality",
+      "publisher": "JG Systems Consulting Ltd. (original synthesis)",
+      "source_version": "2026",
+      "license": "Original guidance (CC BY 4.0); cited methods not reproduced",
+      "license_tier": 2,
+      "commercial_use": true,
+      "chapters": 6,
+      "status": "live"
     }
   ],
   "planned": [
