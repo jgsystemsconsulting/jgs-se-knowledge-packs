@@ -182,3 +182,59 @@ def baseline_gate_ok(diff: dict) -> bool:
     """The gate bites ONLY on regressions. 'fixed' and 'new' do not fail the gate
     (they signal the baseline should be refreshed)."""
     return not diff["regressions"]
+
+
+def render_report(pack_aggregates: list[dict], suite: str, total_packs: int,
+                  judge_model: str, bank_sha: str) -> str:
+    """Markdown run report. Failures listed first. Shows N/total denominator, judge model,
+    and bank git SHA so any two reports are self-describingly comparable."""
+    n = len(pack_aggregates)
+    lines = [
+        "# Eval run report",
+        "",
+        f"- **Suite status:** {suite}",
+        f"- **Packs evaluated:** {n}/{total_packs}",
+        f"- **Judge model:** {judge_model}",
+        f"- **Bank git SHA:** {bank_sha}",
+        "",
+        "## Packs",
+        "",
+    ]
+    for p in sorted(pack_aggregates, key=lambda a: 0 if a["status"] == "FAIL" else 1):
+        lines.append(f"### {p['slug']} — {p['status']}")
+        fails = [q for q, v in p["verdicts"].items() if v == "FAIL"]
+        if fails:
+            lines.append("")
+            lines.append("Failing questions (severity-first):")
+            for q in fails:
+                lines.append(f"- `{q}` — verdict FAIL, disposition {p['dispositions'].get(q, 'NONE')}")
+        passes = [q for q, v in p["verdicts"].items() if v == "PASS"]
+        lines.append("")
+        lines.append(f"Passing: {len(passes)} | canary load-bearing: {p['canary_load_bearing']}")
+        lines.append("")
+    return "\n".join(lines)
+
+
+def render_quarantine(slug: str, records: list[dict]) -> str:
+    """VERDICT-ONLY digest of questions needing human review. NEVER includes the answer
+    text or any source quotation (honors the repo's raw-source-text prohibition).
+    Returns '' if nothing needs review."""
+    out: list[str] = []
+    for r in records:
+        disp = disposition(r)
+        if disp == "NONE":
+            continue
+        j = r["judge"]
+        out.append(f"### `{r['id']}` — {disp}")
+        out.append(f"- faithfulness: {j.get('faithfulness')}")
+        out.append(f"- unmapped claims: {len(j.get('unmapped_claims', []))}")
+        out.append(f"- must_not_include hits: {len(j.get('must_not_include_hits', []))}")
+        out.append(f"- must_use_terms missing: {j.get('must_use_terms_missing', [])}")
+        out.append("")
+    if not out:
+        return ""
+    return "\n".join([f"# Quarantine / anchor-review digest — {slug}",
+                      "",
+                      "Verdict-only. No answer text or source quotations are included by design.",
+                      "Review each item by re-running the question and inspecting the answer locally.",
+                      ""] + out)
