@@ -73,8 +73,8 @@ Excluded tier.
 
 ```bash
 # Claude Code — clone the whole repo, symlink/copy the pack into your skills dir:
-git clone https://github.com/<owner>/se-knowledge-packs.git
-cp -r se-knowledge-packs/packs/sebok ~/.claude/skills/sebok
+git clone https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs.git
+cp -r jgs-se-knowledge-packs/packs/sebok ~/.claude/skills/sebok
 # then in a session:  /sebok <topic>
 ```
 

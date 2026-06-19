@@ -1,7 +1,7 @@
 # Source Vetting
 
 This is the integrity document for the repository. **No pack is accepted unless its
-source clears this rubric.** The whole value of `se-knowledge-packs` is that every pack
+source clears this rubric.** The whole value of `jgs-se-knowledge-packs` is that every pack
 is redistributable by construction, so a colleague can install it, and we can publish it,
 without a copyright or licence breach.
 
