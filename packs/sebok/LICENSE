@@ -1,0 +1,28 @@
+SEBoK pack — content licence
+============================
+
+This pack is derived from the Guide to the Systems Engineering Body of Knowledge
+(SEBoK), v2.13, © the BKCASE Project (Trustees of the Stevens Institute of
+Technology), and is licensed under:
+
+    Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported
+    (CC BY-NC-SA 3.0)
+    https://creativecommons.org/licenses/by-nc-sa/3.0/
+
+You are free to:
+  - Share — copy and redistribute the material in any medium or format
+  - Adapt — remix, transform, and build upon the material
+
+Under the following terms:
+  - Attribution (BY) — You must give appropriate credit to the SEBoK / BKCASE
+    Project, provide a link to the licence, and indicate if changes were made.
+  - NonCommercial (NC) — You may not use the material for commercial purposes.
+  - ShareAlike (SA) — If you remix, transform, or build upon the material, you
+    must distribute your contributions under the same licence as the original.
+
+Source: https://sebokwiki.org/   (see "BKCASE Wiki: Copyright")
+
+NOTE: This licence governs the CONTENT of this pack (SKILL.md, chapters/,
+glossary.md, patterns.md, cheatsheet.md). It is independent of, and overrides
+for this folder, the repository's MIT licence — which covers only tooling and
+scaffolding. Attribution and share-alike obligations travel with this pack.

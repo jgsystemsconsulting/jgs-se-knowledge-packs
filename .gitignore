@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Pack build staging (raw extracted source text must never be committed —
+# it can be large and may carry the source's own licence on every page)
+**/.build/
+*.full_text.txt
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

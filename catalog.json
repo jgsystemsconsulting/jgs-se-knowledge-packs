@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "repository": "se-knowledge-packs",
+  "scope": "systems engineering",
+  "updated": "2026-06-19",
+  "packs": [
+    {
+      "slug": "sebok",
+      "title": "Guide to the Systems Engineering Body of Knowledge (SEBoK)",
+      "publisher": "BKCASE Project (Trustees of the Stevens Institute of Technology)",
+      "source_version": "v2.13 (2025-11-17)",
+      "source_url": "https://sebokwiki.org/",
+      "license": "CC BY-NC-SA 3.0",
+      "license_tier": 2,
+      "commercial_use": false,
+      "chapters": 41,
+      "status": "live"
+    }
+  ],
+  "planned": [
+    {
+      "slug": "nasa-se-handbook",
+      "title": "NASA Systems Engineering Handbook (SP-2016-6105 Rev 2)",
+      "publisher": "NASA",
+      "license": "Public Domain (US Government work)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "status": "planned"
+    },
+    {
+      "slug": "omg-sysml",
+      "title": "OMG Systems Modeling Language (SysML) Specification",
+      "publisher": "Object Management Group",
+      "license": "OMG Specification License",
+      "license_tier": 2,
+      "commercial_use": true,
+      "status": "planned"
+    },
+    {
+      "slug": "dodaf",
+      "title": "DoD Architecture Framework (DoDAF) 2.02",
+      "publisher": "US Department of Defense",
+      "license": "Distribution Statement A (public release, distribution unlimited)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "status": "planned"
+    },
+    {
+      "slug": "mit-ocw-se",
+      "title": "MIT OpenCourseWare 16.842 Fundamentals of Systems Engineering",
+      "publisher": "MIT OpenCourseWare",
+      "license": "CC BY-NC-SA 4.0",
+      "license_tier": 2,
+      "commercial_use": false,
+      "status": "planned"
+    }
+  ]
+}
