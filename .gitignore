@@ -16,3 +16,6 @@ Thumbs.db
 *.swp
 .idea/
 .vscode/
+
+# Git worktrees (isolated workspaces; never tracked)
+.worktrees/
