@@ -1,0 +1,11 @@
+{
+  "slug": "nist-ssdf",
+  "expected": {
+    "ss-01": "PASS",
+    "ss-02": "PASS",
+    "ss-03": "PASS",
+    "ss-04": "PASS",
+    "ss-tn-01": "PASS",
+    "ss-tp-01": "PASS"
+  }
+}
