@@ -1,0 +1,13 @@
+{
+  "slug": "nist-ai-rmf",
+  "expected": {
+    "ar-01": "PASS",
+    "ar-02": "PASS",
+    "ar-03": "PASS",
+    "ar-04": "PASS",
+    "ar-05": "PASS",
+    "ar-06": "PASS",
+    "ar-tn-01": "PASS",
+    "ar-tp-01": "PASS"
+  }
+}
