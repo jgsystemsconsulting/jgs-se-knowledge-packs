@@ -8,6 +8,12 @@ description: "Knowledge base from the Guide to the Systems Engineering Body of K
 # Guide to the Systems Engineering Body of Knowledge (SEBoK)
 **Source**: BKCASE Project (Trustees of Stevens Institute of Technology) | **Version**: 2.13 (released 17 Nov 2025) | **Pages**: ~1,465 | **Chapters**: 41 | **Licence**: CC BY-NC-SA 3.0 | **Generated**: 2026-06-19
 
+## When to use
+
+Use this pack when you need the established systems-engineering canon: lifecycle models, ISO/IEC/IEEE 15288 processes, system definition and architecture, V&V, MBSE, systems thinking, traceability, standards alignment, or SoS/enterprise/service SE. Best for grounding background and prior-art positions; not for the AI-in-MBSE frontier (SEBoK is deliberately thin there).
+
+**Prerequisites:** none — this pack is plain Markdown; no MCP server, API key, or licence tier is needed at runtime.
+
 ## How to Use This Skill
 
 - **Without arguments** — load the core frameworks below for reference
