@@ -1,0 +1,20 @@
+nasa-se-handbook pack — content licence
+========================================
+
+This pack is derived from:
+    NASA Systems Engineering Handbook (SP-2016-6105 Rev 2)
+    NASA, Rev 2 (2016)
+
+Source licence: Public Domain (US Government work, 17 U.S.C. 105)  (tier 1 — see ../../docs/SOURCE-VETTING.md)
+No source-material download link is published (see ../../docs/LICENSING.md).
+
+This source is a work of the United States Government, prepared by NASA, and is
+therefore NOT subject to copyright protection in the United States (17 U.S.C. 105).
+It is in the public domain: anyone may reproduce, transform, and redistribute it for
+any purpose, including commercially, without permission.
+
+Attribution to NASA is provided as a courtesy (see the repository NOTICE), not as a
+legal obligation. NASA does not endorse this pack or its authors.
+
+NOTE: This file governs the CONTENT of this pack. The repository tooling is licensed
+separately under MIT (see ../../LICENSE).

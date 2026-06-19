@@ -6,8 +6,9 @@ Generated from each pack's SKILL.md frontmatter. Regenerate with tooling/gen_ski
 
 # jgs-se-knowledge-packs — Pack Index
 
-1 pack in this release. Each pack is an Agent Skill installed as `/<slug>`.
+2 packs in this release. Each pack is an Agent Skill installed as `/<slug>`.
 
 | Pack | Source licence | Description |
 |------|----------------|-------------|
 | [`sebok`](packs/sebok/SKILL.md) | CC BY-NC-SA 3.0 | Knowledge base from the Guide to the Systems Engineering Body of Knowledge (SEBoK) v2.13. Reference the established SE canon — lifecycle models, ISO/IEC/IEEE 15288 processes, system definition and architecture, V&V, MBSE, systems thinking, traceability, standards alignment, and SoS/enterprise/service SE. |
+| [`nasa-se-handbook`](packs/nasa-se-handbook/SKILL.md) | Public Domain (US Gov) | Knowledge base from the NASA Systems Engineering Handbook (NASA/SP-2016-6105 Rev 2). NASA's SE process model — the SE Engine and 17 common technical processes, project life cycle (Pre-Phase A–F), Key Decision Points and technical reviews, system design, product verification and validation, and crosscutting technical management. |
