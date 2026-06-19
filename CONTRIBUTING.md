@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2026 JG Systems Consulting Ltd. — MIT License (see LICENSE).
+SPDX-License-Identifier: MIT
+-->
+
 # Contributing
 
 Thanks for helping grow the catalogue. The bar for a pack is **quality + provenance**:

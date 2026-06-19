@@ -1,0 +1,68 @@
+# Copyright (c) 2026 JG Systems Consulting Ltd. — MIT License (see ../../LICENSE).
+# SPDX-License-Identifier: MIT
+#
+# RR-S-12 CI quality gate. Self-contained (inline bash + python3 stdlib only); never
+# executes checked-out repository code. To ACTIVATE: grant the workflow OAuth scope
+#   gh auth refresh -h github.com -s workflow
+# then rename this file to validate.yml and push.
+name: validate
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+permissions: read-all
+
+jobs:
+  content-integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Content integrity check (leak sentinels)
+        run: |
+          set -e
+          hits=0
+          # Sentinels assembled from fragments so this workflow file does not flag itself.
+          for sentinel in "CONFI""DENTIAL" "BEGIN ""PRIVATE KEY" "BEGIN OPENSSH ""PRIVATE KEY" "BEGIN RSA ""PRIVATE KEY"; do
+            if grep -RIn --exclude-dir=.git "$sentinel" .; then
+              echo "::error::leak sentinel found: $sentinel"
+              hits=1
+            fi
+          done
+          test "$hits" -eq 0
+
+      - name: Link policy check (no source-material URLs)
+        run: |
+          set -e
+          if grep -RInE 'https?://[^ )"]*(sebokwiki|nasa\.gov|omg\.org|ocw\.mit|dodcio|dod\.mil)' \
+               --include='*.md' --include='*.json' --include='*.yaml' --include='*.txt' --exclude-dir=.git .; then
+            echo "::error::source-material URL found (see docs/LICENSING.md link policy)"
+            exit 1
+          fi
+          echo "no source-material links"
+
+      - name: Pack frontmatter lint
+        run: |
+          python3 - <<'PY'
+          import glob, re, sys
+          fails = 0
+          for f in glob.glob("packs/*/SKILL.md"):
+              t = open(f, encoding="utf-8").read()
+              m = re.match(r"^---\s*\n(.*?)\n---\s*\n", t, re.S)
+              if not m:
+                  print(f"::error file={f}::no YAML frontmatter"); fails += 1; continue
+              fm = m.group(1)
+              name = re.search(r"^name:\s*(\S+)", fm, re.M)
+              if not name:
+                  print(f"::error file={f}::frontmatter missing name"); fails += 1
+              elif not re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)*", name.group(1).strip().strip('\"\'')):
+                  print(f"::error file={f}::name not kebab-case: {name.group(1)}"); fails += 1
+              if not re.search(r"^description:\s*\S", fm, re.M):
+                  print(f"::error file={f}::frontmatter missing description"); fails += 1
+          sys.exit(1 if fails else 0)
+          PY
+
+      - name: Catalog JSON valid
+        run: python3 -c "import json; json.load(open('catalog.json')); print('catalog.json OK')"

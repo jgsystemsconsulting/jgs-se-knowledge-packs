@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# Copyright (c) 2026 JG Systems Consulting Ltd. — MIT License (see LICENSE).
+# SPDX-License-Identifier: MIT
 """
 validate_pack.py — structural + licence validator for a knowledge pack.
 

@@ -1,0 +1,12 @@
+{
+  "name": "jgs-se-knowledge-packs",
+  "description": "JG Systems Consulting catalogue of licence-vetted systems-engineering knowledge-pack skills for coding agents.",
+  "owner": { "name": "JG Systems Consulting Ltd.", "url": "https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs" },
+  "plugins": [
+    {
+      "name": "jgs-se-knowledge-packs",
+      "source": "./",
+      "description": "Installable systems-engineering knowledge packs reconstructed from open sources (SEBoK, NASA, OMG SysML, DoDAF, MIT OCW)."
+    }
+  ]
+}

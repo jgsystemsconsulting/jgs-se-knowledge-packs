@@ -1,89 +1,134 @@
+<!--
+Copyright (c) 2026 JG Systems Consulting Ltd. — MIT License (see LICENSE).
+SPDX-License-Identifier: MIT
+-->
+
 <h1 align="center">jgs-se-knowledge-packs</h1>
 
 <p align="center">
-  <strong>Installable knowledge-pack skills for coding agents, built from genuinely open
-  systems-engineering bodies of knowledge.</strong><br>
-  Every pack ships its source's licence and provenance — shareable by construction.
+  <img src="https://img.shields.io/badge/license-MIT%20(tooling)-blue" alt="License: MIT (tooling)">
+  <img src="https://img.shields.io/badge/version-1.0.0-green" alt="Version 1.0.0">
+  <img src="https://img.shields.io/badge/packs-1-blueviolet" alt="1 pack">
+  <img src="https://img.shields.io/badge/tested%20with-Claude%20Code-8A2BE2" alt="Tested with Claude Code">
+  <img src="https://img.shields.io/badge/scope-systems%20engineering-orange" alt="Scope: systems engineering">
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/License-MIT%20(tooling)-blue" alt="MIT tooling">
-  <img src="https://img.shields.io/badge/Packs-1%20live%20%2F%204%20planned-blueviolet" alt="Packs">
-  <img src="https://img.shields.io/badge/Agent%20Skills-open%20standard-green" alt="Agent Skills">
-  <img src="https://img.shields.io/badge/scope-systems%20engineering-orange" alt="Scope">
+  <strong>Installable knowledge-pack skills for coding agents, reconstructed from genuinely
+  open systems-engineering bodies of knowledge — vetted, attributed, and shareable by
+  construction.</strong>
 </p>
+
+**Copyright (c) 2026 JG Systems Consulting Ltd. — MIT License (tooling); pack content under each source's own licence (see [NOTICE](NOTICE)).**
 
 ---
 
-## Why
+## What it is / who it's for
 
-A great body of knowledge — SEBoK, the NASA SE Handbook, a spec — is something you read
-once and then forget exists when you actually need it mid-task. A **knowledge pack** turns
-it into a skill your coding agent loads on demand: ask `/sebok systems of systems` and the
-agent reads the right chapter and answers from the actual source, not from a hazy
-recollection.
+A great body of knowledge — SEBoK, the NASA SE Handbook, a modelling spec — is something you
+read once and then can't recall when you need it mid-task. A **knowledge pack** turns it into a
+skill your coding agent loads on demand: ask `/sebok systems of systems` and the agent reads the
+right chapter and answers from reconstructed reference notes, not a hazy recollection.
 
-This repo curates those packs for **systems engineering**, with one rule that makes it
-different from "point a tool at a PDF":
+This is a curated catalogue of those packs for **systems engineers**, built to one rule that makes
+it different from "point a tool at a PDF":
 
-> **Only genuinely open sources go in.** Public-domain (NASA, NIST, DoD) and
-> open-licensed (SEBoK, OMG specs, CC content) — never paywalled or all-rights-reserved
-> material. "Free to download" is not "free to redistribute," and the difference is
-> enforced, not assumed. See [docs/SOURCE-VETTING.md](docs/SOURCE-VETTING.md).
+> **Only genuinely open sources go in.** Public-domain (NASA, DoD) and open-licensed (SEBoK, OMG
+> specs, CC content) — never paywalled or all-rights-reserved material. Eligibility is enforced,
+> not assumed (see [docs/SOURCE-VETTING.md](docs/SOURCE-VETTING.md)), and every pack is
+> redistributable by construction (see [docs/LICENSING.md](docs/LICENSING.md)).
 
-So every pack here is safe to install, share with a colleague, and publish — by design.
+Packs follow the open [Agent Skills](https://github.com/agentskills/agentskills) `SKILL.md`
+standard, so they load in Claude Code, GitHub Copilot CLI, and Amp without modification.
 
-## Catalog
+## Prerequisites
 
-| Pack | Source | Licence | Tier | Status |
-|------|--------|---------|------|--------|
-| [`sebok`](packs/sebok) | Guide to the SE Body of Knowledge v2.13 | CC BY-NC-SA 3.0 | 🟡 2 | ✅ live (41 chapters) |
-| `nasa-se-handbook` | NASA Systems Engineering Handbook (SP-2016-6105) | Public domain (US gov) | 🟢 1 | 🔜 planned |
-| `omg-sysml` | OMG Systems Modeling Language spec | OMG licence | 🟡 2 | 🔜 planned |
-| `dodaf` | DoD Architecture Framework 2.02 | Public release, unlimited | 🟢 1 | 🔜 planned |
-| `mit-ocw-se` | MIT OCW 16.842 Fundamentals of SE | CC BY-NC-SA | 🟡 2 | 🔜 planned |
+- Python 3.9+ (for the installer and pack validator).
+- A host that reads Agent Skills (Claude Code, GitHub Copilot CLI, or Amp).
+- No MCP server, API key, or licence tier is needed at runtime — packs are plain Markdown.
 
-Roadmap and source vetting for each candidate: [docs/SOURCE-VETTING.md](docs/SOURCE-VETTING.md).
+## Install with your AI agent
 
-## Install a pack
+Copy the block below into your coding agent (Claude Code, Cursor, etc.). It will read this repo
+and install the catalogue for you.
+
+```text
+You are installing jgs-se-knowledge-packs, an open catalogue (MIT tooling) of
+systems-engineering knowledge-pack skills by JG Systems Consulting Ltd.
+Repository: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs (version 1.0.0).
+Do this in order:
+1. Read README.md, docs/skill-usage.md, and CHANGELOG.md so you understand what you are
+   installing. There are NO external prerequisites — packs are plain Markdown skills.
+2. Run `python install.py --dry-run` and show me the pack list and target
+   (~/.claude/skills/jgs-se-knowledge-packs/). If it looks right, run `python install.py`.
+3. Verify: list the installed packs under the target and confirm the count matches SKILLS.md.
+4. Tell me to restart Claude Code, then try `/sebok systems of systems`.
+5. Pack CONTENT is under each source's own licence (see NOTICE) — keep attribution intact.
+```
+
+## Install manually
 
 ```bash
 git clone https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs.git
-cp -r jgs-se-knowledge-packs/packs/sebok ~/.claude/skills/sebok    # Claude Code
-# then, in a session:
-/sebok lifecycle model selection
+cd jgs-se-knowledge-packs
+python install.py --dry-run     # preview packs + target
+python install.py               # installs to ~/.claude/skills/jgs-se-knowledge-packs/
 ```
 
-Packs follow the open [Agent Skills](https://github.com/agentskills/agentskills)
-`SKILL.md` standard, so the same folder works in Claude Code, GitHub Copilot CLI
-(`~/.copilot/skills` or `~/.agents/skills`), and Amp.
+Default target is the vendor-namespaced `~/.claude/skills/jgs-se-knowledge-packs/` (honours
+`$CLAUDE_CONFIG_DIR`). For a flat install (each pack directly under `~/.claude/skills/`), pass
+`--flat`. Restart your agent, then invoke a pack by its slug.
+
+## Catalogue
+
+| Pack | Source | Licence | Tier | Status |
+|------|--------|---------|------|--------|
+| `sebok` | Guide to the SE Body of Knowledge v2.13 | CC BY-NC-SA 3.0 | 🟡 2 | ✅ live (41 chapters) |
+| `nasa-se-handbook` | NASA Systems Engineering Handbook | Public domain (US gov) | 🟢 1 | 🔜 planned |
+| `omg-sysml` | OMG Systems Modeling Language spec | OMG licence | 🟡 2 | 🔜 planned |
+| `dodaf` | DoD Architecture Framework | Public release, unlimited | 🟢 1 | 🔜 planned |
+| `mit-ocw-se` | MIT OCW Fundamentals of Systems Engineering | CC BY-NC-SA | 🟡 2 | 🔜 planned |
+
+Machine-readable index: [SKILLS.md](SKILLS.md) · [catalog.json](catalog.json).
+
+## Usage
+
+```bash
+/sebok                      # load core frameworks for reference
+/sebok systems of systems   # routes to the right chapter, answers from the pack
+/sebok ch20                 # load a specific chapter
+```
+
+Each pack ships an always-loaded `SKILL.md` index plus on-demand `chapters/`, a glossary,
+patterns, and a cheatsheet. Full guidance: [docs/skill-usage.md](docs/skill-usage.md).
 
 ## How a pack is built
 
-1. **Vet the source** against [docs/SOURCE-VETTING.md](docs/SOURCE-VETTING.md) — tier it,
-   name its licence, confirm it is not on the Excluded list.
-2. **Extract** the text (built on the MIT-licensed
-   [`book-to-skill`](https://github.com/virgiliojr94/book-to-skill) engine).
-3. **Map structure** to chapter offsets, then **generate** reference-depth chapter files
-   in parallel (one per knowledge area), plus glossary / patterns / cheatsheet and the
-   master `SKILL.md` index.
-4. **Attach provenance** — `PACK.yaml` + a `LICENSE` reproducing the source's terms.
-5. **Validate** — `python tooling/validate_pack.py packs/<slug>`.
-
-Pack contract: [docs/PACK-SPEC.md](docs/PACK-SPEC.md). Contributing a pack:
-[CONTRIBUTING.md](CONTRIBUTING.md).
+Vet the source (tier + licence, not on the Excluded list) → extract text (built on the
+MIT-licensed [`book-to-skill`](https://github.com/virgiliojr94/book-to-skill) engine) → map
+structure to chapter offsets → generate reference-depth chapters in parallel + glossary /
+patterns / cheatsheet + the `SKILL.md` index → attach provenance (`PACK.yaml` + a `LICENSE`
+reproducing the source's terms) → validate. Contract: [docs/PACK-SPEC.md](docs/PACK-SPEC.md).
+Contributing: [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Licensing
 
-- **Repository tooling and scaffolding:** [MIT](LICENSE).
-- **Pack *content*:** each pack carries its **source's** licence in `packs/<slug>/LICENSE`,
-  independent of the repo MIT licence. A CC BY-NC-SA source (like SEBoK) produces a
-  CC BY-NC-SA pack — non-commercial, attribution and share-alike carried forward.
+Two separable layers:
 
-This separation is deliberate: the *machinery* is permissively licensed; the *knowledge*
-keeps whatever obligations its open source attached.
+- **Tooling & scaffolding:** [MIT](LICENSE) (JG Systems Consulting Ltd.).
+- **Pack content:** each pack carries its **source's** licence in `packs/<slug>/LICENSE`,
+  independent of the repo MIT licence. A CC BY-NC-SA source yields a CC BY-NC-SA pack.
 
-## Status
+Per-pack source attributions are in [NOTICE](NOTICE). Why every pack is lawful to reconstitute
+and redistribute — including why no source-material links are published — is set out in
+[docs/LICENSING.md](docs/LICENSING.md).
 
-Early release. One exemplar pack (`sebok`) is live and validated; the SE catalogue above
-is the near-term roadmap. Issues and pack proposals welcome.
+## Support & security
+
+- **Help / questions:** open an issue, or contact `jason.gower@jgsystemsconsulting.com`.
+- **Security / licensing concerns:** see [SECURITY.md](SECURITY.md) — report privately to
+  `jason.gower@jgsystemsconsulting.com`.
+
+## Version
+
+See [CHANGELOG.md](CHANGELOG.md). Current: 1.0.0.

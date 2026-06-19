@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2026 JG Systems Consulting Ltd. — MIT License (see ../LICENSE).
+SPDX-License-Identifier: MIT
+-->
+
 # Source Vetting
 
 This is the integrity document for the repository. **No pack is accepted unless its
