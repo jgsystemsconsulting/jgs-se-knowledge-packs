@@ -16,6 +16,12 @@ All notable changes to this project are documented here. Format follows
 - Initial release of the jgs-se-knowledge-packs catalogue.
 - **`sebok`** pack — Guide to the Systems Engineering Body of Knowledge (SEBoK) v2.13,
   CC BY-NC-SA 3.0, 41 chapters plus glossary, patterns, and cheatsheet.
+- **`nasa-se-handbook`** pack — NASA Systems Engineering Handbook (NASA/SP-2016-6105 Rev 2),
+  public domain (US gov), 34 chapters (the SE Engine and 17 processes, project life cycle,
+  V&V, crosscutting technical management) plus glossary, patterns, and cheatsheet.
+- **`omg-sysml`** pack — OMG Systems Modeling Language (SysML) v1.6, OMG Specification License,
+  11 clause chapters (blocks, ports & flows, constraint blocks, behaviour, allocations,
+  requirements, profiles) plus glossary, patterns, and cheatsheet.
 - Source-vetting rubric (`docs/SOURCE-VETTING.md`) — 3-tier eligibility + Excluded list.
 - Licensing & reconstitution justification (`docs/LICENSING.md`).
 - Pack contract (`docs/PACK-SPEC.md`) and usage guide (`docs/skill-usage.md`).
