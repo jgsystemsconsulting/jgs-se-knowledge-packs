@@ -1,0 +1,189 @@
+{
+  "slug": "nist-ai-rmf",
+  "status": "complete",
+  "questions": [
+    {
+      "id": "ar-01",
+      "type": "topic",
+      "prompt": "What are the four functions of the NIST AI RMF Core, and how do they relate to one another?",
+      "routing": {
+        "any_of": [
+          "ch04",
+          "ch05",
+          "ch06",
+          "ch07"
+        ],
+        "all_of": []
+      },
+      "must_include": [
+        "GOVERN is cross-cutting / always-on and must be in place before the others",
+        "MAP, MEASURE, MANAGE operate on specific systems in sequence and iteratively"
+      ],
+      "must_use_terms": [
+        {
+          "term": "GOVERN",
+          "synonyms": []
+        }
+      ],
+      "provenance": "NIST AI RMF 1.0 ch04 (GOVERN) plus ch05/ch06/ch07 — GOVERN is the cross-cutting foundation; MAP→MEASURE→MANAGE run in sequence and iteratively. The AI RMF Core has FOUR functions.",
+      "must_not_include": [
+        "the AI RMF Core has six functions: Identify, Protect, Detect, Respond, Recover, Govern"
+      ],
+      "canary": true
+    },
+    {
+      "id": "ar-02",
+      "type": "topic",
+      "prompt": "Name the seven trustworthiness characteristics in the NIST AI RMF and explain why one of them is treated as foundational.",
+      "routing": {
+        "any_of": [
+          "ch03"
+        ],
+        "all_of": []
+      },
+      "must_include": [
+        "Valid and Reliable is the necessary base for all other characteristics",
+        "Accountable and Transparent is cross-cutting / applies to all others"
+      ],
+      "must_use_terms": [
+        {
+          "term": "Valid and Reliable",
+          "synonyms": [
+            "valid & reliable"
+          ]
+        }
+      ],
+      "provenance": "NIST AI RMF 1.0 ch03 (Trustworthiness Characteristics) — seven characteristics with Valid and Reliable as the necessary foundation and Accountable and Transparent as cross-cutting.",
+      "must_not_include": [
+        "the trustworthiness characteristics are ranked in a strict priority order and a system must achieve them one at a time"
+      ],
+      "canary": true
+    },
+    {
+      "id": "ar-03",
+      "type": "topic",
+      "prompt": "What are the three categories of AI bias the NIST AI RMF requires organisations to manage?",
+      "routing": {
+        "any_of": [
+          "ch03",
+          "ch06"
+        ],
+        "all_of": []
+      },
+      "must_include": [
+        "systemic bias",
+        "computational / statistical bias",
+        "human-cognitive bias"
+      ],
+      "must_use_terms": [
+        {
+          "term": "human-cognitive bias",
+          "synonyms": [
+            "human cognitive bias"
+          ]
+        }
+      ],
+      "provenance": "NIST AI RMF 1.0 ch03 (three categories of AI bias, NIST SP 1270) — also surfaced in ch06 MEASURE 2.11; each category can occur without discriminatory intent.",
+      "must_not_include": [
+        "bias is managed solely by ensuring demographically balanced predictions across groups"
+      ],
+      "canary": false
+    },
+    {
+      "id": "ar-04",
+      "type": "topic",
+      "prompt": "In the MEASURE function, what does the framework require about who conducts assessments, and how does it handle risks that cannot currently be measured?",
+      "routing": {
+        "any_of": [
+          "ch06"
+        ],
+        "all_of": []
+      },
+      "must_include": [
+        "assessors independent from / not the front-line developers (MEASURE 1.3)",
+        "risks that cannot be measured must be explicitly documented (MEASURE 1.1)"
+      ],
+      "must_use_terms": [
+        {
+          "term": "MEASURE",
+          "synonyms": []
+        }
+      ],
+      "provenance": "NIST AI RMF 1.0 ch06 (MEASURE) — MEASURE 1.3 requires assessors independent from builders; MEASURE 1.1 requires unmeasurable risks to be documented rather than silently omitted.",
+      "must_not_include": [
+        "if a risk cannot be measured it may be treated as negligible and excluded from tracking"
+      ],
+      "canary": false
+    },
+    {
+      "id": "ar-05",
+      "type": "applied",
+      "prompt": "Our team is preparing to deploy an AI system. Using the MANAGE function, what risk-response options must we document, and what operational safeguard must exist before we go live?",
+      "routing": {
+        "any_of": [
+          "ch07"
+        ],
+        "all_of": []
+      },
+      "must_include": [
+        "four risk response options: mitigate, transfer, avoid, accept (MANAGE 1.3)",
+        "a deactivation / disengage mechanism must be in place before deployment (MANAGE 2.4)",
+        "residual risks documented for downstream acquirers and end users (MANAGE 1.4)"
+      ],
+      "must_use_terms": [
+        {
+          "term": "MANAGE",
+          "synonyms": []
+        }
+      ],
+      "provenance": "NIST AI RMF 1.0 ch07 (MANAGE) — MANAGE 1.3 response options (mitigate/transfer/avoid/accept), MANAGE 2.4 deactivation mechanism as a deployment prerequisite, MANAGE 1.4 residual-risk disclosure.",
+      "must_not_include": [
+        "the only acceptable response to a high-priority AI risk is to fully eliminate it before deployment"
+      ],
+      "canary": true
+    },
+    {
+      "id": "ar-06",
+      "type": "applied",
+      "prompt": "How do AI RMF Profiles turn the generic framework into an organisation-specific improvement programme?",
+      "routing": {
+        "any_of": [
+          "ch08"
+        ],
+        "all_of": []
+      },
+      "must_include": [
+        "Current Profile describes existing state; Target Profile describes desired outcomes",
+        "gap analysis between Current and Target drives a prioritised action plan",
+        "the AI RMF is voluntary / non-prescriptive"
+      ],
+      "must_use_terms": [
+        {
+          "term": "Target Profile",
+          "synonyms": [
+            "target profile"
+          ]
+        }
+      ],
+      "provenance": "NIST AI RMF 1.0 ch08 (Profiles and Use) — Current Profile → Target Profile → gap analysis → action plan; framework is voluntary and non-prescriptive.",
+      "must_not_include": [
+        "NIST publishes mandatory profile templates that every organisation is legally required to adopt"
+      ],
+      "canary": false
+    },
+    {
+      "id": "ar-tn-01",
+      "type": "trigger-negative",
+      "prompt": "Can you recommend a good recipe for sourdough bread?",
+      "expect_fire": false,
+      "canary": false
+    },
+    {
+      "id": "ar-tp-01",
+      "type": "trigger-positive",
+      "prompt": "We're standing up an AI risk management programme and need to decide which GOVERN, MAP, MEASURE, and MANAGE activities apply at each lifecycle stage, and how to handle trustworthiness tradeoffs and harmful bias. Where do we start?",
+      "expect_fire": true,
+      "canary": false
+    }
+  ]
+}
