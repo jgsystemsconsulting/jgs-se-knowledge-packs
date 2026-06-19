@@ -124,18 +124,31 @@
       "commercial_use": true,
       "chapters": 6,
       "status": "live"
+    },
+    {
+      "slug": "dodaf",
+      "title": "DoD Architecture Framework (DoDAF) 2.02 Change 1 \u2014 Volume II",
+      "publisher": "US Department of Defense",
+      "source_version": "2.02 Change 1 (2015)",
+      "license": "Public Domain (US Government work)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 11,
+      "status": "live"
+    },
+    {
+      "slug": "eu-ai-act",
+      "title": "EU Artificial Intelligence Act \u2014 Regulation (EU) 2024/1689",
+      "publisher": "European Union (Official Journal)",
+      "source_version": "Regulation (EU) 2024/1689",
+      "license": "EU OJ \u2014 reproduction authorised with source acknowledgement",
+      "license_tier": 2,
+      "commercial_use": true,
+      "chapters": 12,
+      "status": "live"
     }
   ],
   "planned": [
-    {
-      "slug": "dodaf",
-      "title": "DoD Architecture Framework (DoDAF) 2.02",
-      "publisher": "US Department of Defense",
-      "license": "Distribution Statement A (public release, distribution unlimited)",
-      "license_tier": 1,
-      "commercial_use": true,
-      "status": "planned"
-    },
     {
       "slug": "mit-ocw-se",
       "title": "MIT OpenCourseWare 16.842 Fundamentals of Systems Engineering",

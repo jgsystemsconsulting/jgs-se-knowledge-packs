@@ -1,0 +1,20 @@
+slug: dodaf
+title: "DoD Architecture Framework (DoDAF) 2.02 Change 1 — Volume II: Architectural Data and Models"
+publisher: "US Department of Defense"
+source_version: "2.02 Change 1 (2015)"
+license: "Public Domain (US Government work); Distribution A (public release)"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "book-to-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 231
+  chapters: 11
+  built_on: "2026-06-19"
+notes: >
+  US Government work -- public domain (17 U.S.C. 105); marked Distribution A (approved for
+  public release; distribution unlimited). Free to reproduce, transform, and redistribute.
+  Attribution to the US DoD is a courtesy in NOTICE, not an obligation. Synthesized/transformed
+  reference notes; no long verbatim passages. No source-material link (see docs/LICENSING.md).
+change_indication: "reconstructed as synthesized reference notes"

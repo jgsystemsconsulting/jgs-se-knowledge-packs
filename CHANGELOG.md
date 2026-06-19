@@ -9,6 +9,21 @@ All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning follows
 [Semantic Versioning](https://semver.org/).
 
+## [1.2.0] — 2026-06-19
+
+### Added
+
+- **`dodaf`** (11 ch) — DoD Architecture Framework 2.02 Change 1, Volume II: the eight DoDAF
+  viewpoints (All / Capability / Data & Information / Operational / Project / Services /
+  Standards / Systems), the DM2 meta-model, and fit-for-purpose model selection. US-gov
+  public domain (Distribution A).
+- **`eu-ai-act`** (12 ch) — EU Artificial Intelligence Act (Regulation (EU) 2024/1689):
+  prohibited practices, high-risk classification & requirements, operator obligations,
+  conformity assessment, GPAI models, transparency, governance, and Annex III. EU Official
+  Journal (reproduction authorised with source acknowledgement).
+- Both were deferred in v1.1.0 (automated source download blocked); built from user-supplied,
+  title-verified PDFs. Catalogue now 13 live packs.
+
 ## [1.1.0] — 2026-06-19
 
 ### Added
