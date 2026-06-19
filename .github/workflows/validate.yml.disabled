@@ -36,7 +36,7 @@ jobs:
       - name: Link policy check (no source-material URLs)
         run: |
           set -e
-          if grep -RInE 'https?://[^ )"]*(sebokwiki|nasa\.gov|omg\.org|ocw\.mit|dodcio|dod\.mil)' \
+          if grep -RInE 'https?://[^ )"]*(sebokwiki|nasa\.gov|ntrs|nist\.gov|govinfo\.gov|omg\.org|ocw\.mit|dodcio|dod\.mil|dla\.mil|eur-lex|europa\.eu|nato\.int|dau\.edu)' \
                --include='*.md' --include='*.json' --include='*.yaml' --include='*.txt' --exclude-dir=.git .; then
             echo "::error::source-material URL found (see docs/LICENSING.md link policy)"
             exit 1

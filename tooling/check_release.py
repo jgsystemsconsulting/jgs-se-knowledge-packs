@@ -44,7 +44,7 @@ _PK = "PRIVATE" + " KEY"
 LEAK_SENTINELS = ["CONFI" + "DENTIAL", "BEGIN " + _PK, "BEGIN OPENSSH " + _PK, "BEGIN RSA " + _PK]
 
 # Source-material hosts that must never appear as published links (link policy).
-SOURCE_HOSTS = re.compile(r"https?://[^\s)\"']*(sebokwiki|nasa\.gov|omg\.org|ocw\.mit|dodcio|dod\.mil)")
+SOURCE_HOSTS = re.compile(r"https?://[^\s)\"']*(sebokwiki|nasa\.gov|ntrs|nist\.gov|govinfo\.gov|omg\.org|ocw\.mit|dodcio|dod\.mil|dla\.mil|eur-lex|europa\.eu|nato\.int|dau\.edu)")
 
 # Authored-file header sentinels (RR-B-03/04) — checked on JGSC-authored files only,
 # never on pack content (which carries the source's licence).
