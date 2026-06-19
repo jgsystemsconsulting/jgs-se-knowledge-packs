@@ -19,3 +19,6 @@ Thumbs.db
 
 # Git worktrees (isolated workspaces; never tracked)
 .worktrees/
+
+# Eval harness run outputs (reports + quarantine digests; never source text)
+results/
