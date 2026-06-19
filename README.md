@@ -1,4 +1,4 @@
-<h1 align="center">se-knowledge-packs</h1>
+<h1 align="center">jgs-se-knowledge-packs</h1>
 
 <p align="center">
   <strong>Installable knowledge-pack skills for coding agents, built from genuinely open
@@ -48,8 +48,8 @@ Roadmap and source vetting for each candidate: [docs/SOURCE-VETTING.md](docs/SOU
 ## Install a pack
 
 ```bash
-git clone https://github.com/<owner>/se-knowledge-packs.git
-cp -r se-knowledge-packs/packs/sebok ~/.claude/skills/sebok    # Claude Code
+git clone https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs.git
+cp -r jgs-se-knowledge-packs/packs/sebok ~/.claude/skills/sebok    # Claude Code
 # then, in a session:
 /sebok lifecycle model selection
 ```

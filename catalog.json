@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "repository": "se-knowledge-packs",
+  "repository": "jgs-se-knowledge-packs",
   "scope": "systems engineering",
   "updated": "2026-06-19",
   "packs": [
