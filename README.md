@@ -7,8 +7,8 @@ SPDX-License-Identifier: MIT
 
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT%20(tooling)-blue" alt="License: MIT (tooling)">
-  <img src="https://img.shields.io/badge/version-1.1.0-green" alt="Version 1.1.0">
-  <img src="https://img.shields.io/badge/packs-11-blueviolet" alt="11 packs">
+  <img src="https://img.shields.io/badge/version-1.2.0-green" alt="Version 1.2.0">
+  <img src="https://img.shields.io/badge/packs-13-blueviolet" alt="13 packs">
   <img src="https://img.shields.io/badge/tested%20with-Claude%20Code-8A2BE2" alt="Tested with Claude Code">
   <img src="https://img.shields.io/badge/scope-systems%20engineering-orange" alt="Scope: systems engineering">
 </p>
@@ -55,7 +55,7 @@ and install the catalogue for you.
 ```text
 You are installing jgs-se-knowledge-packs, an open catalogue (MIT tooling) of
 systems-engineering knowledge-pack skills by JG Systems Consulting Ltd.
-Repository: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs (version 1.1.0).
+Repository: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs (version 1.2.0).
 Do this in order:
 1. Read README.md, docs/skill-usage.md, and CHANGELOG.md so you understand what you are
    installing. There are NO external prerequisites — packs are plain Markdown skills.
@@ -94,8 +94,8 @@ Default target is the vendor-namespaced `~/.claude/skills/jgs-se-knowledge-packs
 | `nist-csf` | NIST Cybersecurity Framework 2.0 | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `mil-std-882` | MIL-STD-882E — DoD System Safety | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `requirements-writing` | Requirements writing — EARS & quality (original guidance) | CC BY 4.0 | 🟡 2 | ✅ live (6 chapters) |
-| `dodaf` | DoD Architecture Framework | Public release | 🟢 1 | ⏸ deferred (source blocked) |
-| `eu-ai-act` | EU Artificial Intelligence Act | EU OJ (reproducible) | 🟡 2 | ⏸ deferred (source blocked) |
+| `dodaf` | DoD Architecture Framework 2.02 Vol II | Public domain (US gov) | 🟢 1 | ✅ live (11 chapters) |
+| `eu-ai-act` | EU Artificial Intelligence Act (Reg 2024/1689) | EU OJ (reproducible) | 🟡 2 | ✅ live (12 chapters) |
 | `mit-ocw-se` | MIT OCW Fundamentals of Systems Engineering | CC BY-NC-SA | 🟡 2 | 🔜 planned |
 
 Machine-readable index: [SKILLS.md](SKILLS.md) · [catalog.json](catalog.json).
@@ -140,4 +140,4 @@ and redistribute — including why no source-material links are published — is
 
 ## Version
 
-See [CHANGELOG.md](CHANGELOG.md). Current: 1.1.0.
+See [CHANGELOG.md](CHANGELOG.md). Current: 1.2.0.

@@ -108,6 +108,22 @@ Third-party source attributions (one block per shipped pack)
   Terms  : original guidance under CC BY 4.0; not a reproduction of ISO/IEC/IEEE 29148,
            the INCOSE GtWR, or the EARS paper. See packs/requirements-writing/LICENSE.
 
+[pack: dodaf]
+  Source : DoD Architecture Framework (DoDAF) 2.02 Change 1 -- Volume II
+  Author : US Department of Defense
+  Licence: Public Domain -- US Government work (17 U.S.C. 105); Distribution A
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. Attribution to the US DoD is courtesy, not
+           obligation; the DoD does not endorse this pack. See packs/dodaf/LICENSE.
+
+[pack: eu-ai-act]
+  Source : EU Artificial Intelligence Act -- Regulation (EU) 2024/1689 (Official Journal)
+  Author : European Union (Official Journal)
+  Licence: EU OJ -- reproduction authorised with source acknowledgement (Decision 2011/833/EU)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : reproduction authorised PROVIDED the source (European Union / OJ) is acknowledged.
+           See packs/eu-ai-act/LICENSE.
+
 -----------------------------------------------------------------------------------
 The build pipeline uses the book-to-skill extraction engine (MIT License),
 © the book-to-skill authors. It is a build tool, not a packaged source.

@@ -1,0 +1,20 @@
+slug: eu-ai-act
+title: "EU Artificial Intelligence Act — Regulation (EU) 2024/1689"
+publisher: "European Union (Official Journal)"
+source_version: "Regulation (EU) 2024/1689 (13 June 2024)"
+license: "EU Official Journal — reproduction authorised with source acknowledgement (Decision 2011/833/EU)"
+license_tier: 2
+commercial_use: true
+share_alike: false
+attribution_required: true
+build:
+  method: "book-to-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 144
+  chapters: 12
+  built_on: "2026-06-19"
+notes: >
+  Source: Regulation (EU) 2024/1689, published in the Official Journal of the European Union.
+  Reproduction is authorised provided the source is acknowledged (EU reuse policy; Commission
+  Decision 2011/833/EU). Attribution to the European Union is required. Synthesized/transformed
+  reference notes; no long verbatim passages. No source-material link (see docs/LICENSING.md).
+change_indication: "reconstructed as synthesized reference notes"
