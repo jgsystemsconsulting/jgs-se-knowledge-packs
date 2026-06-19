@@ -1,0 +1,12 @@
+{
+  "slug": "nasa-npr-7123",
+  "expected": {
+    "np-01": "PASS",
+    "np-02": "PASS",
+    "np-03": "PASS",
+    "np-04": "PASS",
+    "np-05": "PASS",
+    "np-tn-01": "PASS",
+    "np-tp-01": "PASS"
+  }
+}

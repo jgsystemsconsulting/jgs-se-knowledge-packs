@@ -14,43 +14,49 @@
     },
     {
       "slug": "nasa-se-handbook",
-      "status": "stub"
+      "status": "seeded"
     },
     {
       "slug": "nasa-npr-7123",
-      "status": "stub"
+      "status": "seeded"
     },
     {
       "slug": "nasa-system-safety",
-      "status": "stub"
+      "status": "seeded"
     },
     {
       "slug": "nasa-hsi",
-      "status": "stub"
+      "status": "seeded"
     },
     {
       "slug": "mil-std-882",
-      "status": "stub"
+      "status": "seeded"
     },
     {
       "slug": "dodaf",
-      "status": "stub"
+      "status": "seeded"
     },
     {
       "slug": "nist-ai-rmf",
-      "status": "stub"
+      "status": "seeded"
     },
     {
       "slug": "nist-ssdf",
-      "status": "stub"
+      "status": "seeded"
     },
     {
       "slug": "nist-csf",
-      "status": "stub"
+      "status": "seeded"
     },
     {
       "slug": "eu-ai-act",
-      "status": "stub"
+      "status": "seeded"
+    }
+  ],
+  "excluded": [
+    {
+      "slug": "omg-signpost",
+      "reason": "signpost (pointer-only, no chapters) - not eval-scorable"
     }
   ]
 }

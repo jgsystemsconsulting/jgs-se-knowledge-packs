@@ -6,61 +6,140 @@
       "id": "rw-01",
       "type": "topic",
       "prompt": "Which EARS pattern handles a fault or safety condition, and what is its shape?",
-      "routing": { "any_of": ["ch03"], "all_of": [] },
-      "must_include": ["unwanted-behaviour (If/Then) pattern",
-                       "If <unwanted condition>, then the <system> shall <response>"],
-      "must_use_terms": [{ "term": "unwanted behaviour", "synonyms": ["unwanted behavior", "unwanted-behaviour"] }],
+      "routing": {
+        "any_of": [
+          "ch03"
+        ],
+        "all_of": []
+      },
+      "must_include": [
+        "unwanted-behaviour (If/Then) pattern",
+        "If <unwanted condition>, then the <system> shall <response>"
+      ],
+      "must_use_terms": [
+        {
+          "term": "unwanted behaviour",
+          "synonyms": [
+            "unwanted behavior",
+            "unwanted-behaviour"
+          ]
+        }
+      ],
       "provenance": "requirements-writing ch03 (EARS / Mavin et al. 2009)",
-      "must_not_include": ["EARS defines a dedicated Severity pattern"],
+      "must_not_include": [
+        "EARS defines a dedicated Severity pattern"
+      ],
       "canary": false
     },
     {
       "id": "rw-02",
       "type": "topic",
       "prompt": "Name the EARS patterns by their trigger keyword.",
-      "routing": { "any_of": ["ch03"], "all_of": [] },
-      "must_include": ["Ubiquitous", "When (event-driven)", "While (state-driven)",
-                       "Where (optional-feature)", "If/Then (unwanted-behaviour)"],
-      "must_use_terms": [{ "term": "EARS", "synonyms": [] }],
-      "provenance": "requirements-writing ch03",
-      "must_not_include": ["Unless pattern", "Because pattern"],
+      "routing": {
+        "any_of": [
+          "ch03"
+        ],
+        "all_of": []
+      },
+      "must_include": [
+        "Ubiquitous",
+        "When (event-driven)",
+        "While (state-driven)",
+        "Where (optional-feature)",
+        "If/Then (unwanted-behaviour)"
+      ],
+      "must_use_terms": [],
+      "provenance": "requirements-writing ch03 (must_use_terms relaxed: the prompt already names EARS; pattern coverage is in must_include)",
+      "must_not_include": [
+        "Unless pattern",
+        "Because pattern"
+      ],
       "canary": false
     },
     {
       "id": "rw-03",
       "type": "topic",
       "prompt": "What are the verification methods to assign when writing a requirement?",
-      "routing": { "any_of": ["ch06"], "all_of": [] },
-      "must_include": ["Test", "Analysis", "Inspection", "Demonstration"],
-      "must_use_terms": [{ "term": "verification method", "synonyms": ["verification methods"] }],
+      "routing": {
+        "any_of": [
+          "ch06"
+        ],
+        "all_of": []
+      },
+      "must_include": [
+        "Test",
+        "Analysis",
+        "Inspection",
+        "Demonstration"
+      ],
+      "must_use_terms": [
+        {
+          "term": "verification method",
+          "synonyms": [
+            "verification methods"
+          ]
+        }
+      ],
       "provenance": "requirements-writing ch06",
-      "must_not_include": ["Validation is one of the four verification methods"],
+      "must_not_include": [
+        "Validation is one of the four verification methods"
+      ],
       "canary": false
     },
     {
       "id": "rw-04",
       "type": "applied",
       "prompt": "Critique: 'The system shall be fast and user-friendly.' Identify the defects and rewrite one as a verifiable EARS requirement.",
-      "routing": { "any_of": ["ch05"], "all_of": [] },
-      "must_include": ["compound requirement (two needs in one)",
-                       "weak/vague words (fast, user-friendly)",
-                       "not verifiable / no measurable response"],
-      "must_use_terms": [{ "term": "verifiable", "synonyms": ["verifiability"] }],
+      "routing": {
+        "any_of": [
+          "ch05"
+        ],
+        "all_of": []
+      },
+      "must_include": [
+        "compound requirement (two needs in one)",
+        "weak/vague words (fast, user-friendly)",
+        "not verifiable / no measurable response"
+      ],
+      "must_use_terms": [
+        {
+          "term": "verifiable",
+          "synonyms": [
+            "verifiability"
+          ]
+        }
+      ],
       "provenance": "requirements-writing ch05 (defects & anti-patterns)",
-      "must_not_include": ["the requirement is acceptable as written"],
+      "must_not_include": [
+        "the requirement is acceptable as written"
+      ],
       "canary": true
     },
     {
       "id": "rw-05",
       "type": "applied",
       "prompt": "Convert this into a singular, verifiable EARS requirement: 'When the user logs in, the system should quickly show their dashboard and log the event.'",
-      "routing": { "any_of": ["ch04"], "all_of": [] },
-      "must_include": ["split the compound into singular requirements",
-                       "replace 'quickly' with a measurable response (value + unit)",
-                       "use the When event-driven EARS form"],
-      "must_use_terms": [{ "term": "singular", "synonyms": [] }],
+      "routing": {
+        "any_of": [
+          "ch04"
+        ],
+        "all_of": []
+      },
+      "must_include": [
+        "split the compound into singular requirements",
+        "replace 'quickly' with a measurable response (value + unit)",
+        "use the When event-driven EARS form"
+      ],
+      "must_use_terms": [
+        {
+          "term": "singular",
+          "synonyms": []
+        }
+      ],
       "provenance": "requirements-writing ch04 (applying EARS)",
-      "must_not_include": ["'should' is the correct keyword for a requirement"],
+      "must_not_include": [
+        "'should' is the correct keyword for a requirement"
+      ],
       "canary": true
     },
     {

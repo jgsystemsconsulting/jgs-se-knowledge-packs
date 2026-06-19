@@ -1,0 +1,12 @@
+{
+  "slug": "nasa-se-handbook",
+  "expected": {
+    "sh-01": "PASS",
+    "sh-02": "PASS",
+    "sh-03": "PASS",
+    "sh-04": "PASS",
+    "sh-05": "PASS",
+    "sh-tn-01": "PASS",
+    "sh-tp-01": "PASS"
+  }
+}
