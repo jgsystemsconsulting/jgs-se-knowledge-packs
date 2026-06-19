@@ -35,15 +35,6 @@ Third-party source attributions (one block per shipped pack)
   Terms  : public domain, no copyright. Attribution to NASA is courtesy, not
            obligation; NASA does not endorse this pack. See packs/nasa-se-handbook/LICENSE.
 
-[pack: omg-sysml]
-  Source : OMG Systems Modeling Language (SysML) v1.6 (formal/2019-11-01)
-  Author : Object Management Group (OMG)
-  Licence: OMG Specification License
-  Changes: reconstructed as synthesized reference notes (not a reproduction); the
-           "OMG SysML" trademark is not used to identify this transformed work
-  Terms  : redistribution + modification permitted with attribution + modification
-           notice; no trademark/endorsement use. See packs/omg-sysml/LICENSE.
-
 -----------------------------------------------------------------------------------
 The build pipeline uses the book-to-skill extraction engine (MIT License),
 © the book-to-skill authors. It is a build tool, not a packaged source.

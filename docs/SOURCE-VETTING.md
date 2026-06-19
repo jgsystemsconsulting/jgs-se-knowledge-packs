@@ -44,20 +44,20 @@ trademark limits.
 
 - **Creative Commons** BY, BY-SA, BY-NC, BY-NC-SA. (NC and SA propagate to the pack —
   see "Carrying conditions forward" below.)
-- **OMG specification licence** — grants copy, modify, and redistribute of modified
-  versions, provided you reproduce the copyright notice, add a prominent modification
-  notice, and do not use the trademarked spec name on the modified work.
 - Permissive software/content licences (MIT, Apache-2.0, BSD) where they cover the text.
+
+> **Not Tier 2 — OMG specifications.** The OMG Specification License *looks* open but its
+> public grant is informational-use-only (no network posting, no modification — see the
+> Excluded list). Do not classify OMG specs as Tier 2.
 
 ### 🟠 Tier 3 — Caution (verbatim-only or unclear grant)
 
 Package only with an explicit written justification in `PACK.yaml` and, where the grant
 is ambiguous, a note that the maintainers judged it defensible (or sought permission).
 
-- **No-derivatives clauses** (e.g. CC BY-ND, or OMG specs with a "no modifications"
-  condition such as UAF). A knowledge pack transforms the source, so a strict
-  no-derivatives source is normally **not** packageable — at most a verbatim excerpt
-  with heavy citation. Prefer to exclude.
+- **No-derivatives clauses** (e.g. CC BY-ND). A knowledge pack transforms the source, so a
+  strict no-derivatives source is normally **not** packageable — at most a verbatim excerpt
+  with heavy citation. Prefer to exclude. (OMG specs are fully **Excluded** — see below.)
 - **"Freely available" with no stated licence.** Free download ≠ redistribution grant.
   Treat as Excluded until a real grant is found or permission is obtained.
 
@@ -75,6 +75,7 @@ This list exists so the repo never ships something that triggers a takedown.
 | **The Open Group TOGAF / ArchiMate** | Evaluation/member licence; not redistributable. |
 | **PMI PMBOK** | PMI copyright. |
 | **INCOSE SE Vision 2035** | Freely downloadable but no stated redistribution/derivative grant (Tier 3 → treat as excluded pending permission). |
+| **OMG formal specifications** (UML, SysML, BPMN, UAF, CORBA, MOF, XMI, OCL, DDS…) | OMG Specification License public grant is informational-use-only: the spec "will not be copied or posted on any network computer … or … transferred for commercial purposes" and "no modifications are made to this specification." A hosted, transformed pack breaches both. Confirmed by two independent licence reads (2026-06-19). Cite + link to the OMG download; never package. |
 
 > If you are licensed to read one of these (e.g. an employer's BSI/Accuris seat for an
 > ISO standard), that licence is **yours**, not the repo's. Building a pack from it for
