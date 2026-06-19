@@ -30,7 +30,7 @@
     },
     {
       "slug": "mil-std-882",
-      "status": "stub"
+      "status": "seeded"
     },
     {
       "slug": "dodaf",
@@ -50,7 +50,7 @@
     },
     {
       "slug": "eu-ai-act",
-      "status": "stub"
+      "status": "seeded"
     }
   ]
 }

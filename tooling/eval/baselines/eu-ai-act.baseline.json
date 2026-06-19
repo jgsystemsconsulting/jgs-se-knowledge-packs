@@ -1,0 +1,13 @@
+{
+  "slug": "eu-ai-act",
+  "expected": {
+    "eu-01": "PASS",
+    "eu-02": "PASS",
+    "eu-03": "PASS",
+    "eu-04": "PASS",
+    "eu-05": "PASS",
+    "eu-06": "PASS",
+    "eu-tn-01": "PASS",
+    "eu-tp-01": "PASS"
+  }
+}
