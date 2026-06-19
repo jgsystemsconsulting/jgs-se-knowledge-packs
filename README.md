@@ -8,7 +8,7 @@ SPDX-License-Identifier: MIT
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT%20(tooling)-blue" alt="License: MIT (tooling)">
   <img src="https://img.shields.io/badge/version-1.0.0-green" alt="Version 1.0.0">
-  <img src="https://img.shields.io/badge/packs-5-blueviolet" alt="5 packs">
+  <img src="https://img.shields.io/badge/packs-9-blueviolet" alt="9 packs">
   <img src="https://img.shields.io/badge/tested%20with-Claude%20Code-8A2BE2" alt="Tested with Claude Code">
   <img src="https://img.shields.io/badge/scope-systems%20engineering-orange" alt="Scope: systems engineering">
 </p>
@@ -85,6 +85,10 @@ Default target is the vendor-namespaced `~/.claude/skills/jgs-se-knowledge-packs
 |------|--------|---------|------|--------|
 | `sebok` | Guide to the SE Body of Knowledge v2.13 | CC BY-NC-SA 3.0 | 🟡 2 | ✅ live (41 chapters) |
 | `nasa-se-handbook` | NASA Systems Engineering Handbook | Public domain (US gov) | 🟢 1 | ✅ live (34 chapters) |
+| `nasa-npr-7123` | NASA NPR 7123.1D — SE Processes & Requirements | Public domain (US gov) | 🟢 1 | ✅ live (9 chapters) |
+| `nasa-risk` | NASA Risk Management Handbook | Public domain (US gov) | 🟢 1 | ✅ live (10 chapters) |
+| `nasa-system-safety` | NASA System Safety Handbook v2 | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
+| `nasa-hsi` | NASA Human Systems Integration Guide | Public domain (US gov) | 🟢 1 | ✅ live (9 chapters) |
 | `nist-ai-rmf` | NIST AI Risk Management Framework 1.0 | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `nist-ssdf` | NIST Secure Software Development Framework 1.1 | Public domain (US gov) | 🟢 1 | ✅ live (5 chapters) |
 | `nist-csf` | NIST Cybersecurity Framework 2.0 | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |

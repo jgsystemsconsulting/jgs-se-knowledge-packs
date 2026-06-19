@@ -1,0 +1,20 @@
+slug: nasa-system-safety
+title: "NASA System Safety Handbook Volume 2 (NASA/SP-2014-612)"
+publisher: "NASA"
+source_version: "v1.0 (November 2014)"
+license: "Public Domain (US Government work, 17 U.S.C. 105)"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "book-to-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 216
+  chapters: 7
+  built_on: "2026-06-19"
+notes: >
+  US Government work -- public domain (17 U.S.C. 105); no copyright, free to reproduce,
+  transform, and redistribute (including commercially). Attribution to NASA is provided as a
+  courtesy in NOTICE, not as an obligation. Content is synthesized/transformed reference notes;
+  no long verbatim passages reproduced. No source-material link published (see docs/LICENSING.md).
+change_indication: "reconstructed as synthesized reference notes"

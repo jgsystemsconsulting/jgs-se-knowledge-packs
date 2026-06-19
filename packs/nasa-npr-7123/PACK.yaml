@@ -1,0 +1,20 @@
+slug: nasa-npr-7123
+title: "NASA NPR 7123.1D — Systems Engineering Processes and Requirements"
+publisher: "NASA"
+source_version: "Rev D w/Change 2 (2023)"
+license: "Public Domain (US Government work, 17 U.S.C. 105)"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "book-to-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 138
+  chapters: 9
+  built_on: "2026-06-19"
+notes: >
+  US Government work -- public domain (17 U.S.C. 105); no copyright, free to reproduce,
+  transform, and redistribute (including commercially). Attribution to NASA is provided as a
+  courtesy in NOTICE, not as an obligation. Content is synthesized/transformed reference notes;
+  no long verbatim passages reproduced. No source-material link published (see docs/LICENSING.md).
+change_indication: "reconstructed as synthesized reference notes"
