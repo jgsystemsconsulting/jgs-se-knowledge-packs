@@ -1,0 +1,75 @@
+{
+  "slug": "nasa-npr-7123",
+  "status": "complete",
+  "questions": [
+    {
+      "id": "np-01",
+      "type": "topic",
+      "prompt": "Describe the NASA SE Engine: what are the three process groups of the 17 common technical processes, and roughly how many processes are in each group? Name a representative process from each group.",
+      "routing": { "any_of": ["ch03"], "all_of": [] },
+      "must_include": ["System Design processes", "Product Realization processes", "Technical Management processes", "17 common technical processes", "applied recursively to each product layer"],
+      "must_use_terms": [{ "term": "SE Engine", "synonyms": ["Systems Engineering Engine"] }, { "term": "recursive", "synonyms": ["recursively"] }],
+      "provenance": "NASA NPR 7123.1 ch03",
+      "must_not_include": ["all 17 processes are run only once for the entire project"],
+      "canary": false
+    },
+    {
+      "id": "np-02",
+      "type": "topic",
+      "prompt": "Explain the MOE -> MOP -> TPM measurement cascade in NPR 7123.1: what each measure is, whether it is qualitative or quantitative, which SE process defines it, and what it drives (validation vs. design vs. progress tracking).",
+      "routing": { "any_of": ["ch03", "ch07"], "all_of": [] },
+      "must_include": ["MOE is qualitative and drives validation", "MOP is a quantitative design target", "TPM is a monitored subset of MOPs tracked against plan"],
+      "must_use_terms": [{ "term": "Measure of Effectiveness", "synonyms": ["MOE"] }, { "term": "Measure of Performance", "synonyms": ["MOP"] }, { "term": "Technical Performance Measure", "synonyms": ["TPM"] }],
+      "provenance": "NASA NPR 7123.1 ch03, ch07",
+      "must_not_include": ["MOEs are quantitative design-to targets"],
+      "canary": true
+    },
+    {
+      "id": "np-03",
+      "type": "applied",
+      "prompt": "A project manager wants to hold the PDR on a fixed calendar date to meet a budget milestone, even though several mandatory work products are not yet mature. Using NPR 7123.1 life-cycle review rules, explain why this is wrong, what determines when a review may be convened, what is needed if a required product is missing, and when the review is considered complete.",
+      "routing": { "any_of": ["ch05", "ch09"], "all_of": [] },
+      "must_include": ["reviews are event-based, triggered by technical maturity not calendar", "entrance criteria must be satisfied before the review is convened", "review is complete only when all RIDs and RFAs are dispositioned"],
+      "must_use_terms": [{ "term": "entrance criteria", "synonyms": [] }, { "term": "event-based", "synonyms": ["event-driven"] }],
+      "provenance": "NASA NPR 7123.1 ch05, ch09",
+      "must_not_include": ["reviews are scheduled on a fixed calendar date regardless of technical maturity"],
+      "canary": false
+    },
+    {
+      "id": "np-04",
+      "type": "topic",
+      "prompt": "Summarize the NASA TRL scale (1-9): group the levels by environment, and state specifically what TRL 6, TRL 7, TRL 8, and TRL 9 each demonstrate. Note when TRL must be assessed and updated.",
+      "routing": { "any_of": ["ch08"], "all_of": [] },
+      "must_include": ["TRL 6 is a prototype demonstrated in a relevant environment", "TRL 7 is a prototype in the actual operational environment", "TRL 9 is the actual system flight-proven in a real mission"],
+      "must_use_terms": [{ "term": "relevant environment", "synonyms": [] }, { "term": "operational environment", "synonyms": [] }, { "term": "Technology Readiness Level", "synonyms": ["TRL"] }],
+      "provenance": "NASA NPR 7123.1 ch08",
+      "must_not_include": ["TRL 6 demonstrates the final system in the actual operational mission environment"],
+      "canary": true
+    },
+    {
+      "id": "np-05",
+      "type": "applied",
+      "prompt": "A small project team wants to fold its SEMP content into the Project Plan and decides on its own to combine two life-cycle reviews to save time. Under NPR 7123.1, what must happen for the SEMP-in-Project-Plan approach to be acceptable, is combining reviews tailoring or customizing, and who must approve the SEMP? Distinguish tailoring from customizing in your answer.",
+      "routing": { "any_of": ["ch06", "ch02"], "all_of": [] },
+      "must_include": ["ETA must approve the SEMP", "tailoring adjusts what must be done and needs an ETA-approved waiver or deviation", "customizing selects how a requirement is implemented and needs no waiver"],
+      "must_use_terms": [{ "term": "SEMP", "synonyms": ["Systems Engineering Management Plan"] }, { "term": "ETA", "synonyms": ["Engineering Technical Authority"] }, { "term": "tailoring", "synonyms": ["tailor"] }],
+      "provenance": "NASA NPR 7123.1 ch06, ch02",
+      "must_not_include": ["customizing a recommended practice requires an ETA-approved waiver or deviation"],
+      "canary": false
+    },
+    {
+      "id": "np-tn-01",
+      "type": "trigger-negative",
+      "prompt": "What is a good marinade recipe for grilling chicken thighs, and how long should I leave them in it?",
+      "expect_fire": false,
+      "canary": false
+    },
+    {
+      "id": "np-tp-01",
+      "type": "trigger-positive",
+      "prompt": "For a NASA project, which of the 17 common technical processes produces the SEMP, and at which life-cycle review must the SEMP be baselined for a single-project program?",
+      "expect_fire": true,
+      "canary": false
+    }
+  ]
+}

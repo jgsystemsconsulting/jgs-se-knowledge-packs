@@ -1,0 +1,134 @@
+{
+  "slug": "eu-ai-act",
+  "status": "complete",
+  "questions": [
+    {
+      "id": "eu-01",
+      "type": "topic",
+      "prompt": "Under the EU AI Act, what are the prohibited AI practices and what makes them different from high-risk systems in terms of a compliance route?",
+      "routing": { "any_of": ["ch02"], "all_of": [] },
+      "must_include": [
+        "Article 5 enumerates the prohibited practices (e.g. social scoring, untargeted facial-recognition scraping, real-time RBIS in public spaces for law enforcement)",
+        "there is no conformity-assessment route around them; they are an absolute / unconditional ban",
+        "they apply from 2 February 2025"
+      ],
+      "must_use_terms": [
+        { "term": "prohibited practices", "synonyms": ["prohibited AI practices", "Article 5 prohibitions"] }
+      ],
+      "provenance": "EU AI Act Reg 2024/1689 ch02 (Article 5 prohibited practices)",
+      "must_not_include": [
+        "a provider can place a prohibited-practice system on the market after passing a third-party conformity assessment"
+      ],
+      "canary": true
+    },
+    {
+      "id": "eu-02",
+      "type": "topic",
+      "prompt": "Explain the two routes by which an AI system becomes high-risk under Article 6, and the de minimis carve-out that can exclude an Annex III system.",
+      "routing": { "any_of": ["ch03"], "all_of": [] },
+      "must_include": [
+        "Route A: safety component of an Annex I product that requires third-party conformity assessment",
+        "Route B: the system falls within an Annex III use-case area",
+        "the Art 6(3) de minimis carve-out (narrow procedural task, improving a completed human activity, detecting patterns, or a preparatory task), but profiling of natural persons always makes it high-risk"
+      ],
+      "must_use_terms": [
+        { "term": "de minimis", "synonyms": ["de minimis carve-out", "Article 6(3) carve-out"] }
+      ],
+      "provenance": "EU AI Act Reg 2024/1689 ch03 (Article 6 two-route classification, Art 6(3) carve-out)",
+      "must_not_include": [
+        "a system that performs profiling of natural persons can still qualify for the de minimis carve-out and avoid high-risk classification"
+      ],
+      "canary": true
+    },
+    {
+      "id": "eu-03",
+      "type": "applied",
+      "prompt": "A company sells an AI tool that screens and ranks CVs to filter job applicants during recruitment. Is this high-risk under the EU AI Act, and why?",
+      "routing": { "any_of": ["ch12", "ch03"], "all_of": [] },
+      "must_include": [
+        "yes, it is high-risk",
+        "it falls within Annex III Area 4 (employment / recruitment / filtering job applications) via Route B of Article 6",
+        "high-risk classification triggers the full Chapter III requirements (e.g. risk management, data governance, human oversight) unless a de minimis carve-out is documented"
+      ],
+      "must_use_terms": [
+        { "term": "Annex III", "synonyms": ["Annex 3"] }
+      ],
+      "provenance": "EU AI Act Reg 2024/1689 ch12 (Annex III Area 4 employment) and ch03 (Art 6 Route B)",
+      "must_not_include": [
+        "CV-screening recruitment AI is a prohibited practice under Article 5"
+      ],
+      "canary": false
+    },
+    {
+      "id": "eu-04",
+      "type": "topic",
+      "prompt": "List the requirements imposed on high-risk AI systems under Articles 8-15 and note how they must be maintained.",
+      "routing": { "any_of": ["ch04"], "all_of": [] },
+      "must_include": [
+        "risk management system (Art 9), data governance (Art 10), technical documentation (Art 11), automatic logging / record-keeping (Art 12)",
+        "transparency to deployers (Art 13), human oversight (Art 14), accuracy/robustness/cybersecurity (Art 15)",
+        "the requirements apply cumulatively and must be maintained throughout the lifecycle, not just before placement"
+      ],
+      "must_use_terms": [
+        { "term": "human oversight", "synonyms": [] }
+      ],
+      "provenance": "EU AI Act Reg 2024/1689 ch04 (Articles 8-15 high-risk requirements)",
+      "must_not_include": [
+        "satisfying six of the seven high-risk requirements is sufficient for compliance"
+      ],
+      "canary": false
+    },
+    {
+      "id": "eu-05",
+      "type": "applied",
+      "prompt": "A startup trains a general-purpose AI model and releases it under a free open-source licence with public weights. Its cumulative training compute exceeds 10^25 FLOPs. What GPAI obligations apply, and does the open-source exception help?",
+      "routing": { "any_of": ["ch08"], "all_of": [] },
+      "must_include": [
+        "exceeding 10^25 FLOPs creates a rebuttable presumption of systemic risk",
+        "the open-source exception (Art 53(2)) does NOT apply to systemic-risk GPAI models, so the documentation and downstream-information obligations still apply",
+        "systemic-risk providers additionally owe adversarial testing / red-teaming, systemic risk assessment and mitigation, serious incident reporting to the AI Office, and cybersecurity"
+      ],
+      "must_use_terms": [
+        { "term": "systemic risk", "synonyms": ["systemic-risk GPAI"] }
+      ],
+      "provenance": "EU AI Act Reg 2024/1689 ch08 (Chapter V GPAI; Art 51 10^25 FLOPs threshold; Art 53(2) open-source exception; Art 55)",
+      "must_not_include": [
+        "open-source GPAI models with systemic risk are exempt from all Chapter V obligations because the weights are public"
+      ],
+      "canary": true
+    },
+    {
+      "id": "eu-06",
+      "type": "topic",
+      "prompt": "Describe the three national penalty tiers under Article 99 and which violation each maps to.",
+      "routing": { "any_of": ["ch11"], "all_of": [] },
+      "must_include": [
+        "up to EUR 35 million or 7% of global annual turnover for prohibited practices (Art 5)",
+        "up to EUR 15 million or 3% for operator-obligation and transparency violations",
+        "up to EUR 7.5 million or 1% for supplying incorrect, incomplete, or misleading information; fines are calculated on total worldwide annual turnover"
+      ],
+      "must_use_terms": [
+        { "term": "global annual turnover", "synonyms": ["worldwide annual turnover", "total worldwide annual turnover"] }
+      ],
+      "provenance": "EU AI Act Reg 2024/1689 ch11 (Article 99 three-tier penalty structure)",
+      "must_not_include": [
+        "the penalty percentages are applied only to the operator's EU-derived revenue rather than total worldwide turnover"
+      ],
+      "canary": false
+    },
+    {
+      "id": "eu-tn-01",
+      "type": "trigger-negative",
+      "prompt": "How does the US NIST AI Risk Management Framework define its four core functions?",
+      "expect_fire": false,
+      "canary": false
+    },
+    {
+      "id": "eu-tp-01",
+      "type": "trigger-positive",
+      "prompt": "We are placing an AI creditworthiness-scoring system on the EU market. Which obligations apply to us as the provider and which conformity steps do we need before launch?",
+      "expect_fire": true,
+      "canary": false
+    }
+  ]
+}
