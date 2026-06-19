@@ -118,3 +118,43 @@ def attestation_errors(record: dict) -> list[str]:
         errs.append(f"{record.get('id', '?')}: faithfulness_saw_loaded_files must be false "
                     "(the loaded-file list must be withheld from the faithfulness pass)")
     return errs
+
+
+CANARY_MIN_LOAD_BEARING = 5  # below this, a canary slice has no statistical power
+
+
+def canary_is_load_bearing(records: list[dict]) -> bool:
+    return sum(1 for r in records if r.get("canary")) >= CANARY_MIN_LOAD_BEARING
+
+
+def aggregate(slug: str, status: str, records: list[dict]) -> dict:
+    """Per-pack roll-up. A 'seed' (stub) bank is always INCOMPLETE. A complete bank is
+    FAIL if any question fails, else PASS."""
+    verdicts = {r["id"]: gate_verdict(r) for r in records}
+    if status == "seed":
+        pack_status = "INCOMPLETE"
+    elif any(v == "FAIL" for v in verdicts.values()):
+        pack_status = "FAIL"
+    else:
+        pack_status = "PASS"
+    return {
+        "slug": slug,
+        "status": pack_status,
+        "verdicts": verdicts,
+        "dispositions": {r["id"]: disposition(r) for r in records},
+        "trend": {r["id"]: trend_scalar(r) for r in records},
+        "canary_load_bearing": canary_is_load_bearing(records),
+    }
+
+
+def suite_status(pack_aggregates: list[dict], total_packs: int) -> str:
+    """Suite-level status. INCOMPLETE unless every pack is evaluated and none is a stub;
+    FAIL if any evaluated pack failed; else PASS."""
+    if len(pack_aggregates) < total_packs:
+        return "INCOMPLETE"
+    statuses = [p["status"] for p in pack_aggregates]
+    if any(s == "INCOMPLETE" for s in statuses):
+        return "INCOMPLETE"
+    if any(s == "FAIL" for s in statuses):
+        return "FAIL"
+    return "PASS"
