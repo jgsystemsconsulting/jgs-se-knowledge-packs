@@ -1,0 +1,28 @@
+omg-sysml pack — content licence
+=================================
+
+This pack is derived from:
+    OMG Systems Modeling Language (SysML) v1.6
+    Object Management Group (OMG), 1.6 (formal/2019-11-01)
+
+Source licence: OMG Specification License  (tier 2 — see ../../docs/SOURCE-VETTING.md)
+No source-material download link is published (see ../../docs/LICENSING.md).
+
+Under the OMG Specification License, the copyright holders grant a non-exclusive,
+royalty-free, paid-up, worldwide licence to copy and distribute this specification and to
+modify it and distribute copies of the modified version, on these conditions:
+
+  - reproduce the copyright notice and these conditions in distributed copies;
+  - any modified version must carry a prominent notice stating how and when it was
+    modified; and
+  - the trademarked specification name ("OMG SysML") must not be used to identify a
+    modified version, and the copyright holders' names must not be used to endorse or
+    promote derived products without prior written permission.
+
+This pack is a TRANSFORMED reference derived from the specification — not the normative
+OMG SysML specification, and not identified by the OMG SysML trademark. Attribution to
+OMG is given (see the repository NOTICE); the content is a modification (synthesized
+reference notes), indicated here and in PACK.yaml.
+
+NOTE: This file governs the CONTENT of this pack. The repository tooling is licensed
+separately under MIT (see ../../LICENSE).

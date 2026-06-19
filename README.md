@@ -8,7 +8,7 @@ SPDX-License-Identifier: MIT
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT%20(tooling)-blue" alt="License: MIT (tooling)">
   <img src="https://img.shields.io/badge/version-1.0.0-green" alt="Version 1.0.0">
-  <img src="https://img.shields.io/badge/packs-2-blueviolet" alt="2 packs">
+  <img src="https://img.shields.io/badge/packs-3-blueviolet" alt="3 packs">
   <img src="https://img.shields.io/badge/tested%20with-Claude%20Code-8A2BE2" alt="Tested with Claude Code">
   <img src="https://img.shields.io/badge/scope-systems%20engineering-orange" alt="Scope: systems engineering">
 </p>
@@ -85,7 +85,7 @@ Default target is the vendor-namespaced `~/.claude/skills/jgs-se-knowledge-packs
 |------|--------|---------|------|--------|
 | `sebok` | Guide to the SE Body of Knowledge v2.13 | CC BY-NC-SA 3.0 | 🟡 2 | ✅ live (41 chapters) |
 | `nasa-se-handbook` | NASA Systems Engineering Handbook | Public domain (US gov) | 🟢 1 | ✅ live (34 chapters) |
-| `omg-sysml` | OMG Systems Modeling Language spec | OMG licence | 🟡 2 | 🔜 planned |
+| `omg-sysml` | OMG Systems Modeling Language v1.6 | OMG licence | 🟡 2 | ✅ live (11 clauses) |
 | `dodaf` | DoD Architecture Framework | Public release, unlimited | 🟢 1 | 🔜 planned |
 | `mit-ocw-se` | MIT OCW Fundamentals of Systems Engineering | CC BY-NC-SA | 🟡 2 | 🔜 planned |
 
