@@ -58,6 +58,50 @@
       "commercial_use": true,
       "chapters": 8,
       "status": "live"
+    },
+    {
+      "slug": "nasa-npr-7123",
+      "title": "NASA NPR 7123.1D \u2014 Systems Engineering Processes and Requirements",
+      "publisher": "NASA",
+      "source_version": "Rev D w/Change 2 (2023)",
+      "license": "Public Domain (US Government work)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 9,
+      "status": "live"
+    },
+    {
+      "slug": "nasa-risk",
+      "title": "NASA Risk Management Handbook (NASA/SP-2011-3422)",
+      "publisher": "NASA",
+      "source_version": "v1.0 (November 2011)",
+      "license": "Public Domain (US Government work)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 10,
+      "status": "live"
+    },
+    {
+      "slug": "nasa-system-safety",
+      "title": "NASA System Safety Handbook Volume 2 (NASA/SP-2014-612)",
+      "publisher": "NASA",
+      "source_version": "v1.0 (November 2014)",
+      "license": "Public Domain (US Government work)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 7,
+      "status": "live"
+    },
+    {
+      "slug": "nasa-hsi",
+      "title": "NASA Human Systems Integration (HSI) Practitioner's Guide (NASA/SP-2015-3709)",
+      "publisher": "NASA",
+      "source_version": "(November 2015)",
+      "license": "Public Domain (US Government work)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 9,
+      "status": "live"
     }
   ],
   "planned": [

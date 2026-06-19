@@ -6,7 +6,7 @@ Generated from each pack's SKILL.md frontmatter. Regenerate with tooling/gen_ski
 
 # jgs-se-knowledge-packs — Pack Index
 
-5 packs in this release. Each pack is an Agent Skill installed as `/<slug>`.
+9 packs in this release. Each pack is an Agent Skill installed as `/<slug>`.
 
 | Pack | Source licence | Description |
 |------|----------------|-------------|
@@ -15,3 +15,7 @@ Generated from each pack's SKILL.md frontmatter. Regenerate with tooling/gen_ski
 | [`nist-ai-rmf`](packs/nist-ai-rmf/SKILL.md) | Public Domain (US Gov) | AI risk management — the four functions (Govern, Map, Measure, Manage), trustworthiness characteristics, harmful-bias management, and AI RMF profiles. |
 | [`nist-ssdf`](packs/nist-ssdf/SKILL.md) | Public Domain (US Gov) | Secure software development practices grouped as Prepare the Organization, Protect the Software, Produce Well-Secured Software, and Respond to Vulnerabilities. |
 | [`nist-csf`](packs/nist-csf/SKILL.md) | Public Domain (US Gov) | The six CSF functions (Govern, Identify, Protect, Detect, Respond, Recover) plus organizational profiles and tiers for managing cybersecurity risk. |
+| [`nasa-npr-7123`](packs/nasa-npr-7123/SKILL.md) | Public Domain (US Gov) | NASA's SE process requirements — the 17 common technical processes as 'shall' requirements, life-cycle phases and technical reviews (entrance/success criteria), the SEMP, and Technology Readiness Levels. |
+| [`nasa-risk`](packs/nasa-risk/SKILL.md) | Public Domain (US Gov) | NASA's integrated risk management — Risk-Informed Decision Making (RIDM) and Continuous Risk Management (CRM: Identify, Analyze, Plan, Track, Control, Communicate & Document). |
+| [`nasa-system-safety`](packs/nasa-system-safety/SKILL.md) | Public Domain (US Gov) | NASA system safety — the Risk-Informed Safety Case (RISC), the claim-evidence-argument structure, safety objectives and requirements, and RISC development and evaluation. |
+| [`nasa-hsi`](packs/nasa-hsi/SKILL.md) | Public Domain (US Gov) | NASA Human Systems Integration — the six HSI domains, the HSI process across the life cycle, technical authorities, and HSI planning, scaling, and tailoring. |

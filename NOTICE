@@ -59,6 +59,38 @@ Third-party source attributions (one block per shipped pack)
   Terms  : public domain, no copyright. Attribution to NIST is courtesy, not
            obligation; NIST does not endorse this pack. See packs/nist-csf/LICENSE.
 
+[pack: nasa-npr-7123]
+  Source : NASA NPR 7123.1D — Systems Engineering Processes and Requirements
+  Author : NASA
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. Attribution to NASA is courtesy, not
+           obligation; NASA does not endorse this pack. See packs/nasa-npr-7123/LICENSE.
+
+[pack: nasa-risk]
+  Source : NASA Risk Management Handbook (NASA/SP-2011-3422)
+  Author : NASA
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. Attribution to NASA is courtesy, not
+           obligation; NASA does not endorse this pack. See packs/nasa-risk/LICENSE.
+
+[pack: nasa-system-safety]
+  Source : NASA System Safety Handbook Volume 2 (NASA/SP-2014-612)
+  Author : NASA
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. Attribution to NASA is courtesy, not
+           obligation; NASA does not endorse this pack. See packs/nasa-system-safety/LICENSE.
+
+[pack: nasa-hsi]
+  Source : NASA Human Systems Integration (HSI) Practitioner's Guide (NASA/SP-2015-3709)
+  Author : NASA
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. Attribution to NASA is courtesy, not
+           obligation; NASA does not endorse this pack. See packs/nasa-hsi/LICENSE.
+
 -----------------------------------------------------------------------------------
 The build pipeline uses the book-to-skill extraction engine (MIT License),
 © the book-to-skill authors. It is a build tool, not a packaged source.
