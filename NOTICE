@@ -27,6 +27,14 @@ Third-party source attributions (one block per shipped pack)
   Terms  : non-commercial; attribution required; share-alike (pack content is
            released under CC BY-NC-SA 3.0). See packs/sebok/LICENSE.
 
+[pack: nasa-se-handbook]
+  Source : NASA Systems Engineering Handbook (NASA/SP-2016-6105 Rev 2)
+  Author : NASA
+  Licence: Public Domain — US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. Attribution to NASA is courtesy, not
+           obligation; NASA does not endorse this pack. See packs/nasa-se-handbook/LICENSE.
+
 -----------------------------------------------------------------------------------
 The build pipeline uses the book-to-skill extraction engine (MIT License),
 © the book-to-skill authors. It is a build tool, not a packaged source.

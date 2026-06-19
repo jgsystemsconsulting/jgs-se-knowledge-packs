@@ -14,18 +14,20 @@
       "commercial_use": false,
       "chapters": 41,
       "status": "live"
-    }
-  ],
-  "planned": [
+    },
     {
       "slug": "nasa-se-handbook",
       "title": "NASA Systems Engineering Handbook (SP-2016-6105 Rev 2)",
       "publisher": "NASA",
+      "source_version": "Rev 2 (2016)",
       "license": "Public Domain (US Government work)",
       "license_tier": 1,
       "commercial_use": true,
-      "status": "planned"
-    },
+      "chapters": 34,
+      "status": "live"
+    }
+  ],
+  "planned": [
     {
       "slug": "omg-sysml",
       "title": "OMG Systems Modeling Language (SysML) Specification",
