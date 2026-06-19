@@ -25,7 +25,6 @@ Usage:
         --title "NASA Systems Engineering Handbook (SP-2016-6105 Rev 2)" \
         --publisher "NASA" \
         --version "Rev 2 (2016)" \
-        --url "https://www.nasa.gov/..." \
         --license "Public Domain (US Government work)" \
         --tier 1 \
         --commercial-use true
