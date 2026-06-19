@@ -6,37 +6,84 @@
       "id": "sb-01",
       "type": "topic",
       "prompt": "What does SEBoK identify as defining characteristics of a system of systems (SoS)?",
-      "routing": { "any_of": ["ch25"], "all_of": [] },
-      "must_include": ["operational independence of constituent systems",
-                       "emergence / emergent mission-level behaviour from constituent interactions"],
-      "must_use_terms": [{ "term": "system of systems", "synonyms": ["SoS"] }],
-      "provenance": "SEBoK v2.13 ch25 — this pack frames SoS by operational independence + emergence (constituents retain autonomy / pre-existing objectives), NOT the Maier 'managerial independence' wording.",
-      "must_not_include": ["a system of systems has a single owning authority that controls all constituents"],
+      "routing": {
+        "any_of": [
+          "ch25"
+        ],
+        "all_of": []
+      },
+      "must_include": [
+        "operational independence of constituent systems",
+        "emergence / emergent mission-level behaviour from constituent interactions"
+      ],
+      "must_use_terms": [
+        {
+          "term": "system of systems",
+          "synonyms": [
+            "SoS"
+          ]
+        }
+      ],
+      "provenance": "SEBoK v2.13 ch25 \u00e2\u20ac\u201d this pack frames SoS by operational independence + emergence (constituents retain autonomy / pre-existing objectives), NOT the Maier 'managerial independence' wording.",
+      "must_not_include": [
+        "a system of systems has a single owning authority that controls all constituents"
+      ],
       "canary": false
     },
     {
       "id": "sb-02",
       "type": "applied",
       "prompt": "Why does SEBoK say SoS engineering relies on 'influence and intervention' rather than 'control and design'? Tie your answer to a defining SoS characteristic.",
-      "routing": { "any_of": ["ch25"], "all_of": [] },
-      "must_include": ["constituent systems retain operational independence / autonomy",
-                       "no central command authority over constituents",
-                       "align constituent behaviour with SoS goals via incentives / architecture"],
-      "must_use_terms": [{ "term": "operational independence", "synonyms": [] }],
+      "routing": {
+        "any_of": [
+          "ch25"
+        ],
+        "all_of": []
+      },
+      "must_include": [
+        "constituent systems retain operational independence / autonomy",
+        "no central command authority over constituents",
+        "align constituent behaviour with SoS goals via incentives / architecture"
+      ],
+      "must_use_terms": [
+        {
+          "term": "operational independence",
+          "synonyms": []
+        }
+      ],
       "provenance": "SEBoK v2.13 ch25 ('influence and intervention replaces control and design')",
-      "must_not_include": ["the SoS integrator directly controls each constituent's design"],
+      "must_not_include": [
+        "the SoS integrator directly controls each constituent's design"
+      ],
       "canary": true
     },
     {
       "id": "sb-03",
       "type": "topic",
       "prompt": "What is MBSE according to SEBoK, and how does it differ from document-centric SE?",
-      "routing": { "any_of": ["ch06"], "all_of": [] },
-      "must_include": ["models are the primary artifacts rather than text-based documents",
-                       "models as the central / authoritative technical baseline"],
-      "must_use_terms": [{ "term": "MBSE", "synonyms": ["model-based systems engineering"] }],
-      "provenance": "SEBoK v2.13 ch06 (representing systems / MBSE)",
-      "must_not_include": ["MBSE just means generating more documents automatically"],
+      "routing": {
+        "any_of": [
+          "ch09",
+          "ch06"
+        ],
+        "all_of": []
+      },
+      "must_include": [
+        "models are the primary artifacts rather than text-based documents",
+        "models as the central / authoritative technical baseline"
+      ],
+      "must_use_terms": [
+        {
+          "term": "MBSE",
+          "synonyms": [
+            "model-based systems engineering"
+          ]
+        }
+      ],
+      "provenance": "SEBoK v2.13 ch09 (Model-Based Systems Engineering; primary MBSE chapter) \u2014 ch06 (representing systems) also covers MBSE per the SKILL.md topic index",
+      "must_not_include": [
+        "MBSE just means generating more documents automatically"
+      ],
       "canary": true
     },
     {

@@ -1,0 +1,9 @@
+{
+  "slug": "sebok",
+  "expected": {
+    "sb-01": "PASS",
+    "sb-02": "PASS",
+    "sb-03": "PASS",
+    "sb-tn-01": "PASS"
+  }
+}
