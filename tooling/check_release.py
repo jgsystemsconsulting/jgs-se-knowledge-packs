@@ -133,6 +133,7 @@ def main() -> int:
                 ROOT / "install.py", ROOT / "install.sh", ROOT / "install.ps1",
                 ROOT / "tooling/validate_pack.py", ROOT / "tooling/build_pack.py",
                 ROOT / "tooling/check_release.py",
+                ROOT / "tooling/eval/eval.py",
                 ROOT / "docs/LICENSING.md", ROOT / "docs/SOURCE-VETTING.md",
                 ROOT / "docs/PACK-SPEC.md", ROOT / "docs/skill-usage.md"]
     for p in authored:

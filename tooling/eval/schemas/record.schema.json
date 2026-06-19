@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Collected answer+judge record",
+  "type": "object",
+  "required": ["id", "judge", "judge_method", "faithfulness_saw_loaded_files"],
+  "properties": {
+    "id": { "type": "string" },
+    "loaded_files": { "type": "array", "items": { "type": "string" } },
+    "answer": { "type": "string" },
+    "fired": { "type": "boolean" },
+    "canary": { "type": "boolean" },
+    "judge_method": { "const": "anchors-only" },
+    "faithfulness_saw_loaded_files": { "const": false },
+    "judge": {
+      "type": "object",
+      "required": ["faithfulness", "routing", "completeness", "triggering"],
+      "properties": {
+        "faithfulness": { "type": ["integer", "null"], "minimum": 1, "maximum": 5 },
+        "routing": { "type": ["integer", "null"], "minimum": 1, "maximum": 5 },
+        "completeness": { "type": ["integer", "null"], "minimum": 1, "maximum": 5 },
+        "triggering": { "enum": ["PASS", "FAIL", null] },
+        "unmapped_claims": { "type": "array", "items": { "type": "string" } },
+        "must_not_include_hits": { "type": "array", "items": { "type": "string" } },
+        "must_use_terms_missing": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}
