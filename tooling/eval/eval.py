@@ -158,3 +158,27 @@ def suite_status(pack_aggregates: list[dict], total_packs: int) -> str:
     if any(s == "FAIL" for s in statuses):
         return "FAIL"
     return "PASS"
+
+
+def baseline_diff(baseline: dict, current: dict) -> dict:
+    """Compare current {qid: verdict} against a committed baseline's 'expected' map.
+      regressions — was PASS in baseline, now FAIL
+      fixed       — was FAIL in baseline, now PASS
+      new         — qid present now but absent from baseline (needs a baseline update)
+    """
+    expected = baseline.get("expected", {})
+    regressions, fixed, new = [], [], []
+    for qid, verdict in current.items():
+        if qid not in expected:
+            new.append(qid)
+        elif expected[qid] == "PASS" and verdict == "FAIL":
+            regressions.append(qid)
+        elif expected[qid] == "FAIL" and verdict == "PASS":
+            fixed.append(qid)
+    return {"regressions": sorted(regressions), "fixed": sorted(fixed), "new": sorted(new)}
+
+
+def baseline_gate_ok(diff: dict) -> bool:
+    """The gate bites ONLY on regressions. 'fixed' and 'new' do not fail the gate
+    (they signal the baseline should be refreshed)."""
+    return not diff["regressions"]
