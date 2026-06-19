@@ -27,7 +27,7 @@ Status key: ✅ PASS · ⚠️ PARTIAL (path-to-green noted) · 🔁 N-A (adapte
 | RR-B-04 | MUST | ✅ | `SPDX-License-Identifier: MIT` in every authored-file header. |
 | RR-B-05 | MUST | ✅ | README has Install / Usage / Licensing / Support & security headings; no internal URLs. |
 | RR-B-06 | MUST | ✅ | Copy-paste install (`python install.py`) + manual clone path. |
-| RR-B-07 | MUST | ✅ | `SECURITY.md` + README give `jason.gower@jgsystemsconsulting.com`. |
+| RR-B-07 | MUST | ✅ | `SECURITY.md` + README give `support@jgsystemsconsulting.com`. |
 | RR-B-08 | MUST | ✅ | `CHANGELOG.md` (Keep a Changelog); top entry `1.0.0` == plugin.json == RELEASE-INFO. |
 | RR-B-09 | MUST | ✅ | SemVer `1.0.0` single-source; `check_release.py` asserts agreement. |
 | RR-B-10 | MUST | ✅ | `RELEASE-INFO.txt`: product, version, UTC timestamp, `Tag: v1.0.0` (no internal SHA — public-repo rule). |

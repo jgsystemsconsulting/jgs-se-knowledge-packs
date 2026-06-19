@@ -8,7 +8,7 @@ SPDX-License-Identifier: MIT
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT%20(tooling)-blue" alt="License: MIT (tooling)">
   <img src="https://img.shields.io/badge/version-1.0.0-green" alt="Version 1.0.0">
-  <img src="https://img.shields.io/badge/packs-2-blueviolet" alt="2 packs">
+  <img src="https://img.shields.io/badge/packs-5-blueviolet" alt="5 packs">
   <img src="https://img.shields.io/badge/tested%20with-Claude%20Code-8A2BE2" alt="Tested with Claude Code">
   <img src="https://img.shields.io/badge/scope-systems%20engineering-orange" alt="Scope: systems engineering">
 </p>
@@ -84,7 +84,11 @@ Default target is the vendor-namespaced `~/.claude/skills/jgs-se-knowledge-packs
 | Pack | Source | Licence | Tier | Status |
 |------|--------|---------|------|--------|
 | `sebok` | Guide to the SE Body of Knowledge v2.13 | CC BY-NC-SA 3.0 | 🟡 2 | ✅ live (41 chapters) |
-| `nasa-se-handbook` | NASA Systems Engineering Handbook | Public domain (US gov) | 🟢 1 | ✅ live (34 chapters) || `dodaf` | DoD Architecture Framework | Public release, unlimited | 🟢 1 | 🔜 planned |
+| `nasa-se-handbook` | NASA Systems Engineering Handbook | Public domain (US gov) | 🟢 1 | ✅ live (34 chapters) |
+| `nist-ai-rmf` | NIST AI Risk Management Framework 1.0 | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
+| `nist-ssdf` | NIST Secure Software Development Framework 1.1 | Public domain (US gov) | 🟢 1 | ✅ live (5 chapters) |
+| `nist-csf` | NIST Cybersecurity Framework 2.0 | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
+| `dodaf` | DoD Architecture Framework | Public release | 🟢 1 | ⏸ deferred (source blocked) |
 | `mit-ocw-se` | MIT OCW Fundamentals of Systems Engineering | CC BY-NC-SA | 🟡 2 | 🔜 planned |
 
 Machine-readable index: [SKILLS.md](SKILLS.md) · [catalog.json](catalog.json).
@@ -123,9 +127,9 @@ and redistribute — including why no source-material links are published — is
 
 ## Support & security
 
-- **Help / questions:** open an issue, or contact `jason.gower@jgsystemsconsulting.com`.
+- **Help / questions:** open an issue, or contact `support@jgsystemsconsulting.com`.
 - **Security / licensing concerns:** see [SECURITY.md](SECURITY.md) — report privately to
-  `jason.gower@jgsystemsconsulting.com`.
+  `support@jgsystemsconsulting.com`.
 
 ## Version
 

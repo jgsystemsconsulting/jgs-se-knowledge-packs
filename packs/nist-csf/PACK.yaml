@@ -1,0 +1,20 @@
+slug: nist-csf
+title: "NIST Cybersecurity Framework (CSF) 2.0"
+publisher: "NIST (US Dept of Commerce)"
+source_version: "2.0 (February 2024)"
+license: "Public Domain (US Government work, 17 U.S.C. 105)"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "book-to-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 32
+  chapters: 8
+  built_on: "2026-06-19"
+notes: >
+  US Government work -- public domain (17 U.S.C. 105); no copyright, free to reproduce,
+  transform, and redistribute (including commercially). Attribution to NIST is provided as a
+  courtesy in NOTICE, not as an obligation. Content is synthesized/transformed reference notes;
+  no long verbatim passages reproduced. No source-material link published (see docs/LICENSING.md).
+change_indication: "reconstructed as synthesized reference notes"
