@@ -296,6 +296,26 @@ def _cmd_score(args) -> int:
     return 0 if gate_ok else 1
 
 
+def coverage_summary(manifest: dict) -> dict:
+    packs = manifest.get("packs", [])
+    seeded = sum(1 for p in packs if p.get("status") == "seeded")
+    stub = sum(1 for p in packs if p.get("status") == "stub")
+    return {"seeded": seeded, "stub": stub, "total": len(packs),
+            "suite": "COMPLETE" if stub == 0 and seeded == len(packs) else "INCOMPLETE"}
+
+
+def _cmd_coverage(args) -> int:
+    path = ROOT / "tooling" / "eval" / "coverage.json"
+    try:
+        manifest = load_bank(path)
+    except (FileNotFoundError, json.JSONDecodeError) as e:
+        print(f"coverage: cannot read {path}: {e}")
+        return 1
+    s = coverage_summary(manifest)
+    print(f"coverage: {s['seeded']} seeded / {s['stub']} stub / {s['total']} total — {s['suite']}")
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(description="Knowledge-pack eval harness (v1, read-only).")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -316,6 +336,9 @@ def build_parser() -> argparse.ArgumentParser:
     sc.add_argument("--judge-model", default="unknown", dest="judge_model")
     sc.add_argument("--bank-sha", default="unknown", dest="bank_sha")
     sc.set_defaults(func=_cmd_score)
+
+    cv = sub.add_parser("coverage", help="print the 13-pack seeding coverage")
+    cv.set_defaults(func=_cmd_coverage)
     return p
 
 

@@ -1,0 +1,17 @@
+{
+  "packs": [
+    { "slug": "nasa-risk", "status": "seeded" },
+    { "slug": "requirements-writing", "status": "stub" },
+    { "slug": "sebok", "status": "stub" },
+    { "slug": "nasa-se-handbook", "status": "stub" },
+    { "slug": "nasa-npr-7123", "status": "stub" },
+    { "slug": "nasa-system-safety", "status": "stub" },
+    { "slug": "nasa-hsi", "status": "stub" },
+    { "slug": "mil-std-882", "status": "stub" },
+    { "slug": "dodaf", "status": "stub" },
+    { "slug": "nist-ai-rmf", "status": "stub" },
+    { "slug": "nist-ssdf", "status": "stub" },
+    { "slug": "nist-csf", "status": "stub" },
+    { "slug": "eu-ai-act", "status": "stub" }
+  ]
+}
