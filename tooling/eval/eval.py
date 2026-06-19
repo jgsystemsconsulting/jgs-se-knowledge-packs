@@ -238,3 +238,92 @@ def render_quarantine(slug: str, records: list[dict]) -> str:
                       "Verdict-only. No answer text or source quotations are included by design.",
                       "Review each item by re-running the question and inspecting the answer locally.",
                       ""] + out)
+
+
+import argparse
+
+
+def _cmd_validate(args) -> int:
+    bank = load_bank(Path(args.bank))
+    errs = validate_bank(bank)
+    if errs:
+        print(f"FAIL  {args.bank}")
+        for e in errs:
+            print(f"        - {e}")
+        return 1
+    print(f"PASS  {args.bank} ({len(bank.get('questions', []))} questions)")
+    return 0
+
+
+def _cmd_runplan(args) -> int:
+    """Emit the (id, type, prompt) list a driver must dispatch to answerer subagents."""
+    bank = load_bank(Path(args.bank))
+    plan = [{"id": q["id"], "type": q["type"], "prompt": q["prompt"],
+             "slug": bank["slug"]} for q in bank.get("questions", [])]
+    print(json.dumps(plan, indent=2))
+    return 0
+
+
+def _cmd_score(args) -> int:
+    """Consume collected records (JSON list) + bank + baseline; write report + quarantine."""
+    bank = load_bank(Path(args.bank))
+    records = json.loads(Path(args.records).read_text(encoding="utf-8"))
+    canary = {q["id"]: q.get("canary", False) for q in bank.get("questions", [])}
+    for r in records:
+        r.setdefault("canary", canary.get(r["id"], False))
+    att = [e for r in records for e in attestation_errors(r)]
+    if att:
+        print("REFUSED — records not attested to the faithfulness rules:")
+        for e in att:
+            print(f"  - {e}")
+        return 2  # distinct from a gate FAIL (1): the run itself is untrusted
+    agg = aggregate(bank["slug"], bank["status"], records)
+    current = agg["verdicts"]
+    gate_ok = True
+    if args.baseline and Path(args.baseline).is_file():
+        diff = baseline_diff(load_bank(Path(args.baseline)), current)
+        gate_ok = baseline_gate_ok(diff)
+        print(f"baseline: regressions={diff['regressions']} fixed={diff['fixed']} new={diff['new']}")
+    report = render_report([agg], suite=("INCOMPLETE" if bank["status"] == "seed" else agg["status"]),
+                           total_packs=args.total_packs, judge_model=args.judge_model,
+                           bank_sha=args.bank_sha)
+    quarantine = render_quarantine(bank["slug"], records)
+    out_dir = ROOT / "results" / "latest"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    (out_dir / "report.md").write_text(report, encoding="utf-8")
+    if quarantine.strip():
+        (out_dir / "faithfulness-review.md").write_text(quarantine, encoding="utf-8")
+    return 0 if gate_ok else 1
+
+
+def build_parser() -> argparse.ArgumentParser:
+    p = argparse.ArgumentParser(description="Knowledge-pack eval harness (v1, read-only).")
+    sub = p.add_subparsers(dest="cmd", required=True)
+
+    v = sub.add_parser("validate", help="structurally validate a bank")
+    v.add_argument("bank")
+    v.set_defaults(func=_cmd_validate)
+
+    rp = sub.add_parser("runplan", help="emit the dispatch plan for a bank")
+    rp.add_argument("bank")
+    rp.set_defaults(func=_cmd_runplan)
+
+    sc = sub.add_parser("score", help="score collected records + gate vs baseline")
+    sc.add_argument("bank")
+    sc.add_argument("records")
+    sc.add_argument("--baseline", default=None)
+    sc.add_argument("--total-packs", type=int, default=13, dest="total_packs")
+    sc.add_argument("--judge-model", default="unknown", dest="judge_model")
+    sc.add_argument("--bank-sha", default="unknown", dest="bank_sha")
+    sc.set_defaults(func=_cmd_score)
+    return p
+
+
+def main(argv: list[str]) -> int:
+    args = build_parser().parse_args(argv)
+    return args.func(args)
+
+
+if __name__ == "__main__":
+    import sys
+    raise SystemExit(main(sys.argv[1:]))
