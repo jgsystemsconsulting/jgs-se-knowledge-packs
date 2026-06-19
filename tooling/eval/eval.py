@@ -78,3 +78,43 @@ def trend_scalar(record: dict) -> float:
     j = record["judge"]
     vals = [j[d] for d in ("faithfulness", "routing", "completeness") if j.get(d) is not None]
     return sum(vals) / len(vals) if vals else 0.0
+
+
+def disposition(record: dict) -> str:
+    """Human-review routing for one question:
+      QUARANTINE      — faithfulness failure (<=2) or any must_not_include hit; needs human,
+                        never auto-fixed. Highest priority.
+      ANCHOR_REVIEW   — answer is otherwise strong (faithfulness>=4) but a must_use_term is
+                        missing; the anchor itself may be stale/wrong — review the bank, not the skill.
+      NONE            — no human review needed for faithfulness/anchor reasons.
+    """
+    j = record["judge"]
+    faith = j.get("faithfulness")
+    if j.get("must_not_include_hits"):
+        return "QUARANTINE"
+    if faith is not None and faith <= GATE_FLOOR:
+        return "QUARANTINE"
+    if (faith is None or faith >= 4) and j.get("must_use_terms_missing"):
+        return "ANCHOR_REVIEW"
+    return "NONE"
+
+
+REQUIRED_JUDGE_METHOD = "anchors-only"
+
+
+def attestation_errors(record: dict) -> list[str]:
+    """Verify a record attests it was produced under the design's two faithfulness rules:
+      1. judge_method == 'anchors-only'  (faithfulness scored only vs human anchors)
+      2. faithfulness_saw_loaded_files == False  (loaded-file list withheld from faithfulness)
+    eval.py can't observe the driver, but it refuses to trust records that don't attest.
+    Returns a list of error strings (empty == well-attested)."""
+    errs: list[str] = []
+    if record.get("judge_method") != REQUIRED_JUDGE_METHOD:
+        errs.append(f"{record.get('id', '?')}: judge_method must be '{REQUIRED_JUDGE_METHOD}' "
+                    f"(got {record.get('judge_method')!r})")
+    # `is not False` (identity, not ==): a missing key (.get -> None) is caught, and we
+    # require the literal JSON `false`, not a falsy 0. The schema pins it to const:false.
+    if record.get("faithfulness_saw_loaded_files") is not False:
+        errs.append(f"{record.get('id', '?')}: faithfulness_saw_loaded_files must be false "
+                    "(the loaded-file list must be withheld from the faithfulness pass)")
+    return errs
