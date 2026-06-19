@@ -9,6 +9,17 @@ All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning follows
 [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Removed
+
+- **`omg-sysml`** pack — pulled from the catalogue. The OMG Specification License public grant
+  permits only informational, unmodified, non-network-posted use ("will not be copied or posted
+  on any network computer" and "no modifications are made to this specification"), so a hosted,
+  transformed knowledge pack is not redistributable. OMG `formal/` specifications (UML, SysML,
+  BPMN, UAF, …) are now on the Excluded list (`docs/SOURCE-VETTING.md`), confirmed by two
+  independent licence reads. (Shipped in error in v1.0.0; that tag was private and never published.)
+
 ## [1.0.0] — 2026-06-19
 
 ### Added

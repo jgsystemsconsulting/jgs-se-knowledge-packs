@@ -25,17 +25,6 @@
       "commercial_use": true,
       "chapters": 34,
       "status": "live"
-    },
-    {
-      "slug": "omg-sysml",
-      "title": "OMG Systems Modeling Language (SysML) v1.6",
-      "publisher": "Object Management Group (OMG)",
-      "source_version": "1.6 (formal/2019-11-01)",
-      "license": "OMG Specification License",
-      "license_tier": 2,
-      "commercial_use": true,
-      "chapters": 11,
-      "status": "live"
     }
   ],
   "planned": [
