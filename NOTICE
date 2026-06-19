@@ -35,6 +35,30 @@ Third-party source attributions (one block per shipped pack)
   Terms  : public domain, no copyright. Attribution to NASA is courtesy, not
            obligation; NASA does not endorse this pack. See packs/nasa-se-handbook/LICENSE.
 
+[pack: nist-ai-rmf]
+  Source : NIST AI Risk Management Framework 1.0 (NIST AI 100-1)
+  Author : NIST (US Department of Commerce)
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. Attribution to NIST is courtesy, not
+           obligation; NIST does not endorse this pack. See packs/nist-ai-rmf/LICENSE.
+
+[pack: nist-ssdf]
+  Source : NIST Secure Software Development Framework (SSDF) v1.1 (SP 800-218)
+  Author : NIST (US Department of Commerce)
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. Attribution to NIST is courtesy, not
+           obligation; NIST does not endorse this pack. See packs/nist-ssdf/LICENSE.
+
+[pack: nist-csf]
+  Source : NIST Cybersecurity Framework (CSF) 2.0
+  Author : NIST (US Department of Commerce)
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. Attribution to NIST is courtesy, not
+           obligation; NIST does not endorse this pack. See packs/nist-csf/LICENSE.
+
 -----------------------------------------------------------------------------------
 The build pipeline uses the book-to-skill extraction engine (MIT License),
 © the book-to-skill authors. It is a build tool, not a packaged source.

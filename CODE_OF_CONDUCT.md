@@ -30,7 +30,7 @@ Examples of unacceptable behaviour:
 ## Enforcement
 
 Instances of abuse or unacceptable behaviour may be reported to
-**`jason.gower@jgsystemsconsulting.com`**. All complaints will be reviewed and
+**`support@jgsystemsconsulting.com`**. All complaints will be reviewed and
 investigated and will result in a response deemed necessary and appropriate.
 
 This Code of Conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org),

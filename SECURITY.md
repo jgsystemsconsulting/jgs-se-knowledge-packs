@@ -7,7 +7,7 @@ SPDX-License-Identifier: MIT
 
 ## Reporting a vulnerability
 
-Report privately to **`jason.gower@jgsystemsconsulting.com`**. Please do **not** open a
+Report privately to **`support@jgsystemsconsulting.com`**. Please do **not** open a
 public issue for a security report.
 
 - Include a description, affected files/packs, and reproduction steps.

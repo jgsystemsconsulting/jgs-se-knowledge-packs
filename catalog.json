@@ -25,6 +25,39 @@
       "commercial_use": true,
       "chapters": 34,
       "status": "live"
+    },
+    {
+      "slug": "nist-ai-rmf",
+      "title": "NIST AI Risk Management Framework 1.0 (NIST AI 100-1)",
+      "publisher": "NIST (US Department of Commerce)",
+      "source_version": "1.0 (January 2023)",
+      "license": "Public Domain (US Government work)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 8,
+      "status": "live"
+    },
+    {
+      "slug": "nist-ssdf",
+      "title": "NIST Secure Software Development Framework (SSDF) v1.1 (SP 800-218)",
+      "publisher": "NIST (US Department of Commerce)",
+      "source_version": "1.1 (February 2022)",
+      "license": "Public Domain (US Government work)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 5,
+      "status": "live"
+    },
+    {
+      "slug": "nist-csf",
+      "title": "NIST Cybersecurity Framework (CSF) 2.0",
+      "publisher": "NIST (US Department of Commerce)",
+      "source_version": "2.0 (February 2024)",
+      "license": "Public Domain (US Government work)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 8,
+      "status": "live"
     }
   ],
   "planned": [
