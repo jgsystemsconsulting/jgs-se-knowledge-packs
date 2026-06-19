@@ -53,3 +53,28 @@ def validate_bank(bank: dict) -> list[str]:
 
 def load_bank(path: Path) -> dict:
     return json.loads(Path(path).read_text(encoding="utf-8"))
+
+
+GATE_FLOOR = 2  # a scored dimension at or below this fails the question
+
+
+def gate_verdict(record: dict) -> str:
+    """PASS/FAIL for one question. A question FAILS if any scored dimension <= GATE_FLOOR
+    or triggering == FAIL. Scored dims are None for trigger-type questions (ignored)."""
+    j = record["judge"]
+    for dim in ("faithfulness", "routing", "completeness"):
+        v = j.get(dim)
+        if v is not None and v <= GATE_FLOOR:
+            return "FAIL"
+    if j.get("triggering") == "FAIL":
+        return "FAIL"
+    return "PASS"
+
+
+def trend_scalar(record: dict) -> float:
+    """0.0 on a gated fail, else mean of the three scored dimensions (ignoring None)."""
+    if gate_verdict(record) == "FAIL":
+        return 0.0
+    j = record["judge"]
+    vals = [j[d] for d in ("faithfulness", "routing", "completeness") if j.get(d) is not None]
+    return sum(vals) / len(vals) if vals else 0.0
