@@ -6,7 +6,7 @@ Generated from each pack's SKILL.md frontmatter. Regenerate with tooling/gen_ski
 
 # jgs-se-knowledge-packs — Pack Index
 
-9 packs in this release. Each pack is an Agent Skill installed as `/<slug>`.
+11 packs in this release. Each pack is an Agent Skill installed as `/<slug>`.
 
 | Pack | Source licence | Description |
 |------|----------------|-------------|
@@ -19,3 +19,5 @@ Generated from each pack's SKILL.md frontmatter. Regenerate with tooling/gen_ski
 | [`nasa-risk`](packs/nasa-risk/SKILL.md) | Public Domain (US Gov) | NASA's integrated risk management — Risk-Informed Decision Making (RIDM) and Continuous Risk Management (CRM: Identify, Analyze, Plan, Track, Control, Communicate & Document). |
 | [`nasa-system-safety`](packs/nasa-system-safety/SKILL.md) | Public Domain (US Gov) | NASA system safety — the Risk-Informed Safety Case (RISC), the claim-evidence-argument structure, safety objectives and requirements, and RISC development and evaluation. |
 | [`nasa-hsi`](packs/nasa-hsi/SKILL.md) | Public Domain (US Gov) | NASA Human Systems Integration — the six HSI domains, the HSI process across the life cycle, technical authorities, and HSI planning, scaling, and tailoring. |
+| [`mil-std-882`](packs/mil-std-882/SKILL.md) | Public Domain (US Gov) | DoD System Safety — the system safety process, hazard analysis tasks (PHA/SSHA/SHA/O&SHA), the severity x probability risk assessment matrix, software safety criticality, and risk acceptance. |
+| [`requirements-writing`](packs/requirements-writing/SKILL.md) | CC BY 4.0 (original) | Writing high-quality requirements — the quality characteristics and EARS patterns (When/While/Where/If-Then) for unambiguous, verifiable requirements, plus defect review and verification & traceability. |

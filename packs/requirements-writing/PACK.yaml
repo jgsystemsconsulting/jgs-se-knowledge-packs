@@ -1,0 +1,21 @@
+slug: requirements-writing
+title: "Requirements Writing Guidance: EARS syntax and requirement quality"
+publisher: "Original synthesis (methods cited: EARS by Mavin et al.; quality characteristics per NASA public-domain guidance)"
+source_version: "2026"
+license: "Original guidance (CC BY 4.0); cited methods not reproduced"
+license_tier: 2
+commercial_use: true
+share_alike: false
+attribution_required: true
+build:
+  method: "book-to-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 0
+  chapters: 6
+  built_on: "2026-06-19"
+notes: >
+  Original guidance authored by JG Systems Consulting Ltd., synthesising widely-taught
+  requirements practice in its own words; licensed CC BY 4.0. Methods are CITED, not reproduced:
+  the EARS patterns are credited to Mavin et al. (2009); quality/verification guidance aligns
+  with NASA public-domain SE guidance. NOT a reproduction of ISO/IEC/IEEE 29148, the INCOSE Guide
+  for Writing Requirements, or the EARS conference paper. No source-material link.
+change_indication: "original synthesis (no single source reconstituted)"

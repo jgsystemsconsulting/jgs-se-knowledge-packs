@@ -1,8 +1,10 @@
 {
   "name": "jgs-se-knowledge-packs",
   "description": "Licence-vetted systems-engineering knowledge-pack skills for coding agents, reconstructed from genuinely open sources. Tooling MIT; pack content under each source's own licence.",
-  "version": "1.0.0",
-  "author": { "name": "JG Systems Consulting Ltd." },
+  "version": "1.1.0",
+  "author": {
+    "name": "JG Systems Consulting Ltd."
+  },
   "homepage": "https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs",
   "repository": "https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs",
   "license": "MIT"
