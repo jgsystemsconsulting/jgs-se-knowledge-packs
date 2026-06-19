@@ -49,7 +49,6 @@ slug: sebok                       # folder name, kebab-case
 title: "Guide to the Systems Engineering Body of Knowledge (SEBoK)"
 publisher: "BKCASE Project (Trustees of the Stevens Institute of Technology)"
 source_version: "v2.13 (2025-11-17)"
-source_url: "https://sebokwiki.org/"
 license: "CC BY-NC-SA 3.0"        # the SOURCE licence, verbatim name
 license_tier: 2                   # 1 | 2 | 3  (see docs/SOURCE-VETTING.md)
 commercial_use: false             # false if NC; true if PD or non-NC
@@ -65,9 +64,11 @@ notes: >
   repo's MIT. Non-commercial; attribution and share-alike carried forward.
 ```
 
-`license`, `license_tier`, `source_url`, and `commercial_use` are **mandatory** and
-checked by `tooling/validate_pack.py`. `license_tier` must be 1, 2, or 3 — never the
-Excluded tier.
+`title`, `publisher`, `license`, `license_tier`, and `commercial_use` are **mandatory**
+and checked by `tooling/validate_pack.py`. `license_tier` must be 1, 2, or 3 — never the
+Excluded tier. **No `source_url` / source-material link is stored or published** — the
+source is identified textually (title + publisher + version), and `publisher` carries the
+attribution, per the no-source-link policy in [LICENSING.md](LICENSING.md).
 
 ## Installing a pack (end user)
 

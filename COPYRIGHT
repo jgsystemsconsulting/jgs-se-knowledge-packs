@@ -1,0 +1,5 @@
+Copyright (c) 2026 JG Systems Consulting Ltd. All rights reserved.
+
+The repository tooling and scaffolding are licensed under the MIT License (see LICENSE).
+Knowledge-pack CONTENT under packs/<slug>/ is licensed separately under each upstream
+open source's own licence — see packs/<slug>/LICENSE, NOTICE, and docs/LICENSING.md.
