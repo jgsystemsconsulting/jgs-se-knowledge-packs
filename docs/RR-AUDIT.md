@@ -53,7 +53,7 @@ Status key: ✅ PASS · ⚠️ PARTIAL (path-to-green noted) · 🔁 N-A (adapte
 | RR-S-08 | MUST | ✅ | `.claude-plugin/marketplace.json` + `plugin.json`; JSON parses; `version` = 1.0.0. |
 | RR-S-09 | MUST | ✅ | README badge cluster (license, version, packs, tested-with-Claude-Code). |
 | RR-S-10 | MUST | ✅ | Standalone `SECURITY.md` with private reporting address + response-time; no bug-bounty. |
-| RR-S-11 | MUST | ⚠️ | Version single-source PASS. **Path-to-green:** apply git tag `v1.0.0` at release (Phase C). |
+| RR-S-11 | MUST | ✅ | Version single-source (1.0.0) PASS; git tag `v1.0.0` applied at the v1.0.0 release commit. |
 | RR-S-12 | MUST | ⚠️ | `.github/workflows/validate.yml` authored to spec (`permissions: read-all`, push + pull_request, inline bash + python3 stdlib, no repo-code execution, sentinel scan + frontmatter lint, neutral step names). **Path-to-green:** shipped as `validate.yml.disabled`; activate with `gh auth refresh -h github.com -s workflow` then rename to `validate.yml` (OAuth workflow scope can't be granted non-interactively). |
 | RR-S-13 | MUST | ✅ | Each pack `SKILL.md` has a literal `## When to use` heading + a `Prerequisites` marker. |
 | RR-S-14 | MUST | ✅ | Frontmatter conforms to agentskills.io: `name` kebab-case matching dir + non-empty `description`. |
@@ -62,7 +62,7 @@ Status key: ✅ PASS · ⚠️ PARTIAL (path-to-green noted) · 🔁 N-A (adapte
 
 1. Self-verify gate runs clean — ✅ `check_release.py` → PASS.
 2. All applicable `RR-B-*` MUSTs — ✅ (RR-B-00/15 satisfied by adaptation).
-3. All `RR-S-*` MUSTs — ✅ except RR-S-11 (tag at release) and RR-S-12 (CI activation) — ⚠️ paths noted.
+3. All `RR-S-*` MUSTs — ✅ (RR-S-11 git tag `v1.0.0` applied at release). RR-S-12 (CI activation) — ⚠️ pending the workflow OAuth scope.
 4. Leak checks — ✅ no forbidden paths/content; required files + headers present.
 5. Version agreement — ✅ 1.0.0 across plugin.json / CHANGELOG / RELEASE-INFO.
 6. Agent-install prompt present + accurate — ✅ (RR-B-16).
@@ -77,9 +77,12 @@ Status key: ✅ PASS · ⚠️ PARTIAL (path-to-green noted) · 🔁 N-A (adapte
 5. **RR-S-06** — source-named pack slugs (documented exception); vendor namespace at target level.
 6. **RR-S-13** — `## When to use` + prerequisites added to each pack `SKILL.md`.
 
-## Residual items to reach 100% before public release
+## Residual item before PUBLIC release
 
-- **RR-S-11** — apply `git tag v1.0.0` (Phase C).
-- **RR-S-12** — grant the workflow OAuth scope and activate `validate.yml`.
+The repo is private at v1.0.0 (tagged). One item remains before flipping public:
+
+- **RR-S-12** — grant the workflow OAuth scope (`gh auth refresh -h github.com -s workflow`)
+  and activate `validate.yml` (rename from `.disabled`). The checks already pass locally via
+  `tooling/check_release.py`; this only switches on the automated CI gate.
 
 Everything else is ✅. Re-run `python tooling/check_release.py` after any change.
