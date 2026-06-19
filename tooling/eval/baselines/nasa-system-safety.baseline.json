@@ -1,0 +1,12 @@
+{
+  "slug": "nasa-system-safety",
+  "expected": {
+    "ns-01": "PASS",
+    "ns-02": "PASS",
+    "ns-03": "PASS",
+    "ns-04": "PASS",
+    "ns-05": "PASS",
+    "ns-tn-01": "PASS",
+    "ns-tp-01": "PASS"
+  }
+}
