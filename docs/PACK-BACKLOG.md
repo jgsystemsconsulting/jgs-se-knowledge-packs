@@ -28,7 +28,7 @@ maintainers' build notes. Each candidate has a terminal status so nothing is sil
 | `nist-ssdf` | NIST SP 800-218 — Secure Software Development Framework | 1 | NIST PD |
 | `nist-csf` | NIST CSF 2.0 (CSWP 29) | 1 | NIST PD |
 | `mil-std-882` | MIL-STD-882E — DoD System Safety | 1 | DoD, Distribution A (public release) |
-| `eu-ai-act` | Regulation (EU) 2024/1689 — Artificial Intelligence Act | 2 | EU OJ, freely reproducible with acknowledgement; download via EUR-Lex cellar (WAF blocks direct curl) |
+| `eu-ai-act` → **built v1.2.0** | Regulation (EU) 2024/1689 — Artificial Intelligence Act | 2 | EU OJ, freely reproducible with acknowledgement. **Built in v1.2.0** from a user-supplied PDF (EUR-Lex WAF blocked automated download). Now live. |
 | `requirements-writing` | EARS patterns (openly published) + requirement quality characteristics grounded in NASA PD | 2 / guidance | **guidance pack** — bespoke multi-source synthesis, not single-PDF |
 
 ## ⏸ Deferred
@@ -36,7 +36,7 @@ maintainers' build notes. Each candidate has a terminal status so nothing is sil
 | Candidate | Source | Reason |
 |-----------|--------|--------|
 | `nasa-expanded-guidance` | NASA Expanded Guidance for SE (SP-2016-6105-SUPPL, multi-vol) | Auto-found URL collided with the SE Handbook; likely redundant with `nasa-se-handbook`. Needs correct SUPPL link + a redundancy check before building. |
-| `dodaf` | DoD Architecture Framework 2.02 | Official `dodcio.defense.gov` 403s automated downloads; no clean mirror found. Needs a user-supplied PDF or a working source. |
+| ~~`dodaf`~~ → **built v1.2.0** | DoD Architecture Framework 2.02 Vol II | Was deferred (official server 403'd automated download); **built in v1.2.0 from a user-supplied, title-verified PDF**. Now live. |
 
 ## 🔴 Excluded — not packageable
 
