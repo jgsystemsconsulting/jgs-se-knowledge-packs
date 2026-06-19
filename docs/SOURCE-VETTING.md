@@ -98,14 +98,21 @@ and per-pack** — a pack folder always contains its own `LICENSE`.
 
 ## The vetting checklist (run before opening a pack PR)
 
-1. [ ] Identified the exact source document, version, and canonical URL.
+1. [ ] Identified the exact source document, version, and publisher. (Read the source's
+   own licence to vet it — the source URL is used for vetting only, never published.)
 2. [ ] Found the **licence statement** in the source itself (not a third-party claim).
 3. [ ] Assigned a tier (1 / 2 / 3) with the licence named.
 4. [ ] Source is **not** on the Excluded list.
 5. [ ] If Tier 2: NC / SA / BY / trademark conditions recorded in `PACK.yaml`.
 6. [ ] If Tier 3: written justification present.
 7. [ ] Pack folder contains a `LICENSE` reproducing the source's terms.
-8. [ ] `PACK.yaml` `license`, `license_tier`, `source_url`, `commercial_use` filled.
+8. [ ] `PACK.yaml` `title`, `publisher`, `license`, `license_tier`, `commercial_use`
+   filled — textual attribution, **no source-material URL published** (see LICENSING.md).
 
 CI enforces 4, 7, and 8 mechanically (`tooling/validate_pack.py`). Tiers 1–3 judgement
 is human and reviewed on the PR.
+
+> **Link policy.** Source-material URLs are recorded during vetting but are **not**
+> published anywhere in a pack or the docs. Attribution travels as text (title +
+> publisher + version + licence) plus the licence-deed link — which the licences accept.
+> See [LICENSING.md](LICENSING.md) §4.

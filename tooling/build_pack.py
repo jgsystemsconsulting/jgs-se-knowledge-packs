@@ -44,7 +44,6 @@ slug: {slug}
 title: "{title}"
 publisher: "{publisher}"
 source_version: "{version}"
-source_url: "{url}"
 license: "{license}"
 license_tier: {tier}
 commercial_use: {commercial_use}
@@ -67,9 +66,9 @@ LICENSE_STUB = """\
 This pack is derived from:
     {title}
     {publisher}, {version}
-    {url}
 
 Source licence: {license}  (tier {tier} — see ../../docs/SOURCE-VETTING.md)
+No source-material download link is published (see ../../docs/LICENSING.md).
 
 TODO: reproduce the source's full licence text / terms here. For public-domain
 (US Government) works, state that and keep an attribution courtesy note. For CC or
@@ -86,7 +85,6 @@ def main(argv: list[str]) -> int:
     ap.add_argument("--title", required=True)
     ap.add_argument("--publisher", required=True)
     ap.add_argument("--version", required=True)
-    ap.add_argument("--url", required=True)
     ap.add_argument("--license", required=True, help="exact source licence name")
     ap.add_argument("--tier", required=True, choices=sorted(VALID_TIERS),
                     help="1=public domain, 2=open licence, 3=caution (justify in PACK.yaml)")
@@ -104,14 +102,14 @@ def main(argv: list[str]) -> int:
 
     (pack_dir / "PACK.yaml").write_text(PACK_YAML_TEMPLATE.format(
         slug=args.slug, title=args.title, publisher=args.publisher, version=args.version,
-        url=args.url, license=args.license, tier=args.tier,
+        license=args.license, tier=args.tier,
         commercial_use=args.commercial_use, share_alike=args.share_alike,
         attribution_required=args.attribution_required,
     ), encoding="utf-8")
 
     (pack_dir / "LICENSE").write_text(LICENSE_STUB.format(
         slug=args.slug, underline="=" * (len(args.slug) + 24), title=args.title,
-        publisher=args.publisher, version=args.version, url=args.url,
+        publisher=args.publisher, version=args.version,
         license=args.license, tier=args.tier,
     ), encoding="utf-8")
 

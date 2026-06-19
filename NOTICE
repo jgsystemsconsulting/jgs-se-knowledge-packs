@@ -1,0 +1,33 @@
+NOTICE
+======
+
+jgs-se-knowledge-packs
+Copyright (c) 2026 JG Systems Consulting Ltd.
+
+This product contains two separately licensed layers:
+
+1. TOOLING & SCAFFOLDING (MIT License — JG Systems Consulting Ltd.)
+   Everything outside packs/<slug>/: tooling/, docs/, installers, CI, repo structure.
+
+2. PACK CONTENT (each under its upstream open source's own licence)
+   The reconstructed reference notes inside each packs/<slug>/ directory are derived
+   from openly-licensed or public-domain sources and carry that source's licence.
+   Attribution is provided textually below and in each packs/<slug>/LICENSE; no
+   source-material download links are published (see docs/LICENSING.md).
+
+-----------------------------------------------------------------------------------
+Third-party source attributions (one block per shipped pack)
+-----------------------------------------------------------------------------------
+
+[pack: sebok]
+  Source : Guide to the Systems Engineering Body of Knowledge (SEBoK), v2.13
+  Author : BKCASE Project (Trustees of the Stevens Institute of Technology)
+  Licence: CC BY-NC-SA 3.0 (https://creativecommons.org/licenses/by-nc-sa/3.0/)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : non-commercial; attribution required; share-alike (pack content is
+           released under CC BY-NC-SA 3.0). See packs/sebok/LICENSE.
+
+-----------------------------------------------------------------------------------
+The build pipeline uses the book-to-skill extraction engine (MIT License),
+© the book-to-skill authors. It is a build tool, not a packaged source.
+-----------------------------------------------------------------------------------

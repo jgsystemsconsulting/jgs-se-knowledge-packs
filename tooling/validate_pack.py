@@ -22,7 +22,7 @@ import re
 import sys
 from pathlib import Path
 
-REQUIRED_PACK_FIELDS = ("slug", "title", "license", "license_tier", "source_url", "commercial_use")
+REQUIRED_PACK_FIELDS = ("slug", "title", "publisher", "license", "license_tier", "commercial_use")
 VALID_TIERS = {"1", "2", "3"}
 
 
