@@ -1,0 +1,12 @@
+slug: omg-signpost
+kind: signpost
+title: "OMG Specifications — Signpost (download pointers only)"
+publisher: "JG Systems Consulting Ltd."
+license: "MIT"
+license_tier: 2
+commercial_use: true
+notes: >
+  Signpost, NOT a knowledge pack. Contains zero OMG source content — only spec names,
+  purposes, and the OMG download URL (citation, not redistribution). Exists because OMG
+  specs are Excluded (the OMG licence forbids network-posting + modification); this points
+  users to OMG instead. Content is original (MIT, JG Systems Consulting Ltd.).

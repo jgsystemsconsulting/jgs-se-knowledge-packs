@@ -78,7 +78,13 @@ def main() -> int:
 
     # 3. no source-material links (exclude pack chapter content — those are prose, but
     #    they are synthesized and should also be clean; include them to be strict)
+    # ponytail: a "signpost" pack is pure citation — it MUST name where a spec lives, so it
+    # is exempt from the link ban. Marked by `kind: signpost` in its SKILL.md frontmatter.
+    signpost_dirs = {p.parent for p in ROOT.glob("packs/*/SKILL.md")
+                     if re.search(r"^kind:\s*signpost\s*$", p.read_text(encoding="utf-8", errors="ignore"), re.M)}
     for p in text_files:
+        if p.parent in signpost_dirs:
+            continue
         body = p.read_text(encoding="utf-8", errors="ignore")
         m = SOURCE_HOSTS.search(body)
         if m:
@@ -104,7 +110,7 @@ def main() -> int:
     sys.path.insert(0, str(ROOT / "tooling"))
     try:
         import validate_pack  # type: ignore
-        packs = sorted(p for p in (ROOT / "packs").iterdir() if p.is_dir())
+        packs = sorted(p for p in (ROOT / "packs").iterdir() if p.is_dir() and p not in signpost_dirs)
         for pack in packs:
             perrs = validate_pack.check_pack(pack)
             for e in perrs:
@@ -115,7 +121,9 @@ def main() -> int:
 
     # 6. SKILLS.md entry count == pack count
     skills = (ROOT / "SKILLS.md").read_text(encoding="utf-8") if (ROOT / "SKILLS.md").is_file() else ""
-    entry_count = len(re.findall(r"\[`[^`]+`\]\(packs/", skills))
+    signpost_names = {d.name for d in signpost_dirs}
+    entry_slugs = re.findall(r"\[`([^`]+)`\]\(packs/", skills)
+    entry_count = len([s for s in entry_slugs if s not in signpost_names])
     if packs and entry_count != len(packs):
         fail(errs, f"[index] SKILLS.md lists {entry_count} packs but {len(packs)} are shipped")
 

@@ -9,6 +9,15 @@ All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning follows
 [Semantic Versioning](https://semver.org/).
 
+## [1.2.1] — 2026-06-19
+
+### Added
+
+- **`omg-signpost`** — a *signpost*, not a knowledge pack: zero OMG content, just spec names,
+  purposes, and the OMG download URL. OMG specs are Excluded (licence forbids packaging), so
+  this points users to OMG instead. New `kind: signpost` marker; `check_release.py` exempts
+  signposts from the link ban and pack-structure checks.
+
 ## [1.2.0] — 2026-06-19
 
 ### Added
