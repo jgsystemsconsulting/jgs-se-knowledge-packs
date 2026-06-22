@@ -7,8 +7,8 @@ SPDX-License-Identifier: MIT
 
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT%20(tooling)-blue" alt="License: MIT (tooling)">
-  <img src="https://img.shields.io/badge/version-1.3.0-green" alt="Version 1.3.0">
-  <img src="https://img.shields.io/badge/packs-16-blueviolet" alt="16 packs">
+  <img src="https://img.shields.io/badge/version-1.4.0-green" alt="Version 1.4.0">
+  <img src="https://img.shields.io/badge/packs-19-blueviolet" alt="19 packs">
   <img src="https://img.shields.io/badge/tested%20with-Claude%20Code-8A2BE2" alt="Tested with Claude Code">
   <img src="https://img.shields.io/badge/scope-systems%20engineering-orange" alt="Scope: systems engineering">
 </p>
@@ -55,7 +55,7 @@ and install the catalogue for you.
 ```text
 You are installing jgs-se-knowledge-packs, an open catalogue (MIT tooling) of
 systems-engineering knowledge-pack skills by JG Systems Consulting Ltd.
-Repository: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs (version 1.3.0).
+Repository: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs (version 1.4.0).
 Do this in order:
 1. Read README.md, docs/skill-usage.md, and CHANGELOG.md so you understand what you are
    installing. There are NO external prerequisites — packs are plain Markdown skills.
@@ -117,6 +117,9 @@ always-loaded `SKILL.md` index inlined into one file. Full detail and the per-ag
 | `nist-ssdf` | NIST Secure Software Development Framework 1.1 | Public domain (US gov) | 🟢 1 | ✅ live (5 chapters) |
 | `nist-csf` | NIST Cybersecurity Framework 2.0 | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `nist-sse` | NIST SP 800-160 Vol 1+2 — Systems Security Engineering | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
+| `nist-800-37` | NIST SP 800-37 Rev 2 — Risk Management Framework | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
+| `nist-cps` | NIST Framework for Cyber-Physical Systems (SP 1500-201/202/203) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
+| `digital-systems-engineering` | Towards Digital Engineering (ODU, arXiv:2002.11672) | CC BY 4.0 | 🟡 2 | ✅ live (7 chapters) |
 | `mil-std-882` | MIL-STD-882E — DoD System Safety | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `requirements-writing` | Requirements writing — EARS & quality (original guidance) | CC BY 4.0 | 🟡 2 | ✅ live (6 chapters) |
 | `dau-se-guidebook` | DoD Systems Engineering Guidebook (OUSD R&E) | Public domain (US gov) | 🟢 1 | ✅ live (6 chapters) |
@@ -173,4 +176,4 @@ and redistribute — including why no source-material links are published — is
 
 ## Version
 
-See [CHANGELOG.md](CHANGELOG.md). Current: 1.3.0.
+See [CHANGELOG.md](CHANGELOG.md). Current: 1.4.0.

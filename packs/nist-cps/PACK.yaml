@@ -1,0 +1,30 @@
+slug: nist-cps
+title: "NIST Framework for Cyber-Physical Systems Vols 1-3 (SP 1500-201/202/203)"
+publisher: "NIST"
+source_version: "Version 1.0 (June 2017)"
+license: "Public Domain (US Government work)"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "book-to-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 338
+  chapters: 8
+  built_on: "2026-06-22"
+notes: >
+  US Government work, not subject to copyright in the United States (the three NIST
+  Special Publications SP 1500-201/202/203 are works of NIST). Free to reproduce,
+  transform, and redistribute, including commercially; attribution to NIST is a
+  courtesy, not an obligation, and NIST does not endorse this pack. CAVEAT: the
+  source reproduces, under permission only, several THIRD-PARTY figures and diagrams
+  that are NOT public domain -- notably the Beecham Research M2M sector map and the
+  ETSI smart-transportation illustration in Vol 1, and vendor/standards-body figures
+  in Vol 2/3 (e.g. the chemicalprocessing.com network topology and the Tournier et
+  al. substation diagram, (c) 2009 IEEE). This pack reproduces NONE of those figures;
+  it SYNTHESIZES NIST's own public-domain prose in original words and describes any
+  figure content textually. It likewise NAMES but does not reproduce the ISO/IEC/IEEE
+  42010 and 15288 process material the Framework draws on (those remain (c) their
+  publishers). The source is a 2017 v1.0 living/draft document, incomplete in places.
+  No source-material link is published (see docs/LICENSING.md).
+change_indication: "reconstructed as synthesized reference notes"

@@ -1,0 +1,71 @@
+digital-systems-engineering pack — content licence
+===================================================
+
+This pack is derived from:
+    Towards Digital Engineering: The Advent of Digital Systems Engineering
+    Jingwei Huang, Adrian Gheorghe, Holly Handley, Pilar Pazos, Ariel Pinto,
+    Samuel Kovacic, Andrew Collins, Charles Keating, Andres Sousa-Poza,
+    Ghaith Rabadi, Resit Unal, Teddy Cotter, Rafael Landaeta, Charles Daniels.
+    Department of Engineering Management and Systems Engineering,
+    Old Dominion University, Norfolk, VA, USA.
+    arXiv:2002.11672 (2020); paper in press, Int. J. System of Systems Engineering.
+
+Source licence: Creative Commons Attribution 4.0 International (CC BY 4.0)
+    (tier 2 — see ../../docs/SOURCE-VETTING.md)
+No source-material download link is published (see ../../docs/LICENSING.md).
+The pack is grounded only in the openly licensed arXiv preprint, NOT the
+paywalled journal version.
+
+------------------------------------------------------------------------------
+SOURCE LICENCE TERMS (CC BY 4.0 summary — the binding obligations)
+------------------------------------------------------------------------------
+
+Under the Creative Commons Attribution 4.0 International licence
+(https://creativecommons.org/licenses/by/4.0/) the licensor grants, worldwide
+and royalty-free, the right to:
+
+  - Share — copy and redistribute the material in any medium or format; and
+  - Adapt — remix, transform, and build upon the material for any purpose,
+    including commercially.
+
+These freedoms cannot be revoked by the licensor so long as the licence terms
+are followed. The licence carries ONE binding condition and two notices:
+
+  - Attribution (BINDING) — You must give appropriate credit, provide a link to
+    the licence, and indicate if changes were made. You may do so in any
+    reasonable manner, but not in any way that suggests the licensor endorses
+    you or your use.
+  - No additional restrictions — You may not apply legal terms or technological
+    measures that legally restrict others from doing anything the licence
+    permits.
+  - No warranties — The licence may not give all permissions necessary for an
+    intended use (e.g., publicity, privacy, or moral rights may limit how the
+    material is used).
+
+CC BY 4.0 is NOT non-commercial and is NOT share-alike. There is no obligation
+to release adaptations under the same licence, and commercial use is permitted.
+
+------------------------------------------------------------------------------
+HOW THESE CONDITIONS ARE CARRIED FORWARD INTO THIS PACK
+------------------------------------------------------------------------------
+
+  - ATTRIBUTION is satisfied: the authors and the work (title, arXiv:2002.11672,
+    2020, Old Dominion University) are credited in PACK.yaml, in SKILL.md, and in
+    every chapter file; this LICENSE links the CC BY 4.0 deed; and the chapters
+    indicate that the content has been changed (paraphrased synthesis, grounded
+    in the preprint only).
+  - CHANGES INDICATED: this pack is a reference-depth paraphrase and synthesis,
+    not a reproduction. It does not copy long verbatim passages of the source
+    (verified mechanically by tools/check_overlap.py).
+  - NO endorsement is implied. Nothing here suggests the authors or Old Dominion
+    University endorse this pack or JG Systems Consulting Ltd.
+  - NO additional legal/technical restrictions are imposed beyond those of the
+    underlying repository tooling licence.
+  - Because CC BY 4.0 is neither non-commercial nor share-alike, this pack's
+    content is NOT forced under CC BY 4.0; only the attribution obligation binds.
+
+ACKNOWLEDGEMENT (from the source): the original work was partially supported by
+the U.S. National Science Foundation under grant CNS-1828593.
+
+NOTE: This licence governs the CONTENT of this pack and is independent of the
+repository's MIT licence (which covers tooling only).

@@ -64,10 +64,15 @@ def main() -> int:
         if not (ROOT / rel).is_file():
             fail(errs, f"[files] missing required file: {rel}")
 
-    # collect text files (exclude .git, pack chapter content for some checks)
+    # collect text files. Exclude version-control and gitignored build/artifact dirs:
+    # those never ship, and they legitimately contain source URLs (extracted source text
+    # under sources/.build/) or QA snapshots (.playwright-mcp/) — scanning them is a
+    # false positive against the link/leak policy, which only governs shippable content.
+    SKIP_DIRS = {".git", "sources", ".build", ".playwright-mcp", "__pycache__",
+                 ".worktrees", ".ruff_cache", ".pytest_cache", ".venv", "venv", ".idea", ".vscode"}
     text_files = [p for p in ROOT.rglob("*")
                   if p.is_file() and p.suffix in {".md", ".py", ".json", ".yaml", ".yml", ".txt", ".sh", ".ps1"}
-                  and ".git" not in p.parts]
+                  and not (SKIP_DIRS & set(p.parts))]
 
     # 2. leak sentinels (whole repo)
     for p in text_files:

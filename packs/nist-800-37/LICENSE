@@ -1,0 +1,45 @@
+nist-800-37 pack — content licence
+===================================
+
+This pack is derived from:
+    NIST SP 800-37 Rev 2 (Risk Management Framework for Information Systems and
+    Organizations: A System Life Cycle Approach for Security and Privacy)
+    NIST (US Department of Commerce), Revision 2 (December 2018)
+
+Source licence: Public Domain (US Government work, 17 U.S.C. 105)  (tier 1 — see
+../../docs/SOURCE-VETTING.md)
+No source-material download link is published (see ../../docs/LICENSING.md).
+
+SOURCE TERMS (as stated by NIST in the publication)
+---------------------------------------------------
+NIST Special Publication 800-37 Revision 2 is a work of the U.S. Federal Government.
+Per the notice carried in the publication, it "may be used by nongovernmental
+organizations on a voluntary basis and is not subject to copyright in the United States.
+Attribution would, however, be appreciated by NIST." Use of the publication does not
+imply NIST endorsement of any derivative product, nor does it modify the authorities of
+the Secretary of Commerce, the OMB Director, or any other federal official.
+
+OBLIGATIONS CARRIED FORWARD
+---------------------------
+Because the source is a U.S. Government work not subject to domestic copyright, NO
+attribution, non-commercial, or share-alike obligation attaches to it. The content of
+this pack may therefore be reproduced, transformed, and redistributed freely, including
+commercially. As a courtesy (not an obligation):
+  - Attribution to NIST is provided in PACK.yaml and throughout the pack.
+  - NIST does not endorse this pack; nothing here should be read as a NIST endorsement.
+  - "NIST" and the publication identifier are used nominatively to identify the source.
+
+THIRD-PARTY CAVEAT
+------------------
+SP 800-37 Rev 2 references and adopts material owned by others — notably the
+ISO/IEC/IEEE 15288 engineering definition of a "system," and it points to companion NIST
+and federal documents (SP 800-53 and SP 800-53B control catalog/baselines, FIPS 199/200
+and CNSSI 1253 categorization, SP 800-39/30/137/161). This pack SYNTHESIZES the RMF
+process in original words and does NOT reproduce the SP 800-53 control catalog or its
+baselines, the FIPS/CNSSI impact tables, or any long verbatim ISO/IEC/IEEE 15288 process
+text. Those works remain governed by their respective publishers' terms (ISO/IEC/IEEE
+material is third-party copyrighted; the other NIST/FIPS documents are themselves U.S.
+Government works).
+
+NOTE: This licence governs the CONTENT of this pack and is independent of the
+repository's MIT licence (which covers tooling only).

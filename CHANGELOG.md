@@ -9,6 +9,23 @@ All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning follows
 [Semantic Versioning](https://semver.org/).
 
+## [1.4.0] — 2026-06-23
+
+### Added
+
+- **`nist-800-37`** (7 ch) — NIST SP 800-37 Rev 2, the Risk Management Framework: the seven steps
+  (Prepare, Categorize, Select, Implement, Assess, Authorize, Monitor), tasks and roles, control
+  selection/tailoring, and the assess–authorize–monitor loop. Tier 1 (US-gov public domain).
+- **`nist-cps`** (8 ch) — NIST Framework for Cyber-Physical Systems (SP 1500-201/202/203): the
+  three facets (conceptualization, realization, assurance), the nine aspects, the CPS reference
+  architecture, and trustworthiness/timing/data concerns. Tier 1 (US-gov public domain).
+- **`digital-systems-engineering`** (7 ch) — *Towards Digital Engineering* (arXiv:2002.11672):
+  the digital-engineering/DSE conceptual framework, the DoD Digital Engineering Strategy goals,
+  the Authoritative Source of Truth, digitalization vs digitization, and the four-level
+  (vision/strategy/action/foundation) research framework. Tier 2 (CC BY 4.0, attribution).
+
+Catalogue now 19 packs (+2 signposts).
+
 ## [1.3.0] — 2026-06-22
 
 ### Added
