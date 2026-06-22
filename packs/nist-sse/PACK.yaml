@@ -1,0 +1,25 @@
+slug: nist-sse
+title: "NIST SP 800-160 — Systems Security Engineering (Vol 1 + Vol 2)"
+publisher: "NIST (US Department of Commerce)"
+source_version: "Vol 1 Rev 1 (2022) + Vol 2 Rev 1 (2021)"
+license: "Public Domain (US Government work, 17 U.S.C. 105)"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "book-to-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 358
+  chapters: 8
+  built_on: "2026-06-22"
+notes: >
+  US Government work -- not subject to copyright (NIST's own notice: "is not subject to
+  copyright in the United States. Attribution would, however, be appreciated by NIST").
+  Free to reproduce, transform, and redistribute, including commercially. CAVEAT: both
+  volumes reference/reprint third-party ISO/IEC/IEEE 15288 material (Vol 1 Appendices G-K
+  draw on ISO/IEC/IEEE 15288, which is © its publishers). This pack SYNTHESIZES the SSE
+  guidance and does NOT reproduce the ISO-15288-derived process tables or any long verbatim
+  third-party passages -- it names the 15288 process groups and describes NIST's security
+  augmentation of them in original words. Attribution to NIST is courtesy, not obligation;
+  NIST does not endorse this pack. No source-material link published (see docs/LICENSING.md).
+change_indication: "reconstructed as synthesized reference notes"
