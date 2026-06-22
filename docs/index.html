@@ -1,0 +1,220 @@
+<!doctype html>
+<!--
+  Copyright (c) 2026 JG Systems Consulting Ltd. — MIT License (see ../LICENSE).
+  SPDX-License-Identifier: MIT
+  RR-B-20 / RR-B-24 product landing page. Self-contained (inline CSS, no third-party
+  asset/CDN/tracking). JGS brand & design system: dark drafting-document aesthetic.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JGS SE Knowledge Packs — open systems-engineering skills for coding agents</title>
+<meta name="description" content="Licence-vetted knowledge-pack skills for coding agents, reconstructed from genuinely open systems-engineering bodies of knowledge (NASA, NIST, DoD, GAO, SEBoK, EU AI Act). Open Agent Skills format; installs into Claude Code, Copilot CLI, Codex, Gemini, Cursor.">
+<link rel="canonical" href="https://jgsystemsconsulting.github.io/jgs-se-knowledge-packs/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="JGS SE Knowledge Packs">
+<meta property="og:description" content="Licence-vetted systems-engineering knowledge-pack skills for coding agents, reconstructed from genuinely open sources.">
+<meta property="og:url" content="https://jgsystemsconsulting.github.io/jgs-se-knowledge-packs/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JGS SE Knowledge Packs">
+<meta name="twitter:description" content="Licence-vetted systems-engineering knowledge-pack skills for coding agents, reconstructed from genuinely open sources.">
+<style>
+/* Self-hosted brand fonts (drop the woff2 into docs/fonts/ before publish; falls back to
+   system mono/sans meanwhile per the token stacks). No third-party CDN. */
+@font-face{font-family:'JetBrains Mono';src:url('fonts/JetBrainsMono-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'JetBrains Mono';src:url('fonts/JetBrainsMono-Bold.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'Inter';src:url('fonts/Inter-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Inter';src:url('fonts/Inter-SemiBold.woff2') format('woff2');font-weight:600;font-display:swap}
+
+:root{
+  --ink:#0a0a0b; --ink-2:#111113; --ink-3:#16171a; --ink-4:#1e2024;
+  --line:#2a2d33; --line-2:#3a3e46;
+  --mute:#6b7078; --mute-2:#8b9099;
+  --text:#c7ccd3; --text-hi:#e8ebf0;
+  --paper:#f4f2ec; --paper-ink:#0a0a0b;
+  --mono:'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;
+  --sans:'Inter',ui-sans-serif,system-ui,sans-serif;
+  --pad-x:clamp(24px,4vw,80px); --pad-section:clamp(48px,6vw,96px);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ink);color:var(--mute-2);font-family:var(--sans);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1200px;margin:0 auto;padding-left:var(--pad-x);padding-right:var(--pad-x)}
+a{color:var(--text-hi);text-decoration:none;border-bottom:1px solid var(--line-2)}
+a:hover{border-bottom-color:var(--paper)}
+a:focus-visible,button:focus-visible,.btn:focus-visible{outline:2px solid var(--paper);outline-offset:2px}
+h1,h2,h3{font-family:var(--mono);color:var(--text-hi);letter-spacing:-0.02em;font-weight:700;margin:0}
+.label{font-family:var(--mono);text-transform:uppercase;letter-spacing:0.14em;font-size:0.6875rem;font-weight:700;color:var(--mute)}
+
+/* Masthead */
+.mast{border-bottom:1px solid var(--line);background:var(--ink-2)}
+.mast .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;padding-top:12px;padding-bottom:12px}
+.mast .label span{color:var(--text)}
+
+/* Hero */
+.hero{border-bottom:1px solid var(--line);padding-top:var(--pad-section);padding-bottom:var(--pad-section)}
+.hero h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.05;color:var(--text-hi)}
+.hero p.lede{margin:1.4rem 0 0;max-width:60ch;font-size:1.05rem;color:var(--text)}
+.cta{margin-top:2.2rem;display:flex;flex-wrap:wrap;gap:14px}
+.btn{font-family:var(--mono);font-weight:700;letter-spacing:0.06em;font-size:0.8125rem;text-transform:uppercase;padding:12px 20px;border:1px solid var(--line);background:transparent;color:var(--text-hi);cursor:pointer;display:inline-flex;gap:10px;align-items:center}
+.btn.primary{background:var(--paper);color:var(--paper-ink);border-color:var(--paper)}
+.btn:hover{border-bottom-color:var(--line)}
+.btn.primary:hover{background:#fff}
+
+/* Sections */
+section{padding-top:var(--pad-section);padding-bottom:var(--pad-section);border-bottom:1px solid var(--line)}
+.sec-head{margin-bottom:2rem}
+.sec-head h2{font-size:1.5rem;margin-top:0.4rem}
+
+/* Grid-of-cells */
+.cells{display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}
+.cells.c3{grid-template-columns:repeat(3,1fr)}
+.cells.c2{grid-template-columns:repeat(2,1fr)}
+.cell{background:var(--ink);padding:24px}
+.cell h3{font-size:1rem;margin-bottom:8px}
+.cell p{margin:0;font-size:0.9375rem}
+.num{font-family:var(--mono);font-weight:700;font-size:3rem;color:var(--line-2);line-height:1;display:block;margin-bottom:10px}
+
+/* Code block */
+pre{font-family:var(--mono);font-size:0.85rem;color:var(--text);background:var(--ink-2);border:1px solid var(--line);padding:18px 20px;overflow:auto;margin:0}
+code{font-family:var(--mono)}
+.muted{color:var(--mute-2)}
+
+/* Pack list */
+.packs{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);grid-template-columns:repeat(2,1fr)}
+.pk{background:var(--ink);padding:14px 18px}
+.pk b{font-family:var(--mono);color:var(--text-hi);font-weight:700;font-size:0.875rem}
+.pk span{display:block;font-size:0.85rem;color:var(--mute-2);margin-top:2px}
+
+/* Drafting-sheet footer */
+.sheet{background:var(--ink-2);border:1px solid var(--line);background-image:linear-gradient(var(--ink-3) 1px,transparent 1px),linear-gradient(90deg,var(--ink-3) 1px,transparent 1px);background-size:40px 40px;padding:28px;margin-top:var(--pad-section);position:relative}
+.sheet .tb{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;border-top:1px solid var(--line);margin-top:20px;padding-top:14px}
+footer{padding-top:32px;padding-bottom:48px;color:var(--mute)}
+footer .label{display:block;margin-bottom:8px}
+
+@media (max-width:860px){
+  .cells.c3,.cells.c2,.packs{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<!-- §00 Masthead -->
+<div class="mast"><div class="wrap">
+  <span class="label">CLASSIFICATION: <span>PUBLIC</span></span>
+  <span class="label">LICENCE: <span>MIT (TOOLING)</span></span>
+  <span class="label">DOC-ID: <span>JGS-SE-KP</span></span>
+  <span class="label">REV: <span>1.3.0</span></span>
+</div></div>
+
+<!-- Hero -->
+<header class="hero"><div class="wrap">
+  <span class="label">JG Systems Consulting Ltd. · Agent Skills</span>
+  <h1>SE Knowledge Packs</h1>
+  <p class="lede">Installable knowledge-pack skills for coding agents, reconstructed from
+  genuinely open systems-engineering bodies of knowledge — vetted, attributed, and shareable
+  by construction. Ask a topic; your agent reads the right chapter and answers from
+  reference notes, not a hazy recollection.</p>
+  <div class="cta">
+    <a class="btn primary" href="https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs">View the repository <span aria-hidden="true">&rarr;</span></a>
+    <a class="btn" href="https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/blob/main/SKILLS.md">Browse the catalogue <span aria-hidden="true">&rarr;</span></a>
+  </div>
+</div></header>
+
+<!-- §01 What it is -->
+<section><div class="wrap">
+  <div class="sec-head"><span class="label">§01 — What it is</span>
+    <h2>One rule: only genuinely open sources</h2></div>
+  <div class="cells c3">
+    <div class="cell"><h3>Licence-vetted by construction</h3><p>Every source clears a written eligibility rubric — Tier 1 public-domain or Tier 2 open-licensed. The Excluded list (ISO/IEC/IEEE, INCOSE, OMG, SAE, ECSS) is a hard stop. Each pack carries its source's licence and attribution.</p></div>
+    <div class="cell"><h3>Progressive disclosure</h3><p>Each pack is an always-loaded <code>SKILL.md</code> index plus on-demand chapters, glossary, patterns, and a cheatsheet — so a large body of knowledge never fills the context window.</p></div>
+    <div class="cell"><h3>No runtime dependencies</h3><p>Plain Markdown. No MCP server, API key, or licence tier needed at runtime. Clone, install, invoke.</p></div>
+  </div>
+</div></section>
+
+<!-- §02 Install -->
+<section><div class="wrap">
+  <div class="sec-head"><span class="label">§02 — Install</span>
+    <h2>Clone, install, invoke</h2></div>
+  <pre><code>git clone https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs.git
+cd jgs-se-knowledge-packs
+python install.py --dry-run     <span class="muted"># preview packs + target</span>
+python install.py               <span class="muted"># install for Claude Code</span>
+
+<span class="muted"># other agents — native or format-transformed</span>
+python install.py --list-agents
+python install.py --agent all   <span class="muted"># claude · openclaw · copilot · codex · gemini</span></code></pre>
+</div></section>
+
+<!-- §03 Supported agents -->
+<section><div class="wrap">
+  <div class="sec-head"><span class="label">§03 — Supported agents</span>
+    <h2>Open Agent Skills, many hosts</h2></div>
+  <div class="cells c3">
+    <div class="cell"><span class="num">3</span><h3>Native</h3><p>Claude Code, OpenClaw, and GitHub Copilot CLI read the <code>SKILL.md</code> format directly — the whole pack is copied, with full progressive disclosure.</p></div>
+    <div class="cell"><span class="num">3</span><h3>Transform</h3><p>Codex (prompt), Gemini (TOML command), and Cursor (project rule) receive the always-loaded index inlined into one file by the installer.</p></div>
+    <div class="cell"><span class="num">1</span><h3>Installer</h3><p>One stdlib-only <code>install.py</code> with <code>--agent</code> / <code>--list-agents</code> drives them all. Defaults to Claude Code.</p></div>
+  </div>
+</div></section>
+
+<!-- §04 The catalogue -->
+<section><div class="wrap">
+  <div class="sec-head"><span class="label">§04 — The catalogue</span>
+    <h2>16 packs &middot; 2 signposts</h2></div>
+  <div class="packs">
+    <div class="pk"><b>sebok</b><span>Guide to the SE Body of Knowledge (v2.13)</span></div>
+    <div class="pk"><b>nasa-se-handbook</b><span>NASA Systems Engineering Handbook</span></div>
+    <div class="pk"><b>nasa-npr-7123</b><span>NASA SE processes &amp; requirements</span></div>
+    <div class="pk"><b>nasa-risk</b><span>NASA Risk Management Handbook</span></div>
+    <div class="pk"><b>nasa-system-safety</b><span>NASA System Safety Handbook v2</span></div>
+    <div class="pk"><b>nasa-hsi</b><span>NASA Human Systems Integration Guide</span></div>
+    <div class="pk"><b>nist-ai-rmf</b><span>NIST AI Risk Management Framework 1.0</span></div>
+    <div class="pk"><b>nist-ssdf</b><span>NIST Secure Software Development Framework</span></div>
+    <div class="pk"><b>nist-csf</b><span>NIST Cybersecurity Framework 2.0</span></div>
+    <div class="pk"><b>nist-sse</b><span>NIST SP 800-160 — Systems Security Engineering</span></div>
+    <div class="pk"><b>mil-std-882</b><span>MIL-STD-882E — DoD System Safety</span></div>
+    <div class="pk"><b>dau-se-guidebook</b><span>DoD Systems Engineering Guidebook</span></div>
+    <div class="pk"><b>dodaf</b><span>DoD Architecture Framework 2.02 Vol II</span></div>
+    <div class="pk"><b>gao-tra</b><span>GAO Technology Readiness Assessment Guide</span></div>
+    <div class="pk"><b>eu-ai-act</b><span>EU Artificial Intelligence Act (2024/1689)</span></div>
+    <div class="pk"><b>requirements-writing</b><span>EARS syntax &amp; requirement quality</span></div>
+    <div class="pk"><b>omg-signpost</b><span>Signpost — OMG modelling specs</span></div>
+    <div class="pk"><b>se-standards-signpost</b><span>Signpost — full SE standards landscape</span></div>
+  </div>
+</div></section>
+
+<!-- §05 Licensing -->
+<section><div class="wrap">
+  <div class="sec-head"><span class="label">§05 — Licensing</span>
+    <h2>Two separable layers</h2></div>
+  <div class="cells c2">
+    <div class="cell"><h3>Tooling &amp; scaffolding</h3><p><a href="https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/blob/main/LICENSE">MIT</a> — JG Systems Consulting Ltd. The installer, validator, docs, and repo structure.</p></div>
+    <div class="cell"><h3>Pack content</h3><p>Each pack carries its <em>source's</em> licence in <code>packs/&lt;slug&gt;/LICENSE</code>, independent of the repo MIT licence. A CC BY-NC-SA source yields a CC BY-NC-SA pack.</p></div>
+  </div>
+
+  <div class="sheet">
+    <span class="label">Drafting sheet — provenance</span>
+    <p style="margin:.8rem 0 0;max-width:60ch;color:var(--text)">Every pack is reconstructed as synthesized reference notes — never a verbatim reproduction — with per-pack source attribution in <code>NOTICE</code>. No source-material download links are published; attribution travels as text plus the licence deed.</p>
+    <div class="tb">
+      <span class="label">PRODUCT: <span style="color:var(--text)">JGS-SE-KP</span></span>
+      <span class="label">REV: <span style="color:var(--text)">1.3.0</span></span>
+      <span class="label">VENDOR: <span style="color:var(--text)">JG Systems Consulting Ltd.</span></span>
+    </div>
+  </div>
+</div></section>
+
+<!-- Footer -->
+<footer><div class="wrap">
+  <span class="label">JG Systems Consulting Ltd. — 2026</span>
+  <p style="margin:0;font-size:0.9rem">
+    <a href="https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs">Repository</a> ·
+    <a href="https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/blob/main/CHANGELOG.md">Changelog</a> ·
+    <a href="https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/blob/main/SECURITY.md">Security</a> ·
+    <a href="https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/blob/main/SKILLS.md">Catalogue</a>
+  </p>
+</div></footer>
+
+</body>
+</html>

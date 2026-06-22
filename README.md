@@ -79,6 +79,30 @@ Default target is the vendor-namespaced `~/.claude/skills/jgs-se-knowledge-packs
 `$CLAUDE_CONFIG_DIR`). For a flat install (each pack directly under `~/.claude/skills/`), pass
 `--flat`. Restart your agent, then invoke a pack by its slug.
 
+## Use with other agents
+
+The packs are open [Agent Skills](https://agentskills.io); `install.py` installs them into
+agents beyond Claude Code — natively where the agent reads the format, or via a format
+transform where it doesn't.
+
+```bash
+python install.py --list-agents     # show every supported agent + its target
+python install.py --agent openclaw  # OpenClaw / Copilot CLI — native (full pack)
+python install.py --agent codex     # Codex / Gemini / Cursor — transform (SKILL.md index)
+python install.py --agent all       # all user-global agents at once
+```
+
+| Agent | Format | Target |
+|-------|--------|--------|
+| Claude Code (default) · OpenClaw · GitHub Copilot CLI | native folder | `~/.<agent>/skills/jgs-se-knowledge-packs/<slug>/` |
+| OpenAI Codex CLI | prompt | `~/.codex/prompts/<slug>.md` |
+| Gemini CLI | TOML command | `~/.gemini/commands/jgs-se-knowledge-packs/<slug>.toml` |
+| Cursor | project rule | `./.cursor/rules/<slug>.mdc` |
+
+Native agents get the whole pack (chapters + progressive disclosure); transform agents get the
+always-loaded `SKILL.md` index inlined into one file. Full detail and the per-agent limitations:
+[docs/other-agents.md](docs/other-agents.md).
+
 ## Catalogue
 
 | Pack | Source | Licence | Tier | Status |

@@ -2,8 +2,9 @@
 # Copyright (c) 2026 JG Systems Consulting Ltd. — MIT License (see LICENSE).
 # SPDX-License-Identifier: MIT
 #
-# Thin wrapper around install.py so `./install.sh [--dry-run] [--flat] [--target DIR]`
-# works on Unix-like systems. All arguments pass through to install.py.
+# Thin wrapper around install.py so `./install.sh [--agent NAME] [--list-agents]
+# [--dry-run] [--flat] [--target DIR]` works on Unix-like systems. All arguments
+# pass through to install.py (see `./install.sh --list-agents`).
 set -euo pipefail
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PYTHON="${PYTHON:-python3}"
