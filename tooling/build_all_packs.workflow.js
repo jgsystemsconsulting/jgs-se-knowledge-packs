@@ -61,6 +61,8 @@ const META = {
   'faa-system-safety': { title: 'FAA System Safety Handbook', pub: 'FAA', lic: PD, tier: '1', caveat: 'Use the FAA original; reprint commentary is not PD.' },
 }
 
+// Batch to build this run. Set to a slug list, or Object.keys(META) for "all staged".
+// (args.slugs is honoured when the runner passes it; pinned here for reliable batching.)
 const SLUGS = (args && Array.isArray(args.slugs) && args.slugs.length) ? args.slugs : Object.keys(META)
 
 const PREP_SCHEMA = {

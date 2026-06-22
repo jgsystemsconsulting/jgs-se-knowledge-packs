@@ -2,8 +2,30 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "repository": "jgs-se-knowledge-packs",
   "scope": "systems engineering",
-  "updated": "2026-06-22",
+  "updated": "2026-06-23",
   "packs": [
+    {
+      "slug": "nasa-pra",
+      "title": "NASA PRA Procedures Guide 2nd ed (NASA/SP-2011-3421)",
+      "publisher": "NASA",
+      "source_version": "Second Edition (December 2011)",
+      "license": "Public Domain (US Government work)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 8,
+      "status": "live"
+    },
+    {
+      "slug": "nasa-se-expanded",
+      "title": "Expanded Guidance for NASA Systems Engineering (NASA/SP-2016-6105-SUPPL Vol 1)",
+      "publisher": "NASA",
+      "source_version": "SP-2016-6105-SUPPL Vol 1 (March 2016)",
+      "license": "Public Domain (US Government work)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 6,
+      "status": "live"
+    },
     {
       "slug": "nist-cps",
       "title": "NIST Framework for Cyber-Physical Systems (SP 1500-201/202/203)",

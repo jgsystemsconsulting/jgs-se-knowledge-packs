@@ -1,0 +1,36 @@
+nasa-se-expanded pack — content licence
+========================================
+
+This pack is derived from:
+    Expanded Guidance for NASA Systems Engineering
+    Volume 1: Systems Engineering Practices
+    National Aeronautics and Space Administration (NASA), NASA Headquarters,
+    Washington, D.C. — NASA/SP-2016-6105-SUPPL, March 2016
+
+Source licence: Public Domain (US Government work)  (tier 1 — see ../../docs/SOURCE-VETTING.md)
+No source-material download link is published (see ../../docs/LICENSING.md).
+
+This source is a work of the United States Government, prepared by NASA, and is
+therefore NOT subject to copyright protection in the United States (17 U.S.C. 105).
+It is in the public domain: anyone may reproduce, transform, and redistribute it for
+any purpose, including commercially, without permission and without royalty.
+
+Conditions carried forward into this pack:
+  - Commercial use:        permitted (no restriction).
+  - Attribution:           NOT required (provided here only as a courtesy).
+  - Non-commercial limit:  none.
+  - Share-alike:           none — this pack's content does not inherit a copyleft
+                           obligation from the source.
+
+Attribution to NASA is provided as a courtesy (see the repository NOTICE), not as a
+legal obligation. NASA does not endorse this pack or its authors, and reference to
+NASA does not imply NASA approval. NASA, the NASA logotype, and the NASA insignia are
+protected under separate trademark/usage rules (14 CFR 1221); this pack uses none of
+those marks — it references the document textually only.
+
+This pack is a synthesized, transformed set of reference notes (the *expanded
+guidance* depth layer over the base nasa-se-handbook pack). It contains no long
+verbatim passages of the source (verified mechanically by check_overlap.py).
+
+NOTE: This file governs the CONTENT of this pack and is independent of the
+repository's MIT licence (which covers tooling only).
