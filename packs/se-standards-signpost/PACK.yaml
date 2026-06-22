@@ -1,0 +1,16 @@
+slug: se-standards-signpost
+kind: signpost
+title: "Systems Engineering Standards Landscape — Signpost (download pointers only)"
+publisher: "JG Systems Consulting Ltd."
+license: "MIT"
+license_tier: 2
+commercial_use: true
+notes: >
+  Signpost, NOT a knowledge pack. Contains zero standards-body source content — only
+  standard designations, titles, one-line purposes, the owning SDO, redistributability
+  status, and (where the licence permits citation) the official abstract/catalogue URL.
+  Exists because most SE-related standards (ISO/IEC/IEEE, INCOSE, OMG, SAE/EIA, ECSS,
+  NATO, CMMI, CEN, AIAA) are Excluded under docs/SOURCE-VETTING.md (paywalled and/or
+  no redistribution grant); this points users to the owner instead. For the genuinely
+  open ones (NIST public-domain), it points to the planned/real pack. Content is
+  original (MIT, JG Systems Consulting Ltd.). Trademarks named for identification only.
