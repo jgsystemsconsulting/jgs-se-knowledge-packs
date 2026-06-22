@@ -3,6 +3,8 @@ __pycache__/
 *.py[cod]
 *.egg-info/
 .venv/
+.ruff_cache/
+.pytest_cache/
 venv/
 
 # Pack build staging (raw extracted source text must never be committed —
@@ -19,6 +21,3 @@ Thumbs.db
 
 # Git worktrees (isolated workspaces; never tracked)
 .worktrees/
-
-# Eval harness run outputs (reports + quarantine digests; never source text)
-results/

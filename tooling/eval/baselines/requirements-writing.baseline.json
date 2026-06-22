@@ -1,7 +1,0 @@
-{
-  "slug": "requirements-writing",
-  "expected": {
-    "rw-01": "PASS", "rw-02": "PASS", "rw-03": "PASS", "rw-04": "PASS",
-    "rw-05": "PASS", "rw-tn-01": "PASS", "rw-tp-01": "PASS"
-  }
-}
