@@ -153,6 +153,42 @@ Third-party source attributions (one block per shipped pack)
   Terms  : reproduction authorised PROVIDED the source (European Union / OJ) is acknowledged.
            See packs/eu-ai-act/LICENSE.
 
+[pack: nist-800-37]
+  Source : NIST SP 800-37 Revision 2 -- Risk Management Framework for Information Systems
+           and Organizations
+  Author : NIST (US Department of Commerce)
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. CAVEAT: borrows the ISO/IEC/IEEE 15288 definition of
+           "system" and cites companion docs (SP 800-53/53B, FIPS 199/200, CNSSI 1253) -- this
+           pack reproduces NONE of the SP 800-53 control catalog/baselines or the FIPS impact
+           tables, only synthesized RMF-process notes that name them. Attribution to NIST is
+           courtesy, not obligation; NIST does not endorse this pack. See packs/nist-800-37/LICENSE.
+
+[pack: nist-cps]
+  Source : NIST Framework for Cyber-Physical Systems, Vols 1-3 (SP 1500-201/202/203), v1.0
+  Author : NIST (US Department of Commerce)
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. CAVEAT: the source reproduces, under permission only,
+           several THIRD-PARTY figures (e.g. Beecham Research M2M map, ETSI illustration, an
+           (c) 2009 IEEE substation diagram) that are NOT public domain -- this pack reproduces
+           NONE of those figures and names but does not reproduce the ISO/IEC/IEEE 42010/15288
+           process text it draws on. Attribution to NIST is courtesy, not obligation; NIST does
+           not endorse this pack. See packs/nist-cps/LICENSE.
+
+[pack: digital-systems-engineering]
+  Source : Towards Digital Engineering: The Advent of Digital Systems Engineering
+           (arXiv:2002.11672, 2020 preprint)
+  Author : Huang, Gheorghe, Handley, Pazos, Pinto, Kovacic, Collins, Keating, Sousa-Poza,
+           Rabadi, Unal, Cotter, Landaeta, Daniels (Old Dominion University)
+  Licence: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : CC BY 4.0 -- commercial use and modification permitted with no share-alike; the one
+           binding condition, ATTRIBUTION, is carried forward to the authors and the work
+           (arXiv:2002.11672, 2020). Work partially supported by US NSF grant CNS-1828593.
+           See packs/digital-systems-engineering/LICENSE.
+
 -----------------------------------------------------------------------------------
 The build pipeline uses the book-to-skill extraction engine (MIT License),
 © the book-to-skill authors. It is a build tool, not a packaged source.

@@ -12,6 +12,10 @@ venv/
 **/.build/
 *.full_text.txt
 
+# Staged SOURCE material for the backlog build (PDFs/HTML downloaded for synthesis).
+# These are build INPUTS only — never redistribute/commit them (see docs/SOURCE-VETTING.md).
+sources/
+
 # OS / editor
 .DS_Store
 Thumbs.db
@@ -24,3 +28,6 @@ Thumbs.db
 
 # Playwright MCP visual-QA artifacts (RR-B-24 evidence — listed in the PR, not committed)
 .playwright-mcp/
+
+# Cross-repo handoff note — describes work for OTHER repos, not a deliverable here (kept local)
+docs/RELEASE-STANDARD-REPO-PLAN.md

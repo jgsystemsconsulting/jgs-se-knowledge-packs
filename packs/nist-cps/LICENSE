@@ -1,0 +1,44 @@
+nist-cps pack — content licence
+===============================
+
+This pack is derived from:
+    Framework for Cyber-Physical Systems:
+        Volume 1, Overview        — NIST Special Publication 1500-201
+        Volume 2, Working Group Reports — NIST Special Publication 1500-202
+        Volume 3, Timing Annex    — NIST Special Publication 1500-203
+    NIST (US Department of Commerce), Version 1.0, June 2017
+
+Source licence: Public Domain (US Government work, 17 U.S.C. 105)  (tier 1 — see ../../docs/SOURCE-VETTING.md)
+No source-material download link is published (see ../../docs/LICENSING.md).
+
+These three Special Publications are works of the United States Government, prepared
+by the National Institute of Standards and Technology, and are therefore NOT subject
+to copyright protection in the United States (17 U.S.C. 105). They are in the public
+domain: anyone may reproduce, transform, and redistribute them for any purpose,
+including commercially, without permission. Attribution to NIST is provided as a
+courtesy (see the repository NOTICE), not as a legal obligation. NIST does not endorse
+this pack or its authors.
+
+THIRD-PARTY MATERIAL CAVEAT. Although NIST's own text is public domain, the source
+documents incorporate, UNDER PERMISSION ONLY, third-party figures and diagrams that
+remain the copyright of their owners and are NOT in the public domain. These include,
+among others, the Beecham Research machine-to-machine sector map and the ETSI
+smart-transportation illustration in Volume 1, and vendor/standards-body figures in
+Volumes 2 and 3 (for example a network topology used by permission of
+chemicalprocessing.com, and an electric-substation synchronization diagram adapted
+from Tournier et al., © 2009 IEEE, used with permission). This pack reproduces NONE
+of those figures. It contains only synthesized, transformed reference notes drawn
+from NIST's own public-domain prose; where a figure's content is relevant it is
+described in original words rather than reproduced.
+
+The CPS Framework also references and draws conventions from ISO/IEC/IEEE 42010
+(architecture description) and ISO/IEC/IEEE 15288 (system life-cycle processes), which
+remain the copyright of ISO/IEC/IEEE. This pack NAMES those standards and describes,
+in original words, how the Framework uses them; it does not reproduce their text.
+
+The source is a Version 1.0 (June 2017) living/draft document; NIST states some
+sections were incomplete and that its standards references are exemplary rather than
+prescriptive.
+
+NOTE: This file governs the CONTENT of this pack. The repository tooling is licensed
+separately under MIT (see ../../LICENSE).

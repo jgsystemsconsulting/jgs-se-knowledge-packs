@@ -5,6 +5,39 @@
   "updated": "2026-06-22",
   "packs": [
     {
+      "slug": "nist-cps",
+      "title": "NIST Framework for Cyber-Physical Systems (SP 1500-201/202/203)",
+      "publisher": "NIST (US Department of Commerce)",
+      "source_version": "Version 1.0 (June 2017)",
+      "license": "Public Domain (US Government work)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 8,
+      "status": "live"
+    },
+    {
+      "slug": "digital-systems-engineering",
+      "title": "Towards Digital Engineering: The Advent of Digital Systems Engineering (arXiv:2002.11672)",
+      "publisher": "arXiv (Old Dominion University)",
+      "source_version": "arXiv:2002.11672 (2020)",
+      "license": "CC BY 4.0",
+      "license_tier": 2,
+      "commercial_use": true,
+      "chapters": 7,
+      "status": "live"
+    },
+    {
+      "slug": "nist-800-37",
+      "title": "NIST SP 800-37 Rev 2 — Risk Management Framework (RMF)",
+      "publisher": "NIST (US Department of Commerce)",
+      "source_version": "Revision 2 (December 2018)",
+      "license": "Public Domain (US Government work)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 7,
+      "status": "live"
+    },
+    {
       "slug": "nist-sse",
       "title": "NIST SP 800-160 — Systems Security Engineering (Vol 1 + Vol 2)",
       "publisher": "NIST (US Department of Commerce)",
