@@ -108,6 +108,35 @@ Third-party source attributions (one block per shipped pack)
   Terms  : original guidance under CC BY 4.0; not a reproduction of ISO/IEC/IEEE 29148,
            the INCOSE GtWR, or the EARS paper. See packs/requirements-writing/LICENSE.
 
+[pack: nist-sse]
+  Source : NIST SP 800-160 Vol 1 Rev 1 (Engineering Trustworthy Secure Systems) +
+           Vol 2 Rev 1 (Developing Cyber-Resilient Systems)
+  Author : NIST (US Department of Commerce)
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. CAVEAT: both volumes reference/reprint third-party
+           ISO/IEC/IEEE 15288 material (© ISO/IEC/IEEE) -- this pack reproduces none of it,
+           only synthesized notes that name the 15288 process groups. Attribution to NIST is
+           courtesy, not obligation; NIST does not endorse this pack. See packs/nist-sse/LICENSE.
+
+[pack: gao-tra]
+  Source : Technology Readiness Assessment Guide (GAO-20-48G), Jan 2020 (reissued 11 Feb 2020)
+  Author : US Government Accountability Office (GAO)
+  Licence: Public Domain -- US Government work (17 U.S.C. 105); GAO reproduction notice
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. GAO's notice authorises reproduction/distribution of
+           the published product in its entirety; this pack reproduces no third-party
+           copyrighted images/material. Attribution to GAO is courtesy, not obligation; GAO
+           does not endorse this pack. See packs/gao-tra/LICENSE.
+
+[pack: dau-se-guidebook]
+  Source : Systems Engineering Guidebook (OUSD R&E), February 2022 (DOPSR Case # 22-S-0595)
+  Author : US Department of Defense (Office of the Under Secretary of Defense for Research and Engineering)
+  Licence: Public Domain -- US Government work (17 U.S.C. 105); Distribution A
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. Attribution to the US DoD is courtesy, not
+           obligation; the DoD does not endorse this pack. See packs/dau-se-guidebook/LICENSE.
+
 [pack: dodaf]
   Source : DoD Architecture Framework (DoDAF) 2.02 Change 1 -- Volume II
   Author : US Department of Defense
