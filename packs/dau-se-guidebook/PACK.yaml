@@ -1,0 +1,22 @@
+slug: dau-se-guidebook
+title: "DoD Systems Engineering Guidebook (OUSD R&E)"
+publisher: "US Department of Defense (Office of the Under Secretary of Defense for Research and Engineering)"
+source_version: "February 2022 (DOPSR Case # 22-S-0595)"
+license: "Public Domain (US Government work, 17 U.S.C. 105); Distribution A"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "book-to-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 219
+  chapters: 6
+  built_on: "2026-06-22"
+notes: >
+  US Government work -- public domain (17 U.S.C. 105); Distribution Statement A (approved
+  for public release, distribution unlimited). No copyright; free to reproduce, transform,
+  and redistribute (including commercially). Attribution to the US DoD is provided as a
+  courtesy in NOTICE, not as an obligation; the DoD does not endorse this pack. Content is
+  synthesized/transformed reference notes; no long verbatim passages reproduced. No
+  source-material link published (see docs/LICENSING.md).
+change_indication: "reconstructed as synthesized reference notes"
