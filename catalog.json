@@ -2,8 +2,41 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "repository": "jgs-se-knowledge-packs",
   "scope": "systems engineering",
-  "updated": "2026-06-19",
+  "updated": "2026-06-22",
   "packs": [
+    {
+      "slug": "nist-sse",
+      "title": "NIST SP 800-160 — Systems Security Engineering (Vol 1 + Vol 2)",
+      "publisher": "NIST (US Department of Commerce)",
+      "source_version": "Vol 1 Rev 1 (2022) + Vol 2 Rev 1 (2021)",
+      "license": "Public Domain (US Government work)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 8,
+      "status": "live"
+    },
+    {
+      "slug": "gao-tra",
+      "title": "GAO Technology Readiness Assessment Guide (GAO-20-48G)",
+      "publisher": "US Government Accountability Office (GAO)",
+      "source_version": "GAO-20-48G (Jan 2020, reissued 11 Feb 2020)",
+      "license": "Public Domain (US Government work); GAO reproduction notice",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 7,
+      "status": "live"
+    },
+    {
+      "slug": "dau-se-guidebook",
+      "title": "DoD Systems Engineering Guidebook (OUSD R&E)",
+      "publisher": "US Department of Defense (Office of the Under Secretary of Defense for Research and Engineering)",
+      "source_version": "February 2022 (DOPSR Case # 22-S-0595)",
+      "license": "Public Domain (US Government work); Distribution A",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 6,
+      "status": "live"
+    },
     {
       "slug": "sebok",
       "title": "Guide to the Systems Engineering Body of Knowledge (SEBoK)",

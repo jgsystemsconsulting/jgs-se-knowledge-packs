@@ -9,6 +9,35 @@ All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning follows
 [Semantic Versioning](https://semver.org/).
 
+## [1.3.0] — 2026-06-22
+
+### Added
+
+- **`dau-se-guidebook`** (6 ch) — DoD Systems Engineering Guidebook (OUSD R&E, Feb 2022):
+  the DoD SE process model (16 processes — 8 technical management + 8 technical, mapped to
+  ISO/IEC/IEEE 15288), event-driven technical reviews and audits (ASR/SRR/SFR/PDR/CDR/
+  SVR-FCA/PRR/PCA), the Systems Engineering Plan (SEP), risk/issue/opportunity management,
+  TPMs and leading indicators, system-of-systems and digital engineering, and the 24 design
+  considerations. US-gov public domain (Distribution A).
+- **`gao-tra`** (7 ch) — GAO Technology Readiness Assessment Guide (GAO-20-48G): Technology
+  Readiness Levels (TRL 1–9) and related scales (MRL, IRL), Critical Technology Elements
+  (CTEs), the five-step TRA process, the four characteristics of a reliable TRA, Technology
+  Maturation Plans (TMPs), and knowledge-based milestone decisions. US-gov public domain
+  (GAO reproduction notice).
+- **`nist-sse`** (8 ch) — NIST SP 800-160 Vol 1 (Engineering Trustworthy Secure Systems) +
+  Vol 2 (Developing Cyber-Resilient Systems): the three SSE framework contexts, 30+ design
+  principles for trustworthy secure design, trustworthiness & assurance cases, security
+  across the life-cycle process groups, and the cyber-resiliency engineering framework
+  (4 goals, objectives, 14 techniques, design principles) for the APT threat model. US-gov
+  public domain; references third-party ISO/IEC/IEEE 15288 material which is **not** reproduced.
+- **`se-standards-signpost`** — a *signpost*, not a knowledge pack: maps the whole SE
+  standards landscape (ISO/IEC/IEEE 15288/24748/29148/42010/15026/24765, INCOSE SE Handbook
+  & Vision 2035, OMG SysML, SAE/EIA, ECSS, NATO AAP-48, CMMI, NIST SP 800-160, …) with each
+  standard's owner, redistributability status, and where to get it. Zero reproduced content;
+  Excluded standards point to the owner, open ones point to the real pack.
+
+Catalogue now **16 live packs (+2 signposts)**.
+
 ## [1.2.1] — 2026-06-19
 
 ### Added
