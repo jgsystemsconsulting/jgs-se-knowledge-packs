@@ -7,8 +7,8 @@ SPDX-License-Identifier: MIT
 
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT%20(tooling)-blue" alt="License: MIT (tooling)">
-  <img src="https://img.shields.io/badge/version-1.4.0-green" alt="Version 1.4.0">
-  <img src="https://img.shields.io/badge/packs-19-blueviolet" alt="19 packs">
+  <img src="https://img.shields.io/badge/version-1.5.0-green" alt="Version 1.5.0">
+  <img src="https://img.shields.io/badge/packs-21-blueviolet" alt="21 packs">
   <img src="https://img.shields.io/badge/tested%20with-Claude%20Code-8A2BE2" alt="Tested with Claude Code">
   <img src="https://img.shields.io/badge/scope-systems%20engineering-orange" alt="Scope: systems engineering">
 </p>
@@ -55,7 +55,7 @@ and install the catalogue for you.
 ```text
 You are installing jgs-se-knowledge-packs, an open catalogue (MIT tooling) of
 systems-engineering knowledge-pack skills by JG Systems Consulting Ltd.
-Repository: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs (version 1.4.0).
+Repository: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs (version 1.5.0).
 Do this in order:
 1. Read README.md, docs/skill-usage.md, and CHANGELOG.md so you understand what you are
    installing. There are NO external prerequisites — packs are plain Markdown skills.
@@ -109,9 +109,11 @@ always-loaded `SKILL.md` index inlined into one file. Full detail and the per-ag
 |------|--------|---------|------|--------|
 | `sebok` | Guide to the SE Body of Knowledge v2.13 | CC BY-NC-SA 3.0 | 🟡 2 | ✅ live (41 chapters) |
 | `nasa-se-handbook` | NASA Systems Engineering Handbook | Public domain (US gov) | 🟢 1 | ✅ live (34 chapters) |
+| `nasa-se-expanded` | Expanded Guidance for NASA SE (SP-2016-6105-SUPPL Vol 1) | Public domain (US gov) | 🟢 1 | ✅ live (6 chapters) |
 | `nasa-npr-7123` | NASA NPR 7123.1D — SE Processes & Requirements | Public domain (US gov) | 🟢 1 | ✅ live (9 chapters) |
 | `nasa-risk` | NASA Risk Management Handbook | Public domain (US gov) | 🟢 1 | ✅ live (10 chapters) |
 | `nasa-system-safety` | NASA System Safety Handbook v2 | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
+| `nasa-pra` | NASA PRA Procedures Guide 2nd ed (NASA/SP-2011-3421) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `nasa-hsi` | NASA Human Systems Integration Guide | Public domain (US gov) | 🟢 1 | ✅ live (9 chapters) |
 | `nist-ai-rmf` | NIST AI Risk Management Framework 1.0 | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `nist-ssdf` | NIST Secure Software Development Framework 1.1 | Public domain (US gov) | 🟢 1 | ✅ live (5 chapters) |
@@ -176,4 +178,4 @@ and redistribute — including why no source-material links are published — is
 
 ## Version
 
-See [CHANGELOG.md](CHANGELOG.md). Current: 1.4.0.
+See [CHANGELOG.md](CHANGELOG.md). Current: 1.5.0.

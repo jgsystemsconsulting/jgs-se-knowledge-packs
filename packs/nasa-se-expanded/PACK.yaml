@@ -1,0 +1,28 @@
+slug: nasa-se-expanded
+title: "Expanded Guidance for NASA Systems Engineering (NASA/SP-2016-6105-SUPPL Vols 1-2)"
+publisher: "NASA"
+source_version: "SP-2016-6105-SUPPL Vol 1 (March 2016)"
+license: "Public Domain (US Government work)"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "book-to-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 383
+  chapters: 6
+  built_on: "2026-06-23"
+notes: >
+  US Government work -- public domain (17 U.S.C. 105); no copyright applies, so the
+  content is free to reproduce, transform, and redistribute, including commercially.
+  No attribution, non-commercial, or share-alike conditions are carried forward
+  (commercial_use: true, attribution_required: false, share_alike: false). Attribution
+  to NASA is provided as a courtesy in the LICENSE/NOTICE, not as an obligation, and
+  NASA does not endorse this pack. Caveat: this pack is the DEPTH supplement to the
+  base nasa-se-handbook pack and deliberately does NOT restate the survey-level
+  definitions -- it must be read alongside that pack; it is built from Volume 1
+  (Systems Engineering Practices) and is thin on the Volume 2 process-appendix detail.
+  Content is synthesized/transformed reference notes; no long verbatim passages
+  reproduced (verified by check_overlap.py). No source-material link published
+  (see docs/LICENSING.md).
+change_indication: "reconstructed as synthesized reference notes"

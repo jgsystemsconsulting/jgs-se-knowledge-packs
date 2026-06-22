@@ -9,6 +9,31 @@ All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning follows
 [Semantic Versioning](https://semver.org/).
 
+## [1.5.0] — 2026-06-23
+
+### Added
+
+- **`nasa-pra`** (8 ch) — NASA Probabilistic Risk Assessment Procedures Guide (NASA/SP-2011-3421,
+  2nd ed., 2011): the quantitative PRA engine — the risk triplet and scenario logic stack (MLD,
+  ESD, event trees, fault trees, minimal cut sets), Bayesian data collection and parameter
+  estimation, aleatory/epistemic uncertainty and common-cause failure (Alpha Factor, beta-factor,
+  CCBE), human reliability analysis (THERP, CREAM, NARA, SPAR-H), context-based software risk
+  (CSRM), physics-based/structural models (stress-strength, FORM/SORM, NASGRO), uncertainty
+  propagation and importance measures (F-V, RAW, Birnbaum, DIM), and launch-abort modeling with
+  worked examples. The quantitative engine beneath NASA's risk doctrine; pairs with the
+  qualitative RIDM/CRM framework in `nasa-risk`. Tier 1 (US-gov public domain).
+- **`nasa-se-expanded`** (6 ch) — Expanded Guidance for NASA Systems Engineering
+  (NASA/SP-2016-6105-SUPPL, Vol 1, March 2016): the practitioner-depth supplement to the NASA SE
+  Handbook — the SE Engine's per-phase cadence and iterative-vs-recursive distinction, life-cycle
+  tailoring vs. customization and the Compliance Matrix, the recursive system-design consistency
+  loop (ConOps, requirement flow/type/ownership), product realization (verify/qualify/accept/
+  certify cardinality, protoflight, 'test the way we fly'), and crosscutting technical management
+  (six-step scheduling, cost estimating, JCL, interface document family, RIDM/CRM, CM baselines,
+  EVM, MOE/MOP/KPP/TPM, leading indicators, decision-analysis methods). The depth layer over the
+  base `nasa-se-handbook` pack. Tier 1 (US-gov public domain).
+
+Catalogue now 21 packs (+2 signposts).
+
 ## [1.4.0] — 2026-06-23
 
 ### Added

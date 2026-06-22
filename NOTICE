@@ -189,6 +189,25 @@ Third-party source attributions (one block per shipped pack)
            (arXiv:2002.11672, 2020). Work partially supported by US NSF grant CNS-1828593.
            See packs/digital-systems-engineering/LICENSE.
 
+[pack: nasa-pra]
+  Source : Probabilistic Risk Assessment Procedures Guide for NASA Managers and Practitioners
+           (NASA/SP-2011-3421, Second Edition, December 2011)
+  Author : NASA
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. Attribution to NASA is courtesy, not
+           obligation; NASA does not endorse this pack. See packs/nasa-pra/LICENSE.
+
+[pack: nasa-se-expanded]
+  Source : Expanded Guidance for NASA Systems Engineering, Volume 1: Systems Engineering
+           Practices (NASA/SP-2016-6105-SUPPL, March 2016)
+  Author : NASA
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. Attribution to NASA is courtesy, not
+           obligation; NASA does not endorse this pack. This pack is the depth
+           supplement to the base nasa-se-handbook pack. See packs/nasa-se-expanded/LICENSE.
+
 -----------------------------------------------------------------------------------
 The build pipeline uses the book-to-skill extraction engine (MIT License),
 © the book-to-skill authors. It is a build tool, not a packaged source.
