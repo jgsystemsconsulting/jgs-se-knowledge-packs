@@ -51,6 +51,11 @@ Tier 2 = open licence with conditions carried forward; Excluded = paywalled / no
 27 new buildable Tier-1/2 sources + 5 previously-vetted-unbuilt, all redistributability-confirmed.
 Grouped by cluster; build first by the order below.
 
+> [!NOTE]
+> **Built since (2026-06-23):** `nist-800-37`, `nist-cps`, `digital-systems-engineering`,
+> `nasa-pra`, `nasa-se-expanded` are now **live** (v1.4.0–v1.5.0). The cluster tables below still
+> list them as candidates — treat `catalog.json` as the source of truth for built status.
+
 ### Build order (next up)
 
 1. **`nasa-systems-modeling`** (NASA-HDBK-1009A) — closes the #1 thin area (MBSE).
