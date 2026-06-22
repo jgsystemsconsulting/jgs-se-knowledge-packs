@@ -21,3 +21,6 @@ Thumbs.db
 
 # Git worktrees (isolated workspaces; never tracked)
 .worktrees/
+
+# Playwright MCP visual-QA artifacts (RR-B-24 evidence — listed in the PR, not committed)
+.playwright-mcp/

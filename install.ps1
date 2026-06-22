@@ -1,8 +1,9 @@
 # Copyright (c) 2026 JG Systems Consulting Ltd. — MIT License (see LICENSE).
 # SPDX-License-Identifier: MIT
 #
-# Thin wrapper around install.py so `./install.ps1 [--dry-run] [--flat] [--target DIR]`
-# works on Windows PowerShell. All arguments pass through to install.py.
+# Thin wrapper around install.py so `./install.ps1 [--agent NAME] [--list-agents]
+# [--dry-run] [--flat] [--target DIR]` works on Windows PowerShell. All arguments
+# pass through to install.py (see `./install.ps1 --list-agents`).
 $ErrorActionPreference = "Stop"
 $here = Split-Path -Parent $MyInvocation.MyCommand.Path
 $python = (Get-Command python -ErrorAction SilentlyContinue)

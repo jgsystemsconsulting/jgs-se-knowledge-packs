@@ -1,0 +1,70 @@
+# Copyright (c) 2026 JG Systems Consulting Ltd. — MIT License (see ../../../LICENSE).
+# SPDX-License-Identifier: MIT
+#
+# RR-B-19 marketing-content entry — AI-ingestible product YAML for the public website.
+# Features / positioning only. NO pricing.
+
+slug: jgs-se-knowledge-packs
+name: JGS SE Knowledge Packs
+tagline: >
+  Installable knowledge-pack skills for coding agents, reconstructed from genuinely
+  open systems-engineering bodies of knowledge — vetted, attributed, and shareable by
+  construction.
+product_class: agent-skills
+status: live
+version: "1.3.0"
+repository: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs
+license: MIT (tooling); pack content under each source's own licence
+vendor: JG Systems Consulting Ltd.
+
+positioning: >
+  A great body of knowledge is something you read once and can't recall mid-task. A
+  knowledge pack turns it into a skill your coding agent loads on demand — ask a topic and
+  the agent reads the right chapter and answers from reconstructed reference notes, not a
+  hazy recollection. This is a curated catalogue of those packs for systems engineers,
+  built to one rule that sets it apart from "point a tool at a PDF": only genuinely open
+  sources go in — public-domain (NASA, DoD, NIST, GAO) and open-licensed (SEBoK, EU OJ,
+  CC content) — never paywalled or all-rights-reserved material. Eligibility is enforced,
+  not assumed, and every pack is redistributable by construction.
+
+audience:
+  - Systems engineers and MBSE practitioners
+  - Safety, security, and assurance engineers
+  - Acquisition / programme technical staff
+  - Anyone using a coding agent who needs grounded SE reference answers
+
+features:
+  - title: Licence-vetted by construction
+    detail: >
+      Every source clears a written eligibility rubric (Tier 1 public-domain or Tier 2
+      open-licensed); the Excluded list (ISO/IEC/IEEE, INCOSE, OMG, SAE, ECSS…) is a hard
+      stop. Each pack carries its source's licence and attribution.
+  - title: Progressive disclosure
+    detail: >
+      Each pack is an always-loaded SKILL.md index plus on-demand chapters, a glossary,
+      patterns, and a cheatsheet — so a large body of knowledge never fills the context
+      window; the agent loads only the chapter your question routes to.
+  - title: 16 packs across the SE landscape
+    detail: >
+      NASA SE (handbook, NPR 7123, risk, system safety, HSI), NIST (CSF, SSDF, AI RMF,
+      SP 800-160 systems security engineering), DoD (MIL-STD-882 system safety, DoDAF,
+      SE Guidebook), GAO technology readiness assessment, EU AI Act, SEBoK, and
+      requirements writing (EARS).
+  - title: Standards signposts
+    detail: >
+      Two citation-only signposts map the parts of the landscape that can't be packaged —
+      the OMG modelling specs and the full SE standards landscape (~55 standards) — each
+      with its owner, redistributability status, and where to get it.
+  - title: Open Agent Skills format, multi-agent install
+    detail: >
+      Packs follow the open agentskills.io SKILL.md standard. One stdlib-only installer
+      targets Claude Code, OpenClaw, and Copilot CLI natively, and transforms into Codex
+      prompts, Gemini commands, and Cursor rules.
+  - title: No runtime dependencies
+    detail: >
+      Plain Markdown. No MCP server, API key, or licence tier needed at runtime.
+
+links:
+  repository: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs
+  changelog: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/blob/main/CHANGELOG.md
+  skills_index: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/blob/main/SKILLS.md

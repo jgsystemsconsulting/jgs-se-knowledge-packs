@@ -2,9 +2,9 @@
 # SPDX-License-Identifier: MIT
 #
 # RR-S-12 CI quality gate. Self-contained (inline bash + python3 stdlib only); never
-# executes checked-out repository code. To ACTIVATE: grant the workflow OAuth scope
-#   gh auth refresh -h github.com -s workflow
-# then rename this file to validate.yml and push.
+# executes checked-out repository code. Runs on push to main and on every PR.
+# Mirrors tooling/check_release.py (leak sentinels, link policy with signpost
+# exemption, frontmatter lint, catalog validity).
 name: validate
 
 on:
@@ -35,13 +35,31 @@ jobs:
 
       - name: Link policy check (no source-material URLs)
         run: |
-          set -e
-          if grep -RInE 'https?://[^ )"]*(sebokwiki|nasa\.gov|ntrs|nist\.gov|govinfo\.gov|omg\.org|ocw\.mit|dodcio|dod\.mil|dla\.mil|eur-lex|europa\.eu|nato\.int|dau\.edu)' \
-               --include='*.md' --include='*.json' --include='*.yaml' --include='*.txt' --exclude-dir=.git .; then
-            echo "::error::source-material URL found (see docs/LICENSING.md link policy)"
-            exit 1
-          fi
-          echo "no source-material links"
+          python3 - <<'PY'
+          # Mirror tooling/check_release.py: source-material URLs are banned everywhere
+          # EXCEPT inside a `kind: signpost` pack, which is pure citation by design.
+          import re, sys, pathlib
+          HOSTS = re.compile(r"https?://[^\s)\"']*(sebokwiki|nasa\.gov|ntrs|nist\.gov|"
+                             r"govinfo\.gov|omg\.org|ocw\.mit|dodcio|dod\.mil|dla\.mil|"
+                             r"eur-lex|europa\.eu|nato\.int|dau\.edu)")
+          root = pathlib.Path(".")
+          signpost_dirs = {
+              p.parent for p in root.glob("packs/*/SKILL.md")
+              if re.search(r"^kind:\s*signpost\s*$", p.read_text(encoding="utf-8", errors="ignore"), re.M)
+          }
+          fails = 0
+          for p in root.rglob("*"):
+              if p.suffix not in {".md", ".json", ".yaml", ".yml", ".txt"} or ".git" in p.parts:
+                  continue
+              if p.parent in signpost_dirs:
+                  continue
+              m = HOSTS.search(p.read_text(encoding="utf-8", errors="ignore"))
+              if m:
+                  print(f"::error file={p}::source-material URL: {m.group(0)} (see docs/LICENSING.md)")
+                  fails += 1
+          print("no source-material links" if not fails else f"{fails} link-policy violation(s)")
+          sys.exit(1 if fails else 0)
+          PY
 
       - name: Pack frontmatter lint
         run: |
