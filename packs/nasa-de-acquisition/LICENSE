@@ -1,0 +1,39 @@
+nasa-de-acquisition pack — content licence
+===========================================
+
+This pack is derived from:
+    NASA Digital Engineering Acquisition Framework Handbook (NASA-HDBK-1004)
+    NASA, Office of the NASA Chief Engineer, Baseline (approved 2020-04-01),
+    superseding NASA-HDBK-0008
+
+Source licence: Public Domain (US Government work)  (tier 1 — see ../../docs/SOURCE-VETTING.md)
+No source-material download link is published (see ../../docs/LICENSING.md).
+
+This source is a NASA Technical Handbook, prepared by the United States Government
+(NASA), and was reviewed and "APPROVED FOR PUBLIC RELEASE — DISTRIBUTION IS UNLIMITED."
+The KSC Export Control Office determined it does not meet the criteria for control under
+the International Traffic in Arms Regulations (ITAR) or the Export Administration
+Regulations (EAR). As a work of the U.S. Government it is NOT subject to copyright
+protection in the United States: anyone may reproduce, transform, and redistribute it for
+any purpose, including commercially, without permission. The Handbook itself is published
+as a guidance document — it provides engineering information, lessons learned, and
+options, and (per its own Foreword) does not establish binding requirements except to the
+extent specified or referenced in applicable contracts, grants, or agreements.
+
+THIRD-PARTY MATERIAL CAVEAT: NASA-HDBK-1004 names and invokes numerous third-party
+standards — including ISO 10303 (STEP) application protocols, ASME Y14 drawing/GD&T/
+digital-product-definition standards, MIL-STD-31000 (Technical Data Packages), the SAE
+EIA-649 / EIA-649-2 / GEIA-859 configuration- and data-management standards, ISO/IEC/IEEE
+42010, ISO/IEC 11578, and FAR/DFARS clauses — which remain the copyright of their
+respective publishers and are NOT in the public domain. This pack reproduces none of that
+third-party text. It contains only synthesized, transformed reference notes that NAME
+those standards and describe, in original words, how the Handbook invokes them.
+
+Attribution to NASA is provided as a courtesy (see the repository NOTICE), not a legal
+obligation. NASA does not endorse this pack or its authors. The example Data Requirements
+Descriptions and contract clauses summarized here are a starter library intended to be
+tailored per program/project and reviewed through Legal and Procurement before any binding
+contractual use. This pack pairs with NASA-HDBK-1009A as a complementary reference.
+
+NOTE: This file governs the CONTENT of this pack. The repository tooling is licensed
+separately under MIT (see ../../LICENSE).

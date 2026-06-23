@@ -278,6 +278,50 @@ Third-party source attributions (one block per shipped pack)
            ODASD(SE) is courtesy, not obligation; the DoD does not endorse this pack.
            See packs/dod-digital-engineering/LICENSE.
 
+[pack: nasa-de-acquisition]
+  Source : NASA Digital Engineering Acquisition Framework Handbook (NASA-HDBK-1004),
+           Baseline (2020-04-01), superseding NASA-HDBK-0008
+  Author : NASA, Office of the NASA Chief Engineer
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. CAVEAT: the Handbook NAMES and invokes many
+           third-party standards (ISO 10303/STEP, ASME Y14, MIL-STD-31000, SAE EIA-649/
+           GEIA-859, ISO/IEC/IEEE 42010, FAR/DFARS clauses) that remain the copyright of
+           their publishers -- this pack reproduces NONE of that text, only synthesized
+           notes that name them. The example DRDs and contract clauses are a starter
+           library to be tailored and Legal/Procurement-reviewed before binding use.
+           Attribution to NASA is courtesy, not obligation; NASA does not endorse this
+           pack. See packs/nasa-de-acquisition/LICENSE.
+
+[pack: nasa-fault-management]
+  Source : NASA Fault Management Handbook (NASA-HDBK-1002), Draft 2 (April 2, 2012)
+  Author : NASA
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes from a DRAFT source (not a reproduction)
+  Terms  : public domain, no copyright. DRAFT SOURCE -- this pack synthesizes an UNAPPROVED
+           working draft (Draft 2, April 2, 2012); terminology, scope, and review names may
+           differ from any later approved edition. Treat as informational guidance, NOT a
+           controlling standard, and verify against the current NASA standard before citing
+           in formal work. The handbook references third-party material (e.g. ISO/IEC 23004-6:2008)
+           by name only and does not reprint it. Attribution to NASA is courtesy, not
+           obligation; NASA does not endorse this pack. See packs/nasa-fault-management/LICENSE.
+
+[pack: faa-system-safety]
+  Source : FAA System Safety Handbook (December 30, 2000)
+  Author : US Federal Aviation Administration (FAA, US Department of Transportation)
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. CAVEAT: the handbook NAMES and, in places, draws on
+           third-party standards that remain the copyright of their publishers (MIL-STD-882/
+           882C, RTCA DO-178B, NASA-STD-8719.13A, the JSSSC Software System Safety Handbook,
+           the System Safety Analysis Handbook) -- this pack reproduces NONE of that text,
+           only synthesized notes that name and describe how the FAA applies them. It is a
+           year-2000 document predating the modern FAA/ICAO Safety Management System (SMS) and
+           Just Culture frameworks; any third-party REPRINT (e.g. an everyspec.com copy with
+           added front matter) is NOT public domain -- cite the FAA original. Attribution to
+           the FAA is courtesy, not obligation; the FAA does not endorse this pack.
+           See packs/faa-system-safety/LICENSE.
+
 -----------------------------------------------------------------------------------
 The build pipeline uses the book-to-skill extraction engine (MIT License),
 © the book-to-skill authors. It is a build tool, not a packaged source.

@@ -1,0 +1,42 @@
+nasa-fault-management pack — content licence
+=============================================
+
+This pack is derived from:
+    NASA Fault Management Handbook
+    NASA-HDBK-1002, Draft 2 (April 2, 2012)
+    National Aeronautics and Space Administration (NASA)
+
+    *** DRAFT SOURCE — UNAPPROVED WORKING DRAFT ***
+    The source is an unreleased, unapproved draft. Its terminology, scope, review
+    names, and FM process may differ from any later released or approved edition.
+    Several source sections are explicit placeholders. This pack is informational
+    guidance, NOT a controlling standard; verify against the current NASA standard
+    before citing in formal work.
+
+Source licence: Public Domain (US Government work, 17 U.S.C. 105)  (tier 1 — see ../../docs/SOURCE-VETTING.md)
+No source-material download link is published (see ../../docs/LICENSING.md).
+
+This source is a work of the United States Government, prepared by NASA, and is
+therefore NOT subject to copyright protection in the United States (17 U.S.C. 105). It
+is in the public domain: anyone may reproduce, transform, and redistribute it for any
+purpose, including commercially, without permission.
+
+Obligations carried forward into this pack:
+  - Attribution: NONE required by law. Attribution to NASA is provided as a courtesy
+    (see the repository NOTICE), not a legal obligation.
+  - Share-alike: NONE. Public-domain status imposes no copyleft; this pack's content is
+    not bound to any particular downstream licence.
+  - Non-commercial: NONE. Commercial use is permitted.
+  - Endorsement / trademark: NASA does not endorse this pack or its authors. Do not
+    imply NASA sponsorship or endorsement. The "NASA" name and insignia are subject to
+    separate usage restrictions (14 CFR 1221) independent of the public-domain status of
+    the text; this pack uses the name only to identify the source, not as a mark.
+  - Third-party material: the handbook references third-party standards (e.g. ISO/IEC
+    23004-6:2008) by name only and does not reprint them; no third-party text is carried
+    into this pack.
+
+This pack reproduces no long verbatim passages of the source; it is synthesized,
+transformed reference material (verified mechanically by check_overlap.py).
+
+NOTE: This file governs the CONTENT of this pack. The repository tooling is licensed
+separately under MIT (see ../../LICENSE).
