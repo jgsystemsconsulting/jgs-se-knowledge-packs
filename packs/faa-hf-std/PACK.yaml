@@ -1,0 +1,29 @@
+slug: faa-hf-std
+title: "FAA Human Factors Design Standard (HF-STD-001B)"
+publisher: "FAA (Federal Aviation Administration, US Department of Transportation)"
+source_version: "HF-STD-001B (December 30, 2016)"
+license: "Public Domain (US Government work, 17 U.S.C. 105)"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "book-to-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 739
+  chapters: 9
+  built_on: "2026-06-23"
+notes: >
+  US Government work prepared by the FAA Human Factors Branch; approved for public
+  release with distribution unlimited, and therefore not subject to copyright in the
+  United States (17 U.S.C. 105). Free to reproduce, transform, and redistribute,
+  including commercially. Attribution to the FAA is a courtesy, not an obligation, and
+  the FAA does not endorse this pack. CAVEAT: HF-STD-001B is itself a curated synthesis
+  that cites and, in places, quotes third-party copyrighted standards (MIL-STD-1472G,
+  MIL-HDBK-759C/761A, MIL-STD-411/1800A, NUREG-0700, NASA-STD-3000, ISO 9241, ANSI,
+  TCO) plus OSHA regulations and FAA Orders. This pack SYNTHESIZES the FAA design
+  criteria in original words and does NOT reproduce those third-party tables or any
+  long verbatim passages -- it names the cited sources and describes the FAA rules in
+  paraphrase, with provenance preserved. Verbatim-overlap checked clean against the
+  source (check_overlap.py, n>=12). No source-material download link is published
+  (see docs/LICENSING.md).
+change_indication: "reconstructed as synthesized reference notes"

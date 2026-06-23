@@ -1,0 +1,46 @@
+dod-mq-bok pack — content licence
+==================================
+
+This pack is derived from:
+    DoD Manufacturing and Quality Engineering Body of Knowledge (M&Q BoK)
+    Office of the Under Secretary of Defense for Research and Engineering (OUSD(R&E)),
+    Systems Engineering and Architecture
+    Version 3.0, July 2025
+    Approved for public release; Distribution A. DOPSR Case #25-T-2448.
+
+Source licence: Public Domain (US Government work, 17 U.S.C. 105); Distribution A
+(tier 1 — see ../../docs/SOURCE-VETTING.md).
+No source-material download link is published (see ../../docs/LICENSING.md).
+
+TERMS CARRIED FORWARD
+---------------------
+The M&Q BoK is a work prepared by officers and employees of the United States
+Government as part of their official duties. Under 17 U.S.C. 105 such works are NOT
+subject to copyright protection in the United States and are in the public domain. The
+document was reviewed and approved for public release (Distribution A — unlimited
+distribution) under DOPSR Case #25-T-2448.
+
+Accordingly:
+  - This material may be freely reproduced, adapted, transformed, and redistributed,
+    including for commercial purposes.
+  - No attribution is legally required. Attribution to OUSD(R&E) is provided here and in
+    PACK.yaml as a professional courtesy.
+  - There is no non-commercial restriction and no share-alike obligation.
+  - The DoD / OUSD(R&E) does not endorse, and is not affiliated with, this pack or
+    JG Systems Consulting Ltd.
+  - The BoK is a compilation of best practices and lessons learned; it does NOT
+    supersede DoD policy, guidance, instruction (e.g. DoDI 5000.02), or law. This pack
+    is informational and inherits that non-authoritative status.
+
+THIRD-PARTY MATERIAL (NOT REPRODUCED)
+-------------------------------------
+The BoK names and applies third-party industry and consensus standards that remain the
+copyright of their respective publishers, including (non-exhaustive): SAE/AS6500,
+AS9100, AS9102, AS9103, AS9145, AS5553, AS6174; ISO 9001; IEEE 15288.1 and 15288.2;
+and MIL-STD-881. This pack does NOT reproduce the text of those standards. It cites
+them by designation and describes, in original wording, how the BoK directs them to be
+used. For normative requirements, consult the standards themselves from their
+publishers (SAE International, ISO, IEEE).
+
+NOTE: This licence governs the CONTENT of this pack and is independent of the
+repository's MIT licence (which covers tooling only).
