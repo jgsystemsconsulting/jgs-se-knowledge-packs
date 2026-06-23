@@ -1,0 +1,32 @@
+slug: faa-system-safety
+title: "FAA System Safety Handbook"
+publisher: "FAA (US Department of Transportation, Federal Aviation Administration)"
+source_version: "December 30, 2000"
+license: "Public Domain (US Government work, 17 U.S.C. 105)"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "book-to-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 0
+  chapters: 7
+  built_on: "2026-06-23"
+notes: >
+  US Government work prepared by the FAA, not subject to copyright in the United States
+  (17 U.S.C. 105). Free to reproduce, transform, and redistribute, including commercially;
+  no attribution or share-alike obligation (attribution to the FAA is a courtesy, recorded in
+  the repository NOTICE). The FAA does not endorse this pack. CAVEAT: the handbook names and,
+  in places, draws on third-party standards that remain the copyright of their publishers --
+  MIL-STD-882 / 882C, RTCA DO-178B, NASA-STD-8719.13A, the JSSSC Software System Safety
+  Handbook, the System Safety Analysis Handbook (Stephens & Talso), and ISO/IEC/IEEE material.
+  This pack reproduces none of that third-party text -- it NAMES those standards and describes,
+  in original synthesized words, how the FAA applies or tailors them. It is also a year-2000
+  document: it predates the modern FAA/ICAO Safety Management System (SMS) and Just Culture
+  frameworks, and many cited orders, advisory circulars, and launch-licensing rules have since
+  been restructured (see SKILL.md Scope & Limits). Any third-party REPRINT of the handbook (with
+  added front matter, watermarks, or editorial commentary, e.g. an everyspec.com copy) is NOT
+  public domain -- cite the FAA original. No source-material download link is published
+  (see docs/LICENSING.md). source_pages records the source word count (the extraction reports
+  no page count for this PDF); chapters is this pack's synthesized chapter count (the 17 source
+  chapters condensed to 7).

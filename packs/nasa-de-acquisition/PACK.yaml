@@ -1,0 +1,30 @@
+slug: nasa-de-acquisition
+title: "NASA Digital Engineering Acquisition Framework Handbook (NASA-HDBK-1004)"
+publisher: "NASA, Office of the NASA Chief Engineer"
+source_version: "Baseline (2020-04-01), superseding NASA-HDBK-0008"
+license: "Public Domain (US Government work)"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "book-to-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 217
+  chapters: 8
+  built_on: "2026-06-23"
+notes: >
+  US Government work, prepared by NASA and approved for public release with unlimited
+  distribution -- not subject to copyright in the United States. Free to reproduce,
+  transform, and redistribute, including commercially; no attribution or share-alike
+  obligation (attribution to NASA is a courtesy, see the repository NOTICE; NASA does
+  not endorse this pack). CAVEAT: the Handbook names and invokes many third-party
+  standards (ISO 10303/STEP, ASME Y14, MIL-STD-31000, SAE EIA-649/GEIA-859,
+  ISO/IEC/IEEE 42010, FAR/DFARS clauses) that remain the copyright of their publishers.
+  This pack reproduces none of that third-party text -- it SYNTHESIZES the Handbook's
+  acquisition guidance in original words and only NAMES the external standards and
+  describes how the Handbook invokes them. The example DRDs and contract clauses are a
+  starter library to be tailored per program/project and reviewed (Legal/Procurement)
+  before binding use. This pack pairs with NASA-HDBK-1009A, which carries the deeper
+  digital-engineering practitioner detail this acquisition handbook defers to. No
+  source-material download link is published (see docs/LICENSING.md).
+change_indication: "reconstructed as synthesized reference notes"

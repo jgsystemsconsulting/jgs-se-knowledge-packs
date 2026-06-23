@@ -300,6 +300,39 @@
       "commercial_use": true,
       "chapters": 7,
       "status": "live"
+    },
+    {
+      "slug": "nasa-de-acquisition",
+      "title": "NASA Digital Engineering Acquisition Framework Handbook (NASA-HDBK-1004)",
+      "publisher": "NASA, Office of the NASA Chief Engineer",
+      "source_version": "Baseline (2020-04-01), superseding NASA-HDBK-0008",
+      "license": "Public Domain (US Government work)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 8,
+      "status": "live"
+    },
+    {
+      "slug": "nasa-fault-management",
+      "title": "NASA Fault Management Handbook (NASA-HDBK-1002 Draft 2)",
+      "publisher": "NASA",
+      "source_version": "Draft 2 (April 2, 2012)",
+      "license": "Public Domain (US Government work)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 8,
+      "status": "live"
+    },
+    {
+      "slug": "faa-system-safety",
+      "title": "FAA System Safety Handbook",
+      "publisher": "FAA (US Department of Transportation, Federal Aviation Administration)",
+      "source_version": "December 30, 2000",
+      "license": "Public Domain (US Government work)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 7,
+      "status": "live"
     }
   ],
   "planned": [

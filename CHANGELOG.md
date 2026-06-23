@@ -9,6 +9,47 @@ All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning follows
 [Semantic Versioning](https://semver.org/).
 
+## [1.8.0] — 2026-06-23
+
+### Added
+
+- **`nasa-de-acquisition`** (8 ch) — NASA Digital Engineering Acquisition Framework Handbook
+  (NASA-HDBK-1004, Baseline 2020, superseding NASA-HDBK-0008): the acquisition-and-contracting
+  side of digital engineering — the Data Requirements Description (DRD) instrument and the
+  Appendix A DRD suite (TDP, MBx, CDMP, CSA, CR, FCA/PCA, SDT, EMDAL, REF, MRI), the Data Type
+  1–5 control scale, SOW/RFP/Cost-Volume contract language and data rights (FAR/DFARS, Table 3
+  license categories), the Requirements Exchange Format (REF/ReqIF, UUID schema) and Master
+  Records Index, model-based data definition (MBSE, CAD/PMI, M&S credibility, BOM, release-state
+  mapping, PLM), digital data collaboration, the four owned architectures, interoperability
+  standards (MIL-STD-31000, STEP/ISO 10303, ASME Y14), the four MBE interoperability use cases,
+  and MBE Plan development. Names third-party standards (ISO/STEP/ASME/MIL-STD/SAE, FAR/DFARS)
+  without reproducing them; pairs with NASA-HDBK-1009A for the deeper practitioner detail.
+  Tier 1 (US-gov public domain).
+- **`nasa-fault-management`** (8 ch) — NASA Fault Management Handbook (NASA-HDBK-1002, Draft 2,
+  April 2012): the SE discipline of designing what a system does when it fails — the
+  fault/failure/anomaly vocabulary, the five FM strategies (fault avoidance, failure avoidance,
+  failure masking, failure recovery, goal change), the six FM process activities across NASA
+  mission phases Pre-A to E, response-latency-versus-time-to-criticality (TTC) design trades,
+  fault/failure containment regions and FEPPs, the four redundancy approaches, top-down FM
+  requirements development, FM verification vs. validation, the seven dedicated FM milestone
+  reviews (FMCR/FMARR/FMPDR/FMCDR/FMTRR/FMLRR/FMCERR), FM organizational structure, and mined
+  NASA Lessons Learned. **Built from an UNAPPROVED DRAFT** — treat as informational guidance,
+  NOT a controlling standard; several source sections are placeholders and are correspondingly
+  thin. Tier 1 (US-gov public domain).
+- **`faa-system-safety`** (7 ch) — FAA System Safety Handbook (Dec 30, 2000): system safety as
+  a specialty within systems engineering — the five-step safety risk management process (mandated
+  by FAA Order 8040.4 and the AMS), the severity-by-likelihood risk matrix and acceptance bands,
+  the Safety Order of Precedence, system-description models (5M, SHEL(L)), the hazard-analysis
+  activities (PHL/PHA/RHA/SSHA/SHA/O&SHA/HHA), integrated system hazard analysis, the analysis
+  techniques (FTA, FMEA/FMECA, Fault Hazard, Common Cause, Sneak Circuit, Energy Trace),
+  closed-loop hazard tracking (Safety Action Record), and the specialty domains (acquisition-
+  lifecycle safety and contracting, software safety/DO-178B, test & facilities safety, commercial
+  launch safety, training, Operational Risk Management). A year-2000 FAA how-to that predates the
+  modern FAA/ICAO Safety Management System (SMS); names MIL-STD-882/DO-178B and other third-party
+  standards without reproducing them. Tier 1 (US-gov public domain).
+
+Catalogue now 30 packs (+2 signposts).
+
 ## [1.7.0] — 2026-06-23
 
 ### Added

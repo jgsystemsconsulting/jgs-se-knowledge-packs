@@ -1,0 +1,29 @@
+slug: nasa-fault-management
+title: "NASA Fault Management Handbook (NASA-HDBK-1002 Draft 2)"
+publisher: "NASA"
+source_version: "Draft 2 (April 2, 2012)"
+license: "Public Domain (US Government work)"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "book-to-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 203
+  chapters: 8
+  built_on: "2026-06-23"
+draft: true
+notes: >
+  *** DRAFT SOURCE — READ BEFORE USE ***
+  This pack synthesizes NASA-HDBK-1002 *Draft 2* (April 2, 2012), an UNAPPROVED working
+  draft of the NASA Fault Management Handbook. Terminology, scope, review names, and the
+  FM process described here reflect that draft and may differ from any later released or
+  approved edition. Treat the pack as informational guidance, NOT a controlling standard,
+  and verify against the current NASA standard before citing in formal work.
+
+  Licensing: the source is a US Government work and is in the public domain (free to
+  reproduce, transform, and redistribute, including commercially). Chapters SYNTHESIZE and
+  PARAPHRASE the handbook in original words; they do not reproduce long verbatim passages.
+  The handbook references third-party material (e.g. ISO/IEC 23004-6:2008) by name only and
+  does not reprint it. NASA does not endorse this pack.
+change_indication: "reconstructed as synthesized reference notes from a DRAFT source"
