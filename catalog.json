@@ -333,6 +333,28 @@
       "commercial_use": true,
       "chapters": 7,
       "status": "live"
+    },
+    {
+      "slug": "faa-hf-std",
+      "title": "FAA Human Factors Design Standard (HF-STD-001B)",
+      "publisher": "FAA (Federal Aviation Administration, US Department of Transportation)",
+      "source_version": "HF-STD-001B (December 30, 2016)",
+      "license": "Public Domain (US Government work, 17 U.S.C. 105)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 9,
+      "status": "live"
+    },
+    {
+      "slug": "dod-mq-bok",
+      "title": "DoD Manufacturing and Quality Engineering Body of Knowledge (M&Q BoK)",
+      "publisher": "OUSD(R&E) Systems Engineering and Architecture",
+      "source_version": "Version 3.0 (July 2025)",
+      "license": "Public Domain (US Government work, 17 U.S.C. 105); Distribution A",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 6,
+      "status": "live"
     }
   ],
   "planned": [

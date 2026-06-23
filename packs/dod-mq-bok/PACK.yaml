@@ -1,0 +1,29 @@
+slug: dod-mq-bok
+title: "DoD Manufacturing and Quality Engineering Body of Knowledge (M&Q BoK)"
+publisher: "OUSD(R&E) Systems Engineering and Architecture"
+source_version: "Version 3.0 (July 2025)"
+license: "Public Domain (US Government work, 17 U.S.C. 105); Distribution A"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "book-to-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 1658
+  chapters: 6
+  built_on: "2026-06-23"
+notes: >
+  US Government work prepared by OUSD(R&E) — not subject to copyright in the United
+  States (17 U.S.C. 105); approved for public release, Distribution A (DOPSR Case
+  #25-T-2448). Free to reproduce, transform, and redistribute, including commercially;
+  no attribution or share-alike obligation. Attribution to OUSD(R&E) is courtesy, not
+  required, and the DoD does not endorse this pack. CAVEAT: the BoK names and applies
+  numerous third-party industry standards (SAE AS6500, AS9100/AS9103/AS9145/AS9102,
+  AS5553/AS6174; ISO 9001; IEEE 15288.1/.2; MIL-STD-881) that are copyrighted by their
+  publishers. This pack SYNTHESIZES the BoK's M&Q guidance in original wording and does
+  NOT reproduce those standards' text or any long verbatim source passages — it cites
+  them by number and describes how the BoK uses them. Further CAVEAT: the BoK is a
+  best-practice compilation that does NOT supersede DoD policy (DoDI 5000.02), JCIDS, or
+  law, and is internally inconsistent on the FRP-decision MRL target (9 vs 10). No
+  source-material download link is published (see docs/LICENSING.md).
+change_indication: "reconstructed as synthesized reference notes"

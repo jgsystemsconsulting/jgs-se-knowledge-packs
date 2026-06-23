@@ -1,0 +1,40 @@
+faa-hf-std pack — content licence
+==================================
+
+This pack is derived from:
+    FAA Human Factors Design Standard (HF-STD-001B)
+    Federal Aviation Administration (US Department of Transportation),
+    Human Factors Branch — HF-STD-001B, December 30, 2016
+
+Source licence: Public Domain (US Government work, 17 U.S.C. 105)  (tier 1 — see ../../docs/SOURCE-VETTING.md)
+No source-material download link is published (see ../../docs/LICENSING.md).
+
+HF-STD-001B is a work of the United States Government, prepared by the FAA Human
+Factors Branch and issued with the distribution statement "Approved for public release;
+distribution is unlimited." As a US Government work it is NOT subject to copyright
+protection in the United States (17 U.S.C. 105) and is in the public domain: anyone may
+reproduce, transform, and redistribute it for any purpose, including commercially,
+without permission. Attribution to the FAA is provided here and in the repository NOTICE
+as a courtesy, not a legal obligation. The FAA does not endorse this pack or its authors.
+
+THIRD-PARTY MATERIAL CAVEAT. HF-STD-001B is expressly a curated synthesis: nearly every
+requirement is attributed in brackets to an underlying source, and the standard cites
+and in places reproduces material from third-party copyrighted standards that are NOT in
+the public domain — including MIL-STD-1472G, MIL-HDBK-759C and MIL-HDBK-761A,
+MIL-STD-411 and MIL-STD-1800A, NUREG-0700, NASA-STD-3000A/B, ISO 9241, ANSI, BSR/HFES,
+and TCO certification criteria — as well as US federal regulation (OSHA 29 CFR 1910/1926)
+and internal FAA Orders. The copyrighted third-party material remains the property of its
+respective publishers.
+
+This pack reproduces none of that third-party material. It contains only synthesized,
+transformed reference notes that NAME the cited sources and describe, in original words,
+the FAA design criteria built on them. No third-party tables, exhibits, or long verbatim
+passages are reproduced. The pack content was checked for verbatim overlap against the
+extracted source text (check_overlap.py, runs of >= 12 words) and is clean.
+
+Where HF-STD-001B's safety and environment provisions derive from OSHA and FAA
+regulation, those regulations — not this pack — are the binding authority; this pack is
+reference notes, not regulatory guidance.
+
+NOTE: This file governs the CONTENT of this pack. The repository tooling is licensed
+separately under MIT (see ../../LICENSE).

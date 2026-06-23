@@ -322,6 +322,37 @@ Third-party source attributions (one block per shipped pack)
            the FAA is courtesy, not obligation; the FAA does not endorse this pack.
            See packs/faa-system-safety/LICENSE.
 
+[pack: faa-hf-std]
+  Source : FAA Human Factors Design Standard (HF-STD-001B), December 30, 2016
+  Author : US Federal Aviation Administration (FAA, US Department of Transportation),
+           Human Factors Branch
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright (approved for public release, distribution unlimited).
+           CAVEAT: HF-STD-001B is a curated synthesis that cites and, in places, quotes
+           third-party copyrighted standards (MIL-STD-1472G, MIL-HDBK-759C/761A,
+           MIL-STD-411/1800A, NUREG-0700, NASA-STD-3000, ISO 9241, ANSI, TCO) plus OSHA
+           regulations and FAA Orders -- this pack reproduces NONE of those tables or long
+           verbatim passages, only synthesized notes that name them with provenance preserved.
+           It is design criteria, NOT an HSI lifecycle/process model. Attribution to the FAA
+           is courtesy, not obligation; the FAA does not endorse this pack.
+           See packs/faa-hf-std/LICENSE.
+
+[pack: dod-mq-bok]
+  Source : DoD Manufacturing and Quality Engineering Body of Knowledge (M&Q BoK),
+           Version 3.0 (July 2025), DOPSR Case #25-T-2448
+  Author : US Department of Defense, OUSD(R&E) Systems Engineering and Architecture
+  Licence: Public Domain -- US Government work (17 U.S.C. 105); Distribution A
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright (approved for public release, Distribution A).
+           CAVEAT: the BoK names and applies numerous third-party industry standards
+           (SAE AS6500, AS9100/AS9103/AS9145/AS9102, AS5553/AS6174; ISO 9001;
+           IEEE 15288.1/.2; MIL-STD-881) copyrighted by their publishers -- this pack
+           reproduces NONE of that text, only synthesized notes that cite them by number.
+           The BoK is a best-practice compilation that does NOT supersede DoD policy
+           (DoDI 5000.02), JCIDS, or law. Attribution to OUSD(R&E) is courtesy, not
+           obligation; the DoD does not endorse this pack. See packs/dod-mq-bok/LICENSE.
+
 -----------------------------------------------------------------------------------
 The build pipeline uses the book-to-skill extraction engine (MIT License),
 © the book-to-skill authors. It is a build tool, not a packaged source.

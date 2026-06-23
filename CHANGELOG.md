@@ -9,6 +9,37 @@ All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning follows
 [Semantic Versioning](https://semver.org/).
 
+## [1.9.0] — 2026-06-23
+
+### Added
+
+- **`faa-hf-std`** (9 ch) — FAA Human Factors Design Standard (HF-STD-001B, Dec 30, 2016): the
+  FAA's consolidated human-factors / human-systems-integration design criteria for systems it
+  manages, operates, or maintains — general HF design principles, automation and function
+  allocation, designing equipment for maintenance, displays/controls/visual indicators,
+  alarms/audio/voice communications, the computer-human interface (information presentation,
+  coding, interaction styles, windows, dialogue), keyboards/input devices and workstation/
+  workplace ergonomics, and system security/personnel safety/environment/anthropometry/user
+  documentation, plus intended-use and tailoring guidance. A quantified, source-attributed
+  synthesis (millimetres, newtons, decibels, contrast ratios, percentile rules) that heavily
+  cites MIL-STD-1472G, MIL-HDBK-759C, DOD-HFDG-ATCCS, NUREG-0700, NASA-STD-3000, ANSI, OSHA, and
+  ISO 9241 — none of which it reproduces. Design criteria, NOT an HSI lifecycle/process model;
+  complements `nasa-hsi` as the civil-aviation HSI tradition. Tier 1 (US-gov public domain).
+- **`dod-mq-bok`** (6 ch) — DoD Manufacturing and Quality Engineering Body of Knowledge (M&Q BoK,
+  v3.0, July 2025, OUSD(R&E)): the manufacturing-and-quality view of the defense acquisition life
+  cycle — what M&Q engineers do across the Adaptive Acquisition Framework phases (Pre-MDD, MSA,
+  TMRR, EMD, P&D, O&S), the twelve M&Q threads (A–L) built on the "5 Ms", manufacturing
+  feasibility and producibility, Manufacturing Readiness Levels and assessments, Key/Critical
+  Characteristics and process capability (Cp/Cpk, SPC), the standards stack (AS6500, AS9100/
+  ISO 9001, AS9103, AS9145), technical reviews (ASR/PDR/CDR/PRR) and milestone gates, DCMA
+  surveillance, industrial base and supply chain, and sustainment (LCSP, IPS, ILA, ISR). Answers
+  the recurring M&Q question "*Can it be built?*". A best-practice compilation, NOT policy — it
+  does not supersede DoDI 5000.02, JCIDS, or law; names third-party standards (SAE AS-series,
+  ISO 9001, IEEE 15288.1/.2, MIL-STD-881) without reproducing them. Tier 1 (US-gov public domain,
+  Distribution A).
+
+Catalogue now 32 packs (+2 signposts).
+
 ## [1.8.0] — 2026-06-23
 
 ### Added
