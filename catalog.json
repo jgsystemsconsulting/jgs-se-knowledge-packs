@@ -267,6 +267,39 @@
       "commercial_use": true,
       "chapters": 7,
       "status": "live"
+    },
+    {
+      "slug": "nasa-rm-standard",
+      "title": "NASA Reliability and Maintainability Standard (NASA-STD-8729.1A)",
+      "publisher": "NASA",
+      "source_version": "Revision A (2017-06-13)",
+      "license": "Public Domain (US Government work)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 6,
+      "status": "live"
+    },
+    {
+      "slug": "dod-rio",
+      "title": "DoD Risk, Issue, and Opportunity (RIO) Management Guide for Defense Acquisition Programs (OUSD R&E)",
+      "publisher": "US Department of Defense (Office of the Under Secretary of Defense for Research and Engineering)",
+      "source_version": "September 2023, Incorporating Change 2.2 (December 2023)",
+      "license": "Public Domain (US Government work); Distribution A",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 8,
+      "status": "live"
+    },
+    {
+      "slug": "dod-digital-engineering",
+      "title": "DoD Digital Engineering Strategy (2018)",
+      "publisher": "US Department of Defense (Office of the Deputy Assistant Secretary of Defense for Systems Engineering, ODASD(SE) / OUSD R&E)",
+      "source_version": "June 2018",
+      "license": "Public Domain (US Government work); Distribution A",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 7,
+      "status": "live"
     }
   ],
   "planned": [

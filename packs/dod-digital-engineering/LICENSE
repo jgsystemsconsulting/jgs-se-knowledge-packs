@@ -1,0 +1,33 @@
+dod-digital-engineering pack — content licence
+===============================================
+
+This pack is derived from:
+    Digital Engineering Strategy
+    US Department of Defense, Office of the Deputy Assistant Secretary of
+    Defense for Systems Engineering (ODASD(SE)), Office of the Under Secretary
+    of Defense for Research and Engineering (OUSD R&E), June 2018
+
+Source licence: Public Domain (US Government work, 17 U.S.C. 105); Distribution
+Statement A — Approved for public release; distribution is unlimited.
+(tier 1 — see ../../docs/SOURCE-VETTING.md)
+No source-material download link is published (see ../../docs/LICENSING.md).
+
+This source is a work of the United States Government, prepared by the US
+Department of Defense, and is therefore NOT subject to copyright protection in the
+United States (17 U.S.C. 105). It carries Distribution Statement A (approved for
+public release; distribution unlimited). It is in the public domain: anyone may
+reproduce, transform, and redistribute it for any purpose, including commercially,
+without permission.
+
+Attribution to the US Department of Defense and ODASD(SE) is provided as a courtesy
+(see the repository NOTICE), not a legal obligation. The DoD does not endorse this
+pack or its authors.
+
+CAVEAT: The Strategy itself is the only source used here. The related Digital
+Engineering Body of Knowledge (DEBoK) is CAC-gated (not publicly available) and is
+intentionally NOT used or reproduced in this pack. The Strategy is a non-prescriptive
+vision document; this pack carries no implementation-plan or step-by-step procedural
+content beyond what the public Strategy states.
+
+NOTE: This file governs the CONTENT of this pack. The repository tooling is licensed
+separately under MIT (see ../../LICENSE).

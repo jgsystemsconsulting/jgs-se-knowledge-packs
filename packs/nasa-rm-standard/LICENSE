@@ -1,0 +1,30 @@
+nasa-rm-standard pack — content licence
+========================================
+
+This pack is derived from:
+    NASA Reliability and Maintainability (R&M) Standard for Spaceflight and
+    Support Systems
+    NASA (National Aeronautics and Space Administration)
+    NASA-STD-8729.1A, Revision A — Approved 2017-06-13
+    (superseding NASA-STD-8729.1)
+
+Source licence: Public Domain (US Government work, 17 U.S.C. 105).
+(tier 1 — see ../../docs/SOURCE-VETTING.md)
+No source-material download link is published (see ../../docs/LICENSING.md).
+
+This source is a work of the United States Government, prepared by the National
+Aeronautics and Space Administration (NASA), and is therefore NOT subject to
+copyright protection in the United States (17 U.S.C. 105). It is in the public
+domain: anyone may reproduce, transform, and redistribute it for any purpose,
+including commercially, without permission and without a share-alike obligation.
+
+Attribution to NASA is provided as a courtesy (see the repository NOTICE), not a
+legal obligation. NASA does not endorse this pack or its authors, and the NASA
+name and insignia are not used to imply endorsement.
+
+Caveat carried forward: NASA-STD-8729.1A specifies R&M *objectives and strategies*,
+not prescribed processes; detailed analysis procedures live in the referenced NASA
+Preferred Reliability Practices (outside this source), and facility R&M is excluded.
+
+NOTE: This file governs the CONTENT of this pack. The repository tooling is licensed
+separately under MIT (see ../../LICENSE).
