@@ -1,0 +1,32 @@
+faa-sem pack — content licence
+===============================
+
+This pack is derived from:
+    Systems Engineering Manual (SEM)
+    US Federal Aviation Administration (FAA)
+    Version 1.0.1 (2014-06-19)
+
+Source licence: Public Domain (US Government work, 17 U.S.C. 105).
+(tier 1 — see ../../docs/SOURCE-VETTING.md)
+No source-material download link is published (see ../../docs/LICENSING.md).
+
+This source is a work of the United States Government, prepared by the US Federal
+Aviation Administration, and is therefore NOT subject to copyright protection in
+the United States (17 U.S.C. 105). It is in the public domain: anyone may
+reproduce, transform, and redistribute it for any purpose, including commercially,
+without permission and without any attribution or share-alike obligation.
+
+Attribution to the US Federal Aviation Administration is provided as a courtesy
+(see the repository NOTICE), not a legal obligation. The FAA does not endorse this
+pack or its authors.
+
+Caveat carried forward from the source: the FAA Systems Engineering Manual is
+guidance, not policy (binding acquisition policy lives in the FAA Acquisition
+Management System, via FAST), and it is a pointer document — it defers detailed
+methodology to companion references (FAA-HDBK-006A for RMA, the FAA Safety
+Management System Manual for system safety, and the NIST 800-series for
+information security). This pack is a synthesized, transformed set of reference
+notes; it reproduces no long verbatim passages of the source.
+
+NOTE: This file governs the CONTENT of this pack. The repository tooling is
+licensed separately under MIT (see ../../LICENSE).

@@ -1,0 +1,28 @@
+slug: dod-mosa
+title: "MOSA Implementation Guidebook (Feb 2025)"
+publisher: "OUSD R&E"
+source_version: "February 2025 (DOPSR 25-T-1210)"
+license: "Public Domain (US Government work); Distribution A"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "book-to-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 72
+  chapters: 7
+  built_on: "2026-06-23"
+notes: >
+  US Government work (OUSD(R&E), Implementing a MOSA in DoD Programs, Feb 2025),
+  cleared for public release as Distribution A (DOPSR case 25-T-1210) and not subject
+  to copyright in the United States (17 U.S.C. 105). Free to reproduce, transform, and
+  redistribute, including commercially; no attribution or share-alike obligation
+  attaches to the pack content. Attribution to OUSD(R&E) is a courtesy, not a legal
+  requirement, and the DoD does not endorse this pack. CAVEAT: the guidebook NAMES
+  third-party standards and tools (FACE, OMS, DISR, FIPS 140-2, MIL-STD-881F/196G,
+  service assessment tools) and cites statutes/DFARS clauses/5000-series instructions;
+  this pack SYNTHESIZES the MOSA guidance in original words and does NOT reproduce any
+  of that third-party standard text or the statutory/regulatory text verbatim. Verified
+  clean by check_overlap.py (no verbatim run >= 12 words shared with the source). No
+  source-material download link is published (see docs/LICENSING.md).
+change_indication: "reconstructed as synthesized reference notes"

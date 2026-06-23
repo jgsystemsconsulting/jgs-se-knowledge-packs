@@ -234,6 +234,39 @@
       "commercial_use": true,
       "chapters": 12,
       "status": "live"
+    },
+    {
+      "slug": "faa-sem",
+      "title": "FAA Systems Engineering Manual (SEM) v1.0.1",
+      "publisher": "US Federal Aviation Administration (FAA)",
+      "source_version": "Version 1.0.1 (2014-06-19)",
+      "license": "Public Domain (US Government work)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 7,
+      "status": "live"
+    },
+    {
+      "slug": "nasa-schedule",
+      "title": "NASA Schedule Management Handbook (2024 ed, Rev 2)",
+      "publisher": "NASA",
+      "source_version": "Revision 2 (Effective 2024-03-15)",
+      "license": "Public Domain (US Government work)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 8,
+      "status": "live"
+    },
+    {
+      "slug": "dod-mosa",
+      "title": "DoD MOSA \u2014 Implementing a Modular Open Systems Approach in DoD Programs (OUSD R&E)",
+      "publisher": "US Department of Defense (Office of the Under Secretary of Defense for Research and Engineering)",
+      "source_version": "February 2025 (DOPSR 25-T-1210)",
+      "license": "Public Domain (US Government work); Distribution A",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 7,
+      "status": "live"
     }
   ],
   "planned": [

@@ -1,0 +1,38 @@
+dod-mosa pack — content licence
+================================
+
+This pack is derived from:
+    Implementing a MOSA in DoD Programs
+    Office of the Under Secretary of Defense for Research and Engineering (OUSD(R&E)),
+    Systems Engineering & Architecture (SE&A), February 2025
+    Cleared for public release, Distribution A — DOPSR case 25-T-1210
+
+Source licence: Public Domain (US Government work); Distribution A  (tier 1 — see ../../docs/SOURCE-VETTING.md)
+No source-material download link is published (see ../../docs/LICENSING.md).
+
+This source is a work of the United States Government, prepared by OUSD(R&E), and is
+therefore NOT subject to copyright protection in the United States (17 U.S.C. 105). It was
+reviewed by the DoD Office of Prepublication and Security Review and cleared for public
+release with unlimited distribution (Distribution Statement A) under DOPSR case 25-T-1210.
+It is in the public domain: anyone may reproduce, transform, and redistribute it for any
+purpose, including commercially, without permission. No attribution or share-alike
+obligation attaches to either the source or this derived pack.
+
+THIRD-PARTY MATERIAL CAVEAT: the guidebook NAMES and cites third-party material that is not
+itself in the public domain — consensus-based and proprietary standards (e.g. FACE®, OMS,
+the DoD IT Standards Registry / DISR, FIPS 140-2), military standards (MIL-STD-881F,
+MIL-STD-196G), service-specific assessment tools (PART, OAAT/OAAM, KOSS, SEAM), and the
+text of U.S. statutes, DFARS clauses, and DoD 5000-series instructions. This pack reproduces
+NONE of that third-party or regulatory text. It contains only synthesized, transformed
+reference notes that NAME those standards, tools, and authorities and describe, in original
+words, how the MOSA guidebook positions them. Trademarks (e.g. FACE®) belong to their
+respective owners.
+
+Attribution to OUSD(R&E) is provided as a courtesy (see the repository NOTICE), not a legal
+obligation. The U.S. Department of Defense does not endorse this pack or its authors.
+
+This pack was checked with check_overlap.py and shares no verbatim run of >= 12 words with
+the extracted source text.
+
+NOTE: This file governs the CONTENT of this pack. The repository tooling is licensed
+separately under MIT (see ../../LICENSE).

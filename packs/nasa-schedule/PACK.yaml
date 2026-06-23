@@ -1,0 +1,28 @@
+slug: nasa-schedule
+title: "NASA Schedule Management Handbook (2024 ed)"
+publisher: "NASA"
+source_version: "Revision 2 (Effective 2024-03-15)"
+license: "Public Domain (US Government work)"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "book-to-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 409
+  chapters: 8
+  built_on: "2026-06-23"
+notes: >
+  US Government work -- public domain (17 U.S.C. 105); no copyright, free to reproduce,
+  transform, and redistribute (including commercially). Attribution to NASA is provided as a
+  courtesy in NOTICE/LICENSE, not as a legal obligation, and NASA does not endorse this pack.
+  No share-alike and no non-commercial restriction apply. The "NASA" name and insignia carry
+  separate usage restrictions (14 CFR 1221) independent of the public-domain status of the
+  text; this pack uses the name only to identify the source, not as a mark. Content is
+  synthesized/transformed reference notes; no long verbatim passages reproduced (verified by
+  tooling check_overlap). No source-material link published (see docs/LICENSING.md). CAVEAT:
+  this pack is NASA's SCHEDULING doctrine -- it points to companion handbooks for the
+  underlying CPM/statistics/EVM mechanics, and defers the qualitative RIDM/CRM risk framework
+  to nasa-risk and the quantitative reliability engine to nasa-pra; it is space-flight-centric
+  and anchored to the 2024 second edition (Rev 2), NOT the superseded 2010 SP-2010-3403.
+change_indication: "reconstructed as synthesized reference notes"

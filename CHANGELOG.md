@@ -9,6 +9,41 @@ All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning follows
 [Semantic Versioning](https://semver.org/).
 
+## [1.6.0] — 2026-06-23
+
+### Added
+
+- **`faa-sem`** (7 ch) — FAA Systems Engineering Manual (SEM) v1.0.1: civil-agency SE as the FAA
+  practices it inside the Acquisition Management System (AMS) and the National Airspace System —
+  the five-phase AMS lifecycle and its five decision points, operational concept development and
+  implementation-free functional analysis (ConOps, FFBD/N², CMLs), requirements and architecture
+  synthesis (PRS→MRS, the pPRD→iPRD→fPRD ratchet, RAM, CPRs), the seven technical management
+  disciplines (Integrated Technical Management/SEMP, Interface Management/IRD-ICD, Risk-Issue-
+  Opportunity, Configuration Management, SE Information Management, Decision Analysis, V&V), and the
+  specialty disciplines (RMA via Service Threads, Life Cycle Engineering, E3/Spectrum, Human
+  Factors, Information Security via the NIST RMF, System Safety via the SMS, environmental/EOSH).
+  Tier 1 (US-gov public domain).
+- **`nasa-schedule`** (8 ch) — NASA Schedule Management Handbook (2024 ed., Rev 2): program/project
+  schedule management of aerospace and large engineering efforts — the five sub-functions (Planning,
+  Development, Assessment & Analysis, Maintenance & Control, Documentation & Communication), the
+  Integrated Master Schedule (IMS) and WBS/OBS/CBS, the Schedule Management Plan (SMP) and Basis of
+  Estimate, Critical Path Method, float and margin, tiered schedule assessment (the Shock Test, the
+  Dimensions of Schedule Reliability), Schedule Risk Analysis (SRA), Integrated Cost-Schedule Risk
+  Analysis (ICSRA), Monte Carlo and the Joint Confidence Level (JCL), baselining vs. replan vs.
+  rebaseline, and EVM schedule metrics (SPI, BEI, CEI, Earned Schedule, CPLI). Grounded in NPR
+  7120.5 and the GAO Schedule Assessment Guide. Tier 1 (US-gov public domain).
+- **`dod-mosa`** (7 ch) — *Implementing a Modular Open Systems Approach in DoD Programs* (OUSD R&E,
+  Feb 2025): MOSA as a DoD acquisition + design discipline — the statutory/regulatory basis
+  (10 U.S.C. 4401–4403, FY2017/FY2021 NDAA, DFARS), the five OUSD(R&E) pillars, the
+  plan→modularize→identify→define→standardize interface lifecycle, technical levers (WBS/
+  MIL-STD-881F taxonomy, standards profiling, API-first software, COTS/cybersecurity), MOSA
+  assessment metrics and tools (PART/OAAT/KOSS/SEAM/MAUT), technology-change and DMSMS management,
+  roadmaps, MOSA across the six AAF pathways, and contracting/IP/data-rights mechanics. Names
+  third-party standards (FACE, OMS, DISR) without reproducing them. Tier 1 (US-gov public domain,
+  Distribution A).
+
+Catalogue now 24 packs (+2 signposts).
+
 ## [1.5.0] — 2026-06-23
 
 ### Added
