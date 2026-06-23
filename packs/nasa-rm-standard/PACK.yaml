@@ -1,0 +1,25 @@
+slug: nasa-rm-standard
+title: "NASA Reliability and Maintainability Standard (NASA-STD-8729.1A)"
+publisher: "NASA (National Aeronautics and Space Administration)"
+source_version: "Revision A (2017-06-13), superseding NASA-STD-8729.1"
+license: "Public Domain (US Government work, 17 U.S.C. 105)"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "book-to-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 52
+  chapters: 6
+  built_on: "2026-06-23"
+notes: >
+  US Government work -- public domain (17 U.S.C. 105). No copyright; free to reproduce,
+  transform, and redistribute (including commercially), with no attribution or share-alike
+  obligation. Attribution to NASA is provided as a courtesy in NOTICE, not as a legal
+  obligation; NASA does not endorse this pack. Content is synthesized/transformed reference
+  notes -- no long verbatim passages reproduced (verified by check_overlap.py). Caveat:
+  NASA-STD-8729.1A is an objectives-and-strategies standard, not a procedures manual, so
+  step-by-step method how-to lives in the referenced NASA Preferred Reliability Practices
+  (outside this source); facility R&M is excluded. No source-material link published
+  (see docs/LICENSING.md).
+change_indication: "reconstructed as synthesized reference notes"

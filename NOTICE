@@ -242,6 +242,42 @@ Third-party source attributions (one block per shipped pack)
            Attribution to OUSD(R&E) is courtesy, not obligation; the DoD does not endorse
            this pack. See packs/dod-mosa/LICENSE.
 
+[pack: nasa-rm-standard]
+  Source : NASA Reliability and Maintainability (R&M) Standard for Spaceflight and
+           Support Systems (NASA-STD-8729.1A), Revision A (2017-06-13)
+  Author : NASA
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. NASA-STD-8729.1A is an objectives-and-strategies
+           standard; step-by-step method how-to lives in the referenced NASA Preferred
+           Reliability Practices, which this pack names but does not reproduce. Attribution
+           to NASA is courtesy, not obligation; NASA does not endorse this pack.
+           See packs/nasa-rm-standard/LICENSE.
+
+[pack: dod-rio]
+  Source : Department of Defense Risk, Issue, and Opportunity Management Guide for Defense
+           Acquisition Programs (OUSD(R&E)), September 2023, Incorporating Change 2.2 (Dec 2023)
+  Author : US Department of Defense (Office of the Under Secretary of Defense for Research and Engineering)
+  Licence: Public Domain -- US Government work (17 U.S.C. 105); Distribution A
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. CAVEAT: the guide NAMES third-party and external
+           policy material (e.g. EIA-748, MIL-STD-881F, DCMA schedule metrics, numerous DoD
+           Instructions) which remain governed by their own authorities -- this pack
+           reproduces NONE of that text, only synthesized notes that name them. Attribution
+           to OUSD(R&E) is courtesy, not obligation; the DoD does not endorse this pack.
+           See packs/dod-rio/LICENSE.
+
+[pack: dod-digital-engineering]
+  Source : Department of Defense Digital Engineering Strategy (June 2018)
+  Author : US Department of Defense (Office of the Deputy Assistant Secretary of Defense
+           for Systems Engineering, ODASD(SE) / OUSD R&E)
+  Licence: Public Domain -- US Government work (17 U.S.C. 105); Distribution A
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. The CAC-gated Digital Engineering Body of Knowledge
+           (DEBoK) is NOT public and is intentionally excluded. Attribution to the US DoD /
+           ODASD(SE) is courtesy, not obligation; the DoD does not endorse this pack.
+           See packs/dod-digital-engineering/LICENSE.
+
 -----------------------------------------------------------------------------------
 The build pipeline uses the book-to-skill extraction engine (MIT License),
 © the book-to-skill authors. It is a build tool, not a packaged source.

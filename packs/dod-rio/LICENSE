@@ -1,0 +1,35 @@
+dod-rio pack — content licence
+===============================
+
+This pack is derived from:
+    DoD Risk, Issue, and Opportunity Management Guide for Defense Acquisition Programs
+    OUSD(R&E) (Office of the Under Secretary of Defense for Research and Engineering)
+    September 2023, Incorporating Change 2.2 (December 2023)
+    Distribution Statement A: Approved for public release; distribution is unlimited.
+
+Source licence: Public Domain (US Government work); Distribution A  (tier 1 — see ../../docs/SOURCE-VETTING.md)
+No source-material download link is published (see ../../docs/LICENSING.md).
+
+This source is a work of the United States Government, prepared by the Office of the Under
+Secretary of Defense for Research and Engineering, and is therefore NOT subject to copyright
+protection in the United States (17 U.S.C. 105). It carries Distribution Statement A (approved
+for public release; distribution unlimited). It is in the public domain: anyone may reproduce,
+transform, and redistribute it for any purpose, including commercially, without permission,
+attribution, or share-alike obligation.
+
+THIRD-PARTY / EXTERNAL MATERIAL CAVEAT: the guide names and references external policy,
+standards, and tooling — including DoD Instructions and Directives (e.g. DoDI 5000.02/.74/.75/
+.80/.81/.85/.87/.88/.89/.91, DoDI 8500.01/8510.01, DoDI 5000.83/5000.90, DoDD 5000.01),
+industry and military standards (EIA-748 for EVM, MIL-STD-881F for the WBS, MIL-STD-882 for
+system safety), the DCMA 14-point schedule metrics, NIST SP 800-39, and commercial/Service
+tools (Active Risk Manager, Project Recon, Risk Exchange). Those artifacts remain governed by
+their own authorities and licences. This pack reproduces none of them — it contains only
+synthesized, transformed reference notes that NAME these artifacts and describe, in original
+words, how the RIO guide uses them. No third-party standard text, tables, or long verbatim
+passages are reproduced.
+
+Attribution to OUSD(R&E) / the DoD is provided as a courtesy (see the repository NOTICE), not a
+legal obligation. The DoD does not endorse this pack or its authors.
+
+NOTE: This file governs the CONTENT of this pack. The repository tooling is licensed
+separately under MIT (see ../../LICENSE).

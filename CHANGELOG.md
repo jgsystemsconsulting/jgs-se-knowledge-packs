@@ -9,6 +9,45 @@ All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning follows
 [Semantic Versioning](https://semver.org/).
 
+## [1.7.0] — 2026-06-23
+
+### Added
+
+- **`nasa-rm-standard`** (6 ch) — NASA Reliability and Maintainability Standard
+  (NASA-STD-8729.1A, Rev A, 2017): NASA's objectives-driven R&M framework — the R&M objectives
+  hierarchy (one Top Objective decomposed into four sub-objectives, paired with tailorable
+  strategies), how R&M requirements are established inside the SMA Plan required by NPR 7120.5,
+  the SMA Technical Authority concurrence/independent-evaluation governance, milestone vs.
+  readiness review gates, the reliability/maintainability/availability vocabulary (Ai vs. Ao,
+  the failure causal chain, risk as a triplet), and the R&M Evidentiary Methods catalogue
+  (FMEA/FMECA, FTA, RBDA, RCM, LORA, plus the space-environment and parts-pedigree analyses).
+  An objectives-and-strategies standard — defers step-by-step procedures to the referenced
+  NASA Preferred Reliability Practices. Tier 1 (US-gov public domain).
+- **`dod-rio`** (8 ch) — DoD Risk, Issue, and Opportunity (RIO) Management Guide for Defense
+  Acquisition Programs (OUSD R&E, Sep 2023 incl. Change 2.2): the defense-acquisition mechanics
+  of program risk management — the RIO definitions, the five-step risk process
+  (plan-identify-analyze-mitigate-monitor), 1–5 likelihood/consequence scoring and the 5×5 risk
+  matrix, the four mitigation options (accept/avoid/transfer/control), burn-down plans, issue
+  management (probability=1), opportunity management toward should-cost, cross-program/interface
+  risk, tailoring RIO to the six AAF pathways (UCA/MTA/MCA/Software/DBS/Services), specialized
+  methods (RMF, MBCRA/Cyber Table Top, Agile metrics, FMECA, ITRA/DTRAM), and institutionalizing
+  RIO via the PRMP, boards (RMB/JRMB/ROMB/RWG), tiered roles, and WBS/IMP/IMS/EVM/TPM integration.
+  The DoD-acquisition complement to `nasa-risk` and `dau-se-guidebook`; names third-party policy
+  material (EIA-748, MIL-STD-881F, DCMA metrics) without reproducing it. Tier 1 (US-gov public
+  domain, Distribution A).
+- **`dod-digital-engineering`** (7 ch) — DoD Digital Engineering Strategy (2018, OUSD/ODASD(SE)):
+  the Department of Defense's five digital engineering goals — (1) formalize the development,
+  integration, and use of models; (2) provide an enduring authoritative source of truth;
+  (3) incorporate technological innovation; (4) establish supporting infrastructure and
+  environments; (5) transform the culture and workforce — plus their focus areas, the
+  document-to-model and design-build-test→model-analyze-build shifts, model formalisms/provenance,
+  governance and access control of the authoritative source of truth, and the
+  coordinate→plan→pilot→sustain rollout. A vision-and-policy strategy, deliberately
+  non-prescriptive (no how-to method or MBSE/SysML mechanics); excludes the CAC-gated Digital
+  Engineering Body of Knowledge (DEBoK). Tier 1 (US-gov public domain, Distribution A).
+
+Catalogue now 27 packs (+2 signposts).
+
 ## [1.6.0] — 2026-06-23
 
 ### Added
