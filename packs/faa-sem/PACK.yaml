@@ -1,0 +1,26 @@
+slug: faa-sem
+title: "FAA Systems Engineering Manual v1.0.1"
+publisher: "US Federal Aviation Administration (FAA)"
+source_version: "Version 1.0.1 (2014-06-19)"
+license: "Public Domain (US Government work, 17 U.S.C. 105)"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "book-to-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 360
+  chapters: 7
+  built_on: "2026-06-23"
+notes: >
+  US Government work -- public domain (17 U.S.C. 105); not subject to US copyright.
+  Free to reproduce, transform, and redistribute (including commercially); no
+  attribution or share-alike obligation. Attribution to the FAA is provided in
+  LICENSE/NOTICE as a courtesy only, and the FAA does not endorse this pack.
+  Content is synthesized/transformed reference notes -- no long verbatim passages
+  reproduced (verified with tools/check_overlap.py at n=12: clean). The SEM is FAA
+  guidance, not policy, and is a pointer document that defers discipline depth to
+  companion handbooks (FAA-HDBK-006A for RMA, the SMS Manual for safety, the NIST
+  800-series for information security); the pack carries that caveat. No
+  source-material download link is published (see docs/LICENSING.md).
+change_indication: "reconstructed as synthesized reference notes"
