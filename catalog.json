@@ -476,6 +476,28 @@
       "commercial_use": true,
       "chapters": 8,
       "status": "live"
+    },
+    {
+      "slug": "nasa-npr-7150",
+      "title": "NASA NPR 7150.2D — NASA Software Engineering Requirements",
+      "publisher": "NASA",
+      "source_version": "NPR 7150.2D (Effective March 08, 2022)",
+      "license": "Public Domain (US Government work, 17 U.S.C. 105)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 8,
+      "status": "live"
+    },
+    {
+      "slug": "nist-stat-handbook",
+      "title": "NIST/SEMATECH e-Handbook of Statistical Methods (NIST HB 151)",
+      "publisher": "NIST (US Department of Commerce) with SEMATECH",
+      "source_version": "2012 ed., updated October 2022 (NIST HB 151)",
+      "license": "Public Domain (US Government work, 17 U.S.C. 105)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 8,
+      "status": "live"
     }
   ],
   "planned": [

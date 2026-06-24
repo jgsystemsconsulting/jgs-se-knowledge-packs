@@ -1,0 +1,25 @@
+slug: nasa-npr-7150
+title: "NASA NPR 7150.2D — NASA Software Engineering Requirements"
+publisher: "NASA"
+source_version: "NPR 7150.2D (Effective March 08, 2022)"
+license: "Public Domain (US Government work, 17 U.S.C. 105)"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "book-to-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 89
+  chapters: 8
+  built_on: "2026-06-24"
+notes: >
+  US Government work -- public domain (17 U.S.C. 105); no copyright, free to reproduce,
+  transform, and redistribute (including commercially). Attribution to NASA is provided
+  as a courtesy in NOTICE, not as a legal obligation, and NASA does not endorse this pack.
+  Content is synthesized/transformed reference notes; no long verbatim passages reproduced
+  (verified by check_overlap.py). NASA names and "meatball"/"worm" insignia are trademarks
+  governed by NASA media-usage guidelines and are not reused in this pack. No source-material
+  link is published (see docs/LICENSING.md). Caveat: NPR 7150.2D is a controlled directive --
+  printed/derived copies are uncontrolled; verify the authoritative current version in the
+  NASA NODIS Library before relying on any requirement.
+change_indication: "reconstructed as synthesized reference notes"

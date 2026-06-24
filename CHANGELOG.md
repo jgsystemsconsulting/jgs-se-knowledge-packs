@@ -9,6 +9,43 @@ All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning follows
 [Semantic Versioning](https://semver.org/).
 
+## [1.15.0] — 2026-06-24
+
+### Added
+
+- **`nasa-npr-7150`** (8 ch) — NASA NPR 7150.2D, NASA Software Engineering Requirements
+  (effective March 08, 2022): NASA's Agency-wide software-engineering requirements directive —
+  the software classification scheme (Classes A–F) as the master valve, the Requirements Mapping
+  Matrix and class-driven applicability, tailoring and Technical Authority governance, the
+  numbered SWE-### 'shall' requirements across software management (Ch 3) and the engineering
+  life cycle (Ch 4), the supporting disciplines (configuration management, risk, peer
+  reviews/inspections, measurement, non-conformance — Ch 5), safety-critical and cybersecurity
+  requirements, IV&V applicability, bidirectional traceability, and the Appendix A definitions.
+  Does NOT cover detailed software-assurance/safety procedures (NASA-STD-8739.8),
+  implementation how-to and document content (NASA-HDBK-2203), the systems-engineering process
+  framework (NPR 7123.1), or program/project management (NPR 7120.5). CONTROLLED-DIRECTIVE
+  SOURCE — derived copies are uncontrolled; verify the authoritative version in the NASA NODIS
+  Library before relying on any requirement. The software-requirements complement to
+  `nasa-npr-7123`. Tier 1 (US-gov public domain).
+- **`nist-stat-handbook`** (8 ch) — NIST/SEMATECH e-Handbook of Statistical Methods (NIST
+  Handbook 151, 2012 ed., updated October 2022): the practical statistics reference for
+  engineering, metrology, and quality — exploratory data analysis and the four univariate
+  assumptions (4-plot); measurement process characterization (bias/precision, calibration
+  designs, gauge R&R, ISO/GUM uncertainty budgets); production process characterization
+  (stability vs. capability); process modeling and regression (LS/WLS/NLS/LOESS); design of
+  experiments (screening, fractional/factorial, response-surface, Taguchi); statistical process
+  control (Shewhart/CUSUM/EWMA charts, capability indices, acceptance sampling); product/process
+  comparisons (hypothesis tests and confidence intervals for 1/2/3+ groups, ANOVA, multiple
+  comparisons); and reliability (lifetime & repair-rate models, accelerated testing, reliability
+  growth). Applied frequentist statistics for measurement and quality — does NOT reproduce the
+  source web Handbook's per-distribution formula galleries, worked case studies, datasets, plot
+  images, or Dataplot/R code (described, not copied); thin on modern machine learning, Bayesian
+  methods beyond conjugate reliability priors, time-series/forecasting, and Bayesian
+  experimental design. The statistics-and-quality companion to `gao-cost`, `dod-mq-bok`, and the
+  reliability/safety packs. Tier 1 (US-gov public domain).
+
+Catalogue now 45 packs (+2 signposts).
+
 ## [1.14.0] — 2026-06-24
 
 ### Changed

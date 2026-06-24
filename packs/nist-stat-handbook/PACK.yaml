@@ -1,0 +1,28 @@
+slug: nist-stat-handbook
+title: "NIST/SEMATECH e-Handbook of Statistical Methods (NIST HB 151)"
+publisher: "NIST (US Department of Commerce) with SEMATECH"
+source_version: "2012 ed., updated October 2022 (NIST HB 151)"
+license: "Public Domain (US Government work, 17 U.S.C. 105)"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "book-to-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 0
+  chapters: 8
+  built_on: "2026-06-24"
+notes: >
+  US Government work -- a NIST publication (Handbook 151), not subject to copyright in the
+  United States (17 U.S.C. 105). Free to reproduce, transform, and redistribute, including
+  commercially; attribution to NIST/SEMATECH is a courtesy, not a legal obligation, and
+  neither endorses this pack. source_pages=0 because the source is the web/HTML e-Handbook
+  (no fixed pagination); it was ingested as plain text (~843K words across the eight
+  numbered chapters). CAVEAT: the original is a web-native reference of many short
+  interlinked pages carrying per-distribution formula galleries, worked CASE STUDIES,
+  DATASETS, rendered PLOT/FIGURE images, and Dataplot/R CODE blocks. This pack SYNTHESIZES
+  the concepts and method-selection logic in original words and does NOT reproduce those
+  galleries, case studies, datasets, images, or code -- they are described, not copied
+  (a quality and licence-safety choice). No source-material download link is published
+  (see docs/LICENSING.md).
+change_indication: "reconstructed as synthesized reference notes"

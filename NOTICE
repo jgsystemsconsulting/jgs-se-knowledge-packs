@@ -511,6 +511,35 @@ Third-party source attributions (one block per shipped pack)
            appendix worksheets, only synthesized notes that name them. Attribution to DSPO is
            courtesy, not obligation; the DoD does not endorse this pack. See packs/sd-22-dmsms/LICENSE.
 
+[pack: nasa-npr-7150]
+  Source : NASA NPR 7150.2D -- NASA Software Engineering Requirements (Effective March 08, 2022)
+  Author : NASA
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright, free to reproduce, transform, and redistribute
+           (including commercially). CAVEAT: NPR 7150.2D is a CONTROLLED NASA directive --
+           printed or derived copies are uncontrolled; verify the authoritative current
+           version in the NASA NODIS Library before relying on any requirement. This pack
+           reproduces no long verbatim passages, only synthesized notes; NASA names and the
+           "meatball"/"worm" insignia are trademarks and are not reused. Attribution to NASA
+           is courtesy, not obligation; NASA does not endorse this pack.
+           See packs/nasa-npr-7150/LICENSE.
+
+[pack: nist-stat-handbook]
+  Source : NIST/SEMATECH e-Handbook of Statistical Methods (NIST Handbook 151),
+           2012 ed., updated October 2022
+  Author : NIST (US Department of Commerce) with SEMATECH
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright, free to reproduce, transform, and redistribute
+           (including commercially). CAVEAT: the original is a web-native reference of many
+           short interlinked pages carrying per-distribution formula galleries, worked CASE
+           STUDIES, DATASETS, rendered PLOT/FIGURE images, and Dataplot/R CODE blocks -- this
+           pack SYNTHESIZES the concepts and method-selection logic in original words and does
+           NOT reproduce those galleries, case studies, datasets, images, or code (they are
+           described, not copied). Attribution to NIST/SEMATECH is courtesy, not obligation;
+           neither endorses this pack. See packs/nist-stat-handbook/LICENSE.
+
 -----------------------------------------------------------------------------------
 The build pipeline uses the book-to-skill extraction engine (MIT License),
 © the book-to-skill authors. It is a build tool, not a packaged source.
