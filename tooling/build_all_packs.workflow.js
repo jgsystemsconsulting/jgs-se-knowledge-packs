@@ -59,6 +59,7 @@ const META = {
   'digital-systems-engineering': { title: 'Towards Digital Engineering: The Advent of Digital Systems Engineering (arXiv:2002.11672)', pub: 'arXiv (Old Dominion University)', lic: 'CC BY 4.0', tier: '2', caveat: 'arXiv PDF ONLY (not the paywalled journal version); ~28 pp — thin.' },
   'nist-800-37': { title: 'NIST SP 800-37 Rev 2 (Risk Management Framework)', pub: 'NIST', lic: PD, tier: '1', caveat: 'RMF/security-engineering edge of SE.' },
   'faa-system-safety': { title: 'FAA System Safety Handbook', pub: 'FAA', lic: PD, tier: '1', caveat: 'Use the FAA original; reprint commentary is not PD.' },
+  'nasa-npr-7150': { title: 'NASA NPR 7150.2D — NASA Software Engineering Requirements', pub: 'NASA', lic: PD, tier: '1', caveat: 'NASA Procedural Requirement (NODIS), rendered from the NODIS HTML; software-engineering requirements complementing the software-for-systems area.' },
 }
 
 // Batch to build this run. Set to a slug list, or Object.keys(META) for "all staged".

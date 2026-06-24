@@ -1,0 +1,30 @@
+nist-stat-handbook pack — content licence
+==========================================
+
+This pack is derived from:
+    NIST/SEMATECH e-Handbook of Statistical Methods (NIST Handbook 151)
+    NIST (US Department of Commerce) with SEMATECH
+    2012 edition, last updated October 2022
+
+Source licence: Public Domain (US Government work, 17 U.S.C. 105)  (tier 1 — see ../../docs/SOURCE-VETTING.md)
+No source-material download link is published (see ../../docs/LICENSING.md).
+
+This source is a publication of the National Institute of Standards and Technology (NIST),
+an agency of the U.S. Department of Commerce, prepared jointly with SEMATECH. As a work of
+the United States Government it is NOT subject to copyright protection in the United States
+(17 U.S.C. 105) and is in the public domain. Anyone may reproduce, transform, and
+redistribute it for any purpose, including commercially, without permission.
+
+Attribution to NIST/SEMATECH is provided as a courtesy (see the repository NOTICE), not a
+legal obligation. NIST and SEMATECH do not endorse this pack or its authors, and this pack
+is not a NIST publication.
+
+TREATMENT OF THE SOURCE'S CONTENT: the original e-Handbook is a web-native reference of many
+short interlinked HTML pages carrying per-distribution formula galleries, worked case
+studies, datasets, rendered plot/figure images, and Dataplot/R code blocks. This pack
+contains only synthesized, transformed reference notes that describe the Handbook's concepts
+and method-selection logic in original words. It reproduces none of those galleries, case
+studies, datasets, figure images, or code blocks — they are described, not copied.
+
+NOTE: This file governs the CONTENT of this pack. The repository tooling is licensed
+separately under MIT (see ../../LICENSE).

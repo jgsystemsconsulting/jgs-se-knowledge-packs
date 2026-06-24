@@ -1,0 +1,32 @@
+nasa-npr-7150 pack — content licence
+=====================================
+
+This pack is derived from:
+    NASA NPR 7150.2D — NASA Software Engineering Requirements
+    NASA, NPR 7150.2D (Effective March 08, 2022)
+
+Source licence: Public Domain (US Government work, 17 U.S.C. 105)  (tier 1 — see ../../docs/SOURCE-VETTING.md)
+No source-material download link is published (see ../../docs/LICENSING.md).
+
+This source is a work of the United States Government, prepared by NASA, and is
+therefore NOT subject to copyright protection in the United States (17 U.S.C. 105).
+It is in the public domain: anyone may reproduce, transform, and redistribute it for
+any purpose, including commercially, without permission. No attribution, non-commercial,
+or share-alike conditions attach to the underlying work.
+
+Attribution to NASA is provided as a courtesy (see the repository NOTICE), not as a
+legal obligation. NASA does not endorse, sponsor, or approve this pack or its authors.
+
+Trademark / insignia note: while the text of the directive is public domain, the NASA
+name, the NASA logo and insignia (the "meatball" and "worm"), and other NASA identifiers
+are protected and governed by NASA's media-usage and trademark guidelines. This pack uses
+the NASA name only nominatively to identify the source and does not reproduce NASA
+insignia or imply endorsement.
+
+Currency caveat: NPR 7150.2D is a controlled NASA directive issued through the NASA
+Online Directives Information System (NODIS). Printed and derived copies are uncontrolled.
+Before relying on any requirement, verify the authoritative current version in the NODIS
+Library.
+
+NOTE: This file governs the CONTENT of this pack. The repository tooling is licensed
+separately under MIT (see ../../LICENSE).
