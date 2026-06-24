@@ -63,7 +63,7 @@ const META = {
 
 // Batch to build this run. Set to a slug list, or Object.keys(META) for "all staged".
 // (args.slugs is honoured when the runner passes it; pinned here for reliable batching.)
-const SLUGS = (args && Array.isArray(args.slugs) && args.slugs.length) ? args.slugs : Object.keys(META)
+const SLUGS = (args && Array.isArray(args.slugs) && args.slugs.length) ? args.slugs : ['faa-req-handbook', 'sd-22-dmsms']
 
 const PREP_SCHEMA = {
   type: 'object',

@@ -1,0 +1,37 @@
+mil-hdbk-61 pack — content licence
+===================================
+
+This pack is derived from:
+    MIL-HDBK-61B — Department of Defense Handbook: Configuration Management Guidance
+    DoD, 61B, 7 April 2020 (cataloged with Change 1, 15 Aug 2025)
+
+Source licence: Public Domain (US Government work); Distribution A  (tier 1 — see ../../docs/SOURCE-VETTING.md)
+No source-material download link is published (see ../../docs/LICENSING.md).
+
+This source is a work of the United States Government, prepared by the Department of
+Defense, and is therefore NOT subject to copyright protection in the United States
+(17 U.S.C. 105). It carries Distribution Statement A (approved for public release;
+distribution is unlimited). It is in the public domain: anyone may reproduce,
+transform, and redistribute it for any purpose, including commercially, without
+permission. Attribution to DoD is provided as a courtesy (see the repository NOTICE),
+not as a legal obligation. DoD does not endorse this pack or its authors.
+
+ADVISORY-GUIDANCE STATUS: MIL-HDBK-61B is explicitly a guidance handbook. It cannot be
+cited as a contractual requirement; contractual CM obligations come from the tailored
+SAE EIA-649-1 requirements and the citing acquisition documents.
+
+THIRD-PARTY MATERIAL CAVEAT: MIL-HDBK-61B adopts, references, and is the DoD
+application/tailoring layer over the SAE EIA-649 standard suite — SAE EIA-649
+(Configuration Management Standard), SAE EIA-649-1 (Configuration Management
+Requirements for Defense Contracts), and GEIA-HB-649 / GEIA-HB-649A (implementation and
+tailoring guides) — and refers to ISO 9000, ISO 10007, ISO/IEC/IEEE 12207, and IEEE 828.
+Those standards are the copyright of their publishers (SAE / ISO / IEC / IEEE) and are
+NOT in the public domain. This pack reproduces none of their requirement clauses, "shall"
+statements, or tables. It contains only synthesized, transformed reference notes that
+NAME those standards and describe, in original words, how MIL-HDBK-61B applies and tailors
+them for DoD CM. (61B itself notes that EIA-649-1 Annex A — the Tailoring Worksheet — is
+the one part of the suite usable and quotable directly in contracts; even so, this pack
+does not reproduce it.)
+
+NOTE: This file governs the CONTENT of this pack and is independent of the repository's
+MIT licence (which covers tooling only — see ../../LICENSE).

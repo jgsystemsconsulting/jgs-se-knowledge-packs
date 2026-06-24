@@ -421,6 +421,39 @@
       "commercial_use": true,
       "chapters": 7,
       "status": "live"
+    },
+    {
+      "slug": "gao-agile",
+      "title": "GAO Agile Assessment Guide (GAO-24-105506)",
+      "publisher": "US Government Accountability Office (GAO)",
+      "source_version": "GAO-24-105506 (Nov 2023, rev. Dec 15 2023)",
+      "license": "Public Domain (US Government work, 17 U.S.C. 105); GAO reproduction notice",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 9,
+      "status": "live"
+    },
+    {
+      "slug": "mil-hdbk-61",
+      "title": "MIL-HDBK-61B Configuration Management (Change 1, 2025)",
+      "publisher": "US Department of Defense",
+      "source_version": "61B, 7 April 2020 (cataloged with Change 1, 15 Aug 2025)",
+      "license": "Public Domain (US Government work, 17 U.S.C. 105); Distribution A",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 8,
+      "status": "live"
+    },
+    {
+      "slug": "mrl-deskbook",
+      "title": "Manufacturing Readiness Level (MRL) Deskbook (Version 2022)",
+      "publisher": "OSD Manufacturing Technology Program with the Joint Service/Industry MRL Working Group",
+      "source_version": "Version 2022 (1 October 2022 update)",
+      "license": "Public Domain (US Government work, 17 U.S.C. 105); Distribution A",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 8,
+      "status": "live"
     }
   ],
   "planned": [

@@ -1,0 +1,28 @@
+slug: mil-hdbk-61
+title: "MIL-HDBK-61B Configuration Management (Change 1, 2025)"
+publisher: "DoD"
+source_version: "61B, 7 April 2020 (cataloged with Change 1, 15 Aug 2025)"
+license: "Public Domain (US Government work); Distribution A"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "book-to-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 84
+  chapters: 8
+  built_on: "2026-06-24"
+notes: >
+  US Government work, not subject to copyright in the United States (17 U.S.C. 105);
+  Distribution A (approved for public release, distribution unlimited). Free to
+  reproduce, transform, and redistribute, including commercially; no attribution
+  obligation (a courtesy credit to DoD is provided in the repository NOTICE). 61B is
+  ADVISORY guidance, not a citable contractual requirement. CAVEAT: 61B adopts and
+  refers to the SAE EIA-649 / EIA-649-1 / GEIA-HB-649 standard suite (and ISO 9000 /
+  ISO 10007 / IEEE 828), which are COPYRIGHTED by SAE / ISO / IEEE and are NOT public
+  domain. This pack SYNTHESIZES 61B's guidance and NAMES that suite and how DoD tailors
+  it, but reproduces NONE of its copyright-protected requirement clauses or tables (61B
+  itself notes EIA-649-1 Annex A is the one part usable directly in contracts). No
+  source-material download link is published (see docs/LICENSING.md). DoD does not
+  endorse this pack.
+change_indication: "reconstructed as synthesized reference notes"
