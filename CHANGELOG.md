@@ -9,6 +9,29 @@ All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning follows
 [Semantic Versioning](https://semver.org/).
 
+## [1.16.0] — 2026-06-24
+
+### Added
+
+- **`faa-rma`** (8 ch) — FAA-HDBK-006D (8 October 2020), the FAA's System Reliability,
+  Maintainability, and Availability (RMA) Handbook for National Airspace System (NAS) hardware
+  and software: RMA figures of merit (MTBF, MTBO, MTTR, the availability variants), the bathtub
+  curve and probability distributions, the four-stage RMA lifecycle mapped to the FAA Acquisition
+  Management System (AMS), the six-task RMA technical-management/acquisition process, service-thread
+  criticality and the NAS-RD severity-to-target table, the RMA analysis toolbox (RBD, FMEA/FMECA,
+  FTA, Ishikawa, Monte Carlo, Bayesian, FRACAS, ALT, reliability-growth/recovery tests), software
+  reliability (early prediction + reliability growth), and tailorable example RMA requirements for
+  a Program Requirements Document. FAA/NAS-specific guidance — the handbook explicitly states it is
+  "for guidance only" and "must not be cited as a requirement"; centred on hardware-plus-software
+  availability (brackets out human/service/facility/communications availability), names but does
+  NOT reproduce the external standards it leans on (MIL-STD-721C/882E/1629A/3034A, MIL-HDBK-217F/189C,
+  NASA SP-2016-6105 / NASA-STD-8729.1A, NUREG/CR-6101, IEEE Std 1633-2016, RTCA DO-178C/DO-278A,
+  SAE JA1011), and is thin on detailed worked numerical examples and on safety-case method. Grounded
+  in the 006D revision (supersedes 006C v1.1 / 006B). The RMA-specialty complement to `faa-sem`,
+  `nasa-rm-standard`, and the reliability/safety packs. Tier 1 (US-gov public domain).
+
+Catalogue now 46 packs (+2 signposts).
+
 ## [1.15.0] — 2026-06-24
 
 ### Added
