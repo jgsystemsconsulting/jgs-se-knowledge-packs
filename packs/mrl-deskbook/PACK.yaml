@@ -1,0 +1,30 @@
+slug: mrl-deskbook
+title: "Manufacturing Readiness Level (MRL) Deskbook (Version 2022)"
+publisher: "OSD Manufacturing Technology Program with the Joint Service/Industry MRL Working Group"
+source_version: "Version 2022 (1 October 2022 update)"
+license: "Public Domain (US Government work); Distribution A — Approved for public release"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "book-to-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 73
+  chapters: 8
+  built_on: "2026-06-24"
+notes: >
+  US Government work prepared by the OSD Manufacturing Technology Program (OSD ManTech)
+  in collaboration with the Joint Service/Industry MRL Working Group — public domain,
+  Distribution A (approved for public release; distribution unlimited). No attribution,
+  non-commercial, or share-alike obligations attach; attribution to OSD ManTech is a
+  courtesy (see the repository NOTICE), not a legal obligation, and the Working Group does
+  not endorse this pack. CAVEAT carried forward from the source: the Deskbook states it
+  "is not a DoD requirement and is offered as a best practice" — this pack reproduces that
+  status and is likewise advisory, not a mandate; nothing here overrides DoD policy,
+  statute, the FAR, or DFARS. The authoritative MRL Criteria Matrix (Appendix A) and the
+  Excel MRL Users Guide are distributed separately by the MRL Working Group and are NOT
+  reproduced here — this pack carries the framework and its use, not the cell-by-cell
+  criteria text. This pack reproduces no third-party copyrighted material, only
+  synthesized, transformed reference notes. No source-material link is published (see
+  docs/LICENSING.md).
+change_indication: "reconstructed as synthesized reference notes; no verbatim source passages"

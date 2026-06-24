@@ -436,6 +436,53 @@ Third-party source attributions (one block per shipped pack)
            courtesy, not obligation; the FAA does not endorse this pack.
            See packs/faa-ams-vv/LICENSE.
 
+[pack: gao-agile]
+  Source : GAO Agile Assessment Guide: Best Practices for Adoption and Implementation
+           (GAO-24-105506), November 2023 (reissued with revisions 15 December 2023)
+  Author : US Government Accountability Office (GAO)
+  Licence: Public Domain -- US Government work (17 U.S.C. 105); GAO reproduction notice
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. GAO's notice authorises reproduction/distribution of
+           the published product in its entirety. CAVEAT: the published product may contain
+           third-party copyrighted images/material whose separate reproduction could require
+           permission -- this pack reproduces NONE of it (the embedded figures and exhibits,
+           e.g. Figures 1, 5, 6, 7, 13-21, are described in prose, not copied), only
+           synthesized reference notes. Attribution to GAO is courtesy, not obligation; GAO
+           does not endorse this pack. See packs/gao-agile/LICENSE.
+
+[pack: mil-hdbk-61]
+  Source : MIL-HDBK-61B -- Department of Defense Handbook: Configuration Management Guidance
+           61B, 7 April 2020 (cataloged with Change 1, 15 Aug 2025)
+  Author : US Department of Defense
+  Licence: Public Domain -- US Government work (17 U.S.C. 105); Distribution A
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright (Distribution A, approved for public release).
+           ADVISORY GUIDANCE: 61B cannot be cited as a contractual requirement. CAVEAT: 61B
+           adopts and is the DoD application/tailoring layer over the SAE EIA-649 suite
+           (EIA-649, EIA-649-1, GEIA-HB-649) and refers to ISO 9000/10007, ISO/IEC/IEEE 12207,
+           and IEEE 828 -- these are COPYRIGHTED by SAE / ISO / IEC / IEEE and are NOT public
+           domain. This pack reproduces NONE of their requirement clauses or tables, only
+           synthesized notes that NAME them and describe how DoD applies and tailors them.
+           Attribution to the US DoD is courtesy, not obligation; the DoD does not endorse
+           this pack. See packs/mil-hdbk-61/LICENSE.
+
+[pack: mrl-deskbook]
+  Source : Manufacturing Readiness Level (MRL) Deskbook, Version 2022 (1 October 2022 update)
+  Author : Office of the Secretary of Defense Manufacturing Technology Program (OSD ManTech),
+           with the Joint Service/Industry MRL Working Group
+  Licence: Public Domain -- US Government work (17 U.S.C. 105); Distribution A
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright (Distribution A, approved for public release).
+           ADVISORY STATUS (reproduced from the source): "This document is not a DoD
+           requirement and is offered as a best practice" -- nothing here overrides DoD
+           policy, statute, the FAR, or DFARS. The authoritative MRL Criteria Matrix
+           (Appendix A) and the Excel MRL Users Guide are distributed separately by the MRL
+           Working Group and are NOT reproduced here -- this pack carries the framework and
+           its use, not the cell-by-cell criteria text. This pack reproduces no third-party
+           copyrighted material, only synthesized reference notes. Attribution to OSD ManTech
+           and the Joint Service/Industry MRL Working Group is courtesy, not obligation; the
+           Working Group does not endorse this pack. See packs/mrl-deskbook/LICENSE.
+
 -----------------------------------------------------------------------------------
 The build pipeline uses the book-to-skill extraction engine (MIT License),
 © the book-to-skill authors. It is a build tool, not a packaged source.

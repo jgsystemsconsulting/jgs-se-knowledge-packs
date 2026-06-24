@@ -9,6 +9,55 @@ All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning follows
 [Semantic Versioning](https://semver.org/).
 
+## [1.12.0] — 2026-06-24
+
+### Added
+
+- **`gao-agile`** (9 ch) — GAO Agile Assessment Guide (GAO-24-105506, Nov 2023, rev. Dec 2023):
+  GAO's oversight-and-acquisition authority on assessing and managing Agile software development
+  in federal programs — the Agile Manifesto and the framework family (Scrum, Kanban, XP, SAFe,
+  DA, DSDM, Lean, DevOps); the three adoption perspectives (team dynamics, program operations,
+  organization environment); requirements decomposition (epics, features, user stories, INVEST,
+  MoSCoW, definition of done); Agile-aware federal contracting (FAR, modular contracting,
+  SOO/PWS/SOW, product owner vs. COR); program monitoring and control with EVM at the feature
+  level (WBS, cost, schedule); Agile metrics (velocity, lead/cycle time, CFD, burn charts); and
+  the auditor's key-question bank. Oversight- and acquisition-oriented: it tells you how to
+  *assess and govern* Agile programs, not how to code. Thin on hands-on engineering practice,
+  deep cost/schedule checklists (see `gao-cost`, `gao-schedule`), and any non-US-federal context.
+  The Agile-governance companion to `dau-se-guidebook`, `gao-cost`, `gao-schedule`, and `gao-tra`.
+  Tier 1 (US-gov public domain, GAO reproduction notice).
+- **`mil-hdbk-61`** (8 ch) — MIL-HDBK-61B, the DoD Configuration Management (CM) guidance handbook
+  (7 April 2020, cataloged with Change 1, 2025): defense CM across the acquisition and sustainment
+  life cycle — the five CM functions (planning, identification, control/change management, status
+  accounting, verification & audit), the three configuration baselines (FBL/ABL/PBL) and
+  FCD→ACD→PCD documentation, configuration items (CIs/HWCI/CSCI), change instruments (ECP/NOR/RFV),
+  the CCB and Class I/II classification, CDCA/AA authority, FCA/PCA audits, data management and
+  data rights (CDRL/DID, DFARS rights ladder, master/authoritative source), tailoring CM by phase
+  (EIA-649-1 R/T/NR matrix, Appendix C templates), and digital-era CM (digital twin, viewpoints,
+  MOSA). 61B is advisory guidance — it adopts and points to the SAE EIA-649 / EIA-649-1 /
+  GEIA-HB-649 suite (and ISO 9000/10007, IEEE 828) for the authoritative CM requirements; this
+  pack names and describes that suite but reproduces NONE of its copyrighted requirement clauses
+  or tables. Thin on the EIA-649 clauses themselves, form-level detail (DD-form fields, full DID
+  content), and non-DoD/commercial CM frameworks. The CM complement to `dau-se-guidebook`,
+  `dod-mq-bok`, and `nasa-de-acquisition`. Tier 1 (US-gov public domain, Distribution A).
+- **`mrl-deskbook`** (8 ch) — DoD Manufacturing Readiness Level (MRL) Deskbook (Version 2022, OSD
+  ManTech with the Joint Service/Industry MRL Working Group): assessing and managing manufacturing
+  maturity and producibility risk in defense acquisition — the 10-level MRL scale and its
+  non-linear, target-not-grade nature; the five demonstration environments (laboratory →
+  production-relevant → production-representative → pilot line → production line); the nine
+  manufacturing-risk threads and sub-threads; how MRL targets map onto Adaptive Acquisition
+  Framework milestones (MRL 4/6/7/8/9); conducting an MRL Assessment; building a Manufacturing
+  Maturation Plan; putting MRL maturity into contract language (Section L/M, SOW, AS6500A, DIDs);
+  tailoring criteria for S&T, single-system, ship, sustainment, and industry contexts; and
+  screening operational-technology cybersecurity. Manufacturing-readiness focused — it measures
+  producibility risk and frames mitigation; it is NOT a technology-readiness (TRL) guide, a full
+  SE process model, a cost/schedule guide, or a deep cybersecurity audit method (see `gao-tra`,
+  `dod-mq-bok`, `gao-cost`, `gao-schedule`). Advisory: "not a DoD requirement... offered as a best
+  practice." The MRL companion to `dod-mq-bok` and `gao-tra`. Tier 1 (US-gov public domain,
+  Distribution A).
+
+Catalogue now 41 packs (+2 signposts).
+
 ## [1.11.0] — 2026-06-24
 
 ### Added
