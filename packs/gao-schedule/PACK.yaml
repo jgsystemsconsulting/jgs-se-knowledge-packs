@@ -1,0 +1,27 @@
+slug: gao-schedule
+title: "GAO Schedule Assessment Guide (GAO-16-89G)"
+publisher: "US Government Accountability Office (GAO)"
+source_version: "GAO-16-89G (December 2015)"
+license: "Public Domain (US Government work, 17 U.S.C. 105); GAO reproduction notice"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "book-to-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 230
+  chapters: 8
+  built_on: "2026-06-24"
+notes: >
+  US Government work -- public domain (17 U.S.C. 105). GAO's own notice: "This is a work
+  of the U.S. government and is not subject to copyright protection in the United States.
+  The published product may be reproduced and distributed in its entirety without further
+  permission from GAO." Caveat (from GAO): the source may contain third-party copyrighted
+  images/material that need separate permission to reproduce in isolation -- this pack
+  reproduces no such third-party material, only synthesized reference notes, so the caveat
+  does not apply to this pack's content. Two embedded figures/tables the source attributes
+  to third parties (the cyclic reliability process, adapted from Keith D. Hornbacher, and
+  the recovery/acceleration techniques table attributed to GAO and NDIA) are paraphrased as
+  text, not reproduced. Attribution to GAO is courtesy, not obligation; GAO does not endorse
+  this pack. No source-material link published (see docs/LICENSING.md).
+change_indication: "reconstructed as synthesized reference notes"

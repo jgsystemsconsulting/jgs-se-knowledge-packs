@@ -9,6 +9,49 @@ All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning follows
 [Semantic Versioning](https://semver.org/).
 
+## [1.10.0] — 2026-06-24
+
+### Added
+
+- **`gao-cost`** (8 ch) — GAO Cost Estimating and Assessment Guide (GAO-20-195G, March 2020):
+  GAO's cross-government best-practice authority on program cost estimating — the four
+  characteristics of a reliable estimate (comprehensive, well documented, accurate, credible) and
+  the 18 best practices, the 12-step cost estimating process (purpose, plan, technical baseline,
+  WBS, ground rules and assumptions, data, point estimate, sensitivity, risk/uncertainty,
+  document, present, update), the estimating methods (analogy, parametric/CER, engineering
+  build-up, learning curves), Monte Carlo risk/uncertainty analysis with confidence levels and
+  contingency, auditing and validating an estimate against the four characteristics, earned value
+  management (EIA-748, BCWS/BCWP/ACWP, CPI/SPI/TCPI, EAC, PMB, IBR), and specialized techniques
+  (software cost estimating, learning curves, Analysis of Alternatives, WBS templates, the Green
+  Book internal-control framework). The cost-estimating companion to `gao-schedule` and `gao-tra`;
+  names referenced standards (EIA-748, MIL-STD-881D, the Green Book) without reproducing them.
+  Tier 1 (US-gov public domain, GAO reproduction notice).
+- **`gao-schedule`** (8 ch) — GAO Schedule Assessment Guide (GAO-16-89G, 2015): GAO's
+  cross-government best-practice authority on schedule reliability — the ten best practices of a
+  reliable integrated master schedule (capture, sequence, resource, duration, traceability, valid
+  critical path, reasonable total float, schedule risk analysis, updating, baseline), the four
+  characteristics (comprehensive, well-constructed, credible, controlled), critical path method
+  arithmetic (forward/backward pass, total float), schedule risk analysis (Monte Carlo,
+  contingency), statusing and baseline control, and the Appendix II audit triad. The time-domain
+  companion to `gao-cost` and to the agency SE handbooks; NOT a cost-estimating guide, full SE
+  process model, agile guide, or risk-management framework. Names third-party material (the
+  Hornbacher-adapted reliability process, the GAO/NDIA recovery techniques table) without
+  reproducing it. Tier 1 (US-gov public domain, GAO reproduction notice).
+- **`nasa-ceh`** (7 ch) — NASA Cost Estimating Handbook (CEH) v4.0 (February 2015): NASA's
+  12-step, three-part cost estimating process (Project Definition, Cost Methodology, Cost
+  Estimate), the WBS/CADRe/ONCE data backbone, estimating methodologies (analogy, parametric/CER,
+  engineering build-up, EVM, Delphi), ground rules and assumptions, data normalization and
+  inflation (BY/CY/RY), the point-estimate-to-S-curve cost-risk chain and Unallocated Future
+  Expense (UFE) reserves, Joint Cost and Schedule Confidence Level (JCL) analysis via probabilistic
+  cost-loaded schedules, decision-support analyses (sensitivity, trade studies,
+  make/lease-vs-buy, affordability, CAIV), and economic analysis (discounting, NPV, OMB Circular
+  A-94). The cost-and-cost-risk complement to NASA's SE and risk packs (`nasa-risk`,
+  `nasa-se-handbook`, `nasa-npr-7123`) and to the GAO cost canon (`gao-cost`, `gao-schedule`);
+  names third-party tools/standards (ACEIT, SEER, PRICE TruePlanning, OMB A-94, GAO-09-3SP)
+  without reproducing them. Tier 1 (US-gov public domain).
+
+Catalogue now 35 packs (+2 signposts).
+
 ## [1.9.0] — 2026-06-23
 
 ### Added

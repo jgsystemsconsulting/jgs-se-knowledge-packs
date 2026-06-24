@@ -353,6 +353,45 @@ Third-party source attributions (one block per shipped pack)
            (DoDI 5000.02), JCIDS, or law. Attribution to OUSD(R&E) is courtesy, not
            obligation; the DoD does not endorse this pack. See packs/dod-mq-bok/LICENSE.
 
+[pack: gao-cost]
+  Source : GAO Cost Estimating and Assessment Guide (GAO-20-195G), March 2020
+  Author : US Government Accountability Office (GAO)
+  Licence: Public Domain -- US Government work (17 U.S.C. 105); GAO reproduction notice
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. GAO's notice authorises reproduction/distribution of
+           the published product in its entirety. CAVEAT: the Guide quotes or embeds some
+           third-party material under its own rights (e.g. EIA-748, MIL-STD-881D, the Green
+           Book/GAO-14-704G, and ICEAA/AACEI/PMI standards plus ©MCR/©ICEAA worked-example
+           tables) -- this pack reproduces NONE of that text, only synthesized notes that name
+           them. Attribution to GAO is courtesy, not obligation; GAO does not endorse this
+           pack. See packs/gao-cost/LICENSE.
+
+[pack: gao-schedule]
+  Source : GAO Schedule Assessment Guide (GAO-16-89G), December 2015
+  Author : US Government Accountability Office (GAO)
+  Licence: Public Domain -- US Government work (17 U.S.C. 105); GAO reproduction notice
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. GAO's notice authorises reproduction/distribution of
+           the published product in its entirety. CAVEAT: two embedded figures/tables the
+           source attributes to third parties (the cyclic reliability process, adapted from
+           Keith D. Hornbacher; the recovery/acceleration techniques table attributed to GAO
+           and NDIA) are paraphrased as text, not reproduced; this pack reproduces no
+           third-party copyrighted images/material. Attribution to GAO is courtesy, not
+           obligation; GAO does not endorse this pack. See packs/gao-schedule/LICENSE.
+
+[pack: nasa-ceh]
+  Source : NASA Cost Estimating Handbook (CEH), Version 4.0 (February 2015)
+  Author : NASA
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. CAVEAT: the handbook NAMES and discusses third-party
+           and commercial cost tools (e.g. ACEIT, SEER-H/SEER-SEM, PRICE TruePlanning) and
+           cites external standards (OMB Circular A-94, GAO-09-3SP, MIL-HDBK-881C, DoDI 7041.3)
+           -- this pack only NAMES those tools and standards and synthesizes the guidance in
+           original words; it reproduces none of their proprietary or copyrighted text, and the
+           trademarks named remain the property of their owners. Attribution to NASA is
+           courtesy, not obligation; NASA does not endorse this pack. See packs/nasa-ceh/LICENSE.
+
 -----------------------------------------------------------------------------------
 The build pipeline uses the book-to-skill extraction engine (MIT License),
 © the book-to-skill authors. It is a build tool, not a packaged source.

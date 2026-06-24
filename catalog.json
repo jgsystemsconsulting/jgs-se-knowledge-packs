@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "repository": "jgs-se-knowledge-packs",
   "scope": "systems engineering",
-  "updated": "2026-06-23",
+  "updated": "2026-06-24",
   "packs": [
     {
       "slug": "nasa-pra",
@@ -354,6 +354,39 @@
       "license_tier": 1,
       "commercial_use": true,
       "chapters": 6,
+      "status": "live"
+    },
+    {
+      "slug": "gao-cost",
+      "title": "GAO Cost Estimating and Assessment Guide (GAO-20-195G)",
+      "publisher": "GAO",
+      "source_version": "GAO-20-195G (March 2020)",
+      "license": "Public Domain (US Government work)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 8,
+      "status": "live"
+    },
+    {
+      "slug": "gao-schedule",
+      "title": "GAO Schedule Assessment Guide (GAO-16-89G)",
+      "publisher": "US Government Accountability Office (GAO)",
+      "source_version": "GAO-16-89G (December 2015)",
+      "license": "Public Domain (US Government work, 17 U.S.C. 105); GAO reproduction notice",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 8,
+      "status": "live"
+    },
+    {
+      "slug": "nasa-ceh",
+      "title": "NASA Cost Estimating Handbook v4.0",
+      "publisher": "NASA",
+      "source_version": "v4.0 (February 2015)",
+      "license": "Public Domain (US Government work, 17 U.S.C. 105)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 7,
       "status": "live"
     }
   ],

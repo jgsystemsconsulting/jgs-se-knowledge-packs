@@ -1,0 +1,31 @@
+nasa-ceh pack — content licence
+===============================
+
+This pack is derived from:
+    NASA Cost Estimating Handbook (CEH) Version 4.0
+    NASA, Version 4.0 (February 2015)
+
+Source licence: Public Domain (US Government work, 17 U.S.C. 105)  (tier 1 — see ../../docs/SOURCE-VETTING.md)
+No source-material download link is published (see ../../docs/LICENSING.md).
+
+The NASA Cost Estimating Handbook is a publication of the National Aeronautics and Space
+Administration, prepared by officers and employees of the United States Government as part
+of their official duties. Under 17 U.S.C. 105, a work of the U.S. Government is NOT subject
+to copyright protection in the United States and is in the public domain: anyone may
+reproduce, transform, and redistribute it for any purpose, including commercially, without
+permission and without royalty.
+
+Attribution to NASA is provided as a courtesy (see the repository NOTICE), not as a legal
+obligation. NASA does not endorse this pack, its authors, or any derived analysis, and
+nothing here should be read as an official NASA position.
+
+THIRD-PARTY / TRADEMARK CAVEAT: the handbook names and discusses commercial cost-estimating
+tools and databases (for example ACEIT, SEER-H, SEER-SEM, and PRICE TruePlanning) and cites
+external standards and guides (OMB Circular A-94, the GAO Cost Estimating and Assessment
+Guide GAO-09-3SP, MIL-HDBK-881C, and DoD Instruction 7041.3). Those tools, trademarks, and
+standards are the property of their respective owners and are NOT placed in the public
+domain by the handbook. This pack only NAMES them and synthesizes NASA's guidance about them
+in original words; it reproduces none of their proprietary, trademarked, or copyrighted text.
+
+NOTE: This file governs the CONTENT of this pack. The repository tooling is licensed
+separately under MIT (see ../../LICENSE).
