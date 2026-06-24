@@ -1,0 +1,55 @@
+faa-ams-vv pack — content licence
+==================================
+
+This pack is derived from:
+    FAA AMS Lifecycle Verification and Validation Guidelines
+    Federal Aviation Administration (FAA), Version 3.0 (April 2017)
+
+Source licence: Public Domain (US Government work)  (tier 1 — see ../../docs/SOURCE-VETTING.md)
+No source-material download link is published (see ../../docs/LICENSING.md).
+
+--------------------------------------------------------------------------------
+SOURCE TERMS (United States Government work — public domain)
+--------------------------------------------------------------------------------
+
+The source document is a work of the United States Government, prepared by
+officers or employees of the Federal Aviation Administration as part of their
+official duties. Under 17 U.S.C. § 105, copyright protection under U.S. law is
+not available for any work of the United States Government. The work is therefore
+in the public domain in the United States.
+
+This means:
+  • Commercial use is permitted.
+  • No attribution is legally required (attribution to the FAA is a courtesy).
+  • No non-commercial restriction applies.
+  • No share-alike obligation applies.
+  • There is no trademark or licence text imposed by the source on reuse of the
+    work's content.
+
+Attribution to the FAA is provided as a courtesy. The FAA does not endorse this
+pack, and reference to the FAA does not imply endorsement.
+
+--------------------------------------------------------------------------------
+OBLIGATIONS CARRIED FORWARD / CAVEATS
+--------------------------------------------------------------------------------
+
+1. CMMI definitions (third-party copyright). The source guideline draws its
+   formal definitions of "verification" and "validation" from CMMI for
+   Development, Version 1.2 (Carnegie Mellon Software Engineering Institute,
+   2006), a separately copyrighted process model. This pack PARAPHRASES those
+   concepts throughout and reproduces NO verbatim CMMI text. Any CMMI wording
+   should be cited to the SEI, not copied from this pack.
+
+2. Policy-snapshot caveat. The source's V&V phase tables (Tables 1–6) reflect
+   FAA AMS policy as of April 2017 and are expressly superseded by current FAA
+   phase guidelines and templates. Reproduced table content (criteria,
+   responsible offices, form/order numbers, organizational names) is illustrative
+   of the model, not live regulatory authority.
+
+3. No third-party material is reproduced. This pack contains only synthesized,
+   paraphrased reference notes — no source figures, tables, or extended verbatim
+   passages.
+
+--------------------------------------------------------------------------------
+NOTE: This licence governs the CONTENT of this pack and is independent of the
+repository's MIT licence (which covers tooling only).

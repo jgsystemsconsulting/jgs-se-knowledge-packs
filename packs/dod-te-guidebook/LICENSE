@@ -1,0 +1,34 @@
+dod-te-guidebook pack — content licence
+========================================
+
+This pack is derived from:
+    Test and Evaluation Enterprise Guidebook
+    US Department of Defense, Office of the Under Secretary of Defense for
+    Research and Engineering (OUSD R&E), August 2022
+
+Source licence: Public Domain (US Government work, 17 U.S.C. 105); Distribution
+Statement A — Approved for public release; distribution is unlimited.
+(tier 1 — see ../../docs/SOURCE-VETTING.md)
+No source-material download link is published (see ../../docs/LICENSING.md).
+
+This source is a work of the United States Government, prepared by the US
+Department of Defense, and is therefore NOT subject to copyright protection in the
+United States (17 U.S.C. 105). It carries Distribution Statement A (approved for
+public release; distribution unlimited). It is in the public domain: anyone may
+reproduce, transform, and redistribute it for any purpose, including commercially,
+without permission.
+
+No licence conditions are carried forward into this pack: there is no attribution,
+non-commercial, or share-alike obligation, because the source carries none.
+Attribution to the US Department of Defense (OUSD R&E) is provided as a courtesy
+(see the repository NOTICE), not a legal obligation. The DoD does not endorse this
+pack or its authors.
+
+This pack reproduces no long verbatim passages of the source; its content is
+synthesized, transformed reference notes (verified mechanically by
+tools/check_overlap.py). The source guidebook is GUIDANCE, not policy — the binding
+test-and-evaluation requirements live in DoDI 5000.89 and the related DoDI
+5000-series issuances and Title 10 statutes (e.g., 10 U.S.C. §§ 4171, 4172).
+
+NOTE: This file governs the CONTENT of this pack. The repository tooling is licensed
+separately under MIT (see ../../LICENSE).

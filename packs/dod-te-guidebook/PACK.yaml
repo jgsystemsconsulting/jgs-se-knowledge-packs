@@ -1,0 +1,29 @@
+slug: dod-te-guidebook
+title: "DoD Test & Evaluation Enterprise Guidebook (Aug 2022)"
+publisher: "US Department of Defense, Office of the Under Secretary of Defense for Research and Engineering (OUSD R&E)"
+source_version: "August 2022"
+license: "Public Domain (US Government work, 17 U.S.C. 105); Distribution A"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "book-to-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 0
+  chapters: 8
+  built_on: "2026-06-24"
+notes: >
+  US Government work -- public domain (17 U.S.C. 105); Distribution Statement A (approved
+  for public release, distribution unlimited). No copyright; free to reproduce, transform,
+  and redistribute (including commercially). No attribution, non-commercial, or share-alike
+  obligation is carried forward -- attribution to the US DoD (OUSD R&E) is provided as a
+  courtesy in NOTICE, not as a legal requirement, and the DoD does not endorse this pack.
+  Content is synthesized/transformed reference notes; no long verbatim passages reproduced
+  (verified by check_overlap.py). No source-material download link is published (see
+  docs/LICENSING.md). Source page count is not recorded by the extractor (pdftotext
+  reported 0 pages); the source is identified textually by title + publisher + version.
+  Caveat: this is GUIDANCE, not policy -- it points outward to DoDI 5000.89 and the
+  DoDI 5000-series for binding detail, and is thin on detailed test statistics/DOE, the
+  cross-cutting Focus Area chapters, the Acquisition of Services pathway, and CUI/CAC-gated
+  companion guides.
+change_indication: "reconstructed as synthesized reference notes"

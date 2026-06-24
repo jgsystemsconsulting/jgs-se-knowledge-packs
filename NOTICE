@@ -392,6 +392,50 @@ Third-party source attributions (one block per shipped pack)
            trademarks named remain the property of their owners. Attribution to NASA is
            courtesy, not obligation; NASA does not endorse this pack. See packs/nasa-ceh/LICENSE.
 
+[pack: nasa-systems-modeling]
+  Source : NASA Systems Modeling Handbook for Systems Engineering (NASA-HDBK-1009A),
+           Revision A (2025-03-12)
+  Author : NASA, Office of the NASA Chief Engineer
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright (Approved for Public Release / Distribution
+           Unlimited). CAVEAT: the handbook illustrates with OMG SysML (Systems Modeling
+           Language, v1.7 / ISO/IEC 19514), which remains the COPYRIGHT of the Object
+           Management Group and is NOT public domain -- this pack reproduces NONE of the
+           OMG SysML specification, only synthesized notes that NAME SysML diagram types and
+           describe in original words how NASA's metamodel maps SE elements onto them. The
+           source's trade names and trademarks (e.g. MagicDraw, CATIA No Magic / Dassault
+           Systemes) are used for identification only and are endorsed by neither NASA nor
+           this pack. Attribution to NASA is courtesy, not obligation; NASA does not
+           endorse this pack. See packs/nasa-systems-modeling/LICENSE.
+
+[pack: dod-te-guidebook]
+  Source : DoD Test & Evaluation Enterprise Guidebook (OUSD R&E), August 2022
+  Author : US Department of Defense, Office of the Under Secretary of Defense for Research and Engineering (OUSD R&E)
+  Licence: Public Domain -- US Government work (17 U.S.C. 105); Distribution A
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright (Distribution Statement A, approved for public
+           release). This is GUIDANCE, not policy -- it points outward to DoDI 5000.89 and
+           the DoDI 5000-series for binding detail, which this pack names but does not
+           reproduce. Statutory anchors (10 U.S.C. 4171/4172) are cited, not reprinted.
+           Attribution to the US DoD (OUSD R&E) is courtesy, not obligation; the DoD does
+           not endorse this pack. See packs/dod-te-guidebook/LICENSE.
+
+[pack: faa-ams-vv]
+  Source : FAA AMS Lifecycle V&V Guidelines (Verification and Validation), Version 3.0 (April 2017)
+  Author : US Federal Aviation Administration (FAA)
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. CAVEAT: the source guideline draws its core
+           verification/validation DEFINITIONS from CMMI for Development v1.2 (Carnegie
+           Mellon SEI) -- a separately copyrighted model -- which this pack PARAPHRASES
+           throughout and never reproduces verbatim; CMMI text should be cited to SEI, not
+           copied. The source's V&V phase tables (Tables 1-6) are policy snapshots as of
+           April 2017 and may be superseded by current FAA phase guidance; treat reproduced
+           table content as illustrative, not live authority. Attribution to the FAA is
+           courtesy, not obligation; the FAA does not endorse this pack.
+           See packs/faa-ams-vv/LICENSE.
+
 -----------------------------------------------------------------------------------
 The build pipeline uses the book-to-skill extraction engine (MIT License),
 © the book-to-skill authors. It is a build tool, not a packaged source.

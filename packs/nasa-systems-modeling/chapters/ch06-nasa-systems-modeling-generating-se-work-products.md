@@ -1,0 +1,64 @@
+# Chapter 6 — Generating Diagrams and Tables for SE Work Products
+
+## Core Idea
+
+Once the system model has been built and populated, the payoff is harvesting it. This chapter of NASA-HDBK-1009A (Section 9 of the handbook) lays out which SysML diagrams and tables you pull from a populated model to stand up the NPR 7123.1 systems engineering work products. The premise is the same one that runs through the whole handbook: the model is the source, and diagrams and tables are views extracted from it to visualize, communicate, and hand off data, information, and knowledge to stakeholders, to feed technical reviews, and to support the management decisions that gate movement into the next life-cycle phase.
+
+The scope here is bounded to the same four in-scope SE processes the handbook commits to: Stakeholder Expectations Definition, Technical Requirements Definition, Verification, and Validation. Across those, Section 9 enumerates the views for a specific set of work products — Stakeholder Identification and Expectations Definition, the Concept of Operations (ConOps), Measures of Effectiveness (MOE), Technical Requirements, Measures of Performance (MOP), Technical Performance Measures (TPM), and the V&V requirements, planning, results, and reports. Section 8 of the handbook supplies worked examples for a subset of these views, and the chapter cross-references those examples by section number throughout.
+
+A practical point underlies everything: extraction is mechanical and tool-flexible. Views can be pulled by hand or through third-party tools; they can be dropped into report templates, exported to webpages or other model-viewing tools, or browsed directly inside the modeling tool so a reviewer navigates between diagrams and tables without leaving the model. This is consistent with the handbook's tool-agnostic posture — the views are tied to NPR 7123.1 work products, not to any particular SysML editor. The baseline under discussion is Revision A.
+
+## Frameworks Introduced (exact source names, when/how)
+
+Section 9 is not where new frameworks get introduced; it is where the earlier ones get cashed out into concrete deliverables. The named references it leans on are:
+
+- **NPR 7123.1 (NASA Systems Engineering Processes and Requirements).** The governing document whose work products this chapter is generating views for. Every definition of MOE, MOP, and TPM in the chapter is footnoted to **NPR 7123.1D, Appendix A (Definitions)**, and the work-product list keys back to handbook Section 4.1.1.
+- **SysML (Systems Modeling Language), OMG.** The illustrative language for every diagram and table called out — block definition diagrams (bdd), internal block diagrams (ibd), requirements diagrams and tables, activity diagrams, state machines, sequence diagrams, and use case diagrams.
+- **Handbook Section 8 (examples).** The companion catalog of worked diagram and table examples. Section 9's tables route each view to its Section 8 example via a "Section 8 Reference" column (e.g., Section 8.1 for stakeholder views, Section 8.13 for the MOP/TPM structural bdd).
+- **Appendix F (sample ConOps document template).** For the ConOps product specifically, the chapter points to a populated sample ConOps template assembled from MBSE diagrams and tables, and the ConOps table carries a second cross-reference column mapping each view to its place in that Appendix F template.
+- **NASA MBSE Community of Practice.** For TPM calculation techniques, the chapter directs readers to the Agency's MBSE Community of Practice website (searching the TPM topic) rather than prescribing a calculation method in the handbook itself.
+
+## Key Concepts
+
+**A work product is realized as a named set of views.** The organizing move of the chapter is to take each in-scope work product and publish the slate of diagrams and tables that, together, constitute it. Each subsection pairs a figure (the visual collection of views for that product) with a table (the itemized list of those views plus their Section 8 example references). The figure shows the set; the table is the bill of materials.
+
+**Stakeholder Identification and Expectations.** The view set includes a Stakeholder Identification bdd, a Stakeholders Description Table, a Stakeholder Identification and Expectation Statements bdd, a Stakeholder Expectation Statement and Traceability Table, and requirements diagrams tracing stakeholder expectations to needs, goals, and objectives (NGOs). Section 8.1 holds the examples.
+
+**ConOps is the richest set, and it is explicitly tailorable.** The ConOps view list is the longest in the chapter and spans both structure and behavior: System Context bdd and ibd, requirements diagrams and tables of NGOs, a bdd of mission-phase and activity decomposition, activity diagrams of mission phases, system use cases, tables of actors traced to activities and use cases, mission-phase activity diagrams supporting use cases, tables of activities with allocated elements, a state machine of system modes with a modes-and-descriptions table, functional and structural decomposition bdds, interface ibds and tables, subsystem state machines and sequence diagrams, and bdds of blocks with values related to MOEs and MOPs. The handbook is explicit that the actual selection depends on how far along a program or project's ConOps development is — for one review the System Context bdd and ibd may suffice, while a more mature effort may add subsystem-level bdds. The ConOps table double-references each view to both Section 8 and the Appendix F template.
+
+**MOE — a qualitative satisfaction measure.** Per the handbook, an MOE is the measure by which a stakeholder's expectations are judged for satisfaction with the delivered product or system, and it is typically qualitative. Its view set is requirements-centric: a requirements diagram of MOEs traced to objectives, a requirements table with objectives traced to MOEs, a requirements table of MOEs with refined objectives, and a Refines matrix of objectives to MOEs (examples at Section 8.12).
+
+**MOP — a quantitative measure with a specific metamodel encoding.** An MOP is a quantitative measure whose attainment by the design solution helps ensure the corresponding MOE is satisfied. The chapter exposes a precise modeling convention here: in the metamodel the MOP is captured as a requirement element holding the quantitative target, the "met" part of the definition is realized by a satisfies relationship between model elements (such as the TPM value property), and the MOP carries a trace up to its MOE. Its view set includes a bdd of structural decomposition with MOP and TPM identification, a table of MOPs with TPMs and traceability, and a requirements diagram of traceability among MOEs, MOPs, and requirements (Section 8.13 and 8.12).
+
+**TPM — the monitored subset of MOPs.** A TPM is a performance measure tracked over time by comparing the current actual achievement of a parameter against what was anticipated at that point and at future dates; TPMs are typically drawn from the defined set of MOPs. The chapter notes that tools can compute TPM values from inserted data, and points to the MBSE Community of Practice for techniques. The TPM view set reuses the MOP structural bdd and MOP/TPM traceability table and adds a dedicated TPM Identification Table.
+
+**V&V — one figure, two views (Verification and Validation).** The chapter treats Verification and Validation together because many of the same diagram and table types serve both. The V&V table is structured with separate Verification and Validation columns marking which view belongs to which process, and some rows are marked for both. The catalog spans requirements diagrams and tables of verification (and validation) requirements and statements, traceability tables, a Verification Requirements Matrix / Compliance Spreadsheet (VCS) and the parallel Validation matrix, a Requirements Verification Matrix, bdds and tables of verification and validation events, activity diagrams for event sequencing and for individual events, use case diagrams and tables of V&V cases, activity diagrams and step tables for the V&V approach, and bdds/ibds plus tables for V&V artifacts, configuration decomposition, and configuration interfaces. The handbook adds a modeler's note: where a view is shared across both processes, the modeler may choose to split it into separate per-process diagrams and tables as the project needs.
+
+## Mental Models
+
+**The model is a quarry; each work product is a cut order.** The earlier chapters establish the model as a single reservoir; this chapter is where you place orders against it. A work product is not authored from scratch — it is a named cut list of views you extract. When someone asks for "the ConOps," what they are really asking for is that product's specific slate of bdds, ibds, activity diagrams, state machines, and tables, assembled from the one underlying model.
+
+**Read each subsection as figure-plus-table: the picture and the parts list.** Every product in the chapter comes as a paired figure and table. Train yourself to read the figure as "here is the family of views" and the table as "here is each view by name, and here is where to find a worked example." The Section 8 reference column is the index from this chapter into the example catalog.
+
+**MOE → MOP → TPM is a refinement chain, and the views mirror it.** Hold the three measures as a descending ladder: MOE is the qualitative judgment of stakeholder satisfaction, MOP is the quantitative target whose satisfaction props up the MOE, and TPM is the time-tracked subset of MOPs you actually monitor. The traceability views are designed to make that chain visible — the MOP requirements element traces to its MOE, the satisfies relationship records "met," and the TPM identification table marks which MOPs are under active tracking.
+
+**Tailoring is a feature, not a deviation.** The ConOps note generalizes: the chapter publishes the full menu of candidate views, but a program or project selects the subset that fits its maturity and the review at hand. Producing every listed view is not the goal; producing the right subset to communicate and to clear the gate is. The same modeler's discretion shows up in V&V, where shared views can be split per process when that serves the project.
+
+## Key Takeaways
+
+- Section 9 of NASA-HDBK-1009A maps each in-scope NPR 7123.1 work product to the specific SysML diagrams and tables you extract from a populated model to realize it.
+- The four processes in scope are Stakeholder Expectations Definition, Technical Requirements Definition, Verification, and Validation; the products span stakeholder identification/expectations, ConOps, MOE, Technical Requirements, MOP, TPM, and V&V requirements/planning/results/reports.
+- Views are extracted manually or via third-party tools and can be placed in report templates, exported to webpages/viewers, or browsed in-tool — extraction is tool-flexible, consistent with the handbook's tool-agnostic stance and Revision A baseline.
+- Each subsection pairs a figure (the view family) with a table (the itemized list plus Section 8 example references); ConOps additionally cross-references the Appendix F sample template.
+- MOE (qualitative satisfaction), MOP (quantitative target that helps ensure the MOE), and TPM (time-tracked subset of MOPs) form a refinement chain; the MOP is encoded as a requirement element with a satisfies relationship and a trace up to its MOE.
+- The V&V table uses separate Verification and Validation columns, with some views serving both; modelers may split shared views per process as the project requires.
+- View selection is tailored to project maturity and the specific review — the chapter publishes the menu, not a mandatory production list.
+
+## Connects To
+
+- **NPR 7123.1D, Appendix A** — the source of the MOE, MOP, and TPM definitions and the governing work-product set these views realize; the handbook supports it rather than supersedes it.
+- **Handbook Section 8** — the worked-example catalog every Section 9 table indexes into via its Section 8 reference column.
+- **Appendix F** — the sample ConOps document template populated with MBSE diagrams and tables, cross-referenced by the ConOps view list.
+- **The Section 7 metamodel** — the tool-agnostic core that defines how MOP requirement elements, satisfies relationships, and traces are encoded so these views can be generated; the basis for the MOE/MOP/TPM traceability diagrams.
+- **NASA MBSE Community of Practice** — the Agency resource pointed to for TPM calculation techniques rather than prescribing them in the handbook.
+- **Upstream chapters** — model planning, model setup, the metamodel, and model building with SysML, all of which produce the populated model this chapter draws views from.

@@ -1,0 +1,68 @@
+# Chapter 4 — Building the Model: Stakeholders, Requirements, and Structure
+
+## Core Idea
+
+Section 8 of NASA-HDBK-1009A is where the handbook stops describing the modeling apparatus and starts showing it in action. It walks through a worked set of SysML diagrams and tables — each one keyed back to the metamodel laid out earlier in section 7 (Figures 7-1 and 7-2) — and demonstrates how a modeler turns abstract metamodel relationships into concrete diagrams that support real SE work. The defining feature of this section is that **order does not matter**: the diagrams and tables can be produced in whatever sequence the program or project needs, because the systems engineering work can be entered at different points on the NASA SE Engine. The model is a connected web, not a linear pipeline; section 8 just happens to present the examples starting from stakeholders, moving through context and behavior, and ending at requirements traceability and performance measures.
+
+Every example in this section pairs a *metamodel fragment* (the relevant slice of section 7's Figure 7-1) with a *sample diagram or table* built on that fragment. That pairing is the pedagogical engine of the whole section: it keeps showing you the rule (the metamodel) right beside the instance (the SysML view), so you can see exactly which elements and relationships each diagram is allowed to use. Section 9 then connects these same diagrams and tables to the particular NASA SE Work Products that cover Stakeholder Expectations Definition, the Requirements, and V&V.
+
+A caveat anchors how to read all of it: this is **tool-agnostic SysML tied to NPR 7123.1**, and the document is the current **Revision A (2025)**. The sample diagrams happen to be rendered in CATIA No Magic (a Dassault Systèmes product), and the SysML cited is OMG's version 1.7 — but those are illustration choices. The metamodel underneath is what carries the meaning, and the SE activities being supported trace back to NPR 7123.1 and NASA/SP-2016-6105.
+
+## Frameworks Introduced (exact source names, when/how)
+
+- **The section 7 metamodel (Figure 7-1, Figure 7-2).** Every diagram in section 8 is introduced as a realization of a "metamodel portion" pulled from section 7. The metamodel defines which elements exist and how they may relate; the section 8 diagrams are sample instances. This is the connective tissue of the chapter — each subsection explicitly names the metamodel fragment it draws from.
+- **SysML (Systems Modeling Language), OMG version 1.7.** The illustrative language for every sample diagram. The handbook cites the OMG SysML v1.7 specification directly (2024) as the source for tabular requirement representations and for the diagram constructs used throughout.
+- **The NASA SE Engine, NPR 7123.1, and NASA/SP-2016-6105.** The governing process context. The opening of section 8 reminds the reader that SE activities can begin at various points on the SE Engine and points to NPR 7123.1 and the NASA SE Handbook for the process detail behind the modeling examples.
+- **CATIA No Magic (Dassault Systèmes).** Named in a footnote as the modeling tool used to draw the section's diagrams and tables. It is identified as an implementation detail, consistent with the handbook's tool-agnostic stance.
+- **Appendix E (interface metamodel) and Appendix F (ConOps Template).** Cross-referenced as the deeper sources for interface modeling details and for example tables capturing port and interface information.
+
+## Key Concepts
+
+**Stakeholders and their expectations (section 8.1).** The model starts by capturing stakeholders as SysML actor elements, with their expectation statements attached through a trace relationship back to each stakeholder. A Stakeholder Description Table lists the stakeholders alongside descriptions. A second table form pushes further into traceability: it shows Needs, Goals, and Objectives tracing up to the Stakeholder Expectation Statements. The handbook adds an important nuance here — in the metamodel the trace from stakeholders to Needs is drawn simply, but in practice stakeholders can influence requirements at any level, not just at the Needs tier.
+
+**Needs, Goals, and Objectives as a requirements diagram (section 8.2).** The NGOs get their own SysML requirements diagram (req), showing Needs at the top with derived Goals and, beneath them, derived Objectives. This is the first place the handbook uses the *derive* relationship to express flow-down, a pattern that recurs all the way down to system requirements.
+
+**System context — two complementary views (sections 8.3 and 8.4).** Context establishes the scope and boundary of the system being modeled. It names the system of interest, the users, and the external systems that interface with it. The handbook deliberately offers two diagram forms for the same context: a block definition diagram (bdd) that catalogs the context blocks, and an internal block diagram (ibd) that shows how those blocks actually connect — the interfaces between the system of interest, its users, the external systems, and the physical environment, plus the items that flow across those interfaces. A key flexibility note: context can be modeled at any level — mission, instrument, subsystem, or payload — not only at the top.
+
+**Behavior — use cases and activities (sections 8.5 and 8.6).** A use case diagram (uc) names the system's functions and the interactions between those functions and the actors or elements involved. Actors can be human roles, external hardware, or other subjects, and the `<<include>>` relationship marks when one use case is a subset of another. An activity diagram (act) then drills into a single use case — the worked example expands "Execute Mission Behavior 1" — using swim lanes to *allocate* activities to structure elements (user activities to the user, system functions to the system of interest, external activities to the external system). The handbook flags a precise SysML semantic: a colon in an action's name signals that the action is typed by a defined activity, while an action without the colon exists only locally within that one diagram.
+
+**Structure — decomposition and interconnection (sections 8.7 and 8.8).** Structural decomposition is shown in a bdd that breaks the system into its subsystems and components. The matching ibd then shows the interfaces *between* those structure elements — for instance, the connections between two subsystems of the example system. As with context, the ibd uses ports, and the modeler may show or hide port types for visual clarity; port-type detail can also be offloaded into supporting tables (the ConOps Template in Appendix F is cited for examples).
+
+**Functional decomposition via a bdd (section 8.9).** The same activities that appeared in the activity diagram can be re-expressed as a block definition diagram to show *functional* decomposition. This is a deliberate demonstration that one set of model elements (the activities) can be viewed through more than one diagram type depending on what the modeler wants to communicate.
+
+**System requirements and their flow-down (sections 8.10 and 8.11).** A system requirements diagram (req) shows the requirements decomposition and flow-down using the *derived requirement* relationship. The same requirements are then presented as a Requirements Table — a tabular view of the requirements together with their properties and relationships, including traceability. The handbook explicitly grounds the tabular representation in the OMG SysML v1.7 specification.
+
+**Measures — MOEs, MOPs, and TPMs (sections 8.12 and 8.13).** The final examples wire performance measurement into the traceability web. A requirements diagram traces Measures of Effectiveness (MOEs) and Measures of Performance (MOPs) to objectives and system requirements, and the same information is summarized in a table. A structural decomposition bdd then identifies Technical Performance Measures (TPMs) and traces them to MOPs, with a companion table listing each MOP, its traced TPMs, and the structure element that owns the TPM. The handbook is careful about the relationships here: MOE-to-MOP is not one-to-one; MOPs and MOEs can occur at different levels of the design; MOPs can derive from any requirement, MOE, or higher-level MOP; and MOPs refine requirements much as MOEs refine objectives. A TPM is one or more value properties, possibly at multiple levels, and may be a parameter defined directly on a block or one computed from other values — computed values being marked as derived with a slash (the example uses Predicted Duration and Predicted Mass on the system of interest).
+
+## Mental Models
+
+**Every diagram is "metamodel fragment + sample instance."** The single most reusable pattern in section 8 is that each subsection shows a slice of the section 7 metamodel beside a concrete SysML diagram built from it. Hold this as the reading lens: when you see a sample diagram, ask which metamodel elements and relationships it is permitted to use, because that fragment is always shown right next to it. The metamodel is the grammar; the diagram is one sentence.
+
+**The model is enterable from any point, not walked in order.** Because SE work can start at different places on the NASA SE Engine, the diagrams can be built in any sequence. Don't picture stakeholders → context → behavior → structure → requirements as a mandatory waterfall. Picture a connected model where you can begin wherever the project's current activity demands and fill in the rest as the work proceeds.
+
+**One element, many views.** Section 8 repeatedly shows the same underlying elements rendered through different diagram types — context as both a bdd and an ibd, activities as both an activity diagram and a functional-decomposition bdd, requirements as both a req diagram and a table. The mental model is that the diagram type is a *choice of emphasis* (cataloging vs. interconnection, flow vs. hierarchy, graphical vs. tabular), not a different truth. The model holds one set of facts; the views select what to foreground.
+
+**Derive and trace are the connective verbs.** Flow-down (Needs to Goals to Objectives to system requirements) runs on the derive relationship; the linkage of stakeholders to needs, and of MOEs/MOPs/TPMs to requirements and structure, runs on trace. Internalize that the value of the model lives in these relationships — they are what let a downstream change ripple, and what let the diagrams be assembled into the traceability story section 9 needs for SE work products.
+
+**Ports are a dial, not a mandate.** Across the context ibd and the structure ibd, the handbook keeps repeating that the modeler can display port types or omit them depending on the diagram's purpose, and can move detail into supporting tables. Treat visual fidelity as adjustable to audience: the model is precise underneath even when a given view is simplified for readability.
+
+## Key Takeaways
+
+- Section 8 demonstrates the modeling apparatus by pairing each SysML diagram or table with the section 7 metamodel fragment it realizes; the diagrams can be built in any order because SE work can enter the NASA SE Engine at multiple points.
+- Stakeholders are modeled as actors with expectation statements traced to them; Needs, Goals, and Objectives then trace up to those expectation statements, and stakeholders can influence requirements at any level.
+- System context is captured two ways — a bdd for the context blocks and an ibd for their interfaces and item flows — and can be set at mission, instrument, subsystem, or payload level.
+- Behavior is modeled with use case diagrams (functions and actor interactions, with `<<include>>` for subsets) and activity diagrams that use swim lanes to allocate activities to structure elements; a colon in an action name signals activity typing.
+- Structure is shown as a decomposition bdd plus an interconnection ibd, and the same activities can be re-rendered as a functional-decomposition bdd — one set of elements, multiple views.
+- System requirements flow down via the derived-requirement relationship and are presented both as a req diagram and as a Requirements Table grounded in OMG SysML v1.7.
+- MOEs, MOPs, and TPMs are woven into the traceability web; MOE-to-MOP is not one-to-one, measures can sit at multiple design levels, and computed TPM values are marked derived with a slash.
+- This is tool-agnostic SysML tied to NPR 7123.1; CATIA No Magic and SysML v1.7 are illustrations, and the baseline is Revision A (2025).
+
+## Connects To
+
+- **Section 7 (the metamodel)** — the upstream grammar every section 8 diagram instantiates; each subsection names the specific Figure 7-1 fragment it draws from.
+- **Section 9 (SE Work Products)** — the downstream consumer; it ties these stakeholder, requirements, and V&V diagrams and tables to the NASA SE Work Products they support.
+- **NPR 7123.1 and NASA/SP-2016-6105** — the governing SE process context; the section opens by directing readers there for the NASA SE Engine and processes behind the modeling examples.
+- **Appendix E (interface metamodel)** — the deeper reference for the interface and port modeling shown in the context ibd (8.4) and the structure ibd (8.8).
+- **Appendix F (ConOps Template)** — cited for example tables that capture port and interface detail outside the diagrams themselves (section 3.3, Interfaces).
+- **OMG SysML v1.7 specification (2024)** — the cited basis for the tabular requirement representation in the Requirements Table (8.11).
+- **Chapter 1 (MBSE overview)** — establishes the language/methodology/framework decomposition and the tool-agnostic stance that this chapter operationalizes through worked diagrams.

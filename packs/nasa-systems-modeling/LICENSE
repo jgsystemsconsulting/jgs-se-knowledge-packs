@@ -1,0 +1,39 @@
+nasa-systems-modeling pack — content licence
+=============================================
+
+This pack is derived from:
+    NASA Systems Modeling Handbook for Systems Engineering
+    NASA-HDBK-1009A, Revision A
+    Office of the NASA Chief Engineer, NASA — Approved 2025-03-12
+
+Source licence: Public Domain (US Government work, 17 U.S.C. 105)  (tier 1 — see ../../docs/SOURCE-VETTING.md)
+No source-material download link is published (see ../../docs/LICENSING.md).
+
+This source is a NASA Technical Handbook, a work of the United States Government, marked
+"APPROVED FOR PUBLIC RELEASE — DISTRIBUTION IS UNLIMITED." As a US Government work it is
+NOT subject to copyright protection in the United States (17 U.S.C. 105) and is in the
+public domain: anyone may reproduce, transform, and redistribute it for any purpose,
+including commercially, without permission. Attribution to NASA is provided as a courtesy
+(see the repository NOTICE), not a legal obligation. NASA does not endorse this pack or
+its authors.
+
+TRADEMARK / TRADE-NAME NOTICE (reproduced from the source). The handbook states: "Trade
+names and trademarks are used in this NASA Technical Handbook for identification only.
+Their usage does not constitute an official endorsement, either expressed or implied, by
+NASA." This pack carries that same notice. Tools named in the source — MagicDraw (the
+companion-model tool) and CATIA No Magic, a Dassault Systèmes product (the diagram tool) —
+are identified for illustration only and are NOT endorsed by NASA or by this pack. The
+modeling method is explicitly tool-agnostic.
+
+THIRD-PARTY MATERIAL CAVEAT. The handbook illustrates its metamodel using the OMG Systems
+Modeling Language (SysML), Version 1.7 (also published as ISO/IEC 19514), which remains the
+COPYRIGHT of the Object Management Group (OMG) and is NOT in the public domain. That
+third-party material is not reproduced here. This pack contains only synthesized,
+transformed reference notes that NAME the SysML diagram types, pillars, and the bracketed
+`[type]` convention, and describe in original words how NASA's NPR 7123.1-derived metamodel
+maps systems-engineering elements onto SysML. The OMG SysML specification text, figures,
+and tables are NOT reproduced. SysML® and OMG SysML® are trademarks of the Object
+Management Group.
+
+NOTE: This file governs the CONTENT of this pack. The repository tooling is licensed
+separately under MIT (see ../../LICENSE).

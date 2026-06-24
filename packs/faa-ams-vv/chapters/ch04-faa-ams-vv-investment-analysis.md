@@ -1,0 +1,51 @@
+# Chapter 4: V&V in Investment Analysis — Initial and Final
+
+## Core Idea
+Investment Analysis (IA) is where the FAA decides *what* to build and commits the resources to build it, and the AMS V&V guidelines treat it as a high-leverage place to apply verification and validation. The process is deliberately tailorable: each tailoring decision needs sign-off from either the Acquisition Executive or the IDA (Investment Decision Authority), and it is captured in the governing plan and the record of decision for whichever IA stage applies. IA runs in two stages — **Initial Investment Analysis**, which evaluates alternatives and recommends realistic options to the IDA, and **Final Investment Analysis**, which develops the detailed plans and final requirements for the chosen option. In both stages the dominant V&V emphasis is **validation** of the analysis work products: confirming the right alternative is being carried forward (Initial) and then confirming the baselined program artifacts are sound enough to mitigate risk and support implementation (Final).
+
+## Frameworks Introduced
+- **Initial Investment Analysis (AMS §3.3.1)** — evaluates candidate solutions against a validated mission need and presents the IDA with options that meet FAA strategic and performance goals while delivering best overall value to the FAA and its customers.
+  - When/how: applied at the **Initial Investment Decision** point. Its principal outputs are the initial Program Requirements Document (PRD), initial Implementation Strategy and Planning Document (ISPD), initial Business Case (BC), the preliminary Test and Evaluation Master Plan (TEMP), updated Enterprise Architecture (EA) products and amendments, and the plan for Final Investment Analysis. V&V here primarily *validates* those products so the best alternative is selected.
+- **Final Investment Analysis (AMS §3.3.2)** — develops detailed plans and final requirements for the selected investment opportunity and produces the program baseline.
+  - When/how: applied at the **Final Investment Decision** point. Its principal outputs are the program baseline work products: the final PRD and final BC; the ISPD; the Acquisition Program Baseline (APB); the Program Management Plan (PMP); the initial TEMP; the updated EA products plus their amendments; the Screening Information Request (SIR); and a tailored checklist for the In-Service Review (ISR). V&V here primarily *validates* those products to reduce risk and enable implementation of the best alternative.
+- **The Table 3 / Table 4 V&V specification pattern** — each IA stage is defined by a table that fixes four things: (1) the governing decision point, (2) the minimum set of work products that must be verified and validated at that point, (3) the specific criteria each product is V&V'd against, and (4) the stakeholder accountable for the V&V activity.
+  - When/how: read the table for the stage you are in, find your work product, and you have its V&V criteria and its responsible party already specified — no improvisation required.
+
+## Key Concepts
+- **Two-stage gating.** IA is not a single gate. Initial IA answers "which alternative?" and Final IA answers "is the baseline ready to commit?". The work products mature across the two stages — the *initial* PRD/BC/ISPD/TEMP of the first stage become the *final* PRD/BC/ISPD and *initial* TEMP of the second, plus the APB, PMP, ISR checklist, and SIR that only appear at Final.
+- **Verification vs. validation criteria are listed separately for every product.** In both tables each work product carries its own **Validation** criteria (the substantive inputs it must be consistent with — EA, Solution Concept of Operations, Functional Analyses, the relevant PRD, assessment results, NAS Requirements Documents) and its own **Verification** criteria (the governing templates and policy it must conform to — a document template, the System Engineering Manual, AMS Policy, the Test and Evaluation Handbook, ISGSA, etc.). Validation checks *against the right content*; verification checks *against the right form and policy*.
+- **Prior V&V results feed forward as criteria.** A maturing product is validated partly against the documented V&V results of its earlier version. The final PRD lists the initial PRD's V&V results as a validation input; the final BC lists the initial BC's V&V results; the initial TEMP lists the preliminary TEMP's V&V results; the final ISPD lists the initial ISPD's V&V results. V&V is treated as a cumulative chain, not an isolated check at each gate.
+- **Security is woven into the V&V criteria.** Initial IA validation includes the **Initial ISS (Information System Security) assessment** and references ISGSA (Information Security Guidance for System Acquisition); Final IA validation includes the **Final ISS assessment**. Security categorization and assessment are V&V criteria, not afterthoughts.
+- **Stakeholder accountability is explicit per product.** The recurring responsible party is the **Investment Analysis Team**, defined to include all specialists named in AMS Policy §2.5.1. Specific products pull in additional named owners:
+  - PRD and EA-facing engineering work → Investment Analysis Team with **ANG Engineering Services**.
+  - Business Case → Investment Analysis Team with the **Office of Investment Planning and Analysis**.
+  - APB and PMP → Investment Analysis Team with the Office of Investment Planning and Analysis **and** the Office of Budget and Programs (budget commitments draw budget owners in).
+  - TEMP (preliminary and initial) → Investment Analysis Team with the **ANG-E Test Standards Board**.
+  - EA products and amendments → the **Enterprise Architecture Control Board (NAS and Mission Support)** with ANG Engineering Services — note the *board*, not the IA Team, owns EA V&V.
+  - SIR → Investment Analysis Team with the **Contracting Officer** (the contract-facing artifact brings in contracting authority).
+- **The EA V&V criteria are distinctive.** Both stages V&V the EA products and amendments against the Solution Concept of Operations, the relevant PRD, the NAS Segment Implementation Plan, NAS Requirements Documents, and FAA Strategic Initiatives, and **verify** them against the NAS Integrated Systems Engineering Framework — the only product whose verification criterion is that framework rather than a template.
+
+## Mental Models
+- **Initial IA validates the choice; Final IA validates the commitment.** If you remember one distinction, it is this: Initial asks whether the *right* alternative is being selected, Final asks whether the *baselined plan* for that alternative is sound enough to fund and execute.
+- **Each work product is a node with two edge-sets.** Picture every product (PRD, BC, ISPD, TEMP, APB, PMP, EA, ISR checklist, SIR) as a node with a *validation* edge-set pointing to the upstream content it must agree with, and a *verification* edge-set pointing to the template/policy it must conform to. The IA tables are simply this graph written out.
+- **"Initial" and "final" are the same node at two maturities.** The PRD/BC/ISPD/TEMP you V&V in Final IA is the matured version of the one you V&V'd in Initial IA — and one of its validation criteria is its own earlier V&V record. V&V accumulates along the maturity axis.
+- **Find your product in the table and you have your marching orders.** Because each table row pre-binds criteria *and* responsible party to each product, the V&V plan for any single artifact is already specified — locate the row, not invent the check.
+
+## Anti-patterns
+The source does not name anti-patterns for this section. (Section 3.3 is specified as tables of decision points, work products, criteria, and responsible stakeholders; it does not enumerate failure modes.)
+
+## Key Takeaways
+1. **IA is tailorable but governed.** Tailoring is approved by the Acquisition Executive or IDA and recorded in the plan and record of decision for the applicable IA stage.
+2. **Two stages, two questions.** Initial IA validates that the best alternative is selected; Final IA validates that the program baseline is sound enough to mitigate risk and support implementation.
+3. **Validation dominates IA V&V**, but every product carries *both* validation criteria (substantive inputs) and verification criteria (templates and AMS Policy).
+4. **Work products mature across the gates** — initial PRD/BC/ISPD/TEMP become final PRD/BC/ISPD plus initial TEMP, APB, PMP, ISR checklist, and SIR at Final — and a product's earlier V&V results become validation criteria for its later version.
+5. **Security assessment is a V&V criterion** at both stages (Initial ISS / Final ISS, with ISGSA referenced).
+6. **Accountability is fixed per product.** The Investment Analysis Team (per AMS Policy §2.5.1) is the constant owner; ANG Engineering Services, the Office of Investment Planning and Analysis, the Office of Budget and Programs, the ANG-E Test Standards Board, the EA Control Board, and the Contracting Officer join for specific products.
+
+## Connects To
+- **Prior section (Investment Analysis Readiness Decision)**: the Initial IA plan and Preliminary ISS Assessment are V&V'd at the Readiness Decision before Initial IA begins, establishing the inputs this chapter's stages mature.
+- **Test and Evaluation thread**: the preliminary TEMP (Initial IA) and initial TEMP (Final IA) are V&V'd against the Test and Evaluation Handbook and TEMP template, owned with the ANG-E Test Standards Board — the on-ramp to the T&E discipline covered later in the AMS lifecycle.
+- **Enterprise Architecture**: EA products and amendments are V&V'd by the EA Control Board against the NAS Integrated Systems Engineering Framework, tying IA V&V into NAS-level architecture governance.
+- **Requirements Management**: the PRD (initial → final) is the spine that nearly every other product is validated against, making PRD V&V the keystone of IA.
+- **`dau-se-guidebook` pack**: the DoD analogue of analysis-of-alternatives and milestone-gated technical reviews — a complementary acquisition-gate V&V model.
+- **`sebok` pack**: the general V&V canon (validate = right system; verify = system right) that the AMS table criteria operationalize for FAA investment decisions.
