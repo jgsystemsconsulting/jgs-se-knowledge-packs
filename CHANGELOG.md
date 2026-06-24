@@ -9,6 +9,54 @@ All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning follows
 [Semantic Versioning](https://semver.org/).
 
+## [1.11.0] — 2026-06-24
+
+### Added
+
+- **`nasa-systems-modeling`** (8 ch) — NASA Systems Modeling Handbook for Systems Engineering
+  (NASA-HDBK-1009A Rev A, 2025-03-12): model-based systems engineering (MBSE) wired into NASA's
+  NPR 7123.1 SE processes — the three aspects of MBSE (language / methodology / framework), the
+  NASA SE Engine and its two OOSEM-derived steps (Model Planning, Setting Up the Model), the
+  Modeling Plan as a SEMP subset, the tool-agnostic NASA SE metamodel of elements and
+  relationships across the four SysML pillars (structure / behavior / requirements / parametrics),
+  worked SysML diagrams and tables for stakeholders/requirements/structure/V&V, generating SE work
+  products (ConOps, MOE, MOP, TPM, V&V), the MBSE Grid framework, alternative modeling approaches
+  (PBR, Scenario, System Specification, Verification), and the ConOps model-content template.
+  Bounded to four common technical processes (Stakeholder Expectation Definition, Technical
+  Requirements Definition, Product Verification, Product Validation). Does NOT teach SysML itself,
+  mandate a tool, define NPR 7123.1 processes, cover technical-management processes 10–17, or
+  reproduce the OMG SysML specification (OMG copyright — named, not reproduced). The MBSE
+  companion to `nasa-npr-7123`, `nasa-se-handbook`, and the digital-engineering packs. Tier 1
+  (US-gov public domain).
+- **`dod-te-guidebook`** (8 ch) — DoD Test & Evaluation Enterprise Guidebook (OUSD R&E, August
+  2022): DoD test and evaluation (T&E) across the Adaptive Acquisition Framework — the four test
+  communities (contractor testing, developmental DT&E, operational OT&E, live-fire LFT&E); the
+  five operational events (Operational Demonstration, EOA, OA, IOT&E, FOT&E) and the OTRR gate;
+  the T&E Strategy / TEMP and its IDSK, with the upstream documents that feed it and the test
+  plans that decompose it; the T&E organizations and oversight roles (USD(R&E), DOT&E, TRMC, the
+  Service Executives and OTAs, the T&E WIPT, CDT); and pathway-specific T&E for all six
+  acquisition pathways (Urgent Capability, Middle Tier, Major Capability, Software, Defense
+  Business Systems, Services). Statutory anchors include 10 U.S.C. §4171 (IOT&E) and §4172
+  (LFT&E/FUSL). Guidance, not policy — it points outward to DoDI 5000.89 and the DoDI 5000-series
+  for binding detail, and is thin on detailed test statistics/design-of-experiments, cost
+  estimating, the Acquisition of Services pathway, and CUI/CAC-gated companion guides. The T&E
+  complement to `dau-se-guidebook`, `dod-rio`, and `gao-tra`. Tier 1 (US-gov public domain,
+  Distribution A).
+- **`faa-ams-vv`** (7 ch) — FAA AMS Lifecycle V&V Guidelines (verification and validation),
+  Version 3.0 (April 2017): applying V&V across the FAA Acquisition Management System (AMS)
+  lifecycle — the verify-vs-validate distinction (built right vs. right thing), the
+  work-product/component/product tiers, the nine V&V planning elements, the four method catalogs
+  (Appendix C), decision-point-gated V&V (SASP, CRD, Investment Analysis, Solution Implementation,
+  In-Service Management), the Appendix B document checklists (PRD/APB/ISPD/PMP), and the DT/OT/IOA
+  test triad. An FAA acquisition-V&V doctrine, NOT a general SE process model, requirements
+  manual, or test-design textbook; borrows its core V&V definitions from CMMI v1.2 (SEI,
+  paraphrased — cited to SEI, never reproduced) and presumes the surrounding AMS lifecycle (see
+  `faa-sem`). Phase tables are April-2017 policy snapshots; thin on detailed test methods, tool
+  specifics, and anything outside FAA acquisition governance. The V&V companion to `faa-sem` and
+  `faa-system-safety`. Tier 1 (US-gov public domain).
+
+Catalogue now 38 packs (+2 signposts).
+
 ## [1.10.0] — 2026-06-24
 
 ### Added

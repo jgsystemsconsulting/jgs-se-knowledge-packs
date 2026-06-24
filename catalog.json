@@ -388,6 +388,39 @@
       "commercial_use": true,
       "chapters": 7,
       "status": "live"
+    },
+    {
+      "slug": "nasa-systems-modeling",
+      "title": "NASA Systems Modeling Handbook (NASA-HDBK-1009A Rev A)",
+      "publisher": "NASA (Office of the NASA Chief Engineer)",
+      "source_version": "Rev A (2025-03-12)",
+      "license": "Public Domain (US Government work, 17 U.S.C. 105)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 8,
+      "status": "live"
+    },
+    {
+      "slug": "dod-te-guidebook",
+      "title": "DoD Test & Evaluation Enterprise Guidebook (Aug 2022)",
+      "publisher": "US Department of Defense, Office of the Under Secretary of Defense for Research and Engineering (OUSD R&E)",
+      "source_version": "August 2022",
+      "license": "Public Domain (US Government work, 17 U.S.C. 105); Distribution A",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 8,
+      "status": "live"
+    },
+    {
+      "slug": "faa-ams-vv",
+      "title": "FAA AMS Lifecycle V&V Guidelines v3.0",
+      "publisher": "FAA",
+      "source_version": "Version 3.0 (April 2017)",
+      "license": "Public Domain (US Government work)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 7,
+      "status": "live"
     }
   ],
   "planned": [
