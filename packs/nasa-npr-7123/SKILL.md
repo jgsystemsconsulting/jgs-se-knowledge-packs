@@ -127,7 +127,7 @@ TRL must be assessed in Formulation and updated at every status review. Other ma
 ## Topic Index
 
 - **17 processes / SE Engine** → ch03
-- **Bidirectional traceability** → ch03, ch07
+- **Bidirectional traceability** → ch03
 - **Compliance matrix (Appendix H)** → ch02, cheatsheet
 - **Contracted projects / oversight / insight** → ch04
 - **Customizing** → ch02, ch07, patterns

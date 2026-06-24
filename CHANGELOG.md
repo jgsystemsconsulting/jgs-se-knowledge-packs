@@ -9,6 +9,11 @@ All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning follows
 [Semantic Versioning](https://semver.org/).
 
+## [1.16.1] — 2026-06-24
+
+### Fixed
+- Corrected four legacy Topic-Index mis-routes flagged by the routing-truth gate (`pack_eval`): `dodaf` (Traceability OV→SV), `mil-std-882` (User representative), `nasa-npr-7123` (Bidirectional traceability), and `nasa-system-safety` (Graded approach). Each term now routes only to chapters that actually ground it; no chapter content changed. All 46 content packs pass routing truth.
+
 ## [1.16.0] — 2026-06-24
 
 ### Added

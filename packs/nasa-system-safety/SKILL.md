@@ -109,7 +109,7 @@ Assurance deficits identified in the RISC convert directly into CRM risk stateme
 - **Claims tree / claims-evidence-argument** → ch06, ch07
 - **Confirmation bias** → ch02, ch06
 - **Continuous Risk Management (CRM)** → ch05, ch07
-- **Graded approach** → ch01, ch03, ch04, ch05, ch06, ch07
+- **Graded approach** → ch01, ch05, ch06
 - **Integrated Safety Analysis (ISA)** → ch03, ch05
 - **Key Decision Points (KDPs)** → ch02, ch03
 - **Key Mission Objectives (KMOs)** → ch04
