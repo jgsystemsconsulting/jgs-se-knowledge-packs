@@ -1,7 +1,7 @@
 slug: sebok
 title: "Guide to the Systems Engineering Body of Knowledge (SEBoK)"
 publisher: "BKCASE Project (Trustees of the Stevens Institute of Technology)"
-source_version: "v2.13 (released 2025-11-17)"
+source_version: "v2.14 (released 2026-05-18)"
 license: "CC BY-NC-SA 3.0"
 license_tier: 2
 commercial_use: false
@@ -9,9 +9,9 @@ share_alike: true
 attribution_required: true
 build:
   method: "book-to-skill extraction + offset-mapped parallel chapter generation"
-  source_pages: 1465
-  chapters: 41
-  built_on: "2026-06-19"
+  source_pages: 1705
+  chapters: 36
+  built_on: "2026-06-24"
 notes: >
   SEBoK is published under Creative Commons Attribution-NonCommercial-ShareAlike 3.0.
   This pack's CONTENT is therefore released under CC BY-NC-SA 3.0 (not the repository's
@@ -19,5 +19,8 @@ notes: >
   and derivative works (including this pack) must be shared under the same licence.
   Content is synthesized/transformed for reference use; no long verbatim passages are
   reproduced. Attribution is textual (no source-material link by design); see
-  packs/sebok/LICENSE and docs/LICENSING.md.
+  packs/sebok/LICENSE and docs/LICENSING.md. Rebuilt from SEBoK v2.14 (released
+  2026-05-18), superseding the prior v2.13 build; one chapter per SEBoK Knowledge Area
+  (or tightly-coherent KA group) across Parts 1-8, preserving the knowledge-area depth
+  of the previous 41-chapter pack.
 change_indication: "reconstructed as synthesized reference notes"

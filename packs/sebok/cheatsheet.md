@@ -1,69 +1,104 @@
 # SEBoK Cheatsheet
 
-Decisions a systems engineer makes, and SEBoK's reasoning. Not definitions — judgment.
+Quick decision rules, selection tables, and tells & smells from the SEBoK v2.14. Synthesized for reference use under CC BY-NC-SA 3.0; attribution to the BKCASE Project required.
 
-## Starting a Problem
-- Ill-defined + high uncertainty → ask "What's going on here?" not "What are the requirements?" Systems thinking, root-cause, empathy first; defer formal spec.
-- Contested goals, power/ethics/politics in play → **soft systems** (SSM) or critical systems; **not** hard optimization. Hard methods need agreed, well-defined ends.
-- Can't fully define or solve the problem (definition shifts as you attack it) → **wicked problem**; iterate to learn, never spec-then-build.
-- Don't fix the SoI boundary until the problem is understood. Early boundary lock = wrong solution space.
-- Treat the original problem statement as suspect — usually not the right one.
+## Quick Decision Rules
 
-## Life Cycle Model Selection
-| Pattern | Use when |
-|---|---|
-| Sequential/Vee | Requirements stable, low novelty, certification/formal reviews, hardware fab cadence |
-| Incremental | Capability can ship in slices; want early feedback before full system |
-| Evolutionary | Problem understanding itself is immature; each cycle delivers value **and** learns |
-| Agile | Volatile requirements, software-intensive, fast feedback, modular architecture exists |
-- Selection is **risk-driven**: pick the approach that retires the most project risk. Compare candidates on risk, not preference.
-- Mixed HW/SW system → separate domain-specific models, synchronized at checkpoints. Sync interval: too short = pure overhead; too long = incompatible interfaces. Match to the slower domain.
-- Adapt per system element, not once for the whole system; document adaptation; get acquirer–supplier agreement.
+**"Where do I start?"**
+The **problem space** — Business/Mission Analysis then Stakeholder Needs Definition. Fix why and what before how. Never architecture-first. (Ch 16)
 
-## Agile — when NOT to
-- Safety-critical, multi-disciplinary, long integration, hardware cycles → agile doesn't transfer cleanly; lengthen + safety-gate iterations.
-- Monolithic/tightly-coupled architecture → can't deliver agile; fix coupling first.
-- Ceremonies (standups/sprints) without faster sensing/deciding = agility theater.
-- "Frequent releases" ≠ evolutionary without real user feedback loops.
+**"What is the system, exactly?"**
+Scope the **engineered-system context**, not the bare system: the related engineered, social, and natural systems and environments. Use the Seven Samurai as a forget-nothing checklist. (Ch 7, Ch 2)
 
-## System Classification (drives governance)
-| Type | Value via | Governance |
+**"How much SE is enough?"**
+A risk-balance dial, not a switch: too little → rework explodes on large projects; too much → analysis paralysis. Scale with size and interdependence. (Ch 1)
+
+**"Which development approach?"**
+By three questions — requirements known up front? work split into increments? what are the increments for? → sequential / incremental / evolutionary (agile overlaps). All real efforts are concurrent and iterative to some degree. (Ch 10, Ch 12)
+
+**"Serial process sequence?"**
+No. Expect **concurrency, iteration, recursion**. Describe processes uniformly (24774); select from 15288; tailor with 24748-2 and document the rationale. (Ch 13, Ch 14)
+
+**"When do I do V&V?"**
+Concurrently and recursively, level by level up the right of the **Vee** — never one big bang at the end. (Ch 17, Ch 10)
+
+**"Is this a true System of Systems?"**
+Check Maier: **operational + managerial independence** of constituents (plus evolution, emergence, distribution). If yes, **compose** via interfaces; you don't command it. (Ch 24)
+
+**"Product, service, enterprise, or SoS context?"**
+They overlap — most real systems need a combination. Pick the dominant context to drive tailoring, then borrow from the others. (Ch 20)
+
+**"Competency vs. performance?"**
+Different things. A competent individual can still perform poorly if team capability, capacity, or culture block them. Enable all three levels. (Ch 28, Ch 26)
+
+**"Who owns what — SE or PM?"**
+No standard split. PM owns programmatic, SE owns technical; decide per project, write it in the PMP and SEMP. (Ch 31)
+
+---
+
+## The Eight Parts of the SEBoK
+
+| Part | Title | Pack chapters |
 |---|---|---|
-| Product | manufacture/exchange | TSE (project lifecycle) |
-| Service | availability/performance | SLA + co-creation; QoS = technical TPM **and** subjective QoE |
-| Enterprise | strategic alignment | intentional operational **dependence**; PDCA, portfolio |
-| SoS | federated capability | governance not control; trust/contract interfaces |
-- SoS test = operational **AND** managerial independence (Maier). Complexity/distribution alone ≠ SoS — if no independence, govern as enterprise.
-- SoS → expect distributed decisions; hierarchical control generates friction. Align constituent incentives or get passive resistance.
+| 1 | SEBoK Introduction | ch01 |
+| 2 | Foundations of SE | ch02–ch07 |
+| 3 | SE and Management | ch08–ch19 |
+| 4 | Applications of SE | ch20–ch25 |
+| 5 | Enabling SE | ch26–ch28 |
+| 6 | Related Disciplines | ch29–ch34 |
+| 7 | SE Implementation Examples | ch35 |
+| 8 | Emerging Knowledge | ch36 |
 
-## Reviews, Baselines, Tailoring
-- Review timing: **schedule-based** (early, thin info) / **event-based** (artifact-triggered, fuller) / **evidence-based** (risk-threshold-triggered, highest commitment, latest feedback).
-- Reviewer mix: close enough for insight, far enough for independence. Too close = biased; too far = misses issues.
-- Baseline **just-in-time**, when dependent work commits. Early baselining → high change/rework.
-- Process rigor ∝ size × criticality × novelty × certification need. Uniform process across all projects fails. Tailoring is mandatory, evidence-based, documented.
-- Don't reuse another project's tailored baseline blind; don't let tool capability dictate process.
+## Three Grades of SE Knowledge
 
-## Decisions, Risk, Cost
-- Trade study: define value criteria **first**, then design alternatives (value-focused), don't score pre-existing options. Walk-away point → value 0; stretch goal → 100.
-- Formal trade study still biased (confirmation/optimism/rankism) → add structural guards: independent review, premortem.
-- Risk treatment: evaluate **assume / avoid / mitigate / transfer** — never auto-pick mitigation. Fix root cause, not repeated instances (no band-aids).
-- Cost estimate maturity: ROM (early, ballpark) → parametric/analogy → firm (binding). Analogy **must** adjust for cost drivers; calibrate CERs to current data; refresh at milestones. No historical data = a guess.
-- Fixed-price + uncertain scope → high bids or supplier insolvency. Use cost-reimbursement + active change control.
-- Match acquisition entry phase to technology readiness; RFP needs a SEP first.
+**Concept** (mental building block) → **Principle** (generalization usable for reasoning/action) → **Heuristic** (works in practice; the "why" not yet scientifically explained). Observed heuristics drive research toward principles and a systems-science basis. (Ch 2, Ch 5)
 
-## MBSE
-- Use the model to **drive** decisions, not document them post-hoc (else you lose the whole value).
-- Formality ∝ complexity/criticality: over-formal simple systems waste effort; under-formal safety-critical = ambiguity + integration risk.
-- Enforce CM/updates or the model decays → teams revert to documents.
-- Establish semantic interoperability across discipline models early, or integration failures surface late.
+## Holism ↔ Reductionism
+
+The balance at the heart of any systems approach: treat the whole (because of emergence) **and** study the parts (because pure holism can't be acted on). (Ch 5)
+
+## Development Approaches — Selection
+
+| Family | Use when | Representative models |
+|---|---|---|
+| **Sequential** | requirements well-known, low change | Waterfall, Vee, Dual Vee |
+| **Incremental** | requirements known, deliver in defined increments | Incremental Commitment Spiral Model |
+| **Evolutionary** | requirements emerge through use | evolutionary delivery, DevOps/DevSecOps |
+| **Agile (overlaps)** | high uncertainty, fast change | Scrum, SAFe, LeSS; Industrial DevOps |
+
+## Architecture Views (Architecture Definition)
+
+**Functional** (what it does) · **Logical** (behavioural/temporal, implementation-independent) · **Physical** (system elements and groups). Carry PIM→PSM and govern via an Authoritative Source of Truth in MBSE. (Ch 17)
+
+## SE Standards Landscape (trunk + branches)
+
+**ISO/IEC/IEEE 15288** = trunk (system life-cycle processes). Branches/companions: **24748-1** (terms/concepts), **24748-2** (applying 15288), **24748-10** (agile), **24774** (process-description form), **12207** (software life cycle). Take a full-life-cycle approach to any standard: evaluate → select → adapt/tailor → assess → improve. (Ch 19, Ch 14, Ch 13)
+
+## Applications — Five Contexts (Part 4)
+
+**Product SE** (end product + enabling products; NPDP) · **Service SE** (value co-creation; can't inventory) · **Enterprise SE** (enterprise as a system; people are components) · **Systems of Systems** (compose independent constituents) · **Healthcare SE** (domain extension over the others). (Ch 20–25)
+
+## Quality Attributes / Specialty Engineering
+
+Same things, four names: **quality attributes = non-functional requirements = -ilities = specialties**. They're interdependent, not orthogonal. Engineer them as specialty engineering; where they share a concern with **loss**, use a Loss-Driven view (assets, loss, adversity, coping strategies) instead of per-"-ility" silos. (Ch 34)
+
+## Enabling SE — Three Levels (Part 5)
+
+**Business/Enterprise** (PDCA: strategy → capabilities → org → assessment → development → barriers → culture) → **Team** (capability + dynamics; Tuckman; IPTs) → **Individual** (roles + KSAA competency; assess → develop; ethics). (Ch 26–28)
+
+---
 
 ## Tells & Smells
-- **Emergence present**: behavior meaningful only for the whole, unpredictable from parts. Exploit desired emergence, don't only fear it.
-- **Standards proliferating**: alignment pursued without SDO commitment / domain-silo viewpoints → competing incompatible standards.
-- **Loss concerns siloed**: safety/security/reliability/resilience in separate teams → redundant + conflicting requirements; unify (LDSE), one architectural pattern can cover several loss scenarios.
-- **HSI as a "human factors" sub-task**: relegating it to an HFE specialist strips cross-domain authority; deferring humans to training → high manpower cost, poor usability.
-- **Specialty engineering late** (logistics, reliability, certification, safety) → costly rework; pull it before requirements freeze.
-- **Reductionism without holistic verification**: optimizing elements independently destroys emergent properties.
-- **Reliability treated as a testing problem**: testing finds known modes, can't prove absence of unintended function — needs spec-driven design + traceability.
-- **COTS over-reliance**: obsolete in ~2 yrs; plan supply or accept unplanned churn.
-- **Enterprise requirements frozen**: enterprises are "constantly being designed" — locking requirements misaligns.
+
+- **"We'll define the problem as we build."** — skipped Concept Definition; you're optimizing an unstated or wrong problem. (Ch 16)
+- **Architecture set before stakeholder needs are integrated.** — solution-first; needs should drive architecture. (Ch 16, Ch 17)
+- **A single "best" life cycle model imposed org-wide.** — life cycle models are situation-specific and adapted per project, not inherited. (Ch 12)
+- **Processes run as a fixed serial sequence.** — ignores mandated concurrency, iteration, recursion. (Ch 13)
+- **All V&V deferred to a final test phase.** — big-bang V&V concentrates risk; the Vee runs it level by level. (Ch 17)
+- **Treating an SoS as if one authority owns it.** — managerial/operational independence means compose, don't command. (Ch 24)
+- **Digital Engineering bought as a tool.** — "new paint on crumbling walls"; DE is a Why/What/Who/How transformation, MBSE is one part. (Ch 1, Ch 36)
+- **Each "-ility" engineered in its own silo.** — produces conflicting requirements; use a unified loss-driven view. (Ch 34)
+- **Assuming competency guarantees performance.** — team capability, capacity, and culture can block a competent engineer. (Ch 28)
+- **Leaving the SE/PM boundary implicit.** — no standard split exists; un-negotiated boundaries leave gaps and double-ownership. (Ch 31)
+- **Reading SwE as a subset of SE (or vice versa).** — bounded overlap, neither contains the other. (Ch 1, Ch 32)
+- **Blaming the domain for a systems-engineering shortfall.** — large-system failures most often trace to inadequate SE, not the domain disciplines. (Ch 1)

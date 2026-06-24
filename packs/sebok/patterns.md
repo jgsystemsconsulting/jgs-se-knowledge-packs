@@ -1,116 +1,101 @@
 # SEBoK Patterns & Techniques
 
-## System Context Modelling
-**When to use**: At project inception, before fixing requirements, to position the system-of-interest (SoI) within its socio-technical environment.
-**How**: Define the SoI boundary by what you can change vs. what stays fixed; map external elements crossing the boundary (environment, enabling systems, organizational/meta-system layers, stakeholders); choose narrow- vs. wide-SoI deliberately.
-**Trade-offs**: Fixing the boundary too early locks you into the wrong solution space; modelling context costs effort that product-only teams skip, but skipping it surfaces integration surprises at deployment.
+Reusable techniques distilled from the SEBoK v2.14. Each has When / How / Trade-offs. Synthesized for reference use under CC BY-NC-SA 3.0; attribution to the BKCASE Project required.
 
-## Mission–Goals–Objectives (MGO) + Measures of Effectiveness
-**When to use**: To establish strategic intent and validatable success criteria during business/mission analysis.
-**How**: State mission ("why"), decompose into goals (achievable pieces), then objectives (concrete "what"); attach Measures of Effectiveness (MOE) and measures of success; characterize green-field (blank-slate as-is/to-be) vs. brown-field (legacy-constrained).
-**Trade-offs**: Weak or unmeasurable MOEs optimize the wrong thing; over-specifying intent under high uncertainty is premature when the right question is still "what's going on here?"
+## Pattern 1: Frame the Problem Before the Solution (Concept Definition)
 
-## Functional vs. Physical Architecture Decomposition
-**When to use**: When deriving an implementation-independent design before allocating to hardware/software/people.
-**How**: Build the logical architecture (functions as y=f(x,t), input-output flows, control-flow triggers, scenarios, operational modes) first; then a physical architecture; allocate functions to system elements (~5±2 per level) using affinity/partitioning criteria.
-**Trade-offs**: Jumping straight to technology loses multidisciplinary comprehension and traceability; over-decomposing or static-only hierarchies obscure dynamic behaviour; skipping logical architecture for "known" products breaks when the domain set changes.
+**When to use**: at the very start of any effort, before architecture, requirements, or technology choices.
 
-## Architecture Viewpoints & Frameworks
-**When to use**: When stakeholders have distinct concerns and you need traceable, navigable model coverage.
-**How**: Per ISO 42010 / IEEE 1471, define viewpoints (conventions) and generate views addressing each concern; organize via an architecture framework (Zachman, DoDAF, FEAF, TOGAF) so missing information and cross-links are visible.
-**Trade-offs**: Frameworks add governance overhead and can become disconnected artifacts unless driven by business questions; static frameworks struggle with dynamically reconfiguring services.
+**How**: run Business or Mission Analysis to fix the problem space and candidate solution classes, then Stakeholder Needs Definition to produce an integrated set of needs that is correct, consistent, complete, and feasible. Express intent as mission/goals/objectives with Measures of Effectiveness. Only then hand off to System Definition. Distinguish green-field from brown-field and the present-state ("as-is") from the future-state ("to-be").
 
-## Model-Based Systems Engineering (MBSE)
-**When to use**: For complex systems needing a single source of truth, live traceability, and integrated requirements-to-architecture flow.
-**How**: Use a formal language (SysML) as the authoritative baseline; manage it under configuration management with a process framework; match formality/fidelity to system criticality; integrate descriptive, analytical, and executable models for semantic interoperability.
-**Trade-offs**: Models decay without enforced updates; over-formalizing simple systems wastes effort; tools-without-organizational-change yields models-as-documentation, defeating the purpose.
+**Trade-offs**: stakeholders want a solution immediately; investing in the problem feels slow. But solving an unstated or wrong problem is the most expensive mistake in the life cycle, and "how much SE is enough" is a risk-balance, not a fixed amount. (Ch 16, Ch 1)
 
-## Black-Box / White-Box Modelling
-**When to use**: To control abstraction level when specifying vs. designing.
-**How**: Use black-box views to fix external behaviour and interfaces (solution-neutral); switch to white-box to reveal internal structure once decomposition is warranted. Set model scope by breadth, depth, fidelity.
-**Trade-offs**: Over-modelling adds maintenance burden without value; isolated multi-domain models that lack semantic interoperability hide integration failures until late.
+---
 
-## Trade Studies (MODA / Value-Focused Thinking)
-**When to use**: For multi-criteria decisions across performance, cost, schedule, risk.
-**How**: Decompose into objectives, measures, alternatives, value functions; assign swing weights; map walk-away points to 0 and stretch goals to 100; use an additive value model. Generate alternatives from value criteria (value-focused), not just score pre-existing ones.
-**Trade-offs**: Formal scoring is still vulnerable to confirmation/optimism bias and rankism; needs structural guard rails (independent review, premortem). Garbage-in data invalidates the result.
+## Pattern 2: Scope the Engineered-System Context, Not the Bare System
 
-## Set-Based Design (SBD)
-**When to use**: Early design under uncertainty with a large tradespace and competing disciplines.
-**How**: Treat design factors as sets; explore multiple alternatives in parallel; progressively narrow the feasible tradespace using feasibility/performance/cost data (dominance, Pareto frontier, sensitivity). Protect set drivers; adapt set modifiers for new missions.
-**Trade-offs**: Converging to a point solution too early throws away SBD's value; running parallel sets costs more upfront than committing to one design.
+**When to use**: whenever you set a system boundary or begin architecting.
 
-## Risk-Based Process Tailoring
-**When to use**: On every project — standard process sets are never applied as-is.
-**How**: Adjust 15288/24748 process rigor to context using scaling factors (size, safety level, novelty, mission criticality, certification, team distribution/skill, domain/solution complexity); document rationale; reassess continuously, not once.
-**Trade-offs**: Over-engineering ("all processes to be safe") wastes cost; reusing another project's baseline blindly mismatches conditions; letting tool limits drive process inverts the dependency.
+**How**: place the system-of-interest inside its engineered-system context — the related engineered, social, and natural systems and environments it touches. Use Hitchins' "Seven Samurai" (context, intervention, realization, deployed, collaborating, sustainment, competing systems) as a checklist so no enabling or competing system is forgotten. Treat narrower vs. wider system-of-interest explicitly.
 
-## Life Cycle Model Selection & Adaptation
-**When to use**: When choosing/adapting sequential, incremental, evolutionary, or agile approaches per project and per element.
-**How**: Drive selection by risk and requirements clarity (PMI Situation Context Framework); allow domain-specific models (hardware vs. software) with synchronization intervals; adapt entry/exit criteria; get acquirer–supplier agreement; review against KPIs over time.
-**Trade-offs**: Synchronization too short adds overhead, too long invites incompatible interface assumptions; treating models as static or selecting in isolation from enabling systems increases risk.
+**Trade-offs**: a wide context is harder to bound and analyse; too narrow a context produces a solution that fails in the field because an enabling, collaborating, or competing system was ignored. (Ch 7, Ch 2)
 
-## Agile SE Cadence
-**When to use**: Dynamic environments with evolving knowledge, where increments yield early feedback.
-**How**: Time-boxed iterations producing deliverable increments; modular loosely-coupled architecture; continuous integration; adaptive planning; learning iterations for exploration; commitment reviews (ICSM) gate each cycle on evidence.
-**Trade-offs**: Not a silver bullet for safety-critical/hardware cycles; "agile = less documentation" loses traceability; ceremonies without decision-making speed, or monolithic architecture, give agility without effect.
+---
 
-## Decision Gates / Technical Reviews
-**When to use**: At lifecycle transition points to assess progress and authorize proceed/pause/terminate.
-**How**: Hold reviews (PDR/SRR/TRR etc.) against pre-agreed entry/exit criteria; choose timing strategy (schedule-, event-, or evidence-based per Boehm & Lane); balance reviewer mix between close-enough-for-insight and independent-enough-for-objectivity.
-**Trade-offs**: Reviews under schedule pressure with unmet entry criteria miss defects; no clear criteria makes them subjective; wrong reviewer mix kills independence.
+## Pattern 3: Select and Adapt the Life Cycle Model — Don't Inherit One
 
-## Requirements Management & Bidirectional Traceability
-**When to use**: Throughout the lifecycle to keep needs, design, and verification linked.
-**How**: Elicit → allocate → baseline → control changes; maintain bidirectional links from stakeholder sources through requirements to verification artifacts (tests/inspections/analyses); baseline just-in-time.
-**Trade-offs**: Too-early baselining guarantees high change volume and rework; skipping traceability in iterative work loses institutional memory and impact analysis.
+**When to use**: at project start and whenever context (risk, requirements stability, increment purpose) shifts.
 
-## Configuration Management & Baselines
-**When to use**: Whenever multiple versions, teams, or lifecycle changes must stay consistent.
-**How**: Identify configuration items, baseline them, control changes via CCB/engineering change requests, status-account and audit; enforce form-fit-function-interface (F3I) compatibility on upgrades.
-**Trade-offs**: Orphaned baselines across many changes lose features and break integration; CM is overhead small projects under-resource until a regression bites.
+**How**: choose a development approach by three questions — how completely requirements are known up front, whether work is split into increments, and what those increments are for. Map onto sequential / incremental / evolutionary (with agile overlapping), align to ISO/IEC/IEEE 24748-1, and adapt per project using a situation framework (e.g. PMI's context factors / scaling). Re-evaluate continuously.
 
-## Risk Management (Full Treatment Set)
-**When to use**: Continuously, to reduce risks below acceptable thresholds before they occur.
-**How**: Plan → identify → analyze → treat → monitor; evaluate all treatment options (assumption, avoidance, control/mitigation, transfer) rather than defaulting to mitigation; address root causes, not recurring instances. Include opportunity (positive uncertainty) management at portfolio level.
-**Trade-offs**: Automatic mitigation wastes resources when transfer/avoidance is superior; band-aid treatment accumulates systemic risk; risk-only frameworks miss opportunities.
+**Trade-offs**: every real effort is concurrent and iterative to some degree, so the families are reference points, not boxes. Over-fitting a "pure" model to a messy project wastes effort; under-planning the model invites rework. (Ch 10, Ch 12, Ch 9)
 
-## Interface Definition (ICD/IDD)
-**When to use**: At every component boundary in product and SoS integration.
-**How**: Baseline interfaces in an Interface Control Document / Interface Design Description capturing interactions (data, material, energy) AND relationships (spatial, temporal, social, organizational); verify components against it during integration.
-**Trade-offs**: Treating interfaces as mere physical connections misses non-interactive relationships and organizational failure modes.
+---
 
-## Reliability/Safety Analysis (FMECA, FTA, RBD)
-**When to use**: When quality attributes (reliability, availability, safety) must be designed in, not tested in.
-**How**: FMECA tables identify failure modes, effects, and criticality (likelihood × severity) to prioritize; FTA decomposes top-level failure top-down via AND/OR/K-of-N gates; RBD models success paths and redundancy (series/parallel/k-of-n). Follow the RAM lifecycle; account for censored ("survival") data.
-**Trade-offs**: Treating reliability as a testing problem can't prove absence of unintended functionality; ignoring censored data biases estimates upward; single-layer mitigations expose new attack surfaces (use mitigation-in-depth).
+## Pattern 4: Select and Tailor Processes With Traceable Rigor
 
-## Loss-Driven SE & Defense-in-Depth
-**When to use**: When safety, security, resilience, and reliability concerns overlap and are otherwise siloed.
-**How**: Unify loss-driven specialty areas via shared loss scenarios; apply hazard control, loss margins, protective failure, anomaly detection, and layered defense-in-depth; model loss scenarios explicitly in MBSE artifacts.
-**Trade-offs**: Treating specialty areas in isolation yields redundant requirements and conflicting solutions; bolting loss concerns onto capability-focused 15288 late is expensive.
+**When to use**: when deciding which 15288 processes apply and at what depth.
 
-## SoS Governance via Trust & Contract Architectures
-**When to use**: For systems of systems with operationally and managerially independent constituents.
-**How**: Replace hierarchical control with governance through trust, influence, and contracts; make interface governance the primary control; use Mission Engineering threads to evaluate end-to-end effects; iterate via the SoS Wave Model; classify regimes with Cynefin.
-**Trade-offs**: Expecting central control generates friction; ignoring constituent motivations breeds resistance; optimizing constituents in isolation degrades the whole; boundary ambiguity yields unpredictable emergence.
+**How**: select processes from a recognized framework (15288), then tailor with the 24748-2 application strategy; describe every process uniformly per 24774. Balance enough rigor to manage risk against enough agility to avoid waste, and document each tailoring decision so later stakeholders see why the process looks as it does. Expect concurrency, iteration, and recursion, not a serial march.
 
-## Cost Estimating (Analogy / Parametric / Build-Up)
-**When to use**: To translate requirements into defensible budgets across the lifecycle.
-**How**: Follow the seven-step process (WBS → technical baseline → collect → analyze → apply CERs → roll-up/validate → report); pick analogy, parametric (calibrated CERs), or bottom-up build-up; refresh at major milestones; use a multidisciplinary team.
-**Trade-offs**: Analogy without cost-driver adjustment, uncalibrated CERs, or expert opinion as the primary method all lack credibility; frozen estimates mask risk; finance-only teams miss technical/integration costs.
+**Trade-offs**: documenting tailoring rationale costs effort up front but prevents undocumented, unjustifiable process drift; under-tailoring imposes ceremony, over-tailoring strips needed control. (Ch 14, Ch 13)
 
-## Work Breakdown Structure (WBS)
-**When to use**: To anchor scope, cost, schedule, and responsibility for any project.
-**How**: Decompose deliverable-oriented work into a tree (per MIL-STD-881) with a WBS dictionary defining terms; map elements to components/capabilities; aggregate cost and assign accountability.
-**Trade-offs**: A WBS organized by org chart rather than deliverables fragments scope; it captures structure but not dynamic behaviour or interfaces.
+---
 
-## Human Systems Integration (HSI)
-**When to use**: When human performance materially affects mission outcome, suitability, and cost.
-**How**: Coordinate the seven HSI domains (manpower, personnel, training, human factors engineering, safety & occupational health, force protection/survivability, habitability) with cross-domain trade-offs; decompose MOEs into human-specific MOPs/MOSs.
-**Trade-offs**: Assigning HSI to a human-factors engineer without SE authority relegates it to a specialty; deferring human considerations to post-design training yields high manpower cost and poor usability.
+## Pattern 5: Run V&V Down-and-Up the Vee, Not as a Big Bang
 
-## Soft-Systems / Critical-Systems Methods
-**When to use**: For wicked, contested, ill-defined "problematic situations" with conflicting worldviews.
-**How**: Apply Soft Systems Methodology (participatory, learning-oriented) when goals are contested; use Critical Systems Thinking to judge when to deploy hard vs. soft methods and combine them; engage politics/values rather than erasing them.
-**Trade-offs**: Hard optimization on socio-political problems fails; soft methods trade quantitative rigor for stakeholder learning and may feel inconclusive to engineers expecting a single answer.
+**When to use**: across architecture, detailed design, realization, and deployment.
+
+**How**: descend the left of the Vee (architecture definition → detailed design across functional, logical, physical views), then climb the right (implementation → integration → verification → validation → transition → operation). Perform verification and validation concurrently and recursively at each decomposition level. Govern data through an Authoritative Source of Truth where model-based.
+
+**Trade-offs**: level-by-level V&V costs more early instrumentation and discipline, but deferring all V&V to the end concentrates risk where defects are most expensive to fix. (Ch 17, Ch 32, Ch 10)
+
+---
+
+## Pattern 6: Plan Sustainment From Acquisition, Not After Fielding
+
+**When to use**: from stakeholder needs definition onward, for any system with a long operational life.
+
+**How**: define a maintenance concept early and capture initial maintenance requirements during stakeholder needs definition (15288 Cl. 6.4.1). Run maintenance concurrently with operations (Cl. 6.4.9): monitor, record problems, take corrective/adaptive/perfective/preventive action, confirm capability restored. Wrap the maintenance process in a broader sustainment view (product/service life management) covering the twelve integrated product-support elements, LORA, RCM, and life-cycle cost.
+
+**Trade-offs**: designing for sustainment constrains the design and adds early cost; ignoring it produces a system that is unaffordable or unsupportable across the (much longer) operational life. (Ch 18)
+
+---
+
+## Pattern 7: Engineer the Quality Attributes as a Loss-Driven Whole
+
+**When to use**: whenever multiple "-ilities" (safety, security, reliability, resilience, availability) are in play.
+
+**How**: treat the quality attributes as specialty engineering and apply the integration filters to fold specialty constraints into the design. Where attributes share a concern with loss, use a Loss-Driven SE lens — reason about assets, types of loss, types of adversity, and coping strategies once, rather than engineering each "-ility" in a silo. Specify which attributes matter, how each is measured, and how conflicts are traded.
+
+**Trade-offs**: a unified loss view needs cross-specialty coordination and a common vocabulary up front, but isolated specialty work creates conflicting requirements and duplicated effort. (Ch 34)
+
+---
+
+## Pattern 8: Compose, Don't Command, a System of Systems
+
+**When to use**: when constituents are operationally and managerially independent (a true SoS).
+
+**How**: confirm Maier's characteristics first. Architect by managing interfaces and leveraging existing functionality rather than designing a monolith; apply Maier's architecting principles (stable intermediate forms, policy triage, leverage at the interfaces, ensure cooperation). Use the Wave Model for the continually evolving SoSE life cycle and expect socio-technical/socio-economic, not purely technical, work.
+
+**Trade-offs**: you trade central control for partial influence; behaviour can surprise you at the SoS level, so over-specifying constituents is both infeasible and counter-productive. (Ch 24, Ch 23)
+
+---
+
+## Pattern 9: Enable SE at Three Levels Before Expecting It to Perform
+
+**When to use**: when an organization wants SE to deliver value, not just when a project starts.
+
+**How**: enable SE top-down at business/enterprise, team, and individual levels. At enterprise level run a plan-do-check-act loop (strategy → capabilities → organization → assessment → development → barriers → culture). At team level build capability and dynamics (Tuckman stages, IPTs, communication-path arithmetic). At individual level define roles and KSAA competencies, assess gaps, develop them, and hold an ethical frame. Remember competency ≠ performance.
+
+**Trade-offs**: enablement is overhead invisible on any single project, but without it Part 3 techniques cannot deliver; culture, if hostile, can block SE outright and may need transformational change. (Ch 26, Ch 27, Ch 28)
+
+---
+
+## Pattern 10: Make the SE / PM Boundary Explicit Per Project
+
+**When to use**: on every project, because there is no standard SE/PM relationship.
+
+**How**: assign the project manager the programmatic attributes (plans, estimates, schedule, budget, staffing, risk) and the systems engineer the product/technical attributes (requirements flow-down, architecture, integration, V&V, specialty engineering). Decide the split — disjoint, overlapping, or nested — for this project's context, document it in the PMP and SEMP, and communicate frequently across the boundary.
+
+**Trade-offs**: negotiating the boundary takes time and can surface authority tension, but leaving it implicit guarantees gaps and duplicated ownership of the same activity. (Ch 31, Ch 15)
