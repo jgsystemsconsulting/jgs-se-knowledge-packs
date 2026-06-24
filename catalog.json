@@ -50,7 +50,7 @@
     },
     {
       "slug": "nist-800-37",
-      "title": "NIST SP 800-37 Rev 2 — Risk Management Framework (RMF)",
+      "title": "NIST SP 800-37 Rev 2 \u2014 Risk Management Framework (RMF)",
       "publisher": "NIST (US Department of Commerce)",
       "source_version": "Revision 2 (December 2018)",
       "license": "Public Domain (US Government work)",
@@ -61,7 +61,7 @@
     },
     {
       "slug": "nist-sse",
-      "title": "NIST SP 800-160 — Systems Security Engineering (Vol 1 + Vol 2)",
+      "title": "NIST SP 800-160 \u2014 Systems Security Engineering (Vol 1 + Vol 2)",
       "publisher": "NIST (US Department of Commerce)",
       "source_version": "Vol 1 Rev 1 (2022) + Vol 2 Rev 1 (2021)",
       "license": "Public Domain (US Government work)",
@@ -96,11 +96,11 @@
       "slug": "sebok",
       "title": "Guide to the Systems Engineering Body of Knowledge (SEBoK)",
       "publisher": "BKCASE Project (Trustees of the Stevens Institute of Technology)",
-      "source_version": "v2.13 (2025-11-17)",
+      "source_version": "v2.14 (released 2026-05-18)",
       "license": "CC BY-NC-SA 3.0",
       "license_tier": 2,
       "commercial_use": false,
-      "chapters": 41,
+      "chapters": 36,
       "status": "live"
     },
     {

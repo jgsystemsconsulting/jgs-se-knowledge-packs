@@ -9,6 +9,13 @@ All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning follows
 [Semantic Versioning](https://semver.org/).
 
+## [1.14.0] — 2026-06-24
+
+### Changed
+
+- **`sebok`** refreshed to **SEBoK v2.14** (released 2026-05-18) — rebuilt to 36 chapters mapped
+  to the SEBoK knowledge areas (was v2.13 / 41 chapters). CC BY-NC-SA 3.0 carried forward.
+
 ## [1.13.0] — 2026-06-24
 
 ### Added
