@@ -540,6 +540,23 @@ Third-party source attributions (one block per shipped pack)
            described, not copied). Attribution to NIST/SEMATECH is courtesy, not obligation;
            neither endorses this pack. See packs/nist-stat-handbook/LICENSE.
 
+[pack: faa-rma]
+  Source : System Reliability, Maintainability, and Availability (RMA) Handbook,
+           FAA-HDBK-006D (8 October 2020)
+  Author : US Federal Aviation Administration (FAA)
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright, free to reproduce, transform, and redistribute
+           (including commercially). CAVEAT: the handbook explicitly states it is "for
+           guidance only" and "must not be cited as a requirement" -- this pack is a
+           synthesized reference, not an authority to cite in a contract or specification,
+           and is grounded in the 006D (2020) revision (supersedes 006C v1.1 / 006B). It
+           NAMES but does NOT reproduce the external standards it leans on (MIL-STD-721C/
+           882E/1629A/3034A, MIL-HDBK-217F/189C, NASA SP-2016-6105 / NASA-STD-8729.1A,
+           NUREG/CR-6101, IEEE Std 1633-2016, RTCA DO-178C/DO-278A, SAE JA1011), which
+           remain their publishers' copyright. Attribution to the FAA is courtesy, not
+           obligation; the FAA does not endorse this pack. See packs/faa-rma/LICENSE.
+
 -----------------------------------------------------------------------------------
 The build pipeline uses the book-to-skill extraction engine (MIT License),
 © the book-to-skill authors. It is a build tool, not a packaged source.

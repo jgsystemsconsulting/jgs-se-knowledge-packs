@@ -1,0 +1,33 @@
+faa-rma pack — content licence
+===============================
+
+This pack is derived from:
+    System Reliability, Maintainability, and Availability (RMA) Handbook
+    FAA-HDBK-006D (8 October 2020), superseding FAA RMA-HDBK-006C V1.1 (15 November 2015)
+    Federal Aviation Administration, NAS System Engineering & Integration Office
+
+Source licence: Public Domain (US Government work)  (tier 1 — see ../../docs/SOURCE-VETTING.md)
+No source-material download link is published (see ../../docs/LICENSING.md).
+
+This handbook is a work of the United States Government, prepared by the Federal Aviation
+Administration, and is therefore NOT subject to copyright protection in the United States
+(17 U.S.C. 105). It is in the public domain: anyone may reproduce, transform, and
+redistribute it for any purpose, including commercially, without permission. Attribution to
+the FAA is provided as a courtesy (see the repository NOTICE), not a legal obligation. The
+FAA does not endorse this pack or its authors.
+
+GUIDANCE-ONLY CAVEAT (stated on the handbook's own title page): the handbook declares
+"This handbook is for guidance only. Do not cite this document as a requirement." This pack
+is a synthesized, transformed set of reference notes built from that guidance — it is not an
+authority to cite in a contract, specification, or requirement, and the same caveat carries
+forward to anything generated from it.
+
+THIRD-PARTY MATERIAL CAVEAT: the handbook references — but this pack does NOT reproduce — a
+number of external standards that remain the copyright of their publishers, including the DoD
+MIL-STD/MIL-HDBK series (721C, 882E, 1629A, 3034A, 217F, 189C), NASA SP-2016-6105 and
+NASA-STD-8729.1A, NUREG/CR-6101, IEEE Std 1633-2016, RTCA DO-178C and DO-278A, and SAE
+JA1011. This pack contains only synthesized, original-wording notes that NAME those documents
+and describe how the FAA handbook uses them; none of their text is reproduced here.
+
+NOTE: This file governs the CONTENT of this pack. The repository tooling is licensed
+separately under MIT (see ../../LICENSE).

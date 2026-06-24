@@ -5,6 +5,17 @@
   "updated": "2026-06-24",
   "packs": [
     {
+      "slug": "faa-rma",
+      "title": "FAA Reliability, Maintainability, and Availability Handbook (FAA-HDBK-006D)",
+      "publisher": "FAA",
+      "source_version": "FAA-HDBK-006D (8 October 2020)",
+      "license": "Public Domain (US Government work)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 8,
+      "status": "live"
+    },
+    {
       "slug": "nasa-pra",
       "title": "NASA PRA Procedures Guide 2nd ed (NASA/SP-2011-3421)",
       "publisher": "NASA",
