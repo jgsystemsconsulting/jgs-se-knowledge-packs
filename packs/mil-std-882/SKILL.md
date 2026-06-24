@@ -106,7 +106,7 @@ Software risk cannot use probability-based assessment. Instead: assign Software 
 - **SwCI** → ch04, cheatsheet.md
 - **T&E participation** → ch07 (Task 303)
 - **Task application by programme phase** → cheatsheet.md, Appendix A
-- **User representative** → ch01, ch03, ch05
+- **User representative** → ch03
 
 ## Supporting Files
 

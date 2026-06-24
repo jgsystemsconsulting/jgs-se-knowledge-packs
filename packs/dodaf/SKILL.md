@@ -113,7 +113,7 @@ Key cross-mapping: all 8 viewpoints draw on some subset of these 11 groups; the 
 - **Standards compliance** → ch09
 - **System functions** → ch10
 - **Systems engineering** → ch10, ch11
-- **Traceability (OV to SV)** → ch06, ch10
+- **Traceability (OV to SV)** → ch10
 - **Viewpoint selection** → ch01, ch02
 - **WBS** → ch07
 - **Vocabulary / terminology** → ch03
