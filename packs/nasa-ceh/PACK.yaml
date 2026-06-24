@@ -1,0 +1,27 @@
+slug: nasa-ceh
+title: "NASA Cost Estimating Handbook v4.0"
+publisher: "NASA"
+source_version: "v4.0 (February 2015)"
+license: "Public Domain (US Government work, 17 U.S.C. 105)"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "book-to-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 63
+  chapters: 7
+  built_on: "2026-06-24"
+notes: >
+  US Government work -- a publication of NASA, prepared by US Government employees, and
+  therefore NOT subject to copyright protection in the United States (17 U.S.C. 105). Free
+  to reproduce, transform, and redistribute, including commercially, without permission.
+  Attribution to NASA is a courtesy (carried in the repository NOTICE), not a legal
+  obligation; NASA does not endorse this pack. CAVEAT: the handbook names and discusses
+  third-party and commercial cost tools (e.g. ACEIT, SEER-H/SEER-SEM, PRICE TruePlanning)
+  and cites external standards (OMB Circular A-94, GAO-09-3SP, MIL-HDBK-881C, DoDI 7041.3) --
+  this pack only NAMES those tools and standards and synthesizes the handbook's guidance in
+  original words; it reproduces none of their proprietary or copyrighted text, and the
+  trademarks named remain the property of their owners. No source-material download link is
+  published (see docs/LICENSING.md).
+change_indication: "reconstructed as synthesized reference notes"

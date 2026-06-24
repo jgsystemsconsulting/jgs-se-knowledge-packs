@@ -1,0 +1,34 @@
+gao-schedule pack — content licence
+====================================
+
+This pack is derived from:
+    Schedule Assessment Guide: Best Practices for Project Schedules
+    US Government Accountability Office (GAO), GAO-16-89G
+    December 2015
+
+Source licence: Public Domain (US Government work, 17 U.S.C. 105); GAO reproduction
+notice.  (tier 1 — see ../../docs/SOURCE-VETTING.md)
+No source-material download link is published (see ../../docs/LICENSING.md).
+
+This source is a work of the United States Government, prepared by the GAO, and is
+therefore NOT subject to copyright protection in the United States (17 U.S.C. 105).
+GAO's own notice on the product states:
+
+    "This is a work of the U.S. government and is not subject to copyright protection
+     in the United States. The published product may be reproduced and distributed in
+     its entirety without further permission from GAO."
+
+Caveat (stated by GAO): the published product may contain copyrighted images or other
+material whose separate reproduction could require permission from the copyright holder.
+This pack reproduces no such third-party material — it contains only synthesized,
+transformed reference notes — so the caveat does not apply to this pack's content.
+In particular, two embedded items the source attributes to third parties are paraphrased
+as text rather than reproduced: the cyclic "process for creating and maintaining reliable
+schedules" (Figure 1 / Table 1, adapted from Keith D. Hornbacher) and the strategies-for-
+recovery-and-acceleration table (attributed to GAO and NDIA).
+
+Attribution to GAO is provided as a courtesy (see the repository NOTICE), not a legal
+obligation. GAO does not endorse this pack or its authors.
+
+NOTE: This file governs the CONTENT of this pack. The repository tooling is licensed
+separately under MIT (see ../../LICENSE).

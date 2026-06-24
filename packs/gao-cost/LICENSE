@@ -1,0 +1,39 @@
+gao-cost pack — content licence
+================================
+
+This pack is derived from:
+    GAO Cost Estimating and Assessment Guide (GAO-20-195G)
+    GAO, GAO-20-195G (March 2020)
+
+Source licence: Public Domain (US Government work)  (tier 1 — see ../../docs/SOURCE-VETTING.md)
+No source-material download link is published (see ../../docs/LICENSING.md).
+
+SOURCE TERMS (public domain — US Government work)
+-------------------------------------------------
+Works prepared by officers and employees of the U.S. Government as part of their
+official duties are not subject to copyright protection within the United States
+(17 U.S.C. § 105) and are in the public domain. The GAO Cost Estimating and
+Assessment Guide (GAO-20-195G) is such a work. It may be freely copied, adapted,
+redistributed, and used for any purpose, including commercially, with no royalty
+and no permission required.
+
+Obligations carried forward into this pack:
+  - Attribution: NOT required. (GAO is credited as a courtesy in PACK.yaml.)
+  - Non-commercial restriction: NONE.
+  - Share-alike: NONE — pack content does not inherit a copyleft licence and is
+    released under the repository's MIT licence.
+  - Trademark: "GAO" and the agency's name/seal are not licensed by this notice;
+    do not imply GAO endorsement of this pack.
+
+THIRD-PARTY MATERIAL CAVEAT
+---------------------------
+The source Guide names, cites, and in places embeds third-party material that is
+NOT public domain — including the EIA-748 EVM standard, MIL-STD-881D, the ICEAA
+Cost Estimating Body of Knowledge, AACEI and PMI standards, and example tables
+attributed to ©MCR, LLC and ©ICEAA. This pack references and paraphrases such
+material in original words only and reproduces none of it verbatim; no third-party
+licence is conveyed by, or required for, this pack. Anyone needing the underlying
+standards must obtain them from their respective publishers.
+
+NOTE: This licence governs the CONTENT of this pack and is independent of the
+repository's MIT licence (which covers tooling only).

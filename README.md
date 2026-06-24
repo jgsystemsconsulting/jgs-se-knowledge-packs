@@ -7,8 +7,8 @@ SPDX-License-Identifier: MIT
 
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT%20(tooling)-blue" alt="License: MIT (tooling)">
-  <img src="https://img.shields.io/badge/version-1.9.0-green" alt="Version 1.9.0">
-  <img src="https://img.shields.io/badge/packs-32-blueviolet" alt="32 packs">
+  <img src="https://img.shields.io/badge/version-1.10.0-green" alt="Version 1.10.0">
+  <img src="https://img.shields.io/badge/packs-35-blueviolet" alt="35 packs">
   <img src="https://img.shields.io/badge/tested%20with-Claude%20Code-8A2BE2" alt="Tested with Claude Code">
   <img src="https://img.shields.io/badge/scope-systems%20engineering-orange" alt="Scope: systems engineering">
 </p>
@@ -55,7 +55,7 @@ and install the catalogue for you.
 ```text
 You are installing jgs-se-knowledge-packs, an open catalogue (MIT tooling) of
 systems-engineering knowledge-pack skills by JG Systems Consulting Ltd.
-Repository: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs (version 1.9.0).
+Repository: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs (version 1.10.0).
 Do this in order:
 1. Read README.md, docs/skill-usage.md, and CHANGELOG.md so you understand what you are
    installing. There are NO external prerequisites — packs are plain Markdown skills.
@@ -139,6 +139,9 @@ always-loaded `SKILL.md` index inlined into one file. Full detail and the per-ag
 | `faa-system-safety` | FAA System Safety Handbook (2000) | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
 | `faa-hf-std` | FAA Human Factors Design Standard (HF-STD-001B) | Public domain (US gov) | 🟢 1 | ✅ live (9 chapters) |
 | `dod-mq-bok` | DoD Manufacturing & Quality Engineering BoK (M&Q BoK, OUSD R&E) | Public domain (US gov) | 🟢 1 | ✅ live (6 chapters) |
+| `gao-cost` | GAO Cost Estimating and Assessment Guide (GAO-20-195G) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
+| `gao-schedule` | GAO Schedule Assessment Guide (GAO-16-89G) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
+| `nasa-ceh` | NASA Cost Estimating Handbook v4.0 | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
 | `mit-ocw-se` | MIT OCW Fundamentals of Systems Engineering | CC BY-NC-SA | 🟡 2 | 🔜 planned |
 
 Machine-readable index: [SKILLS.md](SKILLS.md) · [catalog.json](catalog.json).
@@ -189,4 +192,4 @@ and redistribute — including why no source-material links are published — is
 
 ## Version
 
-See [CHANGELOG.md](CHANGELOG.md). Current: 1.9.0.
+See [CHANGELOG.md](CHANGELOG.md). Current: 1.10.0.
