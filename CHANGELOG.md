@@ -9,6 +9,41 @@ All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning follows
 [Semantic Versioning](https://semver.org/).
 
+## [1.13.0] — 2026-06-24
+
+### Added
+
+- **`faa-req-handbook`** (8 ch) — FAA Requirements Engineering Management Handbook (DOT/FAA/AR-08/32,
+  June 2009): writing requirements for real-time, embedded control systems — the avionics/medical
+  slant — via the Handbook's eleven recommended practices: system overview and boundary
+  (monitored/controlled variables), operational concepts (use cases), environmental assumptions,
+  change-tolerant functional architecture (dependency diagrams), safety-driven architecture revision
+  (FHA/PSSA/fault tree), system modes, detailed behavior and performance requirements (ideal value +
+  tolerance + latency), the four-variable model bridge to software requirements (MON/CON/NAT/REQ,
+  IN'/REQ'/OUT', DO-178B mapping), subsystem allocation, and rationale. Carries the Isolette
+  Thermostat and Flight Control System worked examples. Slanted toward control systems with sensors
+  and actuators; thin on information-system / enterprise / agile requirements, on requirements-
+  management tooling, and on the formal-methods internals of SCR/RSML/SpecTRM (named, not re-taught).
+  Names but does not reproduce the IEEE Std 1233/830, RTCA DO-178B/248B/278, and SAE ARP 4754/4761
+  standards it cites. The control-systems-requirements companion to `requirements-writing`,
+  `faa-sem`, and `nasa-npr-7123`. Tier 1 (US-gov public domain).
+- **`sd-22-dmsms`** (8 ch) — SD-22 DMSMS Guidebook (DSPO, FY24 working draft, April 2024): managing
+  Diminished Manufacturing Sources and Material Shortages (DMSMS) and obsolescence across a
+  long-lived system's life cycle — the five-step process (Prepare, Identify, Assess, Analyze,
+  Implement) plus the Strategize overlay; standing up a DMSMS Management Team (DMT) and Management
+  Plan (DMP); risk-based monitoring and surveillance (the risk cube, predictive tools, vendor
+  surveys, GIDEP/DLA PDNs, critical-materials analysis); health assessments and resolution timing;
+  costing and selecting resolutions (life-of-need buys, substitutes, redesign, technology
+  refreshment) by AoA/BCA; and budgeting/executing resolutions through modification funding and the
+  ECP process. Defense-sustainment / DoD-acquisition framing throughout. Does NOT teach general
+  systems engineering, parts-management standards, or contracting law in depth. DRAFT SOURCE — the
+  FY24 working draft's section/figure/table numbers may change in the final release; this pack names
+  artifacts to keep them locatable and reproduces no DoD policy text or the source's tables/figures.
+  The sustainment-and-obsolescence companion to `mrl-deskbook`, `dod-mq-bok`, and `mil-hdbk-61`.
+  Tier 1 (US-gov public domain, Distribution A).
+
+Catalogue now 43 packs (+2 signposts).
+
 ## [1.12.0] — 2026-06-24
 
 ### Added

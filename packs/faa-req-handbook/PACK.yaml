@@ -1,0 +1,27 @@
+slug: faa-req-handbook
+title: "Requirements Engineering Management Handbook (DOT/FAA/AR-08/32)"
+publisher: "DOT/FAA"
+source_version: "June 2009 (Final Report)"
+license: "Public Domain (US Government work)"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "book-to-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 146
+  chapters: 8
+  built_on: "2026-06-24"
+notes: >
+  US Government work prepared for the FAA -- not subject to US copyright. Free to
+  reproduce, transform, and redistribute, including commercially; no attribution
+  or share-alike obligation is carried forward (the courtesy attribution to DOT/FAA
+  lives in the repository NOTICE, not as a legal condition). CAVEAT: the Handbook
+  cites third-party standards that remain (C) their publishers -- IEEE Std 1233 and
+  IEEE Std 830-1998 (IEEE), RTCA DO-178B / DO-248B / DO-278 (RTCA), and SAE ARP 4754
+  / ARP 4761 (SAE). This pack reproduces NONE of those standards; it only NAMES them
+  and describes, in original words, how the Handbook's practices relate to them. Pack
+  content is synthesized, not photocopied -- verified clean of verbatim runs >= 12
+  words against the source via check_overlap.py. No source-material link is published
+  (see docs/LICENSING.md).
+change_indication: "reconstructed as synthesized reference notes"

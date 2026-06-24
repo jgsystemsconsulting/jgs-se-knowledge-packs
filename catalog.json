@@ -454,6 +454,28 @@
       "commercial_use": true,
       "chapters": 8,
       "status": "live"
+    },
+    {
+      "slug": "faa-req-handbook",
+      "title": "FAA Requirements Engineering Management Handbook (DOT/FAA/AR-08/32)",
+      "publisher": "US Department of Transportation, Federal Aviation Administration (DOT/FAA)",
+      "source_version": "DOT/FAA/AR-08/32 (June 2009, Final Report)",
+      "license": "Public Domain (US Government work, 17 U.S.C. 105)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 8,
+      "status": "live"
+    },
+    {
+      "slug": "sd-22-dmsms",
+      "title": "SD-22 DMSMS Guidebook (DSPO, FY24 Working Draft, April 2024)",
+      "publisher": "Defense Standardization Program Office (DSPO)",
+      "source_version": "FY24 Working Draft (April 2024)",
+      "license": "Public Domain (US Government work, 17 U.S.C. 105); Distribution A",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 8,
+      "status": "live"
     }
   ],
   "planned": [

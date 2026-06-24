@@ -483,6 +483,34 @@ Third-party source attributions (one block per shipped pack)
            and the Joint Service/Industry MRL Working Group is courtesy, not obligation; the
            Working Group does not endorse this pack. See packs/mrl-deskbook/LICENSE.
 
+[pack: faa-req-handbook]
+  Source : Requirements Engineering Management Handbook (DOT/FAA/AR-08/32), June 2009
+  Author : US Department of Transportation, Federal Aviation Administration (DOT/FAA)
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. CAVEAT: the Handbook NAMES and relates its practices to
+           third-party standards that remain (C) their publishers -- IEEE Std 1233 and IEEE Std
+           830-1998 (IEEE), RTCA DO-178B / DO-248B / DO-278 (RTCA), and SAE ARP 4754 / ARP 4761
+           (SAE) -- this pack reproduces NONE of those standards, only synthesized notes that
+           name them and describe in original words how the Handbook's practices relate to them.
+           Attribution to the FAA is courtesy, not obligation; the FAA does not endorse this
+           pack. See packs/faa-req-handbook/LICENSE.
+
+[pack: sd-22-dmsms]
+  Source : SD-22 Diminishing Manufacturing Sources and Material Shortages (DMSMS) Guidebook,
+           FY24 Working Draft (April 2024)
+  Author : Defense Standardization Program Office (DSPO)
+  Licence: Public Domain -- US Government work (17 U.S.C. 105); Distribution A
+  Changes: reconstructed as synthesized reference notes from a WORKING-DRAFT source (not a reproduction)
+  Terms  : public domain, no copyright (Distribution A, approved for public release; distribution
+           unlimited). DRAFT SOURCE -- this pack synthesizes the FY24 WORKING DRAFT (April 2024);
+           section/figure/table numbers and some guidance may change in the final FY24 release, so
+           the pack names artifacts to keep them locatable across revisions. CAVEAT: the guidebook
+           cites DoD issuances and appropriations statutes only as constraints -- this pack
+           reproduces NONE of that policy/statutory text, nor the source's tables, figures, or
+           appendix worksheets, only synthesized notes that name them. Attribution to DSPO is
+           courtesy, not obligation; the DoD does not endorse this pack. See packs/sd-22-dmsms/LICENSE.
+
 -----------------------------------------------------------------------------------
 The build pipeline uses the book-to-skill extraction engine (MIT License),
 © the book-to-skill authors. It is a build tool, not a packaged source.

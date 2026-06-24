@@ -1,0 +1,40 @@
+faa-req-handbook pack — content licence
+========================================
+
+This pack is derived from:
+    Requirements Engineering Management Handbook (DOT/FAA/AR-08/32)
+    U.S. Department of Transportation, Federal Aviation Administration (DOT/FAA)
+    June 2009 (Final Report)
+
+Source licence: Public Domain (US Government work)  (tier 1 — see ../../docs/SOURCE-VETTING.md)
+No source-material download link is published (see ../../docs/LICENSING.md).
+
+This Handbook is a Final Report prepared for the Federal Aviation Administration. As a
+work of the United States Government, it is NOT subject to copyright protection in the
+United States (17 U.S.C. § 105) and is in the public domain: anyone may reproduce,
+transform, and redistribute it for any purpose, including commercially, without
+permission and without any attribution or share-alike obligation.
+
+DISCLAIMER (paraphrased from the source's NOTICE): the document was disseminated by the
+U.S. Department of Transportation in the interest of information exchange. The U.S.
+Government assumes no liability for the contents or their use, does not endorse products
+or manufacturers, and the document does not constitute FAA certification policy (the
+source directs readers to consult their local FAA aircraft certification office as to its
+use). This pack inherits that non-endorsement and no-liability posture.
+
+THIRD-PARTY MATERIAL CAVEAT: the Handbook references industry standards that remain the
+copyright of their respective publishers and are NOT in the public domain:
+    - IEEE Std 1233 and IEEE Std 830-1998        © IEEE
+    - RTCA DO-178B, DO-248B, DO-278              © RTCA, Inc.
+    - SAE ARP 4754, ARP 4761                     © SAE International
+This pack reproduces NONE of those standards. It contains only synthesized, transformed
+reference notes that NAME these standards and describe, in original words, how the
+Handbook's recommended practices relate to them. No long verbatim passage of the Handbook
+itself is reproduced either — the pack synthesizes rather than photocopies (verified by
+the repository's check_overlap.py gate).
+
+Attribution to DOT/FAA is provided as a courtesy (see the repository NOTICE), not a legal
+obligation. The FAA does not endorse this pack or its authors.
+
+NOTE: This licence governs the CONTENT of this pack and is independent of the
+repository's MIT licence (which covers tooling only).
