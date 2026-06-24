@@ -1,0 +1,35 @@
+sd-22-dmsms pack — content licence
+===================================
+
+This pack is derived from:
+    SD-22 DMSMS Guidebook (Diminishing Manufacturing Sources and Material Shortages
+        — A Guidebook of Best Practices for Implementing a Robust DMSMS Management Program)
+    DSPO (Defense Standardization Program Office), FY24 Working Draft (April 2024)
+    Obtained via ASSIST (assist.dla.mil)
+
+Source licence: Public Domain (US Government work); Distribution A  (tier 1 — see ../../docs/SOURCE-VETTING.md)
+No source-material download link is published (see ../../docs/LICENSING.md).
+
+This source is a work of the United States Government, prepared under the Defense
+Standardization Program, and is therefore NOT subject to copyright protection in the
+United States. It carries Distribution Statement A (approved for public release;
+distribution unlimited). It is in the public domain: anyone may reproduce, transform,
+and redistribute it for any purpose, including commercially, without permission.
+
+OBLIGATIONS CARRIED FORWARD: none. There is no attribution, non-commercial, or
+share-alike obligation. Attribution to DSPO / the Defense Standardization Program is
+provided as a courtesy (see the repository NOTICE), not a legal requirement. DSPO and
+the Department of Defense do not endorse this pack or its authors.
+
+WORKING-DRAFT CAVEAT: the source is the FY24 *working draft* (April 2024). It states
+that the reader should check the source to verify it is the current version before use,
+and that recommended changes go to the Defense Standardization Program Office. Section,
+figure, and table numbers and some guidance may differ in the final FY24 release. This
+pack synthesizes the draft's stable content in original wording; it reproduces none of
+the source's policy text, tables, figures, or appendix worksheets, and it names DoD
+issuances (DoDI 4140.01 / 5000.x / 4245.15, etc.) and appropriations statutes (31 U.S.C.
+1502(a), 10 U.S.C. 2213, 10 U.S.C. 4323) only as cited constraints — those issuances and
+statutes are themselves US Government works in the public domain.
+
+NOTE: This file governs the CONTENT of this pack. The repository tooling is licensed
+separately under MIT (see ../../LICENSE).
