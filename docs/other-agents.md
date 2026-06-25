@@ -35,6 +35,27 @@ python install.py --agent codex --dry-run   # preview a transform install
 Cursor is **project-local** — its rules install into the current repo's `.cursor/rules/`, so run
 it explicitly per project (`python install.py --agent cursor`); it is excluded from `--agent all`.
 
+## Cursor — two ways in
+
+Cursor (2.5+) can consume the packs **two** ways:
+
+- **Project rules (`--agent cursor`).** The transform above writes each pack's index to
+  `./.cursor/rules/<slug>.mdc` in the current repo — local, no marketplace, works offline.
+- **Marketplace plugin (`.cursor-plugin/`).** The repo also ships a Cursor plugin manifest
+  (`.cursor-plugin/plugin.json` + `marketplace.json`) that registers the packs as native Cursor
+  skills. Install the whole eligible catalogue from Cursor's marketplace, or add this repo
+  directly.
+
+### Publishing to the Cursor marketplace
+
+Cursor's marketplace **manually reviews** every plugin and requires it be **open source**. The
+shipped `.cursor-plugin/plugin.json` therefore lists only the **commercially-redistributable**
+packs (public-domain and CC BY sources) and **excludes** non-commercial (NC) content — currently
+`sebok` (CC BY-NC-SA). NC packs stay available via `install.py` and the Claude Code plugin. To
+publish or update, submit the repo at <https://cursor.com/marketplace/publish>; when packs are
+added, re-check each new source's licence before adding its `./packs/<slug>/SKILL.md` line to the
+plugin's `skills` list.
+
 ## Native vs. transform — what differs
 
 > [!IMPORTANT]

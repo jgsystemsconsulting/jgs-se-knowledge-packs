@@ -10,7 +10,7 @@
     {
       "name": "jgs-se-knowledge-packs",
       "source": ".",
-      "description": "Installable systems-engineering knowledge packs reconstructed from open sources (NASA, NIST, DoD, GAO, FAA, EU AI Act, SEBoK)."
+      "description": "Installable systems-engineering knowledge packs reconstructed from open sources (NASA, NIST, DoD, GAO, FAA, EU AI Act)."
     }
   ]
 }
