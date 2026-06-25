@@ -1,0 +1,30 @@
+{
+  "name": "jgs-se-knowledge-packs",
+  "displayName": "JGS SE Knowledge Packs",
+  "description": "Licence-vetted systems-engineering knowledge-pack skills reconstructed from genuinely open sources (NASA, NIST, DoD, GAO, FAA, EU AI Act, SEBoK). Ask a topic; the agent reads the right chapter and answers from reference notes, not a hazy recollection.",
+  "version": "1.16.1",
+  "author": {
+    "name": "JG Systems Consulting Ltd."
+  },
+  "homepage": "https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs",
+  "repository": "https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs",
+  "license": "MIT",
+  "keywords": [
+    "systems-engineering",
+    "knowledge-packs",
+    "agent-skills",
+    "nasa",
+    "nist",
+    "dod",
+    "requirements",
+    "risk",
+    "safety"
+  ],
+  "category": "developer-tools",
+  "tags": [
+    "systems-engineering",
+    "reference",
+    "skills"
+  ],
+  "skills": "./packs/*/SKILL.md"
+}

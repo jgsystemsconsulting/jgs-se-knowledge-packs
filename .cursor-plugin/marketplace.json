@@ -1,0 +1,16 @@
+{
+  "name": "jgs-se-knowledge-packs",
+  "owner": {
+    "name": "JG Systems Consulting Ltd."
+  },
+  "metadata": {
+    "description": "JG Systems Consulting catalogue of licence-vetted systems-engineering knowledge-pack skills for coding agents."
+  },
+  "plugins": [
+    {
+      "name": "jgs-se-knowledge-packs",
+      "source": ".",
+      "description": "Installable systems-engineering knowledge packs reconstructed from open sources (NASA, NIST, DoD, GAO, FAA, EU AI Act, SEBoK)."
+    }
+  ]
+}
