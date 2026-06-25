@@ -10,7 +10,7 @@ products:
     name: JGS SE Knowledge Packs
     product_class: agent-skills
     status: live
-    version: "1.3.0"
+    version: "1.16.1"
     entry: 01-jgs-se-knowledge-packs.yaml
     tagline: >
       Licence-vetted systems-engineering knowledge-pack skills for coding agents,

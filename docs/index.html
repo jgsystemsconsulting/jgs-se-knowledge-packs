@@ -106,7 +106,7 @@ footer .label{display:block;margin-bottom:8px}
   <span class="label">CLASSIFICATION: <span>PUBLIC</span></span>
   <span class="label">LICENCE: <span>MIT (TOOLING)</span></span>
   <span class="label">DOC-ID: <span>JGS-SE-KP</span></span>
-  <span class="label">REV: <span>1.3.0</span></span>
+  <span class="label">REV: <span>1.16.1</span></span>
 </div></div>
 
 <!-- Hero -->
@@ -134,9 +134,39 @@ footer .label{display:block;margin-bottom:8px}
   </div>
 </div></section>
 
-<!-- §02 Install -->
+<!-- §02 Why it pays off -->
 <section><div class="wrap">
-  <div class="sec-head"><span class="label">§02 — Install</span>
+  <div class="sec-head"><span class="label">§02 — Why it pays off</span>
+    <h2>The standard answers, in the agent, when you need them</h2></div>
+  <div class="cells c2">
+    <div class="cell"><h3>For the engineer</h3><p>Stop breaking flow to dig through a 400-page handbook. Ask <code>/nasa-se-handbook verification vs validation</code> mid-task and get the framework — with the chapter it came from — instead of a plausible-sounding guess. The agent answers from reconstructed reference notes, so you can cite the source, not a hallucination.</p></div>
+    <div class="cell"><h3>For the firm</h3><p>Put the same vetted bodies of knowledge in front of every engineer and every agent — junior or senior, on every project. Reviews, requirements, risk, and safety work trace back to NASA / NIST / DoD / GAO / FAA canon by default, not to whoever happened to remember it. Consistency you can audit, with no per-seat licence and no PDFs to chase.</p></div>
+  </div>
+  <div class="cells c3" style="margin-top:1px">
+    <div class="cell"><h3>Grounded, not guessed</h3><p>Answers route to a specific chapter and name their source. The agent reads the text instead of recalling it — fewer confident wrong answers in domains where that costs you.</p></div>
+    <div class="cell"><h3>Shareable by construction</h3><p>Only genuinely open sources go in, each carrying its own licence. Hand a pack to a teammate, a subcontractor, or a client without a legal review.</p></div>
+    <div class="cell"><h3>Zero lock-in</h3><p>Plain Markdown skills on the open Agent Skills format. No server, no API key, no subscription. They work the same offline as online.</p></div>
+  </div>
+</div></section>
+
+<!-- §03 Using a pack -->
+<section><div class="wrap">
+  <div class="sec-head"><span class="label">§03 — Using a pack</span>
+    <h2>Ask a topic; the agent reads the right chapter</h2></div>
+  <pre><code><span class="muted"># slash-invoke a pack by its slug</span>
+/sebok                       <span class="muted"># load the pack's core frameworks for reference</span>
+/sebok systems of systems    <span class="muted"># a topic — routes to the right chapter and answers</span>
+/nasa-se-handbook ch06       <span class="muted"># a chapter id — load that chapter directly</span>
+/mil-std-882 what chapters do you have?   <span class="muted"># browse the index</span>
+
+<span class="muted"># or just ask — each pack's description makes the agent load it on a match</span>
+"What does the NASA risk handbook say about risk acceptance?"</code></pre>
+  <p style="margin:1.2rem 0 0;max-width:62ch;color:var(--text)">Each pack uses <strong>progressive disclosure</strong>: an always-loaded <code>SKILL.md</code> index decides which single chapter answers your question and loads only that — so a large source never fills the context window. Full detail in <a href="https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/blob/main/docs/skill-usage.md">docs/skill-usage.md</a>.</p>
+</div></section>
+
+<!-- §04 Install -->
+<section><div class="wrap">
+  <div class="sec-head"><span class="label">§04 — Install</span>
     <h2>Clone, install, invoke</h2></div>
   <pre><code>git clone https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs.git
 cd jgs-se-knowledge-packs
@@ -148,9 +178,9 @@ python install.py --list-agents
 python install.py --agent all   <span class="muted"># claude · openclaw · copilot · codex · gemini</span></code></pre>
 </div></section>
 
-<!-- §03 Supported agents -->
+<!-- §05 Supported agents -->
 <section><div class="wrap">
-  <div class="sec-head"><span class="label">§03 — Supported agents</span>
+  <div class="sec-head"><span class="label">§05 — Supported agents</span>
     <h2>Open Agent Skills, many hosts</h2></div>
   <div class="cells c3">
     <div class="cell"><span class="num">3</span><h3>Native</h3><p>Claude Code, OpenClaw, and GitHub Copilot CLI read the <code>SKILL.md</code> format directly — the whole pack is copied, with full progressive disclosure.</p></div>
@@ -159,35 +189,25 @@ python install.py --agent all   <span class="muted"># claude · openclaw · copi
   </div>
 </div></section>
 
-<!-- §04 The catalogue -->
+<!-- §06 The catalogue -->
 <section><div class="wrap">
-  <div class="sec-head"><span class="label">§04 — The catalogue</span>
-    <h2>16 packs &middot; 2 signposts</h2></div>
+  <div class="sec-head"><span class="label">§06 — The catalogue</span>
+    <h2>46 packs &middot; 2 signposts</h2></div>
   <div class="packs">
-    <div class="pk"><b>sebok</b><span>Guide to the SE Body of Knowledge (v2.13)</span></div>
-    <div class="pk"><b>nasa-se-handbook</b><span>NASA Systems Engineering Handbook</span></div>
-    <div class="pk"><b>nasa-npr-7123</b><span>NASA SE processes &amp; requirements</span></div>
-    <div class="pk"><b>nasa-risk</b><span>NASA Risk Management Handbook</span></div>
-    <div class="pk"><b>nasa-system-safety</b><span>NASA System Safety Handbook v2</span></div>
-    <div class="pk"><b>nasa-hsi</b><span>NASA Human Systems Integration Guide</span></div>
-    <div class="pk"><b>nist-ai-rmf</b><span>NIST AI Risk Management Framework 1.0</span></div>
-    <div class="pk"><b>nist-ssdf</b><span>NIST Secure Software Development Framework</span></div>
-    <div class="pk"><b>nist-csf</b><span>NIST Cybersecurity Framework 2.0</span></div>
-    <div class="pk"><b>nist-sse</b><span>NIST SP 800-160 — Systems Security Engineering</span></div>
-    <div class="pk"><b>mil-std-882</b><span>MIL-STD-882E — DoD System Safety</span></div>
-    <div class="pk"><b>dau-se-guidebook</b><span>DoD Systems Engineering Guidebook</span></div>
-    <div class="pk"><b>dodaf</b><span>DoD Architecture Framework 2.02 Vol II</span></div>
-    <div class="pk"><b>gao-tra</b><span>GAO Technology Readiness Assessment Guide</span></div>
-    <div class="pk"><b>eu-ai-act</b><span>EU Artificial Intelligence Act (2024/1689)</span></div>
-    <div class="pk"><b>requirements-writing</b><span>EARS syntax &amp; requirement quality</span></div>
-    <div class="pk"><b>omg-signpost</b><span>Signpost — OMG modelling specs</span></div>
-    <div class="pk"><b>se-standards-signpost</b><span>Signpost — full SE standards landscape</span></div>
+    <div class="pk"><b>NASA &middot; 14</b><span>SE Handbook &amp; Expanded Guidance, NPR 7123 / 7150, risk, system safety, fault management, HSI, PRA, R&amp;M, schedule, cost, digital engineering, systems modeling</span></div>
+    <div class="pk"><b>DoD / DAU / OSD &middot; 11</b><span>SE Guidebook, MIL-STD-882E, DoDAF, MOSA, RIO, digital engineering, M&amp;Q BoK, T&amp;E, MIL-HDBK-61 CM, MRL Deskbook, SD-22 DMSMS</span></div>
+    <div class="pk"><b>NIST &middot; 7</b><span>AI RMF, SSDF, CSF 2.0, SP 800-160 SSE, SP 800-37 RMF, Cyber-Physical Systems, NIST/SEMATECH statistics</span></div>
+    <div class="pk"><b>FAA &middot; 6</b><span>RMA Handbook, Systems Engineering Manual, System Safety, Human Factors Design Std, AMS V&amp;V, Requirements Engineering Management</span></div>
+    <div class="pk"><b>GAO &middot; 4</b><span>Technology Readiness, Cost Estimating, Schedule Assessment, Agile Assessment guides</span></div>
+    <div class="pk"><b>EU / academic / JGS &middot; 4</b><span>EU AI Act 2024/1689, Digital Systems Engineering (arXiv), EARS requirements-writing, plus OMG &amp; SE-standards signposts</span></div>
   </div>
+  <p style="margin:1.4rem 0 0;color:var(--text)">Full list with descriptions and source licences in
+  <a href="https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/blob/main/SKILLS.md">SKILLS.md</a>.</p>
 </div></section>
 
-<!-- §05 Licensing -->
+<!-- §07 Licensing -->
 <section><div class="wrap">
-  <div class="sec-head"><span class="label">§05 — Licensing</span>
+  <div class="sec-head"><span class="label">§07 — Licensing</span>
     <h2>Two separable layers</h2></div>
   <div class="cells c2">
     <div class="cell"><h3>Tooling &amp; scaffolding</h3><p><a href="https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/blob/main/LICENSE">MIT</a> — JG Systems Consulting Ltd. The installer, validator, docs, and repo structure.</p></div>
@@ -199,7 +219,7 @@ python install.py --agent all   <span class="muted"># claude · openclaw · copi
     <p style="margin:.8rem 0 0;max-width:60ch;color:var(--text)">Every pack is reconstructed as synthesized reference notes — never a verbatim reproduction — with per-pack source attribution in <code>NOTICE</code>. No source-material download links are published; attribution travels as text plus the licence deed.</p>
     <div class="tb">
       <span class="label">PRODUCT: <span style="color:var(--text)">JGS-SE-KP</span></span>
-      <span class="label">REV: <span style="color:var(--text)">1.3.0</span></span>
+      <span class="label">REV: <span style="color:var(--text)">1.16.1</span></span>
       <span class="label">VENDOR: <span style="color:var(--text)">JG Systems Consulting Ltd.</span></span>
     </div>
   </div>

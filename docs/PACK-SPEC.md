@@ -53,7 +53,7 @@ source does not contain.** Synthesize compactly; never copy long verbatim passag
 slug: sebok                       # folder name, kebab-case
 title: "Guide to the Systems Engineering Body of Knowledge (SEBoK)"
 publisher: "BKCASE Project (Trustees of the Stevens Institute of Technology)"
-source_version: "v2.13 (2025-11-17)"
+source_version: "v2.14 (2025-11-17)"
 license: "CC BY-NC-SA 3.0"        # the SOURCE licence, verbatim name
 license_tier: 2                   # 1 | 2 | 3  (see docs/SOURCE-VETTING.md)
 commercial_use: false             # false if NC; true if PD or non-NC

@@ -12,7 +12,7 @@ tagline: >
   construction.
 product_class: agent-skills
 status: live
-version: "1.3.0"
+version: "1.16.1"
 repository: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs
 license: MIT (tooling); pack content under each source's own licence
 vendor: JG Systems Consulting Ltd.
@@ -44,12 +44,16 @@ features:
       Each pack is an always-loaded SKILL.md index plus on-demand chapters, a glossary,
       patterns, and a cheatsheet — so a large body of knowledge never fills the context
       window; the agent loads only the chapter your question routes to.
-  - title: 16 packs across the SE landscape
+  - title: 46 packs across the SE landscape
     detail: >
-      NASA SE (handbook, NPR 7123, risk, system safety, HSI), NIST (CSF, SSDF, AI RMF,
-      SP 800-160 systems security engineering), DoD (MIL-STD-882 system safety, DoDAF,
-      SE Guidebook), GAO technology readiness assessment, EU AI Act, SEBoK, and
-      requirements writing (EARS).
+      NASA (14: SE Handbook & Expanded Guidance, NPR 7123/7150, risk, system safety,
+      fault management, HSI, PRA, R&M, schedule, cost, digital engineering, modeling),
+      DoD/DAU/OSD (11: SE Guidebook, MIL-STD-882, DoDAF, MOSA, RIO, M&Q BoK, T&E,
+      MIL-HDBK-61 CM, MRL, SD-22 DMSMS), NIST (7: AI RMF, SSDF, CSF, SP 800-160 SSE,
+      SP 800-37 RMF, cyber-physical systems, statistics), FAA (6: RMA, SEM, system safety,
+      human factors, AMS V&V, requirements management), GAO (4: technology readiness, cost,
+      schedule, agile), plus EU AI Act, arXiv digital systems engineering, and EARS
+      requirements writing.
   - title: Standards signposts
     detail: >
       Two citation-only signposts map the parts of the landscape that can't be packaged —
