@@ -8,6 +8,11 @@ description: "Knowledge base synthesized from the Guide to the Systems Engineeri
 # SEBoK — Guide to the Systems Engineering Body of Knowledge (v2.14)
 **Source**: BKCASE Project, Trustees of the Stevens Institute of Technology | **Licence**: CC BY-NC-SA 3.0 (non-commercial) | **Chapters**: 36
 
+## When to use
+Use this skill when you need to reason about the established systems engineering canon as codified in SEBoK v2.14 (released 2026-05-18) by the BKCASE Project. This pack covers SE fundamentals and foundations (systems science, systems thinking, the systems approach, and MBSE), the full life cycle per ISO/IEC/IEEE 15288/24748/24774, technical management, concept definition, architecture and realization (the Vee), V&V, maintenance and sustainment, SE standards, and application contexts including product, service, enterprise, systems-of-systems, and healthcare. Reach for it when you need grounding in SE background, vocabulary, or prior-art positions across any of the eight SEBoK Parts.
+
+**Prerequisites:** none, plain Markdown; no MCP server, API key, or licence tier needed at runtime.
+
 ## How to Use This Skill
 - **Without arguments** — load the Core Frameworks below: what the SEBoK is, the eight Parts, the foundations stack (systems science → systems thinking → systems approach), the life-cycle/process spine, and the application contexts.
 - **With a topic** — ask about a concept (e.g. "emergence", "engineered system context"), a process (e.g. "architecture definition", "tailoring", "maintenance"), an application context (product/service/enterprise/SoS/healthcare), or a standard (15288, 24748, 24774).

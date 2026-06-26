@@ -8,6 +8,11 @@ description: "Knowledge base from the NIST/SEMATECH e-Handbook of Statistical Me
 # NIST/SEMATECH e-Handbook of Statistical Methods (NIST HB 151)
 **Source**: NIST/SEMATECH (US Government work, public domain) | **Chapters**: 8
 
+## When to use
+Use this skill when you need applied frequentist statistics for engineering, metrology, or quality work, drawing from the NIST/SEMATECH e-Handbook of Statistical Methods (NIST HB 151). It is the right pack for exploratory data analysis and the four univariate assumptions (4-plot), measurement process characterization including bias/precision, calibration designs, gauge R&R, and ISO/GUM uncertainty budgets, production process characterization covering stability vs. capability, process modeling and regression (LS/WLS/NLS/LOESS), design of experiments (screening, fractional/factorial, response-surface, Taguchi), statistical process control (Shewhart/CUSUM/EWMA charts, capability indices, acceptance sampling), product/process comparisons (hypothesis tests and confidence intervals for one, two, or more groups, ANOVA, multiple comparisons), and reliability (lifetime and repair-rate models, accelerated testing, reliability growth).
+
+**Prerequisites:** none, plain Markdown; no MCP server, API key, or licence tier needed at runtime.
+
 ## How to Use This Skill
 - **Without arguments** — load the Core Frameworks below: the EDA mindset, the
   characterization→modeling→improvement→control→comparison→reliability arc, and the

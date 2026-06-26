@@ -8,6 +8,11 @@ description: "Knowledge base from the DoD Digital Engineering Strategy (2018, OU
 # DoD Digital Engineering Strategy (2018)
 **Source**: OUSD R&E / ODASD(SE) (US Government work, public domain) | **Chapters**: 7
 
+## When to use
+Use this skill when you need to reason about the Department of Defense Digital Engineering Strategy (2018, OUSD/ODASD(SE)) and its five goals: (1) formalize the development, integration, and use of models; (2) provide an enduring authoritative source of truth; (3) incorporate technological innovation; (4) establish supporting infrastructure and environments; and (5) transform the culture and workforce. This pack also covers model formalisms, provenance, governance and access control of the authoritative source of truth, and the coordinate-plan-pilot-sustain rollout sequence. It is a vision-and-policy source, not a how-to method or tool tutorial.
+
+**Prerequisites:** none, plain Markdown; no MCP server, API key, or licence tier needed at runtime.
+
 ## How to Use This Skill
 
 - **Without arguments** — load the Core Frameworks below: the definition of digital engineering, the five goals, and the central mental-model shifts.

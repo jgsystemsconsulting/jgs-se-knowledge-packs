@@ -8,6 +8,11 @@ description: "Knowledge base from the NASA Probabilistic Risk Assessment Procedu
 # NASA PRA Procedures Guide (NASA/SP-2011-3421, 2nd ed.)
 **Source**: NASA (US Government work, public domain) | **Chapters**: 8
 
+## When to use
+Use this skill when you need to conduct or review quantitative Probabilistic Risk Assessment (PRA) of aerospace and safety-critical systems using the NASA PRA Procedures Guide (NASA/SP-2011-3421, 2nd ed.). It covers the risk triplet and scenario logic stack (MLD, ESD, event trees, fault trees, and minimal cut sets), Bayesian data collection and parameter estimation, aleatory and epistemic uncertainty modeling, common-cause failure treatment (Alpha Factor and beta-factor models), human reliability analysis methods (THERP, CREAM, NARA, and SPAR-H), context-based software risk modeling (CSRM), physics-based limit-state and structural models, and uncertainty propagation with importance measures. Use it when building or auditing a NASA-standard PRA model, when selecting HRA methods, or when quantifying launch-abort risk scenarios. For the qualitative RIDM and CRM decision framework, use the nasa-risk pack instead.
+
+**Prerequisites:** none, plain Markdown; no MCP server, API key, or licence tier needed at runtime.
+
 ## How to Use This Skill
 - **Without arguments** — load the core frameworks below; they are the working toolkit, not a summary.
 - **With a topic** — ask about fault trees, Bayesian updating, common-cause failure, human error probabilities, software risk, stress-strength models, uncertainty propagation, importance measures, or launch abort; the relevant chapter is read on demand.

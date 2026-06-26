@@ -8,6 +8,11 @@ description: "Knowledge base from the NASA Schedule Management Handbook (2024 ed
 # NASA Schedule Management Handbook (2024 ed., Rev 2)
 **Source**: NASA (US Government work, public domain) | **Pages**: ~409 | **Chapters**: 8
 
+## When to use
+Use this skill when you need to apply NASA's scheduling doctrine to aerospace or large engineering programs. It covers the full life cycle of an Integrated Master Schedule (IMS): planning the Schedule Management Plan (SMP), building the WBS/OBS/CBS breakdown structures, performing Critical Path Method analysis, managing margin vs. float, running Schedule Risk Analysis (SRA) and Integrated Cost-Schedule Risk Analysis (ICSRA) with Monte Carlo simulation, computing the Joint Confidence Level (JCL), and maintaining or controlling the baseline with EVM schedule metrics. The content is grounded in NPR 7120.5 and the GAO Schedule Assessment Guide and is anchored to the 2024 second edition of the NASA Schedule Management Handbook.
+
+**Prerequisites:** none, plain Markdown; no MCP server, API key, or licence tier needed at runtime.
+
 ## How to Use This Skill
 - **Without arguments** — load the core frameworks below; they are the working toolkit, not a summary.
 - **With a topic** — ask about the IMS, the SMP, WBS/OBS/CBS, critical path, margin vs. float, the Shock Test, schedule assessment, SRA/ICSRA, the JCL, replan vs. rebaseline, EVM schedule metrics, or schedule reporting; the relevant chapter is read on demand.

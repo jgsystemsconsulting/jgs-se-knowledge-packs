@@ -10,6 +10,11 @@ description: "Knowledge base from FAA-HDBK-006D (2020), the FAA's System Reliabi
 
 > **Caveat — read first.** This pack is built on **FAA-HDBK-006D (2020)**, which supersedes 006C v1.1 (2015). Cite the **006D** revision, not 006B. The handbook itself states it is **guidance only and must not be cited as a requirement**.
 
+## When to use
+Use this skill when you need to apply FAA-HDBK-006D (2020) guidance on Reliability, Maintainability, and Availability (RMA) for National Airspace System hardware and software. It covers RMA figures of merit (MTBF, MTBO, MTTR, and the availability variants), statistical distributions and the bathtub curve, the four-stage RMA lifecycle mapped to the FAA Acquisition Management System, service-thread criticality and NAS-RD severity-to-target requirements, and the full RMA analysis toolbox including RBD, FMEA/FMECA, FTA, Monte Carlo, and FRACAS. Use it when writing RMA requirements for a Program Requirements Document or when selecting and applying RMA analysis methods on a FAA/NAS program.
+
+**Prerequisites:** none, plain Markdown; no MCP server, API key, or licence tier needed at runtime.
+
 ## How to Use This Skill
 
 - **Without a topic** — load the Core Frameworks below: the three pillars and dependability, figures of merit, the four-stage lifecycle, criticality/severity, the analysis toolbox, and the software-reliability split.

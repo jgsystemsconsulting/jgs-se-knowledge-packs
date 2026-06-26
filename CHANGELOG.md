@@ -9,6 +9,15 @@ All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning follows
 [Semantic Versioning](https://semver.org/).
 
+## [1.16.3]: 2026-06-26
+
+### Added
+- Browsable, filterable pack-reference page (`docs/packs.html`), generated from `SKILLS.md` by `tooling/gen_packs_page.py`, linked from the landing page (RR-B-30). Lists all 48 skills with source licence and coverage; client-side filter, no third-party assets.
+- Release-gate checks for RR-S-13 (every pack's `SKILL.md` has a `## When to use` section) and RR-B-30 (`packs.html` exists, is em-dash-free, and matches a fresh generation so it cannot drift).
+
+### Fixed
+- Added the missing `## When to use` section to 12 packs that predated the RR-S-13 requirement (sebok, faa-rma, faa-sem, faa-ams-vv, mil-hdbk-61, nasa-pra, nasa-rm-standard, nasa-schedule, nasa-se-expanded, nist-stat-handbook, digital-systems-engineering, dod-digital-engineering).
+
 ## [1.16.2]: 2026-06-26
 
 ### Added

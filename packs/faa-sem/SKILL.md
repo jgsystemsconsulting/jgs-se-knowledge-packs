@@ -8,6 +8,11 @@ description: "Knowledge base from the FAA Systems Engineering Manual (SEM) v1.0.
 # FAA Systems Engineering Manual (SEM) v1.0.1
 **Source**: FAA — US Government work, public domain | **Chapters**: 7
 
+## When to use
+Use this skill when you need to apply the FAA Systems Engineering Manual (SEM v1.0.1) to civil-agency SE work inside the FAA Acquisition Management System (AMS) and the National Airspace System (NAS). It covers the five-phase AMS lifecycle and its decision points, operational concept development and implementation-free functional analysis, requirements analysis and architectural design synthesis (including the pPRD to fPRD maturity ratchet), the seven technical management disciplines (SEMP, interface management, risk/issue/opportunity, configuration management, SE information management, decision analysis, and V&V), and specialty disciplines including RMA via Service Threads, human factors, information security via the NIST RMF, and system safety via the SMS. Use it when planning or executing SE activities on an FAA program and when you need to understand which SEM discipline or process applies to a given lifecycle decision.
+
+**Prerequisites:** none, plain Markdown; no MCP server, API key, or licence tier needed at runtime.
+
 ## How to Use This Skill
 - **Without arguments** — load the Core Frameworks below for the AMS lifecycle backbone, the front-end concept/functional/requirements/architecture flow, the seven technical management disciplines, and the specialty disciplines.
 - **With a topic** — ask about an AMS phase or decision point, a front-end process (ConOps, functional analysis, FFBD/N², CMLs), requirements (PRS→MRS, the pPRD→iPRD→fPRD ratchet, CPRs, VRTM), architecture (RAM, ISEF/DoDAF views, the design vs. requirements loops), a technical-management discipline (SEMP, interfaces/IRD-ICD, RIO risk, CM/baselines, SEIM, decision analysis, V&V), or a specialty (RMA/Service Threads, LCE/ILS, E3/Spectrum, Human Factors, Information Security/RMF, System Safety/SMS, environmental/EOSH).

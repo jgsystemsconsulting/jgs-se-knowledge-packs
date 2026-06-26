@@ -8,6 +8,11 @@ description: "Knowledge base from MIL-HDBK-61B, the DoD Configuration Management
 # MIL-HDBK-61B — Configuration Management
 **Source**: DoD (US Government work, public domain; Distribution A) | **Chapters**: 8
 
+## When to use
+Use this skill when you need to apply MIL-HDBK-61B guidance on DoD Configuration Management (CM) across the acquisition and sustainment lifecycle. It covers the five CM functions (planning, identification, control, status accounting, and verification and audit), the three configuration baselines (FBL, ABL, and PBL) and their documentation sets, configuration item selection and management, change instruments (ECP, NOR, and RFV), CCB authority and Class I/II classification, FCA/PCA audits, data management and DFARS data rights, and tailoring CM by phase using the EIA-649-1 framework. Use it when establishing or reviewing a CM program on a DoD acquisition, when classifying a proposed engineering change, or when planning configuration audits.
+
+**Prerequisites:** none, plain Markdown; no MCP server, API key, or licence tier needed at runtime.
+
 ## How to Use This Skill
 - **Without arguments** — load the Core Frameworks below: the five CM functions, the three baselines, the change instruments, the audit pair, and how DM/tailoring frame them.
 - **With a topic** — ask about a function (identification, control, CSA, audit), a baseline (FBL/ABL/PBL), a change instrument (ECP/NOR/RFV), an authority (CCB/CDCA/AA), an audit (FCA/PCA), data rights/CDRL, MOSA, or phase tailoring (R/T/NR).

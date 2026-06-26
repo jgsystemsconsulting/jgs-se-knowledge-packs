@@ -8,6 +8,11 @@ description: "Knowledge pack from 'Towards Digital Engineering: The Advent of Di
 # Digital Systems Engineering (Towards Digital Engineering)
 **Source**: Huang, Gheorghe, Handley, Pazos, Pinto, Kovacic, Collins, Keating, Sousa-Poza, Rabadi, Unal, Cotter, Landaeta, Daniels — Old Dominion University | **Version**: arXiv:2002.11672 (2020 preprint; paper in press at *Int. J. System of Systems Engineering*) | **Pages**: ~28 | **Chapters**: 7 | **Licence**: CC BY 4.0 | **Generated**: 2026-06-22
 
+## When to use
+Use this skill when you need to reason about digital engineering concepts drawn from the 2020 Old Dominion University vision paper (arXiv:2002.11672, Huang et al.). This pack covers the DoD Digital Engineering Strategy and its five goals, the Authoritative Source of Truth, the distinction between digitalization and digitization, digital augmentation, digitalized models, provenance, unique identification, and the four-level (vision/strategy/action/foundation) DSE research framework. It is the right starting point for the conceptual and vision layer of digital systems engineering; pair it with the sebok pack for established SE canon and MBSE depth.
+
+**Prerequisites:** none, plain Markdown; no MCP server, API key, or licence tier needed at runtime.
+
 ## How to Use This Skill
 
 - **Without arguments** — load the Core Frameworks below for reference.

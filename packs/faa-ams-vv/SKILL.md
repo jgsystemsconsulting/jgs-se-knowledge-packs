@@ -8,6 +8,11 @@ description: "Knowledge base from the FAA AMS Lifecycle V&V Guidelines (verifica
 # FAA AMS Lifecycle V&V Guidelines (Verification and Validation) — Version 3.0, April 2017
 **Source**: Federal Aviation Administration (FAA) — US Government work, public domain | **Chapters**: 7
 
+## When to use
+Use this skill when you need to apply verification and validation across the FAA Acquisition Management System (AMS) lifecycle, as defined in the FAA AMS Lifecycle V&V Guidelines Version 3.0 (April 2017). This pack covers the verify-vs-validate distinction (built right vs. right thing), the work-product/component/product tiers, the nine V&V planning elements, the four method catalogs (Appendix C), decision-point-gated V&V across AMS phases (SASP, CRD, Investment Analysis, Solution Implementation, In-Service Management), the Appendix B document checklists (PRD/APB/ISPD/PMP), and the DT/OT/IOA test triad. Pair it with the FAA SEM pack for the surrounding AMS lifecycle context.
+
+**Prerequisites:** none, plain Markdown; no MCP server, API key, or licence tier needed at runtime.
+
 ## How to Use This Skill
 
 - **Without arguments** — load the Core Frameworks below for the verify-vs-validate split, the three V&V tiers, the four method catalogs, and how V&V gates each AMS decision point.

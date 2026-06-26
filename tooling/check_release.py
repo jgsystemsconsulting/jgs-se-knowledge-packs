@@ -124,6 +124,35 @@ def main() -> int:
         fail(errs, f"[pack] validate_pack failed to run: {e}")
         packs = []
 
+    # 5b. RR-S-13: every content pack's SKILL.md has a '## When to use' section and a
+    #     prerequisites marker (skip signposts, which carry minimal frontmatter-only bodies).
+    for pack in packs:
+        skill = pack / "SKILL.md"
+        if not skill.is_file():
+            continue
+        body = skill.read_text(encoding="utf-8", errors="ignore")
+        if not re.search(r"^##\s*When to use\s*$", body, re.M | re.I):
+            fail(errs, f"[rr-s-13:{pack.name}] SKILL.md missing '## When to use' section")
+        if not re.search(r"Prerequisites|Requirements|^compatibility:", body, re.M | re.I):
+            fail(errs, f"[rr-s-13:{pack.name}] SKILL.md missing a prerequisites marker")
+
+    # 5c. RR-B-30: docs/packs.html exists, is em-dash-free, has no third-party asset, and
+    #     matches a fresh generation from SKILLS.md (generated artifact must not drift, RR-B-00).
+    packs_html = ROOT / "docs" / "packs.html"
+    if not packs_html.is_file():
+        fail(errs, "[rr-b-30] docs/packs.html missing")
+    else:
+        ph = packs_html.read_text(encoding="utf-8")
+        if "—" in ph:
+            fail(errs, "[rr-b-30] docs/packs.html contains an em dash")
+        try:
+            import gen_packs_page  # type: ignore
+            fresh = gen_packs_page.render(gen_packs_page.parse_skills(), gen_packs_page.version())
+            if fresh != ph:
+                fail(errs, "[rr-b-30] docs/packs.html is stale; rerun tooling/gen_packs_page.py")
+        except Exception as e:
+            fail(errs, f"[rr-b-30] cannot verify packs.html generation: {e}")
+
     # 6. SKILLS.md entry count == pack count
     skills = (ROOT / "SKILLS.md").read_text(encoding="utf-8") if (ROOT / "SKILLS.md").is_file() else ""
     signpost_names = {d.name for d in signpost_dirs}

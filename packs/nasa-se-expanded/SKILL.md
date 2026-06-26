@@ -8,6 +8,11 @@ description: "Knowledge base from the Expanded Guidance for NASA Systems Enginee
 # Expanded Guidance for NASA Systems Engineering (NASA/SP-2016-6105-SUPPL, Vol 1, March 2016)
 **Source**: NASA — US Government work, public domain | **Chapters**: 6 | **Role**: depth supplement to `nasa-se-handbook`
 
+## When to use
+Use this skill when you need practitioner-depth mechanics that the NASA SE Handbook compresses into brief statements. It is the right pack for questions about the SE Engine's per-phase cadence and the iterative-vs-recursive distinction, life-cycle tailoring vs. customization and the Compliance Matrix, the recursive system-design consistency loop (ConOps vs. Operations Concept, requirement flow/type/ownership, successive refinement), product realization cardinality (verify/qualify/accept/certify, protoflight, end-to-end coverage), and crosscutting technical-management procedures such as six-step scheduling, cost-estimating method selection, the JCL scatterplot, the interface document family (IRD/ICD/IDD), RIDM/CRM, CM baselines, EVM arithmetic, the MOE/MOP/KPP/TPM hierarchy, required leading indicators, and the decision-analysis method catalog. Pair it with the nasa-se-handbook pack, which supplies the base survey-level definitions this supplement assumes.
+
+**Prerequisites:** none, plain Markdown; no MCP server, API key, or licence tier needed at runtime.
+
 ## How to Use This Skill
 This pack is the **expanded-guidance depth layer** over the base `nasa-se-handbook`. It assumes you already know the standard definitions (the 17 processes, ConOps, MOEs, the V&V split, PBS/WBS, the risk triplet) and instead supplies the *operating mechanics* — the procedures, the cardinality patterns, the decision trees, and the named pitfalls the handbook compresses to a sentence. For survey-level orientation, read the handbook pack first; come here for "how does this actually run, and what goes wrong."
 

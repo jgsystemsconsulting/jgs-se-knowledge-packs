@@ -8,6 +8,11 @@ description: "Knowledge base from NASA-STD-8729.1A — NASA's R&M (Reliability a
 # NASA Reliability & Maintainability Standard (NASA-STD-8729.1A, Rev A, 2017-06-13)
 **Source**: NASA — US Government work, public domain | **Chapters**: 6
 
+## When to use
+Use this skill when you need to work with NASA's reliability and maintainability requirements for spaceflight and support systems under NASA-STD-8729.1A (Revision A, 2017). It is the right pack when you need to understand the objectives-driven R&M framework: how the Top Objective and its four sub-objectives are established, how R&M requirements are embedded in the SMA Plan required by NPR 7120.5, and how the SMA Technical Authority concurrence and milestone/readiness review gates operate. Reach for it when reasoning about availability (Inherent Ai vs. Operational Ao), the failure causal chain, or selecting an evidentiary analysis method such as FMEA, FMECA, FTA, RBDA, RCM, or LORA for NASA missions.
+
+**Prerequisites:** none, plain Markdown; no MCP server, API key, or licence tier needed at runtime.
+
 ## How to Use This Skill
 - **Without arguments** — load the core frameworks below for an overview of the objectives-driven R&M framework, the objectives hierarchy, the SMA Plan / Technical Authority governance, and the analysis vocabulary.
 - **With a topic** — ask about a specific objective or strategy, the SMA Plan and how R&M requirements are established, the milestone vs. readiness review gates, the Ai/Ao availability split, the failure causal chain, or a named analysis (FMEA, FMECA, FTA, RBDA, RCM, LORA, Worst Case Analysis, etc.).
