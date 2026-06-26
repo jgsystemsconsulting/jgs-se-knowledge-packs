@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2026 JG Systems Consulting Ltd. — MIT License (see ../LICENSE).
+Copyright (c) 2026 JG Systems Consulting Ltd. MIT License (see ../LICENSE).
 SPDX-License-Identifier: MIT
 -->
 
@@ -25,43 +25,43 @@ That is redistribution plus derivative work. It needs an actual grant.
 A source must land in **Tier 1 or Tier 2** to be packaged. Tier 3 is case-by-case and
 needs a written rationale in the pack's `PACK.yaml`. The Excluded tier is a hard stop.
 
-### 🟢 Tier 1 — Public domain (maximum freedom)
+### 🟢 Tier 1: Public domain (maximum freedom)
 
 Works with no copyright, or an explicit public-domain dedication. Reproduce, transform,
 and redistribute freely. Attribution is courtesy, not obligation.
 
-- **US Government works** — not subject to copyright in the US (17 U.S.C. § 105).
+- **US Government works**: not subject to copyright in the US (17 U.S.C. § 105).
   Examples: NASA, NIST, US DoD, FAA publications.
 - Look for a **Distribution Statement A** ("Approved for public release; distribution is
   unlimited") on defense documents, or a US-gov-authorship statement.
 - CC0 / explicit public-domain dedication.
 
-### 🟡 Tier 2 — Open licence (shareable with conditions)
+### 🟡 Tier 2: Open licence (shareable with conditions)
 
 A licence that grants redistribution and (ideally) derivative works. The pack **must
 carry the source's conditions forward**: attribution, share-alike, non-commercial,
 trademark limits.
 
-- **Creative Commons** BY, BY-SA, BY-NC, BY-NC-SA. (NC and SA propagate to the pack —
+- **Creative Commons** BY, BY-SA, BY-NC, BY-NC-SA. (NC and SA propagate to the pack;
   see "Carrying conditions forward" below.)
 - Permissive software/content licences (MIT, Apache-2.0, BSD) where they cover the text.
 
-> **Not Tier 2 — OMG specifications.** The OMG Specification License *looks* open but its
-> public grant is informational-use-only (no network posting, no modification — see the
+> **Not Tier 2: OMG specifications.** The OMG Specification License *looks* open but its
+> public grant is informational-use-only (no network posting, no modification; see the
 > Excluded list). Do not classify OMG specs as Tier 2.
 
-### 🟠 Tier 3 — Caution (verbatim-only or unclear grant)
+### 🟠 Tier 3: Caution (verbatim-only or unclear grant)
 
 Package only with an explicit written justification in `PACK.yaml` and, where the grant
 is ambiguous, a note that the maintainers judged it defensible (or sought permission).
 
 - **No-derivatives clauses** (e.g. CC BY-ND). A knowledge pack transforms the source, so a
-  strict no-derivatives source is normally **not** packageable — at most a verbatim excerpt
-  with heavy citation. Prefer to exclude. (OMG specs are fully **Excluded** — see below.)
+  strict no-derivatives source is normally **not** packageable, at most a verbatim excerpt
+  with heavy citation. Prefer to exclude. (OMG specs are fully **Excluded**; see below.)
 - **"Freely available" with no stated licence.** Free download ≠ redistribution grant.
   Treat as Excluded until a real grant is found or permission is obtained.
 
-### 🔴 Excluded — read-only, not redistributable (hard stop)
+### 🔴 Excluded: read-only, not redistributable (hard stop)
 
 These are valuable and you may *read and cite* them, but you may **not** package them.
 This list exists so the repo never ships something that triggers a takedown.
@@ -88,24 +88,24 @@ This list exists so the repo never ships something that triggers a takedown.
 
 When a source is Tier 2, the pack inherits its obligations:
 
-- **Attribution (BY)** — `PACK.yaml` records title, author/publisher, version, URL; the
+- **Attribution (BY)**: `PACK.yaml` records title, author/publisher, version, URL; the
   pack `LICENSE` file reproduces the source notice.
-- **Share-alike (SA)** — the pack's *content* is released under the same licence as the
+- **Share-alike (SA)**: the pack's *content* is released under the same licence as the
   source (not the repo's MIT). State this in the pack `LICENSE`.
-- **Non-commercial (NC)** — the pack is flagged `commercial_use: false` in `PACK.yaml`.
+- **Non-commercial (NC)**: the pack is flagged `commercial_use: false` in `PACK.yaml`.
   The repo tooling (MIT) is separate from pack *content* licences.
-- **Trademark / no-endorsement** — do not imply the source's authors endorse the pack;
+- **Trademark / no-endorsement**: do not imply the source's authors endorse the pack;
   do not use a trademarked spec name on a transformed work (OMG rule).
 
 The repository tooling and scaffolding are MIT. **Pack content licences are independent
-and per-pack** — a pack folder always contains its own `LICENSE`.
+and per-pack**: a pack folder always contains its own `LICENSE`.
 
 ---
 
 ## The vetting checklist (run before opening a pack PR)
 
 1. [ ] Identified the exact source document, version, and publisher. (Read the source's
-   own licence to vet it — the source URL is used for vetting only, never published.)
+   own licence to vet it; the source URL is used for vetting only, never published.)
 2. [ ] Found the **licence statement** in the source itself (not a third-party claim).
 3. [ ] Assigned a tier (1 / 2 / 3) with the licence named.
 4. [ ] Source is **not** on the Excluded list.
@@ -113,12 +113,12 @@ and per-pack** — a pack folder always contains its own `LICENSE`.
 6. [ ] If Tier 3: written justification present.
 7. [ ] Pack folder contains a `LICENSE` reproducing the source's terms.
 8. [ ] `PACK.yaml` `title`, `publisher`, `license`, `license_tier`, `commercial_use`
-   filled — textual attribution, **no source-material URL published** (see LICENSING.md).
+   filled: textual attribution, **no source-material URL published** (see LICENSING.md).
 
 CI enforces 4, 7, and 8 mechanically (`tooling/validate_pack.py`). Tiers 1–3 judgement
 is human and reviewed on the PR.
 
 > **Link policy.** Source-material URLs are recorded during vetting but are **not**
 > published anywhere in a pack or the docs. Attribution travels as text (title +
-> publisher + version + licence) plus the licence-deed link — which the licences accept.
+> publisher + version + licence) plus the licence-deed link, which the licences accept.
 > See [LICENSING.md](LICENSING.md) §4.

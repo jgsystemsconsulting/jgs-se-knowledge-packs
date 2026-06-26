@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2026 JG Systems Consulting Ltd. — MIT License (see LICENSE).
+Copyright (c) 2026 JG Systems Consulting Ltd. MIT License (see LICENSE).
 SPDX-License-Identifier: MIT
 -->
 
@@ -23,7 +23,7 @@ There is **no bug-bounty programme**; reports are handled on a best-effort basis
 This catalogue's integrity depends on every pack being lawfully redistributable. If you
 believe a pack misrepresents its source's licence, includes Excluded-source material, or
 otherwise should not be redistributed, report it to the same address with the `licensing`
-subject line. **Licensing reports are triaged first** — we would rather pull a pack than
+subject line. **Licensing reports are triaged first:** we would rather pull a pack than
 ship one that should not be redistributed. See [docs/SOURCE-VETTING.md](docs/SOURCE-VETTING.md)
 and [docs/LICENSING.md](docs/LICENSING.md).
 

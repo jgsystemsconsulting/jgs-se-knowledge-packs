@@ -31,3 +31,7 @@ Thumbs.db
 
 # Cross-repo handoff note — describes work for OTHER repos, not a deliverable here (kept local)
 docs/RELEASE-STANDARD-REPO-PLAN.md
+
+# Interview-prep artifacts (not part of the knowledge-packs product; kept local)
+System_Retirement_SE_Interview*.pptx
+build_retirement_pptx.js

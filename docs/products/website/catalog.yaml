@@ -1,7 +1,7 @@
-# Copyright (c) 2026 JG Systems Consulting Ltd. — MIT License (see ../../../LICENSE).
+# Copyright (c) 2026 JG Systems Consulting Ltd. MIT License (see ../../../LICENSE).
 # SPDX-License-Identifier: MIT
 #
-# RR-B-19 product catalogue — the source the public website is generated from
+# RR-B-19 product catalogue: the source the public website is generated from
 # (see the refresh-website-content skill). One entry per product YAML in this dir.
 # Features / positioning only. NO pricing.
 
@@ -10,7 +10,7 @@ products:
     name: JGS SE Knowledge Packs
     product_class: agent-skills
     status: live
-    version: "1.16.1"
+    version: "1.16.2"
     entry: 01-jgs-se-knowledge-packs.yaml
     tagline: >
       Licence-vetted systems-engineering knowledge-pack skills for coding agents,

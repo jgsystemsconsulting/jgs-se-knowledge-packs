@@ -6,7 +6,7 @@ Copyright (c) 2026 JG Systems Consulting Ltd.
 
 This product contains two separately licensed layers:
 
-1. TOOLING & SCAFFOLDING (MIT License — JG Systems Consulting Ltd.)
+1. TOOLING & SCAFFOLDING (MIT License, JG Systems Consulting Ltd.)
    Everything outside packs/<slug>/: tooling/, docs/, installers, CI, repo structure.
 
 2. PACK CONTENT (each under its upstream open source's own licence)
@@ -30,7 +30,7 @@ Third-party source attributions (one block per shipped pack)
 [pack: nasa-se-handbook]
   Source : NASA Systems Engineering Handbook (NASA/SP-2016-6105 Rev 2)
   Author : NASA
-  Licence: Public Domain — US Government work (17 U.S.C. 105)
+  Licence: Public Domain, US Government work (17 U.S.C. 105)
   Changes: reconstructed as synthesized reference notes (not a reproduction)
   Terms  : public domain, no copyright. Attribution to NASA is courtesy, not
            obligation; NASA does not endorse this pack. See packs/nasa-se-handbook/LICENSE.
@@ -60,7 +60,7 @@ Third-party source attributions (one block per shipped pack)
            obligation; NIST does not endorse this pack. See packs/nist-csf/LICENSE.
 
 [pack: nasa-npr-7123]
-  Source : NASA NPR 7123.1D — Systems Engineering Processes and Requirements
+  Source : NASA NPR 7123.1D: Systems Engineering Processes and Requirements
   Author : NASA
   Licence: Public Domain -- US Government work (17 U.S.C. 105)
   Changes: reconstructed as synthesized reference notes (not a reproduction)
@@ -92,7 +92,7 @@ Third-party source attributions (one block per shipped pack)
            obligation; NASA does not endorse this pack. See packs/nasa-hsi/LICENSE.
 
 [pack: mil-std-882]
-  Source : MIL-STD-882E — DoD Standard Practice: System Safety (w/Change 1)
+  Source : MIL-STD-882E, DoD Standard Practice: System Safety (w/Change 1)
   Author : US Department of Defense
   Licence: Public Domain -- US Government work (17 U.S.C. 105); Distribution A
   Changes: reconstructed as synthesized reference notes (not a reproduction)
@@ -560,4 +560,13 @@ Third-party source attributions (one block per shipped pack)
 -----------------------------------------------------------------------------------
 The build pipeline uses the book-to-skill extraction engine (MIT License),
 © the book-to-skill authors. It is a build tool, not a packaged source.
+-----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------
+The landing page (docs/index.html) self-hosts two open-licensed typefaces under
+docs/fonts/ (SIL Open Font License 1.1, no CDN per RR-B-20):
+  JetBrains Mono -- (c) JetBrains s.r.o., https://github.com/JetBrains/JetBrainsMono
+  Inter          -- (c) The Inter Project Authors, https://github.com/rsms/inter
+The OFL permits bundling and redistribution with the project. The fonts are web
+assets, not packaged source content.
 -----------------------------------------------------------------------------------

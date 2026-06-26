@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2026 JG Systems Consulting Ltd. — MIT License (see LICENSE).
+Copyright (c) 2026 JG Systems Consulting Ltd. MIT License (see LICENSE).
 SPDX-License-Identifier: MIT
 -->
 
@@ -13,7 +13,7 @@ faithful to its source, and legally redistributable.
 This is the non-negotiable first step. Read [docs/SOURCE-VETTING.md](docs/SOURCE-VETTING.md)
 and confirm:
 
-1. The source is **Tier 1 (public domain)** or **Tier 2 (open licence)** — or Tier 3 with
+1. The source is **Tier 1 (public domain)** or **Tier 2 (open licence)**, or Tier 3 with
    a written justification.
 2. The source is **not** on the Excluded list (ISO/IEC/IEEE, SWEBOK, MITRE SE Guide,
    INCOSE Handbook, TOGAF, PMBOK, …).
@@ -42,8 +42,8 @@ python tooling/validate_pack.py packs/<slug>
 
 - **Ground every claim in the source.** Do not invent frameworks the source does not
   contain. Preserve the source's exact terminology and framework names.
-- **Synthesize, don't copy.** No long verbatim passages — it is both a quality rule and a
-  licence-safety rule. Reference depth, not reproduction.
+- **Synthesize, don't copy.** No long verbatim passages (it is both a quality rule and a
+  licence-safety rule). Reference depth, not reproduction.
 - **Be honest about scope.** The `SKILL.md` description and `## Scope & Limits` must say
   what the source is *thin* on, so users do not over-rely on it.
 
@@ -57,5 +57,5 @@ python tooling/validate_pack.py packs/<slug>
 ## Reporting a licensing concern
 
 If you believe a pack misrepresents its source's licence, open an issue with the
-`licensing` label — these are triaged first. We would rather pull a pack than ship one
+`licensing` label: these are triaged first. We would rather pull a pack than ship one
 that should not be redistributed.

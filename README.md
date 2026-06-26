@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2026 JG Systems Consulting Ltd. — MIT License (see LICENSE).
+Copyright (c) 2026 JG Systems Consulting Ltd. - MIT License (see LICENSE).
 SPDX-License-Identifier: MIT
 -->
 
@@ -7,7 +7,7 @@ SPDX-License-Identifier: MIT
 
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT%20(tooling)-blue" alt="License: MIT (tooling)">
-  <img src="https://img.shields.io/badge/version-1.16.1-green" alt="Version 1.16.1">
+  <img src="https://img.shields.io/badge/version-1.16.2-green" alt="Version 1.16.2">
   <img src="https://img.shields.io/badge/packs-46-blueviolet" alt="46 packs">
   <img src="https://img.shields.io/badge/tested%20with-Claude%20Code-8A2BE2" alt="Tested with Claude Code">
   <img src="https://img.shields.io/badge/scope-systems%20engineering-orange" alt="Scope: systems engineering">
@@ -15,17 +15,17 @@ SPDX-License-Identifier: MIT
 
 <p align="center">
   <strong>Installable knowledge-pack skills for coding agents, reconstructed from genuinely
-  open systems-engineering bodies of knowledge — vetted, attributed, and shareable by
+  open systems-engineering bodies of knowledge, vetted, attributed, and shareable by
   construction.</strong>
 </p>
 
-**Copyright (c) 2026 JG Systems Consulting Ltd. — MIT License (tooling); pack content under each source's own licence (see [NOTICE](NOTICE)).**
+**Copyright (c) 2026 JG Systems Consulting Ltd. - MIT License (tooling); pack content under each source's own licence (see [NOTICE](NOTICE)).**
 
 ---
 
 ## What it is / who it's for
 
-A great body of knowledge — SEBoK, the NASA SE Handbook, a modelling spec — is something you
+A great body of knowledge (SEBoK, the NASA SE Handbook, a modelling spec) is something you
 read once and then can't recall when you need it mid-task. A **knowledge pack** turns it into a
 skill your coding agent loads on demand: ask `/sebok systems of systems` and the agent reads the
 right chapter and answers from reconstructed reference notes, not a hazy recollection.
@@ -34,7 +34,7 @@ This is a curated catalogue of those packs for **systems engineers**, built to o
 it different from "point a tool at a PDF":
 
 > **Only genuinely open sources go in.** Public-domain (NASA, DoD) and open-licensed (SEBoK, OMG
-> specs, CC content) — never paywalled or all-rights-reserved material. Eligibility is enforced,
+> specs, CC content): never paywalled or all-rights-reserved material. Eligibility is enforced,
 > not assumed (see [docs/SOURCE-VETTING.md](docs/SOURCE-VETTING.md)), and every pack is
 > redistributable by construction (see [docs/LICENSING.md](docs/LICENSING.md)).
 
@@ -45,7 +45,7 @@ standard, so they load in Claude Code, GitHub Copilot CLI, and Amp without modif
 
 - Python 3.9+ (for the installer and pack validator).
 - A host that reads Agent Skills (Claude Code, GitHub Copilot CLI, or Amp).
-- No MCP server, API key, or licence tier is needed at runtime — packs are plain Markdown.
+- No MCP server, API key, or licence tier is needed at runtime. Packs are plain Markdown.
 
 ## Install with your AI agent
 
@@ -55,15 +55,15 @@ and install the catalogue for you.
 ```text
 You are installing jgs-se-knowledge-packs, an open catalogue (MIT tooling) of
 systems-engineering knowledge-pack skills by JG Systems Consulting Ltd.
-Repository: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs (version 1.16.1).
+Repository: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs (version 1.16.2).
 Do this in order:
 1. Read README.md, docs/skill-usage.md, and CHANGELOG.md so you understand what you are
-   installing. There are NO external prerequisites — packs are plain Markdown skills.
+   installing. There are NO external prerequisites: packs are plain Markdown skills.
 2. Run `python install.py --dry-run` and show me the pack list and target
    (~/.claude/skills/jgs-se-knowledge-packs/). If it looks right, run `python install.py`.
 3. Verify: list the installed packs under the target and confirm the count matches SKILLS.md.
 4. Tell me to restart Claude Code, then try `/sebok systems of systems`.
-5. Pack CONTENT is under each source's own licence (see NOTICE) — keep attribution intact.
+5. Pack CONTENT is under each source's own licence (see NOTICE); keep attribution intact.
 ```
 
 ## Install manually
@@ -82,13 +82,13 @@ Default target is the vendor-namespaced `~/.claude/skills/jgs-se-knowledge-packs
 ## Use with other agents
 
 The packs are open [Agent Skills](https://agentskills.io); `install.py` installs them into
-agents beyond Claude Code — natively where the agent reads the format, or via a format
+agents beyond Claude Code, natively where the agent reads the format, or via a format
 transform where it doesn't.
 
 ```bash
 python install.py --list-agents     # show every supported agent + its target
-python install.py --agent openclaw  # OpenClaw / Copilot CLI — native (full pack)
-python install.py --agent codex     # Codex / Gemini / Cursor — transform (SKILL.md index)
+python install.py --agent openclaw  # OpenClaw / Copilot CLI, native (full pack)
+python install.py --agent codex     # Codex / Gemini / Cursor, transform (SKILL.md index)
 python install.py --agent all       # all user-global agents at once
 ```
 
@@ -110,7 +110,7 @@ always-loaded `SKILL.md` index inlined into one file. Full detail and the per-ag
 | `sebok` | Guide to the SE Body of Knowledge v2.14 | CC BY-NC-SA 3.0 | 🟡 2 | ✅ live (36 chapters) |
 | `nasa-se-handbook` | NASA Systems Engineering Handbook | Public domain (US gov) | 🟢 1 | ✅ live (34 chapters) |
 | `nasa-se-expanded` | Expanded Guidance for NASA SE (SP-2016-6105-SUPPL Vol 1) | Public domain (US gov) | 🟢 1 | ✅ live (6 chapters) |
-| `nasa-npr-7123` | NASA NPR 7123.1D — SE Processes & Requirements | Public domain (US gov) | 🟢 1 | ✅ live (9 chapters) |
+| `nasa-npr-7123` | NASA NPR 7123.1D: SE Processes & Requirements | Public domain (US gov) | 🟢 1 | ✅ live (9 chapters) |
 | `nasa-risk` | NASA Risk Management Handbook | Public domain (US gov) | 🟢 1 | ✅ live (10 chapters) |
 | `nasa-system-safety` | NASA System Safety Handbook v2 | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
 | `nasa-pra` | NASA PRA Procedures Guide 2nd ed (NASA/SP-2011-3421) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
@@ -118,19 +118,19 @@ always-loaded `SKILL.md` index inlined into one file. Full detail and the per-ag
 | `nist-ai-rmf` | NIST AI Risk Management Framework 1.0 | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `nist-ssdf` | NIST Secure Software Development Framework 1.1 | Public domain (US gov) | 🟢 1 | ✅ live (5 chapters) |
 | `nist-csf` | NIST Cybersecurity Framework 2.0 | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
-| `nist-sse` | NIST SP 800-160 Vol 1+2 — Systems Security Engineering | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
-| `nist-800-37` | NIST SP 800-37 Rev 2 — Risk Management Framework | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
+| `nist-sse` | NIST SP 800-160 Vol 1+2: Systems Security Engineering | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
+| `nist-800-37` | NIST SP 800-37 Rev 2: Risk Management Framework | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
 | `nist-cps` | NIST Framework for Cyber-Physical Systems (SP 1500-201/202/203) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `digital-systems-engineering` | Towards Digital Engineering (ODU, arXiv:2002.11672) | CC BY 4.0 | 🟡 2 | ✅ live (7 chapters) |
-| `mil-std-882` | MIL-STD-882E — DoD System Safety | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
-| `requirements-writing` | Requirements writing — EARS & quality (original guidance) | CC BY 4.0 | 🟡 2 | ✅ live (6 chapters) |
+| `mil-std-882` | MIL-STD-882E: DoD System Safety | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
+| `requirements-writing` | Requirements writing: EARS & quality (original guidance) | CC BY 4.0 | 🟡 2 | ✅ live (6 chapters) |
 | `dau-se-guidebook` | DoD Systems Engineering Guidebook (OUSD R&E) | Public domain (US gov) | 🟢 1 | ✅ live (6 chapters) |
 | `gao-tra` | GAO Technology Readiness Assessment Guide (GAO-20-48G) | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
 | `dodaf` | DoD Architecture Framework 2.02 Vol II | Public domain (US gov) | 🟢 1 | ✅ live (11 chapters) |
 | `eu-ai-act` | EU Artificial Intelligence Act (Reg 2024/1689) | EU OJ (reproducible) | 🟡 2 | ✅ live (12 chapters) |
 | `faa-sem` | FAA Systems Engineering Manual (SEM) v1.0.1 | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
 | `nasa-schedule` | NASA Schedule Management Handbook (2024 ed, Rev 2) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
-| `dod-mosa` | DoD MOSA — Implementing a MOSA in DoD Programs (OUSD R&E) | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
+| `dod-mosa` | DoD MOSA: Implementing a MOSA in DoD Programs (OUSD R&E) | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
 | `nasa-rm-standard` | NASA Reliability & Maintainability Standard (NASA-STD-8729.1A) | Public domain (US gov) | 🟢 1 | ✅ live (6 chapters) |
 | `dod-rio` | DoD Risk, Issue & Opportunity Management Guide (OUSD R&E) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `dod-digital-engineering` | DoD Digital Engineering Strategy (2018, ODASD(SE)) | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
@@ -146,18 +146,18 @@ always-loaded `SKILL.md` index inlined into one file. Full detail and the per-ag
 | `dod-te-guidebook` | DoD Test & Evaluation Enterprise Guidebook (OUSD R&E, Aug 2022) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `faa-ams-vv` | FAA AMS Lifecycle V&V Guidelines v3.0 | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
 | `gao-agile` | GAO Agile Assessment Guide (GAO-24-105506) | Public domain (US gov) | 🟢 1 | ✅ live (9 chapters) |
-| `mil-hdbk-61` | MIL-HDBK-61B — DoD Configuration Management (Change 1, 2025) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
+| `mil-hdbk-61` | MIL-HDBK-61B: DoD Configuration Management (Change 1, 2025) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `mrl-deskbook` | DoD Manufacturing Readiness Level (MRL) Deskbook (Version 2022) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `faa-req-handbook` | FAA Requirements Engineering Management Handbook (DOT/FAA/AR-08/32) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `sd-22-dmsms` | SD-22 DMSMS Guidebook (DSPO, FY24 working draft) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
-| `nasa-npr-7150` | NASA NPR 7150.2D — NASA Software Engineering Requirements | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
+| `nasa-npr-7150` | NASA NPR 7150.2D: NASA Software Engineering Requirements | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `nist-stat-handbook` | NIST/SEMATECH e-Handbook of Statistical Methods (NIST HB 151) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `faa-rma` | FAA Reliability, Maintainability & Availability Handbook (FAA-HDBK-006D) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `mit-ocw-se` | MIT OCW Fundamentals of Systems Engineering | CC BY-NC-SA | 🟡 2 | 🔜 planned |
 
 Machine-readable index: [SKILLS.md](SKILLS.md) · [catalog.json](catalog.json).
 
-**Signposts** (citation-only, not packs — zero reproduced content): `omg-signpost` points to
+**Signposts** (citation-only, not packs, zero reproduced content): `omg-signpost` points to
 the OMG modelling specs; `se-standards-signpost` maps the whole SE standards landscape
 (ISO/IEC/IEEE, INCOSE, SAE/EIA, ECSS, NATO, CMMI, NIST SP 800-160…) with each standard's
 owner, whether it can be packaged, and where to get it. They exist because most SE standards
@@ -192,15 +192,15 @@ Two separable layers:
   independent of the repo MIT licence. A CC BY-NC-SA source yields a CC BY-NC-SA pack.
 
 Per-pack source attributions are in [NOTICE](NOTICE). Why every pack is lawful to reconstitute
-and redistribute — including why no source-material links are published — is set out in
+and redistribute (including why no source-material links are published) is set out in
 [docs/LICENSING.md](docs/LICENSING.md).
 
 ## Support & security
 
 - **Help / questions:** open an issue, or contact `support@jgsystemsconsulting.com`.
-- **Security / licensing concerns:** see [SECURITY.md](SECURITY.md) — report privately to
+- **Security / licensing concerns:** see [SECURITY.md](SECURITY.md); report privately to
   `support@jgsystemsconsulting.com`.
 
 ## Version
 
-See [CHANGELOG.md](CHANGELOG.md). Current: 1.16.1.
+See [CHANGELOG.md](CHANGELOG.md). Current: 1.16.2.

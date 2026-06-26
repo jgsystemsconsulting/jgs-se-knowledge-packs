@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2026 JG Systems Consulting Ltd. — MIT License (see ../LICENSE).
+Copyright (c) 2026 JG Systems Consulting Ltd. MIT License (see ../LICENSE).
 SPDX-License-Identifier: MIT
 -->
 
@@ -24,7 +24,7 @@ python install.py --agent codex --dry-run   # preview a transform install
 
 | Agent | `--agent` | Format | Target |
 |-------|-----------|--------|--------|
-| Claude Code | `claude` (default) | native (folder) | `~/.claude/skills/jgs-se-knowledge-packs/<slug>/` — honours `$CLAUDE_CONFIG_DIR` |
+| Claude Code | `claude` (default) | native (folder) | `~/.claude/skills/jgs-se-knowledge-packs/<slug>/` (honours `$CLAUDE_CONFIG_DIR`) |
 | OpenClaw | `openclaw` | native (folder) | `~/.openclaw/skills/jgs-se-knowledge-packs/<slug>/` |
 | GitHub Copilot CLI | `copilot` | native (folder) | `~/.copilot/skills/jgs-se-knowledge-packs/<slug>/` |
 | OpenAI Codex CLI | `codex` | transform (prompt) | `~/.codex/prompts/<slug>.md` |
@@ -32,15 +32,15 @@ python install.py --agent codex --dry-run   # preview a transform install
 | Cursor | `cursor` | transform (project rule) | `./.cursor/rules/<slug>.mdc` (project-local) |
 
 `--agent all` covers the five **user-global** agents (claude, openclaw, copilot, codex, gemini).
-Cursor is **project-local** — its rules install into the current repo's `.cursor/rules/`, so run
+Cursor is **project-local**: its rules install into the current repo's `.cursor/rules/`, so run
 it explicitly per project (`python install.py --agent cursor`); it is excluded from `--agent all`.
 
-## Cursor — two ways in
+## Cursor: two ways in
 
 Cursor (2.5+) can consume the packs **two** ways:
 
 - **Project rules (`--agent cursor`).** The transform above writes each pack's index to
-  `./.cursor/rules/<slug>.mdc` in the current repo — local, no marketplace, works offline.
+  `./.cursor/rules/<slug>.mdc` in the current repo (local, no marketplace, works offline).
 - **Marketplace plugin (`.cursor-plugin/`).** The repo also ships a Cursor plugin manifest
   (`.cursor-plugin/plugin.json` + `marketplace.json`) that registers the packs as native Cursor
   skills. Install the whole eligible catalogue from Cursor's marketplace, or add this repo
@@ -50,22 +50,22 @@ Cursor (2.5+) can consume the packs **two** ways:
 
 Cursor's marketplace **manually reviews** every plugin and requires it be **open source**. The
 shipped `.cursor-plugin/plugin.json` therefore lists only the **commercially-redistributable**
-packs (public-domain and CC BY sources) and **excludes** non-commercial (NC) content — currently
+packs (public-domain and CC BY sources) and **excludes** non-commercial (NC) content, currently
 `sebok` (CC BY-NC-SA). NC packs stay available via `install.py` and the Claude Code plugin. To
 publish or update, submit the repo at <https://cursor.com/marketplace/publish>; when packs are
 added, re-check each new source's licence before adding its `./packs/<slug>/SKILL.md` line to the
 plugin's `skills` list.
 
-## Native vs. transform — what differs
+## Native vs. transform: what differs
 
 > [!IMPORTANT]
-> **Native** agents get the whole pack — `SKILL.md` plus `chapters/`, `glossary.md`,
-> `patterns.md`, `cheatsheet.md` — with **progressive disclosure**: the agent loads only the
+> **Native** agents get the whole pack: `SKILL.md` plus `chapters/`, `glossary.md`,
+> `patterns.md`, `cheatsheet.md`, with **progressive disclosure**: the agent loads only the
 > one chapter your question routes to. This is the full experience.
 >
 > **Transform** agents get the always-loaded `SKILL.md` **index only**, inlined into a single
 > prompt/command/rule file. That index carries each pack's core frameworks, the chapter map,
-> and the topic routing — enough to answer most questions — but the on-demand `chapters/` are a
+> and the topic routing (enough to answer most questions), but the on-demand `chapters/` are a
 > Claude-native progressive-disclosure feature and are **not** bundled into the single-file form
 > (it would bloat every prompt). For deep, chapter-level depth on a transform agent, consult the
 > source body of knowledge the pack names, or use a native agent.
@@ -80,4 +80,4 @@ agentskills.io `SKILL.md` and pointing back here.
   unaffected (Codex prompts are already top-level; Gemini keeps the namespace as a command group).
 - **Custom target** (`--target DIR`) overrides the destination for a single agent (not valid with
   `--agent all`).
-- No third-party dependencies — the installer is stdlib-only Python.
+- No third-party dependencies: the installer is stdlib-only Python.
