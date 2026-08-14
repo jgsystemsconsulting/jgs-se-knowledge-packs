@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "kind": "pointer",
+  "active_phase": 2,
+  "active_phase_dir": ".planning/phases/2-source-vetting-ruled-out-register",
+  "active_state": ".planning/phases/2-source-vetting-ruled-out-register/master_flow_state.json",
+  "lock": {
+    "phase": 2,
+    "session_hint": "master-flow",
+    "updated_at": "2026-08-14T20:56:19.193Z"
+  },
+  "updated_at": "2026-08-14T20:56:19.194Z",
+  "notes": ""
+}
