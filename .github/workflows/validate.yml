@@ -4,7 +4,8 @@
 # RR-S-12 CI quality gate. Self-contained (inline bash + python3 stdlib only); never
 # executes checked-out repository code. Runs on push to main and on every PR.
 # Mirrors tooling/check_release.py (leak sentinels, link policy with signpost
-# exemption, frontmatter lint, catalog validity).
+# exemption, frontmatter lint, catalog validity). Both leak and link gates skip
+# .planning identically (internal GSD workflow state; never ships).
 name: validate
 
 on:
@@ -26,7 +27,7 @@ jobs:
           hits=0
           # Sentinels assembled from fragments so this workflow file does not flag itself.
           for sentinel in "CONFI""DENTIAL" "BEGIN ""PRIVATE KEY" "BEGIN OPENSSH ""PRIVATE KEY" "BEGIN RSA ""PRIVATE KEY"; do
-            if grep -RIn --exclude-dir=.git "$sentinel" .; then
+            if grep -RIn --exclude-dir=.git --exclude-dir=.planning "$sentinel" .; then
               echo "::error::leak sentinel found: $sentinel"
               hits=1
             fi
@@ -49,7 +50,8 @@ jobs:
           }
           fails = 0
           for p in root.rglob("*"):
-              if p.suffix not in {".md", ".json", ".yaml", ".yml", ".txt"} or ".git" in p.parts:
+              # .planning: internal GSD workflow state, never ships, holds vetting evidence URLs.
+              if p.suffix not in {".md", ".json", ".yaml", ".yml", ".txt"} or ".git" in p.parts or ".planning" in p.parts:
                   continue
               if p.parent in signpost_dirs:
                   continue
