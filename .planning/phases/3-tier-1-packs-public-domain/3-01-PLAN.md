@@ -84,18 +84,18 @@ the reference — Tasks 2-4 repeat it with their build-sheet parameters.
 1. `mkdir -p sources/nist-800-171`; download the PDF from the DOI-stable nvlpubs URL
    (3-RESEARCH.md §6 risk 4: do NOT scrape the csrc pubs page).
 2. VET: `python "$REF/tools/vet_source.py" --title "Protecting Controlled Unclassified Information in Nonfederal Systems and Organizations (NIST SP 800-171 Rev. 3)" --publisher "NIST" --license "Public Domain (US Government work, 17 U.S.C. § 105)"`. Expect tier 1, exit 0; a third-party-quote advisory warning is expected for NIST, not a blocker.
-3. EXTRACT: `python "$REF/scripts/extract.py" sources/nist-800-171/*.pdf --mode technical --install-missing ask`. Capture the printed %TEMP% book_skill_work path; read pages from metadata.json.
+3. EXTRACT: `python "$REF/scripts/extract.py" sources/nist-800-171/*.pdf --mode technical --install-missing ask`. Capture the printed %TEMP% work-root path (the directory containing `book_skill_work/`) and write it verbatim to `sources/nist-800-171/work_dir.txt` (one line, no trailing newline needed) — every later overlap command reads it from there; read pages from metadata.json.
 4. OUTLINE: outline.py → sources/nist-800-171/outline.json (stays gitignored).
 5. SCAFFOLD: build_pack.py with slug/title/publisher/version "Rev. 3, final 2024-05-14 (DOI 10.6028/NIST.SP.800-171r3)"/default licence string, --out-dir packs.
-6. GENERATE per docs/PACK-SPEC.md: 6-8 chapters grouping the 3.1-3.14 control families (build-sheet guidance, 3-RESEARCH.md §1 row T1-01); read full_text.txt only via outline start_char/end_char slices, never whole (>50k-token rule). Each chapter: Core Idea / Frameworks Introduced / Key Concepts / Mental Models / Anti-patterns / Key Takeaways / Connects To. Then glossary.md, patterns.md, cheatsheet.md, SKILL.md (frontmatter + How to Use + Core Frameworks + Chapter Index + Topic Index + Scope & Limits, body < ~4,000 tokens). Fill PACK.yaml TODOs (source_pages from metadata.json, chapters, built_on, notes) and LICENSE with the statute text. Synthesize — no long verbatim passages; no source URLs anywhere in pack files.
-7. VALIDATE + SCAN + OVERLAP: `python tooling/validate_pack.py packs/nist-800-171`; `python "$REF/tools/scan_generated_skill.py" packs/nist-800-171` (review findings, record disposition in PACK.yaml notes); `python "$REF/tools/check_overlap.py" --source "$TMP/book_skill_work/full_text.txt" --pack packs/nist-800-171` — exit 3 must be fixed before commit. Bonus: pack_eval.py.
+6. GENERATE per docs/PACK-SPEC.md: 6-8 chapters grouping the 3.1-3.14 control families (build-sheet guidance, 3-RESEARCH.md §1 row T1-01); read full_text.txt only via outline start_char/end_char slices, never whole (>50k-token rule). Each chapter: Core Idea / Frameworks Introduced / Key Concepts / Mental Models / Anti-patterns / Key Takeaways / Connects To. Then glossary.md, patterns.md, cheatsheet.md, SKILL.md (frontmatter + How to Use + Core Frameworks + Chapter Index + Topic Index + Scope & Limits, body < ~4,000 tokens). MANDATORY SKILL.md body contract (check_release.py rr-s-13; matches live packs/nist-csf/SKILL.md): every generated SKILL.md MUST contain an `## When to use` section immediately followed by a `**Prerequisites:**` line — a pack without both fails the Phase 3 closing gate. Fill PACK.yaml TODOs (source_pages from metadata.json, chapters, built_on, notes) and LICENSE with the statute text. Synthesize — no long verbatim passages; no source URLs anywhere in pack files.
+7. VALIDATE + SCAN + OVERLAP: `python tooling/validate_pack.py packs/nist-800-171`; `python "$REF/tools/scan_generated_skill.py" packs/nist-800-171` (review findings, record disposition in PACK.yaml notes); `python "$REF/tools/check_overlap.py" --source "$(cat sources/nist-800-171/work_dir.txt)/book_skill_work/full_text.txt" --pack packs/nist-800-171` — exit 3 must be fixed before commit. Bonus: pack_eval.py.
 8. Commit packs/nist-800-171 only (`feat(packs): add nist-800-171 (Tier 1)`). Verify `git status` shows nothing from sources/ staged.
 REF = C:/Users/gower/OneDrive/Documents/GitHub/jgs-reference-skill. Use `python` (not python3).
   </action>
   <verify>
-    <automated>python tooling/validate_pack.py packs/nist-800-171 && git show --stat HEAD | grep -c "packs/nist-800-171" && git show --stat HEAD | grep -v -c "sources/" </automated>
+    <automated>REF="C:/Users/gower/OneDrive/Documents/GitHub/jgs-reference-skill"; WRK=$(cat sources/nist-800-171/work_dir.txt) && python tooling/validate_pack.py packs/nist-800-171 && python "$REF/tools/check_overlap.py" --source "$WRK/book_skill_work/full_text.txt" --pack packs/nist-800-171 && python "$REF/tools/scan_generated_skill.py" packs/nist-800-171 && grep -c "^## When to use" packs/nist-800-171/SKILL.md && grep -c "^\*\*Prerequisites:\*\*" packs/nist-800-171/SKILL.md && ! grep -q "TODO" packs/nist-800-171/PACK.yaml && [ -z "$(git show --name-only --pretty=format: HEAD | grep -E 'sources/|full_text.txt')" ]</automated>
   </verify>
-  <done>validate_pack.py passes; check_overlap.py exits 0; PACK.yaml has license_tier 1, licence string, source_pages (actual from metadata.json), chapters count, built_on; scan findings dispositioned; one commit touching only packs/nist-800-171.</done>
+  <done>validate_pack.py passes; check_overlap.py exits 0; scan_generated_skill.py run with findings dispositioned; SKILL.md contains `## When to use` + a `**Prerequisites:**` line; PACK.yaml has no TODO stubs and carries license_tier 1, licence string, source_pages (actual from metadata.json), chapters count, built_on; the pack commit contains zero sources/ or full_text.txt paths.</done>
 </task>
 
 <task type="auto">
@@ -103,12 +103,12 @@ REF = C:/Users/gower/OneDrive/Documents/GitHub/jgs-reference-skill. Use `python`
   <files>packs/nist-800-61/**</files>
   <action>
 Repeat the Task 1 pipeline with build-sheet row T1-02 (3-RESEARCH.md §1):
-title "Incident Response Recommendations and Considerations for Cybersecurity Risk Management (NIST SP 800-61 Rev. 3)", publisher NIST, version "Rev. 3, final 2025-04-03 (DOI 10.6028/NIST.SP.800-61r3)", default licence string, nvlpubs DOI-stable URL (`NIST.SP.800-61r3.pdf` same pattern). 5-7 chapters: IR lifecycle phases, communications, training, coordination, lessons learned. Same gates, same one-commit rule.
+title "Incident Response Recommendations and Considerations for Cybersecurity Risk Management (NIST SP 800-61 Rev. 3)", publisher NIST, version "Rev. 3, final 2025-04-03 (DOI 10.6028/NIST.SP.800-61r3)", default licence string, nvlpubs DOI-stable URL (`NIST.SP.800-61r3.pdf` same pattern). 5-7 chapters: IR lifecycle phases, communications, training, coordination, lessons learned. Write the extract work-root to `sources/nist-800-61/work_dir.txt` (Task 1 step 3). SKILL.md must contain `## When to use` + a `**Prerequisites:**` line (Task 1 SKILL.md contract). Same gates, same one-commit rule.
   </action>
   <verify>
-    <automated>python tooling/validate_pack.py packs/nist-800-61 && python "$REF/tools/check_overlap.py" --source "$TMP800_61/book_skill_work/full_text.txt" --pack packs/nist-800-61</automated>
+    <automated>REF="C:/Users/gower/OneDrive/Documents/GitHub/jgs-reference-skill"; WRK=$(cat sources/nist-800-61/work_dir.txt) && python tooling/validate_pack.py packs/nist-800-61 && python "$REF/tools/check_overlap.py" --source "$WRK/book_skill_work/full_text.txt" --pack packs/nist-800-61 && python "$REF/tools/scan_generated_skill.py" packs/nist-800-61 && grep -c "^## When to use" packs/nist-800-61/SKILL.md && grep -c "^\*\*Prerequisites:\*\*" packs/nist-800-61/SKILL.md && ! grep -q "TODO" packs/nist-800-61/PACK.yaml</automated>
   </verify>
-  <done>Same done-criteria as Task 1 for nist-800-61; ~68 pp confirmed in PACK.yaml source_pages.</done>
+  <done>Same done-criteria as Task 1 for nist-800-61 (validate, overlap exit 0, scan disposition, When-to-use + Prerequisites, no TODO stubs); ~68 pp confirmed in PACK.yaml source_pages.</done>
 </task>
 
 <task type="auto">
@@ -125,13 +125,16 @@ Download both the main report and the controls-list PDF from the 2-RESEARCH.md �
 cisa.gov publications paths into sources/cisa-cpg/; extract each, sum pages for
 PACK.yaml. 4-6 chapters: GOVERN/Identify/Protect/Detect/Respond groupings, IT vs OT
 goals, implementation/defining-objectives. Watch for third-party logos/content in the
-CISA PDFs — synthesize only CISA-authored content (3-RESEARCH.md §6 risk 5). Same
-gates, same one-commit rule.
+CISA PDFs — synthesize only CISA-authored content (3-RESEARCH.md §6 risk 5). With TWO
+extractions, record the two work-roots in `sources/cisa-cpg/work_dir_main.txt` and
+`sources/cisa-cpg/work_dir_ctrl.txt`; run check_overlap against BOTH full_text.txt
+files (both must exit 0). SKILL.md must contain `## When to use` + a
+`**Prerequisites:**` line (Task 1 SKILL.md contract). Same gates, same one-commit rule.
   </action>
   <verify>
-    <automated>python "$REF/tools/vet_source.py" --title "Cross-Sector Cybersecurity Performance Goals 2.0 (CISA CPG 2.0)" --publisher "CISA" --license "Public Domain (US Government work, 17 U.S.C. § 105)" && python tooling/validate_pack.py packs/cisa-cpg</automated>
+    <automated>REF="C:/Users/gower/OneDrive/Documents/GitHub/jgs-reference-skill"; W1=$(cat sources/cisa-cpg/work_dir_main.txt); W2=$(cat sources/cisa-cpg/work_dir_ctrl.txt) && python "$REF/tools/vet_source.py" --title "Cross-Sector Cybersecurity Performance Goals 2.0 (CISA CPG 2.0)" --publisher "CISA" --license "Public Domain (US Government work, 17 U.S.C. § 105)" && python tooling/validate_pack.py packs/cisa-cpg && python "$REF/tools/check_overlap.py" --source "$W1/book_skill_work/full_text.txt" --pack packs/cisa-cpg && python "$REF/tools/check_overlap.py" --source "$W2/book_skill_work/full_text.txt" --pack packs/cisa-cpg && python "$REF/tools/scan_generated_skill.py" packs/cisa-cpg && grep -c "^## When to use" packs/cisa-cpg/SKILL.md && grep -c "^\*\*Prerequisites:\*\*" packs/cisa-cpg/SKILL.md && ! grep -q "TODO" packs/cisa-cpg/PACK.yaml</automated>
   </verify>
-  <done>vet verdict tier 1 / exit 0 recorded; validate_pack.py passes; check_overlap exits 0; PACK.yaml license carries the statute string; scan findings dispositioned; one commit touching only packs/cisa-cpg.</done>
+  <done>vet verdict tier 1 / exit 0 recorded; validate_pack.py passes; check_overlap exits 0 against BOTH CISA PDFs; PACK.yaml license carries the statute string; scan findings dispositioned; SKILL.md has When-to-use + Prerequisites; PACK.yaml has no TODO stubs; one commit touching only packs/cisa-cpg.</done>
 </task>
 
 <task type="auto">
@@ -146,8 +149,10 @@ Energy" (matches the `"department of "` US_GOV signal — no P3-PRE-1 concern), 
 FIRST build step after extract: read the extracted text for any third-party copyright
 notice inside the PDF; if found, halt and surface (3-RESEARCH.md §6 risk 6). Page
 count unknown — confirm from metadata.json and record actual. 6-8 chapters: SEM
-lifecycle phases, core methodology elements, technical reviews, artifacts. Same gates,
-same one-commit rule.
+lifecycle phases, core methodology elements, technical reviews, artifacts. Write the
+extract work-root to `sources/doe-sem/work_dir.txt` (Task 1 step 3). SKILL.md must
+contain `## When to use` + a `**Prerequisites:**` line (Task 1 SKILL.md contract).
+Same gates, same one-commit rule.
 **P3-PRE-2 (record only, accepted gap):** in this plan's SUMMARY, record verbatim:
 "Accepted gap: vet_source.py lacks ecss/esa/def-stan/dstan EXCLUDED signals; the
 human rubric governs, the tool under-blocks, and none of the affected sources appear
@@ -155,9 +160,9 @@ in Phase 3 build lists. External-repo fix scheduled as follow-up." (Disposition 
 2-GAP_ANALYSIS.md:90 and 3-RESEARCH.md §7.)
   </action>
   <verify>
-    <automated>python tooling/validate_pack.py packs/doe-sem && python "$REF/tools/check_overlap.py" --source "$TMPSEM/book_skill_work/full_text.txt" --pack packs/doe-sem</automated>
+    <automated>REF="C:/Users/gower/OneDrive/Documents/GitHub/jgs-reference-skill"; WRK=$(cat sources/doe-sem/work_dir.txt) && python tooling/validate_pack.py packs/doe-sem && python "$REF/tools/check_overlap.py" --source "$WRK/book_skill_work/full_text.txt" --pack packs/doe-sem && python "$REF/tools/scan_generated_skill.py" packs/doe-sem && grep -c "^## When to use" packs/doe-sem/SKILL.md && grep -c "^\*\*Prerequisites:\*\*" packs/doe-sem/SKILL.md && ! grep -q "TODO" packs/doe-sem/PACK.yaml</automated>
   </verify>
-  <done>validate_pack.py passes; PACK.yaml source_pages = actual metadata.json count; in-PDF third-party-copyright check result recorded; check_overlap exits 0; P3-PRE-2 accepted-gap text present in plan SUMMARY; one commit touching only packs/doe-sem.</done>
+  <done>validate_pack.py passes; PACK.yaml source_pages = actual metadata.json count and no TODO stubs; in-PDF third-party-copyright check result recorded; check_overlap exits 0; scan run and dispositioned; SKILL.md has When-to-use + Prerequisites; P3-PRE-2 accepted-gap text present in plan SUMMARY; one commit touching only packs/doe-sem.</done>
 </task>
 
 </tasks>

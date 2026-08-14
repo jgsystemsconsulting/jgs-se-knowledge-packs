@@ -90,16 +90,20 @@ CHAPTER SELECTION (716 pp — the core risk): SELECT 8-10 chapters from Part 2 d
 guidance: reliability prediction, derating, MTBF/MTTR, FMECA/FTA, reliability growth
 testing, testability, physics of failure. Skip the ~400 pp of annex tables. Slice via
 outline.json start_char/end_char offsets only; never load full_text.txt whole
-(>50k-token rule). GENERATE per docs/PACK-SPEC.md (same structure as Plan A Task 1),
+(>50k-token rule). Write the extract work-root to
+`sources/mil-hdbk-338/work_dir.txt` (Plan A Task 1 step 3 convention). GENERATE per
+docs/PACK-SPEC.md (same structure as Plan A Task 1, including the MANDATORY SKILL.md
+contract: `## When to use` section + `**Prerequisites:**` line, matching
+packs/nist-csf/SKILL.md — check_release.py rr-s-13),
 fill PACK.yaml (source_pages ~716 confirmed from metadata.json), LICENSE carrying the
 Distribution Statement A text. VALIDATE → SCAN → OVERLAP. One commit
 (`feat(packs): add mil-hdbk-338 (Tier 1)`), touching only packs/mil-hdbk-338.
 REF = C:/Users/gower/OneDrive/Documents/GitHub/jgs-reference-skill; `python`, not python3.
   </action>
   <verify>
-    <automated>python tooling/validate_pack.py packs/mil-hdbk-338 && ls packs/mil-hdbk-338/chapters | wc -l</automated>
+    <automated>REF="C:/Users/gower/OneDrive/Documents/GitHub/jgs-reference-skill"; WRK=$(cat sources/mil-hdbk-338/work_dir.txt); N=$(ls packs/mil-hdbk-338/chapters | wc -l) && [ "$N" -ge 8 ] && [ "$N" -le 10 ] && python tooling/validate_pack.py packs/mil-hdbk-338 && python "$REF/tools/check_overlap.py" --source "$WRK/book_skill_work/full_text.txt" --pack packs/mil-hdbk-338 && python "$REF/tools/scan_generated_skill.py" packs/mil-hdbk-338 && grep -c "Distribution Statement A" packs/mil-hdbk-338/PACK.yaml && grep -c "Distribution Statement A" packs/mil-hdbk-338/LICENSE && grep -c "^## When to use" packs/mil-hdbk-338/SKILL.md && grep -c "^\*\*Prerequisites:\*\*" packs/mil-hdbk-338/SKILL.md && ! grep -q "TODO" packs/mil-hdbk-338/PACK.yaml</automated>
   </verify>
-  <done>validate_pack.py passes; chapters/ contains 8-10 files drawn from the selected topics (no annex-table chapters); PACK.yaml source_pages = actual; check_overlap exits 0; scan findings dispositioned; if OCR ran, recorded; one commit touching only packs/mil-hdbk-338.</done>
+  <done>validate_pack.py passes; chapters/ contains exactly 8-10 files drawn from the selected topics (no annex-table chapters); PACK.yaml source_pages = actual, no TODO stubs, Distribution Statement A present in PACK.yaml and LICENSE; check_overlap exits 0; scan findings dispositioned; SKILL.md has When-to-use + Prerequisites; if OCR ran, recorded; one commit touching only packs/mil-hdbk-338.</done>
 </task>
 
 <task type="auto">
@@ -115,13 +119,15 @@ Distribution Statement A page in the copy before use). If the DLA PDF is a scann
 image, same OCR fallback + PACK.yaml/SUMMARY record. 6-8 chapters: airworthiness
 process, tailoring, one chapter per functional-area cluster (systems engineering,
 structures, flight, propulsion, avionics/EW, system software, crew systems).
-~320 pp. Same gates (validate → scan disposition → overlap exit 0), one commit
-touching only packs/mil-hdbk-516.
+~320 pp. Write the extract work-root to `sources/mil-hdbk-516/work_dir.txt`
+(Task 1 convention); SKILL.md must contain `## When to use` + a
+`**Prerequisites:**` line (Task 1 SKILL.md contract). Same gates (validate → scan
+disposition → overlap exit 0), one commit touching only packs/mil-hdbk-516.
   </action>
   <verify>
-    <automated>python tooling/validate_pack.py packs/mil-hdbk-516 && python "$REF/tools/check_overlap.py" --source "$TMP516/book_skill_work/full_text.txt" --pack packs/mil-hdbk-516</automated>
+    <automated>REF="C:/Users/gower/OneDrive/Documents/GitHub/jgs-reference-skill"; WRK=$(cat sources/mil-hdbk-516/work_dir.txt) && python tooling/validate_pack.py packs/mil-hdbk-516 && python "$REF/tools/check_overlap.py" --source "$WRK/book_skill_work/full_text.txt" --pack packs/mil-hdbk-516 && python "$REF/tools/scan_generated_skill.py" packs/mil-hdbk-516 && grep -c "Distribution Statement A" packs/mil-hdbk-516/PACK.yaml && grep -c "Distribution Statement A" packs/mil-hdbk-516/LICENSE && grep -c "^## When to use" packs/mil-hdbk-516/SKILL.md && grep -c "^\*\*Prerequisites:\*\*" packs/mil-hdbk-516/SKILL.md && ! grep -q "TODO" packs/mil-hdbk-516/PACK.yaml</automated>
   </verify>
-  <done>Same done-criteria as Task 1 for mil-hdbk-516; PACK.yaml carries Distribution Statement A licence, tier 1, actual source_pages; one commit touching only packs/mil-hdbk-516.</done>
+  <done>Same done-criteria as Task 1 for mil-hdbk-516 (validate, overlap exit 0, scan disposition, When-to-use + Prerequisites, no TODO stubs); PACK.yaml carries Distribution Statement A licence, tier 1, actual source_pages; Distribution Statement A present in PACK.yaml and LICENSE; one commit touching only packs/mil-hdbk-516.</done>
 </task>
 
 </tasks>

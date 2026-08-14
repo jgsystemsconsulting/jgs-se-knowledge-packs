@@ -7,7 +7,7 @@ depends_on: [3-01, 3-02]
 files_modified:
   - packs/nasa-ms-7009/**
   - packs/doe-413-3b/**
-  - packs/catalog.json
+  - catalog.json
   - SKILLS.md
   - docs/packs.html
   - NOTICE
@@ -32,7 +32,7 @@ must_haves:
   artifacts:
     - packs/nasa-ms-7009/SKILL.md, PACK.yaml, LICENSE, chapters/
     - packs/doe-413-3b/SKILL.md, PACK.yaml, LICENSE, chapters/
-    - updated packs/catalog.json, SKILLS.md, docs/packs.html, NOTICE
+    - updated catalog.json (repo root), SKILLS.md, docs/packs.html, NOTICE
   key_links:
     - "Chapter Index links resolve in both new packs"
     - "catalog.json pack count consistent with packs/ directories (check_release.py verifies, incl. packs.html freshness)"
@@ -95,24 +95,27 @@ variation (§6 risk 7):
    `Public Domain (US Government work, 17 U.S.C. § 105)` — "nasa" is a US_GOV signal,
    so no P3-PRE-1 concern.
 3. EXTRACT EACH PDF separately (two runs, two book_skill_work dirs; capture both
-   %TEMP% paths). metadata.json absent for multi-PDF sums → source_pages = STD +
-   HDBK page counts summed; record both.
+   work-root paths — write them to `sources/nasa-ms-7009/work_dir_std.txt` and
+   `sources/nasa-ms-7009/work_dir_hdbk.txt`). metadata.json absent for multi-PDF
+   sums → source_pages = STD + HDBK page counts summed; record both.
 4. OUTLINE each; build ONE pack. Primary chapter spine = the STD's 43 mandatory
    requirements grouped into credibility facets (verification/validation/uncertainty);
    HDBK slices become depth chapters. Target 6-8 chapters per build sheet.
 5. SCAFFOLD version "STD-7009B approved 2024-03-05 + HDBK-7009B (2026-02-03)".
-6. GENERATE per docs/PACK-SPEC.md (same structure as Plan A Task 1; slice reads via
-   each outline's offsets). PACK.yaml notes state two-source build and summed pages.
-   LICENSE carries the statute text.
+6. GENERATE per docs/PACK-SPEC.md (same structure as Plan A Task 1, including the
+   MANDATORY SKILL.md contract: `## When to use` section + `**Prerequisites:**`
+   line, matching packs/nist-csf/SKILL.md — check_release.py rr-s-13; slice reads
+   via each outline's offsets). PACK.yaml notes state two-source build (STD-7009B +
+   HDBK-7009B) and summed pages. LICENSE carries the statute text.
 7. VALIDATE → SCAN (disposition findings) → OVERLAP against BOTH full_text.txt files
    (run check_overlap twice, once per source; both must exit 0).
 8. One commit touching only packs/nasa-ms-7009.
 REF = C:/Users/gower/OneDrive/Documents/GitHub/jgs-reference-skill; `python`, not python3.
   </action>
   <verify>
-    <automated>python tooling/validate_pack.py packs/nasa-ms-7009 && grep -c "43" packs/nasa-ms-7009/SKILL.md</automated>
+    <automated>REF="C:/Users/gower/OneDrive/Documents/GitHub/jgs-reference-skill"; WS=$(cat sources/nasa-ms-7009/work_dir_std.txt); WH=$(cat sources/nasa-ms-7009/work_dir_hdbk.txt) && python tooling/validate_pack.py packs/nasa-ms-7009 && python "$REF/tools/check_overlap.py" --source "$WS/book_skill_work/full_text.txt" --pack packs/nasa-ms-7009 && python "$REF/tools/check_overlap.py" --source "$WH/book_skill_work/full_text.txt" --pack packs/nasa-ms-7009 && python "$REF/tools/scan_generated_skill.py" packs/nasa-ms-7009 && grep -c "STD-7009B" packs/nasa-ms-7009/PACK.yaml && grep -c "HDBK-7009B" packs/nasa-ms-7009/PACK.yaml && grep -c "^## When to use" packs/nasa-ms-7009/SKILL.md && grep -c "^\*\*Prerequisites:\*\*" packs/nasa-ms-7009/SKILL.md && ! grep -q "TODO" packs/nasa-ms-7009/PACK.yaml</automated>
   </verify>
-  <done>validate_pack.py passes; PACK.yaml source_pages = summed STD+HDBK actuals with note; check_overlap exits 0 against both sources; one commit touching only packs/nasa-ms-7009.</done>
+  <done>validate_pack.py passes; PACK.yaml source_pages = summed STD+HDBK actuals with a two-source note naming STD-7009B and HDBK-7009B, no TODO stubs; check_overlap exits 0 against BOTH sources; scan run and dispositioned; SKILL.md has When-to-use + Prerequisites; one commit touching only packs/nasa-ms-7009.</done>
 </task>
 
 <task type="auto">
@@ -127,44 +130,57 @@ default licence string. Download the CONSOLIDATED Chg 7 PDF via the energy.gov
 directives-library entry (2-RESEARCH.md §6) — the old deep link 404s. FIRST step
 after extract: read the extracted text for third-party copyright notices inside the
 PDF (same in-PDF confirmation as doe-sem); halt and surface if found. ~100+ pp,
-confirm actual from metadata.json. 5-7 chapters: CD-0..CD-5 milestone chapters,
+confirm actual from metadata.json. Write the extract work-root to
+`sources/doe-413-3b/work_dir.txt` (Plan A Task 1 step 3 convention); SKILL.md must
+contain `## When to use` + a `**Prerequisites:**` line (Plan A Task 1 SKILL.md
+contract). 5-7 chapters: CD-0..CD-5 milestone chapters,
 acquisition planning, budget/cost, risk, emergency procurement exceptions. Same
 gates (validate → scan disposition → overlap exit 0), PACK.yaml provenance complete,
 one commit touching only packs/doe-413-3b.
   </action>
   <verify>
-    <automated>python tooling/validate_pack.py packs/doe-413-3b && python "$REF/tools/check_overlap.py" --source "$TMP413/book_skill_work/full_text.txt" --pack packs/doe-413-3b</automated>
+    <automated>REF="C:/Users/gower/OneDrive/Documents/GitHub/jgs-reference-skill"; WRK=$(cat sources/doe-413-3b/work_dir.txt) && python tooling/validate_pack.py packs/doe-413-3b && python "$REF/tools/check_overlap.py" --source "$WRK/book_skill_work/full_text.txt" --pack packs/doe-413-3b && python "$REF/tools/scan_generated_skill.py" packs/doe-413-3b && grep -c "^## When to use" packs/doe-413-3b/SKILL.md && grep -c "^\*\*Prerequisites:\*\*" packs/doe-413-3b/SKILL.md && ! grep -q "TODO" packs/doe-413-3b/PACK.yaml</automated>
   </verify>
-  <done>validate_pack.py passes; PACK.yaml source_pages = actual; in-PDF third-party-copyright check result recorded; check_overlap exits 0; one commit touching only packs/doe-413-3b.</done>
+  <done>validate_pack.py passes; PACK.yaml source_pages = actual, no TODO stubs; in-PDF third-party-copyright check result recorded; check_overlap exits 0; scan run and dispositioned; SKILL.md has When-to-use + Prerequisites; one commit touching only packs/doe-413-3b.</done>
 </task>
 
 <task type="auto">
   <name>Task 3: Registration sweep for all 8 Tier-1 packs + check_release</name>
-  <files>packs/catalog.json, SKILLS.md, docs/packs.html, NOTICE</files>
+  <files>catalog.json, SKILLS.md, docs/packs.html, NOTICE</files>
   <action>
 Execute 3-RESEARCH.md §4 once, covering all 8 packs from Plans A/B/C:
-1. catalog.json: add 8 pack objects to `packs[]` mirroring the existing shape (slug,
-   title, publisher, source_version, license, license_tier: 1, commercial_use: true,
-   chapters, status "live"); bump `updated`. Hand-edit is the documented route.
-2. SKILLS.md: add 8 table rows `| [slug](packs/<slug>/SKILL.md) | Public Domain (US
-   Gov) | <description incl. scope limits> |`; bump the header count. Hand-edit
+1. catalog.json — the catalog lives at REPO ROOT (`catalog.json`); `packs/catalog.json`
+   does NOT exist and must not be created. Add 8 pack objects to the `packs[]` array
+   mirroring the existing entries' exact shape (read catalog.json first and copy a
+   live entry — e.g. faa-rma — as the template): slug, title, publisher,
+   source_version, license, license_tier: 1, commercial_use: true, chapters,
+   status "live"; bump `updated`. Hand-edit is the documented route.
+2. SKILLS.md: add 8 table rows in the LIVE format the parsers require (copy an
+   existing row verbatim as the template, e.g. the nist-csf row):
+   `` | [`<slug>`](packs/<slug>/SKILL.md) | Public Domain (US Gov) | <description incl. scope limits> | ``
+   — the slug MUST be wrapped in backticks inside the square brackets; a plain
+   `[slug](...)` row is invisible to gen_packs_page.parse_skills and the
+   check_release index regex. Bump the header count line from
+   "46 packs (+2 signposts)" to "54 packs (+2 signposts)". Hand-edit
    (gen_skills_index.py does not exist in tooling/); keep the generated-file
    disclaimer intact.
 3. docs/packs.html: DO NOT hand-edit — run `python tooling/gen_packs_page.py`.
 4. NOTICE: add one `[pack: <slug>]` attribution block per pack (Source / Author /
    Licence / Changes / Terms), mirroring existing Public Domain (US Government work)
    entries.
-5. Final sweep: `python tooling/check_release.py` → PASS. Expected catalog basis
-   after +8: 54 packs (48 + 8 new − 2 signposts) / 56 directory basis — this is the
+5. Final sweep: `python tooling/check_release.py` → PASS (rr-s-13 requires every
+   SKILL.md to carry `## When to use` + a Prerequisites/Requirements marker —
+   enforced by the generate contract in 3-01/3-02/3-03 pack tasks). Expected catalog
+   basis after +8: 54 packs (46 + 8 new) / 56 directory basis — this is the
    Phase 5 gate basis; if the counts disagree, fix catalog/directory inconsistency
    before committing.
 6. No source URLs anywhere in catalog/packs (no-source-link policy). One closing
    commit (`chore(registration): register 8 Tier-1 packs (catalog, SKILLS.md, packs.html, NOTICE)`).
   </action>
   <verify>
-    <automated>python tooling/check_release.py && python -c "import json;c=json.load(open('packs/catalog.json'));print(len([p for p in c['packs'] if p.get('license_tier')==1]))"</automated>
+    <automated>python tooling/check_release.py && python -c "import json;c=json.load(open('catalog.json'));new={'nist-800-171','nist-800-61','cisa-cpg','doe-sem','mil-hdbk-338','mil-hdbk-516','nasa-ms-7009','doe-413-3b'};slugs={p['slug'] for p in c['packs']};assert new<=slugs, new-slugs;assert len(c['packs'])==54;assert sum(1 for p in c['packs'] if p.get('license_tier')==1)==50;print('catalog ok')" && grep -c "54 packs (+2 signposts)" SKILLS.md && grep -cE '^\| \[`(nist-800-171|nist-800-61|cisa-cpg|doe-sem|mil-hdbk-338|mil-hdbk-516|nasa-ms-7009|doe-413-3b)`\]' SKILLS.md</automated>
   </verify>
-  <done>check_release.py exits PASS; catalog.json contains all 8 new tier-1 entries; SKILLS.md has 8 new rows with bumped count; packs.html regenerated; NOTICE has 8 new blocks; one registration commit.</done>
+  <done>check_release.py exits PASS; repo-root catalog.json contains all 8 new tier-1 live entries (54 total, 50 tier-1); SKILLS.md has 8 new backtick-slug rows and header "54 packs (+2 signposts)"; packs.html regenerated; NOTICE has 8 new blocks; one registration commit.</done>
 </task>
 
 </tasks>
