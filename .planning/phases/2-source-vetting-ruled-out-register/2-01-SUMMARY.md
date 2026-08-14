@@ -141,7 +141,7 @@ Each task was committed atomically:
 | N1 | Plan verify used `-ge 8` but correct stamp count is 7 | Executed with `-ge 7`; no dummy stamps added | `grep -c "Verified 2026-08-14" docs/SOURCE-VETTING.md` → **7** |
 | N2 | Tier-1 names must be asserted individually | Per-name greps, not one OR-grep | Each of `800-171`, `800-61`, `338B`, `516C`, `7009`, `413.3B`, `CPG 2.0`, `SEM3` count = **1** |
 | N3 | Task 2 step 5 must not call ECSS "Paywalled" | ECSS Out of Scope row uses "Non-redistributable free downloads" | REQUIREMENTS Out of Scope: `Free-download, no-redistribution-grant standards (ECSS/ESA)` + reason `Non-redistributable free downloads (see docs/SOURCE-VETTING.md)` |
-| N4 | T2-03 language = deferred-excluded, never resolved; checkbox unchecked | Exact wording + `[ ]` retained | REQUIREMENTS T2-03 line still `- [ ]` and contains `deferred-excluded pending registered DSTAN`; no "resolved" on T2-03 lines |
+| N4 | T2-03 language = deferred-excluded, never resolved; checkbox unchecked | Exact wording + `[ ]` retained; post-SUMMARY `requirements.mark-complete T2-03` was reverted (tool auto-checked the box; N4 forbids that) | REQUIREMENTS T2-03 line is `- [ ]` and contains `deferred-excluded pending registered DSTAN`; no "resolved" on T2-03 lines. RO-01 remains `[x]`. |
 
 ## Per-task verify results (actual)
 
@@ -196,14 +196,27 @@ target after v1.17.0: 56 = 1
 | 1 | Stamp-count gate executed as `-ge 7` instead of plan's `-ge 8` | Task 1 verify; MUST-ADDRESS N1 | in-scope fix | Correct execution yields 7 dated rows; adding dummy stamps would falsify the register |
 | 2 | Tier-1 presence checked per name, not single OR-grep | Task 1 verify; MUST-ADDRESS N2 | in-scope fix | plan_check required individual asserts |
 | 3 | Did not put "Verified 2026-08-14" on the 8 Tier-1 Vetted rows | Task 1 action (dates on Excluded rows) | in-scope fix | Keeps stamp total at the truthful 7; Tier-1 rows still record licence evidence |
+| 4 | Reverted `requirements.mark-complete` checkbox on T2-03 | N4 / Task 2 done criteria | in-scope fix | SDK marked T2-03 `[x]`; plan requires deferred-excluded with checkbox UNCHECKED. RO-01 stayed complete. |
+| 5 | Restored STATE progress totals after SDK overwrite (100% → 20%; phases 5) | state.update-progress side effect | in-scope fix | SDK set total_phases=1/100%; project still 1/5 phases complete |
 
 ### Auto-fixed Issues
 
-None beyond the MUST-ADDRESS N1–N4 execution corrections above (no Rule 1–3 code bugs).
+**1. [Rule 1 - Bug] Unchecked T2-03 after mark-complete**
+- **Found during:** Final docs commit / self-check
+- **Issue:** `gsd_run query requirements.mark-complete RO-01 T2-03` checked T2-03, violating N4
+- **Fix:** Restored `- [ ]` on T2-03; left RO-01 as `[x]`
+- **Files modified:** `.planning/REQUIREMENTS.md`
+- **Committed in:** follow-up docs fix commit
+
+**2. [Rule 1 - Bug] STATE progress inflated to 100%**
+- **Found during:** Final docs commit / self-check
+- **Issue:** `state.update-progress` treated 1/1 SUMMARY as whole-project 100%
+- **Fix:** Restored total_phases: 5, completed_phases: 1, percent: 20, bar 20%
+- **Files modified:** `.planning/STATE.md`
 
 ---
 
-**Total deviations:** 3 (all in-scope MUST-ADDRESS / stamp-truthfulness)
+**Total deviations:** 5 (3 MUST-ADDRESS + 2 post-SDK corrections)
 **Impact on plan:** Correctness-preserving; plan intent fully delivered; no scope creep.
 
 ## Issues Encountered
