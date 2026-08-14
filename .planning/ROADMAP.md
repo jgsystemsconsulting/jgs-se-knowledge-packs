@@ -7,7 +7,7 @@ Baseline established retroactively (48 packs shipped through v1.16.3, pipeline +
 ## Phases
 
 - [x] **Phase 1: Baseline (retroactive)** - Existing 48-pack library, toolchain, installers, CI gate
-- [ ] **Phase 2: Source vetting + ruled-out register** - Vet all 11 candidates; record Excluded entries
+- [x] **Phase 2: Source vetting + ruled-out register** - Vet all 11 candidates; record Excluded entries
 - [ ] **Phase 3: Tier 1 packs (public domain)** - Build the 8 Tier-1 packs via jgs-reference-skill pipeline
 - [ ] **Phase 4: Tier 2 packs — closed by vetting: 0 packs (T2-01/T2-02 Excluded, T2-03 deferred; see docs/SOURCE-VETTING.md)**
 - [ ] **Phase 5: Release surface + v1.17.0** - Catalog/docs/NOTICE sync, full validation, tag release

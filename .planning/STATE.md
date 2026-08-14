@@ -1,20 +1,19 @@
 ---
-gsd_state_version: '1.0'
+gsd_state_version: 1.0
 milestone: v1.17.0
-milestone_name: Source Expansion (v1.17.0)
+milestone_name: "**Goal**: Catalog, docs, installers, and release artifacts include the new packs"
 current_phase: 2
-current_phase_name: Source vetting + ruled-out register
-status: executing
+status: completed
 stopped_at: Completed 2-01-PLAN.md
-last_updated: "2026-08-14T22:07:10.891Z"
+last_updated: "2026-08-14T22:27:49.548Z"
 last_activity: 2026-08-14
-last_activity_desc: Phase 2 vetting outcomes recorded (T2-01/T2-02 excluded; T2-03 deferred-excluded; 56-pack target)
+last_activity_desc: Phase 2 marked complete
 progress:
-  total_phases: 5
+  total_phases: 1
   completed_phases: 1
   total_plans: 1
   completed_plans: 1
-  percent: 20
+current_phase_name: Source vetting + ruled-out register
 ---
 
 # Project State
@@ -28,10 +27,10 @@ See: .planning/PROJECT.md (updated 2026-08-14)
 
 ## Current Position
 
-Phase: 2 of 5 (Source vetting + ruled-out register)
+Phase: 2 — COMPLETE
 Plan: 01 complete
-Status: executing — Phase 2 outcome recorded; next: Phase 3
-Last activity: 2026-08-14 — Phase 2 vetting outcomes recorded (T2-01/T2-02 excluded; T2-03 deferred-excluded; 56-pack target)
+Status: Phase 2 complete
+Last activity: 2026-08-14 — Phase 2 marked complete
 
 Progress: [██░░░░░░░░] 20%
 

@@ -6,8 +6,13 @@
   "phase_slug": "2-source-vetting-ruled-out-register",
   "phase_dir": ".planning/phases/2-source-vetting-ruled-out-register",
   "scope": "phase",
-  "current_gate": "research",
-  "completed": [],
+  "current_gate": "doc_check",
+  "completed": [
+    "plan",
+    "integration_check",
+    "gap_analysis",
+    "verify"
+  ],
   "skipped": [
     "discuss",
     "assumptions",
@@ -39,12 +44,25 @@
     "milestone_audit": "skipped",
     "complete": "skipped",
     "retrospective": "skipped",
-    "research": "embedded_in_plan"
+    "research": "embedded_in_plan",
+    "plan": "passed",
+    "plan_check": "passed_with_fixes",
+    "plan_review": "needs_work:bl_01_link_policy_breach;_5_major",
+    "integration_check": "passed:blocker_1_fixed_at_b40668b;_check_release_exit_0",
+    "gap_analysis": "passed:g_1_fixed_at_abdedc4;_ci_sim_clean;_p3_pre_1/2_routed_to_phase_3",
+    "verify": "passed"
   },
   "artifacts": {
-    "research": ".planning/phases/2-source-vetting-ruled-out-register/2-RESEARCH.md"
+    "research": ".planning/phases/2-source-vetting-ruled-out-register/2-RESEARCH.md",
+    "plan_check": ".planning/phases/2-source-vetting-ruled-out-register/2-PLAN_CHECK.md",
+    "plan_review": ".planning/phases/2-source-vetting-ruled-out-register/2-PLAN_REVIEW.md",
+    "verify": ".planning/phases/2-source-vetting-ruled-out-register/2-VERIFICATION.md"
   },
-  "regate_attempts": {},
+  "regate_attempts": {
+    "plan_review": 1,
+    "integration_check": 1,
+    "gap_analysis": 1
+  },
   "usage": {},
   "config_snapshot": {
     "enable_research": true,
@@ -83,6 +101,6 @@
   },
   "checkpoint_log": [],
   "started_at": "2026-08-14T20:50:07.826Z",
-  "updated_at": "2026-08-14T20:56:19.191Z",
+  "updated_at": "2026-08-14T22:26:53.428Z",
   "notes": "Initialized master_flow for phase 2"
 }
