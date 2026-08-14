@@ -31,7 +31,7 @@ Baseline established retroactively (48 packs shipped through v1.16.3, pipeline +
   1. docs/SOURCE-VETTING.md Excluded table contains INCOSE Handbook, INCOSE Guide to Writing Requirements, ISO/IEC/IEEE 15288/29148/21839, DAU/WARU 2022 duplicate — each with rationale and date
   2. Each of the 11 candidates has a recorded tier decision with source URL and licence evidence
   3. Def Stan 00-051 redistribution terms: recorded outcome is deferred-excluded pending registered DSTAN in-document licence check (decision recorded, build deferred — not an unblock)
-**Plans**: TBD
+**Plans**: 1 plan (complete)
 
 ### Phase 3: Tier 1 packs (public domain)
 **Goal**: 8 public-domain packs built and validated
@@ -56,6 +56,6 @@ Baseline established retroactively (48 packs shipped through v1.16.3, pipeline +
 **Depends on**: Phase 4
 **Requirements**: [REL-01, REL-02]
 **Success Criteria** (what must be TRUE):
-  1. check_release / CI content-integrity gate passes with 56 packs
+  1. check_release.py exits 0; validate gate catalog basis = 54 packs (48 dirs + 8 new, minus 2 signpost packs) / 56 directory basis
   2. v1.17.0 tagged and released
 **Plans**: TBD
