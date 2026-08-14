@@ -38,11 +38,11 @@ New milestone: researched candidate packs + ruled-out tracking. Maps to phases 2
 
 - ~~**T2-01**: Build `ieee-15288-2` pack from IEEE 15288.2-2014 (Technical Reviews and Audits), preserving IEEE copyright attribution~~ — **excluded-by-vetting**. Excluded 2026-08-14 — purchase-only, not in IEEE GET program, IEEE sole copyright, no redistribution/derivative grant (see docs/SOURCE-VETTING.md).
 - ~~**T2-02**: Build `ecss-e-st-10` pack from ECSS-E-ST-10C Rev.1 (Space Engineering General Requirements), preserving ESA/ECSS copyright attribution~~ — **excluded-by-vetting**. Excluded 2026-08-14 — © ESA; ECSS-P-00C §5.8 forbids reproduction without explicit ESA consent; a pack is reproduction + derivative (see docs/SOURCE-VETTING.md).
-- [ ] **T2-03**: Vet UK Def Stan 00-051 redistribution terms; build `defstan-00-051` pack only if terms permit, else record as Excluded with rationale — **deferred-excluded pending registered DSTAN in-document licence check**. In-document terms UNVERIFIED; no DSTAN retrieval performed this milestone. Subject correction: 00-051 is *Environmental Management Requirements for Defence Systems*; system safety is Def Stan 00-056 — any future revival must re-point the requirement and re-read the licence. 0 Tier-2 packs in v1.17.0.
+- [x] **T2-03**: Vet UK Def Stan 00-051 redistribution terms; build `defstan-00-051` pack only if terms permit, else record as Excluded with rationale — **deferred-excluded pending registered DSTAN in-document licence check**. In-document terms UNVERIFIED; no DSTAN retrieval performed this milestone. Subject correction: 00-051 is *Environmental Management Requirements for Defence Systems*; system safety is Def Stan 00-056 — any future revival must re-point the requirement and re-read the licence. 0 Tier-2 packs in v1.17.0.
 
 ### Ruled-Out Tracking
 
-- [ ] **RO-01**: Add researched-and-rejected sources to docs/SOURCE-VETTING.md Excluded table with per-source rationale (INCOSE SE Handbook, INCOSE Guide to Writing Requirements, ISO/IEC/IEEE 15288/29148/21839 full texts, DAU/WARU 2022 guidebook duplicate)
+- [x] **RO-01**: Add researched-and-rejected sources to docs/SOURCE-VETTING.md Excluded table with per-source rationale (INCOSE SE Handbook, INCOSE Guide to Writing Requirements, ISO/IEC/IEEE 15288/29148/21839 full texts, DAU/WARU 2022 guidebook duplicate)
 
 ### Release Surface
 
