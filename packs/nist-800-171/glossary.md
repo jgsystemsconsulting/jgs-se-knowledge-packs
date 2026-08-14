@@ -1,0 +1,32 @@
+# Glossary — NIST SP 800-171 Rev. 3
+
+- **Assessment, security** — Determination of whether security requirements/controls are implemented correctly and operating as intended. → ch06
+- **Audit record** — Chronological record of system activities enabling reconstruction of events. → ch04
+- **Authenticator** — Something the claimant possesses and controls (e.g., password, token, key) used to authenticate identity. → ch02
+- **Baseline configuration** — Documented set of specifications for a system or component that has been formally reviewed and agreed on. → ch04
+- **Boundary protection** — Monitoring and control of communications at the external boundary and key internal boundaries of a system. → ch07
+- **Continuous monitoring** — Maintaining ongoing awareness of information security, vulnerabilities, and threats to support risk decisions. → ch06
+- **Controlled Unclassified Information (CUI)** — Information requiring safeguarding or dissemination controls pursuant to law, regulation, or government-wide policy, excluding classified information. → ch01
+- **External system service** — System service provided by an external provider (e.g., cloud, managed security). → ch08
+- **Federal information system** — System used or operated by an agency, by a contractor of an agency, or by another organization on behalf of an agency. → ch01
+- **Incident** — Occurrence that actually or potentially jeopardizes confidentiality, integrity, or availability, or constitutes a violation of law/policy/security procedures. → ch05
+- **Least functionality** — Configuring systems to provide only essential capabilities. → ch04
+- **Least privilege** — Granting only the access needed to perform assigned tasks. → ch02
+- **Malicious code** — Software or firmware intended to perform unauthorized processes that have adverse impacts. → ch07
+- **Media sanitization** — Process to render access to target data on media infeasible for a given level of effort. → ch05
+- **Multi-factor authentication (MFA)** — Authentication using two or more different factors (something you know/have/are). → ch02
+- **Nonfederal organization** — Entity that owns, operates, or maintains a nonfederal system. → ch01
+- **Nonfederal system** — Any system outside the federal-information-system definition (not agency-operated or operated on an agency's behalf). → ch01
+- **Nonlocal maintenance** — Maintenance activities conducted from outside the physical proximity of the system. → ch05
+- **Organization-defined parameter (ODP)** — Assignment or selection value that completes a flexible requirement statement. → ch01
+- **Plan of action and milestones (POA&M)** — Document identifying tasks to correct weaknesses, with resources and schedules. → ch06
+- **Remote access** — Access to an organizational system by a user (or process) communicating through an external network. → ch02
+- **Risk assessment** — Process of identifying risks to operations, assets, individuals, other organizations, and the Nation. → ch06
+- **Rules of behavior** — Guidelines for personnel on the use of systems and protection of information. → ch06
+- **Security domain** — Domain implementing a security policy and managed by a single authority. → ch01
+- **Security requirement** — Protection need for a system or organization, derived from law, policy, mission, or risk assessment. → ch01
+- **Separation of duties** — Principle of dividing roles so no single individual can subvert critical processes. → ch02
+- **Supply chain risk management (SCRM)** — Systematic process for managing supply chain risk across the system life cycle. → ch08
+- **System security plan (SSP)** — Formal document describing system boundaries, environment, requirements, and control implementations. → ch06
+- **Tailoring** — Process of modifying control baselines to achieve organizational goals (here, already applied by NIST to produce 800-171). → ch01
+- **Unsupported system component** — Component no longer supported by its developer, vendor, or manufacturer. → ch08

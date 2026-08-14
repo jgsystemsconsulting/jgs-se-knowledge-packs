@@ -1,0 +1,23 @@
+slug: nist-800-171
+title: "Protecting Controlled Unclassified Information in Nonfederal Systems and Organizations (NIST SP 800-171 Rev. 3)"
+publisher: "NIST"
+source_version: "Rev. 3, final 2024-05-14 (DOI 10.6028/NIST.SP.800-171r3)"
+license: "Public Domain (US Government work, 17 U.S.C. § 105)"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "jgs-reference-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 120
+  chapters: 8
+  built_on: "2026-08-14"
+notes: >
+  US Government work -- public domain (17 U.S.C. § 105); no copyright, free to reproduce,
+  transform, and redistribute (including commercially). Attribution to NIST is provided as a
+  courtesy in NOTICE, not as an obligation. Content is synthesized/transformed reference notes;
+  no long verbatim passages reproduced (verified by tooling check_overlap). No source-material
+  link published (see docs/LICENSING.md). Extraction used pdftotext fallback (docling not
+  installed). NIST third-party-quote advisory from vet_source.py is expected; pack synthesizes
+  NIST-authored CUI requirement content only. scan_generated_skill findings reviewed at build.
+change_indication: "reconstructed as synthesized reference notes"
