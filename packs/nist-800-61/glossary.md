@@ -1,0 +1,22 @@
+# Glossary — NIST SP 800-61 Rev. 3
+
+- **Community Profile** — Baseline of CSF outcomes published for a shared use case; here, cyber incident risk management. → ch01, ch04, ch05
+- **Consideration (C)** — Profile annotation for something an organization should consider doing. → ch01
+- **Continuous improvement (ID.IM)** — Identify Category where lessons from all Functions are analyzed and used to update practices. → ch02, ch04
+- **Continuous monitoring (DE.CM)** — Ongoing observation of assets to find anomalies, indicators of compromise, and adverse events. → ch05
+- **Cybersecurity incident** — Event or set of events that jeopardizes systems/information or violates security policies (define precisely for your org). → ch01
+- **Cybersecurity Framework (CSF) 2.0** — NIST outcome taxonomy (Functions/Categories/Subcategories) used as the spine of 800-61r3. → ch01, ch02
+- **Detect (DE)** — CSF Function for finding and analyzing possible attacks and compromises. → ch02, ch05
+- **Event** — Any observable occurrence involving a system, network, or service. → ch01
+- **Govern (GV)** — CSF Function for cybersecurity strategy, expectations, and policy. → ch02, ch04
+- **Identify (ID)** — CSF Function for understanding current cybersecurity risks. → ch02, ch04
+- **Incident handler** — Person who verifies incidents, analyzes evidence, prioritizes actions, and limits damage / restores operations. → ch03
+- **Incident response life cycle** — Model organizing IR-related activities over time; r3 presents a CSF-based model. → ch02
+- **Note (N)** — Profile annotation with supporting information (not a mandate). → ch01
+- **Playbook** — Actionable task list for a scenario, often more usable under stress than long prose procedures. → ch03
+- **Preparation** — CRM activities (largely GV/ID/PR) that enable effective IR but are broader than incident execution. → ch02, ch04
+- **Protect (PR)** — CSF Function for safeguards that manage cybersecurity risk. → ch02, ch04
+- **Recommendation (R)** — Profile annotation for something the organization should do. → ch01
+- **Recover (RC)** — CSF Function for restoring assets and operations after an incident. → ch02, ch05
+- **Respond (RS)** — CSF Function for taking action on a detected incident. → ch02, ch05
+- **Security operations center (SOC)** — Operational capability (internal or MSSP) often performing detection and initial response. → ch03
