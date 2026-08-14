@@ -41,7 +41,11 @@ Baseline established retroactively (48 packs shipped through v1.16.3, pipeline +
   1. Each pack conforms to docs/PACK-SPEC.md and passes validate_pack.py
   2. Each pack passes scan_generated_skill.py (advisory findings reviewed)
   3. PACK.yaml provenance complete (tier, licence, pages, chapters, built_on)
-**Plans**: TBD
+**Plans**: 3 plans
+Plans:
+- [ ] 3-01-PLAN.md — Batch A: 4 born-digital packs (nist-800-171, nist-800-61, cisa-cpg, doe-sem); P3-PRE-1/P3-PRE-2 handling
+- [ ] 3-02-PLAN.md — Batch B: DoD handbooks (mil-hdbk-338 with chapter selection, mil-hdbk-516) + mirror/OCR contingencies
+- [ ] 3-03-PLAN.md — Batch C: multi-doc packs (nasa-ms-7009, doe-413-3b) + consolidated registration sweep (catalog/SKILLS.md/packs.html/NOTICE/check_release)
 
 ### Phase 4: Tier 2 packs (conditional licences)
 **Goal**: closed by vetting: 0 Tier-2 packs
