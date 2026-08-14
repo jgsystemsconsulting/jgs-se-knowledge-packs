@@ -68,8 +68,8 @@ This list exists so the repo never ships something that triggers a takedown.
 
 | Source | Why excluded |
 |---|---|
-| **ISO / IEC / IEEE standards** (e.g. 15288, 42010, 12207) | Paywalled, all-rights-reserved. Licensed per-user, often via BSI/Accuris/IHS. |
-| **INCOSE SE Handbook** | Copyrighted (Wiley). Not redistributable. |
+| **ISO / IEC / IEEE standards** (e.g. 15288, 42010, 12207, 29148, 21839) | Paywalled, all-rights-reserved. Licensed per-user, often via BSI/Accuris/IHS. Requirements engineering (29148) and tailoring (21839) are the same per-user licence model. (Verified 2026-08-14.) |
+| **INCOSE SE Handbook** | Copyrighted (Wiley). Not redistributable. (Verified 2026-08-14.) |
 | **SWEBOK v4** (IEEE) | Free download, but licence says "may not alter the text in any way," individual & non-commercial only. |
 | **MITRE SE Guide** | "© The MITRE Corporation. All rights reserved." |
 | **The Open Group TOGAF / ArchiMate** | Evaluation/member licence; not redistributable. |
@@ -77,11 +77,54 @@ This list exists so the repo never ships something that triggers a takedown.
 | **INCOSE SE Vision 2035** | Freely downloadable but no stated redistribution/derivative grant (Tier 3 → treat as excluded pending permission). |
 | **INCOSE Systems Engineering Competency Framework (2nd ed.)** | Freely downloadable (Excel) but © INCOSE, all rights reserved; no redistribution/derivative grant — reuse routed through INCOSE Permissions & Copyrights. Same pattern as the SE Vision 2035 row. (Verified 2026-08-14.) |
 | **OMG formal specifications** (UML, SysML, BPMN, UAF, CORBA, MOF, XMI, OCL, DDS…) | OMG Specification License public grant is informational-use-only: the spec "will not be copied or posted on any network computer … or … transferred for commercial purposes" and "no modifications are made to this specification." A hosted, transformed pack breaches both. Confirmed by two independent licence reads (2026-06-19). Cite + link to the OMG download; never package. |
+| **IEEE 15288.2-2014** | Purchase/subscription only; not in the IEEE GET program; IEEE sole copyright holder, GET downloads are personal-use with no redistribution/derivative grant. (Verified 2026-08-14.) |
+| **ECSS standards (incl. ECSS-E-ST-10C Rev.1)** | Free download from ecss.nl but © ESA; "No ECSS document may be reproduced in any form without the explicit consent of ESA" (ECSS-P-00C §5.8). A pack is reproduction + derivative work. (Verified 2026-08-14.) |
+| **INCOSE Guide to Writing Requirements** | Purchase-only, all-rights-reserved (INCOSE). Revisit only if an open-licence edition appears (FUT-02). (Verified 2026-08-14.) |
+| **DAU/WARU SE Guidebook (Feb 2022) re-pack** | Duplicate of existing `packs/dau-se-guidebook/` in the 48-pack baseline (US-gov public domain; excluded for duplication, not licence). (Verified 2026-08-14.) |
 
 > If you are licensed to read one of these (e.g. an employer's BSI/Accuris seat for an
 > ISO standard), that licence is **yours**, not the repo's. Building a pack from it for
 > your own private use may be fine; **publishing that pack here is not.** Keep
 > source-restricted packs in a private/local skills directory, never in this repo.
+
+### Vetted candidates (v1.17.0) — statute-basis; confirm in-source at build
+
+Source URLs for all vetted/excluded/UNVERIFIED candidates are recorded in
+`.planning/phases/2-source-vetting-ruled-out-register/2-RESEARCH.md` (Link Policy: never
+published in docs or packs).
+
+Statute-basis rows below rest on 17 U.S.C. § 105 (US Government works). In-PDF statements
+(NIST footers, CISA title page, DOE SEM third-party notices, Distribution Statement A on
+DoD handbooks) are confirmed at build time in Phase 3 — these rows are pending that
+in-source confirmation.
+
+| Source | Tier | Licence evidence |
+|---|---|---|
+| **NIST SP 800-171 Rev.3** (NIST CSRC; Protecting CUI in Nonfederal Systems; final 2024-05-14) | Tier 1 | US Government work (17 U.S.C. § 105); NIST staff-authored publication. Confirm PDF footer at build. |
+| **NIST SP 800-61 Rev.3** (NIST; Incident Response Recommendations; final 2025-04-03) | Tier 1 | US Government work (17 U.S.C. § 105); same NIST basis. Confirm PDF footer at build. |
+| **MIL-HDBK-338B** (DoD Electronic Reliability Design Handbook, 1 Oct 1998; Notice 2 2007) | Tier 1 | Distribution Statement A + US Gov work (17 U.S.C. § 105). Confirm statement on PDF cover/i page at build. |
+| **MIL-HDBK-516C** (DoD Airworthiness Certification Criteria, 2014 w/ Change 1 2016) | Tier 1 | Distribution Statement A + US Gov work (17 U.S.C. § 105). Quote confirmed from DLA-hosted document. |
+| **NASA-STD-7009B + NASA-HDBK-7009** (NASA Standard/Handbook for Models and Simulations; STD-7009B 2024-03-05) | Tier 1 | NASA-authored US Government work (17 U.S.C. § 105); not subject to copyright in the United States; attribution courtesy. |
+| **DOE O 413.3B Chg 7** (DOE Order, Program and Project Management for the Acquisition of Capital Assets; LtdChg 2023-06-21) | Tier 1 | US DOE government work (17 U.S.C. § 105). Confirm no third-party-copyright notices inside the PDF at build. |
+| **CISA CPG 2.0** (CISA Cross-Sector Cybersecurity Performance Goals 2.0; ~2024-25) | Tier 1 | CISA federal-employee authorship → public domain (17 U.S.C. § 105). Verify PDF title/disclaimer page at build; watch for embedded third-party logos/content. |
+| **DOE SEM3** (US DOE Systems Engineering Methodology, SEM version 3) | Tier 1 | DOE-authored US Government work (17 U.S.C. § 105). Confirm no third-party copyright notice inside the PDF at build. |
+
+### Def Stan 00-051 — UNVERIFIED / excluded from this milestone
+
+**Def Stan 00-051** (*Environmental Management Requirements for Defence Systems*, Issue 2
+2021) is **UNVERIFIED** and **excluded from v1.17.0** pending a registered DSTAN user
+recording the exact cover/inside-front copyright/reuse statement.
+
+- **Subject correction:** 00-051 is environmental management for defence systems — **not**
+  system safety. System safety is **Def Stan 00-056** (Safety Management Requirements). The
+  original v1.17.0 candidate description conflated the two.
+- **Access:** Crown copyright; downloads are free of charge but registration-gated via the
+  DSTAN / UK Defence Standardization portal. No public fetchable PDF was available, so
+  in-document reuse terms could not be inspected this milestone.
+- **Pending decision path:** If OGL v3.0 applies inside the document → Tier 2 (attribution
+  carried forward). If bespoke MOD-consent / no-reproduction terms → stays Excluded.
+- **Recorded outcome (2026-08-14):** deferred-excluded for this milestone; no pack build
+  until the in-document terms are recorded by a registered DSTAN user.
 
 ---
 
