@@ -177,7 +177,8 @@ patterns, and a cheatsheet. Full guidance: [docs/skill-usage.md](docs/skill-usag
 ## How a pack is built
 
 Vet the source (tier + licence, not on the Excluded list) → extract text (built on the
-MIT-licensed [`book-to-skill`](https://github.com/virgiliojr94/book-to-skill) engine) → map
+MIT-licensed [`jgs-reference-skill`](https://github.com/jgsystemsconsulting/jgs-reference-skill)
+engine — a fork of [`book-to-skill`](https://github.com/virgiliojr94/book-to-skill)) → map
 structure to chapter offsets → generate reference-depth chapters in parallel + glossary /
 patterns / cheatsheet + the `SKILL.md` index → attach provenance (`PACK.yaml` + a `LICENSE`
 reproducing the source's terms) → validate. Contract: [docs/PACK-SPEC.md](docs/PACK-SPEC.md).

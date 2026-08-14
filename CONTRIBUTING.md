@@ -29,7 +29,7 @@ python tooling/build_pack.py --slug <slug> --title "..." --publisher "..." \
     --version "..." --url "..." --license "..." --tier <1|2|3> --commercial-use <true|false>
 
 # 2. Generate content per docs/PACK-SPEC.md:
-#    - extract text (book-to-skill), map chapter offsets, generate reference-depth
+#    - extract text (jgs-reference-skill), map chapter offsets, generate reference-depth
 #      chapters + glossary/patterns/cheatsheet, then the SKILL.md index.
 # 3. Fill the TODOs in packs/<slug>/PACK.yaml and packs/<slug>/LICENSE.
 # 4. Add a catalog row and rebuild catalog.json (see tooling/ or hand-edit).

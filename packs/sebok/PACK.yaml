@@ -8,7 +8,7 @@ commercial_use: false
 share_alike: true
 attribution_required: true
 build:
-  method: "book-to-skill extraction + offset-mapped parallel chapter generation"
+  method: "jgs-reference-skill extraction + offset-mapped parallel chapter generation"
   source_pages: 1705
   chapters: 36
   built_on: "2026-06-24"

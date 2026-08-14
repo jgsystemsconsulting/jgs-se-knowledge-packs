@@ -558,8 +558,9 @@ Third-party source attributions (one block per shipped pack)
            obligation; the FAA does not endorse this pack. See packs/faa-rma/LICENSE.
 
 -----------------------------------------------------------------------------------
-The build pipeline uses the book-to-skill extraction engine (MIT License),
-© the book-to-skill authors. It is a build tool, not a packaged source.
+The build pipeline uses the jgs-reference-skill extraction engine (MIT License,
+© JG Systems Consulting Ltd; a fork of book-to-skill, © the book-to-skill authors).
+It is a build tool, not a packaged source.
 -----------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------------

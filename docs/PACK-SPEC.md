@@ -60,7 +60,7 @@ commercial_use: false             # false if NC; true if PD or non-NC
 share_alike: true                 # true if SA: pack content inherits the licence
 attribution_required: true
 build:
-  method: "book-to-skill + offset-mapped parallel chapter generation"
+  method: "jgs-reference-skill extraction + offset-mapped parallel chapter generation"
   source_pages: 1465
   chapters: 41
   built_on: "2026-06-19"
