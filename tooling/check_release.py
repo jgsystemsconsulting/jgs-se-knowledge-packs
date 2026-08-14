@@ -68,8 +68,12 @@ def main() -> int:
     # those never ship, and they legitimately contain source URLs (extracted source text
     # under sources/.build/) or QA snapshots (.playwright-mcp/) — scanning them is a
     # false positive against the link/leak policy, which only governs shippable content.
+    # .planning/ is internal GSD workflow state that never ships (not in installers or the
+    # packaged plugin) and legitimately holds research URLs as vetting evidence — same
+    # precedent as sources/.build.
     SKIP_DIRS = {".git", "sources", ".build", ".playwright-mcp", "__pycache__",
-                 ".worktrees", ".ruff_cache", ".pytest_cache", ".venv", "venv", ".idea", ".vscode"}
+                 ".worktrees", ".ruff_cache", ".pytest_cache", ".venv", "venv", ".idea", ".vscode",
+                 ".planning"}
     text_files = [p for p in ROOT.rglob("*")
                   if p.is_file() and p.suffix in {".md", ".py", ".json", ".yaml", ".yml", ".txt", ".sh", ".ps1"}
                   and not (SKIP_DIRS & set(p.parts))]
