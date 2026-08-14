@@ -75,6 +75,7 @@ This list exists so the repo never ships something that triggers a takedown.
 | **The Open Group TOGAF / ArchiMate** | Evaluation/member licence; not redistributable. |
 | **PMI PMBOK** | PMI copyright. |
 | **INCOSE SE Vision 2035** | Freely downloadable but no stated redistribution/derivative grant (Tier 3 → treat as excluded pending permission). |
+| **INCOSE Systems Engineering Competency Framework (2nd ed.)** | Freely downloadable (Excel) but © INCOSE, all rights reserved; no redistribution/derivative grant — reuse routed through INCOSE Permissions & Copyrights. Same pattern as the SE Vision 2035 row. (Verified 2026-08-14.) |
 | **OMG formal specifications** (UML, SysML, BPMN, UAF, CORBA, MOF, XMI, OCL, DDS…) | OMG Specification License public grant is informational-use-only: the spec "will not be copied or posted on any network computer … or … transferred for commercial purposes" and "no modifications are made to this specification." A hosted, transformed pack breaches both. Confirmed by two independent licence reads (2026-06-19). Cite + link to the OMG download; never package. |
 
 > If you are licensed to read one of these (e.g. an employer's BSI/Accuris seat for an
