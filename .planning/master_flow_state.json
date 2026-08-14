@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
   "kind": "pointer",
-  "active_phase": 2,
-  "active_phase_dir": ".planning/phases/2-source-vetting-ruled-out-register",
-  "active_state": ".planning/phases/2-source-vetting-ruled-out-register/master_flow_state.json",
+  "active_phase": 3,
+  "active_phase_dir": ".planning/phases/3-tier-1-packs-public-domain",
+  "active_state": ".planning/phases/3-tier-1-packs-public-domain/master_flow_state.json",
   "lock": {
-    "phase": 2,
+    "phase": 3,
     "session_hint": "master-flow",
-    "updated_at": "2026-08-14T22:26:53.429Z"
+    "updated_at": "2026-08-14T22:44:26.980Z"
   },
-  "updated_at": "2026-08-14T22:26:53.431Z",
-  "notes": "Phase 2 verify passed. Next: 2"
+  "updated_at": "2026-08-14T22:44:26.982Z",
+  "notes": ""
 }
