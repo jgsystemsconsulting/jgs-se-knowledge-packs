@@ -1,10 +1,10 @@
 ---
-gsd_state_version: 1.0
+gsd_state_version: '1.0'
 milestone: v1.17.0
-milestone_name: "**Goal**: Catalog, docs, installers, and release artifacts include the new packs"
+milestone_name: Source Expansion (v1.17.0)
 current_phase: 2
 current_phase_name: Source vetting + ruled-out register
-status: planning
+status: executing
 stopped_at: Completed 2-01-PLAN.md
 last_updated: "2026-08-14T22:07:10.891Z"
 last_activity: 2026-08-14
@@ -29,8 +29,8 @@ See: .planning/PROJECT.md (updated 2026-08-14)
 ## Current Position
 
 Phase: 2 of 5 (Source vetting + ruled-out register)
-Plan: 01 executing / completing
-Status: Phase 2 outcome recorded; next: Phase 3
+Plan: 01 complete
+Status: executing — Phase 2 outcome recorded; next: Phase 3
 Last activity: 2026-08-14 — Phase 2 vetting outcomes recorded (T2-01/T2-02 excluded; T2-03 deferred-excluded; 56-pack target)
 
 Progress: [██░░░░░░░░] 20%
@@ -53,9 +53,9 @@ Progress: [██░░░░░░░░] 20%
 
 ## Decisions
 
-- [Phase ?]: IEEE 15288.2-2014 and ECSS-E-ST-10C Rev.1 Excluded (not Tier 2); 0 Tier-2 packs in v1.17.0
-- [Phase ?]: Def Stan 00-051 deferred-excluded pending DSTAN in-document terms; subject is environmental mgmt (not 00-056 safety)
-- [Phase ?]: v1.17.0 pack target is 56 (48 baseline + 8 Tier-1)
+- [Phase 2]: IEEE 15288.2-2014 and ECSS-E-ST-10C Rev.1 Excluded (not Tier 2); 0 Tier-2 packs in v1.17.0
+- [Phase 2]: Def Stan 00-051 deferred-excluded pending DSTAN in-document terms; subject is environmental mgmt (not 00-056 safety)
+- [Phase 2]: v1.17.0 pack target is 56 (48 baseline + 8 Tier-1)
 
 ## Session
 
