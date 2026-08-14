@@ -41,7 +41,7 @@ Shipped through v1.16.3:
 - Content-first repo: Markdown packs + stdlib-only Python tooling; no package manager
 - The 7-doc codebase map lives in `.planning/codebase/`; PACK-SPEC constraints in `.planning/intel/`
 - Known concerns (from map): signpost-pack validation false-fails, CI gate logic duplication, catalog.json drift unguarded, hardcoded local paths in build_all_packs.workflow.js, stale .pyc-only tests
-- Next milestone (v1.17.0): 11 researched candidate packs (8 Tier-1, 3 Tier-2) + ruled-out source tracking
+- Next milestone (v1.17.0): 11 researched candidates (8 Tier-1 builds + 3 vetted-out; 0 Tier-2 packs) + ruled-out source tracking
 
 ## Constraints
 

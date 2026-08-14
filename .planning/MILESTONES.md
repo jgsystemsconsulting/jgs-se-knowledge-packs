@@ -6,4 +6,4 @@ Initial library build-out: 48 knowledge packs across NASA / DoD / FAA / GAO / NI
 
 ## v1.17.0 (in planning)
 
-Source expansion: 11 researched candidate packs (8 Tier-1 public domain, 3 Tier-2 conditional licence), formal ruled-out register in docs/SOURCE-VETTING.md, release-surface sync. See REQUIREMENTS.md and ROADMAP.md phases 2–5.
+Source expansion: 11 researched candidates (8 Tier-1 public domain builds + 3 vetted-out: T2-01/T2-02 Excluded, T2-03 deferred-excluded → 0 Tier-2 packs in v1.17.0), formal ruled-out register in docs/SOURCE-VETTING.md, release-surface sync. See REQUIREMENTS.md and ROADMAP.md phases 2–5.
