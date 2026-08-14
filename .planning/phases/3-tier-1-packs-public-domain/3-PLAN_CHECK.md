@@ -194,3 +194,93 @@ Highest-leverage revision (same 3 plans, no re-batch): retarget 3-03 Task 3 at r
 Do not execute 3-03 Task 3 until B1 is revised. Pack-build tasks may be executed only after the When-to-use generate step is added; otherwise the closing gate is guaranteed red.
 
 **Verdict:** FAIL
+
+---
+
+## Re-check (post-remediation)
+
+**Checked:** 2026-08-14 (plans as of `ffc3caf`)
+**Method:** Goal-backward re-verification of each original finding against the remediated `3-01`/`3-02`/`3-03` plans, live `catalog.json` (46 packs, 42 `license_tier==1`), live `SKILLS.md` line 18 / header, and `tooling/check_release.py` rr-s-13 + index regex / `tooling/gen_packs_page.parse_skills`.
+
+**Verdict:** PASS_WITH_FIXES
+
+B1 is gone. The registration sweep now targets repo-root `catalog.json`, writes the live backtick-slug SKILLS row, and the eight pack generate steps write the rr-s-13 `## When to use` + `**Prerequisites:**` contract that `check_release.py` actually enforces. No new blockers. Two original warnings remain as residual verify-quality nits; they do not stop execution.
+
+Live measurements used:
+
+- `catalog.json` exists at repo root; `packs/catalog.json` does not. 46 entries, 42 tier-1. Entry shape: `slug, title, publisher, source_version, license, license_tier, commercial_use, chapters, status`.
+- `SKILLS.md` header: `46 packs (+2 signposts)`. Row 18 (nist-csf) is the live backtick form required by both `parse_skills` and the check_release index regex.
+- rr-s-13 (`tooling/check_release.py` lines 131-141): heading `## When to use` plus a Prerequisites/Requirements/compatibility marker. Live `packs/nist-csf/SKILL.md` has `## When to use` immediately followed by a `**Prerequisites:**` line.
+- Pack dirs today: 48 (46 content + 2 signposts). After +8: catalog 54 / directory 56. Tier-1: 42+8=50.
+
+### Per-finding status
+
+| ID | Original | Status | Evidence |
+|---|---|---|---|
+| B1 catalog path | 3-03 Task 3 edited `packs/catalog.json` | **CLEARED** | `files_modified`, Task 3 files, action, verify, artifacts, and key_links all use repo-root `catalog.json`. Action forbids creating `packs/catalog.json`. Verify is `json.load(open('catalog.json'))`. |
+| B1 SKILLS row form | `[slug](packs/<slug>/SKILL.md)` without backticks | **CLEARED** | Action prescribes the live backtick-slug row and tells the executor to copy a live row (nist-csf). Task 3 verify greps the eight slugs in backtick form. Header bump `46 packs (+2 signposts)` to `54 packs (+2 signposts)` is explicit. Sample row parses in both live parsers. |
+| B1 When-to-use + Prerequisites | omitted from every generate step; `check_release.py` would fail | **CLEARED** | Mandatory contract in 3-01 T1 (reference) and restated in 3-01 T2/T3/T4, 3-02 T1/T2, 3-03 T1/T2. Every pack verify greps `## When to use` and `**Prerequisites:**`. Task 3 then runs `python tooling/check_release.py`. |
+| B1 catalog math / slug assert | verify pointed at missing file; no 8-slug proof | **CLEARED** | Asserts the eight new slugs, `len(c['packs'])==54`, and 50 tier-1 entries. 46+8=54 and 42+8=50 match live counts. |
+| W1 overlap / scan / provenance | several pack verifies omitted overlap/scan; no dual overlap; no DIST-A / 8-10 | **CLEARED** for overlap/scan/DIST-A/8-10/dual. **Residual:** nested `source_pages` / `built_on` / `license_tier` still not grepped -- only `! grep -q TODO`. | All eight pack verifies run `check_overlap.py` with a persisted work-dir path (cisa + nasa run it twice). All eight run `scan_generated_skill.py`. 3-02 T1 asserts chapter count in 8-10 and greps `Distribution Statement A` in PACK.yaml and LICENSE. 3-02 T2 same DIST-A greps. |
+| W2 undefined REF / TMPxxx | verify shells referenced unset REF / TMP800_61 / TMPSEM / TMP516 / TMP413 | **CLEARED** | Those TMP names are gone. Every pack verify starts with a hardcoded `REF=` path and reads `sources/<slug>/work_dir.txt` (or the two-file variant). Actions persist those paths at extract time. |
+| W3 weak / inverted greps | inverted `git show` sources count; `grep -c 43` incidental | **CLEARED** | 3-01 T1 now requires zero `sources/` or `full_text.txt` paths on `git show --name-only --pretty=format: HEAD`. 3-03 T1 replaced `grep -c 43` with greps for `STD-7009B` and `HDBK-7009B` on PACK.yaml. |
+| W4 scope / estimates | 3-01 has 4 tasks; 140k/120k/120k over 100k smart-zone; confidence low | **STILL OPEN (advisory)** | Unchanged and still not a blocker (ADR-2629). `estimate-check --calibrated`: 3-01 140000/100000 (1.40x), 3-02 and 3-03 120000 (1.20x), confidence=low, sample_count=0. Keep the 3-batch split. |
+| W5 3-01 T1 git show HEAD | verify assumes the pack commit is already HEAD | **STILL OPEN (warning)** | Action still commits at step 8; verify still reads HEAD. If verify runs before the commit, or another commit landed, the sources/ leak check is meaningless. Other pack verifies never added this check. |
+
+### New issues introduced by the remediation?
+
+None that block the phase goal.
+
+Checked and discarded:
+
+- `packs/catalog.json` appears only as a do-not-create warning in 3-03 Task 3.
+- The only `tmp` hit is NASA's `system/files/tmp/` download path, not a shell var.
+- Task 3 SKILLS grep of the eight-slug alternation exits 0 on any match (does not assert count==8). `check_release.py` still compares SKILLS non-signpost rows to shipped pack dirs, so a short SKILLS table fails the closing gate. Not a new blocker.
+- NASA verify still does not assert `source_pages = STD+HDBK` numerically; it asserts both source names. Covered by done-criteria plus the residual W1 provenance note.
+
+### Dimension roll-up (re-check)
+
+| Dim | Result | Notes |
+|---|---|---|
+| 1 Requirement coverage | PASS | T1-01..T1-08 still claimed and tasked. |
+| 2 Task completeness | PASS | `verify.plan-structure`: 3-01 4 / 3-02 2 / 3-03 3; all auto with Files+Action+Verify+Done. |
+| 3 Dependencies | PASS | Unchanged: 3-01/3-02 wave 1; 3-03 wave 2 depends_on [3-01, 3-02]. |
+| 4 Key links | PASS | Registration now wires root `catalog.json`, live SKILLS row shape, packs.html via `gen_packs_page.py`, NOTICE, and `check_release.py`. Generate steps are wired to rr-s-13. |
+| 5 Scope sanity | WARN | Same as W4. Over-budget is advisory. |
+| 6 Verification derivation | WARN | Residual: nested PACK.yaml provenance keys not parsed; 3-01 T1 HEAD leak-check ordering (W5). Overlap/scan/When-to-use/DIST-A/chapter-count/catalog math now measured. |
+| 7 / 7b / 7c | SKIPPED / PASS / SKIPPED | No CONTEXT.md. No silent scope reduction. No responsibility map. |
+| 8 Nyquist | SKIPPED | No Validation Architecture; no VALIDATION.md. |
+| 9 Cross-plan contracts | PASS | Unchanged shared pipeline; single-writer registration. |
+| 10 CLAUDE.md | SKIPPED | No ./CLAUDE.md. |
+| 11 Research resolution | PASS | No Open Questions section. |
+| 12 Pattern compliance | SKIPPED | No PATTERNS.md. |
+
+### Residual (do not block execute)
+
+1. **W4** -- token estimates over the 100k smart-zone; 3-01 at 4 tasks. If Batch A blows context, split 2+2 after the nist-800-171 reference run.
+2. **W5** -- 3-01 Task 1 leak check should inspect the named pack commit / working tree, not assume HEAD. Optional: add the same name-only leak check to the other seven pack verifies.
+3. **W1 residual** -- pack verifies still do not parse nested `license_tier` / `source_pages` / `built_on`. TODO-absence is the only mechanical provenance check; a one-line YAML parse would make SC3 mechanical.
+
+### Structured issues (open after re-check)
+
+```yaml
+issues:
+  - plan: "3-01"
+    dimension: scope_sanity
+    severity: warning
+    description: "Unchanged: 3-01 has 4 tasks and estimate 140k/100k (1.40x); 3-02 and 3-03 are 120k/100k. confidence=low (sample_count=0). Over-budget is advisory only."
+    fix_hint: "Keep the 3-batch split. If Batch A blows context, cut to 2+2 after the nist-800-171 reference run."
+  - plan: "3-01"
+    dimension: task_completeness
+    severity: warning
+    task: 1
+    description: "Task 1 verify still uses git show HEAD for the sources/ leak check, which is meaningless if verify runs before the pack commit or HEAD has moved."
+    fix_hint: "Verify the working tree / named path, then commit; or git log -1 --name-only after the commit step only."
+  - plan: "3-01"
+    dimension: verification_derivation
+    severity: warning
+    description: "Pack verifies still do not parse nested PACK.yaml license_tier / source_pages / built_on (SC3). TODO-absence is the only mechanical provenance check."
+    fix_hint: "Optional: grep or python-parse those keys in each pack verify."
+```
+
+**Verdict:** PASS_WITH_FIXES
