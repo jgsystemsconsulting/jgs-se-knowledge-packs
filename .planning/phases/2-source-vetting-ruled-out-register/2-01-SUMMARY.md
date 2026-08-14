@@ -49,7 +49,7 @@ patterns-established:
   - "Link Policy: never put source URLs in docs/SOURCE-VETTING.md; point at research file"
   - "T2-03 language is recorded outcome deferred-excluded; checkbox stays open"
 
-requirements-completed: [RO-01, T2-03]
+requirements-completed: [RO-01]
 
 coverage:
   - id: D1
