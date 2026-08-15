@@ -9,6 +9,56 @@ All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning follows
 [Semantic Versioning](https://semver.org/).
 
+## [1.17.0]: 2026-08-15
+
+### Added
+
+- **`nist-800-171`** (8 ch): NIST SP 800-171 Rev. 3 - protecting CUI in nonfederal
+  systems; the 17 requirement families and assessment orientation. Tier 1 (US-gov public domain).
+- **`nist-800-61`** (6 ch): NIST SP 800-61 Rev. 3 - CSF 2.0-aligned incident response
+  life cycles, roles, playbooks, and coordination. Tier 1 (US-gov public domain).
+- **`cisa-cpg`** (5 ch): CISA Cross-Sector Cybersecurity Performance Goals 2.0 -
+  prioritized IT/OT baseline goals aligned to NIST CSF 2.0. Tier 1 (US-gov public domain).
+- **`doe-sem`** (7 ch): DOE Systems Engineering Methodology (SEM) v3 - the DOE SDLC,
+  Stage Exits, Structured Walkthroughs, In-Stage Assessments, requirements traceability.
+  Tier 1 (US-gov public domain).
+- **`mil-hdbk-338`** (9 ch): MIL-HDBK-338B Electronic Reliability Design Handbook -
+  R/M/A theory, allocation/prediction, derating, FMEA/FTA/SCA, FRACAS/growth
+  (Distribution A). Tier 1 (US-gov public domain).
+- **`mil-hdbk-516`** (8 ch): MIL-HDBK-516C Airworthiness Certification Criteria -
+  tailoring a certification basis and the domain criteria clusters
+  (Distribution A). Tier 1 (US-gov public domain).
+- **`nasa-ms-7009`** (7 ch): NASA-STD-7009B + NASA-HDBK-7009B models & simulations -
+  M&S criticality, V&V domains, uncertainty/sensitivity, risk-informed reporting.
+  Tier 1 (US-gov public domain).
+- **`doe-413-3b`** (6 ch): DOE O 413.3 series (built from O 413.3C, which cancels
+  O 413.3B Chg 7) - Critical Decisions CD-0 to CD-4, performance baselines, EVMS/PARS
+  controls, risk-informed governance. Tier 1 (US-gov public domain).
+- `docs/SOURCE-VETTING.md`: ruled-out register recording tier decisions for all 11
+  v1.17.0 candidates (INCOSE Handbook, INCOSE Guide, ISO/IEC/IEEE 15288/29148/21839,
+  ECSS, INCOSE Competency Framework excluded; Def Stan 00-051 deferred-excluded).
+- PACK-SPEC.md: SKILL.md body-order rules now state the `## When to use` +
+  `**Prerequisites:**` contract the release gate enforces (RR-S-13).
+
+Catalogue now 54 packs (+2 signposts).
+
+### Fixed
+
+- Cursor manifest (`.cursor-plugin/plugin.json`) omitted the 8 new packs; now lists
+  all 55 eligible skills, and the release gate reconciles manifest entries against
+  eligible pack directories so the manifest cannot drift again (found in code review,
+  fixed at 02126ac).
+
+### Changed
+
+- Release-gate and CI link-policy scans skip `.planning/` (internal workflow state);
+  CI leak/link scans now mirror the local gate's skip set.
+- Source-host link policy extended to cisa.gov, energy.gov, nde-ed.org, everyspec.com.
+- Registered the 8 packs on every surface: catalog.json, SKILLS.md, docs/packs.html,
+  NOTICE, README badge, docs/index.html, Cursor manifest.
+- Repo onboarded to a GSD planning flow (`.planning/` roadmap, requirements, and
+  per-phase review artifacts); internal-only, never shipped in installers or the plugin.
+
 ## [1.16.3]: 2026-06-26
 
 ### Added

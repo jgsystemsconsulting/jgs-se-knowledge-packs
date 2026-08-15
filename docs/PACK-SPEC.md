@@ -30,6 +30,8 @@ packs/<slug>/
 - **YAML frontmatter** with `name` (= folder slug) and a `description` that states what
   the pack covers **and its scope limits** (be honest about what the source is thin on).
 - Body order: most important first (hosts truncate from the end on compaction).
+  - `## When to use` (immediately followed by a `**Prerequisites:**` line naming what
+    the reader should already have/know - RR-S-13; enforced by tooling/check_release.py)
   - `## How to Use This Skill`
   - `## Core Frameworks & Mental Models` (~2,000 tokens: the toolkit, not a summary)
   - `## Chapter Index` (table linking every `chapters/chNN-*.md`)

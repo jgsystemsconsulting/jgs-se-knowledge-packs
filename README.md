@@ -7,7 +7,7 @@ SPDX-License-Identifier: MIT
 
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT%20(tooling)-blue" alt="License: MIT (tooling)">
-  <img src="https://img.shields.io/badge/version-1.16.3-green" alt="Version 1.16.3">
+  <img src="https://img.shields.io/badge/version-1.17.0-green" alt="Version 1.17.0">
   <img src="https://img.shields.io/badge/packs-54-blueviolet" alt="54 packs">
   <img src="https://img.shields.io/badge/tested%20with-Claude%20Code-8A2BE2" alt="Tested with Claude Code">
   <img src="https://img.shields.io/badge/scope-systems%20engineering-orange" alt="Scope: systems engineering">
@@ -55,7 +55,7 @@ and install the catalogue for you.
 ```text
 You are installing jgs-se-knowledge-packs, an open catalogue (MIT tooling) of
 systems-engineering knowledge-pack skills by JG Systems Consulting Ltd.
-Repository: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs (version 1.16.3).
+Repository: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs (version 1.17.0).
 Do this in order:
 1. Read README.md, docs/skill-usage.md, and CHANGELOG.md so you understand what you are
    installing. There are NO external prerequisites: packs are plain Markdown skills.
@@ -153,7 +153,17 @@ always-loaded `SKILL.md` index inlined into one file. Full detail and the per-ag
 | `nasa-npr-7150` | NASA NPR 7150.2D: NASA Software Engineering Requirements | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `nist-stat-handbook` | NIST/SEMATECH e-Handbook of Statistical Methods (NIST HB 151) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `faa-rma` | FAA Reliability, Maintainability & Availability Handbook (FAA-HDBK-006D) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
+| `nist-800-171` | NIST SP 800-171 Rev. 3: Protecting CUI in Nonfederal Systems | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
+| `nist-800-61` | NIST SP 800-61 Rev. 3: Incident Response Recommendations | Public domain (US gov) | 🟢 1 | ✅ live (6 chapters) |
+| `cisa-cpg` | CISA Cross-Sector Cybersecurity Performance Goals 2.0 | Public domain (US gov) | 🟢 1 | ✅ live (5 chapters) |
+| `doe-sem` | DOE Systems Engineering Methodology (SEM) v3 | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
+| `mil-hdbk-338` | MIL-HDBK-338B: Electronic Reliability Design Handbook | Public domain (US gov) | 🟢 1 | ✅ live (9 chapters) |
+| `mil-hdbk-516` | MIL-HDBK-516C: Airworthiness Certification Criteria | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
+| `nasa-ms-7009` | NASA-STD-7009B / NASA-HDBK-7009B: Models and Simulations | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
+| `doe-413-3b` | DOE O 413.3 series: Capital Asset Project Management (from O 413.3C) | Public domain (US gov) | 🟢 1 | ✅ live (6 chapters) |
 | `mit-ocw-se` | MIT OCW Fundamentals of Systems Engineering | CC BY-NC-SA | 🟡 2 | 🔜 planned |
+
+The `doe-413-3b` slug is retained for continuity, but the pack tracks the current DOE O 413.3 series edition (O 413.3C, which cancels O 413.3B Chg 7).
 
 Machine-readable index: [SKILLS.md](SKILLS.md) · [catalog.json](catalog.json).
 
@@ -204,4 +214,4 @@ and redistribute (including why no source-material links are published) is set o
 
 ## Version
 
-See [CHANGELOG.md](CHANGELOG.md). Current: 1.16.3.
+See [CHANGELOG.md](CHANGELOG.md). Current: 1.17.0.
