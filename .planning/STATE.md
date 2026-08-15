@@ -4,16 +4,16 @@ milestone: v1.17.0
 milestone_name: "**Goal**: Catalog, docs, installers, and release artifacts include the new packs"
 current_phase: 3
 current_phase_name: Tier 1 packs (public domain)
-status: in_progress
+status: complete
 stopped_at: Completed 3-03-PLAN.md
 last_updated: "2026-08-15T01:00:57.741Z"
 last_activity: 2026-08-15
-last_activity_desc: Completed 3-02-PLAN.md (2 DoD packs)
+last_activity_desc: Completed 3-03-PLAN.md (nasa-ms-7009, doe-413-3b, registration)
 progress:
-  total_phases: 2
-  completed_phases: 2
-  total_plans: 4
-  completed_plans: 4
+  total_phases: 3
+  completed_phases: 3
+  total_plans: 5
+  completed_plans: 5
 ---
 
 # Project State
@@ -23,21 +23,21 @@ progress:
 See: .planning/PROJECT.md (updated 2026-08-14)
 
 **Core value:** Licence-clean, validated, single-source reference packs an agent can load without context bloat.
-**Current focus:** v1.17.0 — Phase 3 Tier-1 packs (3-02 Batch B complete; next 3-03)
+**Current focus:** v1.17.0 — Phase 3 Tier-1 packs complete; next Phase 5 release packaging
 
 ## Current Position
 
 Phase: 3 — Tier 1 packs (public domain)
-Plan: 02 complete (Batch B); next 03
-Status: In progress
-Last activity: 2026-08-15 — Completed 3-02-PLAN.md (2 DoD packs)
+Plan: 03 complete (Batch C + registration)
+Status: Phase 3 complete
+Last activity: 2026-08-15 — Completed 3-03-PLAN.md (nasa-ms-7009, doe-413-3b, registration)
 
 Progress: [██████████] 100%
 
 ## Performance Metrics
 
-- Phases completed: 2/5 (Phase 1 retro + Phase 2)
-- Packs shipped: 54 directories (48 baseline + 4 from 3-01 + 2 from 3-02; not yet registered in catalog — 3-03)
+- Phases completed: 3/5 (Phase 1 retro + Phase 2 + Phase 3)
+- Packs shipped: 56 directories (48 baseline + 8 Tier-1); catalog basis 54 live + 2 signposts
 - Target after v1.17.0: 56
 
 **Per-Plan Metrics:**
@@ -54,6 +54,7 @@ Progress: [██████████] 100%
 - Onboarding was brownfield; Phase 1 recorded retroactively, no execution needed
 - T2-01/T2-02 excluded by vetting (IEEE GET terms / ECSS-P-00C §5.8); Def Stan 00-051 deferred-excluded pending registered DSTAN in-document licence check + 00-051/00-056 subject-mismatch noted; 0 Tier-2 packs in v1.17.0
 - 3-01: cisa-cpg had no separate controls-list PDF; main report sliced; slick sheet overlap-only (MN-04)
+- 3-03: nasa two-PDF + doe O 413.3C successor; registration MJ-01 surfaces; check_release PASS
 - 3-02: DLA PDFs token-gated; used nde-ed.org (338B) and everyspec (516C); OCR not needed; page-object counts higher than catalog estimates but cpp floor passed
 
 ## Decisions
@@ -67,9 +68,9 @@ Progress: [██████████] 100%
 - [Phase 3]: 338B from nde-ed.org mirror; pages=1046 (cpp 2407); DIST-A verified; OCR not needed
 - [Phase 3]: 516C from everyspec mirror; pages=527 (cpp 2954); DIST-A verified; OCR not needed
 - [Phase 3]: Batch B extract-before-vet reorder followed (MN-06)
-- [Phase ?]: nasa-ms-7009 two-PDF pack source_pages=263 (88+175); STD spine + HDBK depth
-- [Phase ?]: doe-413-3b built from O 413.3C (cancels 413.3B Chg 7); slug retained for T1-06
-- [Phase ?]: Registration includes MJ-01 README badge + docs/index.html publisher counts; check_release PASS 54/56
+- [Phase 3]: nasa-ms-7009 two-PDF pack source_pages=263 (88+175); STD spine + HDBK depth
+- [Phase 3]: doe-413-3b built from O 413.3C (cancels 413.3B Chg 7); slug retained for T1-06
+- [Phase 3]: Registration includes MJ-01 README badge + docs/index.html publisher counts; check_release PASS 54/56
 
 ## Session
 

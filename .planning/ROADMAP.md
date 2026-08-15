@@ -8,7 +8,7 @@ Baseline established retroactively (48 packs shipped through v1.16.3, pipeline +
 
 - [x] **Phase 1: Baseline (retroactive)** - Existing 48-pack library, toolchain, installers, CI gate
 - [x] **Phase 2: Source vetting + ruled-out register** - Vet all 11 candidates; record Excluded entries
-- [ ] **Phase 3: Tier 1 packs (public domain)** - Build the 8 Tier-1 packs via jgs-reference-skill pipeline
+- [x] **Phase 3: Tier 1 packs (public domain)** - Build the 8 Tier-1 packs via jgs-reference-skill pipeline
 - [ ] **Phase 4: Tier 2 packs — closed by vetting: 0 packs (T2-01/T2-02 Excluded, T2-03 deferred; see docs/SOURCE-VETTING.md)**
 - [ ] **Phase 5: Release surface + v1.17.0** - Catalog/docs/NOTICE sync, full validation, tag release
 
@@ -45,7 +45,7 @@ Baseline established retroactively (48 packs shipped through v1.16.3, pipeline +
 Plans:
 - [x] 3-01-PLAN.md — Batch A: 4 born-digital packs (nist-800-171, nist-800-61, cisa-cpg, doe-sem); P3-PRE-1/P3-PRE-2 handling
 - [x] 3-02-PLAN.md — Batch B: DoD handbooks (mil-hdbk-338 with chapter selection, mil-hdbk-516) + mirror/OCR contingencies
-- [ ] 3-03-PLAN.md — Batch C: multi-doc packs (nasa-ms-7009, doe-413-3b) + consolidated registration sweep (catalog/SKILLS.md/packs.html/NOTICE/check_release)
+- [x] 3-03-PLAN.md — Batch C: multi-doc packs (nasa-ms-7009, doe-413-3b) + consolidated registration sweep (catalog/SKILLS.md/packs.html/NOTICE/check_release)
 
 ### Phase 4: Tier 2 packs (conditional licences)
 **Goal**: closed by vetting: 0 Tier-2 packs
