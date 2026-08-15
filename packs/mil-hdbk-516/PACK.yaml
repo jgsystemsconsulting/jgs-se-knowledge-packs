@@ -1,0 +1,26 @@
+slug: mil-hdbk-516
+title: "DoD Airworthiness Certification Criteria (MIL-HDBK-516C)"
+publisher: "US Department of Defense"
+source_version: "516C, 12 Dec 2014 (Change 1, 2016)"
+license: "Public Domain (US Government work, 17 U.S.C. § 105; Distribution Statement A — Approved for public release; distribution is unlimited)"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "jgs-reference-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 527
+  chapters: 8
+  built_on: "2026-08-14"
+notes: >
+  US Government work -- public domain (17 U.S.C. § 105); Distribution Statement A
+  verified in-copy on cover ("Approved for public release; distribution is unlimited").
+  Downloaded from everyspec.com mirror of MIL-HDBK-516C (DLA QuickSearch is authoritative
+  record; direct DLA PDF token-gated). Extract metadata pages=527 (build-sheet ~320;
+  this PDF has 527 page objects — full body sections present, chars/page floor passed,
+  not treated as truncation). Synthesized reference notes from scope/tailoring, systems
+  engineering, and domain clusters (structures, flight, propulsion, avionics/E3/diagnostics,
+  software, crew systems). No long verbatim passages (verified by check_overlap). No
+  source-material link published. Extraction used pdftotext fallback. OCR not required.
+  DoD third-party-quote advisory expected; synthesizes DoD-authored guidance only.
+change_indication: "reconstructed as synthesized reference notes"
