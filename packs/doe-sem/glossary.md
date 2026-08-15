@@ -1,0 +1,22 @@
+# Glossary — DOE SEM Version 3
+
+- **Configuration Management (CM) Plan** — Project plan defining how work products and baselines are identified, controlled, and accounted for. → ch03, ch05
+- **Construction Stage** — SEM build stage (renamed from Programming) implementing the system design. → ch05
+- **DOE Enterprise Architecture (EA)** — Department architectural framework planning must align with. → ch03
+- **Functional Design Stage** — Logical design of functions, data, and interfaces before physical system design. → ch04
+- **In-Stage Assessment** — Independent QA review of stage work products/deliverables. → ch02
+- **Installation and Acceptance Stage** — Deploy to operations, train users, obtain owner acceptance. → ch06
+- **Integration and Testing Stage** — Assemble components and verify integrated behavior against requirements. → ch06
+- **Maintenance Stage** — Post-acceptance nested lifecycle for problems and modifications. → ch07
+- **Planning Stage** — First stage: feasibility, objectives/scope, Project/QA/CM plans. → ch03
+- **Project Plan** — Primary management plan for schedule, resources, approach, and controls. → ch03
+- **Quality Assurance (QA) Plan** — Plan for assurance activities, reviews, and quality criteria on the project. → ch03
+- **Requirements Definition Stage** — Elicit, analyze, specify, and baseline requirements with traceability. → ch04
+- **Requirements Traceability Matrix (RTM)** — Mapping of requirements through design and test. → ch04, ch06
+- **SEI CMM-SW** — Software Capability Maturity Model; SEM v3 aligns to Level 2/3 process areas. → ch01
+- **Stage Exit** — End-of-stage decision to proceed, continue, or abandon with owner/stakeholder approval. → ch02
+- **Structured Walkthrough** — Peer review procedure for technical work products and documentation. → ch02
+- **System Design Stage** — Physical/technical design realizing the functional baseline. → ch05
+- **System owner** — Organizational unit funding the project and authorizing key exits. → ch03, ch06
+- **Systems Development Lifecycle (SDLC)** — SEM’s staged lifecycle for DOE IT investments. → ch01, ch02
+- **Users** — DOE employees and contractors who will use the delivered product. → ch03
