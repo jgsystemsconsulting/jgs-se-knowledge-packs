@@ -46,8 +46,8 @@ New milestone: researched candidate packs + ruled-out tracking. Maps to phases 2
 
 ### Release Surface
 
-- [ ] **REL-01**: catalog.json, SKILLS.md, docs/packs.html, and NOTICE include all new packs; no drift (gate passes). v1.17.0 milestone expectation: **56 (48 baseline + 8 Tier-1)** packs (T2-01/T2-02 excluded-by-vetting; T2-03 deferred-excluded → 0 Tier-2 packs).
-- [ ] **REL-02**: Release v1.17.0 tagged at **56 (48 baseline + 8 Tier-1)** packs; all packs pass validate_pack.py and scan_generated_skill.py
+- [x] **REL-01**: catalog.json, SKILLS.md, docs/packs.html, and NOTICE include all new packs; no drift (gate passes). v1.17.0 milestone expectation: **56 (48 baseline + 8 Tier-1)** packs (T2-01/T2-02 excluded-by-vetting; T2-03 deferred-excluded → 0 Tier-2 packs).
+- [x] **REL-02**: Release v1.17.0 tagged at **56 (48 baseline + 8 Tier-1)** packs; all packs pass validate_pack.py and scan_generated_skill.py
 
 ## v2 Requirements (Deferred)
 
