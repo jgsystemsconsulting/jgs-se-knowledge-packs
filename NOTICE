@@ -622,14 +622,14 @@ Third-party source attributions (one block per shipped pack)
   Terms  : public domain, no copyright. Attribution to NASA is courtesy, not
            obligation; NASA does not endorse this pack. See packs/nasa-ms-7009/LICENSE.
 
-[pack: doe-413-3b]
+[pack: doe-o-413-3] (formerly doe-413-3b)
   Source : Program and Project Management for the Acquisition of Capital Assets,
            DOE O 413.3C (approved 2026-08-05; cancels DOE O 413.3B Chg 7, 2023-06-21)
   Author : US Department of Energy, Office of Project Management
   Licence: Public Domain -- US Government work (17 U.S.C. 105)
   Changes: reconstructed as synthesized reference notes (not a reproduction)
   Terms  : public domain, no copyright. Attribution to DOE is courtesy, not
-           obligation; DOE does not endorse this pack. See packs/doe-413-3b/LICENSE.
+           obligation; DOE does not endorse this pack. See packs/doe-o-413-3/LICENSE.
 
 -----------------------------------------------------------------------------------
 The build pipeline uses the jgs-reference-skill extraction engine (MIT License,

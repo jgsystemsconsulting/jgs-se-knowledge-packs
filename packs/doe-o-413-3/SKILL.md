@@ -1,5 +1,5 @@
 ---
-name: doe-413-3b
+name: doe-o-413-3
 description: "Knowledge base from the DOE Order on Program and Project Management for the Acquisition of Capital Assets (DOE O 413.3 series). Use for Critical Decisions CD-0–CD-4, performance baselines, acquisition strategy and IPTs, cost/schedule/EVMS/PARS controls, risk-informed governance, reviews, and contractor requirements. Built from O 413.3C (2026-08-05), which cancels O 413.3B Chg 7 (2023-06-21); does not replace site-specific procedures, nuclear safety rules detail, or full estimating standards."
 ---
 
@@ -75,4 +75,4 @@ Line management owns outcomes; PSO/PMSO/PM/FPD/IPT and approval authorities form
 ---
 
 ## Scope & Limits
-This pack covers the DOE Order on Program and Project Management for the Acquisition of Capital Assets using the **consolidated current Order PDF at build time: DOE O 413.3C (approved 2026-08-05)**, which cancels **DOE O 413.3B Chg 7 (2023-06-21)**. Extract metadata **source_pages=132**. Pack slug `doe-413-3b` retains T1-06 roadmap identity. It does **not** replace site implementing procedures, full text of companion G 413.3 guides, nuclear safety rule detail (e.g., 10 CFR 830), or GAO-grade estimating standards. In-PDF third-party copyright check at build found no copyright notices. US Government public domain work. No source-material download link is published.
+This pack covers the DOE Order on Program and Project Management for the Acquisition of Capital Assets using the **consolidated current Order PDF at build time: DOE O 413.3C (approved 2026-08-05)**, which cancels **DOE O 413.3B Chg 7 (2023-06-21)**. Extract metadata **source_pages=132**. Pack slug `doe-o-413-3` (renamed from `doe-413-3b` at v1.17.x; catalog carries the old slug as an alias) tracks the current Order series. It does **not** replace site implementing procedures, full text of companion G 413.3 guides, nuclear safety rule detail (e.g., 10 CFR 830), or GAO-grade estimating standards. In-PDF third-party copyright check at build found no copyright notices. US Government public domain work. No source-material download link is published.

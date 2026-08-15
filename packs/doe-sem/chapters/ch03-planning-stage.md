@@ -41,4 +41,4 @@ Planning is the first SEM stage for every project size. Teams identify business 
 - **ch02**: Stage Exit and assessment expectations beginning here.
 - **ch04**: Requirements definition elaborates high-level requirements from planning.
 - **ch07**: Maintenance planning inherits CM discipline established here.
-- **doe-413-3b** (separate pack family): Capital asset project management context when IT investments sit inside larger DOE projects.
+- **doe-o-413-3** (separate pack family): Capital asset project management context when IT investments sit inside larger DOE projects.

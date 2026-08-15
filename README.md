@@ -160,10 +160,10 @@ always-loaded `SKILL.md` index inlined into one file. Full detail and the per-ag
 | `mil-hdbk-338` | MIL-HDBK-338B: Electronic Reliability Design Handbook | Public domain (US gov) | 🟢 1 | ✅ live (9 chapters) |
 | `mil-hdbk-516` | MIL-HDBK-516C: Airworthiness Certification Criteria | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `nasa-ms-7009` | NASA-STD-7009B / NASA-HDBK-7009B: Models and Simulations | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
-| `doe-413-3b` | DOE O 413.3 series: Capital Asset Project Management (from O 413.3C) | Public domain (US gov) | 🟢 1 | ✅ live (6 chapters) |
+| `doe-o-413-3` | DOE O 413.3 series: Capital Asset Project Management (from O 413.3C) | Public domain (US gov) | 🟢 1 | ✅ live (6 chapters) |
 | `mit-ocw-se` | MIT OCW Fundamentals of Systems Engineering | CC BY-NC-SA | 🟡 2 | 🔜 planned |
 
-The `doe-413-3b` slug is retained for continuity, but the pack tracks the current DOE O 413.3 series edition (O 413.3C, which cancels O 413.3B Chg 7).
+`doe-o-413-3` (formerly `doe-413-3b`; old slug kept as a catalog alias) tracks the current DOE O 413.3 series edition (O 413.3C, which cancels O 413.3B Chg 7).
 
 Machine-readable index: [SKILLS.md](SKILLS.md) · [catalog.json](catalog.json).
 

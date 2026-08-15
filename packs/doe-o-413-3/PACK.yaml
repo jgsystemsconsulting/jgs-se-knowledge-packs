@@ -1,4 +1,4 @@
-slug: doe-413-3b
+slug: doe-o-413-3
 title: "Program and Project Management for the Acquisition of Capital Assets (DOE O 413.3 capital asset order)"
 publisher: "US Department of Energy"
 source_version: "O 413.3C approved 2026-08-05 (cancels O 413.3B Chg 7, 2023-06-21)"
@@ -18,7 +18,7 @@ notes: >
   2026-08-05), which explicitly cancels DOE O 413.3B Chg 7 (2023-06-21). The Phase 3
   build sheet named O 413.3B Chg 7; the library no longer serves that PDF as current —
   413.3C is the successor consolidated order with the same subject (Program and Project
-  Management for the Acquisition of Capital Assets). Pack slug remains doe-413-3b for
+  Management for the Acquisition of Capital Assets). Renamed to doe-o-413-3 (was doe-413-3b; alias kept in catalog.json) for
   roadmap/requirement continuity (T1-06). Extract metadata pages=132. US Government
   work -- public domain (17 U.S.C. § 105). In-PDF third-party copyright check: no
   copyright/©/all-rights-reserved notices found (ANSI appears only as invoked-standards

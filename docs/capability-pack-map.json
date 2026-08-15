@@ -1,0 +1,3013 @@
+{
+  "clusters": [
+    {
+      "name": "Systems Thinking & Fundamentals",
+      "chapters": [
+        {
+          "pack": "dau-se-guidebook",
+          "chapter": "ch01-introduction.md",
+          "note": "SE orientation across the defense acquisition life cycle"
+        },
+        {
+          "pack": "dau-se-guidebook",
+          "chapter": "ch02-system-level-considerations.md",
+          "note": "SoS, digital eng, value/sustainability engineering at system level"
+        },
+        {
+          "pack": "doe-sem",
+          "chapter": "ch01-sem-purpose-and-context.md",
+          "note": "DOE SEM/SDLC purpose, scope, and CMM alignment orientation"
+        },
+        {
+          "pack": "faa-sem",
+          "chapter": "ch01-faa-sem-introduction-ams-lifecycle.md",
+          "note": "FAA SEM and AMS lifecycle orientation"
+        },
+        {
+          "pack": "nasa-se-expanded",
+          "chapter": "ch01-nasa-se-expanded-fundamentals-and-se-engine.md",
+          "note": "SE fundamentals and the SE engine"
+        },
+        {
+          "pack": "nasa-se-handbook",
+          "chapter": "ch01-2-0-fundamentals-of-systems-engineering.md",
+          "note": "SE fundamentals"
+        },
+        {
+          "pack": "nasa-se-handbook",
+          "chapter": "ch03-2-3-example-of-using-the-se-engine.md",
+          "note": "Worked SE engine example"
+        },
+        {
+          "pack": "nist-cps",
+          "chapter": "ch01-nist-cps-introduction-and-what-makes-cps-different.md",
+          "note": "What makes cyber-physical systems different"
+        },
+        {
+          "pack": "nist-cps",
+          "chapter": "ch02-nist-cps-framework-facets-aspects-concerns.md",
+          "note": "CPS framework: facets, aspects, concerns"
+        },
+        {
+          "pack": "nist-cps",
+          "chapter": "ch07-nist-cps-use-case-analysis-method.md",
+          "note": "Use-case analysis method for CPS concerns"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch01-sebok-introduction.md",
+          "note": "SEBoK orientation"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch02-sebok-se-fundamentals.md",
+          "note": "SE fundamentals"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch03-sebok-nature-of-systems.md",
+          "note": "Nature of systems"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch04-sebok-systems-science.md",
+          "note": "Systems science"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch05-sebok-systems-thinking.md",
+          "note": "Systems thinking"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch07-sebok-systems-approach-engineered.md",
+          "note": "Systems approach applied to engineered systems"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch20-sebok-applications-overview.md",
+          "note": "SE applications overview"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch21-sebok-product-systems-engineering.md",
+          "note": "Product SE context"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch22-sebok-service-systems-engineering.md",
+          "note": "Service systems SE context"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch23-sebok-enterprise-systems-engineering.md",
+          "note": "Enterprise SE context"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch24-sebok-systems-of-systems.md",
+          "note": "Systems of systems SE"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch25-sebok-healthcare-systems-engineering.md",
+          "note": "Healthcare SE context"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch32-sebok-se-software-engineering.md",
+          "note": "SE and software engineering relationship"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch35-sebok-implementation-examples.md",
+          "note": "Implementation examples"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch36-sebok-emerging-knowledge.md",
+          "note": "Emerging SE knowledge"
+        }
+      ]
+    },
+    {
+      "name": "Requirements Engineering",
+      "chapters": [
+        {
+          "pack": "doe-sem",
+          "chapter": "ch04-requirements-and-functional-design.md",
+          "note": "Requirements definition and functional design stages with RTM (also architecture)"
+        },
+        {
+          "pack": "faa-req-handbook",
+          "chapter": "ch01-faa-req-handbook-foundations-and-introduction.md",
+          "note": "Requirements foundations"
+        },
+        {
+          "pack": "faa-req-handbook",
+          "chapter": "ch02-faa-req-handbook-system-overview-and-boundary.md",
+          "note": "System overview and boundary definition"
+        },
+        {
+          "pack": "faa-req-handbook",
+          "chapter": "ch03-faa-req-handbook-operational-concepts-and-environmental-assumptions.md",
+          "note": "ConOps and environmental assumptions (also stakeholder needs)"
+        },
+        {
+          "pack": "faa-req-handbook",
+          "chapter": "ch05-faa-req-handbook-system-modes-and-detailed-requirements.md",
+          "note": "Modes and detailed requirement statements"
+        },
+        {
+          "pack": "faa-req-handbook",
+          "chapter": "ch07-faa-req-handbook-rationale-and-summary.md",
+          "note": "Requirement rationale capture"
+        },
+        {
+          "pack": "faa-req-handbook",
+          "chapter": "ch08-faa-req-handbook-worked-avionics-examples.md",
+          "note": "Worked requirement-writing examples"
+        },
+        {
+          "pack": "faa-sem",
+          "chapter": "ch03-faa-sem-requirements-architecture-crosscutting.md",
+          "note": "Requirements and architecture crosscutting topics"
+        },
+        {
+          "pack": "gao-agile",
+          "chapter": "ch05-gao-agile-requirements-development-management.md",
+          "note": "Requirements development/management in Agile"
+        },
+        {
+          "pack": "nasa-se-handbook",
+          "chapter": "ch18-4-2-technical-requirements-definition.md",
+          "note": "Technical requirements definition"
+        },
+        {
+          "pack": "nasa-se-handbook",
+          "chapter": "ch28-6-2-requirements-management.md",
+          "note": "Requirements management (also traceability)"
+        },
+        {
+          "pack": "requirements-writing",
+          "chapter": "ch01-quality-characteristics.md",
+          "note": "Requirement quality characteristics"
+        },
+        {
+          "pack": "requirements-writing",
+          "chapter": "ch02-ears-overview.md",
+          "note": "EARS syntax overview"
+        },
+        {
+          "pack": "requirements-writing",
+          "chapter": "ch03-ears-patterns.md",
+          "note": "EARS sentence patterns"
+        },
+        {
+          "pack": "requirements-writing",
+          "chapter": "ch04-applying-ears.md",
+          "note": "Applying EARS to system requirements"
+        },
+        {
+          "pack": "requirements-writing",
+          "chapter": "ch05-defects-and-anti-patterns.md",
+          "note": "Requirement defects and anti-patterns"
+        },
+        {
+          "pack": "requirements-writing",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "requirements-writing",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "requirements-writing",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        }
+      ]
+    },
+    {
+      "name": "Requirements Traceability & Allocation",
+      "chapters": [
+        {
+          "pack": "faa-req-handbook",
+          "chapter": "ch06-faa-req-handbook-software-requirements-and-subsystem-allocation.md",
+          "note": "Software requirements and subsystem allocation"
+        },
+        {
+          "pack": "requirements-writing",
+          "chapter": "ch06-verifiability-and-traceability.md",
+          "note": "Verifiability and traceability of requirements (also verification)"
+        }
+      ]
+    },
+    {
+      "name": "Architecture & Design",
+      "chapters": [
+        {
+          "pack": "dau-se-guidebook",
+          "chapter": "ch06-design-considerations.md",
+          "note": "Design-solution considerations incl. open systems and resiliency"
+        },
+        {
+          "pack": "dod-mosa",
+          "chapter": "ch01-dod-mosa-introduction-and-policy.md",
+          "note": "MOSA policy context and intent"
+        },
+        {
+          "pack": "dod-mosa",
+          "chapter": "ch02-dod-mosa-pillars-and-benefits.md",
+          "note": "MOSA pillars (modularity, key interfaces, standards)"
+        },
+        {
+          "pack": "dod-mosa",
+          "chapter": "ch04-dod-mosa-technical-considerations.md",
+          "note": "Design rules for modular open architectures"
+        },
+        {
+          "pack": "dod-mosa",
+          "chapter": "ch07-dod-mosa-implementation-appendices.md",
+          "note": "Implementation guidance and appendices"
+        },
+        {
+          "pack": "dodaf",
+          "chapter": "ch01-introduction-and-dodaf-concepts.md",
+          "note": "DoDAF framework concepts and viewpoint structure"
+        },
+        {
+          "pack": "dodaf",
+          "chapter": "ch03-all-viewpoint-av.md",
+          "note": "All-Viewpoint: overarching architecture info"
+        },
+        {
+          "pack": "dodaf",
+          "chapter": "ch04-capability-viewpoint-cv.md",
+          "note": "Capability viewpoint products"
+        },
+        {
+          "pack": "dodaf",
+          "chapter": "ch06-operational-viewpoint-ov.md",
+          "note": "Operational viewpoint: activities and exchanges"
+        },
+        {
+          "pack": "dodaf",
+          "chapter": "ch08-services-viewpoint-svcv.md",
+          "note": "Services viewpoint products"
+        },
+        {
+          "pack": "dodaf",
+          "chapter": "ch10-systems-viewpoint-sv.md",
+          "note": "Systems viewpoint: functions, connectivity, allocation"
+        },
+        {
+          "pack": "doe-sem",
+          "chapter": "ch05-system-design-and-construction.md",
+          "note": "Physical system design and CM-controlled construction stages"
+        },
+        {
+          "pack": "faa-req-handbook",
+          "chapter": "ch04-faa-req-handbook-functional-architecture-and-implementation-constraints.md",
+          "note": "Functional architecture and constraints under requirements"
+        },
+        {
+          "pack": "faa-sem",
+          "chapter": "ch02-faa-sem-concept-functional-analysis.md",
+          "note": "Functional analysis in concept development"
+        },
+        {
+          "pack": "nasa-se-expanded",
+          "chapter": "ch03-nasa-se-expanded-system-design-processes.md",
+          "note": "Design processes: reqs through architecture (also reqs eng)"
+        },
+        {
+          "pack": "nasa-se-handbook",
+          "chapter": "ch19-4-3-logical-decomposition.md",
+          "note": "Logical decomposition (also allocation)"
+        },
+        {
+          "pack": "nasa-se-handbook",
+          "chapter": "ch20-4-4-design-solution-definition.md",
+          "note": "Design solution definition"
+        },
+        {
+          "pack": "nasa-se-handbook",
+          "chapter": "ch21-5-1-product-implementation.md",
+          "note": "Product implementation/fabrication (also make/buy)"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch17-sebok-system-architecture-realization.md",
+          "note": "System architecture and realization"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch34-sebok-se-quality-attributes.md",
+          "note": "Quality attributes / ilities (also reliability)"
+        }
+      ]
+    },
+    {
+      "name": "Interface Management & ICIDs",
+      "chapters": [
+        {
+          "pack": "faa-sem",
+          "chapter": "ch04-faa-sem-technical-management-interface-risk.md",
+          "note": "Interface and risk management (also risk mgmt)"
+        },
+        {
+          "pack": "nasa-se-handbook",
+          "chapter": "ch29-6-3-interface-management.md",
+          "note": "Interface management process"
+        }
+      ]
+    },
+    {
+      "name": "Integration",
+      "chapters": [
+        {
+          "pack": "doe-sem",
+          "chapter": "ch06-integration-test-and-acceptance.md",
+          "note": "Integration and testing plus installation and acceptance stages (also T&E)"
+        },
+        {
+          "pack": "nasa-se-expanded",
+          "chapter": "ch04-nasa-se-expanded-product-realization.md",
+          "note": "Product realization: integration, V&V, transition (also verification/validation)"
+        },
+        {
+          "pack": "nasa-se-handbook",
+          "chapter": "ch22-5-2-product-integration.md",
+          "note": "Product integration process"
+        }
+      ]
+    },
+    {
+      "name": "Verification",
+      "chapters": [
+        {
+          "pack": "faa-ams-vv",
+          "chapter": "ch01-faa-ams-vv-introduction-and-vv-philosophy.md",
+          "note": "V&V philosophy overview"
+        },
+        {
+          "pack": "faa-ams-vv",
+          "chapter": "ch02-faa-ams-vv-implementation-guidance.md",
+          "note": "V&V implementation guidance"
+        },
+        {
+          "pack": "faa-ams-vv",
+          "chapter": "ch03-faa-ams-vv-approach-and-early-lifecycle.md",
+          "note": "V&V approach through early lifecycle"
+        },
+        {
+          "pack": "faa-ams-vv",
+          "chapter": "ch05-faa-ams-vv-solution-implementation.md",
+          "note": "Verification during solution implementation"
+        },
+        {
+          "pack": "faa-ams-vv",
+          "chapter": "ch07-faa-ams-vv-acronyms-checklists-definitions.md",
+          "note": "V&V checklists and definitions"
+        },
+        {
+          "pack": "nasa-se-handbook",
+          "chapter": "ch23-5-3-product-verification.md",
+          "note": "Product verification process"
+        },
+        {
+          "pack": "faa-ams-vv",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "faa-ams-vv",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "faa-ams-vv",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        }
+      ]
+    },
+    {
+      "name": "Validation",
+      "chapters": [
+        {
+          "pack": "faa-ams-vv",
+          "chapter": "ch04-faa-ams-vv-investment-analysis.md",
+          "note": "Validation during investment analysis"
+        },
+        {
+          "pack": "faa-ams-vv",
+          "chapter": "ch06-faa-ams-vv-in-service-management.md",
+          "note": "In-service validation and V&V mgmt (also ops)"
+        },
+        {
+          "pack": "nasa-se-handbook",
+          "chapter": "ch24-5-4-product-validation.md",
+          "note": "Product validation process"
+        }
+      ]
+    },
+    {
+      "name": "Test & Evaluation",
+      "chapters": [
+        {
+          "pack": "dod-te-guidebook",
+          "chapter": "ch01-dod-te-guidebook-te-fundamentals-types-events.md",
+          "note": "T&E fundamentals, types, events"
+        },
+        {
+          "pack": "dod-te-guidebook",
+          "chapter": "ch02-dod-te-guidebook-te-strategy-documentation.md",
+          "note": "T&E strategy and TEMP documentation"
+        },
+        {
+          "pack": "dod-te-guidebook",
+          "chapter": "ch03-dod-te-guidebook-te-organizations-roles.md",
+          "note": "T&E organizations and roles"
+        },
+        {
+          "pack": "dod-te-guidebook",
+          "chapter": "ch04-dod-te-guidebook-urgent-capability-acquisition.md",
+          "note": "T&E in urgent capability acquisition"
+        },
+        {
+          "pack": "dod-te-guidebook",
+          "chapter": "ch05-dod-te-guidebook-middle-tier-acquisition.md",
+          "note": "T&E in middle-tier acquisition"
+        },
+        {
+          "pack": "dod-te-guidebook",
+          "chapter": "ch06-dod-te-guidebook-major-capability-acquisition.md",
+          "note": "T&E in major capability acquisition"
+        },
+        {
+          "pack": "dod-te-guidebook",
+          "chapter": "ch07-dod-te-guidebook-software-acquisition.md",
+          "note": "T&E in software acquisition"
+        },
+        {
+          "pack": "dod-te-guidebook",
+          "chapter": "ch08-dod-te-guidebook-defense-business-systems.md",
+          "note": "T&E for defense business systems"
+        },
+        {
+          "pack": "dod-te-guidebook",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "dod-te-guidebook",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "dod-te-guidebook",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        }
+      ]
+    },
+    {
+      "name": "Modeling, MBSE & SysML",
+      "chapters": [
+        {
+          "pack": "dodaf",
+          "chapter": "ch02-dm2-data-groups-overview.md",
+          "note": "DM2 conceptual data model overview (also data mgmt)"
+        },
+        {
+          "pack": "dodaf",
+          "chapter": "ch11-dm2-data-groups-detail.md",
+          "note": "DM2 data groups in detail"
+        },
+        {
+          "pack": "nasa-ms-7009",
+          "chapter": "ch01-ms-scope-criticality-programmatics.md",
+          "note": "M&S intended use, criticality, and programmatics planning (also reviews)"
+        },
+        {
+          "pack": "nasa-ms-7009",
+          "chapter": "ch03-ms-verification-validation.md",
+          "note": "Verification and validation of M&S with recorded domains (also verification/validation)"
+        },
+        {
+          "pack": "nasa-systems-modeling",
+          "chapter": "ch01-nasa-systems-modeling-mbse-overview-se-engine.md",
+          "note": "MBSE overview in SE engine"
+        },
+        {
+          "pack": "nasa-systems-modeling",
+          "chapter": "ch02-nasa-systems-modeling-model-planning-and-setup.md",
+          "note": "Model planning and setup"
+        },
+        {
+          "pack": "nasa-systems-modeling",
+          "chapter": "ch03-nasa-systems-modeling-the-metamodel.md",
+          "note": "The MBSE metamodel"
+        },
+        {
+          "pack": "nasa-systems-modeling",
+          "chapter": "ch04-nasa-systems-modeling-building-stakeholders-requirements-structure.md",
+          "note": "Modeling stakeholders and requirements"
+        },
+        {
+          "pack": "nasa-systems-modeling",
+          "chapter": "ch05-nasa-systems-modeling-building-verification-validation.md",
+          "note": "Modeling verification and validation"
+        },
+        {
+          "pack": "nasa-systems-modeling",
+          "chapter": "ch06-nasa-systems-modeling-generating-se-work-products.md",
+          "note": "Generating SE work products from models"
+        },
+        {
+          "pack": "nasa-systems-modeling",
+          "chapter": "ch07-nasa-systems-modeling-methodology-framework-alternative-approaches.md",
+          "note": "Methodology and alternative approaches"
+        },
+        {
+          "pack": "nasa-systems-modeling",
+          "chapter": "ch08-nasa-systems-modeling-conops-template-with-model-content.md",
+          "note": "ConOps template with model content"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch06-sebok-representing-systems-models.md",
+          "note": "Representing systems with models"
+        },
+        {
+          "pack": "nasa-systems-modeling",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "nasa-systems-modeling",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "nasa-systems-modeling",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        }
+      ]
+    },
+    {
+      "name": "Digital Engineering & Digital Twins",
+      "chapters": [
+        {
+          "pack": "digital-systems-engineering",
+          "chapter": "ch01-digital-systems-engineering-introduction-and-landscape.md",
+          "note": "DSE discipline landscape and motivation"
+        },
+        {
+          "pack": "digital-systems-engineering",
+          "chapter": "ch02-digital-systems-engineering-goals-of-the-de-strategy.md",
+          "note": "Goals of digital engineering strategy"
+        },
+        {
+          "pack": "digital-systems-engineering",
+          "chapter": "ch03-digital-systems-engineering-challenges.md",
+          "note": "Barriers to digitalizing SE"
+        },
+        {
+          "pack": "digital-systems-engineering",
+          "chapter": "ch04-digital-systems-engineering-key-enabling-technologies.md",
+          "note": "Enabling technologies for DSE"
+        },
+        {
+          "pack": "digital-systems-engineering",
+          "chapter": "ch05-digital-systems-engineering-framework-and-core-concepts.md",
+          "note": "Core concepts organizing the DSE field"
+        },
+        {
+          "pack": "digital-systems-engineering",
+          "chapter": "ch06-digital-systems-engineering-four-level-framework.md",
+          "note": "Four-level framework organizing DSE knowledge/research"
+        },
+        {
+          "pack": "digital-systems-engineering",
+          "chapter": "ch07-digital-systems-engineering-concluding-remarks-and-research-agenda.md",
+          "note": "Research agenda and conclusions"
+        },
+        {
+          "pack": "dod-digital-engineering",
+          "chapter": "ch01-dod-digital-engineering-introduction-purpose-vision.md",
+          "note": "DoD DE strategy vision and purpose"
+        },
+        {
+          "pack": "dod-digital-engineering",
+          "chapter": "ch02-dod-digital-engineering-goal1-formalize-models.md",
+          "note": "Goal 1: formalized development of authoritative models"
+        },
+        {
+          "pack": "dod-digital-engineering",
+          "chapter": "ch03-dod-digital-engineering-goal2-authoritative-source-of-truth.md",
+          "note": "Goal 2: authoritative source of truth (also data mgmt)"
+        },
+        {
+          "pack": "dod-digital-engineering",
+          "chapter": "ch04-dod-digital-engineering-goal3-technological-innovation.md",
+          "note": "Goal 3: technological innovation"
+        },
+        {
+          "pack": "dod-digital-engineering",
+          "chapter": "ch05-dod-digital-engineering-goal4-infrastructure-environments.md",
+          "note": "Goal 4: DE infrastructure and environments"
+        },
+        {
+          "pack": "dod-digital-engineering",
+          "chapter": "ch06-dod-digital-engineering-goal5-culture-workforce.md",
+          "note": "Goal 5: culture and workforce transformation"
+        },
+        {
+          "pack": "dod-digital-engineering",
+          "chapter": "ch07-dod-digital-engineering-next-steps-conclusion-summary.md",
+          "note": "Implementation summary and next steps"
+        },
+        {
+          "pack": "nasa-de-acquisition",
+          "chapter": "ch01-nasa-de-acquisition-framework-rationale-and-dee.md",
+          "note": "DE acquisition rationale and digital engineering ecosystem"
+        },
+        {
+          "pack": "nasa-de-acquisition",
+          "chapter": "ch06-nasa-de-acquisition-collaboration-architecture-interoperability.md",
+          "note": "Collaboration architecture and interoperability"
+        },
+        {
+          "pack": "nasa-de-acquisition",
+          "chapter": "ch07-nasa-de-acquisition-mbe-use-cases.md",
+          "note": "Model-based engineering use cases"
+        },
+        {
+          "pack": "nasa-de-acquisition",
+          "chapter": "ch08-nasa-de-acquisition-mbe-plan-development.md",
+          "note": "MBE plan development"
+        },
+        {
+          "pack": "dod-digital-engineering",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "dod-digital-engineering",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "dod-digital-engineering",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "digital-systems-engineering",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "digital-systems-engineering",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "digital-systems-engineering",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        }
+      ]
+    },
+    {
+      "name": "Configuration Management & Baselines",
+      "chapters": [
+        {
+          "pack": "faa-sem",
+          "chapter": "ch05-faa-sem-configuration-decision-vv.md",
+          "note": "CM, decision analysis, V&V (crosscutting bundle)"
+        },
+        {
+          "pack": "mil-hdbk-61",
+          "chapter": "ch01-mil-hdbk-61-scope-fundamentals-definitions.md",
+          "note": "CM scope and definitions"
+        },
+        {
+          "pack": "mil-hdbk-61",
+          "chapter": "ch02-mil-hdbk-61-lifecycle-management-planning.md",
+          "note": "CM planning across lifecycle"
+        },
+        {
+          "pack": "mil-hdbk-61",
+          "chapter": "ch03-mil-hdbk-61-configuration-identification.md",
+          "note": "Configuration identification"
+        },
+        {
+          "pack": "mil-hdbk-61",
+          "chapter": "ch04-mil-hdbk-61-configuration-control-change-management.md",
+          "note": "Configuration control / change mgmt"
+        },
+        {
+          "pack": "mil-hdbk-61",
+          "chapter": "ch05-mil-hdbk-61-configuration-status-accounting.md",
+          "note": "Configuration status accounting"
+        },
+        {
+          "pack": "mil-hdbk-61",
+          "chapter": "ch06-mil-hdbk-61-configuration-verification-audit.md",
+          "note": "Configuration verification and audits (FCA/PCA)"
+        },
+        {
+          "pack": "mil-hdbk-61",
+          "chapter": "ch08-mil-hdbk-61-tailoring-cm-templates-by-phase.md",
+          "note": "Tailoring CM by program phase"
+        },
+        {
+          "pack": "nasa-de-acquisition",
+          "chapter": "ch02-nasa-de-acquisition-drds-and-configuration-data-management.md",
+          "note": "DRDs, configuration and data mgmt (also data mgmt)"
+        },
+        {
+          "pack": "nasa-se-expanded",
+          "chapter": "ch06-nasa-se-expanded-crosscutting-cm-data-assessment-decision.md",
+          "note": "Crosscutting CM, data, assessment, decision (also measurement)"
+        },
+        {
+          "pack": "nasa-se-handbook",
+          "chapter": "ch31-6-5-configuration-management.md",
+          "note": "Configuration management process"
+        },
+        {
+          "pack": "mil-hdbk-61",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "mil-hdbk-61",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "mil-hdbk-61",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        }
+      ]
+    },
+    {
+      "name": "Data & Information Management",
+      "chapters": [
+        {
+          "pack": "dodaf",
+          "chapter": "ch05-data-information-viewpoint-div.md",
+          "note": "Data & Information viewpoint: structural data descriptions"
+        },
+        {
+          "pack": "mil-hdbk-61",
+          "chapter": "ch07-mil-hdbk-61-data-management-emerging-technologies.md",
+          "note": "CM-linked data management and emerging tech"
+        },
+        {
+          "pack": "nasa-de-acquisition",
+          "chapter": "ch05-nasa-de-acquisition-model-based-data-definition.md",
+          "note": "Model-based data definitions"
+        },
+        {
+          "pack": "nasa-npr-7150",
+          "chapter": "ch06-nasa-npr-7150-recommended-software-records.md",
+          "note": "Recommended software records/records retention"
+        },
+        {
+          "pack": "nasa-se-handbook",
+          "chapter": "ch32-6-6-technical-data-management.md",
+          "note": "Technical data management process"
+        },
+        {
+          "pack": "nist-cps",
+          "chapter": "ch05-nist-cps-data-interoperability.md",
+          "note": "CPS data interoperability"
+        }
+      ]
+    },
+    {
+      "name": "Risk Management",
+      "chapters": [
+        {
+          "pack": "dod-rio",
+          "chapter": "ch01-dod-rio-foundations.md",
+          "note": "Risk/issue/opportunity management foundations"
+        },
+        {
+          "pack": "dod-rio",
+          "chapter": "ch02-dod-rio-risk-identification-analysis.md",
+          "note": "Risk identification and analysis practice"
+        },
+        {
+          "pack": "dod-rio",
+          "chapter": "ch03-dod-rio-mitigation-monitoring-issues.md",
+          "note": "Mitigation, monitoring, issue management"
+        },
+        {
+          "pack": "dod-rio",
+          "chapter": "ch05-dod-rio-aaf-pathways-hardware.md",
+          "note": "RIO applied on hardware pathways"
+        },
+        {
+          "pack": "dod-rio",
+          "chapter": "ch06-dod-rio-aaf-pathways-software-services.md",
+          "note": "RIO applied on software/services pathways"
+        },
+        {
+          "pack": "dod-rio",
+          "chapter": "ch07-dod-rio-additional-methods.md",
+          "note": "Additional RIO methods"
+        },
+        {
+          "pack": "dod-rio",
+          "chapter": "ch08-dod-rio-process-roles-se-tools.md",
+          "note": "RIO process, roles, tools"
+        },
+        {
+          "pack": "doe-o-413-3",
+          "chapter": "ch05-risk-safety-and-exceptions.md",
+          "note": "Risk-informed management, safety/security interfaces, and exception paths"
+        },
+        {
+          "pack": "nasa-ms-7009",
+          "chapter": "ch06-ms-risk-and-decision-reporting.md",
+          "note": "M&S risk assessment and decision-maker reporting (also measurement)"
+        },
+        {
+          "pack": "nasa-risk",
+          "chapter": "ch01-introduction-and-rm-overview.md",
+          "note": "RIDM/CRM risk framework overview"
+        },
+        {
+          "pack": "nasa-risk",
+          "chapter": "ch02-ridm-crm-integration.md",
+          "note": "RIDM and CRM integration"
+        },
+        {
+          "pack": "nasa-risk",
+          "chapter": "ch03-ridm-part1-identification-of-alternatives.md",
+          "note": "Identifying decision alternatives (also decision analysis)"
+        },
+        {
+          "pack": "nasa-risk",
+          "chapter": "ch04-ridm-part2-risk-analysis-of-alternatives.md",
+          "note": "Risk analysis of alternatives"
+        },
+        {
+          "pack": "nasa-risk",
+          "chapter": "ch05-ridm-part3-risk-informed-selection.md",
+          "note": "Risk-informed selection"
+        },
+        {
+          "pack": "nasa-risk",
+          "chapter": "ch06-crm-initialisation-and-planning.md",
+          "note": "CRM initialization and planning"
+        },
+        {
+          "pack": "nasa-risk",
+          "chapter": "ch07-crm-identify-and-analyze.md",
+          "note": "CRM identify and analyze"
+        },
+        {
+          "pack": "nasa-risk",
+          "chapter": "ch08-crm-plan-step.md",
+          "note": "CRM plan step"
+        },
+        {
+          "pack": "nasa-risk",
+          "chapter": "ch09-crm-track-control-communicate.md",
+          "note": "CRM track/control/communicate"
+        },
+        {
+          "pack": "nasa-risk",
+          "chapter": "ch10-enterprise-risks-and-appendices.md",
+          "note": "Enterprise risks and appendices"
+        },
+        {
+          "pack": "nasa-se-handbook",
+          "chapter": "ch30-6-4-technical-risk-management.md",
+          "note": "Technical risk management process"
+        },
+        {
+          "pack": "nist-ai-rmf",
+          "chapter": "ch01-framing-ai-risk.md",
+          "note": "Framing AI risk"
+        },
+        {
+          "pack": "nist-ai-rmf",
+          "chapter": "ch05-map-function.md",
+          "note": "Map function: risk context"
+        },
+        {
+          "pack": "nist-ai-rmf",
+          "chapter": "ch07-manage-function.md",
+          "note": "Manage function: risk treatment"
+        },
+        {
+          "pack": "nasa-risk",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "nasa-risk",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "nasa-risk",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        }
+      ]
+    },
+    {
+      "name": "Opportunity/Benefit Management",
+      "chapters": [
+        {
+          "pack": "dod-rio",
+          "chapter": "ch04-dod-rio-opportunity-cross-program.md",
+          "note": "Opportunity management and cross-program risk/opportunity"
+        }
+      ]
+    },
+    {
+      "name": "Decision Analysis & Trade Studies",
+      "chapters": [
+        {
+          "pack": "nasa-ceh",
+          "chapter": "ch06-nasa-ceh-decision-support-analyses.md",
+          "note": "Cost-based decision support and trade analysis"
+        },
+        {
+          "pack": "nasa-se-handbook",
+          "chapter": "ch34-6-8-decision-analysis.md",
+          "note": "Decision analysis process"
+        }
+      ]
+    },
+    {
+      "name": "Technical Planning & Work Breakdown",
+      "chapters": [
+        {
+          "pack": "doe-sem",
+          "chapter": "ch03-planning-stage.md",
+          "note": "Planning stage: QA/CM plans, objectives, scope, feasibility"
+        },
+        {
+          "pack": "nasa-npr-7123",
+          "chapter": "ch06-systems-engineering-management-plan.md",
+          "note": "SEMP content and structure"
+        },
+        {
+          "pack": "nasa-se-expanded",
+          "chapter": "ch05-nasa-se-expanded-crosscutting-planning-requirements-interface-risk.md",
+          "note": "Crosscutting planning, reqs, interface, risk"
+        },
+        {
+          "pack": "nasa-se-handbook",
+          "chapter": "ch26-6-0-crosscutting-technical-management.md",
+          "note": "Crosscutting technical management overview"
+        },
+        {
+          "pack": "nasa-se-handbook",
+          "chapter": "ch27-6-1-technical-planning.md",
+          "note": "Technical planning and SEMP"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch15-sebok-technical-management.md",
+          "note": "Technical management processes overview"
+        }
+      ]
+    },
+    {
+      "name": "Measurement & Technical Assessment",
+      "chapters": [
+        {
+          "pack": "dod-mosa",
+          "chapter": "ch05-dod-mosa-assessment-tech-change-roadmaps.md",
+          "note": "Assessing MOSA designs and tech-change roadmaps (also planning)"
+        },
+        {
+          "pack": "gao-agile",
+          "chapter": "ch08-gao-agile-metrics.md",
+          "note": "Agile metrics and measurement"
+        },
+        {
+          "pack": "gao-tra",
+          "chapter": "ch01-tra-fundamentals.md",
+          "note": "Technology readiness assessment fundamentals"
+        },
+        {
+          "pack": "gao-tra",
+          "chapter": "ch02-technology-readiness-levels.md",
+          "note": "TRL definitions and use"
+        },
+        {
+          "pack": "gao-tra",
+          "chapter": "ch03-critical-technology-elements.md",
+          "note": "Identifying critical technology elements"
+        },
+        {
+          "pack": "gao-tra",
+          "chapter": "ch04-five-step-tra-process.md",
+          "note": "Five-step TRA process"
+        },
+        {
+          "pack": "gao-tra",
+          "chapter": "ch05-four-characteristics.md",
+          "note": "Four characteristics of a quality TRA"
+        },
+        {
+          "pack": "gao-tra",
+          "chapter": "ch06-technology-maturation-plans.md",
+          "note": "Technology maturation planning"
+        },
+        {
+          "pack": "gao-tra",
+          "chapter": "ch07-using-tras-in-decisions.md",
+          "note": "Using TRAs in decisions (also decision analysis)"
+        },
+        {
+          "pack": "mrl-deskbook",
+          "chapter": "ch01-mrl-deskbook-foundations-and-dod-policy.md",
+          "note": "Manufacturing readiness fundamentals"
+        },
+        {
+          "pack": "mrl-deskbook",
+          "chapter": "ch02-mrl-deskbook-scale-threads-and-trl-relationship.md",
+          "note": "MRL scale, threads, TRL relationship"
+        },
+        {
+          "pack": "mrl-deskbook",
+          "chapter": "ch03-mrl-deskbook-adaptive-acquisition-framework.md",
+          "note": "MRL within the AAF (also acquisition)"
+        },
+        {
+          "pack": "mrl-deskbook",
+          "chapter": "ch04-mrl-deskbook-conducting-assessments.md",
+          "note": "Conducting MRL assessments"
+        },
+        {
+          "pack": "mrl-deskbook",
+          "chapter": "ch05-mrl-deskbook-maturation-plans-and-risk.md",
+          "note": "Maturation plans and risk (also risk mgmt)"
+        },
+        {
+          "pack": "mrl-deskbook",
+          "chapter": "ch07-mrl-deskbook-tailoring-and-users-guide.md",
+          "note": "MRL tailoring and use"
+        },
+        {
+          "pack": "nasa-ms-7009",
+          "chapter": "ch02-ms-development-evidence-capability.md",
+          "note": "M&S development evidence and capability assessment factors"
+        },
+        {
+          "pack": "nasa-ms-7009",
+          "chapter": "ch04-ms-uncertainty-sensitivity.md",
+          "note": "Uncertainty characterization and sensitivity analysis"
+        },
+        {
+          "pack": "nasa-ms-7009",
+          "chapter": "ch05-ms-use-results-assessment.md",
+          "note": "M&S use-phase input control and results assessment"
+        },
+        {
+          "pack": "nasa-npr-7123",
+          "chapter": "ch08-technology-readiness-levels.md",
+          "note": "TRL definitions for assessment"
+        },
+        {
+          "pack": "nasa-se-handbook",
+          "chapter": "ch33-6-7-technical-assessment.md",
+          "note": "Technical assessment, TPMs, measures"
+        },
+        {
+          "pack": "nist-ai-rmf",
+          "chapter": "ch06-measure-function.md",
+          "note": "Measure function: metrics for AI risk"
+        },
+        {
+          "pack": "nist-stat-handbook",
+          "chapter": "ch01-nist-stat-handbook-exploratory-data-analysis.md",
+          "note": "Exploratory data analysis"
+        },
+        {
+          "pack": "nist-stat-handbook",
+          "chapter": "ch02-nist-stat-handbook-measurement-process-characterization.md",
+          "note": "Measurement process characterization"
+        },
+        {
+          "pack": "nist-stat-handbook",
+          "chapter": "ch03-nist-stat-handbook-production-process-characterization.md",
+          "note": "Production process characterization"
+        },
+        {
+          "pack": "nist-stat-handbook",
+          "chapter": "ch04-nist-stat-handbook-process-modeling.md",
+          "note": "Process modeling"
+        },
+        {
+          "pack": "nist-stat-handbook",
+          "chapter": "ch05-nist-stat-handbook-process-improvement-doe.md",
+          "note": "DOE for process improvement"
+        },
+        {
+          "pack": "nist-stat-handbook",
+          "chapter": "ch07-nist-stat-handbook-product-and-process-comparisons.md",
+          "note": "Product/process comparisons"
+        },
+        {
+          "pack": "gao-tra",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "gao-tra",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "gao-tra",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "mrl-deskbook",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "mrl-deskbook",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "mrl-deskbook",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "nist-stat-handbook",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "nist-stat-handbook",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "nist-stat-handbook",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        }
+      ]
+    },
+    {
+      "name": "Quality Assurance & Process Compliance",
+      "chapters": [
+        {
+          "pack": "gao-agile",
+          "chapter": "ch09-gao-agile-assessment-reference-auditor-questions-frameworks.md",
+          "note": "Auditor assessment questions (also program mgmt)"
+        },
+        {
+          "pack": "mil-hdbk-516",
+          "chapter": "ch02-systems-engineering-criteria.md",
+          "note": "SE airworthiness criteria: design criteria control, tech data, CM, mfg quality (also CM)"
+        },
+        {
+          "pack": "nist-stat-handbook",
+          "chapter": "ch06-nist-stat-handbook-process-monitoring-and-control.md",
+          "note": "SPC monitoring and control (quality control)"
+        }
+      ]
+    },
+    {
+      "name": "Safety, Reliability & Survivability",
+      "chapters": [
+        {
+          "pack": "faa-rma",
+          "chapter": "ch01-faa-rma-introduction-and-key-documents.md",
+          "note": "RMA intro and key documents"
+        },
+        {
+          "pack": "faa-rma",
+          "chapter": "ch02-faa-rma-fundamentals.md",
+          "note": "Reliability/maintainability/availability fundamentals"
+        },
+        {
+          "pack": "faa-rma",
+          "chapter": "ch03-faa-rma-lifecycle-stages.md",
+          "note": "RMA across lifecycle stages"
+        },
+        {
+          "pack": "faa-rma",
+          "chapter": "ch04-faa-rma-technical-management-process.md",
+          "note": "Managing the RMA process"
+        },
+        {
+          "pack": "faa-rma",
+          "chapter": "ch05-faa-rma-methods-and-tools.md",
+          "note": "RMA analysis methods and tools"
+        },
+        {
+          "pack": "faa-rma",
+          "chapter": "ch06-faa-rma-glossary-and-definitions.md",
+          "note": "RMA definitions"
+        },
+        {
+          "pack": "faa-rma",
+          "chapter": "ch07-faa-rma-software-reliability.md",
+          "note": "Software reliability"
+        },
+        {
+          "pack": "faa-rma",
+          "chapter": "ch08-faa-rma-requirements-guidelines.md",
+          "note": "Writing RMA requirements"
+        },
+        {
+          "pack": "faa-system-safety",
+          "chapter": "ch01-faa-system-safety-foundations-policy-process-principles.md",
+          "note": "System safety policy, process, principles"
+        },
+        {
+          "pack": "faa-system-safety",
+          "chapter": "ch02-faa-system-safety-acquisition-lifecycle-assessments-contracting.md",
+          "note": "Safety in acquisition and contracting"
+        },
+        {
+          "pack": "faa-system-safety",
+          "chapter": "ch03-faa-system-safety-integrated-hazard-analysis-tasks.md",
+          "note": "Integrated hazard analysis tasks"
+        },
+        {
+          "pack": "faa-system-safety",
+          "chapter": "ch04-faa-system-safety-analysis-techniques.md",
+          "note": "Safety analysis techniques (FHA, FTA...)"
+        },
+        {
+          "pack": "faa-system-safety",
+          "chapter": "ch05-faa-system-safety-software-test-facilities-safety.md",
+          "note": "Software and test facility safety"
+        },
+        {
+          "pack": "faa-system-safety",
+          "chapter": "ch06-faa-system-safety-launch-safety-and-training.md",
+          "note": "Launch safety and safety training"
+        },
+        {
+          "pack": "faa-system-safety",
+          "chapter": "ch07-faa-system-safety-orm-human-organizational-factors.md",
+          "note": "Operational risk mgmt and human/org factors"
+        },
+        {
+          "pack": "mil-hdbk-338",
+          "chapter": "ch01-rma-theory-foundations.md",
+          "note": "Reliability, maintainability, availability theory and life distributions"
+        },
+        {
+          "pack": "mil-hdbk-338",
+          "chapter": "ch02-specification-allocation-prediction.md",
+          "note": "Reliability specification, allocation, modeling, prediction (also requirements)"
+        },
+        {
+          "pack": "mil-hdbk-338",
+          "chapter": "ch03-parts-management-and-derating.md",
+          "note": "Parts management and derating"
+        },
+        {
+          "pack": "mil-hdbk-338",
+          "chapter": "ch04-circuit-design-and-fault-tolerance.md",
+          "note": "Reliable circuit design and fault-tolerant/redundant design"
+        },
+        {
+          "pack": "mil-hdbk-338",
+          "chapter": "ch05-environmental-and-human-reliability.md",
+          "note": "Environmental design and human performance reliability (also human factors)"
+        },
+        {
+          "pack": "mil-hdbk-338",
+          "chapter": "ch06-fmea-fta-and-sneak-circuits.md",
+          "note": "FMEA/FMECA, fault tree, and sneak circuit analysis"
+        },
+        {
+          "pack": "mil-hdbk-338",
+          "chapter": "ch07-design-reviews-testability-safety.md",
+          "note": "Design reviews, design for testability, safety interface (also control gates)"
+        },
+        {
+          "pack": "mil-hdbk-338",
+          "chapter": "ch08-data-fracas-demonstration-growth.md",
+          "note": "Reliability data, FRACAS, demonstration, growth testing"
+        },
+        {
+          "pack": "mil-hdbk-338",
+          "chapter": "ch09-systems-reliability-engineering.md",
+          "note": "System effectiveness and system-level R&M engineering"
+        },
+        {
+          "pack": "mil-hdbk-338",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "mil-hdbk-338",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "mil-hdbk-338",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "mil-hdbk-516",
+          "chapter": "ch03-structures-criteria.md",
+          "note": "Airframe structures airworthiness criteria"
+        },
+        {
+          "pack": "mil-hdbk-516",
+          "chapter": "ch04-flight-technology-criteria.md",
+          "note": "Flying qualities, performance, stability/control criteria"
+        },
+        {
+          "pack": "mil-hdbk-516",
+          "chapter": "ch05-propulsion-criteria.md",
+          "note": "Propulsion and installation airworthiness criteria"
+        },
+        {
+          "pack": "mil-hdbk-516",
+          "chapter": "ch06-avionics-e3-and-diagnostics.md",
+          "note": "Diagnostics, avionics, electrical power, and E3 criteria"
+        },
+        {
+          "pack": "mil-hdbk-516",
+          "chapter": "ch07-computer-systems-and-software.md",
+          "note": "Computer systems and software airworthiness criteria (also verification)"
+        },
+        {
+          "pack": "mil-std-882",
+          "chapter": "ch01-scope-purpose-definitions.md",
+          "note": "System safety scope and definitions"
+        },
+        {
+          "pack": "mil-std-882",
+          "chapter": "ch02-system-safety-process.md",
+          "note": "MIL-STD-882 system safety process"
+        },
+        {
+          "pack": "mil-std-882",
+          "chapter": "ch03-risk-assessment.md",
+          "note": "Safety risk assessment matrices (also risk mgmt)"
+        },
+        {
+          "pack": "mil-std-882",
+          "chapter": "ch04-software-system-safety.md",
+          "note": "Software system safety"
+        },
+        {
+          "pack": "mil-std-882",
+          "chapter": "ch05-task-100-management.md",
+          "note": "Program management safety tasks"
+        },
+        {
+          "pack": "mil-std-882",
+          "chapter": "ch06-task-200-analysis.md",
+          "note": "Hazard analysis tasks"
+        },
+        {
+          "pack": "mil-std-882",
+          "chapter": "ch07-task-300-evaluation.md",
+          "note": "Safety evaluation tasks"
+        },
+        {
+          "pack": "mil-std-882",
+          "chapter": "ch08-task-400-verification.md",
+          "note": "Safety verification tasks"
+        },
+        {
+          "pack": "nasa-fault-management",
+          "chapter": "ch01-nasa-fault-management-introduction-and-fm-definitions.md",
+          "note": "Fault management definitions and scope"
+        },
+        {
+          "pack": "nasa-fault-management",
+          "chapter": "ch02-nasa-fault-management-process.md",
+          "note": "FM development process"
+        },
+        {
+          "pack": "nasa-fault-management",
+          "chapter": "ch03-nasa-fault-management-requirements-development.md",
+          "note": "FM requirements development (also reqs eng)"
+        },
+        {
+          "pack": "nasa-fault-management",
+          "chapter": "ch04-nasa-fault-management-design-and-architecture.md",
+          "note": "FM design and architecture (also arch/design)"
+        },
+        {
+          "pack": "nasa-fault-management",
+          "chapter": "ch05-nasa-fault-management-analysis-verification-validation.md",
+          "note": "FM analysis, verification, validation"
+        },
+        {
+          "pack": "nasa-fault-management",
+          "chapter": "ch06-nasa-fault-management-operations-and-lifecycle-reviews.md",
+          "note": "FM ops and lifecycle reviews"
+        },
+        {
+          "pack": "nasa-fault-management",
+          "chapter": "ch07-nasa-fault-management-fundamental-concepts-and-principles.md",
+          "note": "FM concepts and principles"
+        },
+        {
+          "pack": "nasa-fault-management",
+          "chapter": "ch08-nasa-fault-management-organization-and-lessons-learned.md",
+          "note": "FM organization and lessons learned"
+        },
+        {
+          "pack": "nasa-pra",
+          "chapter": "ch01-nasa-pra-foundations-risk-management-and-pra-framework.md",
+          "note": "PRA and risk mgmt framework"
+        },
+        {
+          "pack": "nasa-pra",
+          "chapter": "ch02-nasa-pra-scenario-development-and-logic-modeling.md",
+          "note": "Scenario development, event/fault trees"
+        },
+        {
+          "pack": "nasa-pra",
+          "chapter": "ch03-nasa-pra-data-collection-and-bayesian-parameter-estimation.md",
+          "note": "Data collection and Bayesian estimation"
+        },
+        {
+          "pack": "nasa-pra",
+          "chapter": "ch04-nasa-pra-uncertainty-modeling-and-common-cause-failures.md",
+          "note": "Uncertainty and common-cause failures"
+        },
+        {
+          "pack": "nasa-pra",
+          "chapter": "ch05-nasa-pra-human-reliability-and-software-risk-assessment.md",
+          "note": "Human reliability and software risk"
+        },
+        {
+          "pack": "nasa-pra",
+          "chapter": "ch06-nasa-pra-physical-structural-and-phenomenological-models.md",
+          "note": "Physical/structural/phenomenological models"
+        },
+        {
+          "pack": "nasa-pra",
+          "chapter": "ch07-nasa-pra-uncertainty-propagation-and-results-presentation.md",
+          "note": "Uncertainty propagation and results"
+        },
+        {
+          "pack": "nasa-pra",
+          "chapter": "ch08-nasa-pra-launch-abort-modeling-and-worked-pra-examples.md",
+          "note": "Launch abort modeling and worked examples"
+        },
+        {
+          "pack": "nasa-rm-standard",
+          "chapter": "ch01-nasa-rm-standard-scope-and-applicability.md",
+          "note": "R&M standard scope"
+        },
+        {
+          "pack": "nasa-rm-standard",
+          "chapter": "ch02-nasa-rm-standard-terminology-and-definitions.md",
+          "note": "R&M terminology"
+        },
+        {
+          "pack": "nasa-rm-standard",
+          "chapter": "ch03-nasa-rm-standard-objectives-and-strategies.md",
+          "note": "R&M objectives and strategies"
+        },
+        {
+          "pack": "nasa-rm-standard",
+          "chapter": "ch04-nasa-rm-standard-implementation-requirements.md",
+          "note": "Implementation, planning and gate review requirements (also governance)"
+        },
+        {
+          "pack": "nasa-rm-standard",
+          "chapter": "ch05-nasa-rm-standard-objectives-hierarchy-and-scope.md",
+          "note": "Objectives hierarchy and scoping"
+        },
+        {
+          "pack": "nasa-rm-standard",
+          "chapter": "ch06-nasa-rm-standard-evidentiary-analysis-methods.md",
+          "note": "Evidentiary analysis methods"
+        },
+        {
+          "pack": "nasa-system-safety",
+          "chapter": "ch01-introduction.md",
+          "note": "System safety introduction"
+        },
+        {
+          "pack": "nasa-system-safety",
+          "chapter": "ch02-key-concepts.md",
+          "note": "Safety key concepts"
+        },
+        {
+          "pack": "nasa-system-safety",
+          "chapter": "ch03-system-safety-framework-overview.md",
+          "note": "Safety framework overview (also process models)"
+        },
+        {
+          "pack": "nasa-system-safety",
+          "chapter": "ch04-safety-objectives-requirements.md",
+          "note": "Safety objectives and requirements (also reqs eng)"
+        },
+        {
+          "pack": "nist-stat-handbook",
+          "chapter": "ch08-nist-stat-handbook-assessing-product-reliability.md",
+          "note": "Assessing product reliability"
+        },
+        {
+          "pack": "mil-std-882",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "mil-std-882",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "mil-std-882",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "nasa-system-safety",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "nasa-system-safety",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "nasa-system-safety",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "faa-system-safety",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "faa-system-safety",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "faa-system-safety",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "nasa-pra",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "nasa-pra",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "nasa-pra",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "faa-rma",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "faa-rma",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "faa-rma",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "nasa-rm-standard",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "nasa-rm-standard",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "nasa-rm-standard",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "nasa-fault-management",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "nasa-fault-management",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "nasa-fault-management",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        }
+      ]
+    },
+    {
+      "name": "Cybersecurity & Security Engineering",
+      "chapters": [
+        {
+          "pack": "cisa-cpg",
+          "chapter": "ch01-cpg-purpose-and-2-0-changes.md",
+          "note": "CPG 2.0 baseline purpose and CSF alignment"
+        },
+        {
+          "pack": "cisa-cpg",
+          "chapter": "ch02-govern-and-identify-goals.md",
+          "note": "Govern and identify performance goals"
+        },
+        {
+          "pack": "cisa-cpg",
+          "chapter": "ch03-protect-goals.md",
+          "note": "Protect goals: identity, segmentation, resilience"
+        },
+        {
+          "pack": "cisa-cpg",
+          "chapter": "ch04-detect-respond-recover-goals.md",
+          "note": "Detect, respond, recover goals"
+        },
+        {
+          "pack": "cisa-cpg",
+          "chapter": "ch05-it-ot-implementation-and-prioritization.md",
+          "note": "IT/OT implementation and goal prioritization"
+        },
+        {
+          "pack": "cisa-cpg",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "cisa-cpg",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "cisa-cpg",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "mrl-deskbook",
+          "chapter": "ch08-mrl-deskbook-ot-cybersecurity.md",
+          "note": "OT cybersecurity in MRL context"
+        },
+        {
+          "pack": "nist-800-171",
+          "chapter": "ch01-cui-scope-fundamentals-and-structure.md",
+          "note": "CUI protection model tailored from SP 800-53B moderate baseline (also standards tailoring)"
+        },
+        {
+          "pack": "nist-800-171",
+          "chapter": "ch02-access-control-and-identification.md",
+          "note": "Access control and identification/authentication for CUI"
+        },
+        {
+          "pack": "nist-800-171",
+          "chapter": "ch03-awareness-personnel-physical.md",
+          "note": "Awareness/training, personnel security, physical protection"
+        },
+        {
+          "pack": "nist-800-171",
+          "chapter": "ch04-audit-and-configuration.md",
+          "note": "Audit and accountability plus configuration management (also CM)"
+        },
+        {
+          "pack": "nist-800-171",
+          "chapter": "ch05-incident-maintenance-media.md",
+          "note": "Incident response, maintenance, and media protection"
+        },
+        {
+          "pack": "nist-800-171",
+          "chapter": "ch06-risk-assessment-monitoring-planning.md",
+          "note": "Risk assessment, security assessment, monitoring, planning (also risk mgmt)"
+        },
+        {
+          "pack": "nist-800-171",
+          "chapter": "ch07-communications-and-integrity.md",
+          "note": "System/communications protection and information integrity"
+        },
+        {
+          "pack": "nist-800-171",
+          "chapter": "ch08-acquisition-and-supply-chain.md",
+          "note": "Acquisition and supply chain risk management for CUI (also supplier/acquisition)"
+        },
+        {
+          "pack": "nist-800-171",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "nist-800-171",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "nist-800-171",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "nist-800-37",
+          "chapter": "ch01-nist-800-37-introduction.md",
+          "note": "Risk management framework intro"
+        },
+        {
+          "pack": "nist-800-37",
+          "chapter": "ch02-nist-800-37-fundamentals.md",
+          "note": "RMF fundamentals"
+        },
+        {
+          "pack": "nist-800-37",
+          "chapter": "ch03-nist-800-37-process-and-prepare.md",
+          "note": "Prepare step"
+        },
+        {
+          "pack": "nist-800-37",
+          "chapter": "ch04-nist-800-37-categorize-and-select.md",
+          "note": "Categorize and select controls"
+        },
+        {
+          "pack": "nist-800-37",
+          "chapter": "ch05-nist-800-37-implement-and-assess.md",
+          "note": "Implement and assess controls"
+        },
+        {
+          "pack": "nist-800-37",
+          "chapter": "ch06-nist-800-37-authorize.md",
+          "note": "Authorize step (also control gates)"
+        },
+        {
+          "pack": "nist-800-37",
+          "chapter": "ch07-nist-800-37-monitor.md",
+          "note": "Monitor step"
+        },
+        {
+          "pack": "nist-800-61",
+          "chapter": "ch01-scope-shift-and-csf-integration.md",
+          "note": "IR reframed as cybersecurity risk management via CSF 2.0"
+        },
+        {
+          "pack": "nist-800-61",
+          "chapter": "ch02-ir-lifecycle-model.md",
+          "note": "CSF 2.0 incident response life cycle model"
+        },
+        {
+          "pack": "nist-800-61",
+          "chapter": "ch03-roles-policies-and-playbooks.md",
+          "note": "IR roles, policies, procedures, and playbooks"
+        },
+        {
+          "pack": "nist-800-61",
+          "chapter": "ch04-preparation-and-lessons-learned-profile.md",
+          "note": "Community profile: preparation and lessons learned (GV/ID/PR + ID.IM)"
+        },
+        {
+          "pack": "nist-800-61",
+          "chapter": "ch05-detect-respond-recover-profile.md",
+          "note": "Community profile: detect, respond, recover execution"
+        },
+        {
+          "pack": "nist-800-61",
+          "chapter": "ch06-coordination-training-and-improvement.md",
+          "note": "Coordination, training, communications, and improvement"
+        },
+        {
+          "pack": "nist-800-61",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "nist-800-61",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "nist-800-61",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "nist-cps",
+          "chapter": "ch04-nist-cps-cybersecurity-and-privacy-risk.md",
+          "note": "CPS cybersecurity and privacy risk"
+        },
+        {
+          "pack": "nist-csf",
+          "chapter": "ch01-csf-overview-and-components.md",
+          "note": "CSF overview and functions"
+        },
+        {
+          "pack": "nist-csf",
+          "chapter": "ch03-identify-id.md",
+          "note": "Identify function"
+        },
+        {
+          "pack": "nist-csf",
+          "chapter": "ch04-protect-pr.md",
+          "note": "Protect function"
+        },
+        {
+          "pack": "nist-csf",
+          "chapter": "ch05-detect-de.md",
+          "note": "Detect function"
+        },
+        {
+          "pack": "nist-csf",
+          "chapter": "ch06-respond-rs.md",
+          "note": "Respond function"
+        },
+        {
+          "pack": "nist-csf",
+          "chapter": "ch07-recover-rc.md",
+          "note": "Recover function"
+        },
+        {
+          "pack": "nist-ssdf",
+          "chapter": "ch01-introduction-and-how-to-use.md",
+          "note": "SSDF purpose and use"
+        },
+        {
+          "pack": "nist-ssdf",
+          "chapter": "ch02-prepare-the-organization.md",
+          "note": "Prepare the organization"
+        },
+        {
+          "pack": "nist-ssdf",
+          "chapter": "ch03-protect-the-software.md",
+          "note": "Protect software and supply chain"
+        },
+        {
+          "pack": "nist-ssdf",
+          "chapter": "ch04-produce-well-secured-software.md",
+          "note": "Produce well-secured software"
+        },
+        {
+          "pack": "nist-ssdf",
+          "chapter": "ch05-respond-to-vulnerabilities.md",
+          "note": "Respond to vulnerabilities"
+        },
+        {
+          "pack": "nist-sse",
+          "chapter": "ch01-sse-foundations.md",
+          "note": "Systems security engineering foundations"
+        },
+        {
+          "pack": "nist-sse",
+          "chapter": "ch02-sse-framework.md",
+          "note": "SSE framework"
+        },
+        {
+          "pack": "nist-sse",
+          "chapter": "ch03-design-principles.md",
+          "note": "Secure design principles (also arch/design)"
+        },
+        {
+          "pack": "nist-sse",
+          "chapter": "ch04-trustworthiness-and-lifecycle.md",
+          "note": "Trustworthiness across lifecycle"
+        },
+        {
+          "pack": "nist-sse",
+          "chapter": "ch05-cyber-resiliency-framework.md",
+          "note": "Cyber resiliency framework"
+        },
+        {
+          "pack": "nist-sse",
+          "chapter": "ch06-cyber-resiliency-techniques.md",
+          "note": "Resiliency techniques"
+        },
+        {
+          "pack": "nist-sse",
+          "chapter": "ch07-cyber-resiliency-design-principles.md",
+          "note": "Resiliency design principles"
+        },
+        {
+          "pack": "nist-sse",
+          "chapter": "ch08-applying-and-risk.md",
+          "note": "Applying resiliency with risk mgmt"
+        },
+        {
+          "pack": "nist-csf",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "nist-csf",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "nist-csf",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "nist-800-37",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "nist-800-37",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "nist-800-37",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "nist-ssdf",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "nist-ssdf",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "nist-ssdf",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "nist-sse",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "nist-sse",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "nist-sse",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        }
+      ]
+    },
+    {
+      "name": "Human Systems Integration / Human Factors",
+      "chapters": [
+        {
+          "pack": "faa-hf-std",
+          "chapter": "ch01-faa-hf-std-foundations-and-general-design.md",
+          "note": "HF foundations and general design"
+        },
+        {
+          "pack": "faa-hf-std",
+          "chapter": "ch02-faa-hf-std-automation.md",
+          "note": "Human-automation interaction"
+        },
+        {
+          "pack": "faa-hf-std",
+          "chapter": "ch03-faa-hf-std-designing-equipment-for-maintenance.md",
+          "note": "Maintainability/human factors of maintenance"
+        },
+        {
+          "pack": "faa-hf-std",
+          "chapter": "ch04-faa-hf-std-displays-controls-and-visual-indicators.md",
+          "note": "Displays, controls, visual indicators"
+        },
+        {
+          "pack": "faa-hf-std",
+          "chapter": "ch05-faa-hf-std-alarms-audio-and-voice-communications.md",
+          "note": "Alarms and audio/voice comms"
+        },
+        {
+          "pack": "faa-hf-std",
+          "chapter": "ch06-faa-hf-std-chi-information-presentation.md",
+          "note": "Computer-human interface: information presentation"
+        },
+        {
+          "pack": "faa-hf-std",
+          "chapter": "ch07-faa-hf-std-chi-interaction-and-dialogue.md",
+          "note": "CHI interaction and dialogue"
+        },
+        {
+          "pack": "faa-hf-std",
+          "chapter": "ch08-faa-hf-std-input-devices-and-workplace-design.md",
+          "note": "Input devices and workplace design"
+        },
+        {
+          "pack": "faa-hf-std",
+          "chapter": "ch09-faa-hf-std-safety-environment-anthropometry-documentation.md",
+          "note": "Safety, environment, anthropometry, documentation"
+        },
+        {
+          "pack": "mil-hdbk-516",
+          "chapter": "ch08-crew-systems-criteria.md",
+          "note": "Crew systems: pilot-vehicle interface, life support, escape/survival criteria (also airworthiness)"
+        },
+        {
+          "pack": "nasa-hsi",
+          "chapter": "ch01-introduction-to-hsi.md",
+          "note": "HSI introduction and domains"
+        },
+        {
+          "pack": "nasa-hsi",
+          "chapter": "ch02-implementing-hsi.md",
+          "note": "Implementing HSI"
+        },
+        {
+          "pack": "nasa-hsi",
+          "chapter": "ch03-hsi-in-the-see-engine.md",
+          "note": "HSI inside the SE engine"
+        },
+        {
+          "pack": "nasa-hsi",
+          "chapter": "ch04-pre-phase-a-and-phase-a.md",
+          "note": "HSI in early phases"
+        },
+        {
+          "pack": "nasa-hsi",
+          "chapter": "ch05-phases-b-and-c.md",
+          "note": "HSI in phases B/C"
+        },
+        {
+          "pack": "nasa-hsi",
+          "chapter": "ch06-phases-d-e-f.md",
+          "note": "HSI in phases D/E/F"
+        },
+        {
+          "pack": "nasa-hsi",
+          "chapter": "ch07-hsi-products-scaling-tailoring.md",
+          "note": "HSI products, scaling, tailoring"
+        },
+        {
+          "pack": "nasa-hsi",
+          "chapter": "ch08-hsi-plan-writing-and-execution.md",
+          "note": "HSI plan writing and execution"
+        },
+        {
+          "pack": "nasa-hsi",
+          "chapter": "ch09-appendices-hsi-plan-checklist-cases.md",
+          "note": "HSI plan checklist and cases"
+        },
+        {
+          "pack": "nasa-se-handbook",
+          "chapter": "ch05-2-6-human-systems-integration-hsi-in-the-se-pr.md",
+          "note": "HSI overview in SE processes"
+        },
+        {
+          "pack": "faa-hf-std",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "faa-hf-std",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "faa-hf-std",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "nasa-hsi",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "nasa-hsi",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "nasa-hsi",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        }
+      ]
+    },
+    {
+      "name": "Logistics, Supportability & Sustainment",
+      "chapters": [
+        {
+          "pack": "sd-22-dmsms",
+          "chapter": "ch01-sd-22-dmsms-introduction-fundamentals.md",
+          "note": "DMSMS fundamentals"
+        },
+        {
+          "pack": "sd-22-dmsms",
+          "chapter": "ch02-sd-22-dmsms-policy-lifecycle-guidance.md",
+          "note": "DMSMS policy and lifecycle guidance"
+        },
+        {
+          "pack": "sd-22-dmsms",
+          "chapter": "ch03-sd-22-dmsms-prepare-program-infrastructure.md",
+          "note": "Setting up a DMSMS program"
+        },
+        {
+          "pack": "sd-22-dmsms",
+          "chapter": "ch04-sd-22-dmsms-identify-monitoring-surveillance.md",
+          "note": "Identifying: monitoring and surveillance"
+        },
+        {
+          "pack": "sd-22-dmsms",
+          "chapter": "ch05-sd-22-dmsms-assess-resolution-need-timing-level.md",
+          "note": "Assessing resolution need, timing, level"
+        },
+        {
+          "pack": "sd-22-dmsms",
+          "chapter": "ch06-sd-22-dmsms-analyze-resolution-determination.md",
+          "note": "Analyzing resolution options"
+        },
+        {
+          "pack": "sd-22-dmsms",
+          "chapter": "ch07-sd-22-dmsms-implement-resolutions.md",
+          "note": "Implementing DMSMS resolutions"
+        },
+        {
+          "pack": "sd-22-dmsms",
+          "chapter": "ch08-sd-22-dmsms-obsolescence-relationship.md",
+          "note": "Obsolescence vs DMSMS relationship"
+        },
+        {
+          "pack": "sd-22-dmsms",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "sd-22-dmsms",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "sd-22-dmsms",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        }
+      ]
+    },
+    {
+      "name": "Operations, Maintenance & Disposal",
+      "chapters": [
+        {
+          "pack": "doe-sem",
+          "chapter": "ch07-maintenance-stage.md",
+          "note": "Post-acceptance maintenance process model under operational CM"
+        },
+        {
+          "pack": "eu-ai-act",
+          "chapter": "ch10-post-market-surveillance.md",
+          "note": "Post-market monitoring of fielded AI (also ops)"
+        },
+        {
+          "pack": "nasa-se-handbook",
+          "chapter": "ch15-3-8-project-phase-e-operations-and-sustainment.md",
+          "note": "Phase E operations and sustainment"
+        },
+        {
+          "pack": "nasa-se-handbook",
+          "chapter": "ch16-3-9-project-phase-f-closeout.md",
+          "note": "Phase F closeout and disposal"
+        },
+        {
+          "pack": "nasa-se-handbook",
+          "chapter": "ch25-5-5-product-transition.md",
+          "note": "Product transition to operations"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch18-sebok-system-maintenance.md",
+          "note": "System maintenance (also sustainment)"
+        }
+      ]
+    },
+    {
+      "name": "Training & Documentation Delivery",
+      "chapters": []
+    },
+    {
+      "name": "Project/Program Management",
+      "chapters": [
+        {
+          "pack": "dod-mosa",
+          "chapter": "ch03-dod-mosa-program-management-considerations.md",
+          "note": "PM considerations for MOSA programs"
+        },
+        {
+          "pack": "dod-mq-bok",
+          "chapter": "ch01-dod-mq-bok-pre-mdd.md",
+          "note": "SE/PM work in pre-MDD phase"
+        },
+        {
+          "pack": "dod-mq-bok",
+          "chapter": "ch02-dod-mq-bok-msa.md",
+          "note": "SE/PM work in MSA phase"
+        },
+        {
+          "pack": "dod-mq-bok",
+          "chapter": "ch03-dod-mq-bok-tmrr.md",
+          "note": "SE/PM work in TMRR phase"
+        },
+        {
+          "pack": "dod-mq-bok",
+          "chapter": "ch04-dod-mq-bok-emd.md",
+          "note": "SE/PM work in EMD phase"
+        },
+        {
+          "pack": "dod-mq-bok",
+          "chapter": "ch05-dod-mq-bok-prod-deploy.md",
+          "note": "SE/PM work in production & deployment"
+        },
+        {
+          "pack": "dod-mq-bok",
+          "chapter": "ch06-dod-mq-bok-ops-support.md",
+          "note": "SE/PM work in ops & support"
+        },
+        {
+          "pack": "dodaf",
+          "chapter": "ch07-project-viewpoint-pv.md",
+          "note": "Project viewpoint: program/organization mappings"
+        },
+        {
+          "pack": "doe-o-413-3",
+          "chapter": "ch01-purpose-applicability-governance.md",
+          "note": "Capital-asset Order purpose, applicability, and governance (also governance)"
+        },
+        {
+          "pack": "doe-o-413-3",
+          "chapter": "ch04-performance-baseline-cost-schedule.md",
+          "note": "Performance baseline, cost, schedule, contingency, EVMS (also measurement)"
+        },
+        {
+          "pack": "gao-agile",
+          "chapter": "ch01-gao-agile-introduction-background.md",
+          "note": "Agile in federal context"
+        },
+        {
+          "pack": "gao-agile",
+          "chapter": "ch02-gao-agile-adoption-challenges-federal-response.md",
+          "note": "Adoption challenges and federal response"
+        },
+        {
+          "pack": "gao-agile",
+          "chapter": "ch03-gao-agile-adoption-best-practices.md",
+          "note": "Agile adoption best practices"
+        },
+        {
+          "pack": "gao-agile",
+          "chapter": "ch04-gao-agile-execution-and-controls.md",
+          "note": "Agile execution and control mechanisms"
+        },
+        {
+          "pack": "gao-agile",
+          "chapter": "ch07-gao-agile-program-monitoring-control.md",
+          "note": "Agile program monitoring and control"
+        },
+        {
+          "pack": "gao-cost",
+          "chapter": "ch01-gao-cost-fundamentals-credible-estimates.md",
+          "note": "Cost estimating fundamentals"
+        },
+        {
+          "pack": "gao-cost",
+          "chapter": "ch02-gao-cost-process-planning-program-definition.md",
+          "note": "Cost process and program definition"
+        },
+        {
+          "pack": "gao-cost",
+          "chapter": "ch03-gao-cost-data-ground-rules-point-estimate.md",
+          "note": "Cost data, ground rules, point estimates"
+        },
+        {
+          "pack": "gao-cost",
+          "chapter": "ch04-gao-cost-sensitivity-risk-uncertainty.md",
+          "note": "Cost sensitivity, risk, uncertainty (also risk mgmt)"
+        },
+        {
+          "pack": "gao-cost",
+          "chapter": "ch05-gao-cost-document-present-update.md",
+          "note": "Documenting and presenting cost estimates"
+        },
+        {
+          "pack": "gao-cost",
+          "chapter": "ch06-gao-cost-auditing-validating.md",
+          "note": "Auditing and validating cost estimates"
+        },
+        {
+          "pack": "gao-cost",
+          "chapter": "ch07-gao-cost-earned-value-management.md",
+          "note": "Earned value management"
+        },
+        {
+          "pack": "gao-cost",
+          "chapter": "ch08-gao-cost-specialized-techniques-internal-control.md",
+          "note": "Specialized cost techniques and internal control"
+        },
+        {
+          "pack": "gao-schedule",
+          "chapter": "ch01-gao-schedule-introduction-reliable-schedule.md",
+          "note": "Reliable schedule fundamentals"
+        },
+        {
+          "pack": "gao-schedule",
+          "chapter": "ch02-gao-schedule-capturing-and-sequencing-activities.md",
+          "note": "Capturing and sequencing activities"
+        },
+        {
+          "pack": "gao-schedule",
+          "chapter": "ch03-gao-schedule-resources-and-durations.md",
+          "note": "Resources and durations"
+        },
+        {
+          "pack": "gao-schedule",
+          "chapter": "ch04-gao-schedule-traceability-and-critical-path.md",
+          "note": "Schedule traceability and critical path"
+        },
+        {
+          "pack": "gao-schedule",
+          "chapter": "ch05-gao-schedule-total-float-and-risk-analysis.md",
+          "note": "Float and schedule risk analysis"
+        },
+        {
+          "pack": "gao-schedule",
+          "chapter": "ch06-gao-schedule-updating-baseline-four-characteristics.md",
+          "note": "Baseline updating, four characteristics"
+        },
+        {
+          "pack": "gao-schedule",
+          "chapter": "ch07-gao-schedule-auditing-key-questions.md",
+          "note": "Schedule audit key questions"
+        },
+        {
+          "pack": "gao-schedule",
+          "chapter": "ch08-gao-schedule-evm-forward-backward-pass-reference-data.md",
+          "note": "EVM and forward/backward pass reference"
+        },
+        {
+          "pack": "nasa-ceh",
+          "chapter": "ch01-nasa-ceh-introduction-and-process-overview.md",
+          "note": "Cost estimating process overview"
+        },
+        {
+          "pack": "nasa-ceh",
+          "chapter": "ch02-nasa-ceh-project-definition-tasks.md",
+          "note": "Project definition for costing"
+        },
+        {
+          "pack": "nasa-ceh",
+          "chapter": "ch03-nasa-ceh-cost-methodology-tasks.md",
+          "note": "Cost methodology selection"
+        },
+        {
+          "pack": "nasa-ceh",
+          "chapter": "ch04-nasa-ceh-cost-estimate-tasks.md",
+          "note": "Building the cost estimate"
+        },
+        {
+          "pack": "nasa-ceh",
+          "chapter": "ch05-nasa-ceh-jcl-analysis.md",
+          "note": "Joint confidence level analysis"
+        },
+        {
+          "pack": "nasa-ceh",
+          "chapter": "ch07-nasa-ceh-economic-analysis.md",
+          "note": "Economic analysis"
+        },
+        {
+          "pack": "nasa-schedule",
+          "chapter": "ch01-nasa-schedule-foundations.md",
+          "note": "Schedule fundamentals"
+        },
+        {
+          "pack": "nasa-schedule",
+          "chapter": "ch02-nasa-schedule-management-planning.md",
+          "note": "Schedule management planning"
+        },
+        {
+          "pack": "nasa-schedule",
+          "chapter": "ch03-nasa-schedule-development-scope-and-boe.md",
+          "note": "Scope and basis of estimate"
+        },
+        {
+          "pack": "nasa-schedule",
+          "chapter": "ch04-nasa-schedule-development-build-and-outputs.md",
+          "note": "Building the schedule and outputs"
+        },
+        {
+          "pack": "nasa-schedule",
+          "chapter": "ch05-nasa-schedule-assessment.md",
+          "note": "Schedule assessment/health analysis"
+        },
+        {
+          "pack": "nasa-schedule",
+          "chapter": "ch06-nasa-schedule-risk-analysis.md",
+          "note": "Schedule risk analysis"
+        },
+        {
+          "pack": "nasa-schedule",
+          "chapter": "ch07-nasa-schedule-maintenance-and-control.md",
+          "note": "Schedule maintenance and control (also baselines)"
+        },
+        {
+          "pack": "nasa-schedule",
+          "chapter": "ch08-nasa-schedule-documentation-and-communication.md",
+          "note": "Schedule documentation and communication"
+        },
+        {
+          "pack": "nasa-se-handbook",
+          "chapter": "ch04-2-5-cost-effectiveness-considerations.md",
+          "note": "Cost-effectiveness considerations"
+        },
+        {
+          "pack": "nasa-se-handbook",
+          "chapter": "ch08-3-1-program-formulation.md",
+          "note": "Program formulation"
+        },
+        {
+          "pack": "nasa-se-handbook",
+          "chapter": "ch09-3-2-program-implementation.md",
+          "note": "Program implementation"
+        },
+        {
+          "pack": "nasa-se-handbook",
+          "chapter": "ch10-3-3-project-pre-phase-a-concept-studies.md",
+          "note": "Pre-Phase A concept studies"
+        },
+        {
+          "pack": "nasa-se-handbook",
+          "chapter": "ch11-3-4-project-phase-a-concept-and-technology-dev.md",
+          "note": "Phase A concept and technology development"
+        },
+        {
+          "pack": "nasa-se-handbook",
+          "chapter": "ch12-3-5-project-phase-b-preliminary-design-and-tec.md",
+          "note": "Phase B preliminary design"
+        },
+        {
+          "pack": "nasa-se-handbook",
+          "chapter": "ch13-3-6-project-phase-c-final-design-and-fabricati.md",
+          "note": "Phase C final design and fabrication"
+        },
+        {
+          "pack": "nasa-se-handbook",
+          "chapter": "ch14-3-7-project-phase-d-system-assembly-integratio.md",
+          "note": "Phase D assembly/integration (also integration)"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch31-sebok-se-project-management.md",
+          "note": "SE and project management relationship"
+        },
+        {
+          "pack": "gao-schedule",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "gao-schedule",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "gao-schedule",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "nasa-schedule",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "nasa-schedule",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "nasa-schedule",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "gao-cost",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "gao-cost",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "gao-cost",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "nasa-ceh",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "nasa-ceh",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "nasa-ceh",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        }
+      ]
+    },
+    {
+      "name": "Supplier, Procurement & Acquisition",
+      "chapters": [
+        {
+          "pack": "dod-mosa",
+          "chapter": "ch06-dod-mosa-acquisition-pathways.md",
+          "note": "MOSA across AAF acquisition pathways"
+        },
+        {
+          "pack": "doe-o-413-3",
+          "chapter": "ch03-acquisition-planning-and-ipt.md",
+          "note": "Acquisition strategy, project execution planning, and IPTs (also planning)"
+        },
+        {
+          "pack": "gao-agile",
+          "chapter": "ch06-gao-agile-federal-contracting-process.md",
+          "note": "Agile federal contracting"
+        },
+        {
+          "pack": "mrl-deskbook",
+          "chapter": "ch06-mrl-deskbook-contract-language.md",
+          "note": "MRL contract language"
+        },
+        {
+          "pack": "nasa-de-acquisition",
+          "chapter": "ch03-nasa-de-acquisition-requirements-exchange-and-contract-language.md",
+          "note": "Requirements exchange and DE contract language"
+        },
+        {
+          "pack": "nasa-de-acquisition",
+          "chapter": "ch04-nasa-de-acquisition-data-acquisition-contract-language.md",
+          "note": "Data acquisition contract language"
+        },
+        {
+          "pack": "nasa-npr-7123",
+          "chapter": "ch04-contracted-projects.md",
+          "note": "Requirements flow to contracted projects"
+        }
+      ]
+    },
+    {
+      "name": "Stakeholder Engagement & Needs",
+      "chapters": [
+        {
+          "pack": "nasa-se-handbook",
+          "chapter": "ch17-4-1-stakeholder-expectations-definition.md",
+          "note": "Stakeholder expectations definition"
+        },
+        {
+          "pack": "nist-ai-rmf",
+          "chapter": "ch02-audience-and-ai-actors.md",
+          "note": "AI actors and stakeholders in the RMF"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch16-sebok-system-concept-definition.md",
+          "note": "System concept definition from stakeholder needs"
+        }
+      ]
+    },
+    {
+      "name": "Governance, Reviews, Gates & Control Points",
+      "chapters": [
+        {
+          "pack": "dau-se-guidebook",
+          "chapter": "ch03-technical-reviews-and-audits.md",
+          "note": "TRRs, PDR/CDR, FCA/PCA and other formal control gates"
+        },
+        {
+          "pack": "doe-o-413-3",
+          "chapter": "ch02-critical-decisions-cd0-cd4.md",
+          "note": "CD-0 through CD-4 stage gates and approval authorities"
+        },
+        {
+          "pack": "doe-o-413-3",
+          "chapter": "ch06-reviews-responsibilities-crd.md",
+          "note": "External/independent reviews, roles, and contractor requirements (also supplier)"
+        },
+        {
+          "pack": "eu-ai-act",
+          "chapter": "ch01-general-provisions.md",
+          "note": "Scope, definitions, regulatory structure"
+        },
+        {
+          "pack": "eu-ai-act",
+          "chapter": "ch02-prohibited-practices.md",
+          "note": "Banned AI practices"
+        },
+        {
+          "pack": "eu-ai-act",
+          "chapter": "ch05-obligations-operators.md",
+          "note": "Operator obligations along the value chain"
+        },
+        {
+          "pack": "eu-ai-act",
+          "chapter": "ch07-transparency-obligations.md",
+          "note": "Transparency obligations"
+        },
+        {
+          "pack": "eu-ai-act",
+          "chapter": "ch08-general-purpose-ai.md",
+          "note": "GPAI model obligations"
+        },
+        {
+          "pack": "eu-ai-act",
+          "chapter": "ch09-governance.md",
+          "note": "AI Office / Board / national authority governance"
+        },
+        {
+          "pack": "eu-ai-act",
+          "chapter": "ch11-penalties-enforcement.md",
+          "note": "Penalties and enforcement"
+        },
+        {
+          "pack": "nasa-npr-7123",
+          "chapter": "ch05-lifecycle-technical-reviews.md",
+          "note": "Lifecycle technical reviews (SRR through FRR)"
+        },
+        {
+          "pack": "nasa-npr-7123",
+          "chapter": "ch09-review-entrance-success-criteria.md",
+          "note": "Review entrance/success criteria"
+        },
+        {
+          "pack": "nist-ai-rmf",
+          "chapter": "ch04-govern-function.md",
+          "note": "Govern function"
+        },
+        {
+          "pack": "nist-csf",
+          "chapter": "ch02-govern-gv.md",
+          "note": "Govern function (cyber governance)"
+        },
+        {
+          "pack": "eu-ai-act",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "eu-ai-act",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "eu-ai-act",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        }
+      ]
+    },
+    {
+      "name": "Standards, Tailoring & Process Models",
+      "chapters": [
+        {
+          "pack": "dau-se-guidebook",
+          "chapter": "ch04-technical-management-processes.md",
+          "note": "The 8 technical management processes mapped to 15288"
+        },
+        {
+          "pack": "dau-se-guidebook",
+          "chapter": "ch05-technical-processes.md",
+          "note": "The 8 technical processes (15288-style process definitions)"
+        },
+        {
+          "pack": "dodaf",
+          "chapter": "ch09-standards-viewpoint-stdv.md",
+          "note": "Standards viewpoint: applicable standards profiles"
+        },
+        {
+          "pack": "doe-sem",
+          "chapter": "ch02-lifecycle-model-and-quality-reviews.md",
+          "note": "Eight-stage SEM lifecycle with walkthrough/ISA/stage-exit gates (also governance gates)"
+        },
+        {
+          "pack": "mil-hdbk-516",
+          "chapter": "ch01-scope-applicability-and-tailoring.md",
+          "note": "Airworthiness certification basis scope, applicability, and tailoring"
+        },
+        {
+          "pack": "nasa-ms-7009",
+          "chapter": "ch07-hdbk-lifecycle-implementation.md",
+          "note": "Handbook life-cycle implementation of M&S credibility requirements"
+        },
+        {
+          "pack": "nasa-npr-7123",
+          "chapter": "ch01-introduction.md",
+          "note": "NPR 7123 structure and applicability"
+        },
+        {
+          "pack": "nasa-npr-7123",
+          "chapter": "ch02-institutional-programmatic-requirements.md",
+          "note": "Programmatic process requirements"
+        },
+        {
+          "pack": "nasa-npr-7123",
+          "chapter": "ch03-common-technical-processes.md",
+          "note": "Common technical processes (15288-style defs)"
+        },
+        {
+          "pack": "nasa-npr-7123",
+          "chapter": "ch07-definitions.md",
+          "note": "Process definitions"
+        },
+        {
+          "pack": "nasa-npr-7150",
+          "chapter": "ch01-nasa-npr-7150-introduction-purpose-structure.md",
+          "note": "Software requirements NPR structure"
+        },
+        {
+          "pack": "nasa-npr-7150",
+          "chapter": "ch02-nasa-npr-7150-roles-responsibilities-tailoring.md",
+          "note": "Roles and tailoring"
+        },
+        {
+          "pack": "nasa-npr-7150",
+          "chapter": "ch03-nasa-npr-7150-software-management-requirements.md",
+          "note": "Software management requirements"
+        },
+        {
+          "pack": "nasa-npr-7150",
+          "chapter": "ch04-nasa-npr-7150-software-engineering-lifecycle-requirements.md",
+          "note": "Software lifecycle requirements"
+        },
+        {
+          "pack": "nasa-npr-7150",
+          "chapter": "ch05-nasa-npr-7150-supporting-lifecycle-requirements.md",
+          "note": "Supporting lifecycle requirements"
+        },
+        {
+          "pack": "nasa-npr-7150",
+          "chapter": "ch07-nasa-npr-7150-definitions.md",
+          "note": "Definitions"
+        },
+        {
+          "pack": "nasa-npr-7150",
+          "chapter": "ch08-nasa-npr-7150-software-classifications.md",
+          "note": "Software classification levels"
+        },
+        {
+          "pack": "nasa-se-expanded",
+          "chapter": "ch02-nasa-se-expanded-life-cycle-and-tailoring.md",
+          "note": "Lifecycle models and tailoring"
+        },
+        {
+          "pack": "nasa-se-handbook",
+          "chapter": "ch02-2-1-the-common-technical-processes-and-the-se.md",
+          "note": "Common technical processes model"
+        },
+        {
+          "pack": "nasa-se-handbook",
+          "chapter": "ch06-2-7-competency-model-for-systems-engineers.md",
+          "note": "SE competency model"
+        },
+        {
+          "pack": "nasa-se-handbook",
+          "chapter": "ch07-3-0-nasa-program-project-life-cycle.md",
+          "note": "NASA program/project life cycle model"
+        },
+        {
+          "pack": "nist-ai-rmf",
+          "chapter": "ch08-profiles-and-use.md",
+          "note": "Profiles and tailoring the RMF"
+        },
+        {
+          "pack": "nist-cps",
+          "chapter": "ch03-nist-cps-related-standards-and-applying-the-framework.md",
+          "note": "Related standards and applying the framework"
+        },
+        {
+          "pack": "nist-csf",
+          "chapter": "ch08-profiles-tiers-and-using-the-csf.md",
+          "note": "Profiles, tiers, and tailoring CSF use"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch08-sebok-se-and-management-overview.md",
+          "note": "SE and management overview (process framing)"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch09-sebok-life-cycle-terms-concepts.md",
+          "note": "Life-cycle terms and concepts"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch10-sebok-development-approaches.md",
+          "note": "Choosing development approaches"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch11-sebok-agile-approaches.md",
+          "note": "Agile approaches for systems"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch12-sebok-life-cycle-model-selection.md",
+          "note": "Life-cycle model selection"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch13-sebok-process-concepts.md",
+          "note": "SE process concepts"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch14-sebok-process-selection-tailoring.md",
+          "note": "Process selection and tailoring"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch19-sebok-se-standards.md",
+          "note": "SE standards landscape"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch26-sebok-enabling-businesses-enterprises.md",
+          "note": "Enabling businesses/enterprises for SE"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch27-sebok-enabling-teams.md",
+          "note": "Enabling teams"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch28-sebok-enabling-individuals.md",
+          "note": "Enabling individuals (competency)"
+        }
+      ]
+    },
+    {
+      "name": "Specialty Engineering",
+      "chapters": [
+        {
+          "pack": "faa-sem",
+          "chapter": "ch06-faa-sem-specialty-rma-lifecycle-e3-humanfactors.md",
+          "note": "Multi-specialty: RMA, E3, human factors"
+        },
+        {
+          "pack": "faa-sem",
+          "chapter": "ch07-faa-sem-specialty-infosec-safety-environmental.md",
+          "note": "Multi-specialty: infosec, safety, environmental"
+        },
+        {
+          "pack": "nist-cps",
+          "chapter": "ch06-nist-cps-timing-and-time-awareness.md",
+          "note": "Timing and time awareness (specialty concern)"
+        },
+        {
+          "pack": "nist-cps",
+          "chapter": "ch08-nist-cps-managing-and-securing-time.md",
+          "note": "Managing and securing time (also cybersecurity)"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch29-sebok-related-disciplines-env-geo.md",
+          "note": "Related disciplines: environment, geospatial"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch30-sebok-se-industrial-engineering.md",
+          "note": "SE and industrial engineering"
+        },
+        {
+          "pack": "sebok",
+          "chapter": "ch33-sebok-se-physical-domain-disciplines.md",
+          "note": "Physical-domain disciplines (specialties)"
+        }
+      ]
+    },
+    {
+      "name": "Assurance & System Assurance",
+      "chapters": [
+        {
+          "pack": "eu-ai-act",
+          "chapter": "ch03-high-risk-classification.md",
+          "note": "Classifying high-risk AI systems"
+        },
+        {
+          "pack": "eu-ai-act",
+          "chapter": "ch04-high-risk-requirements.md",
+          "note": "Requirements placed on high-risk AI systems"
+        },
+        {
+          "pack": "eu-ai-act",
+          "chapter": "ch06-conformity-assessment.md",
+          "note": "Conformity assessment and CE marking regime"
+        },
+        {
+          "pack": "eu-ai-act",
+          "chapter": "ch12-annex-iii-high-risk-usecases.md",
+          "note": "Annex III high-risk use-case list"
+        },
+        {
+          "pack": "nasa-system-safety",
+          "chapter": "ch05-system-safety-ensurance-activities.md",
+          "note": "Safety ensurance/assurance activities"
+        },
+        {
+          "pack": "nasa-system-safety",
+          "chapter": "ch06-risc-development.md",
+          "note": "Risk-informed safety case development"
+        },
+        {
+          "pack": "nasa-system-safety",
+          "chapter": "ch07-risc-evaluation.md",
+          "note": "Safety case evaluation"
+        },
+        {
+          "pack": "nist-ai-rmf",
+          "chapter": "ch03-trustworthiness-characteristics.md",
+          "note": "Trustworthiness characteristics of AI"
+        }
+      ]
+    }
+  ]
+}

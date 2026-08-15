@@ -77,8 +77,8 @@ This list exists so the repo never ships something that triggers a takedown.
 | **INCOSE SE Vision 2035** | Freely downloadable but no stated redistribution/derivative grant (Tier 3 → treat as excluded pending permission). |
 | **INCOSE Systems Engineering Competency Framework (2nd ed.)** | Freely downloadable (Excel) but © INCOSE, all rights reserved; no redistribution/derivative grant — reuse routed through INCOSE Permissions & Copyrights. Same pattern as the SE Vision 2035 row. (Verified 2026-08-14.) |
 | **OMG formal specifications** (UML, SysML, BPMN, UAF, CORBA, MOF, XMI, OCL, DDS…) | OMG Specification License public grant is informational-use-only: the spec "will not be copied or posted on any network computer … or … transferred for commercial purposes" and "no modifications are made to this specification." A hosted, transformed pack breaches both. Confirmed by two independent licence reads (2026-06-19). Cite + link to the OMG download; never package. |
-| **IEEE 15288.2-2014** | Purchase/subscription only; not in the IEEE GET program; IEEE sole copyright holder, GET downloads are personal-use with no redistribution/derivative grant. (Verified 2026-08-14.) |
-| **ECSS standards (incl. ECSS-E-ST-10C Rev.1)** | Free download from ecss.nl but © ESA; "No ECSS document may be reproduced in any form without the explicit consent of ESA" (ECSS-P-00C §5.8). A pack is reproduction + derivative work. (Verified 2026-08-14.) |
+| **IEEE 15288.2-2014** `[T2-01]` | Purchase/subscription only; not in the IEEE GET program; IEEE sole copyright holder, GET downloads are personal-use with no redistribution/derivative grant. (Verified 2026-08-14.) |
+| **ECSS standards (incl. ECSS-E-ST-10C Rev.1)** `[T2-02]` | Free download from ecss.nl but © ESA; "No ECSS document may be reproduced in any form without the explicit consent of ESA" (ECSS-P-00C §5.8). A pack is reproduction + derivative work. (Verified 2026-08-14.) |
 | **INCOSE Guide to Writing Requirements** | Purchase-only, all-rights-reserved (INCOSE). Revisit only if an open-licence edition appears (FUT-02). (Verified 2026-08-14.) |
 | **DAU/WARU SE Guidebook (Feb 2022) re-pack** | Duplicate of existing `packs/dau-se-guidebook/` in the 48-pack baseline (US-gov public domain; excluded for duplication, not licence). (Verified 2026-08-14.) |
 
@@ -109,7 +109,7 @@ in-source confirmation.
 | **CISA CPG 2.0** (CISA Cross-Sector Cybersecurity Performance Goals 2.0; ~2024-25) | Tier 1 | CISA federal-employee authorship → public domain (17 U.S.C. § 105). Verify PDF title/disclaimer page at build; watch for embedded third-party logos/content. |
 | **DOE SEM3** (US DOE Systems Engineering Methodology, SEM version 3) | Tier 1 | DOE-authored US Government work (17 U.S.C. § 105). Confirm no third-party copyright notice inside the PDF at build. |
 
-### Def Stan 00-051 — UNVERIFIED / excluded from this milestone
+### Def Stan 00-051 — UNVERIFIED / excluded from this milestone `[T2-03]`
 
 **Def Stan 00-051** (*Environmental Management Requirements for Defence Systems*, Issue 2
 2021) is **UNVERIFIED** and **excluded from v1.17.0** pending a registered DSTAN user
