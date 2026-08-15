@@ -3,17 +3,17 @@ gsd_state_version: 1.0
 milestone: v1.17.0
 milestone_name: "**Goal**: Catalog, docs, installers, and release artifacts include the new packs"
 current_phase: 3
-status: in_progress
-stopped_at: Completed 3-01-PLAN.md
-last_updated: "2026-08-15T00:09:39.011Z"
-last_activity: 2026-08-14
-last_activity_desc: Phase 3 plan 01 Batch A packs complete
-progress:
-  total_phases: 5
-  completed_phases: 2
-  total_plans: 4
-  completed_plans: 2
 current_phase_name: Tier 1 packs (public domain)
+status: in_progress
+stopped_at: Completed 3-02-PLAN.md
+last_updated: "2026-08-15T00:35:01.183Z"
+last_activity: 2026-08-14
+last_activity_desc: Completed 3-01-PLAN.md (4 packs)
+progress:
+  total_phases: 2
+  completed_phases: 1
+  total_plans: 4
+  completed_plans: 3
 ---
 
 # Project State
@@ -32,7 +32,7 @@ Plan: 01 complete (Batch A); next 02
 Status: In progress
 Last activity: 2026-08-14 — Completed 3-01-PLAN.md (4 packs)
 
-Progress: [█████░░░░░] 50%
+Progress: [████████░░] 75%
 
 ## Performance Metrics
 
@@ -46,6 +46,7 @@ Progress: [█████░░░░░] 50%
 |------|----------|-------|-------|
 | Phase 2 P01 | 4min | 4 tasks | 6 files |
 | Phase 3 P01 | 90min | 4 tasks | 50 files |
+| Phase 3 P02 | 90min | 2 tasks | 29 files |
 
 ## Deviations / Notes
 
@@ -61,9 +62,12 @@ Progress: [█████░░░░░] 50%
 - [Phase 3]: cisa-cpg: no separate controls-list PDF; main report sliced, slick overlap-only (MN-04)
 - [Phase 3]: P3-PRE-1 proven: CISA statute-bearing licence string classifies Tier 1
 - [Phase 3]: P3-PRE-2 accepted gap recorded: vet_source lacks ecss/esa/def-stan EXCLUDED signals
+- [Phase ?]: 338B from nde-ed.org mirror; pages=1046 (cpp 2407); DIST-A verified; OCR not needed
+- [Phase ?]: 516C from everyspec mirror; pages=527 (cpp 2954); DIST-A verified; OCR not needed
+- [Phase ?]: Batch B extract-before-vet reorder followed (MN-06)
 
 ## Session
 
-**Last session:** 2026-08-15T00:09:38.996Z
-**Stopped at:** Completed 3-01-PLAN.md
+**Last session:** 2026-08-15T00:35:01.169Z
+**Stopped at:** Completed 3-02-PLAN.md
 **Resume file:** None
