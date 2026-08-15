@@ -4,11 +4,7 @@
   "active_phase": 5,
   "active_phase_dir": ".planning/phases/5-release-surface-v1-17-0",
   "active_state": ".planning/phases/5-release-surface-v1-17-0/master_flow_state.json",
-  "lock": {
-    "phase": 5,
-    "session_hint": "master-flow",
-    "updated_at": "2026-08-15T05:05:37.344Z"
-  },
-  "updated_at": "2026-08-15T05:05:37.345Z",
-  "notes": ""
+  "lock": null,
+  "updated_at": "2026-08-15T06:05:51.322Z",
+  "notes": "Phase 5 verify passed. Next: 3"
 }

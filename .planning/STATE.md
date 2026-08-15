@@ -3,11 +3,11 @@ gsd_state_version: 1.0
 milestone: v1.17.0
 milestone_name: "**Goal**: Catalog, docs, installers, and release artifacts include the new packs"
 current_phase: 5
-status: complete
+status: completed
 stopped_at: Completed 5-01-PLAN.md
-last_updated: "2026-08-15T05:52:00.502Z"
+last_updated: "2026-08-15T06:05:52.133Z"
 last_activity: 2026-08-15
-last_activity_desc: release commit `bcd32af`, tag `v1.17.0`, GitHub Release published
+last_activity_desc: Phase 5 marked complete
 progress:
   total_phases: 3
   completed_phases: 3
@@ -29,8 +29,8 @@ See: .planning/PROJECT.md (updated 2026-08-14)
 
 Phase: 5 — COMPLETE
 Plan: 01 complete (release surface + tag + GitHub Release)
-Status: v1.17.0 shipped
-Last activity: 2026-08-15 — release commit `bcd32af`, tag `v1.17.0`, GitHub Release published
+Status: Phase 5 complete
+Last activity: 2026-08-15 — Phase 5 marked complete
 
 Progress: [██████████] 100%
 
