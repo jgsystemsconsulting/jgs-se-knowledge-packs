@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
   "kind": "pointer",
-  "active_phase": 3,
-  "active_phase_dir": ".planning/phases/3-tier-1-packs-public-domain",
-  "active_state": ".planning/phases/3-tier-1-packs-public-domain/master_flow_state.json",
+  "active_phase": 5,
+  "active_phase_dir": ".planning/phases/5-release-surface-v1-17-0",
+  "active_state": ".planning/phases/5-release-surface-v1-17-0/master_flow_state.json",
   "lock": {
-    "phase": 3,
+    "phase": 5,
     "session_hint": "master-flow",
-    "updated_at": "2026-08-14T23:30:55.711Z"
+    "updated_at": "2026-08-15T05:05:37.344Z"
   },
-  "updated_at": "2026-08-14T23:30:55.712Z",
+  "updated_at": "2026-08-15T05:05:37.345Z",
   "notes": ""
 }
