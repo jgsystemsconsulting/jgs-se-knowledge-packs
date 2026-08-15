@@ -1,0 +1,28 @@
+slug: nasa-ms-7009
+title: "NASA Standard for Models and Simulations (NASA-STD-7009B with NASA-HDBK-7009B)"
+publisher: "NASA"
+source_version: "STD-7009B approved 2024-03-05 + HDBK-7009B (2026-02-03)"
+license: "Public Domain (US Government work, 17 U.S.C. § 105)"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "jgs-reference-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 263
+  chapters: 7
+  built_on: "2026-08-15"
+notes: >
+  Two-source build: NASA-STD-7009B (extract metadata pages=88) + NASA-HDBK-7009B
+  (extract metadata pages=175); source_pages is the sum (88+175=263). US Government
+  work -- public domain (17 U.S.C. § 105); no copyright, free to reproduce, transform,
+  and redistribute (including commercially). Attribution to NASA is provided as a
+  courtesy in NOTICE, not as an obligation. Content is synthesized/transformed reference
+  notes; no long verbatim passages reproduced (verified by tooling check_overlap against
+  BOTH full_text extracts). No source-material link published (see docs/LICENSING.md).
+  Extraction used pdftotext fallback for both PDFs. Primary chapter spine follows the
+  STD's mandatory M&S requirements grouped into credibility facets (programmatics/
+  criticality, development V&V/uncertainty, use/results/risk/reporting); HDBK slices
+  supply life-cycle depth (initiation through construction, compliance, AI/pedigree
+  context). scan_generated_skill reviewed at build.
+change_indication: "reconstructed as synthesized reference notes"
