@@ -44,7 +44,7 @@ _PK = "PRIVATE" + " KEY"
 LEAK_SENTINELS = ["CONFI" + "DENTIAL", "BEGIN " + _PK, "BEGIN OPENSSH " + _PK, "BEGIN RSA " + _PK]
 
 # Source-material hosts that must never appear as published links (link policy).
-SOURCE_HOSTS = re.compile(r"https?://[^\s)\"']*(sebokwiki|nasa\.gov|ntrs|nist\.gov|govinfo\.gov|omg\.org|ocw\.mit|dodcio|dod\.mil|dla\.mil|eur-lex|europa\.eu|nato\.int|dau\.edu)")
+SOURCE_HOSTS = re.compile(r"https?://[^\s)\"']*(sebokwiki|nasa\.gov|ntrs|nist\.gov|govinfo\.gov|omg\.org|ocw\.mit|dodcio|dod\.mil|dla\.mil|eur-lex|europa\.eu|nato\.int|dau\.edu|cisa\.gov|energy\.gov|nde-ed\.org|everyspec\.com)")
 
 # Authored-file header sentinels (RR-B-03/04) — checked on JGSC-authored files only,
 # never on pack content (which carries the source's licence).
@@ -164,6 +164,52 @@ def main() -> int:
     entry_count = len([s for s in entry_slugs if s not in signpost_names])
     if packs and entry_count != len(packs):
         fail(errs, f"[index] SKILLS.md lists {entry_count} packs but {len(packs)} are shipped")
+
+    # 6b. Cursor marketplace manifest lists every commercially-redistributable pack
+    #     (MA-01 backstop: plugin.json skills must not drift behind packs/*/SKILL.md).
+    cursor_plugin = ROOT / ".cursor-plugin" / "plugin.json"
+    if cursor_plugin.is_file():
+        try:
+            cursor = json.loads(cursor_plugin.read_text(encoding="utf-8"))
+            skills_list = cursor.get("skills")
+            if not isinstance(skills_list, list):
+                fail(errs, "[cursor] .cursor-plugin/plugin.json missing skills array")
+            else:
+                all_skill_dirs = sorted(
+                    p.parent for p in (ROOT / "packs").glob("*/SKILL.md")
+                )
+                nc_packs = {
+                    p.name for p in all_skill_dirs
+                    if (p / "PACK.yaml").is_file()
+                    and "commercial_use: false" in (p / "PACK.yaml").read_text(
+                        encoding="utf-8", errors="ignore"
+                    )
+                }
+                pack_slugs = {p.name for p in all_skill_dirs} - nc_packs
+                cursor_slugs = set()
+                for s in skills_list:
+                    if not isinstance(s, str):
+                        continue
+                    # paths look like ./packs/<slug>/SKILL.md (normalize separators)
+                    m = re.search(r"packs[/\\]([^/\\]+)[/\\]", s)
+                    if m:
+                        cursor_slugs.add(m.group(1))
+                missing = sorted(pack_slugs - cursor_slugs)
+                extra = sorted(cursor_slugs - pack_slugs)
+                if len(cursor_slugs) != len(pack_slugs) or missing or extra:
+                    detail = []
+                    if missing:
+                        detail.append(f"missing={missing}")
+                    if extra:
+                        detail.append(f"extra={extra}")
+                    fail(
+                        errs,
+                        f"[cursor] manifest skills count {len(cursor_slugs)} "
+                        f"!= eligible packs {len(pack_slugs)}"
+                        + (f" ({'; '.join(detail)})" if detail else ""),
+                    )
+        except Exception as e:
+            fail(errs, f"[cursor] cannot verify .cursor-plugin/plugin.json: {e}")
 
     # 7. authored-file headers (root + docs + tooling + installers; NOT packs/)
     authored = [ROOT / "README.md", ROOT / "SECURITY.md", ROOT / "CODE_OF_CONDUCT.md",
