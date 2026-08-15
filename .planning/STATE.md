@@ -7,8 +7,8 @@ current_phase_name: Tier 1 packs (public domain)
 status: in_progress
 stopped_at: Completed 3-02-PLAN.md
 last_updated: "2026-08-15T00:35:01.183Z"
-last_activity: 2026-08-14
-last_activity_desc: Completed 3-01-PLAN.md (4 packs)
+last_activity: 2026-08-15
+last_activity_desc: Completed 3-02-PLAN.md (2 DoD packs)
 progress:
   total_phases: 2
   completed_phases: 1
@@ -23,21 +23,21 @@ progress:
 See: .planning/PROJECT.md (updated 2026-08-14)
 
 **Core value:** Licence-clean, validated, single-source reference packs an agent can load without context bloat.
-**Current focus:** v1.17.0 — Phase 3 Tier-1 packs (3-01 Batch A complete; next 3-02)
+**Current focus:** v1.17.0 — Phase 3 Tier-1 packs (3-02 Batch B complete; next 3-03)
 
 ## Current Position
 
 Phase: 3 — Tier 1 packs (public domain)
-Plan: 01 complete (Batch A); next 02
+Plan: 02 complete (Batch B); next 03
 Status: In progress
-Last activity: 2026-08-14 — Completed 3-01-PLAN.md (4 packs)
+Last activity: 2026-08-15 — Completed 3-02-PLAN.md (2 DoD packs)
 
 Progress: [████████░░] 75%
 
 ## Performance Metrics
 
 - Phases completed: 2/5 (Phase 1 retro + Phase 2)
-- Packs shipped: 52 directories (48 baseline + 4 from 3-01; not yet registered in catalog — 3-03)
+- Packs shipped: 54 directories (48 baseline + 4 from 3-01 + 2 from 3-02; not yet registered in catalog — 3-03)
 - Target after v1.17.0: 56
 
 **Per-Plan Metrics:**
@@ -53,6 +53,7 @@ Progress: [████████░░] 75%
 - Onboarding was brownfield; Phase 1 recorded retroactively, no execution needed
 - T2-01/T2-02 excluded by vetting (IEEE GET terms / ECSS-P-00C §5.8); Def Stan 00-051 deferred-excluded pending registered DSTAN in-document licence check + 00-051/00-056 subject-mismatch noted; 0 Tier-2 packs in v1.17.0
 - 3-01: cisa-cpg had no separate controls-list PDF; main report sliced; slick sheet overlap-only (MN-04)
+- 3-02: DLA PDFs token-gated; used nde-ed.org (338B) and everyspec (516C); OCR not needed; page-object counts higher than catalog estimates but cpp floor passed
 
 ## Decisions
 
@@ -62,9 +63,9 @@ Progress: [████████░░] 75%
 - [Phase 3]: cisa-cpg: no separate controls-list PDF; main report sliced, slick overlap-only (MN-04)
 - [Phase 3]: P3-PRE-1 proven: CISA statute-bearing licence string classifies Tier 1
 - [Phase 3]: P3-PRE-2 accepted gap recorded: vet_source lacks ecss/esa/def-stan EXCLUDED signals
-- [Phase ?]: 338B from nde-ed.org mirror; pages=1046 (cpp 2407); DIST-A verified; OCR not needed
-- [Phase ?]: 516C from everyspec mirror; pages=527 (cpp 2954); DIST-A verified; OCR not needed
-- [Phase ?]: Batch B extract-before-vet reorder followed (MN-06)
+- [Phase 3]: 338B from nde-ed.org mirror; pages=1046 (cpp 2407); DIST-A verified; OCR not needed
+- [Phase 3]: 516C from everyspec mirror; pages=527 (cpp 2954); DIST-A verified; OCR not needed
+- [Phase 3]: Batch B extract-before-vet reorder followed (MN-06)
 
 ## Session
 
