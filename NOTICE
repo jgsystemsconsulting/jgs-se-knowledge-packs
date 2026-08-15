@@ -557,6 +557,80 @@ Third-party source attributions (one block per shipped pack)
            remain their publishers' copyright. Attribution to the FAA is courtesy, not
            obligation; the FAA does not endorse this pack. See packs/faa-rma/LICENSE.
 
+
+[pack: nist-800-171]
+  Source : Protecting Controlled Unclassified Information in Nonfederal Systems and
+           Organizations (NIST SP 800-171 Rev. 3), final 2024-05-14
+  Author : NIST (US Department of Commerce)
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. Attribution to NIST is courtesy, not
+           obligation; NIST does not endorse this pack. See packs/nist-800-171/LICENSE.
+
+[pack: nist-800-61]
+  Source : Incident Response Recommendations and Considerations for Cybersecurity
+           Risk Management (NIST SP 800-61 Rev. 3), final 2025-04-03
+  Author : NIST (US Department of Commerce)
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. Attribution to NIST is courtesy, not
+           obligation; NIST does not endorse this pack. See packs/nist-800-61/LICENSE.
+
+[pack: cisa-cpg]
+  Source : Cross-Sector Cybersecurity Performance Goals 2.0 (CISA CPG 2.0)
+  Author : Cybersecurity and Infrastructure Security Agency (CISA)
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. Attribution to CISA is courtesy, not
+           obligation; CISA does not endorse this pack. See packs/cisa-cpg/LICENSE.
+
+[pack: doe-sem]
+  Source : Systems Engineering Methodology (SEM version 3) / DOE G 200.1-1A
+           (SEM3_1231.pdf), September 2002
+  Author : US Department of Energy, Office of the Chief Information Officer
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. Attribution to DOE is courtesy, not
+           obligation; DOE does not endorse this pack. See packs/doe-sem/LICENSE.
+
+[pack: mil-hdbk-338]
+  Source : Electronic Reliability Design Handbook (MIL-HDBK-338B), 1 Oct 1998
+           (Notice 2, 2007); Distribution Statement A
+  Author : US Department of Defense
+  Licence: Public Domain -- US Government work (17 U.S.C. 105); Distribution
+           Statement A - Approved for public release; distribution is unlimited
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. Attribution to DoD is courtesy, not
+           obligation; DoD does not endorse this pack. See packs/mil-hdbk-338/LICENSE.
+
+[pack: mil-hdbk-516]
+  Source : Airworthiness Certification Criteria (MIL-HDBK-516C), 12 Dec 2014
+           (Change 1, 2016); Distribution Statement A
+  Author : US Department of Defense
+  Licence: Public Domain -- US Government work (17 U.S.C. 105); Distribution
+           Statement A - Approved for public release; distribution is unlimited
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. Attribution to DoD is courtesy, not
+           obligation; DoD does not endorse this pack. See packs/mil-hdbk-516/LICENSE.
+
+[pack: nasa-ms-7009]
+  Source : NASA-STD-7009B Standard for Models and Simulations (approved 2024-03-05)
+           with NASA-HDBK-7009B (2026-02-03)
+  Author : NASA
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. Attribution to NASA is courtesy, not
+           obligation; NASA does not endorse this pack. See packs/nasa-ms-7009/LICENSE.
+
+[pack: doe-413-3b]
+  Source : Program and Project Management for the Acquisition of Capital Assets,
+           DOE O 413.3C (approved 2026-08-05; cancels DOE O 413.3B Chg 7, 2023-06-21)
+  Author : US Department of Energy, Office of Project Management
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. Attribution to DOE is courtesy, not
+           obligation; DOE does not endorse this pack. See packs/doe-413-3b/LICENSE.
+
 -----------------------------------------------------------------------------------
 The build pipeline uses the jgs-reference-skill extraction engine (MIT License,
 © JG Systems Consulting Ltd; a fork of book-to-skill, © the book-to-skill authors).

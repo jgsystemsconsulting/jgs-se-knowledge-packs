@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "repository": "jgs-se-knowledge-packs",
   "scope": "systems engineering",
-  "updated": "2026-06-24",
+  "updated": "2026-08-15",
   "packs": [
     {
       "slug": "faa-rma",
@@ -61,7 +61,7 @@
     },
     {
       "slug": "nist-800-37",
-      "title": "NIST SP 800-37 Rev 2 \u2014 Risk Management Framework (RMF)",
+      "title": "NIST SP 800-37 Rev 2 — Risk Management Framework (RMF)",
       "publisher": "NIST (US Department of Commerce)",
       "source_version": "Revision 2 (December 2018)",
       "license": "Public Domain (US Government work)",
@@ -72,7 +72,7 @@
     },
     {
       "slug": "nist-sse",
-      "title": "NIST SP 800-160 \u2014 Systems Security Engineering (Vol 1 + Vol 2)",
+      "title": "NIST SP 800-160 — Systems Security Engineering (Vol 1 + Vol 2)",
       "publisher": "NIST (US Department of Commerce)",
       "source_version": "Vol 1 Rev 1 (2022) + Vol 2 Rev 1 (2021)",
       "license": "Public Domain (US Government work)",
@@ -160,7 +160,7 @@
     },
     {
       "slug": "nasa-npr-7123",
-      "title": "NASA NPR 7123.1D \u2014 Systems Engineering Processes and Requirements",
+      "title": "NASA NPR 7123.1D — Systems Engineering Processes and Requirements",
       "publisher": "NASA",
       "source_version": "Rev D w/Change 2 (2023)",
       "license": "Public Domain (US Government work)",
@@ -204,7 +204,7 @@
     },
     {
       "slug": "mil-std-882",
-      "title": "MIL-STD-882E \u2014 DoD Standard Practice: System Safety (w/Change 1)",
+      "title": "MIL-STD-882E — DoD Standard Practice: System Safety (w/Change 1)",
       "publisher": "US Department of Defense",
       "source_version": "Rev E w/Change 1 (2023)",
       "license": "Public Domain (US Government work)",
@@ -226,7 +226,7 @@
     },
     {
       "slug": "dodaf",
-      "title": "DoD Architecture Framework (DoDAF) 2.02 Change 1 \u2014 Volume II",
+      "title": "DoD Architecture Framework (DoDAF) 2.02 Change 1 — Volume II",
       "publisher": "US Department of Defense",
       "source_version": "2.02 Change 1 (2015)",
       "license": "Public Domain (US Government work)",
@@ -237,10 +237,10 @@
     },
     {
       "slug": "eu-ai-act",
-      "title": "EU Artificial Intelligence Act \u2014 Regulation (EU) 2024/1689",
+      "title": "EU Artificial Intelligence Act — Regulation (EU) 2024/1689",
       "publisher": "European Union (Official Journal)",
       "source_version": "Regulation (EU) 2024/1689",
-      "license": "EU OJ \u2014 reproduction authorised with source acknowledgement",
+      "license": "EU OJ — reproduction authorised with source acknowledgement",
       "license_tier": 2,
       "commercial_use": true,
       "chapters": 12,
@@ -270,7 +270,7 @@
     },
     {
       "slug": "dod-mosa",
-      "title": "DoD MOSA \u2014 Implementing a Modular Open Systems Approach in DoD Programs (OUSD R&E)",
+      "title": "DoD MOSA — Implementing a Modular Open Systems Approach in DoD Programs (OUSD R&E)",
       "publisher": "US Department of Defense (Office of the Under Secretary of Defense for Research and Engineering)",
       "source_version": "February 2025 (DOPSR 25-T-1210)",
       "license": "Public Domain (US Government work); Distribution A",
@@ -508,6 +508,94 @@
       "license_tier": 1,
       "commercial_use": true,
       "chapters": 8,
+      "status": "live"
+    },
+    {
+      "slug": "nist-800-171",
+      "title": "Protecting Controlled Unclassified Information in Nonfederal Systems and Organizations (NIST SP 800-171 Rev. 3)",
+      "publisher": "NIST",
+      "source_version": "Rev. 3, final 2024-05-14 (DOI 10.6028/NIST.SP.800-171r3)",
+      "license": "Public Domain (US Government work)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 8,
+      "status": "live"
+    },
+    {
+      "slug": "nist-800-61",
+      "title": "Incident Response Recommendations and Considerations for Cybersecurity Risk Management (NIST SP 800-61 Rev. 3)",
+      "publisher": "NIST",
+      "source_version": "Rev. 3, final 2025-04-03 (DOI 10.6028/NIST.SP.800-61r3)",
+      "license": "Public Domain (US Government work)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 6,
+      "status": "live"
+    },
+    {
+      "slug": "cisa-cpg",
+      "title": "Cross-Sector Cybersecurity Performance Goals 2.0 (CISA CPG 2.0)",
+      "publisher": "CISA",
+      "source_version": "CPG 2.0 (2024-25 refresh, aligned to NIST CSF 2.0 incl. GOVERN)",
+      "license": "Public Domain (US Government work)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 5,
+      "status": "live"
+    },
+    {
+      "slug": "doe-sem",
+      "title": "Systems Engineering Methodology (SEM version 3)",
+      "publisher": "US Department of Energy",
+      "source_version": "SEM3 (SEM3_1231.pdf)",
+      "license": "Public Domain (US Government work)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 7,
+      "status": "live"
+    },
+    {
+      "slug": "mil-hdbk-338",
+      "title": "DoD Electronic Reliability Design Handbook (MIL-HDBK-338B)",
+      "publisher": "US Department of Defense",
+      "source_version": "MIL-HDBK-338B, 1 Oct 1998 (Notice 2, 2007)",
+      "license": "Public Domain (US Government work)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 9,
+      "status": "live"
+    },
+    {
+      "slug": "mil-hdbk-516",
+      "title": "DoD Airworthiness Certification Criteria (MIL-HDBK-516C)",
+      "publisher": "US Department of Defense",
+      "source_version": "516C, 12 Dec 2014 (Change 1, 2016)",
+      "license": "Public Domain (US Government work)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 8,
+      "status": "live"
+    },
+    {
+      "slug": "nasa-ms-7009",
+      "title": "NASA Standard for Models and Simulations (NASA-STD-7009B with NASA-HDBK-7009B)",
+      "publisher": "NASA",
+      "source_version": "STD-7009B approved 2024-03-05 + HDBK-7009B (2026-02-03)",
+      "license": "Public Domain (US Government work)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 7,
+      "status": "live"
+    },
+    {
+      "slug": "doe-413-3b",
+      "title": "Program and Project Management for the Acquisition of Capital Assets (DOE O 413.3 capital asset order)",
+      "publisher": "US Department of Energy",
+      "source_version": "O 413.3C approved 2026-08-05 (cancels O 413.3B Chg 7, 2023-06-21)",
+      "license": "Public Domain (US Government work)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 6,
       "status": "live"
     }
   ],
