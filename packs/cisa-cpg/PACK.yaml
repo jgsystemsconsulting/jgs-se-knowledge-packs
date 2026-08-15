@@ -1,0 +1,27 @@
+slug: cisa-cpg
+title: "Cross-Sector Cybersecurity Performance Goals 2.0 (CISA CPG 2.0)"
+publisher: "CISA"
+source_version: "CPG 2.0 (2024-25 refresh, aligned to NIST CSF 2.0 incl. GOVERN)"
+license: "Public Domain (US Government work, 17 U.S.C. § 105)"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "jgs-reference-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 38
+  chapters: 5
+  built_on: "2026-08-14"
+notes: >
+  US Government work -- public domain (17 U.S.C. § 105); no copyright, free to reproduce,
+  transform, and redistribute (including commercially). Attribution to CISA is provided as a
+  courtesy in NOTICE, not as an obligation. Content is synthesized/transformed reference notes;
+  no long verbatim passages reproduced (verified by tooling check_overlap against main report
+  and slick sheet). No source-material link published (see docs/LICENSING.md). P3-PRE-1: vet and
+  scaffold used the statute-bearing licence string (publisher CISA alone is not a US_GOV signal).
+  Sources: CPG Report 2.0 (36 pp, Dec 2025) + CPG Slicksheet (2 pp, Mar 2024) as secondary
+  short-form overview. No separate "controls-list" PDF was published for CPG 2.0 at build time;
+  the report itself contains the full goal inventory (outcome + recommended action). Slick sheet
+  was extracted and overlap-checked but not sliced into separate chapter files (overview only;
+  MN-04). Third-party logos/content not reproduced. scan_generated_skill reviewed at build.
+change_indication: "reconstructed as synthesized reference notes"

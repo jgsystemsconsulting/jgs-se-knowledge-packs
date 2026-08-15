@@ -1,0 +1,21 @@
+# Glossary — CISA CPG 2.0
+
+- **Adverse event** — Potentially harmful cybersecurity occurrence identified through monitoring/analysis (CPG DETECT). → ch04
+- **Asset inventory** — Maintained list of organizational technology assets used to drive security decisions. → ch02
+- **Critical infrastructure** — Assets/systems essential to national security, economy, public health, or safety (cross-sector CPG audience). → ch01
+- **Cross-Sector Cybersecurity Performance Goals (CPGs)** — CISA’s prioritized baseline IT/OT cybersecurity practices. → ch01
+- **CSET** — Cyber Security Evaluation Tool often used to assess CPG adoption (external tool). → ch01, ch05
+- **CSF 2.0 Functions** — GOVERN, IDENTIFY, PROTECT, DETECT, RESPOND, RECOVER — grouping spine for CPG 2.0. → ch01
+- **Goal card** — CPG entry with outcome statement and recommended actions. → ch01
+- **GOVERN** — CSF/CPG function for leadership accountability, oversight, and risk management integration. → ch02
+- **Internet-facing device** — System reachable from external networks; high-priority hardening target. → ch03
+- **Managed service provider (MSP)** — External provider operating or administering systems/services; CPG GOVERN risk focus. → ch02
+- **Multifactor authentication (MFA)** — Authentication using multiple factors to reduce account takeover. → ch03
+- **Network segmentation** — Logical/physical separation of networks to limit lateral movement and protect OT/IT zones. → ch03, ch05
+- **Operational technology (OT)** — Hardware/software that detects or causes change in industrial equipment/processes. → ch05
+- **Outcome** — Desired security result stated by a CPG (what “good” looks like). → ch01
+- **Prioritized subset** — CPGs intentionally cover highest-yield practices, not every control. → ch01, ch05
+- **Recommended action** — Practical steps CISA pairs with each outcome. → ch01
+- **Sector-specific goals (SSGs)** — Additional goals some sectors publish beyond the cross-sector CPGs. → ch05
+- **Supply chain incident reporting** — Expectation that suppliers disclose incidents/vulnerabilities affecting the organization. → ch02
+- **TLP:CLEAR** — Traffic Light Protocol marking used on CPG publications indicating broad shareability subject to standard rules. → ch01
