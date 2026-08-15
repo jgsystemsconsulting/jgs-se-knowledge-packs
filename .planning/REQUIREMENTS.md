@@ -25,14 +25,14 @@ New milestone: researched candidate packs + ruled-out tracking. Maps to phases 2
 
 ### Tier 1 Packs (public domain / free redistribution)
 
-- [ ] **T1-01**: Build `nist-800-171` pack from NIST SP 800-171 Rev.3 (Protecting CUI, 2024)
-- [ ] **T1-02**: Build `nist-800-61` pack from NIST SP 800-61 Rev.3 (Incident Response, 2025)
+- [x] **T1-01**: Build `nist-800-171` pack from NIST SP 800-171 Rev.3 (Protecting CUI, 2024)
+- [x] **T1-02**: Build `nist-800-61` pack from NIST SP 800-61 Rev.3 (Incident Response, 2025)
 - [ ] **T1-03**: Build `mil-hdbk-338` pack from MIL-HDBK-338B (Electronic Reliability Design Handbook, 1998)
 - [ ] **T1-04**: Build `mil-hdbk-516` pack from MIL-HDBK-516C (Airworthiness Certification Criteria, 2014)
 - [ ] **T1-05**: Build `nasa-ms-7009` pack from NASA-STD-7009B + NASA-HDBK-7009 (Models & Simulations, 2024)
 - [ ] **T1-06**: Build `doe-413-3b` pack from DOE O 413.3B (Capital Asset Acquisition, Chg 7 2023)
-- [ ] **T1-07**: Build `cisa-cpg` pack from CISA CPG 2.0 (Cross-Sector Cybersecurity Performance Goals, 2025)
-- [ ] **T1-08**: Build `doe-sem` pack from DOE Systems Engineering Methodology (SEM3)
+- [x] **T1-07**: Build `cisa-cpg` pack from CISA CPG 2.0 (Cross-Sector Cybersecurity Performance Goals, 2025)
+- [x] **T1-08**: Build `doe-sem` pack from DOE Systems Engineering Methodology (SEM3)
 
 ### Tier 2 Packs (free with licence conditions — attribution/redistribution terms)
 
