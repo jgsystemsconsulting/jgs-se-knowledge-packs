@@ -6,7 +6,7 @@
   "phase_slug": "3-tier-1-packs-public-domain",
   "phase_dir": ".planning/phases/3-tier-1-packs-public-domain",
   "scope": "phase",
-  "current_gate": "research",
+  "current_gate": "plan_check",
   "completed": [],
   "skipped": [
     "discuss",
@@ -23,8 +23,10 @@
     "complete",
     "retrospective"
   ],
-  "failed": [],
-  "blocked_by": null,
+  "failed": [
+    "plan_check"
+  ],
+  "blocked_by": "plan_check",
   "verdicts": {
     "discuss": "skipped",
     "assumptions": "skipped",
@@ -39,12 +41,15 @@
     "milestone_audit": "skipped",
     "complete": "skipped",
     "retrospective": "skipped",
-    "research": "embedded_in_plan"
+    "research": "embedded_in_plan",
+    "plan_check": "passed_with_fixes"
   },
   "artifacts": {
     "research": ".planning/phases/3-tier-1-packs-public-domain/3-RESEARCH.md"
   },
-  "regate_attempts": {},
+  "regate_attempts": {
+    "plan_check": 1
+  },
   "usage": {},
   "config_snapshot": {
     "enable_research": true,
@@ -83,6 +88,6 @@
   },
   "checkpoint_log": [],
   "started_at": "2026-08-14T22:41:02.927Z",
-  "updated_at": "2026-08-14T22:44:26.979Z",
+  "updated_at": "2026-08-14T23:30:55.709Z",
   "notes": "Initialized master_flow for phase 3"
 }
