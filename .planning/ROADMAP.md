@@ -62,4 +62,7 @@ Plans:
 **Success Criteria** (what must be TRUE):
   1. check_release.py exits 0; validate gate catalog basis = 54 packs (48 dirs + 8 new, minus 2 signpost packs) / 56 directory basis
   2. v1.17.0 tagged and released
-**Plans**: TBD
+**Plans**: 1
+
+Plans:
+- [ ] 5-01-PLAN.md — Release surface sync (11 version surfaces, CHANGELOG, PACK-SPEC, README framing), gate PASS at 54/56, tag + GitHub Release v1.17.0, post-release records
