@@ -5,12 +5,12 @@ milestone_name: "**Goal**: Catalog, docs, installers, and release artifacts incl
 current_phase: 5
 status: complete
 stopped_at: Completed 5-01-PLAN.md
-last_updated: "2026-08-15T05:50:30Z"
+last_updated: "2026-08-15T05:52:00.502Z"
 last_activity: 2026-08-15
-last_activity_desc: Phase 5 complete — v1.17.0 tagged and released
+last_activity_desc: release commit `bcd32af`, tag `v1.17.0`, GitHub Release published
 progress:
-  total_phases: 5
-  completed_phases: 5
+  total_phases: 3
+  completed_phases: 3
   total_plans: 5
   completed_plans: 5
 current_phase_name: Release surface + v1.17.0
@@ -49,6 +49,7 @@ Progress: [██████████] 100%
 | Phase 3 P02 | 90min | 2 tasks | 29 files |
 | Phase 3 P03 | 90min | 3 tasks | 31 files |
 | Phase 5 P01 | ~5min | 7 tasks | 10 content + 3 planning |
+| Phase 5 P01 | 5min | 7 tasks | 14 files |
 
 ## Deviations / Notes
 
@@ -89,6 +90,6 @@ Progress: [██████████] 100%
 
 ## Session
 
-**Last session:** 2026-08-15T05:50:30Z
+**Last session:** 2026-08-15T05:52:00.488Z
 **Stopped at:** Completed 5-01-PLAN.md
 **Resume file:** None
