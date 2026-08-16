@@ -108,7 +108,7 @@ REF = `C:/Users/gower/OneDrive/Documents/GitHub/jgs-reference-skill`; `python`.
    fallback build; the version field carries the truth).
   </action>
   <verify>
-    <automated>REF="C:/Users/gower/OneDrive/Documents/GitHub/jgs-reference-skill"; WRK=$(cat sources/mil-std-881f/work_dir.txt | tr -d '\r\n') && python tooling/validate_pack.py packs/mil-std-881f && python "$REF/tools/check_overlap.py" --source "$WRK/book_skill_work/full_text.txt" --pack packs/mil-std-881f && python "$REF/tools/scan_generated_skill.py" packs/mil-std-881f && grep -c "^## When to use" packs/mil-std-881f/SKILL.md && grep -c "^\*\*Prerequisites:\*\*" packs/mil-std-881f/SKILL.md && ! grep -qi "TODO" packs/mil-std-881f/PACK.yaml && grep -Eqi "881[EF]" packs/mil-std-881f/PACK.yaml && grep -Eqi "distribution statement|DIST-A" packs/mil-std-881f/PACK.yaml && [ -z "$(git show --name-only --pretty=format: HEAD | grep -E 'sources/|full_text.txt')" ]</automated>
+    <automated>REF="C:/Users/gower/OneDrive/Documents/GitHub/jgs-reference-skill"; WRK=$(cat sources/mil-std-881f/work_dir.txt | tr -d '\r\n') && python tooling/validate_pack.py packs/mil-std-881f && python "$REF/tools/check_overlap.py" --source "$WRK/book_skill_work/full_text.txt" --pack packs/mil-std-881f && python "$REF/tools/scan_generated_skill.py" packs/mil-std-881f && grep -c "^## When to use" packs/mil-std-881f/SKILL.md && grep -c "^\*\*Prerequisites:\*\*" packs/mil-std-881f/SKILL.md && ! grep -qi "TODO" packs/mil-std-881f/PACK.yaml && grep -Eq "^source_version:.*881[EF]" packs/mil-std-881f/PACK.yaml && grep -Eqi "distribution statement" "$WRK/book_skill_work/full_text.txt" && python -c "import json,sys,pathlib;w=pathlib.Path('$WRK'.replace(chr(92),'/'))/'book_skill_work';ft=(w/'full_text.txt').read_text(errors='ignore');m=json.load(open(w/'metadata.json'));pg=m.get('pages') or m.get('num_pages');c=len(ft)/pg;print('mil-std-881f chars/page:',round(c,1));sys.exit(0 if c>=300 else 1)" && [ -z "$(git show --name-only --pretty=format: HEAD | grep -E 'sources/|full_text.txt')" ]</automated>
   </verify>
   <done>validate_pack.py passes; check_overlap exit 0; scan dispositioned; PACK.yaml carries the resolved revision (or the labelled 881E fallback), the fetch path taken, and the P7-PRE-1 visual DIST-A confirmation in notes; SKILL.md has When-to-use + Prerequisites; chars/page >= 300; one scoped commit with zero sources/ leakage.</done>
 </task>
@@ -128,21 +128,29 @@ gates run BEFORE content generation).
    inspect the scanned cover page (rendered view) and confirm DIST-A; record
    method + finding in PACK.yaml notes BEFORE generation. Halt and surface if
    it cannot be confirmed.
-3. EXTRACT (`--mode technical --install-missing no`). Then the quality gate:
-   compute avg chars/page = len(full_text.txt)/metadata.json pages over the
-   MAIN BODY region; floor >= 300. If the body extracts near-empty
-   (image-only): OCR contingency — run `ocrmypdf` on the PDF then re-extract
-   `--mode text`; record the OCR decision (taken or not needed) in PACK.yaml
-   notes and the plan SUMMARY deviation log (Phase 3 Risk 2 pattern).
-4. **Chapter selection (hard):** the file is 1168 page objects, mostly per-TM
-   format plates — do NOT ingest whole. Select ~150 pp of main body via outline
-   + manual offsets; skip the per-TM format plates. PACK.yaml source_pages
-   reflects the SELECTED content basis from metadata.json, and notes state the
-   selection (main body ~150 pp of 1168 total; plates skipped).
-5. VET with the DIST-A licence-string variant, title "Preparation of Digital
+3. EXTRACT (`--mode technical --install-missing no`). Record the whole-file
+   avg chars/page (len(full_text.txt)/metadata.json pages) in PACK.yaml notes
+   as INFORMATIONAL ONLY — the gate does not run on this number (1168 pp of
+   mostly image plates would drag it below the floor even on a healthy body).
+4. **Chapter selection (hard — runs BEFORE the floor gate):** the file is 1168
+   page objects, mostly per-TM format plates — do NOT ingest whole. Select
+   ~150 pp of main body via outline + manual offsets; skip the per-TM format
+   plates. PACK.yaml source_pages reflects the SELECTED content basis from
+   metadata.json, and notes state the selection (main body ~150 pp of 1168
+   total; plates skipped).
+5. **Quality gate on the SELECTED body (order is fixed: select first, floor
+   second):** compute chars/page = chars(selected_body) / selected_pages;
+   floor >= 300; record the computed value in PACK.yaml notes. The whole-file
+   number from step 3 is informational only. OCR contingency triggers ONLY on
+   the selected-body floor failing: if the selected body extracts near-empty
+   (image-only), run `ocrmypdf` on the PDF, re-extract `--mode text`,
+   re-select, and recompute; record the OCR decision (taken or not needed) and
+   the final selected-body chars/page in PACK.yaml notes and the plan SUMMARY
+   deviation log (Phase 3 Risk 2 pattern).
+6. VET with the DIST-A licence-string variant, title "Preparation of Digital
    Technical Information for Page-Based Technical Manuals (MIL-STD-40051-2C)",
    publisher "US Department of Defense (DLA)". Expect tier 1, exit 0.
-6. OUTLINE from the selected main body; SCAFFOLD; GENERATE 6-10 chapters per
+7. OUTLINE from the selected main body; SCAFFOLD; GENERATE 6-10 chapters per
    build sheet: TDP/TM structure; page-based TM format conventions;
    front-matter/back-matter requirements; style/format rules; change
    packages/revision marking; selected plate exemplars.
@@ -152,12 +160,12 @@ gates run BEFORE content generation).
    documentation vocabulary prominently so the Phase 8 map harvest populates
    cluster 25 (non-empty is a hard Phase 8 success criterion). Also target
    cluster 24 Ops & Maintenance.**
-7. Work-root to sources/mil-std-40051/work_dir.txt; SKILL.md contract
+8. Work-root to sources/mil-std-40051/work_dir.txt; SKILL.md contract
    (When-to-use + Prerequisites); PACK.yaml TODOs filled.
-8. VALIDATE + SCAN + OVERLAP (exit 0 mandatory). One scoped commit.
+9. VALIDATE + SCAN + OVERLAP (exit 0 mandatory). One scoped commit.
   </action>
   <verify>
-    <automated>REF="C:/Users/gower/OneDrive/Documents/GitHub/jgs-reference-skill"; WRK=$(cat sources/mil-std-40051/work_dir.txt | tr -d '\r\n') && python tooling/validate_pack.py packs/mil-std-40051 && python "$REF/tools/check_overlap.py" --source "$WRK/book_skill_work/full_text.txt" --pack packs/mil-std-40051 && python "$REF/tools/scan_generated_skill.py" packs/mil-std-40051 && grep -c "^## When to use" packs/mil-std-40051/SKILL.md && grep -c "^\*\*Prerequisites:\*\*" packs/mil-std-40051/SKILL.md && ! grep -qi "TODO" packs/mil-std-40051/PACK.yaml && grep -Eqi "40051-2C" packs/mil-std-40051/PACK.yaml && grep -Eqi "distribution statement|DIST-A" packs/mil-std-40051/PACK.yaml && grep -Eqi "training|documentation" packs/mil-std-40051/SKILL.md && [ -z "$(git show --name-only --pretty=format: HEAD | grep -E 'sources/|full_text.txt')" ]</automated>
+    <automated>REF="C:/Users/gower/OneDrive/Documents/GitHub/jgs-reference-skill"; WRK=$(cat sources/mil-std-40051/work_dir.txt | tr -d '\r\n') && python tooling/validate_pack.py packs/mil-std-40051 && python "$REF/tools/check_overlap.py" --source "$WRK/book_skill_work/full_text.txt" --pack packs/mil-std-40051 && python "$REF/tools/scan_generated_skill.py" packs/mil-std-40051 && grep -c "^## When to use" packs/mil-std-40051/SKILL.md && grep -c "^\*\*Prerequisites:\*\*" packs/mil-std-40051/SKILL.md && ! grep -qi "TODO" packs/mil-std-40051/PACK.yaml && grep -Eqi "40051-2C" packs/mil-std-40051/PACK.yaml && grep -Eqi "distribution statement|DIST-A" packs/mil-std-40051/PACK.yaml && grep -q "Training & Documentation" packs/mil-std-40051/SKILL.md && grep -Eqi "chars/page" packs/mil-std-40051/PACK.yaml && python -c "import json,sys,pathlib;w=pathlib.Path('$WRK'.replace(chr(92),'/'))/'book_skill_work';ft=(w/'full_text.txt').read_text(errors='ignore');m=json.load(open(w/'metadata.json'));pg=m.get('pages') or m.get('num_pages');c=len(ft)/pg;print('mil-std-40051 whole-file chars/page (informational; OCR trigger <200):',round(c,1));sys.exit(0 if c>=200 else 1)" && [ -z "$(git show --name-only --pretty=format: HEAD | grep -E 'sources/|full_text.txt')" ]</automated>
   </verify>
   <done>validate_pack.py passes; check_overlap exit 0; P7-PRE-1 visual DIST-A confirmed on the scanned cover and recorded; chars/page floor >= 300 on the selected body (or OCR contingency exercised and recorded); 6-10 chapters selected from ~1168 pp with plates skipped and source_pages reflecting the selection; Topic Index carries cluster-25 Training & Documentation vocabulary; SKILL.md has When-to-use + Prerequisites; one scoped commit.</done>
 </task>

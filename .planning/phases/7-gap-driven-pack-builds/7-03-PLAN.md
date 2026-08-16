@@ -65,7 +65,7 @@ exact expected counts (one commit).
 <claim_verification>
 | claim | command | observed | status |
 |---|---|---|---|
-| registration basis before this plan: 56 dirs / catalog 54 / SKILLS.md "54 packs (+2 signposts)" / README packs-54 / cursor 55 | `ls packs \| wc -l`; python len(catalog packs); grep SKILLS.md:9; grep -o packs-54 README.md; python len(plugin skills) | 56 / 54 / 54 packs (+2 signposts) / packs-54 / 55 | VERIFIED |
+| registration basis, pre-Phase-7 basis: 56 dirs / catalog 54 / SKILLS.md "54 packs (+2 signposts)" / README packs-54 / cursor 55; at 7-03 start (post-7-01+7-02): 62 dirs / catalog 54 / cursor 55 | `ls packs \| wc -l`; python len(catalog packs); grep SKILLS.md:9; grep -o packs-54 README.md; python len(plugin skills) | 56 / 54 / 54 packs (+2 signposts) / packs-54 / 55 | VERIFIED (pre-Phase-7; expect 62/54/55 at 7-03 start — 7-01/7-02 add pack dirs only, no registration) |
 | target basis after: 63 dirs / 61 catalog / SKILLS.md 61(+2) / packs-61 / cursor 62 | 7-RESEARCH.md §4 table | 54+7 / 55+7 (sebok still excluded) | VERIFIED |
 | gen_packs_page.py exists; packs.html is generated (never hand-edit) | tooling listing + gen_packs_page.py:74 disclaimer | present | VERIFIED |
 | no gen_skills_index.py exists (SKILLS.md hand-edited, keep disclaimer) | 7-RESEARCH.md §4 | authoritative | VERIFIED |
@@ -97,9 +97,14 @@ from 6-RESEARCH §1c; treat each chapter as a mini-extract). REF =
 4. OUTLINE: per-chapter outline.py is meaningless — derive the chapter
    structure directly from the chapter set (one pack chapter per source
    chapter, or grouped per build sheet). Synthesis slices are the per-chapter
-   full_texts; work-roots recorded per chapter in sources/dod-vva-rpg/
-   (work_dir_ch1.txt ... or a dir listing); keep book_skill_work copies under
-   sources/dod-vva-rpg/ so %TEMP% is not clobbered.
+   full_texts; work-roots recorded per chapter in sources/dod-vva-rpg/ as
+   `work_dir_ch1.txt`, `work_dir_ch2.txt`, ... (exact naming — the verify
+   block globs this pattern); `mkdir -p sources/dod-vva-rpg/chapter_fulltexts`
+   and copy each chapter's full_text.txt to
+   `sources/dod-vva-rpg/chapter_fulltexts/chNN.txt` (one per chapter, in
+   chapter order) — these are the per-chapter overlap sources and the concat
+   inputs; keep book_skill_work copies under sources/dod-vva-rpg/ so %TEMP%
+   is not clobbered.
 5. SCAFFOLD: build_pack.py --slug dod-vva-rpg --title per above --publisher
    per above --version "RPG web edition (no dated rev; retrieved 2026-08-XX)"
    --license DIST-A variant --out-dir packs.
@@ -110,13 +115,23 @@ from 6-RESEARCH §1c; treat each chapter as a mini-extract). REF =
 7. PACK.yaml: source_pages = SUM of per-chapter metadata.json counts; notes
    records the chapter set WITH PER-CHAPTER PROVENANCE (titles + edition/
    retrieval date — no URLs, Link Policy); no TODO stubs.
-8. VALIDATE + SCAN + OVERLAP against every chapter full_text (all exit 0;
-   concatenate the chapter full_texts into one overlap source file under
-   sources/ if the tool takes a single --source). One scoped commit
+8. VALIDATE + SCAN + OVERLAP against every chapter full_text in
+   sources/dod-vva-rpg/chapter_fulltexts/ (all exit 0; if the tool needs a
+   single --source, concatenate chNN.txt in chapter order into one overlap
+   source file under sources/). One scoped commit
    (`feat(packs): add dod-vva-rpg (Tier 1)`).
   </action>
   <verify>
-    <automated>REF="C:/Users/gower/OneDrive/Documents/GitHub/jgs-reference-skill"; python tooling/validate_pack.py packs/dod-vva-rpg && for f in sources/dod-vva-rpg/chapter_fulltexts/*.txt; do python "$REF/tools/check_overlap.py" --source "$f" --pack packs/dod-vva-rpg || exit 1; done && python "$REF/tools/scan_generated_skill.py" packs/dod-vva-rpg && grep -c "^## When to use" packs/dod-vva-rpg/SKILL.md && grep -c "^\*\*Prerequisites:\*\*" packs/dod-vva-rpg/SKILL.md && ! grep -qi "TODO" packs/dod-vva-rpg/PACK.yaml && grep -Eqi "retrieved" packs/dod-vva-rpg/PACK.yaml && [ -z "$(git show --name-only --pretty=format: HEAD | grep -E 'sources/|full_text.txt')" ]</automated>
+    <automated>REF="C:/Users/gower/OneDrive/Documents/GitHub/jgs-reference-skill"; python tooling/validate_pack.py packs/dod-vva-rpg && for f in sources/dod-vva-rpg/chapter_fulltexts/*.txt; do python "$REF/tools/check_overlap.py" --source "$f" --pack packs/dod-vva-rpg || exit 1; done && python "$REF/tools/scan_generated_skill.py" packs/dod-vva-rpg && grep -c "^## When to use" packs/dod-vva-rpg/SKILL.md && grep -c "^\*\*Prerequisites:\*\*" packs/dod-vva-rpg/SKILL.md && ! grep -qi "TODO" packs/dod-vva-rpg/PACK.yaml && grep -Eqi "retrieved" packs/dod-vva-rpg/PACK.yaml && python -c "import json,sys,pathlib,glob
+found=False
+for f in sorted(glob.glob('sources/dod-vva-rpg/work_dir_ch*.txt')):
+    found=True
+    w=pathlib.Path(open(f).read().strip().replace(chr(92),'/'))/'book_skill_work'
+    ft=(w/'full_text.txt').read_text(errors='ignore')
+    m=json.load(open(w/'metadata.json')); pg=m.get('pages') or m.get('num_pages')
+    c=len(ft)/pg; print(f, 'chars/page:', round(c,1))
+    if c<300: sys.exit(1)
+sys.exit(0 if found else 1)" && [ -z "$(git show --name-only --pretty=format: HEAD | grep -E 'sources/|full_text.txt')" ]</automated>
   </verify>
   <done>validate_pack.py passes; check_overlap exits 0 against every chapter full_text; P7-PRE-4 per-chapter DIST-A/authorship checks recorded (dropped chapters, if any, noted); PACK.yaml carries summed source_pages + per-chapter provenance (titles + retrieval date, no URLs); SKILL.md has When-to-use + Prerequisites; one scoped commit.</done>
 </task>
@@ -129,8 +144,13 @@ One sweep registering all 7 packs (7-RESEARCH.md §4 exact counts; mechanics per
 3-RESEARCH §4). The 7 slugs: dod-vva-rpg, faa-std-025, dote-te-guidebook,
 dafman-63-119, mil-std-881f, federal-bca, mil-std-40051.
 1. catalog.json: hand-add 7 pack objects (license_tier: 1, commercial_use:
-   true, share_alike: false, attribution_required: false, status "live", actual
-   chapter counts from the built packs). Expect 61 packs after.
+   true, status "live", actual chapter counts from the built packs). Copy the
+   exact key shape from a live Tier-1 catalog object — read the faa-rma or
+   nasa-se-handbook entry first and mirror its key set (slug / title /
+   publisher / source_version / license / license_tier / commercial_use /
+   chapters / status; PACK.yaml carries share_alike / attribution_required,
+   the catalog does not). Also bump the catalog top-level `updated` field to
+   the registration date (3-RESEARCH §4 mechanics). Expect 61 packs after.
 2. SKILLS.md: hand-edit (no gen_skills_index.py exists) — add 7 rows, keep the
    generated-file disclaimer, update header line to "61 packs (+2 signposts)".
 3. README.md: update badge to `packs-61`; add 7 table rows in the pack table.
@@ -152,7 +172,7 @@ NOTE: version-surface bump (CHANGELOG, plugin 1.17.0→1.18.0, RELEASE-INFO) is
 Phase 9 scope — do NOT touch it here.
   </action>
   <verify>
-    <automated>python tooling/check_release.py && [ "$(python -c "import json;print(len(json.load(open('catalog.json'))['packs']))")" = "61" ] && [ "$(python -c "import json;print(len(json.load(open('.cursor-plugin/plugin.json'))['skills']))")" = "62" ] && [ "$(find packs -mindepth 1 -maxdepth 1 -type d | wc -l)" = "63" ] && grep -q "61 packs (+2 signposts)" SKILLS.md && grep -q "packs-61" README.md && grep -c "\[pack: dod-vva-rpg\]" NOTICE = 1 && grep -c "\[pack: mil-std-40051\]" NOTICE = 1 && grep -q "dote-te-guidebook" docs/packs.html && [ -z "$(git show --name-only --pretty=format: HEAD | grep -E 'sources/|full_text.txt')" ]</automated>
+    <automated>python tooling/check_release.py && [ "$(python -c "import json;print(len(json.load(open('catalog.json'))['packs']))")" = "61" ] && [ "$(python -c "import json;print(len(json.load(open('.cursor-plugin/plugin.json'))['skills']))")" = "62" ] && [ "$(find packs -mindepth 1 -maxdepth 1 -type d | wc -l)" = "63" ] && grep -q "61 packs (+2 signposts)" SKILLS.md && grep -q "packs-61" README.md && for s in faa-std-025 dote-te-guidebook dafman-63-119 federal-bca mil-std-881f mil-std-40051 dod-vva-rpg; do grep -q "\[pack: $s\]" NOTICE || { echo "MISSING $s"; exit 1; }; done && python -c "import json;c=json.load(open('catalog.json'));new={'dod-vva-rpg','faa-std-025','dote-te-guidebook','dafman-63-119','mil-std-881f','federal-bca','mil-std-40051'};slugs={p['slug'] for p in c['packs']};assert new<=slugs, new-slugs;print('slug-set ok')" && grep -q "dote-te-guidebook" docs/packs.html && [ -z "$(git show --name-only --pretty=format: HEAD | grep -E 'sources/|full_text.txt')" ]</automated>
   </verify>
   <done>check_release.py PASS; catalog = 61 packs; cursor manifest = 62 skills (sebok still absent); packs/ = 63 dirs; SKILLS.md header "61 packs (+2 signposts)"; README badge packs-61 + 7 new rows; 7 NOTICE blocks; packs.html regenerated; cluster-target baseline table copied to SUMMARY; one registration commit.</done>
 </task>
