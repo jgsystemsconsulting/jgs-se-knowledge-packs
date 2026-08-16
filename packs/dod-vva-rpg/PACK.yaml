@@ -1,0 +1,47 @@
+slug: dod-vva-rpg
+title: "M&S Verification, Validation & Accreditation Recommended Practice Guide"
+publisher: "US Department of Defense (OUSW(R&E) CTO / M&S Office)"
+source_version: "RPG web edition (no dated rev; retrieved 2026-08-16)"
+license: "Public Domain (US Government work, 17 U.S.C. § 105; Distribution Statement A — Approved for public release; distribution is unlimited)"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "jgs-reference-skill extraction + chapter-wise synthesis (no consolidated PDF)"
+  source_pages: 283
+  chapters: 10
+  built_on: "2026-08-16"
+notes: >
+  US Government work -- public domain (17 U.S.C. § 105) with Distribution Statement A
+  equivalent basis. Free to reproduce, transform, and redistribute (including commercially).
+  Attribution to DoD / OUSW(R&E) is courtesy only. Content is synthesized reference notes;
+  check_overlap verified per chapter full_text. No source-material link published
+  (docs/LICENSING.md). Chapter-wise build (P7-PRE-4): no consolidated RPG PDF exists on
+  the cto.mil index; selected per-chapter PDFs retrieved 2026-08-16 via the official
+  cto.mil VV&A RPG index links into DEBoK (de-bok.org) OTMM guest session. Per-chapter
+  provenance (titles + retrieval date; DEBoK Copyright=Public Domain; OPR=Office of
+  Secretary of Defense; author OUSD/OSD R&E):
+  (1) Key Concepts — M&S VV&A RPG Introduction (key-pr.pdf; DEBoK "M&S VV&A RPG Core
+  Document: Introduction"; 34 pp; retrieved 2026-08-16);
+  (2) User's Role in the VV&A of New Simulations (user-new-pr.pdf; 31 pp; retrieved 2026-08-16);
+  (3) Developer's Role in the VV&A of New Simulations (dev-new-pr.pdf; 31 pp; retrieved 2026-08-16);
+  (4) M&S PM's Role in the VV&A of New Simulations (pm-new-pr.pdf; 40 pp; retrieved 2026-08-16);
+  (5) V&V Agent's Role in the VV&A of New Simulations (vv-new-pr.pdf; 46 pp; retrieved 2026-08-16);
+  (6) Accreditation Agent's Role in the VV&A of New Simulations (aa-new-pr.pdf; 26 pp; retrieved 2026-08-16);
+  (7) Fidelity special topic (fidelity-pr.PDF; 10 pp; retrieved 2026-08-16);
+  (8) Validation Fundamentals special topic (Validation-pr.PDF; 36 pp; retrieved 2026-08-16);
+  (9) Data V&V for New Simulations special topic (DataVV-new-pr.PDF; 12 pp; retrieved 2026-08-16);
+  (10) Risk and Its Impact on VV&A special topic (Risk-pr.PDF; 17 pp; retrieved 2026-08-16).
+  source_pages = 283 = sum of per-chapter metadata.json page counts.
+  P7-PRE-4: each chapter PDF checked for DoD/RPG authorship in body text and DEBoK
+  Copyright Details = Public Domain (PD); no third-party "all rights reserved" / proprietary
+  / DIST B-F. Cover text layers lack a printed DISTRIBUTION STATEMENT A block (common
+  RPG web-PDF layout); DIST-A equivalent evidence = DEBoK PD classification + OSD/OUSD
+  R&E OPR/authorship (same metadata-evidence pattern as mil-std-881f QuickSearch Dist Stmt).
+  Dropped from set (selection, not licence): T&E/V&V Checklist (TEVVchecklist-pr.PDF) to
+  keep pack at 10 chapters (plan 8-10); checklist also DEBoK PD. Legacy role guides not
+  selected (new-development role set used). chars/page per chapter all >= 300 (range
+  about 2589-3034 after provenance header). Target clusters: Validation, Verification,
+  Decision Analysis, Test and Evaluation. scan_generated_skill reviewed at build.
+change_indication: "reconstructed as synthesized reference notes"
