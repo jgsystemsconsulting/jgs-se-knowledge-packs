@@ -4,11 +4,7 @@
   "active_phase": 6,
   "active_phase_dir": ".planning/phases/6-source-vetting-unverified-resolution",
   "active_state": ".planning/phases/6-source-vetting-unverified-resolution/master_flow_state.json",
-  "lock": {
-    "phase": 6,
-    "session_hint": "master-flow",
-    "updated_at": "2026-08-16T15:24:17.617Z"
-  },
-  "updated_at": "2026-08-16T15:24:17.618Z",
-  "notes": ""
+  "lock": null,
+  "updated_at": "2026-08-16T16:42:02.605Z",
+  "notes": "Phase 6 verify passed. Next: 3"
 }

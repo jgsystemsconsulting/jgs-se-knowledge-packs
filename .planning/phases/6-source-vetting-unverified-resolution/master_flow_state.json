@@ -6,8 +6,16 @@
   "phase_slug": "6-source-vetting-unverified-resolution",
   "phase_dir": ".planning/phases/6-source-vetting-unverified-resolution",
   "scope": "phase",
-  "current_gate": "research",
-  "completed": [],
+  "current_gate": "doc_check",
+  "completed": [
+    "plan",
+    "plan_review",
+    "plan_check",
+    "execute",
+    "code_review",
+    "gap_analysis",
+    "verify"
+  ],
   "skipped": [
     "discuss",
     "assumptions",
@@ -39,12 +47,24 @@
     "milestone_audit": "skipped",
     "complete": "skipped",
     "retrospective": "skipped",
-    "research": "embedded_in_plan"
+    "research": "embedded_in_plan",
+    "plan": "passed",
+    "plan_check": "passed",
+    "plan_review": "passed:bl_01+mj_cleared_at_042fb44",
+    "execute": "passed",
+    "code_review": "passed:ma_01/02_fixed_at_3381958;_in_02_tracked_at_05eb9ad",
+    "gap_analysis": "passed",
+    "verify": "passed"
   },
   "artifacts": {
-    "research": ".planning/phases/6-source-vetting-unverified-resolution/6-RESEARCH.md"
+    "research": ".planning/phases/6-source-vetting-unverified-resolution/6-RESEARCH.md",
+    "execute": ".planning/phases/6-source-vetting-unverified-resolution/6-01-SUMMARY.md",
+    "verify": ".planning/phases/6-source-vetting-unverified-resolution/6-VERIFICATION.md"
   },
-  "regate_attempts": {},
+  "regate_attempts": {
+    "plan_review": 1,
+    "code_review": 1
+  },
   "usage": {},
   "config_snapshot": {
     "enable_research": true,
@@ -83,6 +103,6 @@
   },
   "checkpoint_log": [],
   "started_at": "2026-08-16T15:11:20.215Z",
-  "updated_at": "2026-08-16T15:24:17.615Z",
+  "updated_at": "2026-08-16T16:42:02.603Z",
   "notes": "Initialized master_flow for phase 6"
 }
