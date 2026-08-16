@@ -15,4 +15,4 @@ Source expansion shipped: 8 Tier-1 public-domain packs added (`nist-800-171`, `n
 
 ## v1.18.0 (in planning — scoped 2026-08-16)
 
-Gap-driven expansion + agent enablement: 7-8 Tier-1 packs targeting the 1 empty + 15 thin capability clusters (research: .planning/research/capability-gap-report.md), versioned capability-pack-map contract for the se-agents generator, v1.17 carry-forwards. See REQUIREMENTS.md (VET/GP/AE/REL-1x) and ROADMAP.md phases 6-9.
+Gap-driven expansion + agent enablement: 7 Tier-1 packs targeting the 1 empty + 15 thin capability clusters (research: .planning/research/capability-gap-report.md), versioned capability-pack-map contract for the se-agents generator, v1.17 carry-forwards. See REQUIREMENTS.md (VET/GP/AE/REL-1x) and ROADMAP.md phases 6-9.

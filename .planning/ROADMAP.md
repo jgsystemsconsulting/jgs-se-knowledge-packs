@@ -74,7 +74,7 @@ Plans:
 ## v1.18 Phases
 
 - [ ] **Phase 6: Source vetting + UNVERIFIED resolution** - Resolve 5 UNVERIFIED items; rule-outs recorded (VET-01/02)
-- [ ] **Phase 7: Gap-driven pack builds** - Build GP-01..GP-08 packs via jgs-reference-skill pipeline
+- [ ] **Phase 7: Gap-driven pack builds** - Build GP-01..GP-07 packs (GP-08 descoped) via jgs-reference-skill pipeline
 - [ ] **Phase 8: Agent-enablement surface** - Versioned capability-pack-map contract + regeneration (AE-01..03)
 - [ ] **Phase 9: Release surface + v1.18.0** - Registration, full validation, tag + release (REL-1x-01/02)
 
@@ -94,9 +94,9 @@ Plans:
 - [ ] 6-01-PLAN.md — Record vetting verdicts (4 Tier 1 confirmed, AFOTEC excluded, DAG/SEI exclusions confirmed, GP-08 descoped) into SOURCE-VETTING / REQUIREMENTS / ROADMAP / STATE
 
 ### Phase 7: Gap-driven pack builds
-**Goal**: 7–8 public-domain packs built, validated, and registered, fattening the empty + critical-thin clusters
+**Goal**: 7 public-domain packs (GP-01..GP-07; GP-08 descoped — see REQUIREMENTS Out of Scope; conditional rescope to NPR 7150.2 + NASA-STD-8739.8 only as a Phase 7 stretch decision) built, validated, and registered, fattening the empty + critical-thin clusters
 **Depends on**: Phase 6
-**Requirements**: [GP-01, GP-02, GP-03, GP-04, GP-05, GP-06, GP-07, GP-08]
+**Requirements**: [GP-01, GP-02, GP-03, GP-04, GP-05, GP-06, GP-07] (GP-08 descoped 2026-08-14, no consolidated NASA-HDBK-2203 PDF)
 **Success Criteria** (what must be TRUE):
   1. Each pack conforms to docs/PACK-SPEC.md; validate_pack + scan_generated_skill + check_overlap all pass
   2. PACK.yaml provenance complete; no sources/ leaked; SKILL.md carries When-to-use + Prerequisites
