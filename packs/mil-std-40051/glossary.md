@@ -1,0 +1,22 @@
+# Glossary — MIL-STD-40051-2C (Page-Based TMs)
+
+- **BDAR** — Battle Damage Assessment and Repair manual type. → ch01, ch07
+- **Change package** — Controlled set of changed TM pages/WPs with instructions and revision marking. → ch06
+- **Comprehensibility** — Degree to which the intended user can understand and apply TM information. → ch01, ch04
+- **Content selection matrix** — Planning checklist specifying which TM content/WPs are included. → ch07
+- **Distribution statement** — Cover/title release marking (standard itself is DIST-A; each TM carries its own). → ch03
+- **DMWR / NMWR** — Depot / National Maintenance Work Requirements. → ch01, ch03
+- **ETM (in -2C)** — Treated as synonymous with page-based TM (not IETM). → ch01
+- **Front matter** — Cover, warning summary, title page, TOC, how-to-use/general info preceding body WPs. → ch03
+- **HAZMAT warning** — Hazardous materials warning with prescribed icons/text. → ch05
+- **IETM** — Interactive Electronic Technical Manual (MIL-STD-40051-1 path, out of this pack's -2C slice). → ch01
+- **Initial setup** — Tools, parts, conditions, and references required before a WP task starts. → ch02
+- **Lubrication order (LO)** — Lubrication product type selectable via matrix. → ch07
+- **Page-based TM** — Linear paged technical manual product governed by 40051-2C. → ch01
+- **PMC / PMD / PMI / PMS** — Preventive maintenance checklist/daily/inspection/services products. → ch01, ch07
+- **Revision bar** — Vertical mark indicating technical change location. → ch06
+- **RPSTL** — Repair Parts and Special Tools List. → ch02, ch07
+- **SRU / LRU** — Shop / Line Replaceable Unit levels addressed in maintenance content. → ch01
+- **Training & Documentation** — Cluster framing: TMs as formal training and technical documentation deliverables. → ch01, ch07
+- **Warning / Caution / Note** — Signal words for personnel hazard, equipment damage, and advisory information. → ch05
+- **Work package (WP)** — Modular task/supporting-info unit that composes a page-based TM. → ch02

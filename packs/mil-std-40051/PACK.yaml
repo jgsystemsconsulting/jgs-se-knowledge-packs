@@ -1,0 +1,39 @@
+slug: mil-std-40051
+title: "Preparation of Digital Technical Information for Page-Based Technical Manuals (MIL-STD-40051-2C)"
+publisher: "US Department of Defense (DLA)"
+source_version: "MIL-STD-40051-2C, 15 DEC 2015 (-2C slice of split family)"
+license: "Public Domain (US Government work, 17 U.S.C. § 105; Distribution Statement A — Approved for public release; distribution is unlimited)"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "jgs-reference-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 151
+  chapters: 8
+  built_on: "2026-08-16"
+notes: >
+  US Government work -- public domain (17 U.S.C. § 105) with Distribution Statement A.
+  Free to reproduce, transform, and redistribute (including commercially). Attribution
+  to DoD is courtesy only. Content is synthesized reference notes; check_overlap verified.
+  No source-material link published (docs/LICENSING.md).
+  Fetch path: everyspec MIL-STD-40051-2C page download.php mirror PDF (approx 37.7 MB).
+  PDF page objects ~584 via pdftotext (research note cited 1168 page-objects on some counters;
+  extraction metadata.pages=584). Version recorded as MIL-STD-40051-2C, 15 DEC 2015
+  (-2C slice of split 40051-1/2 family).
+  P7-PRE-1 DIST-A: cover page is a scanned/image-heavy first leaf in the text layer
+  (pdftotext sees only everyspec download banner on pp.1-2), but rendered cover page
+  (fitz pixmap) visually confirms bottom-line text:
+  "DISTRIBUTION STATEMENT A. Approved for public release; distribution is unlimited."
+  Also confirmed DIST-A strings inside body/example pages in selected_body.txt.
+  Everyspec listing metadata identifies MIL-STD-40051/2 Rev C 12-2015 public mirror.
+  Chapter selection: selected_body.txt holds main-body pages (scope through section 5/6
+  notes plus dense appendix interpretive pages) — 151 selected pages of 584 extracted;
+  per-TM format plates largely skipped. source_pages=151 reflects selected content basis.
+  selected-body chars/page = 2939.9 (from selected_stats.txt) >= 300 floor.
+  Whole-file chars/page (informational only) = 1736.2 (full_text/584).
+  OCR contingency: NOT NEEDED — selected-body floor passed without ocrmypdf.
+  Target clusters: Training & Documentation (cluster 25 EMPTY inbound), Ops & Maintenance
+  (cluster 24). Topic Index carries Training & Documentation vocabulary prominently.
+  scan_generated_skill reviewed at build.
+change_indication: "reconstructed as synthesized reference notes"
