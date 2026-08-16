@@ -1,0 +1,28 @@
+slug: federal-bca
+title: "Guidelines and Discount Rates for Benefit-Cost Analysis of Federal Programs (OMB Circular A-94)"
+publisher: "US Office of Management and Budget"
+source_version: "A-94 revised 2023-11-09 (whitehouse.gov PDF retrieved 2026-08-16); Army CBA Guide NOT included (fetch failed)"
+license: "Public Domain (US Government work, 17 U.S.C. § 105)"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "jgs-reference-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 28
+  chapters: 6
+  built_on: "2026-08-16"
+notes: >
+  US Government work -- public domain (17 U.S.C. § 105); free to reproduce, transform,
+  and redistribute (including commercially). Attribution to OMB is courtesy only. Content
+  is synthesized reference notes; check_overlap verified. No source-material link published.
+  P7-PRE-2 DUAL GATE: (1) OMB Circular A-94 (2023-11-09) — PASS: in-source scan found no
+  third-party copyright / (c) / all-rights-reserved notices; document is an OMB circular
+  memorandum to heads of executive departments (statute Tier-1). (2) US Army Cost Benefit
+  Analysis Guide — FAIL TO FETCH: asafm.army.mil returned HTTP 403 (Akamai) for all tried
+  paths; Wayback CDX/API returned 503 from this environment; no alternate public PDF
+  obtained. Per P7-PRE-2 halt-and-rescope, Army document dropped before chapter generation;
+  pack title/version updated to A-94-only. Re-expand if Army guide becomes available.
+  Extraction pdftotext fallback. chars/page A-94 = 2832.3 (79305/28) >= 300.
+  scan_generated_skill reviewed at build.
+change_indication: "reconstructed as synthesized reference notes"
