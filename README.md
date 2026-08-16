@@ -8,7 +8,7 @@ SPDX-License-Identifier: MIT
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT%20(tooling)-blue" alt="License: MIT (tooling)">
   <img src="https://img.shields.io/badge/version-1.17.0-green" alt="Version 1.17.0">
-  <img src="https://img.shields.io/badge/packs-54-blueviolet" alt="54 packs">
+  <img src="https://img.shields.io/badge/packs-61-blueviolet" alt="61 packs">
   <img src="https://img.shields.io/badge/tested%20with-Claude%20Code-8A2BE2" alt="Tested with Claude Code">
   <img src="https://img.shields.io/badge/scope-systems%20engineering-orange" alt="Scope: systems engineering">
 </p>
@@ -161,6 +161,13 @@ always-loaded `SKILL.md` index inlined into one file. Full detail and the per-ag
 | `mil-hdbk-516` | MIL-HDBK-516C: Airworthiness Certification Criteria | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `nasa-ms-7009` | NASA-STD-7009B / NASA-HDBK-7009B: Models and Simulations | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
 | `doe-o-413-3` | DOE O 413.3 series: Capital Asset Project Management (from O 413.3C) | Public domain (US gov) | 🟢 1 | ✅ live (6 chapters) |
+| `dod-vva-rpg` | DoD M&S VV&A Recommended Practices Guide (RPG web edition) | Public domain (US gov) | 🟢 1 | ✅ live (10 chapters) |
+| `faa-std-025` | FAA-STD-025f: Preparation of Interface Documentation | Public domain (US gov) | 🟢 1 | ✅ live (6 chapters) |
+| `dote-te-guidebook` | DOT&E / DoD Test & Evaluation Enterprise Guidebook (8.02, Aug 2022) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
+| `dafman-63-119` | DAFMAN 63-119: Mission-Oriented Test Readiness Certification (15 Apr 2021) | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
+| `federal-bca` | OMB Circular A-94: Federal Benefit-Cost Analysis Guidelines (2023-11-09) | Public domain (US gov) | 🟢 1 | ✅ live (6 chapters) |
+| `mil-std-881f` | MIL-STD-881F: Work Breakdown Structures for Defense Materiel Items (13 May 2022) | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
+| `mil-std-40051` | MIL-STD-40051-2C: Page-Based Technical Manuals (15 Dec 2015) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `mit-ocw-se` | MIT OCW Fundamentals of Systems Engineering | CC BY-NC-SA | 🟡 2 | 🔜 planned |
 
 `doe-o-413-3` (formerly `doe-413-3b`; old slug kept as a catalog alias) tracks the current DOE O 413.3 series edition (O 413.3C, which cancels O 413.3B Chg 7).

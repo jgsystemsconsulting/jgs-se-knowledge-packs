@@ -631,6 +631,76 @@ Third-party source attributions (one block per shipped pack)
   Terms  : public domain, no copyright. Attribution to DOE is courtesy, not
            obligation; DOE does not endorse this pack. See packs/doe-o-413-3/LICENSE.
 
+[pack: dod-vva-rpg]
+  Source : M&S Verification, Validation & Accreditation Recommended Practices Guide
+           (VV&A RPG), selected chapter PDFs, web edition retrieved 2026-08-16
+  Author : US Department of Defense (OUSW(R&E) CTO / M&S Office / OSD R&E)
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright, free to reproduce, transform, and redistribute
+           (including commercially). Attribution is courtesy, not obligation; the source
+           agency does not endorse this pack. See packs/dod-vva-rpg/LICENSE.
+
+[pack: faa-std-025]
+  Source : Preparation of Interface Documentation (FAA-STD-025f),
+           Rev F, November 30, 2007 (everyspec mirror)
+  Author : US Federal Aviation Administration (FAA)
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright, free to reproduce, transform, and redistribute
+           (including commercially). Attribution is courtesy, not obligation; the source
+           agency does not endorse this pack. See packs/faa-std-025/LICENSE.
+
+[pack: dote-te-guidebook]
+  Source : Test & Evaluation Enterprise Guidebook, edition 8.02 (August 2022),
+           Director, Operational Test & Evaluation / USD(R&E) enterprise guidebook family
+  Author : US Department of Defense (DOT&E / USD(R&E))
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright, free to reproduce, transform, and redistribute
+           (including commercially). Attribution is courtesy, not obligation; the source
+           agency does not endorse this pack. See packs/dote-te-guidebook/LICENSE.
+
+[pack: dafman-63-119]
+  Source : Mission-Oriented Test Readiness Certification (DAFMAN 63-119),
+           15 April 2021
+  Author : US Department of the Air Force
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright, free to reproduce, transform, and redistribute
+           (including commercially). Attribution is courtesy, not obligation; the source
+           agency does not endorse this pack. See packs/dafman-63-119/LICENSE.
+
+[pack: federal-bca]
+  Source : Guidelines and Discount Rates for Benefit-Cost Analysis of Federal Programs
+           (OMB Circular A-94, revised 2023-11-09); Army CBA Guide excluded at build
+  Author : US Office of Management and Budget (OMB)
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright, free to reproduce, transform, and redistribute
+           (including commercially). Attribution is courtesy, not obligation; the source
+           agency does not endorse this pack. See packs/federal-bca/LICENSE.
+
+[pack: mil-std-881f]
+  Source : Work Breakdown Structures for Defense Materiel Items (MIL-STD-881F),
+           13 May 2022
+  Author : US Department of Defense
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright, free to reproduce, transform, and redistribute
+           (including commercially). Attribution is courtesy, not obligation; the source
+           agency does not endorse this pack. See packs/mil-std-881f/LICENSE.
+
+[pack: mil-std-40051]
+  Source : Preparation of Digital Technical Information for Page-Based Technical Manuals
+           (MIL-STD-40051-2C), 15 December 2015
+  Author : US Department of Defense (DLA)
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright, free to reproduce, transform, and redistribute
+           (including commercially). Attribution is courtesy, not obligation; the source
+           agency does not endorse this pack. See packs/mil-std-40051/LICENSE.
+
 -----------------------------------------------------------------------------------
 The build pipeline uses the jgs-reference-skill extraction engine (MIT License,
 © JG Systems Consulting Ltd; a fork of book-to-skill, © the book-to-skill authors).
