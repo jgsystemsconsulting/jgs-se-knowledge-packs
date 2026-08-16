@@ -1,0 +1,28 @@
+slug: faa-std-025
+title: "Preparation of Interface Documentation (FAA-STD-025)"
+publisher: "Federal Aviation Administration"
+source_version: "Rev F (2007-11-30, everyspec mirror; ROSAP rev E blocked at build)"
+license: "Public Domain (US Government work, 17 U.S.C. § 105)"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "jgs-reference-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 64
+  chapters: 6
+  built_on: "2026-08-16"
+notes: >
+  US Government work -- public domain (17 U.S.C. § 105); no copyright, free to reproduce,
+  transform, and redistribute (including commercially). Attribution to the FAA is provided as a
+  courtesy in NOTICE, not as an obligation. Content is synthesized/transformed reference notes;
+  no long verbatim passages reproduced (verified by tooling check_overlap). No source-material
+  link published (see docs/LICENSING.md). P7-PRE-3: built Rev F (FAA-STD-025f, November 30, 2007)
+  from everyspec mirror because ROSAP canonical rev E (dot-42955) returned HTTP 403 (Akamai)
+  at build time. P7-PRE-5: in-PDF rights scan found no third-party copyright, (c), "all rights
+  reserved", proprietary, releasability, or Distribution Statement lines in the extracted text;
+  cover identifies U.S. Department of Transportation / Federal Aviation Administration Standard
+  — statute Tier-1 basis retained. Extraction used pdftotext fallback (docling absent).
+  chars/page = 2420.5 (154910 chars / 64 pages) >= 300 floor. scan_generated_skill findings
+  reviewed at build.
+change_indication: "reconstructed as synthesized reference notes"

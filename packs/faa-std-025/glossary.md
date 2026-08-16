@@ -1,0 +1,21 @@
+# Glossary — FAA-STD-025f
+
+- **Analog interface** — Customized/specialized interface using analog signals between systems/subsystems. → ch01, ch03
+- **Application process (AP)** — Identifiable cooperating capabilities in an open system that perform information-processing tasks; a FESS may host one or more. → ch03, ch04
+- **As-built interface** — Implemented form, fit, and function of the interface as recorded in the ICD. → ch01, ch04
+- **ATN** — Aeronautical Telecommunication Network (digital data link context calling out conformance/interoperability verification). → ch05
+- **Baseline** — Approved IRD/ICD placed under configuration management. → ch01, ch06
+- **Demarcation point** — Point where operational control or ownership of communications changes between entities. → ch03
+- **Discrete interface** — Customized/specialized digital interface that may not conform to open system/network standards. → ch01, ch03
+- **FAA Enterprise Subsystems (FESS)** — Subsystems inside FAA infrastructure (operational, system support, administrative). → ch01
+- **Facility IRD** — IRD for facility–subsystem/service interfaces; does not require an ICD; often matured in four iterations. → ch01, ch03, ch06
+- **General service interface** — Service-oriented interface documented via application-process and protocol-implementation sections. → ch03, ch04
+- **Interface Control Document (ICD)** — Agreement documenting how IRD requirements are implemented; design characteristics use is/are. → ch01, ch04
+- **Interface Requirements Document (IRD)** — Document of interface shall-requirements between parties; uses shall. → ch01, ch03
+- **Interface Working Group (IWG)** — Cross-organization forum coordinating IRD/ICD technical content. → ch06
+- **IPS** — Internet Protocol Suite context paired with ATN for conformance/interoperability verification expectations. → ch05
+- **Order 1800.66** — FAA NAS Configuration Management Procedures governing IRD/ICD approval and revision. → ch02, ch06
+- **TBS (To Be Supplied)** — Placeholder for IRD data not known at baseline; must be closed by revision; restricted in ICDs. → ch01, ch02
+- **Verification level** — Subsystem/Service (Development), Integration, or Site—where a shall is verified. → ch05
+- **VRTM** — Verification Requirements Traceability Matrix; one row per shall with methods/levels. → ch05
+- **Web service interface** — Interface type with web-services-required and protocol-implementation content. → ch03, ch04
