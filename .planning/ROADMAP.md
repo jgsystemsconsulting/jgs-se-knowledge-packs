@@ -85,7 +85,7 @@ Plans:
 **Depends on**: Phase 5
 **Requirements**: [VET-01, VET-02]
 **Success Criteria** (what must be TRUE):
-  1. All 5 UNVERIFIED items resolved to Tier 1/2/Excluded with evidence (URL + licence statement)
+  1. All 5 UNVERIFIED items resolved to Tier 1/2/Excluded with evidence (URL + licence statement) (AAF 5th list item re-scoped as deferred non-candidate — see GAP_ANALYSIS)
   2. DoD DAG, CMU SEI, and any failing candidates in the Excluded table with dated rationale
   3. Each GP pack candidate confirmed or dropped; stretch items (GP-08) decided
 **Plans**: 1 plan
