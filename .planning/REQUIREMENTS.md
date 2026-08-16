@@ -80,10 +80,10 @@ Sourced from .planning/research/capability-gap-report.md (1 empty cluster, 15 th
 - [ ] **GP-01**: `dod-vva-rpg` — DoD VV&A Recommended Practice Guide (+ DoDM 5000.102) [8 Validation, 7 Verification, 16 Decision Analysis, 9 T&E] (build model: VV&A RPG has NO consolidated PDF — chapter-wise build with per-chapter provenance in PACK.yaml; per 6-RESEARCH.md §1c)
 - [x] **GP-02**: `faa-std-025` — FAA Interface Documentation IRD/ICD/IR [5 Interface Mgmt, 3 Requirements Traceability, 12 CM]
 - [x] **GP-03**: `dote-te-guidebook` — DOT&E T&E Enterprise Guidebook [9 T&E single-source fix, 7, 8, 23 Logistics] (target the Aug 2022 edition 8.02 from dote.osd.mil; fall back to the afacpo fixed single-encoded mirror PDF if direct download unavailable; PACK.yaml records the edition actually built; the gap-report mirror URL was double-encoded and is fixed in 6-RESEARCH.md §2b)
-- [ ] **GP-04**: `dafman-63-119` — DAF Mission-Oriented Test Readiness Certification manual (DAFMAN 63-119) [9, 6 Integration, 27 Supplier] (title correction: MOTRC compliance manual, 15 Apr 2021 — per 6-RESEARCH.md §2c)
-- [ ] **GP-05**: `mil-std-881f` — Defense WBS standard [17 Technical Planning, 26 Measurement]
+- [x] **GP-04**: `dafman-63-119` — DAF Mission-Oriented Test Readiness Certification manual (DAFMAN 63-119) [9, 6 Integration, 27 Supplier] (title correction: MOTRC compliance manual, 15 Apr 2021 — per 6-RESEARCH.md §2c)
+- [x] **GP-05**: `mil-std-881f` — Defense WBS standard [17 Technical Planning, 26 Measurement]
 - [x] **GP-06**: `federal-bca` — OMB Circular A-94 + Army CBA Guide (dual-source) [15 Opportunity/Benefit — worst cluster, 16, 17]
-- [ ] **GP-07**: `mil-std-40051` — Technical Data Packages [25 Training & Documentation — the EMPTY cluster, 24]
+- [x] **GP-07**: `mil-std-40051` — Technical Data Packages [25 Training & Documentation — the EMPTY cluster, 24]
 - [ ] ~~**GP-08** (stretch): `nasa-sw-handbook` — NASA-HDBK-2203 select chapters [13 Data Mgmt, 19 QA, 32 Specialty]~~ — DESCOPED 2026-08-14: NASA-HDBK-2203 has no consolidated PDF (standards-page PDF is a placeholder; content is swehb.nasa.gov wiki HTML); see 6-RESEARCH.md §4
 
 ### Agent-Enablement Surface
