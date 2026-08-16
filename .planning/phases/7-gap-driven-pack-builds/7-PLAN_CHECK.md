@@ -264,3 +264,52 @@ issues:
     fix_hint: "Grep PACK.yaml notes for the visual-confirmation method/finding, not distribution statement|DIST-A"
 ```
 
+
+## Re-check round 2
+
+**Re-checked:** 2026-08-16 against `bea75b7` (`docs(7): plan_remediate round 2 — GP-07 selected-body floor + DIST-A source grep`).
+**Scope:** focused re-check of `7-02-PLAN.md` Task 2 (action / `<automated>` / `<done>`) against the two open issues from the prior re-check. Task 1 and the other two plans were not re-opened.
+**Method:** re-read Task 2 after `bea75b7`; `git show bea75b7` for the exact delta; `bash -n` both `7-02` `<automated>` blocks via Git Bash (`C:/Program Files/Git/bin/bash.exe`); trace every path the verify reads back to an action step that creates it.
+
+**Verdict:** PASS
+
+Both previously open Task 2 issues are closed. The selected-body floor is now a hard `>=300` assert from `selected_stats.txt`; the whole-file average is print-only; DIST-A is grepped in extracted source text, not the scaffold licence string. `bash -n` is clean. No new Task 2 defect.
+
+### Required confirms (this round)
+
+| Check | Status |
+|---|---|
+| Selected-body floor `>=300` asserted from `selected_stats.txt`, not whole-file | **CLEARED.** `<automated>`: `sc,sp=map(int,open('sources/mil-std-40051/selected_stats.txt').read().split()); c=sc/sp; sys.exit(0 if c>=300 else 1)`. |
+| Whole-file chars/page informational only | **CLEARED.** Second python one-liner prints `whole-file chars/page (informational, print-only)` and has no `sys.exit`. Action step 3 still records it as INFORMATIONAL ONLY. |
+| DIST-A greps extracted source text | **CLEARED.** `grep -Eqi "distribution statement" "$WRK/book_skill_work/full_text.txt"`. The PACK.yaml `distribution statement\|DIST-A` scaffold-licence tautology is gone. |
+| `bash -n` clean | **CLEARED.** Task 1 and Task 2 `<automated>` both `exit=0`. |
+| Action creates every file verify reads | **CLEARED.** See path trace below. |
+| No other Task 2 regressions | **CLEARED.** Diff is confined to Task 2 steps 4–5, `<automated>`, and `<done>`. Task 1, must_haves, threat model, and wave graph unchanged. |
+
+### Path trace (action → verify)
+
+| Verify reads | Action creates |
+|---|---|
+| `sources/mil-std-40051/work_dir.txt` | Step 8 |
+| `$WRK/book_skill_work/full_text.txt` + `metadata.json` | Step 3 EXTRACT |
+| `sources/mil-std-40051/selected_stats.txt` | Step 4 (`selected_chars` + `selected_pages`); `selected_body.txt` written in the same step as the source of `selected_chars` |
+| `packs/mil-std-40051/{SKILL.md,PACK.yaml}` | Steps 7–8 SCAFFOLD/GENERATE |
+
+### Prior open issues
+
+| ID | Sev | Status | Evidence |
+|---|---|---|---|
+| Re-check 1 #1 (MA-01 / MA-03 residue) | BLOCKER | **CLEARED** | Floor is `selected_chars/selected_pages >= 300` from the persisted stats file. Whole-file `c>=200` hard-exit is gone. |
+| Re-check 1 #2 | WARNING | **CLEARED** | DIST-A grep moved off PACK.yaml onto extracted `full_text.txt`. |
+
+### Residual (not re-raised)
+
+- P7-PRE-1 visual confirmation remains an action/notes obligation, not a notes-field grep. Accepted: this round required source-text DIST-A, not a notes-method grep.
+- `selected_stats.txt` is trusted as recorded; verify does not re-count `selected_body.txt`. The action writes both from the same selection. A forged stats file would still pass — same class as any recorded measurement, not a new hole.
+- Phase-level leftovers from the original check (7-01 federal-bca P7-PRE-2 notes still action-only; estimates over budget / `confidence: low`) sit outside this Task 2 scope and stay non-blocking.
+
+### Structured issues
+
+```yaml
+issues: []
+```
