@@ -1,6 +1,6 @@
 slug: dod-vva-rpg
 title: "M&S Verification, Validation & Accreditation Recommended Practice Guide"
-publisher: "US Department of Defense (OUSW(R&E) CTO / M&S Office)"
+publisher: "US Department of Defense (OUSD(R&E) CTO / M&S Office)"
 source_version: "RPG web edition (no dated rev; retrieved 2026-08-16)"
 license: "Public Domain (US Government work, 17 U.S.C. § 105; Distribution Statement A — Approved for public release; distribution is unlimited)"
 license_tier: 1
@@ -15,7 +15,7 @@ build:
 notes: >
   US Government work -- public domain (17 U.S.C. § 105) with Distribution Statement A
   equivalent basis. Free to reproduce, transform, and redistribute (including commercially).
-  Attribution to DoD / OUSW(R&E) is courtesy only. Content is synthesized reference notes;
+  Attribution to DoD / OUSD(R&E) is courtesy only. Content is synthesized reference notes;
   check_overlap verified per chapter full_text. No source-material link published
   (docs/LICENSING.md). Chapter-wise build (P7-PRE-4): no consolidated RPG PDF exists on
   the cto.mil index; selected per-chapter PDFs retrieved 2026-08-16 via the official
