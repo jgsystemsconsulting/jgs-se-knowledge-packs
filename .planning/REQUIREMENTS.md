@@ -72,8 +72,8 @@ Sourced from .planning/research/capability-gap-report.md (1 empty cluster, 15 th
 
 ### Source Vetting
 
-- [ ] **VET-01**: Resolve the 5 UNVERIFIED items from the gap report (MIL-STD-40051 current-rev PDF, NASA SP-7084 NTRS availability, consolidated VV&A RPG PDF edition, MIL-STD-881F canonical DLA copy, AFOTEC Test Design Guide); record definitive tier decisions with evidence
-- [ ] **VET-02**: Add newly ruled-out sources to docs/SOURCE-VETTING.md Excluded table (DoD DAG — retired/dead; CMU SEI — permission-gated; any UNVERIFIED items that fail)
+- [x] **VET-01**: Resolve the 5 UNVERIFIED items from the gap report (MIL-STD-40051 current-rev PDF, NASA SP-7084 NTRS availability, consolidated VV&A RPG PDF edition, MIL-STD-881F canonical DLA copy, AFOTEC Test Design Guide); record definitive tier decisions with evidence
+- [x] **VET-02**: Add newly ruled-out sources to docs/SOURCE-VETTING.md Excluded table (DoD DAG — retired/dead; CMU SEI — permission-gated; any UNVERIFIED items that fail)
 
 ### Gap-Driven Packs (all Tier 1 pending vetting; targets in brackets)
 
