@@ -109,6 +109,30 @@ in-source confirmation.
 | **CISA CPG 2.0** (CISA Cross-Sector Cybersecurity Performance Goals 2.0; ~2024-25) | Tier 1 | CISA federal-employee authorship → public domain (17 U.S.C. § 105). Verify PDF title/disclaimer page at build; watch for embedded third-party logos/content. |
 | **DOE SEM3** (US DOE Systems Engineering Methodology, SEM version 3) | Tier 1 | DOE-authored US Government work (17 U.S.C. § 105). Confirm no third-party copyright notice inside the PDF at build. |
 
+### Vetted candidates (v1.18.0) — statute-basis; confirm in-source at build
+
+Source URLs for all vetted/excluded candidates are recorded in
+`.planning/phases/6-source-vetting-unverified-resolution/6-RESEARCH.md` (Link Policy: never
+published in docs or packs).
+
+Statute-basis rows below rest on 17 U.S.C. § 105 (US Government works) unless noted.
+In-PDF statements (Distribution Statement A, releasability lines, NTRS copyright metadata)
+are confirmed at build time in Phase 7 — these rows record the Phase 6 verdict with that
+build caveat.
+
+| Source | Tier | Licence evidence |
+|---|---|---|
+| **GP-07 / MIL-STD-40051-2C** (DoD page-based TM preparation; rev -2C 15 DEC 2015; -1/-2 family supersedes base 40051) | Tier 1 | US Government work (17 U.S.C. § 105); DIST-A on DLA ASSIST family records. Build caveat: Distribution Statement is a scanned image on the mirror copy — DIST-A must be visually confirmed on the cover at build (6-RESEARCH.md §1a). (Verified 2026-08-14.) |
+| **NASA SP-7084** (Grammar, Punctuation, and Capitalization: A Handbook for Technical Writers and Editors; Mary K. McCaskill, NASA Langley) | Tier 1 | NTRS metadata: "Work of the US Gov. Public Use Permitted"; Distribution Limits Public. Prefer 1998 rev if mirror has text layer, else NTRS 1990 canonical (6-RESEARCH.md §1b). (Verified 2026-08-14.) |
+| **GP-01 / DoD VV&A RPG** (DoD VV&A Recommended Practice Guide; OUSW(R&E); multi-chapter web delivery) | Tier 1 | US Government work (17 U.S.C. § 105). Build model: no consolidated PDF — chapter-wise build with per-chapter provenance in PACK.yaml; confirm DIST-A / authorship inside each chapter PDF used (6-RESEARCH.md §1c). (Verified 2026-08-14.) |
+| **GP-05 / MIL-STD-881F** (Defense Work Breakdown Structures; Active on DLA ASSIST) | Tier 1 | US Government work (17 U.S.C. § 105). Fetch via DLA ASSIST-QuickSearch (free account) or GovTribe attachment (everyspec has only 881E); DIST-A visual confirm at build; resolve exact revision date on QuickSearch detail page (6-RESEARCH.md §1d). (Verified 2026-08-14.) |
+| **GP-02 / FAA-STD-025** (FAA Interface Documentation IRD/ICD/IR) | Tier 1 | US Government work (17 U.S.C. § 105). Rev E canonical (ROSAP full-text PDF) + rev F mirror; record chosen revision in PACK.yaml (6-RESEARCH.md §2a). (Verified 2026-08-14.) |
+| **GP-03 / DOT&E T&E Enterprise Guidebook** (Test & Evaluation Enterprise Guidebook) | Tier 1 | US Government work (17 U.S.C. § 105). Target Aug 2022 edition (8.02) from dote.osd.mil if a direct PDF is obtainable; fall back to the afacpo fixed-URL single-encoded mirror PDF (v3 June 2022) if direct download unavailable; PACK.yaml records the edition actually built (8.02 or mirror v3-June) (6-RESEARCH.md §2b). (Verified 2026-08-14.) |
+| **GP-04 / DAFMAN 63-119** (DAF Mission-Oriented Test Readiness Certification; 15 Apr 2021) | Tier 1 | In-document "RELEASABILITY: There are no releasability restrictions on this publication"; USAF publication → 17 U.S.C. § 105. Title corrected to Mission-Oriented Test Readiness Certification (6-RESEARCH.md §2c). (Verified 2026-08-14.) |
+| **GP-06 / federal-bca** (dual-source: OMB Circular A-94 + US Army CBA Guide) | Tier 1 | Both are U.S. Government works, public domain per 17 U.S.C. § 105 (licence basis per 6-RESEARCH.md §2 spot-check scope and capability-gap-report shortlist item 5). Record per-source provenance for both documents in PACK.yaml. (Verified 2026-08-14.) |
+
+**GP-08 deferral note:** NASA-HDBK-2203 standards-page PDF is a placeholder; content is swehb.nasa.gov wiki HTML only — deferred out of v1.18 (see REQUIREMENTS Out of Scope and 6-RESEARCH.md §4). Optional future rescope to NPR 7150.2 + NASA-STD-8739.8 (downloadable PDFs).
+
 ### Def Stan 00-051 — UNVERIFIED / excluded from this milestone `[T2-03]`
 
 **Def Stan 00-051** (*Environmental Management Requirements for Defence Systems*, Issue 2
