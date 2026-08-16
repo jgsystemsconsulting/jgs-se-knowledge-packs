@@ -60,18 +60,18 @@ Progress: [████░░░░░░] 42%
 
 - [Phase 6]: Recorded 6-RESEARCH verdicts — 4 UNVERIFIED Tier 1, AFOTEC excluded; DAG+SEI excluded; GP-08 descoped; Phase 7 = 7 packs / 63 total
 - [Phase 6]: VV&A RPG is chapter-wise build (no consolidated PDF); DOT&E target edition 8.02 with afacpo fallback
-- [Phase ?]: faa-std-025 built Rev F everyspec after ROSAP 403 (P7-PRE-3)
-- [Phase ?]: dote-te-guidebook 8.02 DMI; complementary to dod-te-guidebook
-- [Phase ?]: federal-bca rescoped A-94-only after Army CBA fetch fail (P7-PRE-2)
-- [Phase ?]: mil-std-881f: true 881F 13 May 2022 via ASSIST-origin mirror; DIST-A from QuickSearch Dist Stmt A
-- [Phase ?]: mil-std-40051-2C: everyspec PDF; visual cover DIST-A; selected 151pp cpp 2939.9; OCR not needed; cluster-25 vocabulary
+- [Phase 7]: faa-std-025 built Rev F everyspec after ROSAP 403 (P7-PRE-3)
+- [Phase 7]: dote-te-guidebook 8.02 DMI; complementary to dod-te-guidebook
+- [Phase 7]: federal-bca rescoped A-94-only after Army CBA fetch fail (P7-PRE-2)
+- [Phase 7]: mil-std-881f: true 881F 13 May 2022 via ASSIST-origin mirror; DIST-A from QuickSearch Dist Stmt A
+- [Phase 7]: mil-std-40051-2C: everyspec PDF; visual cover DIST-A; selected 151pp cpp 2939.9; OCR not needed; cluster-25 vocabulary
 
 ## Session
 
 **Last session:** 2026-08-16T23:07:56.238Z
-**Stopped at:** Completed 7-02-PLAN.md
+**Stopped at:** Completed 7-02-PLAN.md (Wave B: mil-std-881f + mil-std-40051; packs/=62)
 **Resume file:** None
 
 ### Blockers
 
-- dafman-63-119 HALTED: cannot fetch 2021 PDF for P7-PRE-5 releasability reconfirm (AF e-pub 403, Wayback 498/503)
+- None (dafman-63-119 HALT cleared in 7-01 via jina reader-proxy; 7-02 Wave B complete)
