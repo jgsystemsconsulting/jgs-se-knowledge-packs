@@ -101,7 +101,11 @@ Plans:
   1. Each pack conforms to docs/PACK-SPEC.md; validate_pack + scan_generated_skill + check_overlap all pass
   2. PACK.yaml provenance complete; no sources/ leaked; SKILL.md carries When-to-use + Prerequisites
   3. Target clusters actually fattened (verified post-map-regeneration in Phase 8)
-**Plans**: TBD (expect 3 waves: web-guide PDFs / MIL-spec mirror downloads / dual-source consolidation)
+**Plans**: 3 plans
+Plans:
+- [ ] 7-01-PLAN.md — Wave A born-digital: faa-std-025 (GP-02), dote-te-guidebook (GP-03), dafman-63-119 (GP-04), federal-bca (GP-06, P7-PRE-2 dual in-source gate)
+- [ ] 7-02-PLAN.md — Wave B DoD fetches: mil-std-881f (GP-05, P7-PRE-1 + fallback chain), mil-std-40051 (GP-07, P7-PRE-1 scanned cover + chars/page floor + cluster-25)
+- [ ] 7-03-PLAN.md — Wave C: dod-vva-rpg (GP-01, P7-PRE-4 chapter-wise) + consolidated registration sweep (catalog 61 / cursor 62 / packs-61) + check_release.py
 
 ### Phase 8: Agent-enablement surface
 **Goal**: capability-pack-map.json is a stable, versioned consumable for the se-agents generator
