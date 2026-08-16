@@ -91,7 +91,7 @@ Plans:
 **Plans**: 1 plan
 
 Plans:
-- [ ] 6-01-PLAN.md — Record vetting verdicts (4 Tier 1 confirmed, AFOTEC excluded, DAG/SEI exclusions confirmed, GP-08 descoped) into SOURCE-VETTING / REQUIREMENTS / ROADMAP / STATE
+- [x] 6-01-PLAN.md — Record vetting verdicts (4 Tier 1 confirmed, AFOTEC excluded, DAG/SEI exclusions confirmed, GP-08 descoped) into SOURCE-VETTING / REQUIREMENTS / ROADMAP / STATE
 
 ### Phase 7: Gap-driven pack builds
 **Goal**: 7 public-domain packs (GP-01..GP-07; GP-08 descoped — see REQUIREMENTS Out of Scope; conditional rescope to NPR 7150.2 + NASA-STD-8739.8 only as a Phase 7 stretch decision) built, validated, and registered, fattening the empty + critical-thin clusters
