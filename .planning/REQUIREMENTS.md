@@ -77,14 +77,14 @@ Sourced from .planning/research/capability-gap-report.md (1 empty cluster, 15 th
 
 ### Gap-Driven Packs (all Tier 1 pending vetting; targets in brackets)
 
-- [ ] **GP-01**: `dod-vva-rpg` — DoD VV&A Recommended Practice Guide (+ DoDM 5000.102) [8 Validation, 7 Verification, 16 Decision Analysis, 9 T&E]
+- [ ] **GP-01**: `dod-vva-rpg` — DoD VV&A Recommended Practice Guide (+ DoDM 5000.102) [8 Validation, 7 Verification, 16 Decision Analysis, 9 T&E] (build model: VV&A RPG has NO consolidated PDF — chapter-wise build with per-chapter provenance in PACK.yaml; per 6-RESEARCH.md §1c)
 - [ ] **GP-02**: `faa-std-025` — FAA Interface Documentation IRD/ICD/IR [5 Interface Mgmt, 3 Requirements Traceability, 12 CM]
-- [ ] **GP-03**: `dote-te-guidebook` — DOT&E T&E Enterprise Guidebook [9 T&E single-source fix, 7, 8, 23 Logistics]
-- [ ] **GP-04**: `dafman-63-119` — DAF Test & Evaluation manual [9, 6 Integration, 27 Supplier]
+- [ ] **GP-03**: `dote-te-guidebook` — DOT&E T&E Enterprise Guidebook [9 T&E single-source fix, 7, 8, 23 Logistics] (target the Aug 2022 edition 8.02 from dote.osd.mil; fall back to the afacpo fixed single-encoded mirror PDF if direct download unavailable; PACK.yaml records the edition actually built; the gap-report mirror URL was double-encoded and is fixed in 6-RESEARCH.md §2b)
+- [ ] **GP-04**: `dafman-63-119` — DAF Mission-Oriented Test Readiness Certification manual (DAFMAN 63-119) [9, 6 Integration, 27 Supplier] (title correction: MOTRC compliance manual, 15 Apr 2021 — per 6-RESEARCH.md §2c)
 - [ ] **GP-05**: `mil-std-881f` — Defense WBS standard [17 Technical Planning, 26 Measurement]
 - [ ] **GP-06**: `federal-bca` — OMB Circular A-94 + Army CBA Guide (dual-source) [15 Opportunity/Benefit — worst cluster, 16, 17]
 - [ ] **GP-07**: `mil-std-40051` — Technical Data Packages [25 Training & Documentation — the EMPTY cluster, 24]
-- [ ] **GP-08** (stretch): `nasa-sw-handbook` — NASA-HDBK-2203 select chapters [13 Data Mgmt, 19 QA, 32 Specialty]
+- [ ] ~~**GP-08** (stretch): `nasa-sw-handbook` — NASA-HDBK-2203 select chapters [13 Data Mgmt, 19 QA, 32 Specialty]~~ — DESCOPED 2026-08-14: NASA-HDBK-2203 has no consolidated PDF (standards-page PDF is a placeholder; content is swehb.nasa.gov wiki HTML); see 6-RESEARCH.md §4
 
 ### Agent-Enablement Surface
 
@@ -104,3 +104,4 @@ Sourced from .planning/research/capability-gap-report.md (1 empty cluster, 15 th
 | Per-role knowledge packs | Role lens belongs to the se-agents skills layer; packs stay source-organized (design decision 2026-08-16) |
 | Cluster 28 Stakeholder pack | No Tier-1/2 candidate beyond existing gao-tra coverage; SEBoK expansion if ever needed |
 | Branch-protection enforcement | User opted to keep admin bypass (2026-08-16) |
+| nasa-sw-handbook (GP-08) | No consolidated PDF edition exists; per-SWE wiki-harvest build is out of v1.18 scope. Alternative: rescope to NPR 7150.2 + NASA-STD-8739.8 (both downloadable PDFs; 8739.8 cover states APPROVED FOR PUBLIC RELEASE – DISTRIBUTION IS UNLIMITED) as v1.19 candidates or a Phase 7 stretch decision. |
