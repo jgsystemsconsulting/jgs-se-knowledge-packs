@@ -186,3 +186,81 @@ Will achieve its slice. Fallback chain + labelled 881E, scanned-cover visual DIS
 ### 7-03 -- Wave C GP-01 + registration
 
 Will achieve GP-01 and close the phase if the executor follows the action, including inventing a consistent chapter-fulltext layout. Rewrite the NOTICE verify (W1) and lock the overlap path (W2) before execute. Count targets 61/62/63 are correct; do not bump 1.18.0 here.
+
+## Re-check (post-remediation)
+
+**Re-checked:** 2026-08-16 against `3ab4e9a` (`docs(7): plan_remediate — BL-01/02 + MA-01..03 + MI fixes`).
+**Method:** re-read `7-01`/`7-02`/`7-03`-PLAN.md + `7-PLAN_REVIEW.md` + ROADMAP Phase 7 SCs; `bash -n` every `<automated>` via Git Bash (`C:\Program Files\Git\bin\bash.exe`); live re-measure catalog/cursor/`packs/` counts; pattern-test remediated greps against scaffold-title / licence-string false positives.
+
+**Verdict:** FAIL
+
+Both Wave-C BLOCKERs are gone and the bash now parses. The highest-risk pack's acceptance command still does not measure the selected-body floor the action and `<done>` require, and it hard-fails on the whole-file average the action just labelled informational. That is the same class of defect MA-01/MA-03 were written to close. Do not execute until the GP-07 verify asserts `chars(selected_body)/selected_pages >= 300`.
+
+### Required confirms
+
+| Check | Status |
+|---|---|
+| `bash -n` every `<automated>` block (8/8) | **CLEARED.** 7-01 T1–T4, 7-02 T1–T2, 7-03 T1–T2 all `OK`. |
+| No tautological greps | **MOSTLY CLEARED.** Residual: 7-02 T2 `grep -Eqi "distribution statement\|DIST-A" packs/mil-std-40051/PACK.yaml` still matches the DIST-A licence string `build_pack.py` writes at scaffold. |
+| GP-07 floor on selected body | **NOT CLEARED.** See open blocker. |
+| All 8 builds measure chars/page | **7/8 CLEARED** at `c>=300` (faa-std-025, dote-te-guidebook, dafman-63-119, federal-bca ×2, mil-std-881f, dod-vva-rpg per `work_dir_ch*.txt`). 40051 measures whole-file `c>=200` and only greps the string `chars/page` in PACK.yaml. |
+| Slug-set assert | **CLEARED.** 7-03 T2: `new<=slugs` over the seven GP slugs. |
+
+### Per-finding status (from 7-PLAN_REVIEW.md)
+
+| ID | Sev | Status | Evidence |
+|---|---|---|---|
+| BL-01 | BLOCKER | **CLEARED** | 7-03 T2 NOTICE check is now `for s in …; do grep -q "\[pack: $s\]" NOTICE \|\| { echo "MISSING $s"; exit 1; }; done`. `bash -n` OK. All 7 slugs covered. |
+| BL-02 | BLOCKER | **CLEARED** | 7-03 T1 action step 4 now `mkdir -p sources/dod-vva-rpg/chapter_fulltexts` and copies `chNN.txt`. Verify glob and overlap loop share that path. `work_dir_ch*.txt` naming is also pinned for the chars/page loop. |
+| MA-01 | MAJOR | **ACTION CLEARED / VERIFY NOT CLEARED** | Action order is now extract (informational whole-file) → select ~150 pp → floor `chars(selected_body)/selected_pages >= 300` → OCR only if that floor fails. Verify still computes `len(full_text)/metadata.pages` on the unselected extract and `sys.exit(0 if c>=200 else 1)`. |
+| MA-02 | MAJOR | **MOSTLY CLEARED** | FAA rev grep no longer matches `reverse` (`rev[. ]*[EF]\b\|Rev [EF]`). DOT&E edition is `^source_version:.*(8\.02\|v3-June)` (bare `2022` dropped). 881 revision is `^source_version:.*881[EF]` (title no longer satisfies). DAFMAN releasability greps the downloaded `full_text.txt`. Cluster-25 is `Training & Documentation`. Slug-set assert added. Residual tautology: 40051 DIST-A grep on PACK.yaml. Residual gap: federal-bca still greps document identity in the two full_texts, not in-source licence notes. |
+| MA-03 | MAJOR | **NOT CLEARED for GP-07** | Seven pack extracts now hard-assert `c>=300`. GP-07 does not assert selected-body `>=300`. |
+| MI-01 | MINOR | **CLEARED** | 7-03 T2 step 1 bumps catalog `updated`. |
+| MI-02 | MINOR | **CLEARED** | Catalog key list matches live objects; share_alike / attribution_required stay on PACK.yaml. |
+| MI-03 | MINOR | **CLEARED** | Claim row relabelled pre-Phase-7 and states 62/54/55 at 7-03 start. |
+| MI-04 | MINOR | **ACCEPTED** | Estimates still 150k/110k/120k vs 100k smart-zone; `confidence: low`, `sample_count: 0`. Do not split. |
+
+Original PLAN_CHECK W1–W6 map 1:1 onto BL-01, BL-02, MA-03, MA-02, MI-03, MI-04. W1/W2/W5 cleared; W3/W4 residual as above; W6 unchanged.
+
+### Open issues
+
+**1. [verification_derivation] BLOCKER — 7-02 Task 2 verify does not measure the selected-body floor and can false-fail a correct GP-07 build**
+- Plan: 7-02 Task 2
+- Action steps 3–5: whole-file chars/page is informational only because "1168 pp of mostly image plates would drag it below the floor even on a healthy body"; the hard gate is `chars(selected_body)/selected_pages >= 300` after selection; OCR triggers only on that failure.
+- `<done>` and must_haves: `chars/page floor >= 300 on the selected main-body extraction`.
+- `<automated>`: greps `chars/page` anywhere in PACK.yaml (a notes line of `whole-file chars/page: 40 (informational)` satisfies it), then `sys.exit(0 if c>=200 else 1)` on `work_dir/book_skill_work/full_text.txt` — the unselected 1168-page extract. No selected-body path, no `>=300` assert.
+- Effect: (a) a skipped selection still goes green if the whole-file average luckily clears 200; (b) a correct ~150 pp body at >=300 can fail verify when plates pull the whole-file average under 200, which the action itself predicts. That re-opens the gratuitous-OCR / false-halt path MA-01 was written to close.
+- Fix: persist the selected body (or record `selected_chars` + `selected_pages` in PACK.yaml notes) and assert `selected_chars/selected_pages >= 300` in `<automated>`. Drop the whole-file `c>=200` hard exit, or keep it print-only. Presence-grep of `chars/page` is not a floor.
+
+**2. [verification_derivation] WARNING — 7-02 T2 DIST-A grep still matches the scaffold licence string**
+- Plan: 7-02 Task 2
+- `grep -Eqi "distribution statement|DIST-A" packs/mil-std-40051/PACK.yaml` is true the moment `build_pack.py` writes the DIST-A licence variant. It cannot fail if the P7-PRE-1 visual-confirmation note is missing.
+- Fix: grep the notes for the confirmation method (`visual(ly)? confirm` or equivalent), not the licence field.
+
+Federal-bca P7-PRE-2 notes are still action-only (identity greps on the two full_texts). Not re-raised as a new issue; leftover MA-02 residue, not a phase-goal block.
+
+### What is newly sound
+
+- All 8 `<automated>` blocks parse (`bash -n` OK). No `grep -c … = 1` word-split. No `2>/dev/null \|\| echo` comparison swallow.
+- `chapter_fulltexts/` is produced by the action that the verify glob consumes.
+- Registration arithmetic unchanged and still correct against live 56/54/55 and check_release.py (targets 63/61/62, packs-61, sebok still out).
+- Wave graph still acyclic; Phase 9 version surfaces still excluded; GP-08 / P7-FUT-1 / P7-BACKLOG still absent.
+
+### Structured issues
+
+```yaml
+issues:
+  - plan: "7-02"
+    dimension: verification_derivation
+    severity: blocker
+    task: 2
+    description: "GP-07 <automated> hard-exits on whole-file chars/page >=200 and never asserts selected-body >=300, contradicting the remediated action/must_haves/<done>"
+    fix_hint: "Assert chars(selected_body)/selected_pages >= 300 from a persisted selected extract or recorded selected_chars/selected_pages; do not sys.exit on the informational whole-file average"
+  - plan: "7-02"
+    dimension: verification_derivation
+    severity: warning
+    task: 2
+    description: "DIST-A grep on PACK.yaml is satisfied by the scaffold licence string"
+    fix_hint: "Grep PACK.yaml notes for the visual-confirmation method/finding, not distribution statement|DIST-A"
+```
+
