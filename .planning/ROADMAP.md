@@ -88,7 +88,10 @@ Plans:
   1. All 5 UNVERIFIED items resolved to Tier 1/2/Excluded with evidence (URL + licence statement)
   2. DoD DAG, CMU SEI, and any failing candidates in the Excluded table with dated rationale
   3. Each GP pack candidate confirmed or dropped; stretch items (GP-08) decided
-**Plans**: TBD
+**Plans**: 1 plan
+
+Plans:
+- [ ] 6-01-PLAN.md — Record vetting verdicts (4 Tier 1 confirmed, AFOTEC excluded, DAG/SEI exclusions confirmed, GP-08 descoped) into SOURCE-VETTING / REQUIREMENTS / ROADMAP / STATE
 
 ### Phase 7: Gap-driven pack builds
 **Goal**: 7–8 public-domain packs built, validated, and registered, fattening the empty + critical-thin clusters
