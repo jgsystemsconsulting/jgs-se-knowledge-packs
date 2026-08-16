@@ -5,7 +5,7 @@ OMB Circular A-94 (revised Nov. 9, 2023) promotes social welfare through well-in
 
 ## Frameworks Introduced
 - **Dual guidance**: General BCA/CEA good-practice elements plus mandatory discount-rate rules for analyses submitted to OMB.
-- **Authority**: Issued under 31 U.S.C. 1111 and the Budget and Accounting Act of 1921, as amended.
+- **Authority**: Issued under the federal budget and accounting authorities the circular cites (including 31 U.S.C. § 1111 and the Budget and Accounting statute line from 1921, as later amended).
 - **Binding vs suggested**: Suggested for internal Executive Branch planning; must be followed for analyses submitted to OMB under Circulars A-11 and A-19 and for estimates under the 1992 Presidential Memorandum on benefits and costs of legislative proposals.
 - **Law/EO carve-out**: Does not supersede agency practices prescribed by law, Executive Order, or other relevant circulars.
 
