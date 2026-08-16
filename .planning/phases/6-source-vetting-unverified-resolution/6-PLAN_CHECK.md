@@ -216,3 +216,65 @@ Highest-leverage pre-execute nits (same plan, no split): make Task 1 verify pars
 Plans reduce 0 locked user decisions (no CONTEXT.md). No phase split required.
 
 **Verdict:** PASS_WITH_FIXES
+
+## Re-check (post-remediation)
+
+**Checked:** 2026-08-16
+**Subject:** `6-01-PLAN.md` at `042fb44` (`docs(6): plan_remediate — BL-01 + MJ/MN fixes`)
+**Method:** Goal-backward re-read of the remediated plan against ROADMAP Phase 6 SC1–SC3, 6-PLAN_REVIEW findings BL-01 / MJ-01..03 / MN-01..05, live tree measurements, and `bash -n` of every `<automated>` block via Git Bash (not WSL).
+
+**Verdict:** PASS
+
+Remediation delivered SC1–SC3 on the page and made the automated gates parse and distinguish the required edits from the pre-phase tree. No new blockers. One residual execute-time brittleness in Task 5’s exact `git diff --name-only` equality is noted below; it does not reopen a review finding and does not block execute.
+
+### Per-finding status
+
+| ID | Original issue | Status | Evidence |
+|---|---|---|---|
+| BL-01 | Task 1 `<automated>` unquoted parenthetical — bash syntax error | **CLEARED** | Command is now `! grep -n "http" … && test "$(grep -c …)" -ge 14 && grep heading && grep 6-RESEARCH.md`. `bash -n` PASS (file and `-c`). |
+| MJ-01 | GP-06 never recorded; Task 5 falsely certified SC3 | **CLEARED** | Task 1 now writes an 8th dated Vetted row `GP-06 / federal-bca` (OMB A-94 + Army CBA, 17 U.S.C. § 105, gap-report shortlist item 5). Task 5 item (6) and the GP-token loop require GP-01..GP-07 individually. |
+| MJ-02 | ROADMAP overview + MILESTONES still advertise 8 / 7-8 | **CLEARED** | Task 4 rewrites ROADMAP:77 to GP-01..GP-07, Goal to 7 packs, Requirements drop GP-08; MILESTONES.md added to `files_modified` and set to `7 Tier-1 packs`. Task 5 greps leftover `7-8`, `7–8`, `GP-01..GP-08`, `63-64`. |
+| MJ-03 | Weak / false-pass / false-fail verifies | **CLEARED** | Task 2: three conjunct name greps + stamp `-ge 17`. Task 5: stamp `-ge 18`; per-token GP-01..GP-07 greps (Task 1 now writes those tokens); leftover-string greps; `git diff --name-only` file-set assertion instead of bare `--stat`. |
+| MN-01 | claim_verification sed path + overstated stamp convention | **CLEARED** | Sed path is `.planning/phases/6-source-vetting-unverified-resolution/6-RESEARCH.md` (live-verified). Row 2 now states Excluded rows are dated and v1.17 Vetted rows are undated. |
+| MN-02 | Task 2 trailing sentence mistyped `.eu` and forbade/permitted the email | **CLEARED** | Trailing instruction is now: no http/https; bare `permission@sei.cmu.edu` (no mailto:) is permitted. |
+| MN-03 | DOT&E row dropped 8.02-conditional + PACK.yaml edition label | **CLEARED** | Task 1 row (6) and Task 3 GP-03 note both carry the dote.osd.mil 8.02 / afacpo v3-June fallback and `PACK.yaml` edition label. |
+| MN-04 | GP-04 REQUIREMENTS description left as “DAF Test & Evaluation manual” | **CLEARED** | Task 3 change (4) rewrites the description to MOTRC / DAFMAN 63-119 and appends the §2c title-correction note; verify greps that string. |
+| MN-05 | Date-stamping Vetted rows claimed as existing house convention | **CLEARED** | Task 1 now calls dated Vetted rows a deliberate v1.18 extension required by must_haves; v1.17 Vetted rows remain undated. |
+
+Prior 6-PLAN_CHECK warnings W1–W6 map 1:1 onto the table above and are likewise cleared. W7 (5 tasks / estimate.confidence med vs estimate-check `low`, 45k/100k) remains advisory; do not split.
+
+### Goal-backward (SC1–SC3)
+
+| Criterion | Required truth | Covering task | Deliverable? |
+|---|---|---|---|
+| SC1 / VET-01 | 5 UNVERIFIED items → dated Tier 1/2/Excluded with licence evidence; URLs in 6-RESEARCH.md | Task 1: 40051-2C, SP-7084, VV&A (chapter-wise), 881F. Task 2: AFOTEC Excluded | **Yes.** Licence quotes / DIST-A caveats specified; pointer paragraph is the URL store (Link Policy). |
+| SC2 / VET-02 | DAG, SEI, and failing candidates in Excluded with dated rationale | Task 2: AFOTEC + DAG + SEI after DAU/WARU | **Yes.** Three conjunct greps + stamp floor. |
+| SC3 | Each GP candidate confirmed or dropped; GP-08 decided | Task 1: GP-01..GP-07 tokens (incl. GP-06). Task 3: GP-08 strike + Out-of-Scope + NPR 7150.2 / 8739.8. Task 4: Phase 7 = 7 packs / STATE 63 | **Yes.** No silent omission. |
+| Link Policy | zero `http` in docs/SOURCE-VETTING.md | Tasks 1, 2, 5 | **Yes.** Live count is 0; actions forbid URLs; Task 5 asserts `= 0`. |
+| REL-1x arithmetic | 56 + 7 = 63; no leftover 8-pack / 64 | Tasks 4, 5 | **Yes** on ROADMAP overview + Details, MILESTONES, STATE. |
+
+### Verify-command audit
+
+All five `<automated>` blocks: `bash -n` PASS and `bash -n -c` PASS (Git Bash 5.3.15). No `2>/dev/null || echo 0`, no `|| true` feeding a comparison, no caret-anchored package-manager grep.
+
+| Task | Command | Distinguishes pre-phase tree? |
+|---|---|---|
+| 1 | `! grep http` + stamp `-ge 14` + v1.18 heading + `6-RESEARCH.md` | Yes. Live stamps = 7; heading and pointer absent today. |
+| 2 | Three name greps + `! grep http` + stamp `-ge 17` | Yes. None of the three names exist today; one-name OR-grep is gone. |
+| 3 | `GP-08` + `NPR 7150.2` + `chapter-wise` + `8.02` + MOTRC title | Yes. Only `GP-08` exists today; the other four strings are new. |
+| 4 | `GP-08 descoped` on ROADMAP+STATE + `63 — 7 GP packs` + `7 Tier-1 packs` + `GP-01..GP-08` count = 0 | Yes. Live leftovers are exactly the strings this gate requires gone. |
+| 5 | http=0, stamps `-ge 18`, GP-01..07 loop, leftover-string zeros, exact 5-file `git diff --name-only` | Yes on content. File-set equality is brittle if the executor commits per-task (see residual). |
+
+Live measurements used: `grep -c http docs/SOURCE-VETTING.md` = 0; `Verified 2026-08-14` = 7; SOURCE-VETTING has no GP-0x tokens today; STATE still `63-64`; MILESTONES still `7-8`; ROADMAP still `7–8` and `GP-01..GP-08`.
+
+### Residual (not a reopened finding)
+
+Task 5 asserts `test "$(git diff --name-only | sort)"` equals exactly the five integrity files. GSD executors commit per task. After a faithful Task 4 the working tree can be clean (or also show `6-01-SUMMARY.md` / STATE frontmatter), so this last conjunct can false-fail even when the five files were the only production edits. Content greps above it already prove SC1–SC3. Executor should treat the file-set equality as advisory if the content greps pass, or run it before the Task 5 close-out commit. Not a blocker: the phase goal is still achieved.
+
+Region-scope warnings from `verify.plan-structure` (#968) on file-wide `http` bans remain false positives — no sibling task requires an `http` string in SOURCE-VETTING.
+
+### New issues
+
+None that reopen BL/MJ/MN or block SC1–SC3.
+
+**Verdict:** PASS
