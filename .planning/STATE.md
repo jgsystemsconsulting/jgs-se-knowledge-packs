@@ -66,8 +66,8 @@ Progress: [█████░░░░░] 47%
 - [Phase 7]: federal-bca rescoped A-94-only after Army CBA fetch fail (P7-PRE-2)
 - [Phase 7]: mil-std-881f: true 881F 13 May 2022 via ASSIST-origin mirror; DIST-A from QuickSearch Dist Stmt A
 - [Phase 7]: mil-std-40051-2C: everyspec PDF; visual cover DIST-A; selected 151pp cpp 2939.9; OCR not needed; cluster-25 vocabulary
-- [Phase ?]: dod-vva-rpg chapter-wise 10 ch from DEBoK; P7-PRE-4 via DEBoK PD + OSD/OUSD OPR
-- [Phase ?]: Registration sweep: catalog 61 / cursor 62 / packs 63; check_release PASS; no version bumps
+- [Phase 7]: dod-vva-rpg chapter-wise 10 ch from DEBoK; P7-PRE-4 via DEBoK PD + OSD/OUSD OPR
+- [Phase 7]: Registration sweep: catalog 61 / cursor 62 / packs 63; check_release PASS; no version bumps
 
 ## Session
 
