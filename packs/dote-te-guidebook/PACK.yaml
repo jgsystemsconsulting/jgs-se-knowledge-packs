@@ -1,0 +1,29 @@
+slug: dote-te-guidebook
+title: "Test & Evaluation Enterprise Guidebook"
+publisher: "US Department of Defense (Director, Operational Test & Evaluation)"
+source_version: "8.02 (Aug 2022, DMI mirror)"
+license: "Public Domain (US Government work, 17 U.S.C. § 105)"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "jgs-reference-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 165
+  chapters: 8
+  built_on: "2026-08-16"
+notes: >
+  US Government work -- public domain (17 U.S.C. § 105); Distribution Statement A
+  (Approved for public release; distribution is unlimited) confirmed in-PDF on the
+  downloaded copy. Free to reproduce, transform, and redistribute (including commercially).
+  Attribution to DoD/DOT&E/USD(R&E) is courtesy only. Content is synthesized reference
+  notes; check_overlap verified. No source-material link published (docs/LICENSING.md).
+  P7-PRE-3: built edition 8.02 (August 2022) from DMI/IDA mirror PDF
+  (TE Enterprise Guidebook 8.02); dote.osd.mil Guidance page 403'd plain fetch; afacpo
+  v3-June also HTTP 200 as unused fallback. P7-PRE-5: in-PDF DIST-A line present
+  ("DISTRIBUTION STATEMENT A . Approved for public release . Distribution is unlimited.").
+  Slug-distinction: complementary to existing dod-te-guidebook (same guidebook family;
+  that pack is pathway-deep/OUSD(R&E)-framed; this pack is DOT&E-facing enterprise +
+  cyber/MOSA/suitability/strategy emphasis). Extraction pdftotext fallback. chars/page =
+  2729.2 (450313/165) >= 300. scan_generated_skill reviewed at build.
+change_indication: "reconstructed as synthesized reference notes"
