@@ -77,7 +77,7 @@ Sourced from .planning/research/capability-gap-report.md (1 empty cluster, 15 th
 
 ### Gap-Driven Packs (all Tier 1 pending vetting; targets in brackets)
 
-- [ ] **GP-01**: `dod-vva-rpg` — DoD VV&A Recommended Practice Guide (+ DoDM 5000.102) [8 Validation, 7 Verification, 16 Decision Analysis, 9 T&E] (build model: VV&A RPG has NO consolidated PDF — chapter-wise build with per-chapter provenance in PACK.yaml; per 6-RESEARCH.md §1c)
+- [x] **GP-01**: `dod-vva-rpg` — DoD VV&A Recommended Practice Guide (+ DoDM 5000.102) [8 Validation, 7 Verification, 16 Decision Analysis, 9 T&E] (build model: VV&A RPG has NO consolidated PDF — chapter-wise build with per-chapter provenance in PACK.yaml; per 6-RESEARCH.md §1c)
 - [x] **GP-02**: `faa-std-025` — FAA Interface Documentation IRD/ICD/IR [5 Interface Mgmt, 3 Requirements Traceability, 12 CM]
 - [x] **GP-03**: `dote-te-guidebook` — DOT&E T&E Enterprise Guidebook [9 T&E single-source fix, 7, 8, 23 Logistics] (target the Aug 2022 edition 8.02 from dote.osd.mil; fall back to the afacpo fixed single-encoded mirror PDF if direct download unavailable; PACK.yaml records the edition actually built; the gap-report mirror URL was double-encoded and is fixed in 6-RESEARCH.md §2b)
 - [x] **GP-04**: `dafman-63-119` — DAF Mission-Oriented Test Readiness Certification manual (DAFMAN 63-119) [9, 6 Integration, 27 Supplier] (title correction: MOTRC compliance manual, 15 Apr 2021 — per 6-RESEARCH.md §2c)
