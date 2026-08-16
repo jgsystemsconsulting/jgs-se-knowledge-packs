@@ -52,7 +52,7 @@ Progress: [█████░░░░░] 56%
 - doe-o-413-3 rename is content drift vs the v1.17.0 tag — v1.18.0 CHANGELOG must lead with it (REL-1x-02)
 - Branch protection left at admin-bypass per user decision (2026-08-16)
 - Per-role packs rejected by design: role lens belongs to se-agents skills layer (REQUIREMENTS Out of Scope)
-- Phase 6 (2026-08-14): 5 UNVERIFIED items resolved (4 Tier 1 confirmed, AFOTEC excluded); DoD DAG + CMU SEI exclusions confirmed; VV&A RPG rescoped to chapter-wise build; DOT&E URL fixed to single-encoded; GP-08 descoped — verdicts in 6-RESEARCH.md
+- Phase 6 (2026-08-14): 4 of 5 UNVERIFIED resolved; 5th (DAU AAF guidebooks licence spot-check) deferred — not in any v1.18 build list (4 Tier 1 confirmed, AFOTEC excluded from excluded-table); DoD DAG + CMU SEI exclusions confirmed; VV&A RPG rescoped to chapter-wise build; DOT&E URL fixed to single-encoded; GP-08 descoped — verdicts in 6-RESEARCH.md
 
 ## Decisions
 

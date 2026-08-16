@@ -13,6 +13,6 @@ Source expansion shipped: 8 Tier-1 public-domain packs added (`nist-800-171`, `n
 - **GitHub Release:** https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/releases/tag/v1.17.0
 - **Deferred to v1.18+:** rename `doe-413-3b` → `doe-o-413-3` with catalog alias
 
-## v1.18.0 (in planning — scoped 2026-08-16)
+## v1.18.0 (in execution — Phase 6 vetting complete)
 
 Gap-driven expansion + agent enablement: 7 Tier-1 packs targeting the 1 empty + 15 thin capability clusters (research: .planning/research/capability-gap-report.md), versioned capability-pack-map contract for the se-agents generator, v1.17 carry-forwards. See REQUIREMENTS.md (VET/GP/AE/REL-1x) and ROADMAP.md phases 6-9.

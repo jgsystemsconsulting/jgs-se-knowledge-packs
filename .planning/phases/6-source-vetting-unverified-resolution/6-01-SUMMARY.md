@@ -138,6 +138,7 @@ Each task was committed atomically:
 | 1 | Task 5 `git diff --name-only` 5-file equality treated as ADVISORY; verified against commit union `c1dfcf0^..0ef8acb` instead of dirty working tree | Task 5 verify | in-scope fix | MUST-ADDRESS from re-check: per-task commits leave plan files clean; union equality is the correct gate |
 | 2 | Execution calendar date is 2026-08-16; row stamps remain `(Verified 2026-08-14.)` per plan text and 6-RESEARCH.md research date | Task 1–2 action | in-scope fix | Plan explicitly requires Verified 2026-08-14 stamps; research date is the evidence date |
 | 3 | Reverted SDK `requirements.mark-complete VET-01 VET-02` so checkboxes stay unchecked; repaired STATE.md progress fields corrupted by advance-plan/update-progress | final_commit / state_updates | in-scope fix | Hard rule + plan Task 3: VET rows stay open until phase verification; SDK progress math assumed wrong phase totals |
+| 4 | Post-review correction: "5 UNVERIFIED resolved" claims corrected to "4 of 5 UNVERIFIED resolved; 5th (DAU AAF guidebooks licence spot-check) deferred — not in any v1.18 build list" | code-review MA-01 | post-review correction | Gap-report item #5 (AAF guidebooks) was silently substituted with AFOTEC; AAF licence spot-check deferred, not a v1.18 build item |
 
 Or detail:
 
