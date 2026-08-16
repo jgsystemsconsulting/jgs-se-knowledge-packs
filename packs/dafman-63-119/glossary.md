@@ -1,0 +1,22 @@
+# Glossary — DAFMAN 63-119 (MOTRC)
+
+- **AFOTEC** — Air Force Operational Test and Evaluation Center; USAF OTA (and interim USSF OTA). → ch02
+- **CDT** — Chief Developmental Tester; government DT lead on MDAP/MAIS; co-chairs ITT. → ch02, ch05
+- **Certification Official (Mission-Oriented Test Certification Official)** — Authority who certifies test readiness; not the PM on MDAP/ACAT I–II/OSD oversight. → ch02, ch04
+- **Certification memorandum** — Signed readiness record with constraints, limitations, and process evidence; OTO acknowledges before OT. → ch04
+- **Certification templates** — Attachments 2–32 checklist matrix used throughout MOTRC. → ch03, ch07
+- **Continuous certification** — Series of reviews across the test continuum; replaces single-point OTRR focus. → ch01, ch03
+- **Dedicated OT** — Independent OT&E phase supporting deployment or FRP decision. → ch01
+- **DT sufficiency assessment** — MDAP milestone assessment of DT plans/results/resources/risks. → ch01, ch05
+- **Exit criteria** — Testable performance-based closure conditions for shortfalls before OT/fielding judgments. → ch03
+- **ITT** — Integrated Test Team; CDT/TM + OTO co-chair; builds certification into T&E strategy. → ch02, ch06
+- **LDTO** — Lead Developmental Test and Evaluation Organization; DT integrator separate from PM office. → ch02, ch05
+- **MBCRA / MRAP-C** — Mission-based cyber risk assessment methods feeding cyber resiliency and OT briefings. → ch03, ch06
+- **MOTRC** — Mission-Oriented Test Readiness Certification (this manual’s process). → ch01
+- **OTA / OTO** — Operational Test Agency / Organization; template “OTO” covers AFOTEC, MAJCOM, or USSF OTO. → ch02
+- **OT adequacy** — DOT&E judgment that OT plans/data approach will support evaluation needs. → ch01, ch05
+- **OTRR** — Operational Test Readiness Review; prior construct DAF replaced with continuous MOTRC. → ch01
+- **PEO** — Program Executive Officer; often Certification Official for ACAT II/oversight. → ch02
+- **Production- / operational-representative article** — Test article standard affecting OT adequacy claims. → ch05
+- **TEMP** — Test and Evaluation Master Plan; Part III holds certification-process strategy. → ch02, ch07
+- **TM** — Test Manager; CDT analogue on non-MDAP/non-MAIS programs. → ch02
