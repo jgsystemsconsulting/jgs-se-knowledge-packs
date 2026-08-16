@@ -66,3 +66,55 @@ Plans:
 
 Plans:
 - [x] 5-01-PLAN.md — Release surface sync (11 version surfaces, CHANGELOG, PACK-SPEC, README framing), gate PASS at 54/56, tag + GitHub Release v1.17.0, post-release records
+
+---
+
+# v1.18.0 — Gap-Driven Expansion + Agent Enablement
+
+## v1.18 Phases
+
+- [ ] **Phase 6: Source vetting + UNVERIFIED resolution** - Resolve 5 UNVERIFIED items; rule-outs recorded (VET-01/02)
+- [ ] **Phase 7: Gap-driven pack builds** - Build GP-01..GP-08 packs via jgs-reference-skill pipeline
+- [ ] **Phase 8: Agent-enablement surface** - Versioned capability-pack-map contract + regeneration (AE-01..03)
+- [ ] **Phase 9: Release surface + v1.18.0** - Registration, full validation, tag + release (REL-1x-01/02)
+
+## v1.18 Phase Details
+
+### Phase 6: Source vetting + UNVERIFIED resolution
+**Goal**: Every v1.18 candidate has a definitive tier decision; newly dead/gated sources permanently excluded
+**Depends on**: Phase 5
+**Requirements**: [VET-01, VET-02]
+**Success Criteria** (what must be TRUE):
+  1. All 5 UNVERIFIED items resolved to Tier 1/2/Excluded with evidence (URL + licence statement)
+  2. DoD DAG, CMU SEI, and any failing candidates in the Excluded table with dated rationale
+  3. Each GP pack candidate confirmed or dropped; stretch items (GP-08) decided
+**Plans**: TBD
+
+### Phase 7: Gap-driven pack builds
+**Goal**: 7–8 public-domain packs built, validated, and registered, fattening the empty + critical-thin clusters
+**Depends on**: Phase 6
+**Requirements**: [GP-01, GP-02, GP-03, GP-04, GP-05, GP-06, GP-07, GP-08]
+**Success Criteria** (what must be TRUE):
+  1. Each pack conforms to docs/PACK-SPEC.md; validate_pack + scan_generated_skill + check_overlap all pass
+  2. PACK.yaml provenance complete; no sources/ leaked; SKILL.md carries When-to-use + Prerequisites
+  3. Target clusters actually fattened (verified post-map-regeneration in Phase 8)
+**Plans**: TBD (expect 3 waves: web-guide PDFs / MIL-spec mirror downloads / dual-source consolidation)
+
+### Phase 8: Agent-enablement surface
+**Goal**: capability-pack-map.json is a stable, versioned consumable for the se-agents generator
+**Depends on**: Phase 7
+**Requirements**: [AE-01, AE-02, AE-03]
+**Success Criteria** (what must be TRUE):
+  1. Map JSON carries schema + version + generated-on; regeneration is idempotent and gate-checked
+  2. Map includes all v1.18 packs; cluster 25 non-empty; clusters 3/5/15 above critical thresholds
+  3. Contract documented (schema, versioning, refresh path) for downstream consumption
+**Plans**: TBD
+
+### Phase 9: Release surface + v1.18.0
+**Goal**: Catalog, docs, and manifests synchronized; v1.18.0 tagged and released
+**Depends on**: Phase 8
+**Requirements**: [REL-1x-01, REL-1x-02]
+**Success Criteria** (what must be TRUE):
+  1. check_release PASS at the updated catalog/directory basis; all surfaces version-consistent
+  2. v1.18.0 tagged + GitHub Release; CHANGELOG includes the v1.17.0 wording correction and doe-o-413-3 rename note
+**Plans**: TBD

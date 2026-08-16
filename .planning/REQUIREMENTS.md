@@ -65,3 +65,42 @@ New milestone: researched candidate packs + ruled-out tracking. Maps to phases 2
 | Free-download, no-redistribution-grant standards (ECSS/ESA) | Non-redistributable free downloads (see docs/SOURCE-VETTING.md). Includes ECSS-E-ST-10C Rev.1 (excluded-by-vetting 2026-08-14; ECSS-P-00C §5.8). |
 | Runtime tooling (MCP/API dependencies) | Packs are plain Markdown by design |
 | Non-SE domains | Outside library charter |
+
+## v1.18.0 Requirements — Gap-Driven Expansion + Agent Enablement
+
+Sourced from .planning/research/capability-gap-report.md (1 empty cluster, 15 thin) and the v1.17.0 carry-forward list. Maps to phases 6–9.
+
+### Source Vetting
+
+- [ ] **VET-01**: Resolve the 5 UNVERIFIED items from the gap report (MIL-STD-40051 current-rev PDF, NASA SP-7084 NTRS availability, consolidated VV&A RPG PDF edition, MIL-STD-881F canonical DLA copy, AFOTEC Test Design Guide); record definitive tier decisions with evidence
+- [ ] **VET-02**: Add newly ruled-out sources to docs/SOURCE-VETTING.md Excluded table (DoD DAG — retired/dead; CMU SEI — permission-gated; any UNVERIFIED items that fail)
+
+### Gap-Driven Packs (all Tier 1 pending vetting; targets in brackets)
+
+- [ ] **GP-01**: `dod-vva-rpg` — DoD VV&A Recommended Practice Guide (+ DoDM 5000.102) [8 Validation, 7 Verification, 16 Decision Analysis, 9 T&E]
+- [ ] **GP-02**: `faa-std-025` — FAA Interface Documentation IRD/ICD/IR [5 Interface Mgmt, 3 Requirements Traceability, 12 CM]
+- [ ] **GP-03**: `dote-te-guidebook` — DOT&E T&E Enterprise Guidebook [9 T&E single-source fix, 7, 8, 23 Logistics]
+- [ ] **GP-04**: `dafman-63-119` — DAF Test & Evaluation manual [9, 6 Integration, 27 Supplier]
+- [ ] **GP-05**: `mil-std-881f` — Defense WBS standard [17 Technical Planning, 26 Measurement]
+- [ ] **GP-06**: `federal-bca` — OMB Circular A-94 + Army CBA Guide (dual-source) [15 Opportunity/Benefit — worst cluster, 16, 17]
+- [ ] **GP-07**: `mil-std-40051` — Technical Data Packages [25 Training & Documentation — the EMPTY cluster, 24]
+- [ ] **GP-08** (stretch): `nasa-sw-handbook` — NASA-HDBK-2203 select chapters [13 Data Mgmt, 19 QA, 32 Specialty]
+
+### Agent-Enablement Surface
+
+- [ ] **AE-01**: `capability-pack-map.json` becomes a versioned consumable: schema field + map version + generated-on metadata; a stdlib export/regenerate script under tooling/ (idempotent, gate-checked for staleness)
+- [ ] **AE-02**: Regenerate the map to include all v1.18 packs; thin-cluster re-score shows cluster 25 non-empty and clusters 3/5/15 no longer critical
+- [ ] **AE-03**: Document the map contract (schema + versioning + refresh path) for the se-agents generator repo per docs/ROLE-AGENTS-REQUIREMENTS-V2.md
+
+### Release Surface
+
+- [ ] **REL-1x-01**: Full registration of new packs (catalog, SKILLS.md, packs.html, NOTICE, README, cursor manifest); check_release PASS
+- [ ] **REL-1x-02**: v1.18.0 tagged + GitHub Release; CHANGELOG entry includes the v1.17.0 wording fix (docs/index.html is a version surface, not a registered surface) and notes the doe-o-413-3 rename
+
+## Out of Scope (v1.18)
+
+| Feature | Reason |
+|---------|--------|
+| Per-role knowledge packs | Role lens belongs to the se-agents skills layer; packs stay source-organized (design decision 2026-08-16) |
+| Cluster 28 Stakeholder pack | No Tier-1/2 candidate beyond existing gao-tra coverage; SEBoK expansion if ever needed |
+| Branch-protection enforcement | User opted to keep admin bypass (2026-08-16) |
