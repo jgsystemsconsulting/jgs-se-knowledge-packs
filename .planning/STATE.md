@@ -2,19 +2,19 @@
 gsd_state_version: 1.0
 milestone: v1.18.0
 milestone_name: "**Goal**: Catalog, docs, and manifests synchronized; v1.18.0 tagged and released"
-current_phase: 7
-status: verifying
+current_phase: 8
+status: ready_for_verification
 stopped_at: Completed 8-01-PLAN.md
-last_updated: "2026-08-17T00:25:14.127Z"
+last_updated: "2026-08-17T00:55:00.000Z"
 last_activity: 2026-08-17
-last_activity_desc: Phase 7 marked complete
+last_activity_desc: Phase 8 plan 01 executed — map v2 + gate + CONTRACT
 progress:
   total_phases: 4
   completed_phases: 0
   total_plans: 11
-  completed_plans: 5
-  percent: 0
-current_phase_name: Source vetting + UNVERIFIED resolution
+  completed_plans: 6
+  percent: 55
+current_phase_name: Agent-enablement surface
 ---
 
 # Project State
@@ -24,16 +24,16 @@ current_phase_name: Source vetting + UNVERIFIED resolution
 See: .planning/PROJECT.md (updated 2026-08-16)
 
 **Core value:** Licence-clean, validated, single-source reference packs an agent can load without context bloat.
-**Current focus:** v1.18.0 — Gap-Driven Expansion + Agent Enablement (Phase 6: Source vetting + UNVERIFIED resolution)
+**Current focus:** v1.18.0 — Gap-Driven Expansion + Agent Enablement (Phase 8 complete — ready for verification)
 
 ## Current Position
 
-Phase: 7 — COMPLETE
+Phase: 8 — Agent-enablement surface
 Plan: 1 of 1 in current phase (executed)
-Status: Phase complete — ready for verification
-Last activity: 2026-08-17 — Phase 7 marked complete
+Status: ready_for_verification
+Last activity: 2026-08-17 — Completed 8-01-PLAN.md (map v2, gate, CONTRACT)
 
-Progress: [█████░░░░░] 45%
+Progress: [██████░░░░] 55%
 
 ## Performance Metrics
 
@@ -69,9 +69,9 @@ Progress: [█████░░░░░] 45%
 - [Phase 7]: mil-std-40051-2C: everyspec PDF; visual cover DIST-A; selected 151pp cpp 2939.9; OCR not needed; cluster-25 vocabulary
 - [Phase 7]: dod-vva-rpg chapter-wise 10 ch from DEBoK; P7-PRE-4 via DEBoK PD + OSD/OUSD OPR
 - [Phase 7]: Registration sweep: catalog 61 / cursor 62 / packs 63; check_release PASS; no version bumps
-- [Phase ?]: Support files only for single-cluster packs mil-std-40051 (C25) and federal-bca (C15); multi-cluster packs omit support files
-- [Phase ?]: Map gate stays standalone; check_release wiring deferred to Phase 9
-- [Phase ?]: faa-std-025 ch05→C3 Traceability, ch03/ch04→C5 Interface to land thin-cluster thresholds
+- [Phase 8]: Support files only for single-cluster packs mil-std-40051 (C25) and federal-bca (C15); multi-cluster packs omit support files
+- [Phase 8]: Map gate stays standalone; check_release wiring deferred to Phase 9
+- [Phase 8]: faa-std-025 ch05→C3 Traceability, ch03/ch04→C5 Interface to land thin-cluster thresholds
 
 ## Session
 
