@@ -84,19 +84,35 @@ Write `tooling/check_capability_map.py` (~80 lines, Python stdlib only, check_re
 docstring-header style with usage line, `ROOT = Path(__file__).resolve().parent.parent`,
 exit 0 on pass / 1 on any failure) implementing exactly the 8-RESEARCH.md §2 design:
 
-1. Load `ROOT/docs/capability-pack-map.json` (utf-8). Hard-fail if top-level
-   `schema_version` is missing or != 2, or if `map_version` / `generated_on` are missing
-   (`generated_on` must merely be present and non-empty — no freshness assert, per research).
-2. Staleness vs `packs/`: every pack directory under `ROOT/packs/` that contains a
-   `chapters/` subdirectory must appear as the `pack` value in >=1 entry (this naturally
-   excludes the two signpost packs, which have no chapters dir); conversely every referenced
-   pack must have a chapters dir on disk.
-3. File existence: for each entry, strip the literal suffix ` (support file)` from the
-   `chapter` value when present, then assert `ROOT/packs/<pack>/chapters/<chapter>` exists
-   (catches deleted/renamed chapters). Do NOT require support files to be present or absent
-   for any pack — single-cluster judgment stays agent-side (research §4 risk 2).
-4. Counts: print one line per cluster (name + entry count) and the total; assert
-   sum of per-cluster counts == total entries (double-count guard).
+1. Load `ROOT/docs/capability-pack-map.json` (utf-8). Wrap `json.load` in
+   try/except `json.JSONDecodeError` -> print a named failure line (file +
+   decode error) and exit 1 — never a bare traceback (T-8-04). Hard-fail if
+   top-level `schema_version` is missing or != 2, or if `map_version` /
+   `generated_on` are missing (`generated_on` must merely be present and
+   non-empty — no freshness assert, per research).
+2. Staleness vs `packs/` (both directions, signpost packs excluded — they have
+   no chapters dir):
+   - Forward: every pack directory under `ROOT/packs/` that contains a
+     `chapters/` subdirectory must appear as the `pack` value in >=1 entry;
+     conversely every referenced pack must have a chapters dir on disk.
+   - Reverse (chapter-level): the set of (pack, chapter) pairs derived from
+     the map — chapter entries only, i.e. excluding entries whose chapter
+     value ends with the literal suffix ` (support file)` — must EQUAL the
+     set from globbing `packs/*/chapters/*` (files only). This catches a new
+     chapter added to an already-mapped pack, which pack-granular checking
+     misses. Verified today: set equality holds for the current 570 rows.
+3. File existence: for each entry, branch on the suffix — if the `chapter`
+   value ends with the literal ` (support file)`, assert
+   `ROOT/packs/<pack>/<chapter-without-suffix>` exists (support files live at
+   pack ROOT, not in chapters/ — verified: all 102 existing support-file rows
+   resolve at pack root); otherwise assert `ROOT/packs/<pack>/chapters/<chapter>`
+   exists (catches deleted/renamed chapters). Do NOT require support files to
+   be present or absent for any pack — single-cluster judgment stays
+   agent-side (research §4 risk 2).
+4. Counts: print one line per cluster (name + entry count) and the total;
+   assert (pack, chapter) uniqueness across all entries —
+   `len({(pack, chapter) pairs}) == total entries` (0 duplicates today;
+   replaces the tautological per-cluster-sum check).
 5. Threshold asserts by cluster NAME via a module-level lookup table (never array index;
    unknown name -> loud non-zero failure, per research §4 risk 4):
    - "Training & Documentation Delivery" >= 1
@@ -105,16 +121,22 @@ exit 0 on pass / 1 on any failure) implementing exactly the 8-RESEARCH.md §2 de
    - "Opportunity/Benefit Management" >= 2
 
 Then RUN it against the CURRENT (pre-regeneration) map and record the red output in the
-summary: it must fail for exactly the expected reasons — missing `schema_version` envelope
-AND the 7 missing packs (dafman-63-119, dod-vva-rpg, dote-te-guidebook, faa-std-025,
-federal-bca, mil-std-40051, mil-std-881f) — proving the staleness path works. Paste the red
-output into the commit message body. Keep the script standalone (no import of check_release)
+summary. With BL-01 fixed (support files resolve at pack root), the red run has NO
+existence/path failures and must fail for precisely this set of reasons: (a) missing
+`schema_version` envelope, (b) the 7 missing packs (dafman-63-119, dod-vva-rpg,
+dote-te-guidebook, faa-std-025, federal-bca, mil-std-40051, mil-std-881f), (c) all 4
+threshold failures (25=0<1, 3=2<3, 5=2<3, 15=1<2), and (d) the chapter-set mismatch
+(the new packs' on-disk chapters are absent from the map). Paste the red output into the
+commit message body. Do NOT weaken or skip any gate check (thresholds, existence, reverse
+staleness) to make the red run match an expectation — the red shape above is derived from
+the fixed gate, and any deviation is a gate bug to fix, not an expectation to trim.
+Keep the script standalone (no import of check_release)
 per research §2 wiring recommendation; Phase 9 may wire it into check_release.
   </action>
   <verify>
-    <automated>python tooling/check_capability_map.py; echo "exit=$?" — against the current map expects exit=1 with schema_version + 7 missing-pack failures named</automated>
+    <automated>python tooling/check_capability_map.py; echo "exit=$?" — against the current map expects exit=1 naming precisely: missing schema_version envelope, the 7 missing packs, the 4 threshold failures, and the chapter-set mismatch; 0 path/existence failures (support files resolve at pack root)</automated>
   </verify>
-  <done>Script exists, is stdlib-only, and its RED run names exactly: missing schema_version and the 7 unclassified packs. Committed.</done>
+  <done>Script exists, is stdlib-only, fails cleanly on malformed JSON, and its RED run names precisely: missing schema_version envelope + 7 unclassified packs + 4 threshold failures + chapter-set mismatch, with 0 existence failures. Committed.</done>
 </task>
 
 <task type="auto">
@@ -131,19 +153,30 @@ a script (judgment required):
    rules of construction in docs/capability-pack-map.md: cross-cutting chapters carry a remark
    noting the strong secondary fit; a standard's own process definitions go to cluster 30
    ("Standards, Tailoring & Process Models") while performing the capability goes to the
-   capability cluster; expected heavy routing per research: mil-std-40051 -> cluster 25
-   (Training & Documentation Delivery), federal-bca -> cluster 15 (Opportunity/Benefit
-   Management), faa-std-025 -> cluster 25; dote-te-guidebook feeds clusters 3/5 (T&E /
-   traceability / interface chapters). Every entry gets a one-line `note` like existing rows.
+   capability cluster. Starting-point routing hints (hints only — the classification is
+   still decided by reading each chapter; do not force-fit a chapter to a hint):
+   mil-std-40051 -> cluster 25 (heavy; technical-manual authoring per its SKILL.md),
+   federal-bca -> cluster 15 (Opportunity/Benefit Management), faa-std-025 ch04
+   (icd-content-requirements) / ch05 (verification-and-traceability) are the natural
+   donors for clusters 5 (Interface Mgmt/ICIDs) and 3 (Requirements Traceability) per
+   its SKILL.md scope (IRD/ICD authoring, VRTM), with its doc-format chapters going to
+   25/30; dote-te-guidebook's 8 chapters (developmental/operational/live-fire/cyber TE,
+   MOSA-digital TE, suitability, TEMP strategy) target clusters 9/7/8/23 — it has NO
+   traceability or interface chapters. Every entry gets a one-line `note` like existing rows.
    Threshold targets that the assignments must land: cluster 25 >= 1, cluster 3 >= 3
    (baseline 2), cluster 5 >= 3 (baseline 2), cluster 15 >= 2 (baseline 1).
 2. Support files: for each new pack judged essentially single-cluster, add
    glossary.md / patterns.md / cheatsheet.md entries with chapter value
    `<filename> (support file)` (same shape as the 102 existing support-file rows);
-   multi-cluster packs' support files are omitted.
+   multi-cluster packs' support files are omitted. Note: faa-std-025 is NOT a
+   single-cluster candidate — its chapters spread across clusters 5/3/25/30 to land
+   the thresholds; mil-std-40051 and federal-bca are the defensible single-cluster
+   candidates.
 3. Add the v2 envelope from research §1 — exactly three new top-level keys:
    `"schema_version": 2` (int, not string), `"map_version": "1.18.0"`,
-   `"generated_on": "2026-08-14"` — leaving `clusters`/`name`/`chapters`/`pack`/`chapter`/
+   `"generated_on": "<execution day's ISO date>"` (e.g. "2026-08-14" if run on
+   2026-08-14 — use the actual execution date, not a literal) — leaving
+   `clusters`/`name`/`chapters`/`pack`/`chapter`/
    `note` byte-identical in shape so `data["clusters"]` consumers keep working.
 4. Update docs/capability-pack-map.md: refresh the summary table counts (+ changelog line
    "Changelog (v1.18.0): added dod-vva-rpg, dote-te-guidebook, mil-std-40051, dafman-63-119,
@@ -208,7 +241,7 @@ header: e.g. "Consumption contract (schema, versioning, refresh): see
 docs/capability-map-CONTRACT.md."
   </action>
   <verify>
-    <automated>grep -c "capability-map-CONTRACT.md" "docs/capability-pack-map.md" | grep -qv '^0$' && grep -c "schema_version" "docs/capability-map-CONTRACT.md" | grep -qv '^0$' && grep -c "deprecated" "docs/capability-map-CONTRACT.md" | grep -qv '^0$' && echo CONTRACT_LINKED</automated>
+    <automated>grep -c "capability-map-CONTRACT.md" "docs/capability-pack-map.md" | grep -qv '^0$' && grep -c "schema_version" "docs/capability-map-CONTRACT.md" | grep -qv '^0$' && grep -ci "deprecat" "docs/capability-map-CONTRACT.md" | grep -qv '^0$' && echo CONTRACT_LINKED</automated>
   </verify>
   <done>Contract doc exists covering schema/versioning/deprecation/refresh/thresholds; linked from the map md header. Committed.</done>
 </task>
@@ -220,12 +253,17 @@ docs/capability-map-CONTRACT.md."
 Goal-backward verification against ROADMAP Phase 8 SCs; write the plan summary
 (8-01-SUMMARY.md per the summary template) recording:
 
-- SC-1 / AE-01: map JSON carries schema + version + generated-on (show the three keys);
-  the gate is the idempotent staleness check (two identical green runs from Task 3, red run
-  from Task 1 quoted as evidence the staleness path detects drift).
+- SC-1 / AE-01: map JSON carries schema + version + generated-on (show the three keys).
+  Record BOTH idempotence readings explicitly: (a) gate-output determinism — two identical
+  green gate runs from Task 3 (the operational SC-1 proxy evidenced here), and (b) the
+  research §2 no-diff definition — re-running the agent regeneration pass yields no diff;
+  verify it by regenerating a second time and confirming the committed JSON is
+  byte-identical. Quote the Task 1 red run as evidence the staleness path detects drift.
 - SC-2 / AE-02: all v1.18 packs present (61 chapter-bearing packs mapped, 0 stale);
   final counts for clusters 25/3/5/15 vs baselines 0/2/2/1; the spot-check protocol results
-  from Task 2.
+  from Task 2. Record clusters 3/5/15 BOTH as "above baseline — SC-2 threshold minimums
+  met" AND as "still THIN per the gap-report §1 taxonomy (< 8 entries OR <= 2 distinct
+  packs) — improvement, not full remediation; carried to the v1.19 gap report".
 - SC-3 / AE-03: contract documented at docs/capability-map-CONTRACT.md, linked from the map
   header — cite the five sections.
 - Phase 9 handoff notes: the optional check_release.py §8 bullet ("map gate passes" via
