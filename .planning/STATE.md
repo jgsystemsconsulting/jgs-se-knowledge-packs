@@ -3,17 +3,17 @@ gsd_state_version: 1.0
 milestone: v1.18.0
 milestone_name: "**Goal**: Catalog, docs, and manifests synchronized; v1.18.0 tagged and released"
 current_phase: 8
-status: ready_for_verification
+status: completed
 stopped_at: Completed 8-01-PLAN.md
-last_updated: "2026-08-17T00:55:00.000Z"
+last_updated: "2026-08-17T00:41:56.686Z"
 last_activity: 2026-08-17
 last_activity_desc: Phase 8 plan 01 executed — map v2 + gate + CONTRACT
 progress:
   total_phases: 4
   completed_phases: 0
   total_plans: 11
-  completed_plans: 6
-  percent: 55
+  completed_plans: 5
+  percent: 0
 current_phase_name: Agent-enablement surface
 ---
 
@@ -28,10 +28,10 @@ See: .planning/PROJECT.md (updated 2026-08-16)
 
 ## Current Position
 
-Phase: 8 — Agent-enablement surface
+Phase: 8 — COMPLETE
 Plan: 1 of 1 in current phase (executed)
-Status: ready_for_verification
-Last activity: 2026-08-17 — Completed 8-01-PLAN.md (map v2, gate, CONTRACT)
+Status: Phase 8 complete
+Last activity: 2026-08-17 — Phase 8 marked complete
 
 Progress: [██████░░░░] 55%
 
