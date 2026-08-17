@@ -74,7 +74,7 @@ Plans:
 ## v1.18 Phases
 
 - [x] **Phase 6: Source vetting + UNVERIFIED resolution** - Resolve 5 UNVERIFIED items; rule-outs recorded (VET-01/02)
-- [ ] **Phase 7: Gap-driven pack builds** - Build GP-01..GP-07 packs (GP-08 descoped) via jgs-reference-skill pipeline
+- [x] **Phase 7: Gap-driven pack builds** - Build GP-01..GP-07 packs (GP-08 descoped) via jgs-reference-skill pipeline
 - [ ] **Phase 8: Agent-enablement surface** - Versioned capability-pack-map contract + regeneration (AE-01..03)
 - [ ] **Phase 9: Release surface + v1.18.0** - Registration, full validation, tag + release (REL-1x-01/02)
 
