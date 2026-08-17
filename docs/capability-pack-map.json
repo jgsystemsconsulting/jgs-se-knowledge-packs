@@ -1,4 +1,7 @@
 {
+  "schema_version": 2,
+  "map_version": "1.18.0",
+  "generated_on": "2026-08-17",
   "clusters": [
     {
       "name": "Systems Thinking & Fundamentals",
@@ -215,6 +218,11 @@
         },
         {
           "pack": "requirements-writing",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "requirements-writing",
           "chapter": "glossary.md (support file)",
           "note": "Glossary for the pack"
         },
@@ -222,11 +230,6 @@
           "pack": "requirements-writing",
           "chapter": "patterns.md (support file)",
           "note": "Patterns/practice heuristics"
-        },
-        {
-          "pack": "requirements-writing",
-          "chapter": "cheatsheet.md (support file)",
-          "note": "Cheatsheet / quick reference"
         }
       ]
     },
@@ -237,6 +240,11 @@
           "pack": "faa-req-handbook",
           "chapter": "ch06-faa-req-handbook-software-requirements-and-subsystem-allocation.md",
           "note": "Software requirements and subsystem allocation"
+        },
+        {
+          "pack": "faa-std-025",
+          "chapter": "ch05-verification-and-traceability.md",
+          "note": "Interface VRTM, verification levels/methods, and who-verifies rules"
         },
         {
           "pack": "requirements-writing",
@@ -359,6 +367,16 @@
           "note": "Interface and risk management (also risk mgmt)"
         },
         {
+          "pack": "faa-std-025",
+          "chapter": "ch03-ird-content-requirements.md",
+          "note": "IRD shall-content across common, medium-specific, service, and facility interfaces"
+        },
+        {
+          "pack": "faa-std-025",
+          "chapter": "ch04-icd-content-requirements.md",
+          "note": "ICD design-characteristic content satisfying the parent IRD"
+        },
+        {
           "pack": "nasa-se-handbook",
           "chapter": "ch29-6-3-interface-management.md",
           "note": "Interface management process"
@@ -368,6 +386,11 @@
     {
       "name": "Integration",
       "chapters": [
+        {
+          "pack": "dafman-63-119",
+          "chapter": "ch06-integration-itt-and-cyber.md",
+          "note": "ITT, combined/integrated test, interoperability, and cyber resiliency in certification"
+        },
         {
           "pack": "doe-sem",
           "chapter": "ch06-integration-test-and-acceptance.md",
@@ -388,6 +411,16 @@
     {
       "name": "Verification",
       "chapters": [
+        {
+          "pack": "dod-vva-rpg",
+          "chapter": "ch05-vv-agent-role-new-simulations.md",
+          "note": "V&V agent plans/performs verification and validation for intended use (also validation)"
+        },
+        {
+          "pack": "dote-te-guidebook",
+          "chapter": "ch02-developmental-te.md",
+          "note": "DT&E: critical technical parameters, KPPs, and development-risk evidence"
+        },
         {
           "pack": "faa-ams-vv",
           "chapter": "ch01-faa-ams-vv-introduction-and-vv-philosophy.md",
@@ -414,9 +447,9 @@
           "note": "V&V checklists and definitions"
         },
         {
-          "pack": "nasa-se-handbook",
-          "chapter": "ch23-5-3-product-verification.md",
-          "note": "Product verification process"
+          "pack": "faa-ams-vv",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
         },
         {
           "pack": "faa-ams-vv",
@@ -429,15 +462,25 @@
           "note": "Patterns/practice heuristics"
         },
         {
-          "pack": "faa-ams-vv",
-          "chapter": "cheatsheet.md (support file)",
-          "note": "Cheatsheet / quick reference"
+          "pack": "nasa-se-handbook",
+          "chapter": "ch23-5-3-product-verification.md",
+          "note": "Product verification process"
         }
       ]
     },
     {
       "name": "Validation",
       "chapters": [
+        {
+          "pack": "dod-vva-rpg",
+          "chapter": "ch08-validation-fundamentals.md",
+          "note": "Validation fundamentals: accuracy vs real world for intended uses"
+        },
+        {
+          "pack": "dote-te-guidebook",
+          "chapter": "ch03-operational-te.md",
+          "note": "OT&E: operational effectiveness, suitability, and survivability under realistic conditions"
+        },
         {
           "pack": "faa-ams-vv",
           "chapter": "ch04-faa-ams-vv-investment-analysis.md",
@@ -458,6 +501,16 @@
     {
       "name": "Test & Evaluation",
       "chapters": [
+        {
+          "pack": "dafman-63-119",
+          "chapter": "ch01-motrc-framework-and-applicability.md",
+          "note": "MOTRC framework: continuous mission-oriented test readiness vs single-point OTRR"
+        },
+        {
+          "pack": "dafman-63-119",
+          "chapter": "ch05-dte-and-contractor-testing.md",
+          "note": "DT&E sufficiency, contractor testing evidence, and government oversight (also verification)"
+        },
         {
           "pack": "dod-te-guidebook",
           "chapter": "ch01-dod-te-guidebook-te-fundamentals-types-events.md",
@@ -500,6 +553,11 @@
         },
         {
           "pack": "dod-te-guidebook",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "dod-te-guidebook",
           "chapter": "glossary.md (support file)",
           "note": "Glossary for the pack"
         },
@@ -509,15 +567,45 @@
           "note": "Patterns/practice heuristics"
         },
         {
-          "pack": "dod-te-guidebook",
-          "chapter": "cheatsheet.md (support file)",
-          "note": "Cheatsheet / quick reference"
+          "pack": "dote-te-guidebook",
+          "chapter": "ch01-te-enterprise-overview-and-roles.md",
+          "note": "DoD T&E enterprise overview; DOT&E vs USD(R&E) roles under DoDI 5000.89"
+        },
+        {
+          "pack": "dote-te-guidebook",
+          "chapter": "ch04-live-fire-te.md",
+          "note": "LFT&E survivability and lethality against combat threats (also safety/survivability)"
+        },
+        {
+          "pack": "dote-te-guidebook",
+          "chapter": "ch08-temp-strategy-and-ste-planning.md",
+          "note": "T&E Strategy/TEMP, test plans, and STE resource planning"
         }
       ]
     },
     {
       "name": "Modeling, MBSE & SysML",
       "chapters": [
+        {
+          "pack": "dod-vva-rpg",
+          "chapter": "ch01-key-concepts-and-vva-frame.md",
+          "note": "VV&A key concepts and the M&S evidence frame for simulation-supported decisions"
+        },
+        {
+          "pack": "dod-vva-rpg",
+          "chapter": "ch02-user-role-new-simulations.md",
+          "note": "User role: intended use, acceptance requirements, and accreditation need"
+        },
+        {
+          "pack": "dod-vva-rpg",
+          "chapter": "ch03-developer-role-new-simulations.md",
+          "note": "Developer role: build-for-V&V design, baselines, and transparent limitations"
+        },
+        {
+          "pack": "dod-vva-rpg",
+          "chapter": "ch07-fidelity.md",
+          "note": "Fidelity as fitness-for-intended-use, not maximum achievable fidelity"
+        },
         {
           "pack": "dodaf",
           "chapter": "ch02-dm2-data-groups-overview.md",
@@ -579,9 +667,9 @@
           "note": "ConOps template with model content"
         },
         {
-          "pack": "sebok",
-          "chapter": "ch06-sebok-representing-systems-models.md",
-          "note": "Representing systems with models"
+          "pack": "nasa-systems-modeling",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
         },
         {
           "pack": "nasa-systems-modeling",
@@ -594,9 +682,9 @@
           "note": "Patterns/practice heuristics"
         },
         {
-          "pack": "nasa-systems-modeling",
-          "chapter": "cheatsheet.md (support file)",
-          "note": "Cheatsheet / quick reference"
+          "pack": "sebok",
+          "chapter": "ch06-sebok-representing-systems-models.md",
+          "note": "Representing systems with models"
         }
       ]
     },
@@ -639,6 +727,21 @@
           "note": "Research agenda and conclusions"
         },
         {
+          "pack": "digital-systems-engineering",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "digital-systems-engineering",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "digital-systems-engineering",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
           "pack": "dod-digital-engineering",
           "chapter": "ch01-dod-digital-engineering-introduction-purpose-vision.md",
           "note": "DoD DE strategy vision and purpose"
@@ -674,6 +777,26 @@
           "note": "Implementation summary and next steps"
         },
         {
+          "pack": "dod-digital-engineering",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "dod-digital-engineering",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "dod-digital-engineering",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "dote-te-guidebook",
+          "chapter": "ch06-mosa-automation-digital-te.md",
+          "note": "MOSA, automation, and digital-engineering enablers for T&E tempo (also T&E)"
+        },
+        {
           "pack": "nasa-de-acquisition",
           "chapter": "ch01-nasa-de-acquisition-framework-rationale-and-dee.md",
           "note": "DE acquisition rationale and digital engineering ecosystem"
@@ -692,36 +815,6 @@
           "pack": "nasa-de-acquisition",
           "chapter": "ch08-nasa-de-acquisition-mbe-plan-development.md",
           "note": "MBE plan development"
-        },
-        {
-          "pack": "dod-digital-engineering",
-          "chapter": "glossary.md (support file)",
-          "note": "Glossary for the pack"
-        },
-        {
-          "pack": "dod-digital-engineering",
-          "chapter": "patterns.md (support file)",
-          "note": "Patterns/practice heuristics"
-        },
-        {
-          "pack": "dod-digital-engineering",
-          "chapter": "cheatsheet.md (support file)",
-          "note": "Cheatsheet / quick reference"
-        },
-        {
-          "pack": "digital-systems-engineering",
-          "chapter": "glossary.md (support file)",
-          "note": "Glossary for the pack"
-        },
-        {
-          "pack": "digital-systems-engineering",
-          "chapter": "patterns.md (support file)",
-          "note": "Patterns/practice heuristics"
-        },
-        {
-          "pack": "digital-systems-engineering",
-          "chapter": "cheatsheet.md (support file)",
-          "note": "Cheatsheet / quick reference"
         }
       ]
     },
@@ -732,6 +825,11 @@
           "pack": "faa-sem",
           "chapter": "ch05-faa-sem-configuration-decision-vv.md",
           "note": "CM, decision analysis, V&V (crosscutting bundle)"
+        },
+        {
+          "pack": "faa-std-025",
+          "chapter": "ch06-revisions-cm-and-approval.md",
+          "note": "IRD/ICD revisions, CM (Order 1800.66), and approval flow"
         },
         {
           "pack": "mil-hdbk-61",
@@ -769,6 +867,21 @@
           "note": "Tailoring CM by program phase"
         },
         {
+          "pack": "mil-hdbk-61",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "mil-hdbk-61",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "mil-hdbk-61",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
           "pack": "nasa-de-acquisition",
           "chapter": "ch02-nasa-de-acquisition-drds-and-configuration-data-management.md",
           "note": "DRDs, configuration and data mgmt (also data mgmt)"
@@ -782,27 +895,17 @@
           "pack": "nasa-se-handbook",
           "chapter": "ch31-6-5-configuration-management.md",
           "note": "Configuration management process"
-        },
-        {
-          "pack": "mil-hdbk-61",
-          "chapter": "glossary.md (support file)",
-          "note": "Glossary for the pack"
-        },
-        {
-          "pack": "mil-hdbk-61",
-          "chapter": "patterns.md (support file)",
-          "note": "Patterns/practice heuristics"
-        },
-        {
-          "pack": "mil-hdbk-61",
-          "chapter": "cheatsheet.md (support file)",
-          "note": "Cheatsheet / quick reference"
         }
       ]
     },
     {
       "name": "Data & Information Management",
       "chapters": [
+        {
+          "pack": "dod-vva-rpg",
+          "chapter": "ch09-data-vv-new-simulations.md",
+          "note": "Data verification and validation for new simulations (also V&V)"
+        },
         {
           "pack": "dodaf",
           "chapter": "ch05-data-information-viewpoint-div.md",
@@ -874,6 +977,11 @@
           "note": "RIO process, roles, tools"
         },
         {
+          "pack": "dod-vva-rpg",
+          "chapter": "ch10-risk-and-vva.md",
+          "note": "Risk drives VV&A depth and accreditation acceptance framing (also modeling)"
+        },
+        {
           "pack": "doe-o-413-3",
           "chapter": "ch05-risk-safety-and-exceptions.md",
           "note": "Risk-informed management, safety/security interfaces, and exception paths"
@@ -934,6 +1042,21 @@
           "note": "Enterprise risks and appendices"
         },
         {
+          "pack": "nasa-risk",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "nasa-risk",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "nasa-risk",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
           "pack": "nasa-se-handbook",
           "chapter": "ch30-6-4-technical-risk-management.md",
           "note": "Technical risk management process"
@@ -952,21 +1075,6 @@
           "pack": "nist-ai-rmf",
           "chapter": "ch07-manage-function.md",
           "note": "Manage function: risk treatment"
-        },
-        {
-          "pack": "nasa-risk",
-          "chapter": "glossary.md (support file)",
-          "note": "Glossary for the pack"
-        },
-        {
-          "pack": "nasa-risk",
-          "chapter": "patterns.md (support file)",
-          "note": "Patterns/practice heuristics"
-        },
-        {
-          "pack": "nasa-risk",
-          "chapter": "cheatsheet.md (support file)",
-          "note": "Cheatsheet / quick reference"
         }
       ]
     },
@@ -977,6 +1085,51 @@
           "pack": "dod-rio",
           "chapter": "ch04-dod-rio-opportunity-cross-program.md",
           "note": "Opportunity management and cross-program risk/opportunity"
+        },
+        {
+          "pack": "federal-bca",
+          "chapter": "ch01-purpose-scope-and-principles.md",
+          "note": "OMB A-94 purpose, scope, and general BCA/CEA principles"
+        },
+        {
+          "pack": "federal-bca",
+          "chapter": "ch02-identifying-measuring-benefits-costs.md",
+          "note": "Identifying and measuring social benefits and costs vs baseline"
+        },
+        {
+          "pack": "federal-bca",
+          "chapter": "ch03-discounting-and-time.md",
+          "note": "Discount-rate policy and present-value comparison over time"
+        },
+        {
+          "pack": "federal-bca",
+          "chapter": "ch04-uncertainty-and-sensitivity.md",
+          "note": "Uncertainty characterization and sensitivity analysis (also risk)"
+        },
+        {
+          "pack": "federal-bca",
+          "chapter": "ch05-distributional-effects-and-incidence.md",
+          "note": "Distributional effects and economic incidence across groups"
+        },
+        {
+          "pack": "federal-bca",
+          "chapter": "ch06-reporting-and-decision-use.md",
+          "note": "Reporting BCA results for OMB/agency decision use (also decision analysis)"
+        },
+        {
+          "pack": "federal-bca",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "federal-bca",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "federal-bca",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
         }
       ]
     },
@@ -1002,6 +1155,41 @@
           "pack": "doe-sem",
           "chapter": "ch03-planning-stage.md",
           "note": "Planning stage: QA/CM plans, objectives, scope, feasibility"
+        },
+        {
+          "pack": "mil-std-881f",
+          "chapter": "ch01-wbs-principles-and-definitions.md",
+          "note": "MIL-STD-881F WBS principles, 100% rule, and dictionary discipline"
+        },
+        {
+          "pack": "mil-std-881f",
+          "chapter": "ch02-program-wbs-roles-and-preaward.md",
+          "note": "Program WBS construction, roles, and pre-award solicitation levels"
+        },
+        {
+          "pack": "mil-std-881f",
+          "chapter": "ch03-contract-wbs-and-programmatic-issues.md",
+          "note": "Contract WBS extension; SoS/FoS, software, and cyber placement (also supplier)"
+        },
+        {
+          "pack": "mil-std-881f",
+          "chapter": "ch04-commodity-wbs-air-missile-sea-space.md",
+          "note": "Commodity WBS templates: air, missile, sea, and space (Appendices A-F)"
+        },
+        {
+          "pack": "mil-std-881f",
+          "chapter": "ch05-commodity-wbs-ground-umms-launch-is.md",
+          "note": "Commodity WBS templates: ground, UMS, launch, and IS/DBS (Appendices G-J)"
+        },
+        {
+          "pack": "mil-std-881f",
+          "chapter": "ch06-common-elements-appendix-k.md",
+          "note": "Appendix K common elements (SE, PM, ST&E, training, data, etc.)"
+        },
+        {
+          "pack": "mil-std-881f",
+          "chapter": "ch07-numbering-reporting-sustainment.md",
+          "note": "WBS numbering, cost reporting, and Appendix L sustainment CES (also logistics)"
         },
         {
           "pack": "nasa-npr-7123",
@@ -1079,6 +1267,21 @@
           "note": "Using TRAs in decisions (also decision analysis)"
         },
         {
+          "pack": "gao-tra",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "gao-tra",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "gao-tra",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
           "pack": "mrl-deskbook",
           "chapter": "ch01-mrl-deskbook-foundations-and-dod-policy.md",
           "note": "Manufacturing readiness fundamentals"
@@ -1107,6 +1310,21 @@
           "pack": "mrl-deskbook",
           "chapter": "ch07-mrl-deskbook-tailoring-and-users-guide.md",
           "note": "MRL tailoring and use"
+        },
+        {
+          "pack": "mrl-deskbook",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "mrl-deskbook",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "mrl-deskbook",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
         },
         {
           "pack": "nasa-ms-7009",
@@ -1169,32 +1387,7 @@
           "note": "Product/process comparisons"
         },
         {
-          "pack": "gao-tra",
-          "chapter": "glossary.md (support file)",
-          "note": "Glossary for the pack"
-        },
-        {
-          "pack": "gao-tra",
-          "chapter": "patterns.md (support file)",
-          "note": "Patterns/practice heuristics"
-        },
-        {
-          "pack": "gao-tra",
-          "chapter": "cheatsheet.md (support file)",
-          "note": "Cheatsheet / quick reference"
-        },
-        {
-          "pack": "mrl-deskbook",
-          "chapter": "glossary.md (support file)",
-          "note": "Glossary for the pack"
-        },
-        {
-          "pack": "mrl-deskbook",
-          "chapter": "patterns.md (support file)",
-          "note": "Patterns/practice heuristics"
-        },
-        {
-          "pack": "mrl-deskbook",
+          "pack": "nist-stat-handbook",
           "chapter": "cheatsheet.md (support file)",
           "note": "Cheatsheet / quick reference"
         },
@@ -1207,11 +1400,6 @@
           "pack": "nist-stat-handbook",
           "chapter": "patterns.md (support file)",
           "note": "Patterns/practice heuristics"
-        },
-        {
-          "pack": "nist-stat-handbook",
-          "chapter": "cheatsheet.md (support file)",
-          "note": "Cheatsheet / quick reference"
         }
       ]
     },
@@ -1279,6 +1467,21 @@
           "note": "Writing RMA requirements"
         },
         {
+          "pack": "faa-rma",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "faa-rma",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "faa-rma",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
           "pack": "faa-system-safety",
           "chapter": "ch01-faa-system-safety-foundations-policy-process-principles.md",
           "note": "System safety policy, process, principles"
@@ -1312,6 +1515,21 @@
           "pack": "faa-system-safety",
           "chapter": "ch07-faa-system-safety-orm-human-organizational-factors.md",
           "note": "Operational risk mgmt and human/org factors"
+        },
+        {
+          "pack": "faa-system-safety",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "faa-system-safety",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "faa-system-safety",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
         },
         {
           "pack": "mil-hdbk-338",
@@ -1439,6 +1657,21 @@
           "note": "Safety verification tasks"
         },
         {
+          "pack": "mil-std-882",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "mil-std-882",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "mil-std-882",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
           "pack": "nasa-fault-management",
           "chapter": "ch01-nasa-fault-management-introduction-and-fm-definitions.md",
           "note": "Fault management definitions and scope"
@@ -1477,6 +1710,21 @@
           "pack": "nasa-fault-management",
           "chapter": "ch08-nasa-fault-management-organization-and-lessons-learned.md",
           "note": "FM organization and lessons learned"
+        },
+        {
+          "pack": "nasa-fault-management",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "nasa-fault-management",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "nasa-fault-management",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
         },
         {
           "pack": "nasa-pra",
@@ -1519,6 +1767,21 @@
           "note": "Launch abort modeling and worked examples"
         },
         {
+          "pack": "nasa-pra",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "nasa-pra",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "nasa-pra",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
           "pack": "nasa-rm-standard",
           "chapter": "ch01-nasa-rm-standard-scope-and-applicability.md",
           "note": "R&M standard scope"
@@ -1549,6 +1812,21 @@
           "note": "Evidentiary analysis methods"
         },
         {
+          "pack": "nasa-rm-standard",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "nasa-rm-standard",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "nasa-rm-standard",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
           "pack": "nasa-system-safety",
           "chapter": "ch01-introduction.md",
           "note": "System safety introduction"
@@ -1569,114 +1847,24 @@
           "note": "Safety objectives and requirements (also reqs eng)"
         },
         {
+          "pack": "nasa-system-safety",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "nasa-system-safety",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "nasa-system-safety",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
           "pack": "nist-stat-handbook",
           "chapter": "ch08-nist-stat-handbook-assessing-product-reliability.md",
           "note": "Assessing product reliability"
-        },
-        {
-          "pack": "mil-std-882",
-          "chapter": "glossary.md (support file)",
-          "note": "Glossary for the pack"
-        },
-        {
-          "pack": "mil-std-882",
-          "chapter": "patterns.md (support file)",
-          "note": "Patterns/practice heuristics"
-        },
-        {
-          "pack": "mil-std-882",
-          "chapter": "cheatsheet.md (support file)",
-          "note": "Cheatsheet / quick reference"
-        },
-        {
-          "pack": "nasa-system-safety",
-          "chapter": "glossary.md (support file)",
-          "note": "Glossary for the pack"
-        },
-        {
-          "pack": "nasa-system-safety",
-          "chapter": "patterns.md (support file)",
-          "note": "Patterns/practice heuristics"
-        },
-        {
-          "pack": "nasa-system-safety",
-          "chapter": "cheatsheet.md (support file)",
-          "note": "Cheatsheet / quick reference"
-        },
-        {
-          "pack": "faa-system-safety",
-          "chapter": "glossary.md (support file)",
-          "note": "Glossary for the pack"
-        },
-        {
-          "pack": "faa-system-safety",
-          "chapter": "patterns.md (support file)",
-          "note": "Patterns/practice heuristics"
-        },
-        {
-          "pack": "faa-system-safety",
-          "chapter": "cheatsheet.md (support file)",
-          "note": "Cheatsheet / quick reference"
-        },
-        {
-          "pack": "nasa-pra",
-          "chapter": "glossary.md (support file)",
-          "note": "Glossary for the pack"
-        },
-        {
-          "pack": "nasa-pra",
-          "chapter": "patterns.md (support file)",
-          "note": "Patterns/practice heuristics"
-        },
-        {
-          "pack": "nasa-pra",
-          "chapter": "cheatsheet.md (support file)",
-          "note": "Cheatsheet / quick reference"
-        },
-        {
-          "pack": "faa-rma",
-          "chapter": "glossary.md (support file)",
-          "note": "Glossary for the pack"
-        },
-        {
-          "pack": "faa-rma",
-          "chapter": "patterns.md (support file)",
-          "note": "Patterns/practice heuristics"
-        },
-        {
-          "pack": "faa-rma",
-          "chapter": "cheatsheet.md (support file)",
-          "note": "Cheatsheet / quick reference"
-        },
-        {
-          "pack": "nasa-rm-standard",
-          "chapter": "glossary.md (support file)",
-          "note": "Glossary for the pack"
-        },
-        {
-          "pack": "nasa-rm-standard",
-          "chapter": "patterns.md (support file)",
-          "note": "Patterns/practice heuristics"
-        },
-        {
-          "pack": "nasa-rm-standard",
-          "chapter": "cheatsheet.md (support file)",
-          "note": "Cheatsheet / quick reference"
-        },
-        {
-          "pack": "nasa-fault-management",
-          "chapter": "glossary.md (support file)",
-          "note": "Glossary for the pack"
-        },
-        {
-          "pack": "nasa-fault-management",
-          "chapter": "patterns.md (support file)",
-          "note": "Patterns/practice heuristics"
-        },
-        {
-          "pack": "nasa-fault-management",
-          "chapter": "cheatsheet.md (support file)",
-          "note": "Cheatsheet / quick reference"
         }
       ]
     },
@@ -1722,6 +1910,11 @@
           "pack": "cisa-cpg",
           "chapter": "patterns.md (support file)",
           "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "dote-te-guidebook",
+          "chapter": "ch05-cybersecurity-te.md",
+          "note": "Cooperative and adversarial cybersecurity T&E across the lifecycle (also T&E)"
         },
         {
           "pack": "mrl-deskbook",
@@ -1819,6 +2012,21 @@
           "note": "Monitor step"
         },
         {
+          "pack": "nist-800-37",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "nist-800-37",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "nist-800-37",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
           "pack": "nist-800-61",
           "chapter": "ch01-scope-shift-and-csf-integration.md",
           "note": "IR reframed as cybersecurity risk management via CSF 2.0"
@@ -1899,6 +2107,21 @@
           "note": "Recover function"
         },
         {
+          "pack": "nist-csf",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "nist-csf",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "nist-csf",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
           "pack": "nist-ssdf",
           "chapter": "ch01-introduction-and-how-to-use.md",
           "note": "SSDF purpose and use"
@@ -1922,6 +2145,21 @@
           "pack": "nist-ssdf",
           "chapter": "ch05-respond-to-vulnerabilities.md",
           "note": "Respond to vulnerabilities"
+        },
+        {
+          "pack": "nist-ssdf",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "nist-ssdf",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "nist-ssdf",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
         },
         {
           "pack": "nist-sse",
@@ -1964,47 +2202,7 @@
           "note": "Applying resiliency with risk mgmt"
         },
         {
-          "pack": "nist-csf",
-          "chapter": "glossary.md (support file)",
-          "note": "Glossary for the pack"
-        },
-        {
-          "pack": "nist-csf",
-          "chapter": "patterns.md (support file)",
-          "note": "Patterns/practice heuristics"
-        },
-        {
-          "pack": "nist-csf",
-          "chapter": "cheatsheet.md (support file)",
-          "note": "Cheatsheet / quick reference"
-        },
-        {
-          "pack": "nist-800-37",
-          "chapter": "glossary.md (support file)",
-          "note": "Glossary for the pack"
-        },
-        {
-          "pack": "nist-800-37",
-          "chapter": "patterns.md (support file)",
-          "note": "Patterns/practice heuristics"
-        },
-        {
-          "pack": "nist-800-37",
-          "chapter": "cheatsheet.md (support file)",
-          "note": "Cheatsheet / quick reference"
-        },
-        {
-          "pack": "nist-ssdf",
-          "chapter": "glossary.md (support file)",
-          "note": "Glossary for the pack"
-        },
-        {
-          "pack": "nist-ssdf",
-          "chapter": "patterns.md (support file)",
-          "note": "Patterns/practice heuristics"
-        },
-        {
-          "pack": "nist-ssdf",
+          "pack": "nist-sse",
           "chapter": "cheatsheet.md (support file)",
           "note": "Cheatsheet / quick reference"
         },
@@ -2017,11 +2215,6 @@
           "pack": "nist-sse",
           "chapter": "patterns.md (support file)",
           "note": "Patterns/practice heuristics"
-        },
-        {
-          "pack": "nist-sse",
-          "chapter": "cheatsheet.md (support file)",
-          "note": "Cheatsheet / quick reference"
         }
       ]
     },
@@ -2074,6 +2267,21 @@
           "note": "Safety, environment, anthropometry, documentation"
         },
         {
+          "pack": "faa-hf-std",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "faa-hf-std",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "faa-hf-std",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
           "pack": "mil-hdbk-516",
           "chapter": "ch08-crew-systems-criteria.md",
           "note": "Crew systems: pilot-vehicle interface, life support, escape/survival criteria (also airworthiness)"
@@ -2124,45 +2332,35 @@
           "note": "HSI plan checklist and cases"
         },
         {
+          "pack": "nasa-hsi",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "nasa-hsi",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "nasa-hsi",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
           "pack": "nasa-se-handbook",
           "chapter": "ch05-2-6-human-systems-integration-hsi-in-the-se-pr.md",
           "note": "HSI overview in SE processes"
-        },
-        {
-          "pack": "faa-hf-std",
-          "chapter": "glossary.md (support file)",
-          "note": "Glossary for the pack"
-        },
-        {
-          "pack": "faa-hf-std",
-          "chapter": "patterns.md (support file)",
-          "note": "Patterns/practice heuristics"
-        },
-        {
-          "pack": "faa-hf-std",
-          "chapter": "cheatsheet.md (support file)",
-          "note": "Cheatsheet / quick reference"
-        },
-        {
-          "pack": "nasa-hsi",
-          "chapter": "glossary.md (support file)",
-          "note": "Glossary for the pack"
-        },
-        {
-          "pack": "nasa-hsi",
-          "chapter": "patterns.md (support file)",
-          "note": "Patterns/practice heuristics"
-        },
-        {
-          "pack": "nasa-hsi",
-          "chapter": "cheatsheet.md (support file)",
-          "note": "Cheatsheet / quick reference"
         }
       ]
     },
     {
       "name": "Logistics, Supportability & Sustainment",
       "chapters": [
+        {
+          "pack": "dote-te-guidebook",
+          "chapter": "ch07-suitability-reliability-growth.md",
+          "note": "Operational suitability and reliability-growth gates (OTRR/supportability)"
+        },
         {
           "pack": "sd-22-dmsms",
           "chapter": "ch01-sd-22-dmsms-introduction-fundamentals.md",
@@ -2205,6 +2403,11 @@
         },
         {
           "pack": "sd-22-dmsms",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "sd-22-dmsms",
           "chapter": "glossary.md (support file)",
           "note": "Glossary for the pack"
         },
@@ -2212,11 +2415,6 @@
           "pack": "sd-22-dmsms",
           "chapter": "patterns.md (support file)",
           "note": "Patterns/practice heuristics"
-        },
-        {
-          "pack": "sd-22-dmsms",
-          "chapter": "cheatsheet.md (support file)",
-          "note": "Cheatsheet / quick reference"
         }
       ]
     },
@@ -2257,7 +2455,68 @@
     },
     {
       "name": "Training & Documentation Delivery",
-      "chapters": []
+      "chapters": [
+        {
+          "pack": "faa-std-025",
+          "chapter": "ch02-general-format-and-common-content.md",
+          "note": "Shared IRD/ICD format, outline, and common content preparation rules"
+        },
+        {
+          "pack": "mil-std-40051",
+          "chapter": "ch01-scope-tm-family-and-applicability.md",
+          "note": "MIL-STD-40051-2C scope, TM family types, and page-based applicability"
+        },
+        {
+          "pack": "mil-std-40051",
+          "chapter": "ch02-tm-structure-and-work-packages.md",
+          "note": "TM structure, chapters, and work-package assembly for page-based manuals"
+        },
+        {
+          "pack": "mil-std-40051",
+          "chapter": "ch03-front-matter-and-back-matter.md",
+          "note": "Front/back matter stack: identity, distribution, warnings, navigation"
+        },
+        {
+          "pack": "mil-std-40051",
+          "chapter": "ch04-style-format-and-layout-rules.md",
+          "note": "Style, format, and layout rules for interoperable multi-vendor TM output"
+        },
+        {
+          "pack": "mil-std-40051",
+          "chapter": "ch05-warnings-cautions-notes-and-hazmat.md",
+          "note": "Warnings/cautions/notes and HAZMAT presentation (also ops & maintenance)"
+        },
+        {
+          "pack": "mil-std-40051",
+          "chapter": "ch06-change-packages-and-revision-marking.md",
+          "note": "Change packages and revision marking for field TM libraries (also CM)"
+        },
+        {
+          "pack": "mil-std-40051",
+          "chapter": "ch07-content-selection-matrix-and-tailoring.md",
+          "note": "Content selection matrices and TM tailoring (also standards/tailoring)"
+        },
+        {
+          "pack": "mil-std-40051",
+          "chapter": "ch08-plate-exemplars-and-production-patterns.md",
+          "note": "Plate exemplars and production patterns for TM/training shops"
+        },
+        {
+          "pack": "mil-std-40051",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "mil-std-40051",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "mil-std-40051",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        }
+      ]
     },
     {
       "name": "Project/Program Management",
@@ -2296,6 +2555,11 @@
           "pack": "dod-mq-bok",
           "chapter": "ch06-dod-mq-bok-ops-support.md",
           "note": "SE/PM work in ops & support"
+        },
+        {
+          "pack": "dod-vva-rpg",
+          "chapter": "ch04-ms-pm-role-new-simulations.md",
+          "note": "M&S PM integrates VV&A into scope, schedule, budget, and decision gates (also modeling)"
         },
         {
           "pack": "dodaf",
@@ -2378,6 +2642,21 @@
           "note": "Specialized cost techniques and internal control"
         },
         {
+          "pack": "gao-cost",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "gao-cost",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "gao-cost",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
           "pack": "gao-schedule",
           "chapter": "ch01-gao-schedule-introduction-reliable-schedule.md",
           "note": "Reliable schedule fundamentals"
@@ -2418,6 +2697,21 @@
           "note": "EVM and forward/backward pass reference"
         },
         {
+          "pack": "gao-schedule",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "gao-schedule",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "gao-schedule",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
           "pack": "nasa-ceh",
           "chapter": "ch01-nasa-ceh-introduction-and-process-overview.md",
           "note": "Cost estimating process overview"
@@ -2446,6 +2740,21 @@
           "pack": "nasa-ceh",
           "chapter": "ch07-nasa-ceh-economic-analysis.md",
           "note": "Economic analysis"
+        },
+        {
+          "pack": "nasa-ceh",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "nasa-ceh",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "nasa-ceh",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
         },
         {
           "pack": "nasa-schedule",
@@ -2486,6 +2795,21 @@
           "pack": "nasa-schedule",
           "chapter": "ch08-nasa-schedule-documentation-and-communication.md",
           "note": "Schedule documentation and communication"
+        },
+        {
+          "pack": "nasa-schedule",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "nasa-schedule",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "nasa-schedule",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
         },
         {
           "pack": "nasa-se-handbook",
@@ -2531,66 +2855,6 @@
           "pack": "sebok",
           "chapter": "ch31-sebok-se-project-management.md",
           "note": "SE and project management relationship"
-        },
-        {
-          "pack": "gao-schedule",
-          "chapter": "glossary.md (support file)",
-          "note": "Glossary for the pack"
-        },
-        {
-          "pack": "gao-schedule",
-          "chapter": "patterns.md (support file)",
-          "note": "Patterns/practice heuristics"
-        },
-        {
-          "pack": "gao-schedule",
-          "chapter": "cheatsheet.md (support file)",
-          "note": "Cheatsheet / quick reference"
-        },
-        {
-          "pack": "nasa-schedule",
-          "chapter": "glossary.md (support file)",
-          "note": "Glossary for the pack"
-        },
-        {
-          "pack": "nasa-schedule",
-          "chapter": "patterns.md (support file)",
-          "note": "Patterns/practice heuristics"
-        },
-        {
-          "pack": "nasa-schedule",
-          "chapter": "cheatsheet.md (support file)",
-          "note": "Cheatsheet / quick reference"
-        },
-        {
-          "pack": "gao-cost",
-          "chapter": "glossary.md (support file)",
-          "note": "Glossary for the pack"
-        },
-        {
-          "pack": "gao-cost",
-          "chapter": "patterns.md (support file)",
-          "note": "Patterns/practice heuristics"
-        },
-        {
-          "pack": "gao-cost",
-          "chapter": "cheatsheet.md (support file)",
-          "note": "Cheatsheet / quick reference"
-        },
-        {
-          "pack": "nasa-ceh",
-          "chapter": "glossary.md (support file)",
-          "note": "Glossary for the pack"
-        },
-        {
-          "pack": "nasa-ceh",
-          "chapter": "patterns.md (support file)",
-          "note": "Patterns/practice heuristics"
-        },
-        {
-          "pack": "nasa-ceh",
-          "chapter": "cheatsheet.md (support file)",
-          "note": "Cheatsheet / quick reference"
         }
       ]
     },
@@ -2658,6 +2922,26 @@
       "name": "Governance, Reviews, Gates & Control Points",
       "chapters": [
         {
+          "pack": "dafman-63-119",
+          "chapter": "ch02-roles-and-certification-official.md",
+          "note": "MOTRC roles and the Mission-Oriented Test Certification Official"
+        },
+        {
+          "pack": "dafman-63-119",
+          "chapter": "ch03-continuous-process-and-review-cycle.md",
+          "note": "Continuous certification review cycle and template-based exit criteria"
+        },
+        {
+          "pack": "dafman-63-119",
+          "chapter": "ch04-certification-memo-and-gates.md",
+          "note": "Certification memorandum, readiness gates, and decertification"
+        },
+        {
+          "pack": "dafman-63-119",
+          "chapter": "ch07-templates-documentation-and-tracking.md",
+          "note": "MOTRC template matrix, documentation, and multi-source tracking"
+        },
+        {
           "pack": "dau-se-guidebook",
           "chapter": "ch03-technical-reviews-and-audits.md",
           "note": "TRRs, PDR/CDR, FCA/PCA and other formal control gates"
@@ -2708,6 +2992,21 @@
           "note": "Penalties and enforcement"
         },
         {
+          "pack": "eu-ai-act",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "eu-ai-act",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for the pack"
+        },
+        {
+          "pack": "eu-ai-act",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
+        },
+        {
           "pack": "nasa-npr-7123",
           "chapter": "ch05-lifecycle-technical-reviews.md",
           "note": "Lifecycle technical reviews (SRR through FRR)"
@@ -2726,21 +3025,6 @@
           "pack": "nist-csf",
           "chapter": "ch02-govern-gv.md",
           "note": "Govern function (cyber governance)"
-        },
-        {
-          "pack": "eu-ai-act",
-          "chapter": "glossary.md (support file)",
-          "note": "Glossary for the pack"
-        },
-        {
-          "pack": "eu-ai-act",
-          "chapter": "patterns.md (support file)",
-          "note": "Patterns/practice heuristics"
-        },
-        {
-          "pack": "eu-ai-act",
-          "chapter": "cheatsheet.md (support file)",
-          "note": "Cheatsheet / quick reference"
         }
       ]
     },
@@ -2766,6 +3050,11 @@
           "pack": "doe-sem",
           "chapter": "ch02-lifecycle-model-and-quality-reviews.md",
           "note": "Eight-stage SEM lifecycle with walkthrough/ISA/stage-exit gates (also governance gates)"
+        },
+        {
+          "pack": "faa-std-025",
+          "chapter": "ch01-scope-and-document-family.md",
+          "note": "FAA-STD-025f scope and IRD/ICD document-family definitions"
         },
         {
           "pack": "mil-hdbk-516",
@@ -2967,6 +3256,11 @@
     {
       "name": "Assurance & System Assurance",
       "chapters": [
+        {
+          "pack": "dod-vva-rpg",
+          "chapter": "ch06-accreditation-agent-role.md",
+          "note": "Accreditation agent assembles the accreditation case and residual-risk framing"
+        },
         {
           "pack": "eu-ai-act",
           "chapter": "ch03-high-risk-classification.md",
