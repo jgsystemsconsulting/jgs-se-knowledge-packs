@@ -126,4 +126,7 @@ Plans:
 **Success Criteria** (what must be TRUE):
   1. check_release PASS at the updated catalog/directory basis; all surfaces version-consistent
   2. v1.18.0 tagged + GitHub Release; CHANGELOG includes the v1.17.0 wording correction and doe-o-413-3 rename note
-**Plans**: TBD
+**Plans**: 1 plan
+
+Plans:
+- [ ] 9-01-PLAN.md — Version-surface bump 1.17.0→1.18.0 (IN-04 reconciliation), CHANGELOG entry (rename note leads, caveats, wording fix), IN-01 + OUSD fixes, dual-gate validation at 61/63, tag + GitHub Release v1.18.0, post-release records + v1.19 backlog
