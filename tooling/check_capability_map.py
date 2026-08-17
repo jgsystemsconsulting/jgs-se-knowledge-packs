@@ -20,12 +20,15 @@ Usage:  python tooling/check_capability_map.py
 from __future__ import annotations
 
 import json
+import re
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 MAP_PATH = ROOT / "docs" / "capability-pack-map.json"
 SUPPORT_SUFFIX = " (support file)"
+MAP_VERSION_RE = re.compile(r"^\d+\.\d+\.\d+$")
+GENERATED_ON_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 # Thresholds resolve by cluster NAME so renames fail loudly (unknown name → non-zero).
 THRESHOLDS: dict[str, int] = {
@@ -50,7 +53,7 @@ def main() -> int:
     try:
         with MAP_PATH.open(encoding="utf-8") as fh:
             data = json.load(fh)
-    except json.JSONDecodeError as exc:
+    except (json.JSONDecodeError, UnicodeDecodeError) as exc:
         print(f"FAIL: JSON decode error in {MAP_PATH.relative_to(ROOT).as_posix()}: {exc}")
         return 1
 
@@ -61,16 +64,26 @@ def main() -> int:
     schema = data.get("schema_version")
     if schema is None:
         fail(errs, "envelope: missing schema_version (expected int 2)")
-    elif schema != 2:
-        fail(errs, f"envelope: schema_version must be 2, got {schema!r}")
+    elif not isinstance(schema, int) or isinstance(schema, bool) or schema != 2:
+        fail(errs, f"envelope: schema_version must be int 2, got {schema!r}")
 
     map_version = data.get("map_version")
     if not map_version:
         fail(errs, "envelope: missing or empty map_version")
+    elif not isinstance(map_version, str) or not MAP_VERSION_RE.fullmatch(map_version):
+        fail(
+            errs,
+            f"envelope: map_version must match N.N.N, got {map_version!r}",
+        )
 
     generated_on = data.get("generated_on")
     if not generated_on:
         fail(errs, "envelope: missing or empty generated_on")
+    elif not isinstance(generated_on, str) or not GENERATED_ON_RE.fullmatch(generated_on):
+        fail(
+            errs,
+            f"envelope: generated_on must match YYYY-MM-DD, got {generated_on!r}",
+        )
 
     clusters = data.get("clusters")
     if not isinstance(clusters, list):
@@ -80,6 +93,7 @@ def main() -> int:
     # --- collect map entries ---
     all_entries: list[tuple[str, str, str]] = []  # (pack, chapter, note-cluster)
     counts: dict[str, int] = {}
+    seen_names: set[str] = set()
     for cluster in clusters:
         if not isinstance(cluster, dict):
             fail(errs, "clusters: entry is not an object")
@@ -88,6 +102,10 @@ def main() -> int:
         if not isinstance(name, str) or not name:
             fail(errs, "clusters: entry missing name")
             name = "<unnamed>"
+        if name in seen_names:
+            fail(errs, f"clusters: duplicate cluster name: {name!r}")
+        else:
+            seen_names.add(name)
         chapters = cluster.get("chapters")
         if not isinstance(chapters, list):
             fail(errs, f"clusters: {name!r} missing chapters list")
@@ -178,6 +196,20 @@ def main() -> int:
     for pack, chapter, cname in all_entries:
         if chapter.endswith(SUPPORT_SUFFIX):
             rel = chapter[: -len(SUPPORT_SUFFIX)]
+            # Support files are plain filenames at pack root — reject traversal/abs.
+            rel_path = Path(rel)
+            if (
+                ".." in rel_path.parts
+                or rel_path.is_absolute()
+                or "/" in rel
+                or "\\" in rel
+            ):
+                fail(
+                    errs,
+                    f"existence: support file path rejected (must be plain filename "
+                    f"at pack root): {rel!r} (cluster={cname})",
+                )
+                continue
             path = packs_root / pack / rel
             if not path.is_file():
                 fail(
