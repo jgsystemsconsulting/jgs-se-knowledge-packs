@@ -21,7 +21,7 @@ Seed: SEED-001. Goal: fatten competency *primaries* so se-agents can execute IOs
 
 ## v1.19 Phases
 
-- [ ] **Phase 10: Source vetting** — FUT-04 retry + DoDM 5000.102 / NASA-STD-8719.14 / GPS ICD / SP-7084 / AAF-before-use (VET-19-01..04)
+- [ ] **Phase 10: Source vetting** — FUT-04 retry + DoDM 5000.102 / NASA-STD-8719.14 / GPS ICD / SP-7084 / AAF-before-use (VET-19-01..04) — 10-01/10-02 docs-only
 - [ ] **Phase 11: IO-unlocking packs + Decision Analysis remap** — IO-01..07 (build what vetting clears; record deferrals honestly)
 - [ ] **Phase 12: Map regen + hygiene + gate wiring** — MAP-19-01..05, HYG-01..04
 - [ ] **Phase 13: Release surface + v1.19.0** — REL-19-01/02
@@ -37,10 +37,10 @@ Seed: SEED-001. Goal: fatten competency *primaries* so se-agents can execute IOs
   2. DoDM 5000.102, NASA-STD-8719.14, GPS ICD select, NASA SP-7084 each Tier 1/2/Excluded with dated rationale
   3. AAF Product Support + Software pathway either vetted Tier 1 or still "NOT yet vetted — do not use"
   4. New exclusions in docs/SOURCE-VETTING.md; no source URLs in that doc
-**Plans**: TBD
+**Plans**: [10-01](phases/10-source-vetting/10-01-PLAN.md) (register), [10-02](phases/10-source-vetting/10-02-PLAN.md) (planning-surface annotations)
 
 ### Phase 11: IO-unlocking packs + Decision Analysis remap
-**Goal**: Poorest competency primaries move; no silent ticks
+**Goal**: Poorest competency primaries move; no silent ticks (consumes Phase 10: build 8719.14C + IS-GPS-200N; remap/defer Army CBA, DoDM 5000.102, AAF; SP-7084 optional)
 **Depends on**: Phase 10
 **Requirements**: [IO-01, IO-02, IO-03, IO-04, IO-05, IO-06, IO-07]
 **Success Criteria** (what must be TRUE):
