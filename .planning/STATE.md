@@ -66,15 +66,21 @@ Progress: [██████████] 100% (v1.18.0 phases 6–9)
 | Phase 8 P01 | 45min | 5 tasks | 4 files |
 | Phase 9 P01 | ~10min | 6 tasks | 11 content + 3 planning |
 
-## v1.19 backlog (carried)
+## v1.19 backlog (carried — consolidated superset per v1.18.0-MILESTONE-AUDIT)
 
 - **FUT-04:** federal-bca Army CBA Guide second source — retry if ASAFM PDF becomes reachable
-- **FUT-05:** as recorded at bdc6c9e
-- **IN-02 (7-CODE-REVIEW IN-02):** minimal committed overlap checker (qualify source — distinct from 8-series IN-02)
-- Thin-cluster fattening for clusters 3 / 5 / 15
-- Optional PACK.yaml note additions and ROSAP Rev E retry per 7-GAP_ANALYSIS R1/R2/R5
+- **FUT-05:** deterministic capability-map generator (gate-not-generator annotation at bdc6c9e)
+- **IN-02 (7-CODE-REVIEW IN-02):** minimal committed overlap checker (distinct from 8-series IN-02)
+- Thin-cluster fattening for clusters 3 / 5 / 15 (above floors but still THIN by gap-report taxonomy)
+- Map-gate wiring: invoke check_capability_map.py from check_release.py (Phase 8 deferred)
+- **7-GAP R4:** 881F/VV&A DIST-A in-PDF-text edition revisit (current basis: ASSIST column / DEBoK metadata — honest but weaker evidence class)
+- **7-GAP R6 / IN-01 series:** topic-index polish (881F alphabetical order, 40051 circular routing, federal-bca label match)
+- Optional PACK.yaml note additions and ROSAP Rev E retry (7-GAP R1/R2/R5)
 - federal-bca "(c)" wording polish (R5 cosmetic)
-- Optional map-gate wiring into check_release (Phase 8 deferred)
+- CHANGELOG hygiene: strip UTF-8 BOM (line 1, pre-existing) + normalize CRLF→LF (620 occurrences)
+- `.gitattributes` pin (`*.md text eol=lf`) to prevent CRLF recurrence
+- AAF guidebooks vetting BEFORE any DAG-substitute use (Phase 6 deferral — never use unvetted)
+- External sync: add afotec/dod-dag/cmu-sei to jgs-reference-skill vet_source.py EXCLUDED signals (6-GAP Thread 3)
 
 ## Deviations / Notes
 

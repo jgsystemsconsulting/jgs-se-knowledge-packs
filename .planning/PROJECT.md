@@ -15,35 +15,16 @@ Every pack must be a licence-clean, validated, single-source reference that an e
 - **Success metric**: Pack count × install/usage validity (CI-validated catalogue)
 - **Strategy notes**: Non-commercial (NC) and share-alike (SA) sources carry licence obligations forward — licence tiering is a hard gate, not a nicety
 
-## Requirements
+## Current State
 
-### Validated
+**Shipped:** v1.18.0 (2026-08-17) — 63 packs (61 catalog + 2 signposts) across NASA/DoD/FAA/NIST/GAO/DOE/DHS/EU/SEBoK lineages; capability map v2 (schema 2, 628 entries, 32 clusters, hardened gate + CONTRACT) consumable by the se-agents generator; jgs-reference-skill pipeline synced to upstream book-to-skill v1.4.0.
 
-Shipped through v1.16.3:
+## Next Milestone Goals
 
-- [x] 48 packs across NASA / DoD / FAA / GAO / NIST / EU / SEBoK / OMG lineages, each conforming to docs/PACK-SPEC.md
-- [x] Deterministic licence-vetting + validation toolchain (vet_source, validate_pack, check_overlap, check_release; CI gate in .github/workflows/validate.yml)
-- [x] Multi-host installers (Claude Code, OpenClaw, Copilot CLI) + catalog.json registry
-- [x] Build pipeline promoted to jgs-reference-skill (fork of book-to-skill, synced v1.4.0)
-
-### Active
-
-(Defined per milestone — see REQUIREMENTS.md and ROADMAP.md for v1.17.0)
-
-### Out of Scope
-
-- Reproducing paywalled standards text (ISO/IEC/IEEE full texts, INCOSE Handbook) — not licence-viable; tracked in docs/SOURCE-VETTING.md Excluded list
-- Non-SE domains (pure software architecture, generic LLM prompting) — outside the library's charter
-- Runtime dependencies (MCP servers, API keys) — packs are plain Markdown by design
-
-## Context
-
-- Content-first repo: Markdown packs + stdlib-only Python tooling; no package manager
-- The 7-doc codebase map lives in `.planning/codebase/`; PACK-SPEC constraints in `.planning/intel/`
-- Known concerns (from map): signpost-pack validation false-fails, CI gate logic duplication, catalog.json drift unguarded, hardcoded local paths in build_all_packs.workflow.js, stale .pyc-only tests
-- Next milestone (v1.17.0): 11 researched candidates (8 Tier-1 builds + 3 vetted-out; 0 Tier-2 packs) + ruled-out source tracking
+v1.19 (unsccoped): carry-forward backlog in STATE.md (FUT-04/05, overlap checker, thin clusters 3/5/15, map-gate wiring, doc hygiene, AAF vetting); candidate seeds in .planning/research/capability-gap-report.md. Strategic option: the se-agents generator repo (docs/ROLE-AGENTS-REQUIREMENTS-V2.md) — the map contract it consumes is now stable.
 
 ## Constraints
+
 
 - Pack content licences are inherited from sources (Tier 1 public domain → Tier 3 excluded); vetting is a hard stop, not advisory
 - Packs must stay plain Markdown, progressive-disclosure structured (SKILL.md index + on-demand chapters)
