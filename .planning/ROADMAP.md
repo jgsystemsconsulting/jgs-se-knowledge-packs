@@ -76,7 +76,7 @@ Plans:
 - [x] **Phase 6: Source vetting + UNVERIFIED resolution** - Resolve 5 UNVERIFIED items; rule-outs recorded (VET-01/02)
 - [x] **Phase 7: Gap-driven pack builds** - Build GP-01..GP-07 packs (GP-08 descoped) via jgs-reference-skill pipeline
 - [x] **Phase 8: Agent-enablement surface** - Versioned capability-pack-map contract + regeneration (AE-01..03)
-- [ ] **Phase 9: Release surface + v1.18.0** - Registration, full validation, tag + release (REL-1x-01/02)
+- [x] **Phase 9: Release surface + v1.18.0** - Registration, full validation, tag + release (REL-1x-01/02)
 
 ## v1.18 Phase Details
 
@@ -129,4 +129,4 @@ Plans:
 **Plans**: 1 plan
 
 Plans:
-- [ ] 9-01-PLAN.md — Version-surface bump 1.17.0→1.18.0 (IN-04 reconciliation), CHANGELOG entry (rename note leads, caveats, wording fix), IN-01 + OUSD fixes, dual-gate validation at 61/63, tag + GitHub Release v1.18.0, post-release records + v1.19 backlog
+- [x] 9-01-PLAN.md — Version-surface bump 1.17.0→1.18.0 (IN-04 reconciliation), CHANGELOG entry (rename note leads, caveats, wording fix), IN-01 + OUSD fixes, dual-gate validation at 61/63, tag + GitHub Release v1.18.0, post-release records + v1.19 backlog

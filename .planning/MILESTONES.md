@@ -13,6 +13,11 @@ Source expansion shipped: 8 Tier-1 public-domain packs added (`nist-800-171`, `n
 - **GitHub Release:** https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/releases/tag/v1.17.0
 - **Deferred to v1.18+:** rename `doe-413-3b` → `doe-o-413-3` with catalog alias
 
-## v1.18.0 (in execution — Phase 6 vetting complete)
+## v1.18.0 (shipped 2026-08-17)
 
-Gap-driven expansion + agent enablement: 7 Tier-1 packs targeting the 1 empty + 15 thin capability clusters (research: .planning/research/capability-gap-report.md), versioned capability-pack-map contract for the se-agents generator, v1.17 carry-forwards. See REQUIREMENTS.md (VET/GP/AE/REL-1x) and ROADMAP.md phases 6-9.
+Gap-driven expansion + agent enablement shipped: 7 Tier-1 packs (`dote-te-guidebook`, `faa-std-025`, `federal-bca`, `dafman-63-119`, `mil-std-881f`, `mil-std-40051`, `dod-vva-rpg`); `doe-413-3b` renamed to `doe-o-413-3` with catalog alias retained; capability-pack-map v2 (schema_version 2, 32 clusters, 628 chapter entries, map_version 1.18.0) + CONTRACT + gate; all 11 version surfaces at 1.18.0; IN-01 cluster-name + OUSD typo + v1.17.0 index.html wording fix; gate PASS at 61 catalog / 63 dirs.
+
+- **Release commit:** `d19be1a` — `release(v1.18.0): 7 gap-driven Tier-1 packs (61 +2 signposts), capability map v2`
+- **Annotated tag:** `v1.18.0` — `v1.18.0: 7 gap-driven Tier-1 packs (61 +2 signposts), capability map v2`
+- **GitHub Release:** https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/releases/tag/v1.18.0
+- **Deferred to v1.19:** FUT-04 Army CBA retry; FUT-05 (bdc6c9e); 7-CODE-REVIEW IN-02 minimal committed overlap checker; thin clusters 3/5/15; optional PACK.yaml notes + ROSAP Rev E retry

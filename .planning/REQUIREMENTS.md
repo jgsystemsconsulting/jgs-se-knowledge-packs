@@ -96,8 +96,8 @@ Sourced from .planning/research/capability-gap-report.md (1 empty cluster, 15 th
 
 ### Release Surface
 
-- [ ] **REL-1x-01**: Full registration of new packs (catalog, SKILLS.md, packs.html, NOTICE, README, cursor manifest); check_release PASS
-- [ ] **REL-1x-02**: v1.18.0 tagged + GitHub Release; CHANGELOG entry includes the v1.17.0 wording fix (docs/index.html is a version surface, not a registered surface) and notes the doe-o-413-3 rename
+- [x] **REL-1x-01**: Full registration of new packs (catalog, SKILLS.md, packs.html, NOTICE, README, cursor manifest); check_release PASS
+- [x] **REL-1x-02**: v1.18.0 tagged + GitHub Release; CHANGELOG entry includes the v1.17.0 wording fix (docs/index.html is a version surface, not a registered surface) and notes the doe-o-413-3 rename
 
 ## Out of Scope (v1.18)
 
