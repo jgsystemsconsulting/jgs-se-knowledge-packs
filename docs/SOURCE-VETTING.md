@@ -126,7 +126,7 @@ build caveat.
 | Source | Tier | Licence evidence |
 |---|---|---|
 | **GP-07 / MIL-STD-40051-2C** (DoD page-based TM preparation; rev -2C 15 DEC 2015; -1/-2 family supersedes base 40051) | Tier 1 | US Government work (17 U.S.C. § 105); DIST-A on DLA ASSIST family records. Build caveat: Distribution Statement is a scanned image on the mirror copy — DIST-A must be visually confirmed on the cover at build (6-RESEARCH.md §1a). (Verified 2026-08-14.) |
-| **NASA SP-7084** (Grammar, Punctuation, and Capitalization: A Handbook for Technical Writers and Editors; Mary K. McCaskill, NASA Langley) (VET-01 item, not a GP pack) | Tier 1 | NTRS metadata: "Work of the US Gov. Public Use Permitted"; Distribution Limits Public. Prefer 1998 rev if mirror has text layer, else NTRS 1990 canonical (6-RESEARCH.md §1b). (Verified 2026-08-14.) |
+| **NASA SP-7084** (Grammar, Punctuation, and Capitalization: A Handbook for Technical Writers and Editors; Mary K. McCaskill, NASA Langley) (VET-01 item, not a GP pack) | Tier 1 | NTRS metadata: "Work of the US Gov. Public Use Permitted"; Distribution Limits Public. Prefer 1998 rev if mirror has text layer, else NTRS 1990 canonical (6-RESEARCH.md §1b). (Verified 2026-08-14.) Reconfirmed 2026-08-17 (10-RESEARCH.md). |
 | **GP-01 / DoD VV&A RPG** (DoD VV&A Recommended Practice Guide; OUSD(R&E); multi-chapter web delivery) | Tier 1 | US Government work (17 U.S.C. § 105). Build model: no consolidated PDF — chapter-wise build with per-chapter provenance in PACK.yaml; confirm DIST-A / authorship inside each chapter PDF used (6-RESEARCH.md §1c). (Verified 2026-08-14.) |
 | **GP-05 / MIL-STD-881F** (Defense Work Breakdown Structures; Active on DLA ASSIST) | Tier 1 | US Government work (17 U.S.C. § 105). Fetch via DLA ASSIST-QuickSearch (free account) or GovTribe attachment (everyspec has only 881E); DIST-A visual confirm at build; resolve exact revision date on QuickSearch detail page (6-RESEARCH.md §1d). (Verified 2026-08-14.) |
 | **GP-02 / FAA-STD-025** (FAA Interface Documentation IRD/ICD/IR) | Tier 1 | US Government work (17 U.S.C. § 105). Rev E canonical (ROSAP full-text PDF) + rev F mirror; record chosen revision in PACK.yaml (6-RESEARCH.md §2a). (Verified 2026-08-14.) |
@@ -137,6 +137,20 @@ build caveat.
 8 vetted candidates → 7 GP packs (GP-08 descoped; SP-7084 is evidence-only for cluster 25 alternatives).
 
 **GP-08 deferral note:** NASA-HDBK-2203 standards-page PDF is a placeholder; content is swehb.nasa.gov wiki HTML only — deferred out of v1.18 (see REQUIREMENTS Out of Scope and 6-RESEARCH.md §4). Optional future rescope to NPR 7150.2 + NASA-STD-8739.8 (downloadable PDFs).
+
+### Vetted candidates (v1.19.0) — in-source this session; build-time confirm still required
+
+Source URLs for all vetted/excluded/UNVERIFIED candidates are recorded in
+`.planning/phases/10-source-vetting/10-RESEARCH.md`
+(Link Policy: never published in docs or packs).
+
+Rows below are Phase 10 decisions dated 2026-08-17. Tier 1 leaning still requires Phase 11 build-time in-source confirmation on the copy actually extracted. Unreachable candidates are not listed as Vetted.
+
+| Source | Tier | Licence evidence |
+|---|---|---|
+| **NASA-STD-8719.14C** (Process for Limiting Orbital Debris; Version C, Approved 2021-11-05; ACTIVE; 77 pp) | Tier 1 | NASA-authored US Government work (17 U.S.C. § 105). Official NTSS access control: "Internet Public -- Standard is cleared for public accessibility on the internet." In-PDF title page confirms NASA TECHNICAL STANDARD, Approved 2021-11-05, superseding 8719.14B; no copyright / all-rights-reserved notice in the text layer. Contrast: this is a real standard PDF, not a GP-08 placeholder. Confirm no third-party inserts at Phase 11 build (10-RESEARCH.md §NASA-STD-8719.14). (Verified 2026-08-17.) |
+| **GPS IS-GPS-200N** (NAVSTAR GPS Space Segment/Navigation User Segment Interfaces; Rev N; SSC / MilComm & PNT) | Tier 1 | In-PDF cover: "DISTRIBUTION STATEMENT A. Approved for public release. Distribution is unlimited." Revision record notes distribution status changed to Public Release. gps.gov public list names IS-GPS-200N, IS-GPS-705J, IS-GPS-800J, ICD-GPS-240D, ICD-GPS-870E — there is no public IS-300 / IS-GPS-300 (SEED-001 "ICD-IS-200/300" was a naming error; do not Excluded-table a phantom document). SAIC is named Interface Control Contractor (watch-item, not an all-rights-reserved notice). Do not package ICD-GPS-153 (request-form only). Confirm DIST-A on the extracted copy at Phase 11 build (10-RESEARCH.md §GPS). (Verified 2026-08-17.) |
+| **NASA SP-7084** (Grammar, Punctuation, and Capitalization; Mary K. McCaskill, NASA Langley) | Tier 1 RECONFIRMED | Already Tier 1 on the v1.18 table. NTRS metadata reconfirmed 2026-08-17: "Work of the US Gov. Public Use Permitted"; Distribution Limits Public. Edition fork unchanged: prefer 1998 rev if that copy has a text layer, else NTRS 1990 canonical. Not a new exclusion. Optional Training-diversity pack only — not an IO-01..07 must (10-RESEARCH.md §NASA SP-7084). (Reconfirmed 2026-08-17.) |
 
 ### Def Stan 00-051 — UNVERIFIED / excluded from this milestone `[T2-03]`
 
