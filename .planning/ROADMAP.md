@@ -115,7 +115,9 @@ Plans:
   1. Map JSON carries schema + version + generated-on; regeneration is idempotent and gate-checked
   2. Map includes all v1.18 packs; cluster 25 non-empty; clusters 3/5/15 above critical thresholds
   3. Contract documented (schema, versioning, refresh path) for downstream consumption
-**Plans**: TBD
+**Plans**: 1 plan
+Plans:
+- [ ] 8-01-PLAN.md — Map v2 gate (red) + agent regeneration of 52 new chapters + gate green + CONTRACT doc + SC verify
 
 ### Phase 9: Release surface + v1.18.0
 **Goal**: Catalog, docs, and manifests synchronized; v1.18.0 tagged and released
