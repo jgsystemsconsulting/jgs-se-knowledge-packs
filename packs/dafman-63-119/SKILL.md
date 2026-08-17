@@ -61,8 +61,8 @@ ITT co-chairs (CDT/TM + OTO) orchestrate; contractor/supplier data rights and te
 
 ## Topic Index
 - **ACAT / MDA / PEO certification authority** → ch02, ch04
-- **Agile / software pathway / DevSecOps test** → ch01, ch03, ch04
 - **AFOTEC / MAJCOM OTO / USSF OTO** → ch02
+- **Agile / software pathway / DevSecOps test** → ch01, ch03, ch04
 - **Certification memorandum** → ch04
 - **Certification Official (vs former OT&E Certification Official)** → ch02
 - **Contractor testing / supplier data** → ch05, ch06, ch07

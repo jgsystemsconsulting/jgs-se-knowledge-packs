@@ -17,7 +17,7 @@ notes: >
   and redistribute (including commercially). Attribution to OMB is courtesy only. Content
   is synthesized reference notes; check_overlap verified. No source-material link published.
   P7-PRE-2 DUAL GATE: (1) OMB Circular A-94 (2023-11-09) — PASS: in-source scan found no
-  third-party copyright / (c) / all-rights-reserved notices; document is an OMB circular
+  third-party copyright / all-rights-reserved notices (literal "(c)" hits in A-94 are enumeration markers, not copyright claims); document is an OMB circular
   memorandum to heads of executive departments (statute Tier-1). (2) US Army Cost Benefit
   Analysis Guide — FAIL TO FETCH: asafm.army.mil returned HTTP 403 (Akamai) for all tried
   paths; Wayback CDX/API returned 503 from this environment; no alternate public PDF

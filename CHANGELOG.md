@@ -1,4 +1,4 @@
-﻿<!--
+<!--
 Copyright (c) 2026 JG Systems Consulting Ltd.: MIT License (see LICENSE).
 SPDX-License-Identifier: MIT
 -->

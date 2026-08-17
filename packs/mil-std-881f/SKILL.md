@@ -75,6 +75,7 @@ Program WBS + dictionary → RFP extension requirements → Contract WBS CM → 
 - **Information Systems / DBS (J)** → ch05, ch03
 - **Launch vehicle (I)** → ch05
 - **Missile / ordnance (C) / strategic (D)** → ch04
+- **PM / measurement / EVMS mapping** → ch07
 - **Program Element / defense materiel item** → ch01
 - **Program WBS / pre-award / RFP** → ch02
 - **Sea systems (E)** → ch04
@@ -86,7 +87,6 @@ Program WBS + dictionary → RFP extension requirements → Contract WBS CM → 
 - **Technical planning & WBS** → ch01, ch02, ch07
 - **Training / data / support equipment elements** → ch06
 - **Unmanned maritime (H)** → ch05
-- **PM / measurement / EVMS mapping** → ch07
 
 ## Supporting Files
 - [glossary.md](glossary.md) — core 881F WBS terms with chapter refs

@@ -71,7 +71,7 @@ Built as **A-94 only** after P7-PRE-2 dual-document gate: Army Cost Benefit Anal
 - **Net present value (NPV)** → ch03, ch06
 - **OMB A-11 / A-19 submissions** → ch01, ch06
 - **Opportunity cost** → ch02
-- **Opportunity/Benefit Analysis** → ch01, ch02, ch06
+- **Opportunity cost / benefit identification** → ch01, ch02, ch06
 - **Sensitivity analysis** → ch04
 - **Social vs budget cost** → ch02
 - **Transfers** → ch02, ch05

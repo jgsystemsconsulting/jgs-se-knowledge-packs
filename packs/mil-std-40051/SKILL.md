@@ -74,7 +74,7 @@ Appendix/matrix-driven include lists per maintenance level and TM type (operator
 - **RPSTL** → ch02, ch07
 - **Style / trim size / figures / tables** → ch04
 - **Technical manual training materials** → ch01, ch07, ch08
-- **Training & Documentation** → ch01, ch07, ch08, Topic Index
+- **Training & Documentation** → ch01, ch07, ch08
 - **Warning / caution / note signal words** → ch05
 - **Warning summary** → ch03, ch05
 - **Work package (WP) structure and numbering** → ch02, ch06
