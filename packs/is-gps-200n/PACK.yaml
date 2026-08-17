@@ -1,0 +1,33 @@
+slug: is-gps-200n
+title: "NAVSTAR GPS Space Segment / Navigation User Segment Interfaces (IS-GPS-200N)"
+publisher: "US Space Force / Space Systems Command (MilComm & PNT)"
+source_version: "IS-GPS-200 Rev N (cover date 01-AUG-2022; public-release revision record)"
+license: "Public Domain (US Government work, 17 U.S.C. § 105; Distribution Statement A — Approved for public release; distribution is unlimited)"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "jgs-reference-skill extraction + offset-mapped parallel chapter generation"
+  source_pages: 248
+  chapters: 6
+  built_on: "2026-08-17"
+notes: >
+  US Government work -- public domain (17 U.S.C. § 105); Distribution Statement A
+  -- Approved for public release; distribution is unlimited. Free to reproduce,
+  transform, and redistribute (including commercially). Attribution to USSF/SSC
+  is provided as a courtesy in NOTICE, not as an obligation. Content is
+  synthesized/transformed reference notes (ICD exemplar, not appendix dump);
+  no long verbatim passages reproduced (verified by tooling check_overlap).
+  No source-material link published (see docs/LICENSING.md). P11-PRE-2 on this
+  extracted copy: DIST-A sentence present verbatim -- "DISTRIBUTION STATEMENT A.
+  Approved for public release. Distribution is unlimited." Revision record notes
+  distribution status changed to Public Release. SAIC named Interface Control
+  Contractor (GPS SE&I) with street address on the cover -- recorded as a
+  watch-item only, not an all-rights-reserved notice; 0 hits for Copyright /
+  All rights / proprietary. Identity: IS-GPS-200 Rev N, 01-AUG-2022, SSC /
+  MilComm & PNT. Extraction used pdftotext fallback (docling absent).
+  chars/page = 2462.2 (610615 chars / 248 pages) >= 300 floor.
+  scan_generated_skill findings reviewed at build. Apps II-IV payloads were
+  not transcribed. Tier 1 leaning was not treated as skip-confirm.
+change_indication: "reconstructed as synthesized reference notes"
