@@ -78,8 +78,9 @@ When packs change (new pack, new chapter, rename, delete):
    pack/chapter staleness vs `packs/`, file existence, uniqueness, thresholds).
 4. Commit both `.json` and `.md` together.
 
-The gate is standalone (not wired into `check_release.py` in this milestone;
-release wiring is optional follow-on).
+The refresh path still runs `python tooling/check_capability_map.py`, and
+`python tooling/check_release.py` now invokes `check_capability_map.main()`
+in-process (local/trusted; CI does not exec repo Python).
 
 ## 5. Threshold table
 

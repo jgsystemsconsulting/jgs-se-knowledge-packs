@@ -13,7 +13,7 @@ Checks:
   4. (pack, chapter) uniqueness across all entries; per-cluster counts printed.
   5. Name-keyed threshold minimums for thin clusters (never by array index).
 
-stdlib only. Standalone — not imported by check_release.py (Phase 9 may wire it).
+stdlib only. Invoked by check_release.py (local/trusted); CI still does not exec repo Python.
 
 Usage:  python tooling/check_capability_map.py
 """
