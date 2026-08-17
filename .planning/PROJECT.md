@@ -21,7 +21,7 @@ Every pack must be a licence-clean, validated, single-source reference that an e
 
 ## Next Milestone Goals
 
-v1.19 (unsccoped): carry-forward backlog in STATE.md (FUT-04/05, overlap checker, thin clusters 3/5/15, map-gate wiring, doc hygiene, AAF vetting); candidate seeds in .planning/research/capability-gap-report.md. Strategic option: the se-agents generator repo (docs/ROLE-AGENTS-REQUIREMENTS-V2.md) — the map contract it consumes is now stable.
+**v1.19.0 — Agent IO Depth** (SEED-001 selected). Fatten ISECF competency *primaries* so se-agents can execute IOs (trade studies, V&V, transition, interfaces) instead of filling the 20-ref cap from fat secondaries. Pack-side only — se-agents consumer refresh (502 docs, thin-threshold, Cyber/DE bindings) stays in that repo (MAP-19-05 documents the contract). Phases 10–13.
 
 ## Constraints
 

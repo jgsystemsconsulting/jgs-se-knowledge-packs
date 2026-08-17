@@ -1,6 +1,6 @@
 ---
 id: SEED-001
-status: dormant
+status: selected
 planted: 2026-08-17
 planted_during: post-v1.18.0 (milestones archived)
 trigger_when: when scoping v1.19 or any milestone that fattens packs for se-agents IOs
