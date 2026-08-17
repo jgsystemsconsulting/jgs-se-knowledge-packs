@@ -377,6 +377,31 @@
           "note": "ICD design-characteristic content satisfying the parent IRD"
         },
         {
+          "pack": "is-gps-200n",
+          "chapter": "ch02-interface-definition-and-identification.md",
+          "note": "Interface definition vs identification: L1/L2 contract object and code/data families"
+        },
+        {
+          "pack": "is-gps-200n",
+          "chapter": "ch03-interface-criteria-pattern.md",
+          "note": "Interface-criteria shall pattern: frequency, levels, phasing, polarization"
+        },
+        {
+          "pack": "is-gps-200n",
+          "chapter": "ch04-nav-data-as-payload.md",
+          "note": "NAV data as ICD payload families (LNAV/CNAV) rather than bit dumps"
+        },
+        {
+          "pack": "is-gps-200n",
+          "chapter": "ch05-time-and-definition-hygiene.md",
+          "note": "ICD time, URA/CEI, and reserved/invalid definition hygiene"
+        },
+        {
+          "pack": "is-gps-200n",
+          "chapter": "ch06-appendices-as-a-map.md",
+          "note": "How a live IS maps normative annexes without dumping payload tables"
+        },
+        {
           "pack": "nasa-se-handbook",
           "chapter": "ch29-6-3-interface-management.md",
           "note": "Interface management process"
@@ -477,6 +502,16 @@
           "note": "Validation fundamentals: accuracy vs real world for intended uses"
         },
         {
+          "pack": "dod-vva-rpg",
+          "chapter": "ch12-developing-the-referent.md",
+          "note": "Validation-referent identify/select/specify/approve for intended use"
+        },
+        {
+          "pack": "dod-vva-rpg",
+          "chapter": "ch13-conceptual-model-development-and-validation.md",
+          "note": "Simulation conceptual-model development and validation before implementation"
+        },
+        {
           "pack": "dote-te-guidebook",
           "chapter": "ch03-operational-te.md",
           "note": "OT&E: operational effectiveness, suitability, and survivability under realistic conditions"
@@ -565,6 +600,11 @@
           "pack": "dod-te-guidebook",
           "chapter": "patterns.md (support file)",
           "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "dod-vva-rpg",
+          "chapter": "ch11-te-vv-checklist.md",
+          "note": "T&E/V&V integration checklist: cases, criticality bins, DT/OT partitions"
         },
         {
           "pack": "dote-te-guidebook",
@@ -830,6 +870,11 @@
           "pack": "faa-std-025",
           "chapter": "ch06-revisions-cm-and-approval.md",
           "note": "IRD/ICD revisions, CM (Order 1800.66), and approval flow"
+        },
+        {
+          "pack": "is-gps-200n",
+          "chapter": "ch01-is-scope-and-change-control.md",
+          "note": "IS/ICD identity plus DIST-A and IRN/ICWG/CCB change control (also Interfaces)"
         },
         {
           "pack": "mil-hdbk-61",
@@ -1103,18 +1148,8 @@
         },
         {
           "pack": "federal-bca",
-          "chapter": "ch04-uncertainty-and-sensitivity.md",
-          "note": "Uncertainty characterization and sensitivity analysis (also risk)"
-        },
-        {
-          "pack": "federal-bca",
           "chapter": "ch05-distributional-effects-and-incidence.md",
           "note": "Distributional effects and economic incidence across groups"
-        },
-        {
-          "pack": "federal-bca",
-          "chapter": "ch06-reporting-and-decision-use.md",
-          "note": "Reporting BCA results for OMB/agency decision use (also decision analysis)"
         },
         {
           "pack": "federal-bca",
@@ -1136,6 +1171,21 @@
     {
       "name": "Decision Analysis & Trade Studies",
       "chapters": [
+        {
+          "pack": "dod-vva-rpg",
+          "chapter": "ch06-accreditation-agent-role.md",
+          "note": "Accreditation is the authority decision; residual-risk framing for intended use (MAP-19-03 move)"
+        },
+        {
+          "pack": "federal-bca",
+          "chapter": "ch04-uncertainty-and-sensitivity.md",
+          "note": "Uncertainty/sensitivity is the A-94 decision-analysis method spine (MAP-19-03 move)"
+        },
+        {
+          "pack": "federal-bca",
+          "chapter": "ch06-reporting-and-decision-use.md",
+          "note": "Reporting BCA results for OMB/agency decision use (MAP-19-03 move)"
+        },
         {
           "pack": "nasa-ceh",
           "chapter": "ch06-nasa-ceh-decision-support-analyses.md",
@@ -2447,6 +2497,41 @@
           "note": "Product transition to operations"
         },
         {
+          "pack": "nasa-std-8719-14",
+          "chapter": "ch01-scope-and-applicability.md",
+          "note": "NPR 8715.6 + 8719.14C scope/applicability for orbital-debris assessments (also Standards)"
+        },
+        {
+          "pack": "nasa-std-8719-14",
+          "chapter": "ch02-assessment-overview.md",
+          "note": "ODAR/EOMP assessment overview, six issues, and approved debris tools"
+        },
+        {
+          "pack": "nasa-std-8719-14",
+          "chapter": "ch03-debris-released-normal-operations.md",
+          "note": "Limits on debris released during normal operations (25-year / 100 object-years)"
+        },
+        {
+          "pack": "nasa-std-8719-14",
+          "chapter": "ch04-explosions-breakups-collisions.md",
+          "note": "Explosion, passivation, and collision-probability limits for disposal-capable ops (also Safety)"
+        },
+        {
+          "pack": "nasa-std-8719-14",
+          "chapter": "ch05-postmission-disposal.md",
+          "note": "Postmission disposal options, protected-band exit, and 0.90 disposal reliability"
+        },
+        {
+          "pack": "nasa-std-8719-14",
+          "chapter": "ch06-reentry-surviving-debris.md",
+          "note": "Reentry surviving-debris casualty risk and controlled-reentry keep-out"
+        },
+        {
+          "pack": "nasa-std-8719-14",
+          "chapter": "ch07-special-classes-odar-eomp.md",
+          "note": "Special-class debris limits plus ODAR/EOMP report governance (also Governance)"
+        },
+        {
           "pack": "sebok",
           "chapter": "ch18-sebok-system-maintenance.md",
           "note": "System maintenance (also sustainment)"
@@ -3256,11 +3341,6 @@
     {
       "name": "Assurance & System Assurance",
       "chapters": [
-        {
-          "pack": "dod-vva-rpg",
-          "chapter": "ch06-accreditation-agent-role.md",
-          "note": "Accreditation agent assembles the accreditation case and residual-risk framing"
-        },
         {
           "pack": "eu-ai-act",
           "chapter": "ch03-high-risk-classification.md",

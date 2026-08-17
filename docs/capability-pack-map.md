@@ -12,6 +12,7 @@ Rules of construction:
 - A standard's own process definitions go to cluster 30; performing the capability goes to the capability cluster.
 - Machine-readable version: `docs/capability-pack-map.json`.
 - Consumption contract (schema, versioning, refresh): see `docs/capability-map-CONTRACT.md`.
+- Changelog (v1.19): added `nasa-std-8719-14` + `is-gps-200n`; leftover RPG `dod-vva-rpg` ch11–ch13; MAP-19-03 MOVE of `federal-bca` ch04+ch06 and `dod-vva-rpg` ch06 into Decision Analysis.
 - Changelog (v1.18.0): added `dod-vva-rpg`, `dote-te-guidebook`, `mil-std-40051`, `dafman-63-119`, `mil-std-881f`, `faa-std-025`, `federal-bca`.
 - Changelog (v1.17.0): added `nist-800-171`, `nist-800-61`, `cisa-cpg`, `doe-sem`, `mil-hdbk-338`, `mil-hdbk-516`, `nasa-ms-7009`, and `doe-o-413-3` (this pack was renamed from `doe-413-3b`; same content, new slug).
 
@@ -23,18 +24,18 @@ Rules of construction:
 | 2. Requirements Engineering | 19 |
 | 3. Requirements Traceability & Allocation | 3 |
 | 4. Architecture & Design | 20 |
-| 5. Interface Management & ICIDs | 4 |
+| 5. Interface Management & ICIDs | 9 |
 | 6. Integration | 4 |
 | 7. Verification | 11 |
-| 8. Validation | 5 |
-| 9. Test & Evaluation | 16 |
+| 8. Validation | 7 |
+| 9. Test & Evaluation | 17 |
 | 10. Modeling, MBSE & SysML | 20 |
 | 11. Digital Engineering & Digital Twins | 25 |
-| 12. Configuration Management & Baselines | 15 |
+| 12. Configuration Management & Baselines | 16 |
 | 13. Data & Information Management | 7 |
 | 14. Risk Management | 27 |
-| 15. Opportunity/Benefit Management | 10 |
-| 16. Decision Analysis & Trade Studies | 2 |
+| 15. Opportunity/Benefit Management | 8 |
+| 16. Decision Analysis & Trade Studies | 5 |
 | 17. Technical Planning & Work Breakdown | 13 |
 | 18. Measurement & Technical Assessment | 36 |
 | 19. Quality Assurance & Process Compliance | 3 |
@@ -42,7 +43,7 @@ Rules of construction:
 | 21. Cybersecurity & Security Engineering | 69 |
 | 22. Human Systems Integration / Human Factors | 26 |
 | 23. Logistics, Supportability & Sustainment | 12 |
-| 24. Operations, Maintenance & Disposal | 6 |
+| 24. Operations, Maintenance & Disposal | 13 |
 | 25. Training & Documentation Delivery | 12 |
 | 26. Project/Program Management | 67 |
 | 27. Supplier, Procurement & Acquisition | 7 |
@@ -50,8 +51,8 @@ Rules of construction:
 | 29. Governance, Reviews, Gates & Control Points | 21 |
 | 30. Standards, Tailoring & Process Models | 36 |
 | 31. Specialty Engineering | 7 |
-| 32. Assurance & System Assurance | 9 |
-| **Total** | **628** |
+| 32. Assurance & System Assurance | 8 |
+| **Total** | **644** |
 
 ## 1. Systems Thinking & Fundamentals
 
@@ -143,6 +144,11 @@ Rules of construction:
 | faa-sem | ch04-faa-sem-technical-management-interface-risk.md | Interface and risk management (also risk mgmt) |
 | faa-std-025 | ch03-ird-content-requirements.md | IRD shall-content across common, medium-specific, service, and facility interfaces |
 | faa-std-025 | ch04-icd-content-requirements.md | ICD design-characteristic content satisfying the parent IRD |
+| is-gps-200n | ch02-interface-definition-and-identification.md | Interface definition vs identification: L1/L2 contract object and code/data families |
+| is-gps-200n | ch03-interface-criteria-pattern.md | Interface-criteria shall pattern: frequency, levels, phasing, polarization |
+| is-gps-200n | ch04-nav-data-as-payload.md | NAV data as ICD payload families (LNAV/CNAV) rather than bit dumps |
+| is-gps-200n | ch05-time-and-definition-hygiene.md | ICD time, URA/CEI, and reserved/invalid definition hygiene |
+| is-gps-200n | ch06-appendices-as-a-map.md | How a live IS maps normative annexes without dumping payload tables |
 | nasa-se-handbook | ch29-6-3-interface-management.md | Interface management process |
 ## 6. Integration
 
@@ -172,6 +178,8 @@ Rules of construction:
 | Pack | Chapter | Why it fits / one-line value |
 |---|---|---|
 | dod-vva-rpg | ch08-validation-fundamentals.md | Validation fundamentals: accuracy vs real world for intended uses |
+| dod-vva-rpg | ch12-developing-the-referent.md | Validation-referent identify/select/specify/approve for intended use |
+| dod-vva-rpg | ch13-conceptual-model-development-and-validation.md | Simulation conceptual-model development and validation before implementation |
 | dote-te-guidebook | ch03-operational-te.md | OT&E: operational effectiveness, suitability, and survivability under realistic conditions |
 | faa-ams-vv | ch04-faa-ams-vv-investment-analysis.md | Validation during investment analysis |
 | faa-ams-vv | ch06-faa-ams-vv-in-service-management.md | In-service validation and V&V mgmt (also ops) |
@@ -193,6 +201,7 @@ Rules of construction:
 | dod-te-guidebook | cheatsheet.md (support file) | Cheatsheet / quick reference |
 | dod-te-guidebook | glossary.md (support file) | Glossary for the pack |
 | dod-te-guidebook | patterns.md (support file) | Patterns/practice heuristics |
+| dod-vva-rpg | ch11-te-vv-checklist.md | T&E/V&V integration checklist: cases, criticality bins, DT/OT partitions |
 | dote-te-guidebook | ch01-te-enterprise-overview-and-roles.md | DoD T&E enterprise overview; DOT&E vs USD(R&E) roles under DoDI 5000.89 |
 | dote-te-guidebook | ch04-live-fire-te.md | LFT&E survivability and lethality against combat threats (also safety/survivability) |
 | dote-te-guidebook | ch08-temp-strategy-and-ste-planning.md | T&E Strategy/TEMP, test plans, and STE resource planning |
@@ -255,6 +264,7 @@ Rules of construction:
 |---|---|---|
 | faa-sem | ch05-faa-sem-configuration-decision-vv.md | CM, decision analysis, V&V (crosscutting bundle) |
 | faa-std-025 | ch06-revisions-cm-and-approval.md | IRD/ICD revisions, CM (Order 1800.66), and approval flow |
+| is-gps-200n | ch01-is-scope-and-change-control.md | IS/ICD identity plus DIST-A and IRN/ICWG/CCB change control (also Interfaces) |
 | mil-hdbk-61 | ch01-mil-hdbk-61-scope-fundamentals-definitions.md | CM scope and definitions |
 | mil-hdbk-61 | ch02-mil-hdbk-61-lifecycle-management-planning.md | CM planning across lifecycle |
 | mil-hdbk-61 | ch03-mil-hdbk-61-configuration-identification.md | Configuration identification |
@@ -318,9 +328,7 @@ Rules of construction:
 | federal-bca | ch01-purpose-scope-and-principles.md | OMB A-94 purpose, scope, and general BCA/CEA principles |
 | federal-bca | ch02-identifying-measuring-benefits-costs.md | Identifying and measuring social benefits and costs vs baseline |
 | federal-bca | ch03-discounting-and-time.md | Discount-rate policy and present-value comparison over time |
-| federal-bca | ch04-uncertainty-and-sensitivity.md | Uncertainty characterization and sensitivity analysis (also risk) |
 | federal-bca | ch05-distributional-effects-and-incidence.md | Distributional effects and economic incidence across groups |
-| federal-bca | ch06-reporting-and-decision-use.md | Reporting BCA results for OMB/agency decision use (also decision analysis) |
 | federal-bca | cheatsheet.md (support file) | Cheatsheet / quick reference |
 | federal-bca | glossary.md (support file) | Glossary for the pack |
 | federal-bca | patterns.md (support file) | Patterns/practice heuristics |
@@ -328,6 +336,9 @@ Rules of construction:
 
 | Pack | Chapter | Why it fits / one-line value |
 |---|---|---|
+| dod-vva-rpg | ch06-accreditation-agent-role.md | Accreditation is the authority decision; residual-risk framing for intended use (MAP-19-03 move) |
+| federal-bca | ch04-uncertainty-and-sensitivity.md | Uncertainty/sensitivity is the A-94 decision-analysis method spine (MAP-19-03 move) |
+| federal-bca | ch06-reporting-and-decision-use.md | Reporting BCA results for OMB/agency decision use (MAP-19-03 move) |
 | nasa-ceh | ch06-nasa-ceh-decision-support-analyses.md | Cost-based decision support and trade analysis |
 | nasa-se-handbook | ch34-6-8-decision-analysis.md | Decision analysis process |
 ## 17. Technical Planning & Work Breakdown
@@ -614,6 +625,13 @@ Rules of construction:
 | nasa-se-handbook | ch15-3-8-project-phase-e-operations-and-sustainment.md | Phase E operations and sustainment |
 | nasa-se-handbook | ch16-3-9-project-phase-f-closeout.md | Phase F closeout and disposal |
 | nasa-se-handbook | ch25-5-5-product-transition.md | Product transition to operations |
+| nasa-std-8719-14 | ch01-scope-and-applicability.md | NPR 8715.6 + 8719.14C scope/applicability for orbital-debris assessments (also Standards) |
+| nasa-std-8719-14 | ch02-assessment-overview.md | ODAR/EOMP assessment overview, six issues, and approved debris tools |
+| nasa-std-8719-14 | ch03-debris-released-normal-operations.md | Limits on debris released during normal operations (25-year / 100 object-years) |
+| nasa-std-8719-14 | ch04-explosions-breakups-collisions.md | Explosion, passivation, and collision-probability limits for disposal-capable ops (also Safety) |
+| nasa-std-8719-14 | ch05-postmission-disposal.md | Postmission disposal options, protected-band exit, and 0.90 disposal reliability |
+| nasa-std-8719-14 | ch06-reentry-surviving-debris.md | Reentry surviving-debris casualty risk and controlled-reentry keep-out |
+| nasa-std-8719-14 | ch07-special-classes-odar-eomp.md | Special-class debris limits plus ODAR/EOMP report governance (also Governance) |
 | sebok | ch18-sebok-system-maintenance.md | System maintenance (also sustainment) |
 ## 25. Training & Documentation Delivery
 
@@ -800,7 +818,6 @@ Rules of construction:
 
 | Pack | Chapter | Why it fits / one-line value |
 |---|---|---|
-| dod-vva-rpg | ch06-accreditation-agent-role.md | Accreditation agent assembles the accreditation case and residual-risk framing |
 | eu-ai-act | ch03-high-risk-classification.md | Classifying high-risk AI systems |
 | eu-ai-act | ch04-high-risk-requirements.md | Requirements placed on high-risk AI systems |
 | eu-ai-act | ch06-conformity-assessment.md | Conformity assessment and CE marking regime |
