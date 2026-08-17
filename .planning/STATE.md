@@ -5,16 +5,16 @@ milestone_name: "**Goal**: Catalog/docs/manifests synchronized; v1.19.0 tagged a
 current_phase: 12
 current_phase_name: Map regen + hygiene + gate wiring
 status: executing
-last_updated: "2026-08-17T20:36:06Z"
+stopped_at: Completed 12-02-PLAN.md
+last_updated: "2026-08-17T20:49:31.084Z"
 last_activity: 2026-08-17
-last_activity_desc: 12-01 map regen + MAP-19-03 MOVE + floors + CONTRACT
+last_activity_desc: 12-02 gate wire + hygiene; both gates PASS
 progress:
   total_phases: 4
-  completed_phases: 2
+  completed_phases: 3
   total_plans: 6
-  completed_plans: 5
+  completed_plans: 6
   percent: 75
-stopped_at: 12-01 complete — ready for 12-02 gate wire + hygiene
 ---
 
 # Project State
@@ -29,16 +29,22 @@ See: .planning/PROJECT.md (updated 2026-08-17)
 ## Current Position
 
 Phase: 12 of 13 (Map regen + hygiene + gate wiring)
-Plan: 01 complete; 02 not started
-Status: Ready to execute 12-02
-Last activity: 2026-08-17 — 12-01 regenerated map (644 / DA 5/4); gate GREEN standalone
+Plan: 01–02 complete
+Status: Phase 12 execute complete — ready for verify-work
+Last activity: 2026-08-17 — 12-02 wired map gate + hygiene; both gates PASS
 
-Progress: [████████░░] 75%
+Progress: [██████████] 100%
 
 ## Performance Metrics
 
 - Phases completed: 9/13 (v1.17 + v1.18 shipped)
 - Packs shipped: 63 (61 catalog + 2 signposts)
+
+**Per-Plan Metrics:**
+
+| Plan | Duration | Tasks | Files |
+|------|----------|-------|-------|
+| Phase 12 P02 | 11 min | 3 tasks | 10 files |
 
 ## Selected seed
 
@@ -59,3 +65,10 @@ Deferred again: FUT-05 deterministic generator; committed overlap checker (7-COD
 - Phase 10 (2026-08-17): SOURCE-VETTING v1.19 recorded. GO: NASA-STD-8719.14C, IS-GPS-200N, SP-7084 optional. NO-GO: FUT-04 Army CBA (403/503 deferred), DoDM 5000.102 (UNVERIFIED), AAF (NOT yet vetted — do not use). Verdicts + URLs in 10-RESEARCH.md. Phase 11 builds only GO names.
 - Phase 11 (2026-08-17): built nasa-std-8719-14 + is-gps-200n; extended dod-vva-rpg; IO-01 remap table specified (no map JSON); IO-05/06 deferred; IO-07 accept; SP-7084 skipped.
 - Phase 12-01 (2026-08-17): map regen 628→644; 16 chapters classified; MAP-19-03 MOVE (DA 5/4); THRESHOLDS ≥4; CONTRACT 628+/502/Cyber+DE unbound. map_version stays 1.18.0. Integration floor held; no raid.
+- Phase 12-02 (2026-08-17): check_release imports check_capability_map.main(); CHANGELOG BOM/LF + .gitattributes; four SKILL nits + federal-bca (c); HYG-03 sibling PR #2. Version trio 1.18.0.
+
+## Session
+
+**Last session:** 2026-08-17T20:49:31.070Z
+**Stopped at:** Completed 12-02-PLAN.md
+**Resume file:** None
