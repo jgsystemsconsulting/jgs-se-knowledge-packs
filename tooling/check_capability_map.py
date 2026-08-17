@@ -34,8 +34,12 @@ GENERATED_ON_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 THRESHOLDS: dict[str, int] = {
     "Training & Documentation Delivery": 1,
     "Requirements Traceability & Allocation": 3,
-    "Interface Management & ICIDs": 3,
+    "Interface Management & ICIDs": 4,
     "Opportunity/Benefit Management": 2,
+    "Decision Analysis & Trade Studies": 4,
+    "Validation": 4,
+    "Integration": 4,
+    "Operations, Maintenance & Disposal": 4,
 }
 
 
