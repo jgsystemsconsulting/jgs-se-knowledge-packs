@@ -90,8 +90,22 @@ rename that leaves the lookup name missing fails the gate loudly.
 |---|---|
 | Training & Documentation Delivery | ≥ 1 |
 | Requirements Traceability & Allocation | ≥ 3 |
-| Interface Management & ICIDs | ≥ 3 |
+| Interface Management & ICIDs | ≥ 4 |
 | Opportunity/Benefit Management | ≥ 2 |
+| Decision Analysis & Trade Studies | ≥ 4 |
+| Validation | ≥ 4 |
+| Integration | ≥ 4 |
+| Operations, Maintenance & Disposal | ≥ 4 |
 
 Thresholds guard thin-cluster fattening from the capability-gap baseline; they
 are correctness floors for the agent-enablement surface, not upper bounds.
+
+## 6. Live snapshot vs residue
+
+The live committed snapshot is **628+** chapter entries — post-regen **644**
+(16 classified Phase-11 chapters, 0 new support-file rows). The **502** figure
+is residue from a historical ROLE-AGENTS-REQUIREMENTS-V2 draft count; consumers
+must read the live JSON, not 502. **Cybersecurity & Security Engineering**
+(live 69 entries / 10 packs) and **Digital Engineering & Digital Twins**
+(live 25 entries / 4 packs) remain **unbound**. Binding those clusters is
+se-agents-side work, not this milestone.
