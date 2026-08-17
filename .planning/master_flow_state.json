@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
   "kind": "pointer",
-  "active_phase": 8,
-  "active_phase_dir": ".planning/phases/8-agent-enablement-surface",
-  "active_state": ".planning/phases/8-agent-enablement-surface/master_flow_state.json",
+  "active_phase": 9,
+  "active_phase_dir": ".planning/phases/9-release-surface-v1-18-0",
+  "active_state": ".planning/phases/9-release-surface-v1-18-0/master_flow_state.json",
   "lock": {
-    "phase": 8,
+    "phase": 9,
     "session_hint": "master-flow",
-    "updated_at": "2026-08-17T00:00:39.337582+00:00"
+    "updated_at": "2026-08-17T00:42:22.509903+00:00"
   },
-  "updated_at": "2026-08-17T00:00:39.337582+00:00",
+  "updated_at": "2026-08-17T00:42:22.509903+00:00",
   "notes": ""
 }
