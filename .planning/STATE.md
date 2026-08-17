@@ -57,3 +57,4 @@ Deferred again: FUT-05 deterministic generator; committed overlap checker (7-COD
 - IO-05/IO-06 are conditional on AAF clearing VET-19-03 — expect honest deferral
 - IO-07 will not produce a pack
 - Phase 10 (2026-08-17): SOURCE-VETTING v1.19 recorded. GO: NASA-STD-8719.14C, IS-GPS-200N, SP-7084 optional. NO-GO: FUT-04 Army CBA (403/503 deferred), DoDM 5000.102 (UNVERIFIED), AAF (NOT yet vetted — do not use). Verdicts + URLs in 10-RESEARCH.md. Phase 11 builds only GO names.
+- Phase 11 (2026-08-17): built nasa-std-8719-14 + is-gps-200n; extended dod-vva-rpg; IO-01 remap table specified (no map JSON); IO-05/06 deferred; IO-07 accept; SP-7084 skipped.

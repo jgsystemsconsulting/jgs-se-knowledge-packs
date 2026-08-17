@@ -61,6 +61,7 @@ Built as **A-94 only** after P7-PRE-2 dual-document gate: Army Cost Benefit Anal
 ## Topic Index
 - **Baseline / with-without** → ch02
 - **BCA vs CEA** → ch01, ch02
+- **Decision Analysis** → ch04, ch06
 - **Discount rates (real/nominal)** → ch03
 - **Distributional weights** → ch05
 - **Economic incidence** → ch05
