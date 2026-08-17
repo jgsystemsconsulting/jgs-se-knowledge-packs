@@ -6,12 +6,13 @@
   "phase_slug": "9-release-surface-v1-18-0",
   "phase_dir": ".planning/phases/9-release-surface-v1-18-0",
   "scope": "phase",
-  "current_gate": "execute",
+  "current_gate": "impl_review",
   "completed": [
     "research",
     "plan",
     "plan_check",
-    "plan_review"
+    "plan_review",
+    "execute"
   ],
   "skipped": [
     "discuss",
@@ -47,10 +48,11 @@
     "research": "embedded_in_plan",
     "plan": "passed",
     "plan_check": "passed",
-    "plan_review": "passed_with_notes"
+    "plan_review": "passed_with_notes",
+    "execute": "passed"
   },
   "artifacts": {},
   "checkpoint_log": [],
   "notes": "ledger hand-initialized",
-  "updated_at": "2026-08-17T00:58:12.940573+00:00"
+  "updated_at": "2026-08-17T01:06:59.501812+00:00"
 }
