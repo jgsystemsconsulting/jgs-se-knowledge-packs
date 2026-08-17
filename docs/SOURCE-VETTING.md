@@ -82,8 +82,9 @@ This list exists so the repo never ships something that triggers a takedown.
 | **INCOSE Guide to Writing Requirements** | Purchase-only, all-rights-reserved (INCOSE). Revisit only if an open-licence edition appears (FUT-02). (Verified 2026-08-14.) |
 | **DAU/WARU SE Guidebook (Feb 2022) re-pack** | Duplicate of existing `packs/dau-se-guidebook/` in the 48-pack baseline (US-gov public domain; excluded for duplication, not licence). (Verified 2026-08-14.) |
 | **AFOTEC Test Design Guide** | DTIC serving maintenance shells on citation and PDF endpoints so no in-copy licence check possible; only DTIC hit is a late-1980s edition (AD-A205 489, circa 1989), ~37 years stale vs live DAFMAN 63-119 (2021) and DOT&E Enterprise Guidebook (2022); revisit only if AFOTEC publishes a modern public edition (6-RESEARCH.md §1e). (Verified 2026-08-14.) |
-| **DoD DAG (Defense Acquisition Guidebook)** | Retired per DAU AAF guidebooks page ("has been retired and replaced"); AFCAPO retirement notice 2022-08-15; dead canonical URLs, Wayback-only text, provenance/versioning risk; AAF guidebooks are the intended substitute but are NOT yet vetted — licence spot-check deferred (not a v1.18 build item); vet before any future use (6-RESEARCH.md §3a). (Verified 2026-08-14.) |
+| **DoD DAG (Defense Acquisition Guidebook)** | Retired per DAU AAF guidebooks page ("has been retired and replaced"); AFCAPO retirement notice 2022-08-15; dead canonical URLs, Wayback-only text, provenance/versioning risk; AAF guidebooks are the intended substitute but are NOT yet vetted — licence spot-check deferred (not a v1.18 build item); vet before any future use (6-RESEARCH.md §3a). (Verified 2026-08-14.) v1.19 retry still NOT yet vetted — do not use (no guidebook PDF opened; 2022 site copyright footer is not a redistribution grant) (10-RESEARCH.md §AAF). (Also verified 2026-08-17.) |
 | **CMU SEI technical reports** | © Carnegie Mellon University; IP page grants government-purpose reproduction only with notice retention; non-government reuse routed through permission@sei.cmu.edu; DIST-A on some SEI reports governs DoD distribution, not CMU copyright, and creates no Tier 1/2 grant; excluded absent written CMU/SEI permission (6-RESEARCH.md §3b). (Verified 2026-08-14.) |
+| **DAU/WarU AAF Product Support Manager Guidebook + Software pathway guidebooks** | Intended DAG substitute still NOT yet vetted — do not use. 2022 AAF guidebooks index carries "Copyright © 2022 Adaptive Acquisition Framework - Defense Acquisition University"; live guidebook PDFs were not opened this session (host challenge 403 / successor-host 404). Keep Excluded-pending until an in-source redistribution grant is quoted (10-RESEARCH.md §AAF). (Verified 2026-08-17.) |
 
 > If you are licensed to read one of these (e.g. an employer's BSI/Accuris seat for an
 > ISO standard), that licence is **yours**, not the repo's. Building a pack from it for
@@ -132,7 +133,7 @@ build caveat.
 | **GP-02 / FAA-STD-025** (FAA Interface Documentation IRD/ICD/IR) | Tier 1 | US Government work (17 U.S.C. § 105). Rev E canonical (ROSAP full-text PDF) + rev F mirror; record chosen revision in PACK.yaml (6-RESEARCH.md §2a). (Verified 2026-08-14.) |
 | **GP-03 / DOT&E T&E Enterprise Guidebook** (Test & Evaluation Enterprise Guidebook) | Tier 1 | US Government work (17 U.S.C. § 105). Target Aug 2022 edition (8.02) from dote.osd.mil if a direct PDF is obtainable; fall back to the afacpo fixed-URL single-encoded mirror PDF (v3 June 2022) if direct download unavailable; PACK.yaml records the edition actually built (8.02 or mirror v3-June) (6-RESEARCH.md §2b). (Verified 2026-08-14.) |
 | **GP-04 / DAFMAN 63-119** (DAF Mission-Oriented Test Readiness Certification; 15 Apr 2021) | Tier 1 | In-document "RELEASABILITY: There are no releasability restrictions on this publication"; USAF publication → 17 U.S.C. § 105. Title corrected to Mission-Oriented Test Readiness Certification (6-RESEARCH.md §2c). (Verified 2026-08-14.) |
-| **GP-06 / federal-bca** (dual-source: OMB Circular A-94 + US Army CBA Guide) | Tier 1 | Statute-basis confirmation only (17 U.S.C. § 105, both documents); NO in-source licence inspection yet — build-time in-source confirmation REQUIRED for both A-94 and Army CBA documents before Phase 7 content generation. (Confirmed-by-statute 2026-08-16; build-time check outstanding.) |
+| **GP-06 / federal-bca** (shipped A-94-only; US Army CBA Guide is FUT-04, not in the pack) | Tier 1 (A-94) | A-94 in-source cleared at Phase 7 build (P7-PRE-2 PASS). Army CBA Guide remains FUT-04 **DEFERRED** — 2026-08-17 retry: official host 403, archive playback 503; no in-source licence obtained; not Tier 1. Do not treat this row as a dual-source build-clear. (A-94 verified at build 2026-08-16; Army CBA retry Verified 2026-08-17.) |
 
 8 vetted candidates → 7 GP packs (GP-08 descoped; SP-7084 is evidence-only for cluster 25 alternatives).
 
@@ -151,6 +152,29 @@ Rows below are Phase 10 decisions dated 2026-08-17. Tier 1 leaning still require
 | **NASA-STD-8719.14C** (Process for Limiting Orbital Debris; Version C, Approved 2021-11-05; ACTIVE; 77 pp) | Tier 1 | NASA-authored US Government work (17 U.S.C. § 105). Official NTSS access control: "Internet Public -- Standard is cleared for public accessibility on the internet." In-PDF title page confirms NASA TECHNICAL STANDARD, Approved 2021-11-05, superseding 8719.14B; no copyright / all-rights-reserved notice in the text layer. Contrast: this is a real standard PDF, not a GP-08 placeholder. Confirm no third-party inserts at Phase 11 build (10-RESEARCH.md §NASA-STD-8719.14). (Verified 2026-08-17.) |
 | **GPS IS-GPS-200N** (NAVSTAR GPS Space Segment/Navigation User Segment Interfaces; Rev N; SSC / MilComm & PNT) | Tier 1 | In-PDF cover: "DISTRIBUTION STATEMENT A. Approved for public release. Distribution is unlimited." Revision record notes distribution status changed to Public Release. gps.gov public list names IS-GPS-200N, IS-GPS-705J, IS-GPS-800J, ICD-GPS-240D, ICD-GPS-870E — there is no public IS-300 / IS-GPS-300 (SEED-001 "ICD-IS-200/300" was a naming error; do not Excluded-table a phantom document). SAIC is named Interface Control Contractor (watch-item, not an all-rights-reserved notice). Do not package ICD-GPS-153 (request-form only). Confirm DIST-A on the extracted copy at Phase 11 build (10-RESEARCH.md §GPS). (Verified 2026-08-17.) |
 | **NASA SP-7084** (Grammar, Punctuation, and Capitalization; Mary K. McCaskill, NASA Langley) | Tier 1 RECONFIRMED | Already Tier 1 on the v1.18 table. NTRS metadata reconfirmed 2026-08-17: "Work of the US Gov. Public Use Permitted"; Distribution Limits Public. Edition fork unchanged: prefer 1998 rev if that copy has a text layer, else NTRS 1990 canonical. Not a new exclusion. Optional Training-diversity pack only — not an IO-01..07 must (10-RESEARCH.md §NASA SP-7084). (Reconfirmed 2026-08-17.) |
+
+### Not cleared this session (v1.19.0)
+
+- **FUT-04 / US Army Cost Benefit Analysis Guide (ASAFM)** — **DEFERRED** with fresh evidence 2026-08-17. Official host returned 403 Access Denied; archive playback returned 503. No in-source licence statement obtained. Statute 17 U.S.C. § 105 is prediction, not clearance. Not Tier 1. Not added to the Excluded table (nothing negative was found; the PDF is historically real). Phase 11 must not build an Army CBA pack; IO-01 uses the existing A-94 / VV&A remap. (Verified 2026-08-17.)
+
+- **DoDM 5000.102** — see the UNVERIFIED subsection immediately below. Not Tier 1. Do not create `dodm-5000-102`.
+
+- **AAF Product Support Manager Guidebook + Software pathway guidebooks** — still **NOT yet vetted — do not use**. See the Excluded-pending row in the Excluded table and the DAG row. (Verified 2026-08-17.)
+
+### DoDM 5000.102 — UNVERIFIED / deferred-excluded from v1.19
+
+**DoDM 5000.102** (DoD Manual, VV&A implementing issuance) is **UNVERIFIED** and **deferred-excluded from v1.19 pack builds**. Official issuance host and guessed media mirror returned 403 this session; archive playback returned 502; GovInfo search empty. No PDF was opened, so no DIST-A / authorship statement can be quoted. Unreachable is not Tier 1. Shipped `dod-vva-rpg` provenance is the 10 RPG chapter PDFs only — 5000.102 was never ingested. Phase 11 IO-02 uses additional existing VV&A RPG chapters. Revisit only if a human-readable official PDF yields an in-source grant (10-RESEARCH.md §DoDM 5000.102). (Recorded 2026-08-17.)
+
+### Phase 11 handoff (v1.19.0)
+
+| Candidate | Phase 10 decision | Phase 11 action |
+|---|---|---|
+| NASA-STD-8719.14C | GO — Tier 1 leaning | IO-03 may build `nasa-std-8719-14`; build-time third-party scan required |
+| GPS IS-GPS-200N | GO — Tier 1 leaning | IO-04 may build an IS-GPS-200N exemplar (optional +705J/+800J). Do not search for IS-300. Skip ICD-GPS-153 |
+| NASA SP-7084 | GO — Tier 1 reconfirmed | Optional Training-diversity pack only; not an IO-01..07 must. Record 1990 vs 1998 edition if built |
+| FUT-04 Army CBA Guide | NO-GO — deferred (403/503, no in-source) | Do not build Army CBA. IO-01 remaps existing A-94 / VV&A decision chapters. Do not invent a CBA pack |
+| DoDM 5000.102 | NO-GO — UNVERIFIED / deferred-excluded | Do not create `dodm-5000-102`. IO-02 = additional chapters in existing `dod-vva-rpg` |
+| AAF Product Support + Software pathway | NO-GO — NOT yet vetted — do not use | IO-05 / IO-06 record deferred. No AAF pack. dod-rio AAF chapters do not licence AAF guidebooks |
 
 ### Def Stan 00-051 — UNVERIFIED / excluded from this milestone `[T2-03]`
 
