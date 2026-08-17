@@ -122,7 +122,7 @@ Tasks 1–5 content landed in the single release commit (Phase 5 template; inter
 | 3 | CONTRACT cluster-name + OUSD typo | `d19be1a` (release) | capability-map-CONTRACT.md, SOURCE-VETTING.md |
 | 4 | Final validation (verify-only) | — | no commit |
 | 5 | Release commit, tag, push, GitHub Release | `d19be1a` + tag `v1.18.0` | 11 content files |
-| 6 | Post-release records | (planning commit after SUMMARY) | STATE.md, MILESTONES.md, ROADMAP.md, 9-01-SUMMARY.md |
+| 6 | Post-release records | `7081649` (docs) | STATE.md, MILESTONES.md, ROADMAP.md, REQUIREMENTS.md, 9-01-SUMMARY.md |
 
 **Release commit:** `d19be1a` — `release(v1.18.0): 7 gap-driven Tier-1 packs (61 +2 signposts), capability map v2`
 
