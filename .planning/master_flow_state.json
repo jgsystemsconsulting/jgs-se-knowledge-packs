@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
   "kind": "pointer",
-  "active_phase": 7,
-  "active_phase_dir": ".planning/phases/7-gap-driven-pack-builds",
-  "active_state": ".planning/phases/7-gap-driven-pack-builds/master_flow_state.json",
+  "active_phase": 8,
+  "active_phase_dir": ".planning/phases/8-agent-enablement-surface",
+  "active_state": ".planning/phases/8-agent-enablement-surface/master_flow_state.json",
   "lock": {
-    "phase": 7,
+    "phase": 8,
     "session_hint": "master-flow",
-    "updated_at": "2026-08-16T21:16:15.194Z"
+    "updated_at": "2026-08-17T00:00:39.337582+00:00"
   },
-  "updated_at": "2026-08-16T21:16:15.196Z",
+  "updated_at": "2026-08-17T00:00:39.337582+00:00",
   "notes": ""
 }

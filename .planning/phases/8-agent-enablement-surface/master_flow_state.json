@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "phase",
+  "milestone": "v1.18.0",
+  "phase": 8,
+  "phase_slug": "8-agent-enablement-surface",
+  "phase_dir": ".planning/phases/8-agent-enablement-surface",
+  "scope": "phase",
+  "current_gate": "plan",
+  "completed": [
+    "research"
+  ],
+  "skipped": [
+    "discuss",
+    "assumptions",
+    "arch_research",
+    "code_fix",
+    "eval_plan",
+    "eval_audit",
+    "ui_check",
+    "ui_audit",
+    "nyquist_audit",
+    "doc_check",
+    "milestone_audit",
+    "complete",
+    "retrospective"
+  ],
+  "failed": [],
+  "blocked_by": null,
+  "verdicts": {
+    "discuss": "skipped",
+    "assumptions": "skipped",
+    "arch_research": "skipped",
+    "code_fix": "skipped",
+    "eval_plan": "skipped",
+    "eval_audit": "skipped",
+    "ui_check": "skipped",
+    "ui_audit": "skipped",
+    "nyquist_audit": "skipped",
+    "doc_check": "skipped",
+    "milestone_audit": "skipped",
+    "complete": "skipped",
+    "retrospective": "skipped",
+    "research": "embedded_in_plan"
+  },
+  "artifacts": {
+    "research": "8-RESEARCH.md"
+  },
+  "checkpoint_log": [],
+  "notes": "ledger hand-initialized (master-flow CLI unavailable)",
+  "updated_at": "2026-08-17T00:02:53.440197+00:00"
+}
