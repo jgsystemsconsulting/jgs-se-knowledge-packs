@@ -137,9 +137,9 @@ Tighten the two automated verify blocks (MJ-01, MJ-02) before execute so a no-ex
 
 **Verdict:** PASS_WITH_FIXES
 
-**BLOCKER:** 0
-**MAJOR:** 2
-**MINOR:** 7
+**blockers:** 0
+**majors:** 2
+**minors:** 7
 
 Path: `.planning/phases/11-io-unlocking-packs-decision-analysis-remap/11-PLAN_REVIEW.md`
 
