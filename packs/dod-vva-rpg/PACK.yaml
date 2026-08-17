@@ -9,9 +9,9 @@ share_alike: false
 attribution_required: false
 build:
   method: "jgs-reference-skill extraction + chapter-wise synthesis (no consolidated PDF)"
-  source_pages: 283
-  chapters: 10
-  built_on: "2026-08-16"
+  source_pages: 368
+  chapters: 13
+  built_on: "2026-08-17"
 notes: >
   US Government work -- public domain (17 U.S.C. § 105) with Distribution Statement A
   equivalent basis. Free to reproduce, transform, and redistribute (including commercially).
@@ -33,15 +33,35 @@ notes: >
   (8) Validation Fundamentals special topic (Validation-pr.PDF; 36 pp; retrieved 2026-08-16);
   (9) Data V&V for New Simulations special topic (DataVV-new-pr.PDF; 12 pp; retrieved 2026-08-16);
   (10) Risk and Its Impact on VV&A special topic (Risk-pr.PDF; 17 pp; retrieved 2026-08-16).
-  source_pages = 283 = sum of per-chapter metadata.json page counts.
-  P7-PRE-4: each chapter PDF checked for DoD/RPG authorship in body text and DEBoK
-  Copyright Details = Public Domain (PD); no third-party "all rights reserved" / proprietary
-  / DIST B-F. Cover text layers lack a printed DISTRIBUTION STATEMENT A block (common
-  RPG web-PDF layout); DIST-A equivalent evidence = DEBoK PD classification + OSD/OUSD
-  R&E OPR/authorship (same metadata-evidence pattern as mil-std-881f QuickSearch Dist Stmt).
-  Dropped from set (selection, not licence): T&E/V&V Checklist (TEVVchecklist-pr.PDF) to
-  keep pack at 10 chapters (plan 8-10); checklist also DEBoK PD. Legacy role guides not
-  selected (new-development role set used). chars/page per chapter all >= 300 (range
-  about 2589-3034 after provenance header). Target clusters: Validation, Verification,
+  source_pages (shipped 2026-08-16) = 283 = sum of ch01–ch10 metadata.json page counts.
+  Phase 11 IO-02 leftover chapters (retrieved 2026-08-17; P7-PRE-4 per new PDF):
+  (11) T&E/V&V Checklist / T&E / V&V Integration Checklist (TEVVchecklist-pr.PDF;
+  DEBoK "RPG Reference Document: T&E / V&V Integration Checklist"; 7 pp; retrieved
+  2026-08-17; DEBoK Copyright Details = Public Domain; OPR = Office of Secretary of
+  Defense; author OSD R&E; body RPG authorship present; no DIST B–F / all-rights /
+  proprietary; cover text layer lacks printed DIST-A — DIST-equivalent = DEBoK PD +
+  OSD authorship, same pattern as ch01–ch10);
+  (12) Developing the Referent special topic (Develop_Referent.pdf; DEBoK "Developing
+  the Referent"; 34 pp; retrieved 2026-08-17; DEBoK Copyright Details = Public Domain;
+  OPR = Under Secretary of Defense for Research & Engineering; body RPG/DoD
+  authorship present; no DIST B–F / all-rights / proprietary; DIST-equivalent = DEBoK
+  PD + USD(R&E) OPR);
+  (13) Conceptual Model Development and Validation special topic (conceptual-pr.PDF;
+  DEBoK "M&S VV&A RPG Special Topic: Conceptual Model Development and Validation";
+  44 pp; retrieved 2026-08-17; DEBoK Copyright Details = Public Domain; OPR = Office
+  of Secretary of Defense; author OSD R&E; body DoD/RPG authorship present; no DIST
+  B–F / all-rights / proprietary; DIST-equivalent = DEBoK PD + OSD authorship).
+  source_pages = 368 = 283 + 7 + 34 + 44. IO-02 SC-2 reading: Validation depth moved
+  via additional chapters in the existing pack; DoDM 5000.102 stays deferred (no
+  packs/dodm-5000-102). Use Case Overview (vva-rpg-uco) is HTML-only on the live
+  cto.mil index — skipped, not blocking. Legacy role guides and remaining special
+  topics not selected. P7-PRE-4: each chapter PDF checked for DoD/RPG authorship in
+  body text and DEBoK Copyright Details = Public Domain (PD); no third-party "all
+  rights reserved" / proprietary / DIST B-F. Cover text layers lack a printed
+  DISTRIBUTION STATEMENT A block (common RPG web-PDF layout); DIST-A equivalent
+  evidence = DEBoK PD classification + OSD/OUSD R&E OPR/authorship (same
+  metadata-evidence pattern as mil-std-881f QuickSearch Dist Stmt). chars/page per
+  chapter all >= 300 (ch01–ch10 range about 2589-3034 after provenance header;
+  ch11–ch13: 2141.6 / 3151.0 / 2975.1). Target clusters: Validation, Verification,
   Decision Analysis, Test and Evaluation. scan_generated_skill reviewed at build.
 change_indication: "reconstructed as synthesized reference notes"

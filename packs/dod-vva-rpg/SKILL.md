@@ -1,12 +1,12 @@
 ---
 name: dod-vva-rpg
-description: "Knowledge base from the DoD M&S VV&A Recommended Practices Guide (RPG web edition). Use for verification, validation, and accreditation of models and simulations — role responsibilities (user, developer, M&S PM, V&V agent, accreditation agent), fidelity, validation fundamentals, data V&V, and risk-informed accreditation decisions. Complements nasa-ms-7009 and T&E packs; does not replace DoDI 5000.61 or Service VV&A policies."
+description: "Knowledge base from the DoD M&S VV&A Recommended Practices Guide (RPG web edition). Use for verification, validation, and accreditation of models and simulations — role responsibilities (user, developer, M&S PM, V&V agent, accreditation agent), fidelity, validation fundamentals, data V&V, risk-informed accreditation, T&E/V&V integration, referent development, and conceptual-model validation. Complements nasa-ms-7009 and T&E packs; does not replace DoDI 5000.61 or Service VV&A policies."
 ---
 
 <!-- argument-hint: [topic, role, or chapter number] -->
 
 # DoD M&S VV&A Recommended Practices Guide (RPG)
-**Source**: DoD VV&A RPG web edition (US Government work, public domain) | **Chapters**: 10
+**Source**: DoD VV&A RPG web edition (US Government work, public domain) | **Chapters**: 13
 
 ## When to use
 Reach for this pack when planning or reviewing **Verification, Validation, and Accreditation (VV&A)** for defense modeling and simulation — assigning role responsibilities, scoping V&V to intended use, setting fidelity/referent expectations, validating results or data, or framing accreditation risk and residual uncertainty for decision authorities.
@@ -16,7 +16,7 @@ Reach for this pack when planning or reviewing **Verification, Validation, and A
 ## How to Use This Skill
 - **Without arguments** — load the core frameworks below.
 - **With a topic** — ask about accreditation, intended use, referent, fidelity, data V&V, residual risk, or a named role.
-- **With a chapter** — ask for `ch01` through `ch10`.
+- **With a chapter** — ask for `ch01` through `ch13`.
 
 Supporting files: `glossary.md`, `patterns.md`, `cheatsheet.md`.
 
@@ -44,7 +44,7 @@ Accepting incorrect M&S results (Type II) usually dominates. Residual risk after
 ### Pack routing
 - **nasa-ms-7009** — NASA models & simulations standard/handbook depth.
 - **dote-te-guidebook / dod-te-guidebook** — enterprise T&E; use when M&S supports DT/OT evidence.
-- **This pack** — DoD VV&A RPG role practices, validation fundamentals, data V&V, risk.
+- **This pack** — DoD VV&A RPG role practices, validation fundamentals, data V&V, risk, T&E/V&V checklist, referent development, conceptual-model validation.
 
 ## Chapter Index
 | # | Section | Key content |
@@ -59,6 +59,9 @@ Accepting incorrect M&S results (Type II) usually dominates. Residual risk after
 | [ch08](chapters/ch08-validation-fundamentals.md) | Validation Fundamentals | Referent, comparison methods, credibility |
 | [ch09](chapters/ch09-data-vv-new-simulations.md) | Data V&V | Data verification/validation, pedigree, uncertainty |
 | [ch10](chapters/ch10-risk-and-vva.md) | Risk & VV&A | Development vs operational risk, Type I/II, mitigation |
+| [ch11](chapters/ch11-te-vv-checklist.md) | T&E / V&V Checklist | Integration cases, criticality bins, V&V vs DT/OT partitions |
+| [ch12](chapters/ch12-developing-the-referent.md) | Developing the Referent | Validation-referent identify/select/specify/approve |
+| [ch13](chapters/ch13-conceptual-model-development-and-validation.md) | Conceptual Model | Context/concept/elements; conceptual-model V&V |
 
 ## Topic Index
 | Topic | Chapters |
@@ -66,15 +69,17 @@ Accepting incorrect M&S results (Type II) usually dominates. Residual risk after
 | Accreditation / authority decision | ch01, ch06, ch10 |
 | Intended use & requirements | ch01, ch02, ch04 |
 | Verification practices | ch03, ch05 |
-| Validation / referent / face validation | ch07, ch08 |
+| Validation / referent / face validation | ch07, ch08, ch12, ch13 |
 | Data verification & validation | ch09 |
-| Fidelity selection | ch07, ch08 |
+| Fidelity selection | ch07, ch08, ch12 |
 | Risk, residual risk, Type I/II | ch10, ch06 |
 | Role responsibilities (RACI-like) | ch02–ch06 |
 | Independence of V&V | ch05, ch06 |
-| Test & evaluation interface | ch01, ch05, ch10 |
+| Test & evaluation interface | ch01, ch05, ch10, ch11 |
+| T&E / V&V checklist | ch11 |
+| Conceptual model (simulation / federation) | ch13, ch03, ch08 |
 | Decision analysis / evidence for decisions | ch06, ch08, ch10 |
-| SME use | ch02, ch05, ch08 |
+| SME use | ch02, ch05, ch08, ch12 |
 
 ## Supporting Files
 - [glossary.md](glossary.md) — VV&A terms used across chapters
@@ -82,6 +87,6 @@ Accepting incorrect M&S results (Type II) usually dominates. Residual risk after
 - [cheatsheet.md](cheatsheet.md) — quick decision rules
 
 ## Scope & Limits
-- Synthesized from selected **new-development** role guides plus fidelity, validation, data V&V, and risk special topics of the DoD VV&A RPG web edition (retrieved 2026-08-16). Not a substitute for DoDI 5000.61, Service regs, or program accreditation authority direction.
-- Legacy-simulation role guides and the T&E/V&V Checklist PDF were not packaged (selection); principles may still appear where the selected chapters discuss them.
+- Synthesized from selected **new-development** role guides plus fidelity, validation, data V&V, risk, T&E/V&V checklist, developing-the-referent, and conceptual-model special topics of the DoD VV&A RPG web edition (role set retrieved 2026-08-16; leftover chapters retrieved 2026-08-17). Not a substitute for DoDI 5000.61, Service regs, or program accreditation authority direction.
+- Legacy-simulation role guides and the remaining ~14 special topics were not packaged (selection). The Use Case Overview is HTML-only on the live index and was not ingested.
 - Does not reproduce long source passages; use official publications for citation in contracts or formal accreditation records.

@@ -3,7 +3,7 @@
 - **Accreditation** — Official determination that a model, simulation, and associated data are acceptable for a specific intended use. → ch01, ch06
 - **Accreditation Agent** — Role that prepares the accreditation package and recommendation for the Accreditation Authority. → ch06
 - **Accreditation Authority** — Official who decides accept / accept-with-constraints / reject for a stated use. → ch06, ch10
-- **Conceptual model** — Abstract representation of the simuland and modeling approach before or beside implementation. → ch03, ch08
+- **Conceptual model** — Abstract representation of the simuland and modeling approach before or beside implementation; the simulation conceptual model is the Developer–User bridge (context, concept, elements). → ch03, ch08, ch13
 - **Credibility** — Justified belief that M&S results are adequate for the decision; built from VV&A evidence. → ch01, ch05
 - **Data pedigree** — Documented origin, processing, age, and assumptions for datasets used in M&S. → ch09
 - **Data V&V** — Verification that data meet specs and validation that data represent intended real-world quantities. → ch09
@@ -13,7 +13,7 @@
 - **Fidelity** — Degree to which M&S reproduces features of interest of the simuland for the intended use. → ch07
 - **Intended use** — Who uses the M&S, for what decisions/missions, under what conditions and stakes. → ch01, ch02
 - **M&S PM** — Program manager integrating VV&A into schedule, budget, contracts, and gates. → ch04
-- **Referent** — Standard of comparison for validation (reality, data, higher-fidelity model, theory, SME consensus). → ch08
+- **Referent** — Standard of comparison for validation (reality, data, higher-fidelity model, theory, SME consensus); the validation referent is the adequate codified body of information for the intended use. → ch08, ch12
 - **Residual risk** — Risk remaining after V&V and mitigations, stated for accreditation decisions. → ch10, ch06
 - **Simuland** — Real or notional entity/phenomenon being modeled. → ch07, ch08
 - **Type I / Type II error** — Rejecting correct evidence vs accepting incorrect evidence; M&S use emphasizes Type II. → ch10
@@ -21,4 +21,5 @@
 - **Validation** — Process of determining accuracy of M&S and data vs the real world for intended uses. → ch08
 - **Verification** — Process of determining that M&S implementation accurately represents the developer’s conceptual description and specifications. → ch03, ch05
 - **V&V Agent** — Role that plans and performs verification and validation activities and reports results. → ch05
+- **T&E / V&V integration** — Coordinating verification, validation, DT&E, and OT&E when the simulation supports, embeds in, or is the system under test. → ch11
 - **VV&A** — Verification, Validation, and Accreditation as an integrated practice set. → ch01

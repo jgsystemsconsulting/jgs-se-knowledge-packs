@@ -9,6 +9,9 @@
 6. **Independence enough?** Graded by consequence; developer-only V&V is a risk flag on high stakes.
 7. **Reuse OK?** Only after delta gap analysis for the new use and configuration.
 8. **Which pack?** NASA M&S standard depth → nasa-ms-7009; enterprise T&E → dote/dod-te; DoD VV&A roles/practices → this pack.
+9. **T&E and V&V the same event?** Only if the simulation supports/embeds/is the system (Cases 3–5) — then bin shared requirements (ch11).
+10. **Referent named and adequate?** Cannot claim more fidelity than the validation referent; Authority accepts it (ch12).
+11. **Conceptual model maintained?** If missing on a legacy M&S, V&V builds a surrogate — that is debt (ch13).
 
 ## Role quick map
 | Role | Owns |
@@ -37,3 +40,6 @@
 | VV&A starts after code complete | ch04, ch05 |
 | Old accreditation after major change | ch06 |
 | User absent from criteria setting | ch02 |
+| T&E and V&V planned in isolation on an embedded sim | ch11 |
+| Validation with no named referent / gold-plated data for ballpark use | ch12, ch08 |
+| No conceptual model; V&V reconstructing from code | ch13 |
