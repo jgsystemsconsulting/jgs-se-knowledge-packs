@@ -4,17 +4,17 @@ milestone: v1.19.0
 milestone_name: "**Goal**: Catalog/docs/manifests synchronized; v1.19.0 tagged and released"
 current_phase: 13
 current_phase_name: Release surface + v1.19.0
-status: planning
-stopped_at: Completed 12-02-PLAN.md
-last_updated: "2026-08-17T21:08:22.108Z"
+status: completed
+stopped_at: Completed 13-02-PLAN.md
+last_updated: "2026-08-17T23:10:00Z"
 last_activity: 2026-08-17
-last_activity_desc: 12-02 gate wire + hygiene; both gates PASS
+last_activity_desc: Phase 13 plan 02 executed — v1.19.0 released
 progress:
   total_phases: 4
-  completed_phases: 3
-  total_plans: 6
-  completed_plans: 6
-  percent: 75
+  completed_phases: 4
+  total_plans: 8
+  completed_plans: 8
+  percent: 100
 ---
 
 # Project State
@@ -24,51 +24,64 @@ progress:
 See: .planning/PROJECT.md (updated 2026-08-17)
 
 **Core value:** Licence-clean, validated, single-source reference packs an agent can load without context bloat.
-**Current focus:** v1.19.0 — Agent IO Depth (Phase 12: Map regen + hygiene + gate wiring)
+**Current focus:** v1.19.0 SHIPPED — Agent IO Depth (last v1.19 phase)
 
 ## Current Position
 
-Phase: 13 of 13 (Release surface + v1.19.0)
-Plan: Not started
-Status: Ready to plan
-Last activity: 2026-08-17 — Phase 12 complete, transitioned to Phase 13
+Phase: 13 — COMPLETE (v1.19.0 released)
+Plan: 2 of 2 in current phase (executed)
+Status: Milestone v1.19.0 shipped
+Last activity: 2026-08-17 — release commit bb9df10, annotated tag v1.19.0, GitHub Release published
 
-Progress: [██████████] 100%
+Progress: [██████████] 100% (v1.19.0 phases 10–13)
+
+## Shipped — v1.19.0
+
+- **Release commit:** `bb9df10` — `release(v1.19.0): Agent IO Depth — 2 packs + VV&A chapters + DA remap (63 +2 signposts)`
+- **Annotated tag:** `v1.19.0` — `v1.19.0: 2 IO-unlock packs + VV&A chapters + DA remap (63 +2 signposts)`
+- **GitHub Release:** https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/releases/tag/v1.19.0
+- **Basis:** catalog 63 packs / packs dirs 65 / cursor skills 64
+- **Gates:** `check_release.py` PASS; `check_capability_map.py` PASS (map_version 1.19.0, schema_version 2, 644 entries, 32 clusters)
+- **REL-19-01 / REL-19-02:** surfaces synchronized; annotated tag + GitHub Release with CHANGELOG-derived competency-led notes (IO-01..07)
+
+Honest scope: 2 new packs + leftover RPG chapters + DA remap + map 644 + dual-gate wire (Phase 12). Not 7 new packs; IO-05/06/07 were not built.
 
 ## Performance Metrics
 
-- Phases completed: 9/13 (v1.17 + v1.18 shipped)
-- Packs shipped: 63 (61 catalog + 2 signposts)
+- Phases completed: 13/13 (v1.17 + v1.18 + v1.19 shipped)
+- Packs shipped: 65 directories (63 catalog + 2 signposts)
 
 **Per-Plan Metrics:**
 
 | Plan | Duration | Tasks | Files |
 |------|----------|-------|-------|
 | Phase 12 P02 | 11 min | 3 tasks | 10 files |
+| Phase 13 P01 | 6 min | 3 tasks | 13 files |
+| Phase 13 P02 | ~5 min | 2 tasks | 13 content + 4 planning |
 
 ## Selected seed
 
-SEED-001 — pack depth for se-agents IOs (17 thin-primary competencies). Consumer-side work (502 docs, thin:3, Cyber/DE bindings, 20-ref cap) stays in jgs-se-agents.
+SEED-001 — pack depth for se-agents IOs (17 thin-primary competencies). Consumer-side work (502 docs, thin:3, Cyber/DE bindings, 20-ref cap) stays in the sibling repo jgs-se-agents.
 
-## Still-open from v1.18 (not all in v1.19 scope)
+## Remaining backlog (carried)
 
-In this milestone: FUT-04, thin clusters 3/5/15 via IO-unlocks, map-gate wiring, CHANGELOG BOM/.gitattributes, topic-index polish, AAF vet-before-use, vet_source EXCLUDED sync, federal-bca "(c)" polish.
-
-Deferred again: FUT-05 deterministic generator; committed overlap checker (7-CODE-REVIEW IN-02); 881F/VV&A DIST-A in-PDF revisit (7-GAP R4).
+- **FUT-04:** Army CBA Guide retry if ASAFM PDF becomes reachable
+- **FUT-05:** deterministic map generator (still agent-judgment)
+- **IN-02 (7-CODE-REVIEW IN-02):** minimal committed overlap checker
+- **AAF still deferred (IO-05/06):** Software pathway + Product Support NOT yet vetted — do not use
+- **IO-07 accept:** no pack; no clean Tier-1/2 candidate
+- **ROSAP:** optional Rev E retry (faa-std-025 still Rev F mirror)
+- **se-agents consumer refresh:** stays in the sibling repo (not this tree)
 
 ## Deviations / Notes
 
 - Branch protection left at admin-bypass (2026-08-16)
 - Per-role packs remain rejected
-- IO-05/IO-06 are conditional on AAF clearing VET-19-03 — expect honest deferral
-- IO-07 will not produce a pack
-- Phase 10 (2026-08-17): SOURCE-VETTING v1.19 recorded. GO: NASA-STD-8719.14C, IS-GPS-200N, SP-7084 optional. NO-GO: FUT-04 Army CBA (403/503 deferred), DoDM 5000.102 (UNVERIFIED), AAF (NOT yet vetted — do not use). Verdicts + URLs in 10-RESEARCH.md. Phase 11 builds only GO names.
-- Phase 11 (2026-08-17): built nasa-std-8719-14 + is-gps-200n; extended dod-vva-rpg; IO-01 remap table specified (no map JSON); IO-05/06 deferred; IO-07 accept; SP-7084 skipped.
-- Phase 12-01 (2026-08-17): map regen 628→644; 16 chapters classified; MAP-19-03 MOVE (DA 5/4); THRESHOLDS ≥4; CONTRACT 628+/502/Cyber+DE unbound. map_version stays 1.18.0. Integration floor held; no raid.
-- Phase 12-02 (2026-08-17): check_release imports check_capability_map.main(); CHANGELOG BOM/LF + .gitattributes; four SKILL nits + federal-bca (c); HYG-03 sibling PR #2. Version trio 1.18.0.
+- Phase 10–12 history retained in prior STATE snapshots / phase records
+- Phase 13-02: 13-01 per-task commits soft-reset into one `release(v1.19.0)` content commit before tag
 
 ## Session
 
-**Last session:** 2026-08-17T20:49:31.070Z
-**Stopped at:** Completed 12-02-PLAN.md
+**Last session:** 2026-08-17T23:10:00Z
+**Stopped at:** Completed 13-02-PLAN.md
 **Resume file:** None

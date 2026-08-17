@@ -24,7 +24,7 @@ Seed: SEED-001. Goal: fatten competency *primaries* so se-agents can execute IOs
 - [x] **Phase 10: Source vetting** — FUT-04 retry + DoDM 5000.102 / NASA-STD-8719.14 / GPS ICD / SP-7084 / AAF-before-use (VET-19-01..04) — 10-01/10-02 docs-only (completed 2026-08-17)
 - [x] **Phase 11: IO-unlocking packs + Decision Analysis remap** — IO-01..07 (build what vetting clears; record deferrals honestly) (completed 2026-08-17)
 - [x] **Phase 12: Map regen + hygiene + gate wiring** — MAP-19-01..05, HYG-01..04 (completed 2026-08-17)
-- [ ] **Phase 13: Release surface + v1.19.0** — REL-19-01/02
+- [x] **Phase 13: Release surface + v1.19.0** — REL-19-01/02
 
 ## v1.19 Phase Details
 
@@ -81,4 +81,4 @@ Seed: SEED-001. Goal: fatten competency *primaries* so se-agents can execute IOs
   1. Both gates PASS at the updated catalog/directory basis
   2. v1.19.0 tagged + GitHub Release; CHANGELOG lists IO-unlocks by competency, not just pack slugs
 
-**Plans**: TBD
+**Plans**: [13-01-PLAN.md](phases/13-release-surface-v1-19-0/13-01-PLAN.md), [13-02-PLAN.md](phases/13-release-surface-v1-19-0/13-02-PLAN.md)

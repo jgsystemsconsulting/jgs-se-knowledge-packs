@@ -18,7 +18,7 @@ Sourced from SEED-001, STATE.md v1.19 backlog (consolidated per v1.18.0-MILESTON
 
 ### Gap-Driven Packs (unlock poorest competency primaries)
 
-- [x] **IO-01**: Decision Analysis primary (SECF-CORE-05 / MANA-03) — FUT-04 Army CBA pack **or** remap existing A-94 / VV&A decision chapters into cluster 16; primary count must leave 2 — *Phase 10 handoff: Army CBA is NO-GO; take the remap existing A-94 / VV&A decision chapters path. Do not invent a CBA pack. Phase 11 (2026-08-17): remap specified — `federal-bca` `ch04-uncertainty-and-sensitivity.md` + `ch06-reporting-and-decision-use.md` and `dod-vva-rpg` `ch06-accreditation-agent-role.md` → Decision Analysis & Trade Studies (cluster 16). Map apply is MAP-19-03 / Phase 12. No CBA pack. Live count leave-2 is Phase 12. Table in 11-02-SUMMARY.*
+- [x] **IO-01**: Decision Analysis primary (SECF-CORE-05 / MANA-03) — FUT-04 Army CBA pack **or** remap existing A-94 / VV&A decision chapters into cluster 16; primary count must leave 2 — *Phase 10 handoff: Army CBA is NO-GO; take the remap existing A-94 / VV&A decision chapters path. Do not invent a CBA pack. Phase 11 (2026-08-17): remap specified — `federal-bca` `ch04-uncertainty-and-sensitivity.md` + `ch06-reporting-and-decision-use.md` and `dod-vva-rpg` `ch06-accreditation-agent-role.md` → Decision Analysis & Trade Studies (cluster 16). Map apply is MAP-19-03 / Phase 12. No CBA pack. Live DA cluster: 5 entries / 4 packs. Table in 11-02-SUMMARY.*
 - [x] **IO-02**: Validation primary (SECF-TECH-07) — `dodm-5000-102` (or additional VV&A RPG chapters in existing `dod-vva-rpg`) — *Phase 10 handoff: `dodm-5000-102` is NO-GO; take additional VV&A RPG chapters in existing `dod-vva-rpg`. Phase 11 (2026-08-17): chapters-not-a-pack — leftover RPG ch11 T&E/V&V Checklist + ch12 Developing the Referent + ch13 Conceptual Model added to existing `dod-vva-rpg` (count 10→13). DoDM 5000.102 still deferred; no `packs/dodm-5000-102`.*
 - [x] **IO-03**: Ops/Maintenance/Disposal primary (SECF-TECH-08 / 09 / 10) — `nasa-std-8719-14` — *Phase 10 handoff: GO on NASA-STD-8719.14C (build-time third-party scan still required).*
 - [x] **IO-04**: Interface Management primary (SECF-TECH-05) — GPS ICD exemplar pack (select IS-200/300) **or** additional FAA-STD-025 depth — *Phase 10 handoff: GO on IS-GPS-200N only (not IS-300). Optional +705J/+800J. Skip ICD-GPS-153.*
@@ -43,8 +43,8 @@ Sourced from SEED-001, STATE.md v1.19 backlog (consolidated per v1.18.0-MILESTON
 
 ### Release Surface
 
-- [ ] **REL-19-01**: Full registration of any new packs; both gates PASS
-- [ ] **REL-19-02**: v1.19.0 tagged + GitHub Release
+- [x] **REL-19-01**: Full registration of any new packs; both gates PASS
+- [x] **REL-19-02**: v1.19.0 tagged + GitHub Release
 
 ## Out of Scope (v1.19)
 
