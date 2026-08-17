@@ -69,7 +69,7 @@ Seed: SEED-001. Goal: fatten competency *primaries* so se-agents can execute IOs
   3. CONTRACT.md notes live snapshot (not 502) and unbound Cyber/DE clusters
   4. CHANGELOG BOM gone; .gitattributes pin present; topic-index nits fixed; vet_source EXCLUDED sync done or recorded as external-repo PR
 
-**Plans**: TBD
+**Plans**: [12-01](phases/12-map-regen-hygiene-gate-wiring/12-01-PLAN.md) (map regen + remap + floor + CONTRACT — complete 2026-08-17), [12-02](phases/12-map-regen-hygiene-gate-wiring/12-02-PLAN.md) (gate wire + hygiene)
 
 ### Phase 13: Release surface + v1.19.0
 
