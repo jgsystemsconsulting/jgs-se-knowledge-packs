@@ -9,6 +9,52 @@ All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning follows
 [Semantic Versioning](https://semver.org/).
 
+## [1.19.0]: 2026-08-17
+
+Agent IO Depth (SEED-001): competency primaries fattened so se-agents can
+execute IOs. Two new Tier-1 packs, leftover VV&A chapters, and a Decision
+Analysis remap. Integration and Logistics stay deferred (AAF not vetted).
+Stakeholder Engagement accepted with no invented pack.
+
+### Added
+
+- **IO-03 Ops/Maintenance/Disposal** (`nasa-std-8719-14`, 7 ch): NASA-STD-8719.14C
+  Process for Limiting Orbital Debris - ODAR/EOMP assessment, normal-ops debris
+  limits, passivation/collision, postmission disposal, reentry casualty.
+  Tier 1 (US-gov public domain).
+- **IO-04 Interface Management** (`is-gps-200n`, 6 ch): IS-GPS-200 Rev N ICD
+  exemplar complementary to `faa-std-025` - IRN/CCB change control, definition vs
+  identification, criteria pattern, NAV payload families, time/definition hygiene.
+  Exemplar only; Apps II-IV not transcribed. Tier 1 (US-gov public domain).
+- **IO-02 Validation depth** (chapters, not a pack): leftover RPG special topics
+  added to existing `dod-vva-rpg` (10 -> 13 ch) - T&E/V&V Checklist, Developing
+  the Referent, Conceptual Model Development and Validation. DoDM 5000.102 still
+  deferred; no `dodm-5000-102` pack.
+- Capability-pack map regenerated to 644 entries / 63 mapped packs (schema 2);
+  MAP-19-02 floors >=4 on Decision Analysis, Validation, Integration, Interfaces,
+  Ops/Maint; `check_release.py` now invokes `check_capability_map.main()`.
+
+Catalogue now 63 packs (+2 signposts).
+
+### Changed
+
+- **IO-01 Decision Analysis remap:** `federal-bca` ch04 + ch06 and `dod-vva-rpg`
+  ch06 MOVEd into Decision Analysis & Trade Studies (cluster now 5 entries / 4
+  packs). No Army CBA pack (FUT-04 still deferred).
+- Registered `nasa-std-8719-14` and `is-gps-200n` on every registered surface
+  (catalog.json, SKILLS.md, docs/packs.html, NOTICE, README, Cursor manifest).
+  `dod-vva-rpg` catalog/README chapter count 10 -> 13.
+
+### Fixed
+
+(none required)
+
+### Deferred / accepted (not built)
+
+- **IO-05 Integration** DEFERRED - AAF Software pathway still NOT yet vetted.
+- **IO-06 Logistics diversity** DEFERRED - AAF Product Support still NOT yet vetted.
+- **IO-07 Stakeholder Engagement** ACCEPT - no clean Tier-1/2 candidate; no invented pack.
+
 ## [1.18.0]: 2026-08-17
 
 The `doe-413-3b` pack was renamed to `doe-o-413-3` (same content; catalog alias

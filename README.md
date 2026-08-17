@@ -7,7 +7,7 @@ SPDX-License-Identifier: MIT
 
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT%20(tooling)-blue" alt="License: MIT (tooling)">
-  <img src="https://img.shields.io/badge/version-1.18.0-green" alt="Version 1.18.0">
+  <img src="https://img.shields.io/badge/version-1.19.0-green" alt="Version 1.19.0">
   <img src="https://img.shields.io/badge/packs-63-blueviolet" alt="63 packs">
   <img src="https://img.shields.io/badge/tested%20with-Claude%20Code-8A2BE2" alt="Tested with Claude Code">
   <img src="https://img.shields.io/badge/scope-systems%20engineering-orange" alt="Scope: systems engineering">
@@ -55,7 +55,7 @@ and install the catalogue for you.
 ```text
 You are installing jgs-se-knowledge-packs, an open catalogue (MIT tooling) of
 systems-engineering knowledge-pack skills by JG Systems Consulting Ltd.
-Repository: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs (version 1.18.0).
+Repository: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs (version 1.19.0).
 Do this in order:
 1. Read README.md, docs/skill-usage.md, and CHANGELOG.md so you understand what you are
    installing. There are NO external prerequisites: packs are plain Markdown skills.
@@ -161,13 +161,15 @@ always-loaded `SKILL.md` index inlined into one file. Full detail and the per-ag
 | `mil-hdbk-516` | MIL-HDBK-516C: Airworthiness Certification Criteria | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `nasa-ms-7009` | NASA-STD-7009B / NASA-HDBK-7009B: Models and Simulations | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
 | `doe-o-413-3` | DOE O 413.3 series: Capital Asset Project Management (from O 413.3C) | Public domain (US gov) | 🟢 1 | ✅ live (6 chapters) |
-| `dod-vva-rpg` | DoD M&S VV&A Recommended Practices Guide (RPG web edition) | Public domain (US gov) | 🟢 1 | ✅ live (10 chapters) |
+| `dod-vva-rpg` | DoD M&S VV&A Recommended Practices Guide (RPG web edition) | Public domain (US gov) | 🟢 1 | ✅ live (13 chapters) |
 | `faa-std-025` | FAA-STD-025f: Preparation of Interface Documentation | Public domain (US gov) | 🟢 1 | ✅ live (6 chapters) |
 | `dote-te-guidebook` | DOT&E / DoD Test & Evaluation Enterprise Guidebook (8.02, Aug 2022) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `dafman-63-119` | DAFMAN 63-119: Mission-Oriented Test Readiness Certification (15 Apr 2021) | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
 | `federal-bca` | OMB Circular A-94: Federal Benefit-Cost Analysis Guidelines (2023-11-09) | Public domain (US gov) | 🟢 1 | ✅ live (6 chapters) |
 | `mil-std-881f` | MIL-STD-881F: Work Breakdown Structures for Defense Materiel Items (13 May 2022) | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
 | `mil-std-40051` | MIL-STD-40051-2C: Page-Based Technical Manuals (15 Dec 2015) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
+| `nasa-std-8719-14` | NASA-STD-8719.14C: Process for Limiting Orbital Debris (Approved 2021-11-05) | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
+| `is-gps-200n` | IS-GPS-200N: NAVSTAR GPS Space Segment / Navigation User Segment Interfaces | Public domain (US gov) | 🟢 1 | ✅ live (6 chapters) |
 | `mit-ocw-se` | MIT OCW Fundamentals of Systems Engineering | CC BY-NC-SA | 🟡 2 | 🔜 planned |
 
 `doe-o-413-3` (formerly `doe-413-3b`; old slug kept as a catalog alias) tracks the current DOE O 413.3 series edition (O 413.3C, which cancels O 413.3B Chg 7).
@@ -221,4 +223,4 @@ and redistribute (including why no source-material links are published) is set o
 
 ## Version
 
-See [CHANGELOG.md](CHANGELOG.md). Current: 1.18.0.
+See [CHANGELOG.md](CHANGELOG.md). Current: 1.19.0.

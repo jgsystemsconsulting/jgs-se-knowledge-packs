@@ -12,7 +12,7 @@ Top-level JSON object:
 ```json
 {
   "schema_version": 2,
-  "map_version": "1.18.0",
+  "map_version": "1.19.0",
   "generated_on": "2026-08-17",
   "clusters": [
     {
@@ -32,7 +32,7 @@ Top-level JSON object:
 | Field | Type | Meaning |
 |---|---|---|
 | `schema_version` | int | Shape version. Consumers **must** check `schema_version == 2` first. |
-| `map_version` | string | Release that last regenerated the map (semver, e.g. `"1.18.0"`). |
+| `map_version` | string | Release that last regenerated the map (semver, e.g. `"1.19.0"`). |
 | `generated_on` | string | ISO date (`YYYY-MM-DD`) of regeneration. Informational only. |
 | `clusters` | array | Ordered list of capability clusters. |
 | `clusters[].name` | string | Stable cluster identity (name-keyed, not numbered). |

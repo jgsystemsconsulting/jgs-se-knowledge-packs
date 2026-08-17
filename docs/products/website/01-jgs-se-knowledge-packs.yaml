@@ -12,7 +12,7 @@ tagline: >
   construction.
 product_class: agent-skills
 status: live
-version: "1.18.0"
+version: "1.19.0"
 repository: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs
 license: MIT (tooling); pack content under each source's own licence
 vendor: JG Systems Consulting Ltd.
