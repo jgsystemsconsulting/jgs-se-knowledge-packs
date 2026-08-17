@@ -11,6 +11,7 @@ Rules of construction:
 - The two signpost packs (`omg-signpost`, `se-standards-signpost`) contain no chapters and are not mapped.
 - A standard's own process definitions go to cluster 30; performing the capability goes to the capability cluster.
 - Machine-readable version: `docs/capability-pack-map.json`.
+- Consumption contract (schema, versioning, refresh): see `docs/capability-map-CONTRACT.md`.
 - Changelog (v1.18.0): added `dod-vva-rpg`, `dote-te-guidebook`, `mil-std-40051`, `dafman-63-119`, `mil-std-881f`, `faa-std-025`, `federal-bca`.
 - Changelog (v1.17.0): added `nist-800-171`, `nist-800-61`, `cisa-cpg`, `doe-sem`, `mil-hdbk-338`, `mil-hdbk-516`, `nasa-ms-7009`, and `doe-o-413-3` (this pack was renamed from `doe-413-3b`; same content, new slug).
 
