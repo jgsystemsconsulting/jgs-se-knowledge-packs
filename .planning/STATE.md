@@ -2,18 +2,18 @@
 gsd_state_version: 1.0
 milestone: v1.19.0
 milestone_name: "**Goal**: Catalog/docs/manifests synchronized; v1.19.0 tagged and released"
-current_phase: 11
-current_phase_name: IO-unlocking packs + Decision Analysis remap
+current_phase: 12
+current_phase_name: Map regen + hygiene + gate wiring
 status: planning
-last_updated: "2026-08-17T16:38:30.808Z"
+last_updated: "2026-08-17T19:33:37.522Z"
 last_activity: 2026-08-17
 last_activity_desc: v1.19.0 scoped from SEED-001 + v1.18 audit backlog
 progress:
   total_phases: 4
-  completed_phases: 1
-  total_plans: 2
-  completed_plans: 2
-  percent: 25
+  completed_phases: 2
+  total_plans: 4
+  completed_plans: 4
+  percent: 50
 stopped_at: v1.19.0 milestone scoped — ready to plan Phase 10
 ---
 
@@ -28,10 +28,10 @@ See: .planning/PROJECT.md (updated 2026-08-17)
 
 ## Current Position
 
-Phase: 11 of 13 (IO-unlocking packs + Decision Analysis remap)
+Phase: 12 of 13 (Map regen + hygiene + gate wiring)
 Plan: Not started
 Status: Ready to plan
-Last activity: 2026-08-17 — Phase 10 complete, transitioned to Phase 11
+Last activity: 2026-08-17 — Phase 11 complete, transitioned to Phase 12
 
 Progress: [███████░░░] 69%
 
