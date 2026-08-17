@@ -57,6 +57,7 @@ New milestone: researched candidate packs + ruled-out tracking. Maps to phases 2
 - **FUT-02**: INCOSE Guide to Writing Requirements full pack, if an open-licence edition is ever released
 - **FUT-03 / T2-03**: UK Def Stan 00-051 — deferred-excluded pending registered DSTAN in-document licence check (2026-08-14). Environmental management (not safety; safety is 00-056). If OGL v3.0 confirmed inside the document → Tier 2 attribution pack; if bespoke MOD-consent terms → stays Excluded. Re-point requirement and re-read licence before any revival.
 - **FUT-04**: federal-bca Army CBA Guide second source (was GP-06 dual-source half; unreachable 2026-08-16)
+- **FUT-05**: Deterministic map export/regenerate script under tooling/ (was AE-01's literal wording; v1.18 delivers the staleness gate + agent procedure per docs/capability-map-CONTRACT.md §4). Candidate design: derive map JSON from per-pack cluster metadata recorded in PACK.yaml, making regeneration mechanical and byte-identical by construction.
 
 ## Out of Scope
 
@@ -89,7 +90,7 @@ Sourced from .planning/research/capability-gap-report.md (1 empty cluster, 15 th
 
 ### Agent-Enablement Surface
 
-- [x] **AE-01**: `capability-pack-map.json` becomes a versioned consumable: schema field + map version + generated-on metadata; a stdlib export/regenerate script under tooling/ (idempotent, gate-checked for staleness)
+- [x] **AE-01**: `capability-pack-map.json` becomes a versioned consumable: schema field + map version + generated-on metadata; a stdlib export/regenerate script under tooling/ (idempotent, gate-checked for staleness) **(delivered as gate-not-generator: `tooling/check_capability_map.py` is the stdlib staleness gate; regeneration is a documented agent classification procedure per docs/capability-map-CONTRACT.md §4, since chapter→cluster assignment requires judgment — a deterministic export script was NOT built. Deterministic generator → FUT-05)**
 - [x] **AE-02**: Regenerate the map to include all v1.18 packs; thin-cluster re-score shows cluster 25 non-empty and clusters 3/5/15 no longer critical
 - [x] **AE-03**: Document the map contract (schema + versioning + refresh path) for the se-agents generator repo per docs/ROLE-AGENTS-REQUIREMENTS-V2.md
 
