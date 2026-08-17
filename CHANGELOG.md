@@ -9,6 +9,74 @@ All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning follows
 [Semantic Versioning](https://semver.org/).
 
+## [1.18.0]: 2026-08-17
+
+The `doe-413-3b` pack was renamed to `doe-o-413-3` (same content; catalog alias
+`doe-413-3b` retained). Downstream references that resolve via the catalog alias
+update automatically; consumers hard-coding the old slug should switch to
+`doe-o-413-3`.
+
+### Added
+
+- **`dote-te-guidebook`** (8 ch): DoD Test & Evaluation Enterprise Guidebook
+  (ed. 8.02, Aug 2022) with DOT&E-facing enterprise emphasis - DT&E/OT&E/LFT&E,
+  cybersecurity T&E, MOSA/digital enablers, suitability/reliability growth, and
+  TEMP/Strategy/STE planning. Complementary to `dod-te-guidebook`. Tier 1 (US-gov public domain).
+- **`faa-std-025`** (6 ch): FAA-STD-025 Preparation of Interface Documentation -
+  IRD/ICD family definitions, common format and content, IRD shall-requirements,
+  ICD design characteristics, verification/VRTM, and CM/revision/approval of FAA
+  Enterprise Subsystem interfaces. Built from the Rev F mirror; ROSAP hosts the
+  canonical Rev E. Tier 1 (US-gov public domain).
+- **`federal-bca`** (6 ch): OMB Circular A-94 (revised 2023-11-09) guidelines and
+  discount rates for benefit-cost and cost-effectiveness analysis of federal
+  programs - BCA principles, benefit/cost measurement, discount-rate policy,
+  uncertainty/sensitivity, distributional incidence, and decision reporting
+  (A-94 only; Army CBA Guide unreachable at build). Tier 1 (US-gov public domain).
+- **`dafman-63-119`** (7 ch): DAFMAN 63-119 Mission-Oriented Test Readiness
+  Certification (15 Apr 2021) - continuous MOTRC replacing single-point OTRR
+  thinking, Certification Official vs PM roles, review cycle and exit criteria,
+  certification memo/decertify gates, DT&E evidence, ITT/cyber resiliency, and the
+  31-template matrix. Tier 1 (US-gov public domain).
+- **`mil-std-881f`** (7 ch): MIL-STD-881F Work Breakdown Structures for Defense
+  Materiel Items (13 May 2022) - Program/Contract/Subcontract WBS construction,
+  100% rule and dictionary discipline, commodity appendices A-J, Common Elements,
+  sustainment CES, Government ST&E, and RFP/post-award implementation
+  (Distribution A). Tier 1 (US-gov public domain).
+- **`mil-std-40051`** (8 ch): MIL-STD-40051-2C Preparation of Digital Technical
+  Information for Page-Based Technical Manuals (15 Dec 2015) - TM/TDP structure,
+  work packages, front/back matter, style/format, warnings/HAZMAT, change packages,
+  and content selection matrices. Some PDF page counters report 1168 against the
+  metadata authority of 584 pages. Tier 1 (US-gov public domain).
+- **`dod-vva-rpg`** (10 ch): DoD M&S VV&A Recommended Practices Guide (RPG web
+  edition) - verification, validation, and accreditation of models and simulations;
+  role responsibilities (user, developer, M&S PM, V&V agent, accreditation agent),
+  fidelity, validation fundamentals, data V&V, and risk-informed accreditation.
+  Chapter PDFs carry internal dates circa 2011 inside an undated web-edition
+  container. Tier 1 (US-gov public domain).
+- `docs/capability-pack-map.{md,json}` v2: schema_version 2, 32 clusters, 628
+  chapter entries, map_version tracking the release; enforced by
+  `python tooling/check_capability_map.py`.
+- `docs/capability-map-CONTRACT.md`: versioned map contract for the se-agents
+  generator (envelope, refresh path, thresholds).
+
+Catalogue now 61 packs (+2 signposts).
+
+### Fixed
+
+- The v1.17.0 entry's registration-surface list wrongly included `docs/index.html`,
+  which is a version surface, not a registration surface.
+- OUSD(R&E) attribution typo in `docs/SOURCE-VETTING.md` GP-01 row
+  (OUSW corrected to OUSD).
+- Capability-map gate hardenings: duplicate-name detection, strict schema, and
+  path guard.
+- Cursor manifest gained the 7 new packs (62 skills total) in the post-tag
+  v1.17.x commit e00ac7d; surfaced here so the release notes are complete.
+
+### Changed
+
+- Registered the 7 packs on every registered surface: catalog.json, SKILLS.md,
+  docs/packs.html, NOTICE, README, Cursor manifest.
+
 ## [1.17.0]: 2026-08-15
 
 ### Added

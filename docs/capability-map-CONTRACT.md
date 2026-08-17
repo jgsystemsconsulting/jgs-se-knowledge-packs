@@ -70,7 +70,7 @@ When packs change (new pack, new chapter, rename, delete):
 1. Agent classification pass per the **rules of construction** in
    `docs/capability-pack-map.md` (every chapter → exactly one cluster; support
    files only for essentially single-cluster packs; process definitions →
-   cluster 30).
+   the Standards, Tailoring & Process Models cluster).
 2. Write `docs/capability-pack-map.json` (preserve v2 envelope; update
    `map_version` / `generated_on`) and sync the human summary tables in
    `docs/capability-pack-map.md`.
