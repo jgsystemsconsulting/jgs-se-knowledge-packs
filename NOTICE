@@ -701,6 +701,26 @@ Third-party source attributions (one block per shipped pack)
            (including commercially). Attribution is courtesy, not obligation; the source
            agency does not endorse this pack. See packs/mil-std-40051/LICENSE.
 
+[pack: nasa-std-8719-14]
+  Source : Process for Limiting Orbital Debris (NASA-STD-8719.14C), Approved 2021-11-05
+  Author : NASA / Office of Safety and Mission Assurance (OSMA)
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright, free to reproduce, transform, and redistribute
+           (including commercially). Attribution is courtesy, not obligation; the source
+           agency does not endorse this pack. See packs/nasa-std-8719-14/LICENSE.
+
+[pack: is-gps-200n]
+  Source : NAVSTAR GPS Space Segment / Navigation User Segment Interfaces
+           (IS-GPS-200 Rev N), cover date 01-AUG-2022
+  Author : US Space Force / Space Systems Command (MilComm & PNT)
+  Licence: Public Domain -- US Government work (17 U.S.C. 105); Distribution
+           Statement A - Approved for public release; distribution is unlimited
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright, free to reproduce, transform, and redistribute
+           (including commercially). Attribution is courtesy, not obligation; the source
+           agency does not endorse this pack. See packs/is-gps-200n/LICENSE.
+
 -----------------------------------------------------------------------------------
 The build pipeline uses the jgs-reference-skill extraction engine (MIT License,
 © JG Systems Consulting Ltd; a fork of book-to-skill, © the book-to-skill authors).

@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "repository": "jgs-se-knowledge-packs",
   "scope": "systems engineering",
-  "updated": "2026-08-16",
+  "updated": "2026-08-17",
   "packs": [
     {
       "slug": "faa-rma",
@@ -676,6 +676,28 @@
       "license_tier": 1,
       "commercial_use": true,
       "chapters": 8,
+      "status": "live"
+    },
+    {
+      "slug": "nasa-std-8719-14",
+      "title": "Process for Limiting Orbital Debris (NASA-STD-8719.14C)",
+      "publisher": "NASA",
+      "source_version": "NASA-STD-8719.14C (Approved 2021-11-05)",
+      "license": "Public Domain (US Government work)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 7,
+      "status": "live"
+    },
+    {
+      "slug": "is-gps-200n",
+      "title": "NAVSTAR GPS Space Segment / Navigation User Segment Interfaces (IS-GPS-200N)",
+      "publisher": "US Space Force / Space Systems Command (MilComm & PNT)",
+      "source_version": "IS-GPS-200 Rev N (cover date 01-AUG-2022; public-release revision record)",
+      "license": "Public Domain (US Government work)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 6,
       "status": "live"
     }
   ],
