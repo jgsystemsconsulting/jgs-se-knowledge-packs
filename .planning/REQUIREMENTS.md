@@ -36,10 +36,10 @@ Sourced from SEED-001, STATE.md v1.19 backlog (consolidated per v1.18.0-MILESTON
 
 ### Hygiene (from v1.18 audit backlog)
 
-- [ ] **HYG-01**: CHANGELOG strip UTF-8 BOM + normalize; add `.gitattributes` (`*.md text eol=lf`)
-- [ ] **HYG-02**: Topic-index polish (881F alpha order, 40051 circular routing, federal-bca label) — 7-GAP R6
-- [ ] **HYG-03**: External sync — add afotec/dod-dag/cmu-sei to jgs-reference-skill `vet_source.py` EXCLUDED signals (6-GAP Thread 3)
-- [ ] **HYG-04**: federal-bca "(c)" wording polish (cosmetic)
+- [x] **HYG-01**: CHANGELOG strip UTF-8 BOM + normalize; add `.gitattributes` (`*.md text eol=lf`)
+- [x] **HYG-02**: Topic-index polish (881F alpha order, 40051 circular routing, federal-bca label) — 7-GAP R6
+- [x] **HYG-03**: External sync — add afotec/dod-dag/cmu-sei to jgs-reference-skill `vet_source.py` EXCLUDED signals (6-GAP Thread 3)
+- [x] **HYG-04**: federal-bca "(c)" wording polish (cosmetic)
 
 ### Release Surface
 
