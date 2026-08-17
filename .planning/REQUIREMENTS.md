@@ -89,9 +89,9 @@ Sourced from .planning/research/capability-gap-report.md (1 empty cluster, 15 th
 
 ### Agent-Enablement Surface
 
-- [ ] **AE-01**: `capability-pack-map.json` becomes a versioned consumable: schema field + map version + generated-on metadata; a stdlib export/regenerate script under tooling/ (idempotent, gate-checked for staleness)
-- [ ] **AE-02**: Regenerate the map to include all v1.18 packs; thin-cluster re-score shows cluster 25 non-empty and clusters 3/5/15 no longer critical
-- [ ] **AE-03**: Document the map contract (schema + versioning + refresh path) for the se-agents generator repo per docs/ROLE-AGENTS-REQUIREMENTS-V2.md
+- [x] **AE-01**: `capability-pack-map.json` becomes a versioned consumable: schema field + map version + generated-on metadata; a stdlib export/regenerate script under tooling/ (idempotent, gate-checked for staleness)
+- [x] **AE-02**: Regenerate the map to include all v1.18 packs; thin-cluster re-score shows cluster 25 non-empty and clusters 3/5/15 no longer critical
+- [x] **AE-03**: Document the map contract (schema + versioning + refresh path) for the se-agents generator repo per docs/ROLE-AGENTS-REQUIREMENTS-V2.md
 
 ### Release Surface
 

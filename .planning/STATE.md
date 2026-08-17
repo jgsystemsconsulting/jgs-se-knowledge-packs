@@ -3,16 +3,16 @@ gsd_state_version: 1.0
 milestone: v1.18.0
 milestone_name: "**Goal**: Catalog, docs, and manifests synchronized; v1.18.0 tagged and released"
 current_phase: 7
-status: completed
-stopped_at: Completed 7-03-PLAN.md
-last_updated: "2026-08-17T00:00:06.009Z"
+status: verifying
+stopped_at: Completed 8-01-PLAN.md
+last_updated: "2026-08-17T00:25:14.127Z"
 last_activity: 2026-08-17
 last_activity_desc: Phase 7 marked complete
 progress:
   total_phases: 4
   completed_phases: 0
-  total_plans: 8
-  completed_plans: 4
+  total_plans: 11
+  completed_plans: 5
   percent: 0
 current_phase_name: Source vetting + UNVERIFIED resolution
 ---
@@ -30,10 +30,10 @@ See: .planning/PROJECT.md (updated 2026-08-16)
 
 Phase: 7 — COMPLETE
 Plan: 1 of 1 in current phase (executed)
-Status: Phase 7 complete
+Status: Phase complete — ready for verification
 Last activity: 2026-08-17 — Phase 7 marked complete
 
-Progress: [█████░░░░░] 47%
+Progress: [█████░░░░░] 45%
 
 ## Performance Metrics
 
@@ -48,6 +48,7 @@ Progress: [█████░░░░░] 47%
 | Phase 7 P01 | 34min | 3 tasks | 38 files |
 | Phase 7 P02 | 80min | 2 tasks | 27 files |
 | Phase 7 P03 | 22min | 2 tasks | 22 files |
+| Phase 8 P01 | 45min | 5 tasks | 4 files |
 
 ## Deviations / Notes
 
@@ -68,11 +69,14 @@ Progress: [█████░░░░░] 47%
 - [Phase 7]: mil-std-40051-2C: everyspec PDF; visual cover DIST-A; selected 151pp cpp 2939.9; OCR not needed; cluster-25 vocabulary
 - [Phase 7]: dod-vva-rpg chapter-wise 10 ch from DEBoK; P7-PRE-4 via DEBoK PD + OSD/OUSD OPR
 - [Phase 7]: Registration sweep: catalog 61 / cursor 62 / packs 63; check_release PASS; no version bumps
+- [Phase ?]: Support files only for single-cluster packs mil-std-40051 (C25) and federal-bca (C15); multi-cluster packs omit support files
+- [Phase ?]: Map gate stays standalone; check_release wiring deferred to Phase 9
+- [Phase ?]: faa-std-025 ch05→C3 Traceability, ch03/ch04→C5 Interface to land thin-cluster thresholds
 
 ## Session
 
-**Last session:** 2026-08-16T23:32:57.918Z
-**Stopped at:** Completed 7-03-PLAN.md
+**Last session:** 2026-08-17T00:25:14.111Z
+**Stopped at:** Completed 8-01-PLAN.md
 **Resume file:** None
 
 ### Blockers
