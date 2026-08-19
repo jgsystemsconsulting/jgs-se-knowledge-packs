@@ -2,7 +2,7 @@
 
 ## What This Is
 
-A curated library of 48 "knowledge packs" — Agent Skills distilled from authoritative systems-engineering sources (NASA, DoD, FAA, NIST, GAO, SEBoK, EU, OMG) — installable into Claude Code, Copilot CLI, and other Agent-Skills hosts. Each pack is a licence-clean reference oracle over one source, built with the jgs-reference-skill pipeline (fork of book-to-skill, synced to upstream v1.4.0).
+A curated library of licence-clean systems-engineering "knowledge packs" — Agent Skills distilled from authoritative sources (NASA, DoD, FAA, NIST, GAO, SEBoK, EU, OMG) — installable into Claude Code, Copilot CLI, and other Agent-Skills hosts. Each pack is a single-source reference oracle built with the jgs-reference-skill pipeline (fork of book-to-skill).
 
 ## Core Value
 
@@ -17,15 +17,43 @@ Every pack must be a licence-clean, validated, single-source reference that an e
 
 ## Current State
 
-**Shipped:** v1.18.0 (2026-08-17) — 63 packs (61 catalog + 2 signposts) across NASA/DoD/FAA/NIST/GAO/DOE/DHS/EU/SEBoK lineages; capability map v2 (schema 2, 628 entries, 32 clusters, hardened gate + CONTRACT) consumable by the se-agents generator; jgs-reference-skill pipeline synced to upstream book-to-skill v1.4.0.
+**Shipped:** v1.19.0 (2026-08-17) — Agent IO Depth. Catalog 63 packs / 65 dirs (+2 signposts); capability map schema 2, map_version 1.19.0, 644 entries, 32 clusters; dual-gate (`check_capability_map` wired into `check_release`); 2 new Tier-1 packs (`nasa-std-8719-14`, `is-gps-200n`) + VV&A RPG chapter depth + Decision Analysis remap. Honest deferrals: AAF (IO-05/06), Army CBA (FUT-04), IO-07 accept (no pack).
 
-## Next Milestone Goals
+## Current Milestone: v1.19.1 Cleanup + Carried Backlog
 
-**v1.19.0 — Agent IO Depth** (SEED-001 selected). Fatten ISECF competency *primaries* so se-agents can execute IOs (trade studies, V&V, transition, interfaces) instead of filling the 20-ref cap from fat secondaries. Pack-side only — se-agents consumer refresh (502 docs, thin-threshold, Cyber/DE bindings) stays in that repo (MAP-19-05 documents the contract). Phases 10–13.
+**Goal:** Make planning/ledger truth match shipped reality, then clear the full carried backlog (retries, IN-02, FUT-05) and ship a coherent v1.19.1 surface.
+
+**Target features:**
+- GSD ledger hygiene (archive leftover phases by milestone, clear Phase 3 ghost, commit master_flow state, tick MAP-19 / annotate VET honestly)
+- Planning-surface refresh (PROJECT / ROADMAP / STATE / REQUIREMENTS / MILESTONES)
+- FUT-04 Army CBA Guide PDF retry — build only if licence-cleared
+- AAF Product Support + Software pathway licence spot-check — build Integration/Logistics packs only if cleared; else keep deferred
+- IN-02 minimal committed overlap checker in tooling/ + release gate
+- FUT-05 deterministic capability-map generator (or honest partial with residual agent-judgment documented)
+- Conditional packs only when sources clear; release surface + tag v1.19.1 when gates PASS
 
 ## Constraints
-
 
 - Pack content licences are inherited from sources (Tier 1 public domain → Tier 3 excluded); vetting is a hard stop, not advisory
 - Packs must stay plain Markdown, progressive-disclosure structured (SKILL.md index + on-demand chapters)
 - CI `content-integrity` gate must pass for any release commit
+- Do not invent packs when sources stay uncleared (record deferral)
+- se-agents consumer refresh stays in the sibling repo
+- Per-role packs remain rejected
+
+## Evolution
+
+This document evolves at phase transitions and milestone boundaries.
+
+**After each phase transition** (via `/gsd-transition`):
+1. Requirements invalidated? → Move to Out of Scope with reason
+2. Requirements validated? → Move to Validated with phase reference
+3. New requirements emerged? → Add to Active
+4. Decisions to log? → Add to Key Decisions
+5. "What This Is" still accurate? → Update if drifted
+
+**After each milestone** (via `/gsd:complete-milestone`):
+1. Full review of all sections
+2. Core Value check — still the right priority?
+3. Audit Out of Scope — reasons still valid?
+4. Update Context with current state

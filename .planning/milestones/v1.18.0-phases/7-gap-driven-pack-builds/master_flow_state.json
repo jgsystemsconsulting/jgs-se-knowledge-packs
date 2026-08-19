@@ -6,7 +6,7 @@
   "phase_slug": "7-gap-driven-pack-builds",
   "phase_dir": ".planning/phases/7-gap-driven-pack-builds",
   "scope": "phase",
-  "current_gate": null,
+  "current_gate": "research",
   "completed": [
     "plan",
     "plan_check",
@@ -60,8 +60,8 @@
     "impl_review": "passed_with_notes",
     "code_review": "passed_with_notes",
     "integration_check": "passed_with_notes",
-    "security_audit": "secured",
-    "gap_analysis": "closed",
+    "security_audit": "passed",
+    "gap_analysis": "passed",
     "verify": "passed"
   },
   "artifacts": {

@@ -4,7 +4,7 @@
   "active_phase": null,
   "active_phase_dir": null,
   "active_state": null,
-  "lock": {},
-  "updated_at": "2026-08-17T01:24:15.420636+00:00",
-  "notes": "v1.18.0 milestone complete (all phases 6-9 closed)"
+  "lock": null,
+  "updated_at": "2026-08-19T09:07:23.457Z",
+  "notes": "Repaired stale pointer after archive; awaiting next milestone"
 }

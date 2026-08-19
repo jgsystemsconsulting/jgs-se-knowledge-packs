@@ -1,20 +1,16 @@
 ---
 gsd_state_version: 1.0
-milestone: v1.19.0
-milestone_name: "**Goal**: Catalog/docs/manifests synchronized; v1.19.0 tagged and released"
-current_phase: 13
-status: completed
-stopped_at: Completed 13-02-PLAN.md
-last_updated: "2026-08-17T23:28:37.695Z"
-last_activity: 2026-08-18
-last_activity_desc: Phase 13 complete
+milestone: v1.19.1
+milestone_name: Cleanup + Carried Backlog
+status: planning
+last_updated: "2026-08-19T09:07:22.338Z"
+last_activity: 2026-08-19
 progress:
-  total_phases: 4
-  completed_phases: 4
-  total_plans: 8
-  completed_plans: 8
-  percent: 100
-current_phase_name: Release surface + v1.19.0
+  total_phases: 0
+  completed_phases: 0
+  total_plans: 0
+  completed_plans: 0
+  percent: 0
 ---
 
 # Project State
@@ -24,16 +20,14 @@ current_phase_name: Release surface + v1.19.0
 See: .planning/PROJECT.md (updated 2026-08-17)
 
 **Core value:** Licence-clean, validated, single-source reference packs an agent can load without context bloat.
-**Current focus:** v1.19.0 SHIPPED — Agent IO Depth (last v1.19 phase)
+**Current focus:** v1.19.1 — Cleanup + Carried Backlog (planning)
 
 ## Current Position
 
-Phase: 13
-Plan: Not started
-Status: All phases complete
-Last activity: 2026-08-18 — Phase 13 complete
-
-Progress: [██████████] 100% (v1.19.0 phases 10–13)
+Phase: Not started (defining requirements)
+Plan: —
+Status: Defining requirements
+Last activity: 2026-08-19 — Milestone v1.19.1 started
 
 ## Shipped — v1.19.0
 
@@ -63,15 +57,18 @@ Honest scope: 2 new packs + leftover RPG chapters + DA remap + map 644 + dual-ga
 
 SEED-001 — pack depth for se-agents IOs (17 thin-primary competencies). Consumer-side work (502 docs, thin:3, Cyber/DE bindings, 20-ref cap) stays in the sibling repo jgs-se-agents.
 
-## Remaining backlog (carried)
+## Milestone backlog (v1.19.1 in scope)
 
-- **FUT-04:** Army CBA Guide retry if ASAFM PDF becomes reachable
-- **FUT-05:** deterministic map generator (still agent-judgment)
-- **IN-02 (7-CODE-REVIEW IN-02):** minimal committed overlap checker
-- **AAF still deferred (IO-05/06):** Software pathway + Product Support NOT yet vetted — do not use
-- **IO-07 accept:** no pack; no clean Tier-1/2 candidate
-- **ROSAP:** optional Rev E retry (faa-std-025 still Rev F mirror)
-- **se-agents consumer refresh:** stays in the sibling repo (not this tree)
+- **HYG-20:** Ledger archive + MAP-19 ticks + planning-surface truth
+- **VET-20 / PACK-20:** FUT-04 Army CBA retry; AAF Product Support + Software pathway spot-check; build only if cleared
+- **TOOL-20:** IN-02 overlap checker + FUT-05 deterministic map generator (honest partial OK)
+- **MAP-20 / REL-20:** Map refresh + v1.19.1 release surface
+
+## Still out of this tree
+
+- **se-agents consumer refresh** — sibling repo
+- **IO-07 accept** — no pack unless a new Tier-1/2 stakeholder source appears (not forced this milestone)
+- **DoDM 5000.102** — remains UNVERIFIED until public PDF
 
 ## Deviations / Notes
 
