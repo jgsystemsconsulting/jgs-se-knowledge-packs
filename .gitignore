@@ -32,6 +32,10 @@ Thumbs.db
 # Cross-repo handoff note — describes work for OTHER repos, not a deliverable here (kept local)
 docs/RELEASE-STANDARD-REPO-PLAN.md
 
+# GSD planning / agent workflow state — how the work gets done, not the product.
+# Keep local for GSD; never ship in clones or release archives.
+.planning/
+
 # Interview-prep artifacts (not part of the knowledge-packs product; kept local)
 System_Retirement_SE_Interview*.pptx
 build_retirement_pptx.js

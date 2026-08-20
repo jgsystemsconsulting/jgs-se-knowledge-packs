@@ -93,13 +93,12 @@ This list exists so the repo never ships something that triggers a takedown.
 
 ### Vetted candidates (v1.17.0) — statute-basis; confirm in-source at build
 
-Source URLs for all vetted/excluded/UNVERIFIED candidates are recorded in
-`.planning/phases/2-source-vetting-ruled-out-register/2-RESEARCH.md` (Link Policy: never
-published in docs or packs).
+Source URLs for candidates are held in internal build notes only (Link Policy: never
+published in docs or packs). Tables below are the public verdict surface.
 
 Statute-basis rows below rest on 17 U.S.C. § 105 (US Government works). In-PDF statements
 (NIST footers, CISA title page, DOE SEM third-party notices, Distribution Statement A on
-DoD handbooks) are confirmed at build time in Phase 3 — these rows are pending that
+DoD handbooks) are confirmed at build time — these rows are pending that
 in-source confirmation.
 
 | Source | Tier | Licence evidence |
@@ -115,14 +114,12 @@ in-source confirmation.
 
 ### Vetted candidates (v1.18.0) — statute-basis; confirm in-source at build
 
-Source URLs for all vetted/excluded candidates are recorded in
-`.planning/phases/6-source-vetting-unverified-resolution/6-RESEARCH.md` (Link Policy: never
+Source URLs for candidates are held in internal build notes only (Link Policy: never
 published in docs or packs).
 
 Statute-basis rows below rest on 17 U.S.C. § 105 (US Government works) unless noted.
 In-PDF statements (Distribution Statement A, releasability lines, NTRS copyright metadata)
-are confirmed at build time in Phase 7 — these rows record the Phase 6 verdict with that
-build caveat.
+are confirmed at pack build time — rows record the vetting verdict with that build caveat.
 
 | Source | Tier | Licence evidence |
 |---|---|---|
@@ -141,11 +138,10 @@ build caveat.
 
 ### Vetted candidates (v1.19.0) — in-source this session; build-time confirm still required
 
-Source URLs for all vetted/excluded/UNVERIFIED candidates are recorded in
-`.planning/phases/10-source-vetting/10-RESEARCH.md`
+Source URLs for candidates are held in internal build notes only
 (Link Policy: never published in docs or packs).
 
-Rows below are Phase 10 decisions dated 2026-08-17. Tier 1 leaning still requires Phase 11 build-time in-source confirmation on the copy actually extracted. Unreachable candidates are not listed as Vetted.
+Rows below are decisions dated 2026-08-17. Tier 1 leaning still requires build-time in-source confirmation on the copy actually extracted. Unreachable candidates are not listed as Vetted.
 
 | Source | Tier | Licence evidence |
 |---|---|---|
@@ -178,10 +174,10 @@ Rows below are Phase 10 decisions dated 2026-08-17. Tier 1 leaning still require
 
 ### Not cleared this session (v1.19.1 retry)
 
-Source URLs and raw fetch transcripts for all v1.19.1 retry candidates are recorded in
-`.planning/phases/15-source-retries/15-RESEARCH.md` (Link Policy: never published in docs or packs).
+Source URLs and raw fetch transcripts for retry candidates are held in internal build
+notes only (Link Policy: never published in docs or packs).
 
-Rows below are Phase 15 decisions dated 2026-08-20. Unreachable is not Tier 1. No pack is built this phase.
+Rows below are decisions dated 2026-08-20. Unreachable is not Tier 1. No pack is built this phase.
 
 - **FUT-04 / US Army Cost Benefit Analysis Guide (ASAFM)** — remains **DEFERRED** with fresh evidence 2026-08-20. Official PDF returned 403 Access Denied (Akamai). No in-source licence statement obtained. Statute 17 U.S.C. § 105 is prediction, not clearance. Not Tier 1. Not added to the Excluded table. Phase 16 must not build an Army CBA pack unless this bullet is later replaced by a quoted in-source grant. Phase 16 PACK-20-01 deferred-with-evidence 2026-08-20; no Army CBA pack built. (Also verified 2026-08-20.)
 

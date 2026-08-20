@@ -1,7 +1,7 @@
 # Capability Pack Map — Consumption Contract
 
-Standalone contract for downstream consumers (notably the se-agents generator
-repo per ROLE-AGENTS-REQUIREMENTS-V2 FR-2.1 / FR-2.3). This document governs
+Standalone contract for downstream consumers (notably an se-agents generator
+repo that binds roles/skills to pack chapters). This document governs
 cross-repo consumption of `docs/capability-pack-map.json`. Pack structure is
 out of scope (see `docs/PACK-SPEC.md`).
 
@@ -104,12 +104,11 @@ are correctness floors for the agent-enablement surface, not upper bounds.
 ## 6. Live snapshot vs residue
 
 The live committed snapshot is **628+** chapter entries — post-regen **644**
-(16 classified Phase-11 chapters, 0 new support-file rows). The **502** figure
-is residue from a historical ROLE-AGENTS-REQUIREMENTS-V2 draft count; consumers
-must read the live JSON, not 502. **Cybersecurity & Security Engineering**
-(live 69 entries / 10 packs) and **Digital Engineering & Digital Twins**
-(live 25 entries / 4 packs) remain **unbound**. Binding those clusters is
-se-agents-side work, not this milestone.
+(16 classified chapters, 0 new support-file rows). Older draft counts (e.g. 502)
+are obsolete; consumers must read the live JSON. **Cybersecurity & Security
+Engineering** (live 69 entries / 10 packs) and **Digital Engineering & Digital
+Twins** (live 25 entries / 4 packs) remain **unbound**. Binding those clusters
+is se-agents-side work, not a knowledge-packs release gate.
 
 ## 7. Chapter basename overlap gate
 
