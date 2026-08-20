@@ -87,6 +87,7 @@ SEED-001 — pack depth for se-agents IOs (17 thin-primary competencies). Consum
 - Deferred-with-evidence is a valid done state for PACK-20-* and VET-20-01/02
 - Phase 10–13 history retained in prior STATE snapshots / milestone archives
 - Phase 15 (2026-08-20): Army CBA FUT-04 deferred (ASAFM PDF 403, no in-source); AAF Product Support + Software pathway still NOT yet vetted — do not use; ROSAP Rev E optional check document-only (403/404, no rebuild); verdicts in 15-RESEARCH.md and SOURCE-VETTING v1.19.1 retry section
+- Phase 16 (2026-08-20): PACK-20-01..03 all deferred-with-evidence per Phase 15 handoff; zero packs built
 
 ## Session Continuity
 
@@ -102,3 +103,4 @@ SEED-001 — pack depth for se-agents IOs (17 thin-primary competencies). Consum
 - [Phase 15]: FUT-04 remains DEFERRED (ASAFM PDF 403); no Army CBA pack
 - [Phase 15]: AAF Product Support + Software pathway still NOT yet vetted — do not use
 - [Phase 15]: ROSAP Rev E optional check document-only; faa-std-025 Rev F unchanged
+- [Phase 16]: PACK-20-01..03 deferred-with-evidence; no Army CBA or AAF pack

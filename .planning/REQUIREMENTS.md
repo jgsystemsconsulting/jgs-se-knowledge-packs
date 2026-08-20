@@ -22,9 +22,9 @@ Sourced from STATE.md remaining backlog after v1.19.0 ship, stale GSD ledger (Ph
 - [x] **VET-20-01**: Retry FUT-04 Army CBA Guide (ASAFM PDF). Record dated evidence. Build pack only with in-source redistribution grant; otherwise keep FUT-04 deferred with fresh evidence (not a silent tick) — *retry 2026-08-20; ASAFM PDF 403; no in-source grant; FUT-04 remains deferred; not a build-clear*
 - [x] **VET-20-02**: Licence spot-check AAF Product Support Manager Guidebook + AAF Software pathway guidebooks before any use. Quote in-source grant or keep Excluded-pending / "NOT yet vetted — do not use" — *retry 2026-08-20; still NOT yet vetted — do not use; Excluded-pending; no guidebook PDF opened*
 - [x] **VET-20-03**: Optional ROSAP Rev E reachability check vs current `faa-std-025` Rev F mirror — document only; no forced rebuild — *optional check 2026-08-20; ROSAP Rev E 403; guessed FAA Rev F path 404; document only; no forced rebuild*
-- [ ] **PACK-20-01**: If VET-20-01 clears → build Army CBA / Decision Analysis pack per PACK-SPEC + validate + scan + When-to-use; else record deferred (no invented pack)
-- [ ] **PACK-20-02**: If VET-20-02 clears Software pathway → build Integration-oriented pack (IO-05 path); else keep deferred
-- [ ] **PACK-20-03**: If VET-20-02 clears Product Support → build Logistics-oriented pack (IO-06 path); else keep deferred
+- [ ] **PACK-20-01**: If VET-20-01 clears → build Army CBA / Decision Analysis pack per PACK-SPEC + validate + scan + When-to-use; else record deferred (no invented pack) — *deferred 2026-08-20 — Phase 15 handoff NO-GO; VET-20-01 not cleared; FUT-04 remains DEFERRED; no invented pack*
+- [ ] **PACK-20-02**: If VET-20-02 clears Software pathway → build Integration-oriented pack (IO-05 path); else keep deferred — *deferred 2026-08-20 — Phase 15 handoff NO-GO; VET-20-02 Software pathway not cleared; IO-05 stays deferred*
+- [ ] **PACK-20-03**: If VET-20-02 clears Product Support → build Logistics-oriented pack (IO-06 path); else keep deferred — *deferred 2026-08-20 — Phase 15 handoff NO-GO; VET-20-02 Product Support not cleared; IO-06 stays deferred*
 
 ### Tooling
 
