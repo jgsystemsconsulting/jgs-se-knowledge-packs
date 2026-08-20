@@ -26,7 +26,7 @@ Goal: planning/ledger truth matches shipped v1.19.0 reality, then clear the carr
 - [x] **Phase 15: Source retries** — Docs-only FUT-04 / AAF / optional ROSAP vetting; no pack build (completed 2026-08-20)
 - [x] **Phase 16: Conditional packs** — Build Army CBA / AAF Integration / AAF Logistics only if Phase 15 cleared the source (completed 2026-08-20)
 - [x] **Phase 17: Tooling (IN-02 + FUT-05)** — Overlap checker wired into release + deterministic map generator or honest partial (completed 2026-08-20)
-- [ ] **Phase 18: Map + release surface v1.19.1** — Gates PASS; tag + GitHub Release; CHANGELOG honest about deferrals
+- [x] **Phase 18: Map + release surface v1.19.1** — Gates PASS; tag + GitHub Release; CHANGELOG honest about deferrals (completed 2026-08-20)
 
 ## Phase Details
 
@@ -111,11 +111,12 @@ Plans:
   2. Any new packs are fully registered; both gates PASS at the updated catalog/directory basis
   3. `v1.19.1` is tagged + published as a GitHub Release; CHANGELOG records cleanup + any packs/tooling honestly, including items still deferred
 
-**Plans:** 2 plans
+**Plans:** 2/2 plans executed
 
 Plans:
-- [ ] 18-01-PLAN.md — Bump 11 surfaces + map_version 1.19.1 + honest CHANGELOG; both gates PASS at 63/65 (no tag)
-- [ ] 18-02-PLAN.md — Release commit + annotated tag v1.19.1 + push + GitHub Release + planning records
+
+- [x] 18-01-PLAN.md — Bump 11 surfaces + map_version 1.19.1 + honest CHANGELOG; both gates PASS at 63/65 (no tag)
+- [x] 18-02-PLAN.md — Release commit + annotated tag v1.19.1 + push + GitHub Release + planning records
 
 ## Progress
 
@@ -128,4 +129,4 @@ Phases execute in numeric order: 14 → 15 → 16 → 17 → 18
 | 15. Source retries | 1/1 | Complete    | 2026-08-20 |
 | 16. Conditional packs | 1/1 | Complete    | 2026-08-20 |
 | 17. Tooling (IN-02 + FUT-05) | 1/1 | Complete    | 2026-08-20 |
-| 18. Map + release surface v1.19.1 | 0/2 | Not started | - |
+| 18. Map + release surface v1.19.1 | 2/2 | Complete    | 2026-08-20 |

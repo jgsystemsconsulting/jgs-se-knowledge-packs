@@ -4,17 +4,17 @@ milestone: v1.19.1
 milestone_name: "**Goal**: Catalog, map, and release surfaces are coherent at v1.19.1; deferrals are visible, not papered over"
 current_phase: 18
 current_phase_name: Map + release surface v1.19.1
-status: planning
-stopped_at: Completed 17-01-PLAN.md
-last_updated: "2026-08-20T12:36:38.674Z"
+status: shipped
+stopped_at: Completed 18-02-PLAN.md
+last_updated: "2026-08-20T14:00:00.000Z"
 last_activity: 2026-08-20
-last_activity_desc: Phase 17 plan 17-01 complete — IN-02 overlap gate + FUT-05 residual; phase verify remains
+last_activity_desc: v1.19.1 shipped — annotated tag + GitHub Release; Phase 18 plans complete
 progress:
   total_phases: 5
-  completed_phases: 4
-  total_plans: 4
-  completed_plans: 4
-  percent: 80
+  completed_phases: 5
+  total_plans: 6
+  completed_plans: 6
+  percent: 100
 ---
 
 # Project State
@@ -24,16 +24,27 @@ progress:
 See: .planning/PROJECT.md (updated 2026-08-19)
 
 **Core value:** Licence-clean, validated, single-source reference packs an agent can load without context bloat.
-**Current focus:** Phase 17 — Tooling IN-02 + FUT-05 (17-01 execute complete; phase verify / complete remain)
+**Current focus:** Shipped v1.19.1 (Phase 18 complete; REQUIREMENTS MAP-20/REL-20 boxes left for phase.complete)
 
 ## Current Position
 
-Phase: 18 of 18 (Map + release surface v1.19.1)
-Plan: Not started
-Status: Ready to plan
-Last activity: 2026-08-20 — Phase 17 complete, transitioned to Phase 18
+Phase: 18 of 18 (Map + release surface v1.19.1) — SHIPPED
+Plan: 18-02 complete
+Status: v1.19.1 published
+Last activity: 2026-08-20 — release commit 6944c14 + annotated tag v1.19.1 + GitHub Release
 
-Progress: [████████░░] 80% (milestone plans 4/5 across Phases 14–17 execute; phase 17 verify remains)
+Progress: [██████████] 100% (Phases 14–18 execute complete for milestone v1.19.1)
+
+## Shipped — v1.19.1
+
+- **Release commit:** `6944c14` — `release(v1.19.1): hygiene + overlap tooling + deferred items visible (63 +2 signposts)`
+- **Annotated tag:** `v1.19.1` — `v1.19.1: hygiene + overlap tooling + deferred items visible (63 +2 signposts)` (`git cat-file -t` == tag)
+- **GitHub Release:** https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/releases/tag/v1.19.1
+- **Basis:** catalog 63 packs / packs dirs 65 (unchanged; no new packs)
+- **Gates:** `check_release.py` PASS (overlap then map); `check_capability_map.py` PASS (map_version 1.19.1, schema_version 2, 644 entries, 32 clusters)
+- **MAP-20-01 / REL-20-01 / REL-20-02 (narrative close):** surfaces + map_version synchronized; dual gates PASS; annotated tag + GitHub Release with CHANGELOG-derived honest notes. REQUIREMENTS.md boxes stay unchecked for phase.complete.
+
+Honest scope: hygiene + source-retry evidence + PACK deferred-with-evidence + overlap tooling + FUT-05 residual. No new packs. FUT-04/AAF/IO-05/06 still deferred; IO-07 accept.
 
 ## Shipped — v1.19.0
 
@@ -62,6 +73,8 @@ Honest scope: 2 new packs + leftover RPG chapters + DA remap + map 644 + dual-ga
 | Phase 15 P01 | 4min | 3 tasks | 4 files |
 | Phase 16 P01 | 3min | 3 tasks | 3 files |
 | Phase 17 P01 | 25min | 3 tasks | 4 files |
+| Phase 18 P01 | 12min | 3 tasks | 12 files |
+| Phase 18 P02 | ~15min | 2 tasks | 12 content + 3 planning |
 
 ## Selected seed
 
@@ -77,9 +90,11 @@ SEED-001 — pack depth for se-agents IOs (17 thin-primary competencies). Consum
 
 ## Still out of this tree
 
-- **se-agents consumer refresh** — sibling repo
+- **se-agents consumer refresh** — sibling repo (post v1.19.1 consumer refresh stays there)
 - **IO-07 accept** — no pack unless a new Tier-1/2 stakeholder source appears (not forced this milestone)
 - **DoDM 5000.102** — remains UNVERIFIED until public PDF
+- **FUT-04 Army CBA** — still DEFERRED (ASAFM PDF 403; no in-source grant)
+- **AAF Product Support + Software pathway** — still NOT yet vetted; do not use (blocks IO-05/06 packs)
 
 ## Deviations / Notes
 
@@ -91,11 +106,12 @@ SEED-001 — pack depth for se-agents IOs (17 thin-primary competencies). Consum
 - Phase 15 (2026-08-20): Army CBA FUT-04 deferred (ASAFM PDF 403, no in-source); AAF Product Support + Software pathway still NOT yet vetted — do not use; ROSAP Rev E optional check document-only (403/404, no rebuild); verdicts in 15-RESEARCH.md and SOURCE-VETTING v1.19.1 retry section
 - Phase 16 (2026-08-20): PACK-20-01..03 all deferred-with-evidence per Phase 15 handoff; zero packs built
 - Phase 17 (2026-08-20): 17-01 shipped check_overlap on release path + CONTRACT FUT-05 residual; TOOL-20 boxes stay open for verify
+- Phase 18 (2026-08-20): v1.19.1 shipped — surfaces + map_version 1.19.1 / 644; honest CHANGELOG; annotated tag + GitHub Release; first push attempt HTTP 408 then retry succeeded under admin-bypass (jgsystemsconsulting)
 
 ## Session Continuity
 
-**Last session:** 2026-08-20T12:00:00Z
-**Stopped at:** Completed 17-01-PLAN.md
+**Last session:** 2026-08-20T14:00:00.000Z
+**Stopped at:** Completed 18-02-PLAN.md
 **Resume file:** None
 
 ## Decisions
@@ -109,3 +125,6 @@ SEED-001 — pack depth for se-agents IOs (17 thin-primary competencies). Consum
 - [Phase 16]: PACK-20-01..03 deferred-with-evidence; no Army CBA or AAF pack
 - [Phase 17]: Overlap gate scans packs/*/chapters/*.md only; WHITELIST ch01-introduction.md
 - [Phase 17]: FUT-05 residual: mechanical check_capability_map slice; no byte-stable full-map generator; Phase 18 owns map_version
+- [Phase 18]: v1.19.1 surfaces + map_version bump only; catalogue frozen 63/65
+- [Phase 18]: Soft-reset PRE_RELEASE_HEAD into one release(v1.19.1) content commit before annotated tag
+- [Phase 18]: MAP-20/REL-20 REQUIREMENTS boxes left open for phase.complete
