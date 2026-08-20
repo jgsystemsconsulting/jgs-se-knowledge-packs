@@ -94,7 +94,11 @@ Plans:
   2. The checker is on the release path (`check_release.py` call or documented mandatory step) and fails the gate on violations; thresholds are documented; intentional shared support files do not false-fail if excluded by design
   3. A deterministic capability-map generator/exporter under `tooling/` regenerates `docs/capability-pack-map.json` (+ md sync if required) from committed inputs for mechanical fields — or the largest deterministic slice ships with residual agent procedure documented in CONTRACT; full FUT-05 is not claimed closed unless byte-stable regen is proven
 
-**Plans**: TBD
+**Plans:** 1 plan
+
+Plans:
+
+- [ ] 17-01-PLAN.md — Overlap checker on release path + FUT-05 honest residual in CONTRACT
 
 ### Phase 18: Map + release surface v1.19.1
 
@@ -119,5 +123,5 @@ Phases execute in numeric order: 14 → 15 → 16 → 17 → 18
 | 14. Ledger + planning hygiene | 1/1 | Complete    | 2026-08-20 |
 | 15. Source retries | 1/1 | Complete    | 2026-08-20 |
 | 16. Conditional packs | 1/1 | Complete    | 2026-08-20 |
-| 17. Tooling (IN-02 + FUT-05) | 0/TBD | Not started | - |
+| 17. Tooling (IN-02 + FUT-05) | 0/1 | Not started | - |
 | 18. Map + release surface v1.19.1 | 0/TBD | Not started | - |
