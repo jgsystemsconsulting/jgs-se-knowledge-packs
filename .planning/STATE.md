@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.19.1
 milestone_name: "**Goal**: Catalog, map, and release surfaces are coherent at v1.19.1; deferrals are visible, not papered over"
-current_phase: 15
-current_phase_name: Source retries
-status: executing
+current_phase: 16
+current_phase_name: Conditional packs
+status: planning
 stopped_at: Completed 15-01-PLAN.md
-last_updated: "2026-08-20T10:16:32.571Z"
+last_updated: "2026-08-20T10:25:41.463Z"
 last_activity: 2026-08-20
 last_activity_desc: Phase 15 plan 15-01 complete — deferred-with-evidence; phase gates / verify remain
 progress:
   total_phases: 5
-  completed_phases: 1
+  completed_phases: 2
   total_plans: 2
   completed_plans: 2
   percent: 40
@@ -28,10 +28,10 @@ See: .planning/PROJECT.md (updated 2026-08-19)
 
 ## Current Position
 
-Phase: 15 of 18 (Source retries)
-Plan: 15-01 complete (1/1)
-Status: Plan complete — phase verify / gates remain
-Last activity: 2026-08-20 — 15-01 executed (FUT-04 DEFERRED, AAF unused, ROSAP document-only)
+Phase: 16 of 18 (Conditional packs)
+Plan: Not started
+Status: Ready to plan
+Last activity: 2026-08-20 — Phase 15 complete, transitioned to Phase 16
 
 Progress: [████░░░░░░] 40% (milestone plans 2/2 so far across Phases 14–15; phase 15 not complete — gates remain)
 

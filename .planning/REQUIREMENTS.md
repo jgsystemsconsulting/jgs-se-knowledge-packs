@@ -19,9 +19,9 @@ Sourced from STATE.md remaining backlog after v1.19.0 ship, stale GSD ledger (Ph
 
 ### Source Retries (build only if cleared)
 
-- [ ] **VET-20-01**: Retry FUT-04 Army CBA Guide (ASAFM PDF). Record dated evidence. Build pack only with in-source redistribution grant; otherwise keep FUT-04 deferred with fresh evidence (not a silent tick) — *retry 2026-08-20; ASAFM PDF 403; no in-source grant; FUT-04 remains deferred; not a build-clear*
-- [ ] **VET-20-02**: Licence spot-check AAF Product Support Manager Guidebook + AAF Software pathway guidebooks before any use. Quote in-source grant or keep Excluded-pending / "NOT yet vetted — do not use" — *retry 2026-08-20; still NOT yet vetted — do not use; Excluded-pending; no guidebook PDF opened*
-- [ ] **VET-20-03**: Optional ROSAP Rev E reachability check vs current `faa-std-025` Rev F mirror — document only; no forced rebuild — *optional check 2026-08-20; ROSAP Rev E 403; guessed FAA Rev F path 404; document only; no forced rebuild*
+- [x] **VET-20-01**: Retry FUT-04 Army CBA Guide (ASAFM PDF). Record dated evidence. Build pack only with in-source redistribution grant; otherwise keep FUT-04 deferred with fresh evidence (not a silent tick) — *retry 2026-08-20; ASAFM PDF 403; no in-source grant; FUT-04 remains deferred; not a build-clear*
+- [x] **VET-20-02**: Licence spot-check AAF Product Support Manager Guidebook + AAF Software pathway guidebooks before any use. Quote in-source grant or keep Excluded-pending / "NOT yet vetted — do not use" — *retry 2026-08-20; still NOT yet vetted — do not use; Excluded-pending; no guidebook PDF opened*
+- [x] **VET-20-03**: Optional ROSAP Rev E reachability check vs current `faa-std-025` Rev F mirror — document only; no forced rebuild — *optional check 2026-08-20; ROSAP Rev E 403; guessed FAA Rev F path 404; document only; no forced rebuild*
 - [ ] **PACK-20-01**: If VET-20-01 clears → build Army CBA / Decision Analysis pack per PACK-SPEC + validate + scan + When-to-use; else record deferred (no invented pack)
 - [ ] **PACK-20-02**: If VET-20-02 clears Software pathway → build Integration-oriented pack (IO-05 path); else keep deferred
 - [ ] **PACK-20-03**: If VET-20-02 clears Product Support → build Logistics-oriented pack (IO-06 path); else keep deferred
@@ -65,9 +65,9 @@ Sourced from STATE.md remaining backlog after v1.19.0 ship, stale GSD ledger (Ph
 | HYG-20-04 | Phase 14 | Complete |
 | HYG-20-05 | Phase 14 | Complete |
 | HYG-20-06 | Phase 14 | Complete |
-| VET-20-01 | Phase 15 | Pending |
-| VET-20-02 | Phase 15 | Pending |
-| VET-20-03 | Phase 15 | Pending |
+| VET-20-01 | Phase 15 | Complete |
+| VET-20-02 | Phase 15 | Complete |
+| VET-20-03 | Phase 15 | Complete |
 | PACK-20-01 | Phase 16 | Pending |
 | PACK-20-02 | Phase 16 | Pending |
 | PACK-20-03 | Phase 16 | Pending |
