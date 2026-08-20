@@ -24,7 +24,7 @@ Goal: planning/ledger truth matches shipped v1.19.0 reality, then clear the carr
 
 - [x] **Phase 14: Ledger + planning hygiene** — Verify milestone phase archives + finish residual ticks (MAP-19, VET annotations, live surfaces) (completed 2026-08-20)
 - [x] **Phase 15: Source retries** — Docs-only FUT-04 / AAF / optional ROSAP vetting; no pack build (completed 2026-08-20)
-- [ ] **Phase 16: Conditional packs** — Build Army CBA / AAF Integration / AAF Logistics only if Phase 15 cleared the source
+- [x] **Phase 16: Conditional packs** — Build Army CBA / AAF Integration / AAF Logistics only if Phase 15 cleared the source (completed 2026-08-20)
 - [ ] **Phase 17: Tooling (IN-02 + FUT-05)** — Overlap checker wired into release + deterministic map generator or honest partial
 - [ ] **Phase 18: Map + release surface v1.19.1** — Gates PASS; tag + GitHub Release; CHANGELOG honest about deferrals
 
@@ -77,7 +77,7 @@ Plans:
   2. If VET-20-02 cleared Software pathway → Integration-oriented pack exists on the IO-05 path and passes the same pack gates; else IO-05 stays deferred
   3. If VET-20-02 cleared Product Support → Logistics-oriented pack exists on the IO-06 path and passes the same pack gates; else IO-06 stays deferred
 
-**Plans:** 1/1 plans executed
+**Plans:** 1/1 plans complete
 
 Plans:
 
@@ -118,6 +118,6 @@ Phases execute in numeric order: 14 → 15 → 16 → 17 → 18
 |-------|----------------|--------|-----------|
 | 14. Ledger + planning hygiene | 1/1 | Complete    | 2026-08-20 |
 | 15. Source retries | 1/1 | Complete    | 2026-08-20 |
-| 16. Conditional packs | 1/1 | In Progress|  |
+| 16. Conditional packs | 1/1 | Complete    | 2026-08-20 |
 | 17. Tooling (IN-02 + FUT-05) | 0/TBD | Not started | - |
 | 18. Map + release surface v1.19.1 | 0/TBD | Not started | - |
