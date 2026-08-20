@@ -85,6 +85,7 @@ SEED-001 — pack depth for se-agents IOs (17 thin-primary competencies). Consum
 - Licence vetting is a hard stop; never invent packs
 - Deferred-with-evidence is a valid done state for PACK-20-* and VET-20-01/02
 - Phase 10–13 history retained in prior STATE snapshots / milestone archives
+- Phase 15 (2026-08-20): Army CBA FUT-04 deferred (ASAFM PDF 403, no in-source); AAF Product Support + Software pathway still NOT yet vetted — do not use; ROSAP Rev E optional check document-only (403/404, no rebuild); verdicts in 15-RESEARCH.md and SOURCE-VETTING v1.19.1 retry section
 
 ## Session Continuity
 
