@@ -111,7 +111,11 @@ Plans:
   2. Any new packs are fully registered; both gates PASS at the updated catalog/directory basis
   3. `v1.19.1` is tagged + published as a GitHub Release; CHANGELOG records cleanup + any packs/tooling honestly, including items still deferred
 
-**Plans**: TBD
+**Plans:** 2 plans
+
+Plans:
+- [ ] 18-01-PLAN.md — Bump 11 surfaces + map_version 1.19.1 + honest CHANGELOG; both gates PASS at 63/65 (no tag)
+- [ ] 18-02-PLAN.md — Release commit + annotated tag v1.19.1 + push + GitHub Release + planning records
 
 ## Progress
 
@@ -124,4 +128,4 @@ Phases execute in numeric order: 14 → 15 → 16 → 17 → 18
 | 15. Source retries | 1/1 | Complete    | 2026-08-20 |
 | 16. Conditional packs | 1/1 | Complete    | 2026-08-20 |
 | 17. Tooling (IN-02 + FUT-05) | 1/1 | Complete    | 2026-08-20 |
-| 18. Map + release surface v1.19.1 | 0/TBD | Not started | - |
+| 18. Map + release surface v1.19.1 | 0/2 | Not started | - |
