@@ -30,3 +30,11 @@ Agent IO Depth (SEED-001) shipped: 2 new Tier-1 packs (`nasa-std-8719-14` 7 ch, 
 - **Annotated tag:** `v1.19.0` — `v1.19.0: 2 IO-unlock packs + VV&A chapters + DA remap (63 +2 signposts)`
 - **GitHub Release:** https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/releases/tag/v1.19.0
 - **Deferred:** FUT-04 Army CBA retry; FUT-05 deterministic generator; 7-CODE-REVIEW IN-02 overlap checker; AAF (IO-05/06); ROSAP optional; se-agents consumer refresh
+
+## v1.19.1 (in execution)
+
+Cleanup + Carried Backlog. Depends on shipped v1.19.0 commit `bb9df10` and tag `v1.19.0`. Basis remains catalog 63 packs / 65 dirs until Phase 16/18 change it.
+
+- **In scope:** Phase 14 ledger hygiene, then VET-20 / PACK-20 / TOOL-20 / MAP-20 / REL-20
+- **Honest deferrals carried:** AAF (IO-05/06), Army CBA (FUT-04), FUT-05, IN-02, IO-07 accept, se-agents consumer refresh
+- **Not shipped** — do not treat this heading as a release record

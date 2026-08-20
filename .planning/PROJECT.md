@@ -24,7 +24,7 @@ Every pack must be a licence-clean, validated, single-source reference that an e
 **Goal:** Make planning/ledger truth match shipped reality, then clear the full carried backlog (retries, IN-02, FUT-05) and ship a coherent v1.19.1 surface.
 
 **Target features:**
-- GSD ledger hygiene (archive leftover phases by milestone, clear Phase 3 ghost, commit master_flow state, tick MAP-19 / annotate VET honestly)
+- GSD ledger hygiene residual: verify already-moved milestone archives + master-flow (HYG-20-01/02/03); tick MAP-19-01..05 and annotate VET-19 not-built in archived v1.19.0-REQUIREMENTS; refresh live MILESTONES/PROJECT surfaces (HYG-20-04/05/06)
 - Planning-surface refresh (PROJECT / ROADMAP / STATE / REQUIREMENTS / MILESTONES)
 - FUT-04 Army CBA Guide PDF retry — build only if licence-cleared
 - AAF Product Support + Software pathway licence spot-check — build Integration/Logistics packs only if cleared; else keep deferred
