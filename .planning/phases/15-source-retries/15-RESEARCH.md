@@ -94,6 +94,41 @@ HTTP/1.1 404 Not Found
 - AAF: 403 Forbidden on current WarU PSM path — no change; still no in-source grant.
 - FAA-STD-025 Rev F: 404 on direct path (expected; mirror may be elsewhere or behind search). ROSAP Rev E reachability is optional — no forced action.
 
+## Execute-day evidence (2026-08-20) — planner-corrected HEADs
+
+Research-wave host checks above remain. Execute wave re-fetched the **ASAFM Cost Benefit Analysis PDF** (not just the publications host) and the AAF/ROSAP locators. Publications-host 200 is **not** a grant.
+
+### VET-20-01 — US Army Cost Benefit Analysis Guide (ASAFM / FUT-04)
+
+Locator (from 10-RESEARCH.md §FUT-04):
+`https://www.asafm.army.mil/Portals/72/Documents/Offices/CE/US%20Army%20Cost%20Benefit%20Analysis.pdf`
+
+```bash
+$ curl -sI -A "Mozilla/5.0" "https://www.asafm.army.mil/Portals/72/Documents/Offices/CE/US%20Army%20Cost%20Benefit%20Analysis.pdf"
+HTTP/1.1 403 Forbidden
+Server: AkamaiGHost
+Content-Type: text/html
+Content-Length: 489
+Date: Thu, 20 Aug 2026 10:12:41 GMT
+
+$ curl -s -A "Mozilla/5.0" -o /tmp/asafm_cba.bin -w "http_code=%{http_code} size=%{size_download} ctype=%{content_type}\n" \
+  "https://www.asafm.army.mil/Portals/72/Documents/Offices/CE/US%20Army%20Cost%20Benefit%20Analysis.pdf"
+http_code=403 size=489 ctype=text/html
+# body title: Access Denied (HTML deny page — not a PDF)
+```
+
+Cross-check publications host (not a PDF grant):
+
+```bash
+$ curl -sI -A "Mozilla/5.0" https://armypubs.army.mil
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+```
+
+**In-source redistribution quote:** none — PDF did not open (403 HTML deny page, 489 bytes, AkamaiGHost). Statute 17 U.S.C. § 105 remains prediction, not clearance.
+
+**Verdict (execute 2026-08-20):** FUT-04 remains **DEFERRED**. Not Tier 1. Not a new Excluded Source cell. No Army CBA pack.
+
 ## Recommended Approach
 
 1. **Update vetting ledger only** — append 2026-08-20 dated notes to `docs/SOURCE-VETTING.md` under existing Army CBA / AAF rows (no new Excluded-table entries).

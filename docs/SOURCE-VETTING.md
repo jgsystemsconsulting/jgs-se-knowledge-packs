@@ -133,7 +133,7 @@ build caveat.
 | **GP-02 / FAA-STD-025** (FAA Interface Documentation IRD/ICD/IR) | Tier 1 | US Government work (17 U.S.C. § 105). Rev E canonical (ROSAP full-text PDF) + rev F mirror; record chosen revision in PACK.yaml (6-RESEARCH.md §2a). (Verified 2026-08-14.) |
 | **GP-03 / DOT&E T&E Enterprise Guidebook** (Test & Evaluation Enterprise Guidebook) | Tier 1 | US Government work (17 U.S.C. § 105). Target Aug 2022 edition (8.02) from dote.osd.mil if a direct PDF is obtainable; fall back to the afacpo fixed-URL single-encoded mirror PDF (v3 June 2022) if direct download unavailable; PACK.yaml records the edition actually built (8.02 or mirror v3-June) (6-RESEARCH.md §2b). (Verified 2026-08-14.) |
 | **GP-04 / DAFMAN 63-119** (DAF Mission-Oriented Test Readiness Certification; 15 Apr 2021) | Tier 1 | In-document "RELEASABILITY: There are no releasability restrictions on this publication"; USAF publication → 17 U.S.C. § 105. Title corrected to Mission-Oriented Test Readiness Certification (6-RESEARCH.md §2c). (Verified 2026-08-14.) |
-| **GP-06 / federal-bca** (shipped A-94-only; US Army CBA Guide is FUT-04, not in the pack) | Tier 1 (A-94) | A-94 in-source cleared at Phase 7 build (P7-PRE-2 PASS). Army CBA Guide remains FUT-04 **DEFERRED** — 2026-08-17 retry: official host 403, archive playback 503; no in-source licence obtained; not Tier 1. Do not treat this row as a dual-source build-clear. (A-94 verified at build 2026-08-16; Army CBA retry Verified 2026-08-17.) |
+| **GP-06 / federal-bca** (shipped A-94-only; US Army CBA Guide is FUT-04, not in the pack) | Tier 1 (A-94) | A-94 in-source cleared at Phase 7 build (P7-PRE-2 PASS). Army CBA Guide remains FUT-04 **DEFERRED** — 2026-08-17 retry: official host 403, archive playback 503; no in-source licence obtained; not Tier 1. Do not treat this row as a dual-source build-clear. (A-94 verified at build 2026-08-16; Army CBA retry Verified 2026-08-17.) v1.19.1 retry 2026-08-20: official ASAFM PDF still 403; FUT-04 remains DEFERRED; not a dual-source build-clear. (Also verified 2026-08-20.) |
 
 8 vetted candidates → 7 GP packs (GP-08 descoped; SP-7084 is evidence-only for cluster 25 alternatives).
 
@@ -175,6 +175,15 @@ Rows below are Phase 10 decisions dated 2026-08-17. Tier 1 leaning still require
 | FUT-04 Army CBA Guide | NO-GO — deferred (403/503, no in-source) | Do not build Army CBA. IO-01 remaps existing A-94 / VV&A decision chapters. Do not invent a CBA pack |
 | DoDM 5000.102 | NO-GO — UNVERIFIED / deferred-excluded | Do not create `dodm-5000-102`. IO-02 = additional chapters in existing `dod-vva-rpg` |
 | AAF Product Support + Software pathway | NO-GO — NOT yet vetted — do not use | IO-05 / IO-06 record deferred. No AAF pack. dod-rio AAF chapters do not licence AAF guidebooks |
+
+### Not cleared this session (v1.19.1 retry)
+
+Source URLs and raw fetch transcripts for all v1.19.1 retry candidates are recorded in
+`.planning/phases/15-source-retries/15-RESEARCH.md` (Link Policy: never published in docs or packs).
+
+Rows below are Phase 15 decisions dated 2026-08-20. Unreachable is not Tier 1. No pack is built this phase.
+
+- **FUT-04 / US Army Cost Benefit Analysis Guide (ASAFM)** — remains **DEFERRED** with fresh evidence 2026-08-20. Official PDF returned 403 Access Denied (Akamai). No in-source licence statement obtained. Statute 17 U.S.C. § 105 is prediction, not clearance. Not Tier 1. Not added to the Excluded table. Phase 16 must not build an Army CBA pack unless this bullet is later replaced by a quoted in-source grant. (Verified 2026-08-20.)
 
 ### Def Stan 00-051 — UNVERIFIED / excluded from this milestone `[T2-03]`
 
