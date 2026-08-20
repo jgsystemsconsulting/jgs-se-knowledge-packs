@@ -110,3 +110,21 @@ must read the live JSON, not 502. **Cybersecurity & Security Engineering**
 (live 69 entries / 10 packs) and **Digital Engineering & Digital Twins**
 (live 25 entries / 4 packs) remain **unbound**. Binding those clusters is
 se-agents-side work, not this milestone.
+
+## 7. Chapter basename overlap gate
+
+`python tooling/check_overlap.py` runs on the local release path via
+`check_overlap.main()` inside `tooling/check_release.py` (local/trusted; CI
+does not exec repo Python).
+
+- **Scan scope:** `packs/*/chapters/*.md` basenames only. Support files at pack
+  root (`glossary.md`, `patterns.md`, `cheatsheet.md`, `SKILL.md`, `PACK.yaml`)
+  are out of scope because they are not under `chapters/`.
+- **Threshold:** zero un-whitelisted multi-pack chapter basename collisions.
+  Any basename shared by two or more packs and absent from WHITELIST fails the
+  gate.
+- **WHITELIST:** currently contains `ch01-introduction.md` because three
+  distinct source packs legitimately share that canonical topic
+  (`dau-se-guidebook`, `nasa-npr-7123`, `nasa-system-safety`). Adding a new
+  shared basename requires an explicit WHITELIST edit in
+  `tooling/check_overlap.py`, not a silent pass.
