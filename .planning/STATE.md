@@ -4,15 +4,15 @@ milestone: v1.19.1
 milestone_name: "**Goal**: Catalog, map, and release surfaces are coherent at v1.19.1; deferrals are visible, not papered over"
 current_phase: 17
 current_phase_name: Tooling (IN-02 + FUT-05)
-status: planning
+status: executing
 stopped_at: Completed 17-01-PLAN.md
-last_updated: "2026-08-20T11:59:31.267Z"
+last_updated: "2026-08-20T12:00:00Z"
 last_activity: 2026-08-20
-last_activity_desc: Phase 16 plan 16-01 complete — PACK-20 deferred-with-evidence; zero packs; phase verify remains
+last_activity_desc: Phase 17 plan 17-01 complete — IN-02 overlap gate + FUT-05 residual; phase verify remains
 progress:
   total_phases: 5
-  completed_phases: 4
-  total_plans: 4
+  completed_phases: 3
+  total_plans: 5
   completed_plans: 4
   percent: 80
 ---
@@ -24,16 +24,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-08-19)
 
 **Core value:** Licence-clean, validated, single-source reference packs an agent can load without context bloat.
-**Current focus:** Phase 16 — Conditional packs (16-01 complete DEFERRED_ALL; phase verify / complete remain)
+**Current focus:** Phase 17 — Tooling IN-02 + FUT-05 (17-01 execute complete; phase verify / complete remain)
 
 ## Current Position
 
 Phase: 17 of 18 (Tooling (IN-02 + FUT-05))
-Plan: Not started
-Status: Ready to plan
-Last activity: 2026-08-20 — Phase 16 complete, transitioned to Phase 17
+Plan: 1 of 1 (17-01 complete)
+Status: Ready to verify
+Last activity: 2026-08-20 — Completed 17-01-PLAN.md (overlap gate + FUT-05 residual)
 
-Progress: [██████████] 100% (milestone plans 3/3 across Phases 14–16 execute; phase 16 verify remains)
+Progress: [████████░░] 80% (milestone plans 4/5 across Phases 14–17 execute; phase 17 verify remains)
 
 ## Shipped — v1.19.0
 
@@ -61,7 +61,7 @@ Honest scope: 2 new packs + leftover RPG chapters + DA remap + map 644 + dual-ga
 | Phase 14 P01 | 2min | 3 tasks | 5 files |
 | Phase 15 P01 | 4min | 3 tasks | 4 files |
 | Phase 16 P01 | 3min | 3 tasks | 3 files |
-| Phase 17 P01 | 0min | 3 tasks | 4 files |
+| Phase 17 P01 | 25min | 3 tasks | 4 files |
 
 ## Selected seed
 
@@ -90,10 +90,11 @@ SEED-001 — pack depth for se-agents IOs (17 thin-primary competencies). Consum
 - Phase 10–13 history retained in prior STATE snapshots / milestone archives
 - Phase 15 (2026-08-20): Army CBA FUT-04 deferred (ASAFM PDF 403, no in-source); AAF Product Support + Software pathway still NOT yet vetted — do not use; ROSAP Rev E optional check document-only (403/404, no rebuild); verdicts in 15-RESEARCH.md and SOURCE-VETTING v1.19.1 retry section
 - Phase 16 (2026-08-20): PACK-20-01..03 all deferred-with-evidence per Phase 15 handoff; zero packs built
+- Phase 17 (2026-08-20): 17-01 shipped check_overlap on release path + CONTRACT FUT-05 residual; TOOL-20 boxes stay open for verify
 
 ## Session Continuity
 
-**Last session:** 2026-08-20T11:59:31.252Z
+**Last session:** 2026-08-20T12:00:00Z
 **Stopped at:** Completed 17-01-PLAN.md
 **Resume file:** None
 
@@ -106,5 +107,5 @@ SEED-001 — pack depth for se-agents IOs (17 thin-primary competencies). Consum
 - [Phase 15]: AAF Product Support + Software pathway still NOT yet vetted — do not use
 - [Phase 15]: ROSAP Rev E optional check document-only; faa-std-025 Rev F unchanged
 - [Phase 16]: PACK-20-01..03 deferred-with-evidence; no Army CBA or AAF pack
-- [Phase ?]: Overlap gate scans packs/*/chapters/*.md only; WHITELIST ch01-introduction.md
-- [Phase ?]: FUT-05 residual: mechanical check_capability_map slice; no byte-stable full-map generator; Phase 18 owns map_version
+- [Phase 17]: Overlap gate scans packs/*/chapters/*.md only; WHITELIST ch01-introduction.md
+- [Phase 17]: FUT-05 residual: mechanical check_capability_map slice; no byte-stable full-map generator; Phase 18 owns map_version
