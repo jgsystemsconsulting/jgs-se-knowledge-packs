@@ -57,34 +57,32 @@ Sourced from STATE.md remaining backlog after v1.19.0 ship, stale GSD ledger (Ph
 
 ## Traceability
 
-Filled by roadmapper.
-
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| HYG-20-01 | TBD | Pending |
-| HYG-20-02 | TBD | Pending |
-| HYG-20-03 | TBD | Pending |
-| HYG-20-04 | TBD | Pending |
-| HYG-20-05 | TBD | Pending |
-| HYG-20-06 | TBD | Pending |
-| VET-20-01 | TBD | Pending |
-| VET-20-02 | TBD | Pending |
-| VET-20-03 | TBD | Pending |
-| PACK-20-01 | TBD | Pending |
-| PACK-20-02 | TBD | Pending |
-| PACK-20-03 | TBD | Pending |
-| TOOL-20-01 | TBD | Pending |
-| TOOL-20-02 | TBD | Pending |
-| TOOL-20-03 | TBD | Pending |
-| MAP-20-01 | TBD | Pending |
-| REL-20-01 | TBD | Pending |
-| REL-20-02 | TBD | Pending |
+| HYG-20-01 | Phase 14 | Pending |
+| HYG-20-02 | Phase 14 | Pending |
+| HYG-20-03 | Phase 14 | Pending |
+| HYG-20-04 | Phase 14 | Pending |
+| HYG-20-05 | Phase 14 | Pending |
+| HYG-20-06 | Phase 14 | Pending |
+| VET-20-01 | Phase 15 | Pending |
+| VET-20-02 | Phase 15 | Pending |
+| VET-20-03 | Phase 15 | Pending |
+| PACK-20-01 | Phase 16 | Pending |
+| PACK-20-02 | Phase 16 | Pending |
+| PACK-20-03 | Phase 16 | Pending |
+| TOOL-20-01 | Phase 17 | Pending |
+| TOOL-20-02 | Phase 17 | Pending |
+| TOOL-20-03 | Phase 17 | Pending |
+| MAP-20-01 | Phase 18 | Pending |
+| REL-20-01 | Phase 18 | Pending |
+| REL-20-02 | Phase 18 | Pending |
 
 **Coverage:**
 - v1.19.1 requirements: 18 total
-- Mapped to phases: 0 (pending roadmap)
-- Unmapped: 18
+- Mapped to phases: 18/18
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-08-19*
-*Last updated: 2026-08-19 after milestone start*
+*Last updated: 2026-08-19 after roadmap (phases 14–18)*

@@ -2,83 +2,110 @@
 
 ## Overview
 
-v1.17.0 and v1.18.0 shipped: library grew 48 → 63 packs (61 catalog + 2 signposts), licence-vetting register matured, and the capability map became a versioned, gate-checked consumable (schema 2, 628 entries) for the se-agents generator. No active phases — next milestone is v1.19 (backlog in STATE.md; seed from .planning/research/capability-gap-report.md + milestone audits).
+v1.17.0, v1.18.0, and v1.19.0 shipped: library is 63 catalog packs / 65 dirs (+2 signposts), capability map schema 2 / map_version 1.19.0 / 644 entries / 32 clusters, dual-gate wired. v1.19.1 is cleanup + the full carried backlog — ledger truth, source retries (build only if cleared), IN-02 + FUT-05 tooling, then a coherent v1.19.1 release surface. Licence vetting remains a hard stop; no invented packs.
 
 ## Shipped Milestones
 
 - [x] **v1.17.0 — Source Expansion** (phases 1–5) — [archive](milestones/v1.17.0-ROADMAP.md)
 - [x] **v1.18.0 — Gap-Driven Expansion + Agent Enablement** (phases 6–9) — [archive](milestones/v1.18.0-ROADMAP.md)
+- [x] **v1.19.0 — Agent IO Depth** (phases 10–13) — [archive](milestones/v1.19.0-ROADMAP.md)
 
 ## Next
 
-v1.19.0 — Agent IO Depth (SEED-001). Phases 10–13 below.
+v1.19.1 — Cleanup + Carried Backlog. Phases 14–18 below.
 
 ---
 
-# v1.19.0 — Agent IO Depth
+# v1.19.1 — Cleanup + Carried Backlog
 
-Seed: SEED-001. Goal: fatten competency *primaries* so se-agents can execute IOs (trade studies, V&V, transition, interfaces), not just lecture from fat secondaries.
+Goal: planning/ledger truth matches shipped v1.19.0 reality, then clear the carried backlog (FUT-04 / AAF retries, IN-02, FUT-05) and ship a coherent v1.19.1 surface. Deferred-with-evidence is a valid done state for uncleared sources.
 
-## v1.19 Phases
+## Phases
 
-- [x] **Phase 10: Source vetting** — FUT-04 retry + DoDM 5000.102 / NASA-STD-8719.14 / GPS ICD / SP-7084 / AAF-before-use (VET-19-01..04) — 10-01/10-02 docs-only (completed 2026-08-17)
-- [x] **Phase 11: IO-unlocking packs + Decision Analysis remap** — IO-01..07 (build what vetting clears; record deferrals honestly) (completed 2026-08-17)
-- [x] **Phase 12: Map regen + hygiene + gate wiring** — MAP-19-01..05, HYG-01..04 (completed 2026-08-17)
-- [x] **Phase 13: Release surface + v1.19.0** — REL-19-01/02
+- [ ] **Phase 14: Ledger + planning hygiene** — Verify milestone phase archives + finish residual ticks (MAP-19, VET annotations, live surfaces)
+- [ ] **Phase 15: Source retries** — Docs-only FUT-04 / AAF / optional ROSAP vetting; no pack build
+- [ ] **Phase 16: Conditional packs** — Build Army CBA / AAF Integration / AAF Logistics only if Phase 15 cleared the source
+- [ ] **Phase 17: Tooling (IN-02 + FUT-05)** — Overlap checker wired into release + deterministic map generator or honest partial
+- [ ] **Phase 18: Map + release surface v1.19.1** — Gates PASS; tag + GitHub Release; CHANGELOG honest about deferrals
 
-## v1.19 Phase Details
+## Phase Details
 
-### Phase 10: Source vetting
+### Phase 14: Ledger + planning hygiene
 
-**Goal**: Every v1.19 candidate has a definitive tier decision; AAF stays unused until cleared
-**Depends on**: v1.18.0 (shipped)
-**Requirements**: [VET-19-01, VET-19-02, VET-19-03, VET-19-04]
+**Goal**: Planning and ledger surfaces tell the truth about shipped v1.19.0 and active v1.19.1 — no leftover "open Phase 13" claims
+**Depends on**: v1.19.0 (shipped; last completed phase 13)
+**Requirements**: HYG-20-01, HYG-20-02, HYG-20-03, HYG-20-04, HYG-20-05, HYG-20-06
 **Success Criteria** (what must be TRUE):
 
-  1. Army CBA Guide resolved (reachable + in-source licence, or FUT-04 remains deferred with fresh evidence)
-  2. DoDM 5000.102, NASA-STD-8719.14, GPS ICD select, NASA SP-7084 each Tier 1/2/Excluded with dated rationale
-  3. AAF Product Support + Software pathway either vetted Tier 1 or still "NOT yet vetted — do not use"
-  4. New exclusions in docs/SOURCE-VETTING.md; no source URLs in that doc
-
-**Plans**: [10-01](phases/10-source-vetting/10-01-PLAN.md) (register), [10-02](phases/10-source-vetting/10-02-PLAN.md) (planning-surface annotations)
-
-### Phase 11: IO-unlocking packs + Decision Analysis remap
-
-**Goal**: Poorest competency primaries move; no silent ticks (consumes Phase 10: build 8719.14C + IS-GPS-200N; remap/defer Army CBA, DoDM 5000.102, AAF; SP-7084 optional)
-**Depends on**: Phase 10
-**Requirements**: [IO-01, IO-02, IO-03, IO-04, IO-05, IO-06, IO-07]
-**Success Criteria** (what must be TRUE):
-
-  1. Decision Analysis cluster count leaves 2 (new pack and/or MAP-19-03 remap of A-94 / VV&A decision chapters)
-  2. Validation, Ops/Maint/Disposal, Interface Management each gained at least one new pack *or* documented deferral
-  3. Integration + Logistics built only if AAF cleared; otherwise deferred-recorded
-  4. Stakeholder Engagement outcome recorded (SEBoK expansion or accept) — no invented pack
-  5. Each built pack: PACK-SPEC + validate_pack + scan + overlap + When-to-use/Prerequisites
+  1. Phase directories for shipped work live under the correct milestone archives (`v1.17.0-phases`, `v1.18.0-phases`, `v1.19.0-phases`); v1.19.0 ROADMAP + REQUIREMENTS snapshots exist — already moved at milestone start; this phase verifies, does not re-do the moves
+  2. `master-flow.status --all` shows no false open/blocked phases from shipped work (Phase 3 ghost already repaired); any remaining `master_flow_state.json` / edge-coverage that belongs with the archive is committed
+  3. Archived v1.19.0 requirements tick MAP-19-01..05 complete (evidence: Phase 12 summaries — map 644, DA remap, floors, dual-gate, CONTRACT) and annotate VET-19-01..04 honestly (retry/deferral outcomes; not marked as built)
+  4. Live PROJECT / STATE / ROADMAP / MILESTONES present v1.19.0 as shipped and v1.19.1 as active (pack counts, gates, backlog); they no longer claim an open Phase 13
 
 **Plans**: TBD
 
-### Phase 12: Map regen + hygiene + gate wiring
+### Phase 15: Source retries
 
-**Goal**: Map reflects new packs; competency-primary floor asserted; hygiene + consumer-contract note
-**Depends on**: Phase 11
-**Requirements**: [MAP-19-01, MAP-19-02, MAP-19-03, MAP-19-04, MAP-19-05, HYG-01, HYG-02, HYG-03, HYG-04]
+**Goal**: Every carried source has dated evidence; AAF and Army CBA stay unused unless an in-source redistribution grant is quoted
+**Depends on**: Phase 14
+**Requirements**: VET-20-01, VET-20-02, VET-20-03
 **Success Criteria** (what must be TRUE):
 
-  1. check_capability_map.py PASS; MAP-19-02 floor held (no listed primary still at <4 entries AND 1 pack)
-  2. check_release.py invokes the map gate
-  3. CONTRACT.md notes live snapshot (not 502) and unbound Cyber/DE clusters
-  4. CHANGELOG BOM gone; .gitattributes pin present; topic-index nits fixed; vet_source EXCLUDED sync done or recorded as external-repo PR
+  1. Army CBA Guide (ASAFM PDF) has a dated retry record: in-source redistribution grant quoted, or FUT-04 remains deferred with fresh evidence (not a silent tick)
+  2. AAF Product Support Manager Guidebook and AAF Software pathway guidebooks are either quoted with an in-source grant or remain Excluded-pending / "NOT yet vetted — do not use"
+  3. Optional ROSAP Rev E reachability vs current `faa-std-025` Rev F mirror is documented only — no forced rebuild
+  4. No pack is built in this phase
 
-**Plans**: [12-01](phases/12-map-regen-hygiene-gate-wiring/12-01-PLAN.md) (map regen + remap + floor + CONTRACT — complete 2026-08-17), [12-02](phases/12-map-regen-hygiene-gate-wiring/12-02-PLAN.md) (gate wire + hygiene — complete 2026-08-17)
+**Plans**: TBD
 
-### Phase 13: Release surface + v1.19.0
+### Phase 16: Conditional packs
 
-**Goal**: Catalog/docs/manifests synchronized; v1.19.0 tagged and released
-**Depends on**: Phase 12
-**Requirements**: [REL-19-01, REL-19-02]
+**Goal**: Packs exist only for sources Phase 15 cleared; uncleared paths are deferred on the record with no invented packs
+**Depends on**: Phase 15
+**Requirements**: PACK-20-01, PACK-20-02, PACK-20-03
 **Success Criteria** (what must be TRUE):
 
-  1. Both gates PASS at the updated catalog/directory basis
-  2. v1.19.0 tagged + GitHub Release; CHANGELOG lists IO-unlocks by competency, not just pack slugs
+  1. If VET-20-01 cleared → Army CBA / Decision Analysis pack exists, conforms to PACK-SPEC, and passes validate + scan + When-to-use; else FUT-04 stays deferred with evidence (no invented pack)
+  2. If VET-20-02 cleared Software pathway → Integration-oriented pack exists on the IO-05 path and passes the same pack gates; else IO-05 stays deferred
+  3. If VET-20-02 cleared Product Support → Logistics-oriented pack exists on the IO-06 path and passes the same pack gates; else IO-06 stays deferred
 
-**Plans**: [13-01-PLAN.md](phases/13-release-surface-v1-19-0/13-01-PLAN.md), [13-02-PLAN.md](phases/13-release-surface-v1-19-0/13-02-PLAN.md)
+**Plans**: TBD
+
+### Phase 17: Tooling (IN-02 + FUT-05)
+
+**Goal**: Release tooling catches multi-pack collisions and can regenerate mechanical map fields without agent judgment (or documents the residual honestly)
+**Depends on**: Phase 16
+**Requirements**: TOOL-20-01, TOOL-20-02, TOOL-20-03
+**Success Criteria** (what must be TRUE):
+
+  1. A minimal overlap checker lives under `tooling/` (stdlib Python preferred) and detects multi-pack chapter/topic collisions that matter for release
+  2. The checker is on the release path (`check_release.py` call or documented mandatory step) and fails the gate on violations; thresholds are documented; intentional shared support files do not false-fail if excluded by design
+  3. A deterministic capability-map generator/exporter under `tooling/` regenerates `docs/capability-pack-map.json` (+ md sync if required) from committed inputs for mechanical fields — or the largest deterministic slice ships with residual agent procedure documented in CONTRACT; full FUT-05 is not claimed closed unless byte-stable regen is proven
+
+**Plans**: TBD
+
+### Phase 18: Map + release surface v1.19.1
+
+**Goal**: Catalog, map, and release surfaces are coherent at v1.19.1; deferrals are visible, not papered over
+**Depends on**: Phase 17
+**Requirements**: MAP-20-01, REL-20-01, REL-20-02
+**Success Criteria** (what must be TRUE):
+
+  1. After any new packs or generator change, capability map validates (`check_capability_map.py` PASS) and `map_version` reflects v1.19.1
+  2. Any new packs are fully registered; both gates PASS at the updated catalog/directory basis
+  3. `v1.19.1` is tagged + published as a GitHub Release; CHANGELOG records cleanup + any packs/tooling honestly, including items still deferred
+
+**Plans**: TBD
+
+## Progress
+
+**Execution Order:**
+Phases execute in numeric order: 14 → 15 → 16 → 17 → 18
+
+| Phase | Plans Complete | Status | Completed |
+|-------|----------------|--------|-----------|
+| 14. Ledger + planning hygiene | 0/TBD | Not started | - |
+| 15. Source retries | 0/TBD | Not started | - |
+| 16. Conditional packs | 0/TBD | Not started | - |
+| 17. Tooling (IN-02 + FUT-05) | 0/TBD | Not started | - |
+| 18. Map + release surface v1.19.1 | 0/TBD | Not started | - |

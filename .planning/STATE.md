@@ -3,10 +3,10 @@ gsd_state_version: 1.0
 milestone: v1.19.1
 milestone_name: Cleanup + Carried Backlog
 status: planning
-last_updated: "2026-08-19T09:07:22.338Z"
+last_updated: "2026-08-19T10:20:00.000Z"
 last_activity: 2026-08-19
 progress:
-  total_phases: 0
+  total_phases: 5
   completed_phases: 0
   total_plans: 0
   completed_plans: 0
@@ -17,17 +17,19 @@ progress:
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-08-17)
+See: .planning/PROJECT.md (updated 2026-08-19)
 
 **Core value:** Licence-clean, validated, single-source reference packs an agent can load without context bloat.
-**Current focus:** v1.19.1 — Cleanup + Carried Backlog (planning)
+**Current focus:** Phase 14 — Ledger + planning hygiene (ready to plan)
 
 ## Current Position
 
-Phase: Not started (defining requirements)
+Phase: 14 of 18 (Ledger + planning hygiene)
 Plan: —
-Status: Defining requirements
-Last activity: 2026-08-19 — Milestone v1.19.1 started
+Status: Ready to plan
+Last activity: 2026-08-19 — v1.19.1 roadmap created (phases 14–18)
+
+Progress: [░░░░░░░░░░] 0%
 
 ## Shipped — v1.19.0
 
@@ -42,7 +44,7 @@ Honest scope: 2 new packs + leftover RPG chapters + DA remap + map 644 + dual-ga
 
 ## Performance Metrics
 
-- Phases completed: 13/13 (v1.17 + v1.18 + v1.19 shipped)
+- Phases completed: 13/13 prior (v1.17 + v1.18 + v1.19.0 shipped); this milestone 0/5
 - Packs shipped: 65 directories (63 catalog + 2 signposts)
 
 **Per-Plan Metrics:**
@@ -59,10 +61,11 @@ SEED-001 — pack depth for se-agents IOs (17 thin-primary competencies). Consum
 
 ## Milestone backlog (v1.19.1 in scope)
 
-- **HYG-20:** Ledger archive + MAP-19 ticks + planning-surface truth
-- **VET-20 / PACK-20:** FUT-04 Army CBA retry; AAF Product Support + Software pathway spot-check; build only if cleared
-- **TOOL-20:** IN-02 overlap checker + FUT-05 deterministic map generator (honest partial OK)
-- **MAP-20 / REL-20:** Map refresh + v1.19.1 release surface
+- **HYG-20 (Phase 14):** Verify archives + finish residual ticks (MAP-19, VET annotations, live surfaces). HYG-20-01/02 already moved/repaired at milestone start — verify, do not re-archive
+- **VET-20 (Phase 15):** FUT-04 Army CBA retry; AAF Product Support + Software pathway spot-check; optional ROSAP note. Docs-only
+- **PACK-20 (Phase 16):** Build only if Phase 15 cleared the source; else deferred-with-evidence
+- **TOOL-20 (Phase 17):** IN-02 overlap checker + FUT-05 deterministic map generator (honest partial OK)
+- **MAP-20 / REL-20 (Phase 18):** Map refresh + v1.19.1 release surface
 
 ## Still out of this tree
 
@@ -74,11 +77,12 @@ SEED-001 — pack depth for se-agents IOs (17 thin-primary competencies). Consum
 
 - Branch protection left at admin-bypass (2026-08-16)
 - Per-role packs remain rejected
-- Phase 10–12 history retained in prior STATE snapshots / phase records
-- Phase 13-02: 13-01 per-task commits soft-reset into one `release(v1.19.0)` content commit before tag
+- Licence vetting is a hard stop; never invent packs
+- Deferred-with-evidence is a valid done state for PACK-20-* and VET-20-01/02
+- Phase 10–13 history retained in prior STATE snapshots / milestone archives
 
-## Session
+## Session Continuity
 
-**Last session:** 2026-08-17T23:10:00Z
-**Stopped at:** Completed 13-02-PLAN.md
+**Last session:** 2026-08-19
+**Stopped at:** v1.19.1 roadmap written (phases 14–18); ready for `/gsd:plan-phase 14`
 **Resume file:** None
