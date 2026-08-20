@@ -1,10 +1,14 @@
 {
   "schema_version": 1,
   "kind": "pointer",
-  "active_phase": null,
-  "active_phase_dir": null,
-  "active_state": null,
-  "lock": null,
-  "updated_at": "2026-08-19T09:07:23.457Z",
-  "notes": "Repaired stale pointer after archive; awaiting next milestone"
+  "active_phase": 14,
+  "active_phase_dir": ".planning/phases/14-ledger-planning-hygiene",
+  "active_state": ".planning/phases/14-ledger-planning-hygiene/master_flow_state.json",
+  "lock": {
+    "phase": 14,
+    "session_hint": "master-flow",
+    "updated_at": "2026-08-20T09:19:35.639Z"
+  },
+  "updated_at": "2026-08-20T09:19:35.640Z",
+  "notes": ""
 }

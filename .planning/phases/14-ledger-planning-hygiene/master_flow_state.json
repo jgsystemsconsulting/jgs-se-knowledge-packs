@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "kind": "phase",
+  "milestone": null,
+  "phase": 14,
+  "phase_slug": "14-ledger-planning-hygiene",
+  "phase_dir": ".planning/phases/14-ledger-planning-hygiene",
+  "scope": "phase",
+  "current_gate": "arch_research",
+  "completed": [
+    "research",
+    "plan",
+    "plan_check",
+    "plan_review"
+  ],
+  "skipped": [
+    "discuss",
+    "assumptions",
+    "arch_research",
+    "code_fix",
+    "eval_plan",
+    "eval_audit",
+    "ui_check",
+    "ui_audit",
+    "nyquist_audit",
+    "doc_check",
+    "milestone_audit",
+    "complete",
+    "retrospective",
+    "plan_remediate"
+  ],
+  "failed": [],
+  "blocked_by": null,
+  "verdicts": {
+    "discuss": "skipped",
+    "assumptions": "skipped",
+    "arch_research": "skipped",
+    "code_fix": "skipped",
+    "eval_plan": "skipped",
+    "eval_audit": "skipped",
+    "ui_check": "skipped",
+    "ui_audit": "skipped",
+    "nyquist_audit": "skipped",
+    "doc_check": "skipped",
+    "milestone_audit": "skipped",
+    "complete": "skipped",
+    "retrospective": "skipped",
+    "research": "passed:will_embed_in_plan",
+    "plan": "passed",
+    "plan_check": "passed",
+    "plan_review": "passed",
+    "plan_remediate": "skipped"
+  },
+  "artifacts": {
+    "plan": ".planning/phases/14-ledger-planning-hygiene/14-01-PLAN.md",
+    "plan_check": ".planning/phases/14-ledger-planning-hygiene/14-PLAN_CHECK.md",
+    "plan_review": ".planning/phases/14-ledger-planning-hygiene/14-PLAN_REVIEW.md"
+  },
+  "regate_attempts": {},
+  "usage": {
+    "plan": {
+      "tokens": 888270,
+      "duration_ms": 599418,
+      "ts": "2026-08-20T09:09:06.074Z"
+    },
+    "plan_check": {
+      "tokens": 729076,
+      "duration_ms": 505831,
+      "ts": "2026-08-20T09:17:56.533Z"
+    },
+    "plan_review": {
+      "tokens": 148270,
+      "duration_ms": 86951,
+      "ts": "2026-08-20T09:19:34.906Z"
+    }
+  },
+  "config_snapshot": {
+    "enable_research": true,
+    "enable_discuss": false,
+    "enable_assumptions": false,
+    "enable_plan": true,
+    "enable_plan_check": true,
+    "enable_plan_review": true,
+    "enable_plan_remediate": true,
+    "enable_arch_research": false,
+    "enable_execute": true,
+    "enable_impl_review": true,
+    "enable_code_review": true,
+    "enable_integration_check": true,
+    "enable_security_audit": true,
+    "enable_code_fix": false,
+    "enable_eval_plan": false,
+    "enable_eval_audit": false,
+    "enable_ui_check": false,
+    "enable_ui_audit": false,
+    "enable_nyquist_audit": false,
+    "enable_gap_analysis": true,
+    "enable_verify": true,
+    "enable_doc_check": false,
+    "enable_milestone_audit": false,
+    "enable_complete": false,
+    "enable_retrospective": false,
+    "scope": "phase"
+  },
+  "execute": {
+    "plans_total": 0,
+    "plans_complete": 0,
+    "incomplete_plans": [],
+    "complete_plans": [],
+    "pending_checkpoint": null
+  },
+  "checkpoint_log": [],
+  "started_at": "2026-08-20T08:55:52.189Z",
+  "updated_at": "2026-08-20T09:19:35.637Z",
+  "notes": "Initialized master_flow for phase 14"
+}
