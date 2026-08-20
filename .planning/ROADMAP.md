@@ -22,7 +22,7 @@ Goal: planning/ledger truth matches shipped v1.19.0 reality, then clear the carr
 
 ## Phases
 
-- [ ] **Phase 14: Ledger + planning hygiene** — Verify milestone phase archives + finish residual ticks (MAP-19, VET annotations, live surfaces)
+- [x] **Phase 14: Ledger + planning hygiene** — Verify milestone phase archives + finish residual ticks (MAP-19, VET annotations, live surfaces) (completed 2026-08-20)
 - [ ] **Phase 15: Source retries** — Docs-only FUT-04 / AAF / optional ROSAP vetting; no pack build
 - [ ] **Phase 16: Conditional packs** — Build Army CBA / AAF Integration / AAF Logistics only if Phase 15 cleared the source
 - [ ] **Phase 17: Tooling (IN-02 + FUT-05)** — Overlap checker wired into release + deterministic map generator or honest partial
@@ -42,7 +42,7 @@ Goal: planning/ledger truth matches shipped v1.19.0 reality, then clear the carr
   3. Archived v1.19.0 requirements tick MAP-19-01..05 complete (evidence: Phase 12 summaries — map 644, DA remap, floors, dual-gate, CONTRACT) and annotate VET-19-01..04 honestly (retry/deferral outcomes; not marked as built)
   4. Live PROJECT / STATE / ROADMAP / MILESTONES present v1.19.0 as shipped and v1.19.1 as active (pack counts, gates, backlog); they no longer claim an open Phase 13
 
-**Plans:** 1/1 plans executed
+**Plans:** 1/1 plans complete
 
 Plans:
 
@@ -108,7 +108,7 @@ Phases execute in numeric order: 14 → 15 → 16 → 17 → 18
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 14. Ledger + planning hygiene | 1/1 | In Progress|  |
+| 14. Ledger + planning hygiene | 1/1 | Complete    | 2026-08-20 |
 | 15. Source retries | 0/TBD | Not started | - |
 | 16. Conditional packs | 0/TBD | Not started | - |
 | 17. Tooling (IN-02 + FUT-05) | 0/TBD | Not started | - |

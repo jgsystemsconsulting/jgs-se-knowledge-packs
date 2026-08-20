@@ -1,17 +1,17 @@
 ---
 gsd_state_version: 1.0
 milestone: v1.19.1
-milestone_name: Cleanup + Carried Backlog
-current_phase: 14
-current_phase_name: Ledger + planning hygiene
-status: verifying
+milestone_name: "**Goal**: Catalog, map, and release surfaces are coherent at v1.19.1; deferrals are visible, not papered over"
+current_phase: 15
+current_phase_name: Source retries
+status: planning
 stopped_at: Phase 14 verify closeout (STATE honesty residuals R-01..R-03)
-last_updated: "2026-08-20T14:35:00.000Z"
+last_updated: "2026-08-20T09:31:01.420Z"
 last_activity: 2026-08-20
 last_activity_desc: Phase 14 plan complete; in verify gate — STATE honesty residuals fixed
 progress:
   total_phases: 5
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 1
   completed_plans: 1
   percent: 20
@@ -28,10 +28,10 @@ See: .planning/PROJECT.md (updated 2026-08-19)
 
 ## Current Position
 
-Phase: 14 of 18 (Ledger + planning hygiene)
-Plan: 14-01 complete (1/1)
-Status: In phase gates — verify (impl/code/integration/security/gap done; verification in progress)
-Last activity: 2026-08-20 — 14-01 executed; reviews + gap CLOSED; STATE honesty residuals R-01..R-03 cleared at verify
+Phase: 15 of 18 (Source retries)
+Plan: Not started
+Status: Ready to plan
+Last activity: 2026-08-20 — Phase 14 complete, transitioned to Phase 15
 
 Progress: [██░░░░░░░░] 20% (plan 1/1 done; phase not complete — gates remain)
 

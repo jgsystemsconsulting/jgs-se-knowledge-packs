@@ -10,12 +10,12 @@ Sourced from STATE.md remaining backlog after v1.19.0 ship, stale GSD ledger (Ph
 
 ### Ledger + Planning Hygiene
 
-- [ ] **HYG-20-01**: Archive leftover phase directories under the correct milestone (`v1.17.0-phases`, `v1.18.0-phases`, `v1.19.0-phases`); archive v1.19.0 ROADMAP + REQUIREMENTS snapshots
-- [ ] **HYG-20-02**: Clear stale master-flow ledger (Phase 3 ghost block, pointer "Next: 3"); `master-flow.status --all` shows no false open/blocked phases from shipped work
-- [ ] **HYG-20-03**: Commit any remaining planning state (phase `master_flow_state.json`, edge-coverage) that belongs with the archive
-- [ ] **HYG-20-04**: Tick MAP-19-01..05 complete in archived v1.19.0 requirements (evidence: Phase 12 summaries — map 644, DA remap, floors, dual-gate, CONTRACT)
-- [ ] **HYG-20-05**: Annotate VET-19-01..04 honestly in archived v1.19.0 requirements (retry/deferral outcomes; do not mark as built)
-- [ ] **HYG-20-06**: Refresh live PROJECT.md / STATE.md / ROADMAP.md / MILESTONES.md so current state is v1.19.0 shipped and v1.19.1 active (pack counts, gates, backlog no longer claim "open phase 13")
+- [x] **HYG-20-01**: Archive leftover phase directories under the correct milestone (`v1.17.0-phases`, `v1.18.0-phases`, `v1.19.0-phases`); archive v1.19.0 ROADMAP + REQUIREMENTS snapshots
+- [x] **HYG-20-02**: Clear stale master-flow ledger (Phase 3 ghost block, pointer "Next: 3"); `master-flow.status --all` shows no false open/blocked phases from shipped work
+- [x] **HYG-20-03**: Commit any remaining planning state (phase `master_flow_state.json`, edge-coverage) that belongs with the archive
+- [x] **HYG-20-04**: Tick MAP-19-01..05 complete in archived v1.19.0 requirements (evidence: Phase 12 summaries — map 644, DA remap, floors, dual-gate, CONTRACT)
+- [x] **HYG-20-05**: Annotate VET-19-01..04 honestly in archived v1.19.0 requirements (retry/deferral outcomes; do not mark as built)
+- [x] **HYG-20-06**: Refresh live PROJECT.md / STATE.md / ROADMAP.md / MILESTONES.md so current state is v1.19.0 shipped and v1.19.1 active (pack counts, gates, backlog no longer claim "open phase 13")
 
 ### Source Retries (build only if cleared)
 
@@ -59,12 +59,12 @@ Sourced from STATE.md remaining backlog after v1.19.0 ship, stale GSD ledger (Ph
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| HYG-20-01 | Phase 14 | Pending |
-| HYG-20-02 | Phase 14 | Pending |
-| HYG-20-03 | Phase 14 | Pending |
-| HYG-20-04 | Phase 14 | Pending |
-| HYG-20-05 | Phase 14 | Pending |
-| HYG-20-06 | Phase 14 | Pending |
+| HYG-20-01 | Phase 14 | Complete |
+| HYG-20-02 | Phase 14 | Complete |
+| HYG-20-03 | Phase 14 | Complete |
+| HYG-20-04 | Phase 14 | Complete |
+| HYG-20-05 | Phase 14 | Complete |
+| HYG-20-06 | Phase 14 | Complete |
 | VET-20-01 | Phase 15 | Pending |
 | VET-20-02 | Phase 15 | Pending |
 | VET-20-03 | Phase 15 | Pending |
@@ -79,6 +79,7 @@ Sourced from STATE.md remaining backlog after v1.19.0 ship, stale GSD ledger (Ph
 | REL-20-02 | Phase 18 | Pending |
 
 **Coverage:**
+
 - v1.19.1 requirements: 18 total
 - Mapped to phases: 18/18
 - Unmapped: 0
