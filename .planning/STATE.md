@@ -5,16 +5,16 @@ milestone_name: "**Goal**: Catalog, map, and release surfaces are coherent at v1
 current_phase: 16
 current_phase_name: Conditional packs
 status: planning
-stopped_at: Completed 15-01-PLAN.md
-last_updated: "2026-08-20T10:25:41.463Z"
+stopped_at: Completed 16-01-PLAN.md
+last_updated: "2026-08-20T10:51:33.311Z"
 last_activity: 2026-08-20
 last_activity_desc: Phase 15 plan 15-01 complete — deferred-with-evidence; phase gates / verify remain
 progress:
   total_phases: 5
-  completed_phases: 2
-  total_plans: 2
-  completed_plans: 2
-  percent: 40
+  completed_phases: 3
+  total_plans: 3
+  completed_plans: 3
+  percent: 60
 ---
 
 # Project State
@@ -33,7 +33,7 @@ Plan: Not started
 Status: Ready to plan
 Last activity: 2026-08-20 — Phase 15 complete, transitioned to Phase 16
 
-Progress: [████░░░░░░] 40% (milestone plans 2/2 so far across Phases 14–15; phase 15 not complete — gates remain)
+Progress: [██████████] 100% (milestone plans 2/2 so far across Phases 14–15; phase 15 not complete — gates remain)
 
 ## Shipped — v1.19.0
 
@@ -60,6 +60,7 @@ Honest scope: 2 new packs + leftover RPG chapters + DA remap + map 644 + dual-ga
 | Phase 13 P02 | ~5 min | 2 tasks | 13 content + 4 planning |
 | Phase 14 P01 | 2min | 3 tasks | 5 files |
 | Phase 15 P01 | 4min | 3 tasks | 4 files |
+| Phase 16 P01 | 3min | 3 tasks | 3 files |
 
 ## Selected seed
 
@@ -91,8 +92,8 @@ SEED-001 — pack depth for se-agents IOs (17 thin-primary competencies). Consum
 
 ## Session Continuity
 
-**Last session:** 2026-08-20T10:16:32.559Z
-**Stopped at:** Completed 15-01-PLAN.md
+**Last session:** 2026-08-20T10:51:33.295Z
+**Stopped at:** Completed 16-01-PLAN.md
 **Resume file:** None
 
 ## Decisions
@@ -104,3 +105,4 @@ SEED-001 — pack depth for se-agents IOs (17 thin-primary competencies). Consum
 - [Phase 15]: AAF Product Support + Software pathway still NOT yet vetted — do not use
 - [Phase 15]: ROSAP Rev E optional check document-only; faa-std-025 Rev F unchanged
 - [Phase 16]: PACK-20-01..03 deferred-with-evidence; no Army CBA or AAF pack
+- [Phase ?]: PACK-20-01..03 deferred-with-evidence; no Army CBA or AAF pack

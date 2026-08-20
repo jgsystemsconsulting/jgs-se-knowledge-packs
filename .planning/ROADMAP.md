@@ -77,11 +77,11 @@ Plans:
   2. If VET-20-02 cleared Software pathway → Integration-oriented pack exists on the IO-05 path and passes the same pack gates; else IO-05 stays deferred
   3. If VET-20-02 cleared Product Support → Logistics-oriented pack exists on the IO-06 path and passes the same pack gates; else IO-06 stays deferred
 
-**Plans:** 1 plan
+**Plans:** 1/1 plans executed
 
 Plans:
 
-- [ ] 16-01-PLAN.md — Record PACK-20-01..03 deferred-with-evidence (Phase 15 handoff NO-GO); zero packs
+- [x] 16-01-PLAN.md — Record PACK-20-01..03 deferred-with-evidence (Phase 15 handoff NO-GO); zero packs
 
 ### Phase 17: Tooling (IN-02 + FUT-05)
 
@@ -118,6 +118,6 @@ Phases execute in numeric order: 14 → 15 → 16 → 17 → 18
 |-------|----------------|--------|-----------|
 | 14. Ledger + planning hygiene | 1/1 | Complete    | 2026-08-20 |
 | 15. Source retries | 1/1 | Complete    | 2026-08-20 |
-| 16. Conditional packs | 0/1 | Not started | - |
+| 16. Conditional packs | 1/1 | In Progress|  |
 | 17. Tooling (IN-02 + FUT-05) | 0/TBD | Not started | - |
 | 18. Map + release surface v1.19.1 | 0/TBD | Not started | - |
