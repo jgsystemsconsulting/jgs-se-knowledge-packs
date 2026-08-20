@@ -128,3 +128,18 @@ does not exec repo Python).
   (`dau-se-guidebook`, `nasa-npr-7123`, `nasa-system-safety`). Adding a new
   shared basename requires an explicit WHITELIST edit in
   `tooling/check_overlap.py`, not a silent pass.
+
+## 8. FUT-05 residual (mechanical slice vs agent classification)
+
+The largest **deterministic** slice of capability-map correctness already ships
+in `tooling/check_capability_map.py`: v2 envelope checks, bidirectional
+pack/chapter staleness vs `packs/`, file existence, `(pack, chapter)`
+uniqueness across clusters, and name-keyed thin-cluster thresholds.
+
+**Cluster assignment** and `chapters[].note` still require **agent judgment**
+per the rules of construction in `docs/capability-pack-map.md`. Those fields
+cannot be regenerated from committed inputs alone.
+
+This milestone does **not** claim a byte-stable full-map generator. The refresh
+path in section 4 remains the agent classification pass plus the map checker.
+Phase 18 owns any later `map_version` bump on the public release surface.
