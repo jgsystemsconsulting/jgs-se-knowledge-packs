@@ -2,7 +2,7 @@
 
 ## Overview
 
-v1.17.0, v1.18.0, and v1.19.0 shipped: library is 63 catalog packs / 65 dirs (+2 signposts), capability map schema 2 / map_version 1.19.0 / 644 entries / 32 clusters, dual-gate wired. v1.19.1 is cleanup + the full carried backlog — ledger truth, source retries (build only if cleared), IN-02 + FUT-05 tooling, then a coherent v1.19.1 release surface. Licence vetting remains a hard stop; no invented packs.
+v1.17.0, v1.18.0, and v1.19.0 shipped: library is 63 catalog packs / 65 dirs (+2 signposts), capability map schema 2 / map_version 1.19.1 / 644 entries / 32 clusters, dual-gate wired. v1.19.1 is cleanup + the full carried backlog — ledger truth, source retries (build only if cleared), IN-02 + FUT-05 tooling, then a coherent v1.19.1 release surface. Licence vetting remains a hard stop; no invented packs.
 
 ## Shipped Milestones
 
