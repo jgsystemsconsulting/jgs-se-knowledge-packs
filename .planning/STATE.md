@@ -1,16 +1,20 @@
 ---
 gsd_state_version: 1.0
 milestone: v1.19.1
-milestone_name: Cleanup + Carried Backlog
+milestone_name: "**Goal**: Catalog, map, and release surfaces are coherent at v1.19.1; deferrals are visible, not papered over"
+current_phase: 14
+current_phase_name: Ledger + planning hygiene
 status: planning
-last_updated: "2026-08-19T10:20:00.000Z"
+stopped_at: Completed 14-01-PLAN.md
+last_updated: "2026-08-20T09:22:43.955Z"
 last_activity: 2026-08-19
+last_activity_desc: v1.19.1 roadmap created (phases 14–18)
 progress:
   total_phases: 5
-  completed_phases: 0
-  total_plans: 0
-  completed_plans: 0
-  percent: 0
+  completed_phases: 1
+  total_plans: 1
+  completed_plans: 1
+  percent: 20
 ---
 
 # Project State
@@ -29,7 +33,7 @@ Plan: —
 Status: Ready to plan
 Last activity: 2026-08-19 — v1.19.1 roadmap created (phases 14–18)
 
-Progress: [░░░░░░░░░░] 0%
+Progress: [██████████] 100%
 
 ## Shipped — v1.19.0
 
@@ -54,6 +58,7 @@ Honest scope: 2 new packs + leftover RPG chapters + DA remap + map 644 + dual-ga
 | Phase 12 P02 | 11 min | 3 tasks | 10 files |
 | Phase 13 P01 | 6 min | 3 tasks | 13 files |
 | Phase 13 P02 | ~5 min | 2 tasks | 13 content + 4 planning |
+| Phase 14 P01 | 2min | 3 tasks | 5 files |
 
 ## Selected seed
 
@@ -83,6 +88,11 @@ SEED-001 — pack depth for se-agents IOs (17 thin-primary competencies). Consum
 
 ## Session Continuity
 
-**Last session:** 2026-08-19
-**Stopped at:** v1.19.1 roadmap written (phases 14–18); ready for `/gsd:plan-phase 14`
+**Last session:** 2026-08-20T09:22:43.944Z
+**Stopped at:** Completed 14-01-PLAN.md
 **Resume file:** None
+
+## Decisions
+
+- [Phase ?]: Phase 14 archive layout verify-only; no re-move of milestone phase dirs
+- [Phase ?]: Live HYG-20 boxes left unchecked until phase.complete

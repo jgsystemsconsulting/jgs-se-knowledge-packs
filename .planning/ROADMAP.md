@@ -42,10 +42,11 @@ Goal: planning/ledger truth matches shipped v1.19.0 reality, then clear the carr
   3. Archived v1.19.0 requirements tick MAP-19-01..05 complete (evidence: Phase 12 summaries — map 644, DA remap, floors, dual-gate, CONTRACT) and annotate VET-19-01..04 honestly (retry/deferral outcomes; not marked as built)
   4. Live PROJECT / STATE / ROADMAP / MILESTONES present v1.19.0 as shipped and v1.19.1 as active (pack counts, gates, backlog); they no longer claim an open Phase 13
 
-**Plans:** 1 plan
+**Plans:** 1/1 plans executed
 
 Plans:
-- [ ] 14-01-PLAN.md — Verify archives + master-flow; tick MAP-19 / annotate VET-19 in v1.19.0 archive; residual live-surface honesty
+
+- [x] 14-01-PLAN.md — Verify archives + master-flow; tick MAP-19 / annotate VET-19 in v1.19.0 archive; residual live-surface honesty
 
 ### Phase 15: Source retries
 
@@ -107,7 +108,7 @@ Phases execute in numeric order: 14 → 15 → 16 → 17 → 18
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 14. Ledger + planning hygiene | 0/1 | Not started | - |
+| 14. Ledger + planning hygiene | 1/1 | In Progress|  |
 | 15. Source retries | 0/TBD | Not started | - |
 | 16. Conditional packs | 0/TBD | Not started | - |
 | 17. Tooling (IN-02 + FUT-05) | 0/TBD | Not started | - |
