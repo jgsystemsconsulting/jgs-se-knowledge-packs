@@ -4,9 +4,9 @@ milestone: v1.19.1
 milestone_name: "**Goal**: Catalog, map, and release surfaces are coherent at v1.19.1; deferrals are visible, not papered over"
 current_phase: 18
 current_phase_name: Map + release surface v1.19.1
-status: shipped
+status: completed
 stopped_at: Completed 18-02-PLAN.md
-last_updated: "2026-08-20T14:00:00.000Z"
+last_updated: "2026-08-20T14:09:24.947Z"
 last_activity: 2026-08-20
 last_activity_desc: v1.19.1 shipped — annotated tag + GitHub Release; Phase 18 plans complete
 progress:
@@ -28,10 +28,10 @@ See: .planning/PROJECT.md (updated 2026-08-19)
 
 ## Current Position
 
-Phase: 18 of 18 (Map + release surface v1.19.1) — SHIPPED
-Plan: 18-02 complete
-Status: v1.19.1 published
-Last activity: 2026-08-20 — release commit 6944c14 + annotated tag v1.19.1 + GitHub Release
+Phase: 18 of 18 (Map + release surface v1.19.1)
+Plan: Not started
+Status: All phases complete
+Last activity: 2026-08-20 — Phase 18 complete
 
 Progress: [██████████] 100% (Phases 14–18 execute complete for milestone v1.19.1)
 

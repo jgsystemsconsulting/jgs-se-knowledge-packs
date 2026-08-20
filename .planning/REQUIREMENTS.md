@@ -34,9 +34,9 @@ Sourced from STATE.md remaining backlog after v1.19.0 ship, stale GSD ledger (Ph
 
 ### Map + Release
 
-- [ ] **MAP-20-01**: After any new packs or generator change, regenerate/validate capability map; `check_capability_map.py` PASS; map_version reflects v1.19.1
-- [ ] **REL-20-01**: Full registration of any new packs; both gates PASS at updated catalog/directory basis
-- [ ] **REL-20-02**: v1.19.1 tagged + GitHub Release; CHANGELOG records cleanup + any packs/tooling honestly (including "still deferred" items)
+- [x] **MAP-20-01**: After any new packs or generator change, regenerate/validate capability map; `check_capability_map.py` PASS; map_version reflects v1.19.1
+- [x] **REL-20-01**: Full registration of any new packs; both gates PASS at updated catalog/directory basis
+- [x] **REL-20-02**: v1.19.1 tagged + GitHub Release; CHANGELOG records cleanup + any packs/tooling honestly (including "still deferred" items)
 
 ## Future Requirements (not this milestone)
 
@@ -74,9 +74,9 @@ Sourced from STATE.md remaining backlog after v1.19.0 ship, stale GSD ledger (Ph
 | TOOL-20-01 | Phase 17 | Complete |
 | TOOL-20-02 | Phase 17 | Complete |
 | TOOL-20-03 | Phase 17 | Complete |
-| MAP-20-01 | Phase 18 | Pending |
-| REL-20-01 | Phase 18 | Pending |
-| REL-20-02 | Phase 18 | Pending |
+| MAP-20-01 | Phase 18 | Complete |
+| REL-20-01 | Phase 18 | Complete |
+| REL-20-02 | Phase 18 | Complete |
 
 **Coverage:**
 
