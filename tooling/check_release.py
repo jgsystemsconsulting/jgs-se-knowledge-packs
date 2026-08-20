@@ -14,7 +14,8 @@ standard requires for this repo and exits non-zero on any failure:
   5. Every pack passes tooling/validate_pack.py (structure + licence tier).
   6. SKILLS.md entry count == number of shipped packs.
   7. JGSC + SPDX header present on authored files (NOT pack content).
-  8. Capability-pack map freshness via check_capability_map.main() (local/trusted).
+  8. Multi-pack chapter-basename overlap via check_overlap.main() (local/trusted).
+  9. Capability-pack map freshness via check_capability_map.main() (local/trusted).
 
 stdlib only. This is a LOCAL/trusted gate and may run repo code; the CI workflow
 (.github/workflows/validate.yml) inlines its own checks and never executes repo code.
@@ -212,7 +213,16 @@ def main() -> int:
         except Exception as e:
             fail(errs, f"[cursor] cannot verify .cursor-plugin/plugin.json: {e}")
 
-    # 5d. MAP-19-04: capability-pack map freshness (same process; prints its own counts)
+    # 5d. overlap (TOOL-20): multi-pack chapter-basename collisions (same process)
+    try:
+        import check_overlap  # type: ignore
+        rc = check_overlap.main()
+        if rc != 0:
+            fail(errs, "[overlap] check_overlap.py failed (see output above)")
+    except Exception as e:
+        fail(errs, f"[overlap] check_overlap failed to run: {e}")
+
+    # 5e. MAP-19-04: capability-pack map freshness (same process; prints its own counts)
     try:
         import check_capability_map  # type: ignore
         rc = check_capability_map.main()
