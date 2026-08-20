@@ -185,7 +185,7 @@ Rows below are Phase 15 decisions dated 2026-08-20. Unreachable is not Tier 1. N
 
 - **FUT-04 / US Army Cost Benefit Analysis Guide (ASAFM)** — remains **DEFERRED** with fresh evidence 2026-08-20. Official PDF returned 403 Access Denied (Akamai). No in-source licence statement obtained. Statute 17 U.S.C. § 105 is prediction, not clearance. Not Tier 1. Not added to the Excluded table. Phase 16 must not build an Army CBA pack unless this bullet is later replaced by a quoted in-source grant. Phase 16 PACK-20-01 deferred-with-evidence 2026-08-20; no Army CBA pack built. (Also verified 2026-08-20.)
 
-- **AAF Product Support Manager Guidebook + Software pathway** — still **NOT yet vetted — do not use**. Keep Excluded-pending until an in-source redistribution grant is quoted. Successor-host challenge 403; no guidebook PDF opened; 2022 site copyright footer is not a redistribution grant. (Verified 2026-08-20.)
+- **AAF Product Support Manager Guidebook + Software pathway** — still **NOT yet vetted — do not use**. Keep Excluded-pending until an in-source redistribution grant is quoted. Successor-host challenge 403; no guidebook PDF opened; 2022 site copyright footer is not a redistribution grant. Phase 16 PACK-20-02 (IO-05 Software pathway) deferred-with-evidence 2026-08-20; Phase 16 PACK-20-03 (IO-06 Product Support) deferred-with-evidence 2026-08-20; no AAF pack built. (Also verified 2026-08-20.)
 
 - **ROSAP Rev E vs faa-std-025 Rev F** — optional Rev E reachability vs current faa-std-025 Rev F mirror dated 2026-08-20; ROSAP canonical record 403; guessed FAA Rev F path 404; shipped pack stays Rev F per PACK.yaml; no rebuild. (Verified 2026-08-20.)
 
@@ -197,7 +197,7 @@ Rows below are Phase 15 decisions dated 2026-08-20. Unreachable is not Tier 1. N
 | AAF Product Support + Software pathway | NO-GO — NOT yet vetted — do not use | IO-05 / IO-06 stay deferred. No AAF pack |
 | ROSAP Rev E vs faa-std-025 Rev F | document-only — no rebuild | Leave shipped faa-std-025 Rev F unchanged |
 
-Phase 16 record (2026-08-20): PACK-20-01 deferred-with-evidence per this table; PACK-20-02/03 recorded in the next task; zero packs built.
+Phase 16 record (2026-08-20): PACK-20-01..03 all deferred-with-evidence per this table; zero packs built.
 
 ### Def Stan 00-051 — UNVERIFIED / excluded from this milestone `[T2-03]`
 
