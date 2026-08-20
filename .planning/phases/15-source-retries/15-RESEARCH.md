@@ -129,6 +129,75 @@ Content-Type: text/html; charset=utf-8
 
 **Verdict (execute 2026-08-20):** FUT-04 remains **DEFERRED**. Not Tier 1. Not a new Excluded Source cell. No Army CBA pack.
 
+### VET-20-02 — AAF Product Support Manager Guidebook + Software pathway
+
+Locators (from 10-RESEARCH.md §AAF + 15-RESEARCH Fresh Evidence):
+
+```bash
+# Legacy WarU pdfviewer PSM path (research-wave had 403; execute-day code changed)
+$ curl -sI -A "Mozilla/5.0" "https://www.waru.edu/pdfviewer?Guidebooks/Product-Support-Manager-(PSM)-Guidebook.pdf"
+HTTP/1.1 404 Not Found
+Server: cloudflare
+Date: Thu, 20 Aug 2026 10:12:46 GMT
+Content-Type: text/html; charset=UTF-8
+
+# AAF guidebooks host → successor
+$ curl -sI -A "Mozilla/5.0" "https://aaf.dau.edu/guidebooks/"
+HTTP/1.1 301 Moved Permanently
+Location: https://aaf.waru.edu/guidebooks/
+Server: cloudflare
+Date: Thu, 20 Aug 2026 10:12:46 GMT
+
+# Successor guidebooks path (Cloudflare challenge — not a guidebook PDF)
+$ curl -sI -A "Mozilla/5.0" "https://aaf.waru.edu/guidebooks/"
+HTTP/1.1 403 Forbidden
+Server: cloudflare
+Cf-Mitigated: challenge
+Content-Type: text/html; charset=UTF-8
+Content-Length: 5628
+Date: Thu, 20 Aug 2026 10:12:58 GMT
+
+# Successor landing root (HTML 200 — not a redistribution grant)
+$ curl -sI -A "Mozilla/5.0" "https://aaf.waru.edu/"
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=UTF-8
+Date: Thu, 20 Aug 2026 10:12:59 GMT
+```
+
+**In-source redistribution quote:** none — no guidebook PDF opened. 2022 site copyright footer is not a redistribution grant. Landing-page 200 is not clearance.
+
+**Software pathway:** 10-RESEARCH records Software Acquisition as a pathway page (`/aaf/software/`), not a single PDF on the 2022 index. No opened PDF with a quoted grant this session; same unused sentence covers Product Support Manager Guidebook + Software pathway.
+
+**Verdict (execute 2026-08-20):** still **NOT yet vetted — do not use**. Keep Excluded-pending. No AAF pack.
+
+### VET-20-03 — optional ROSAP Rev E vs faa-std-025 Rev F
+
+Locators (from 6-RESEARCH.md §2a + 15-RESEARCH Fresh Evidence):
+
+```bash
+# ROSAP canonical Rev E record
+$ curl -sI -A "Mozilla/5.0" "https://rosap.ntl.bts.gov/view/dot/42955"
+HTTP/1.1 403 Forbidden
+Content-Type: text/html
+Content-Length: 397
+Date: Thu, 20 Aug 2026 10:12:46 GMT
+# Akamai-GRN present; deny page — not a PDF open
+
+# FAA host
+$ curl -sI -A "Mozilla/5.0" https://www.faa.gov
+HTTP/1.1 200 OK
+
+# Guessed FAA documentLibrary Rev F path
+$ curl -sI -A "Mozilla/5.0" "https://www.faa.gov/documentLibrary/media/Order/FAA_Standard_025_Rev_F.pdf"
+HTTP/1.1 404 Not Found
+Content-Type: text/html;charset=UTF-8
+Date: Thu, 20 Aug 2026 10:12:47 GMT
+```
+
+**Shipped pack:** `packs/faa-std-025/PACK.yaml` `source_version: "Rev F (2007-11-30, everyspec mirror; ROSAP rev E blocked at build)"` — unchanged this phase.
+
+**Verdict (execute 2026-08-20):** document-only optional check. ROSAP Rev E still unreachable (403). Guessed FAA Rev F path 404. No forced rebuild of `faa-std-025`.
+
 ## Recommended Approach
 
 1. **Update vetting ledger only** — append 2026-08-20 dated notes to `docs/SOURCE-VETTING.md` under existing Army CBA / AAF rows (no new Excluded-table entries).
