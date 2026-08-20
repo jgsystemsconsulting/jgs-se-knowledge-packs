@@ -1,17 +1,17 @@
 ---
 gsd_state_version: 1.0
 milestone: v1.19.1
-milestone_name: "**Goal**: Catalog, map, and release surfaces are coherent at v1.19.1; deferrals are visible, not papered over"
+milestone_name: Cleanup + Carried Backlog
 current_phase: 14
 current_phase_name: Ledger + planning hygiene
-status: planning
-stopped_at: Completed 14-01-PLAN.md
-last_updated: "2026-08-20T09:22:43.955Z"
-last_activity: 2026-08-19
-last_activity_desc: v1.19.1 roadmap created (phases 14–18)
+status: verifying
+stopped_at: Phase 14 verify closeout (STATE honesty residuals R-01..R-03)
+last_updated: "2026-08-20T14:35:00.000Z"
+last_activity: 2026-08-20
+last_activity_desc: Phase 14 plan complete; in verify gate — STATE honesty residuals fixed
 progress:
   total_phases: 5
-  completed_phases: 1
+  completed_phases: 0
   total_plans: 1
   completed_plans: 1
   percent: 20
@@ -24,16 +24,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-08-19)
 
 **Core value:** Licence-clean, validated, single-source reference packs an agent can load without context bloat.
-**Current focus:** Phase 14 — Ledger + planning hygiene (ready to plan)
+**Current focus:** Phase 14 — Ledger + planning hygiene (14-01 complete; phase gates / verify)
 
 ## Current Position
 
 Phase: 14 of 18 (Ledger + planning hygiene)
-Plan: —
-Status: Ready to plan
-Last activity: 2026-08-19 — v1.19.1 roadmap created (phases 14–18)
+Plan: 14-01 complete (1/1)
+Status: In phase gates — verify (impl/code/integration/security/gap done; verification in progress)
+Last activity: 2026-08-20 — 14-01 executed; reviews + gap CLOSED; STATE honesty residuals R-01..R-03 cleared at verify
 
-Progress: [██████████] 100%
+Progress: [██░░░░░░░░] 20% (plan 1/1 done; phase not complete — gates remain)
 
 ## Shipped — v1.19.0
 
@@ -48,7 +48,7 @@ Honest scope: 2 new packs + leftover RPG chapters + DA remap + map 644 + dual-ga
 
 ## Performance Metrics
 
-- Phases completed: 13/13 prior (v1.17 + v1.18 + v1.19.0 shipped); this milestone 0/5
+- Phases completed: 13/13 prior (v1.17 + v1.18 + v1.19.0 shipped); this milestone 0/5 (Phase 14 still open in gates)
 - Packs shipped: 65 directories (63 catalog + 2 signposts)
 
 **Per-Plan Metrics:**
@@ -88,11 +88,12 @@ SEED-001 — pack depth for se-agents IOs (17 thin-primary competencies). Consum
 
 ## Session Continuity
 
-**Last session:** 2026-08-20T09:22:43.944Z
-**Stopped at:** Completed 14-01-PLAN.md
+**Last session:** 2026-08-20T14:35:00.000Z
+**Stopped at:** Phase 14 verify closeout (STATE honesty residuals R-01..R-03)
 **Resume file:** None
 
 ## Decisions
 
-- [Phase ?]: Phase 14 archive layout verify-only; no re-move of milestone phase dirs
-- [Phase ?]: Live HYG-20 boxes left unchecked until phase.complete
+- [Phase 14]: Phase 14 archive layout verify-only; no re-move of milestone phase dirs
+- [Phase 14]: Live HYG-20 boxes left unchecked until phase.complete
+- [Phase 14]: STATE residuals R-01..R-03 fixed at verify (progress bar, milestone_name, Ready-to-plan lag)
