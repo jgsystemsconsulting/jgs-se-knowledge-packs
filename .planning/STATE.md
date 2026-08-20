@@ -5,16 +5,16 @@ milestone_name: "**Goal**: Catalog, map, and release surfaces are coherent at v1
 current_phase: 17
 current_phase_name: Tooling (IN-02 + FUT-05)
 status: planning
-stopped_at: Completed 16-01-PLAN.md
-last_updated: "2026-08-20T11:03:36.228Z"
+stopped_at: Completed 17-01-PLAN.md
+last_updated: "2026-08-20T11:59:31.267Z"
 last_activity: 2026-08-20
 last_activity_desc: Phase 16 plan 16-01 complete — PACK-20 deferred-with-evidence; zero packs; phase verify remains
 progress:
   total_phases: 5
-  completed_phases: 3
-  total_plans: 3
-  completed_plans: 3
-  percent: 60
+  completed_phases: 4
+  total_plans: 4
+  completed_plans: 4
+  percent: 80
 ---
 
 # Project State
@@ -33,7 +33,7 @@ Plan: Not started
 Status: Ready to plan
 Last activity: 2026-08-20 — Phase 16 complete, transitioned to Phase 17
 
-Progress: [██████░░░░] 60% (milestone plans 3/3 across Phases 14–16 execute; phase 16 verify remains)
+Progress: [██████████] 100% (milestone plans 3/3 across Phases 14–16 execute; phase 16 verify remains)
 
 ## Shipped — v1.19.0
 
@@ -61,6 +61,7 @@ Honest scope: 2 new packs + leftover RPG chapters + DA remap + map 644 + dual-ga
 | Phase 14 P01 | 2min | 3 tasks | 5 files |
 | Phase 15 P01 | 4min | 3 tasks | 4 files |
 | Phase 16 P01 | 3min | 3 tasks | 3 files |
+| Phase 17 P01 | 0min | 3 tasks | 4 files |
 
 ## Selected seed
 
@@ -92,8 +93,8 @@ SEED-001 — pack depth for se-agents IOs (17 thin-primary competencies). Consum
 
 ## Session Continuity
 
-**Last session:** 2026-08-20T10:51:33.295Z
-**Stopped at:** Completed 16-01-PLAN.md
+**Last session:** 2026-08-20T11:59:31.252Z
+**Stopped at:** Completed 17-01-PLAN.md
 **Resume file:** None
 
 ## Decisions
@@ -105,3 +106,5 @@ SEED-001 — pack depth for se-agents IOs (17 thin-primary competencies). Consum
 - [Phase 15]: AAF Product Support + Software pathway still NOT yet vetted — do not use
 - [Phase 15]: ROSAP Rev E optional check document-only; faa-std-025 Rev F unchanged
 - [Phase 16]: PACK-20-01..03 deferred-with-evidence; no Army CBA or AAF pack
+- [Phase ?]: Overlap gate scans packs/*/chapters/*.md only; WHITELIST ch01-introduction.md
+- [Phase ?]: FUT-05 residual: mechanical check_capability_map slice; no byte-stable full-map generator; Phase 18 owns map_version

@@ -235,3 +235,9 @@ None - no external service configuration required.
 ---
 *Phase: 17-tooling-in-02-fut-05*
 *Completed: 2026-08-20*
+
+## Self-Check: PASSED
+
+- FOUND: tooling/check_overlap.py, tooling/check_release.py, docs/capability-map-CONTRACT.md, 17-01-SUMMARY.md
+- FOUND commits: 84a0f35, cf1d361, ee7534b, 4ac5072
+- Gates: OVERLAP PASS, map PASS TOTAL 644, RELEASE CHECK PASS, CI_FENCE_OK, BOXES_OPEN
