@@ -1,7 +1,7 @@
 jgs-se-knowledge-packs — Release
 Product:    jgs-se-knowledge-packs
-Version:    1.19.0
-Tag:        v1.19.0
-Staged:     2026-08-17T22:56:12Z
+Version:    1.19.1
+Tag:        v1.19.1
+Staged:     2026-08-20T13:40:25Z
 Vendor:     JG Systems Consulting Ltd.
 Licence:    MIT (tooling); pack content under each source's own licence (see NOTICE)

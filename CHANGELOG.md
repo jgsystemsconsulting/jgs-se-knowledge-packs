@@ -9,6 +9,39 @@ All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning follows
 [Semantic Versioning](https://semver.org/).
 
+## [1.19.1]: 2026-08-20
+
+Hygiene, source-retry evidence, deferred pack builds, overlap tooling, and
+FUT-05 residual on the same catalog 63 / dirs 65 basis as 1.19.0. No new packs.
+Deferrals stay visible. Catalogue still 63 packs (+2 signposts).
+
+### Added
+
+- Overlap checker (`tooling/check_overlap.py`) on the `check_release.py` path
+  (IN-02 / TOOL-20). Multi-pack chapter-basename collisions fail the release
+  gate. Intentional shared `ch01-introduction.md` is WHITELIST-only.
+
+### Changed
+
+- Version surfaces and `map_version` 1.19.0 -> 1.19.1. Cluster membership still
+  644; schema_version still 2. No reclassification.
+- CONTRACT section 8 records FUT-05 residual: mechanical
+  `check_capability_map.py` slice only; no byte-stable full-map generator.
+
+### Fixed
+
+- Phase 14 ledger / planning hygiene (milestone archives, MAP-19 ticks in the
+  v1.19.0 archive, live surfaces).
+
+### Deferred / accepted (not built)
+
+- **FUT-04 Army CBA** DEFERRED - ASAFM PDF 403 on 2026-08-20 retry; no in-source grant.
+- **AAF Product Support + Software pathway** still NOT yet vetted - do not use.
+- **PACK-20-01..03** deferred-with-evidence; zero packs built this milestone.
+- **IO-05 Integration** DEFERRED - AAF Software pathway still NOT yet vetted.
+- **IO-06 Logistics diversity** DEFERRED - AAF Product Support still NOT yet vetted.
+- **IO-07 Stakeholder Engagement** ACCEPT - no invented pack.
+
 ## [1.19.0]: 2026-08-17
 
 Agent IO Depth (SEED-001): competency primaries fattened so se-agents can
