@@ -60,11 +60,11 @@ Plans:
   3. Optional ROSAP Rev E reachability vs current `faa-std-025` Rev F mirror is documented only — no forced rebuild
   4. No pack is built in this phase
 
-**Plans:** 1 plan
+**Plans:** 1/1 plans executed
 
 Plans:
 
-- [ ] 15-01-PLAN.md — Dated FUT-04 / AAF / ROSAP retries into SOURCE-VETTING + planning annotations; no packs
+- [x] 15-01-PLAN.md — Dated FUT-04 / AAF / ROSAP retries into SOURCE-VETTING + planning annotations; no packs
 
 ### Phase 16: Conditional packs
 
@@ -113,7 +113,7 @@ Phases execute in numeric order: 14 → 15 → 16 → 17 → 18
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 14. Ledger + planning hygiene | 1/1 | Complete    | 2026-08-20 |
-	| 15. Source retries | 0/1 | Not started | - |
+| 15. Source retries | 1/1 | In Progress |  |
 | 16. Conditional packs | 0/TBD | Not started | - |
 | 17. Tooling (IN-02 + FUT-05) | 0/TBD | Not started | - |
 | 18. Map + release surface v1.19.1 | 0/TBD | Not started | - |

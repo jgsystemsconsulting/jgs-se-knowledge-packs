@@ -4,17 +4,17 @@ milestone: v1.19.1
 milestone_name: "**Goal**: Catalog, map, and release surfaces are coherent at v1.19.1; deferrals are visible, not papered over"
 current_phase: 15
 current_phase_name: Source retries
-status: planning
-stopped_at: Phase 14 verify closeout (STATE honesty residuals R-01..R-03)
-last_updated: "2026-08-20T09:31:01.420Z"
+status: executing
+stopped_at: Completed 15-01-PLAN.md
+last_updated: "2026-08-20T10:16:32.571Z"
 last_activity: 2026-08-20
-last_activity_desc: Phase 14 plan complete; in verify gate — STATE honesty residuals fixed
+last_activity_desc: Phase 15 plan 15-01 complete — deferred-with-evidence; phase gates / verify remain
 progress:
   total_phases: 5
   completed_phases: 1
-  total_plans: 1
-  completed_plans: 1
-  percent: 20
+  total_plans: 2
+  completed_plans: 2
+  percent: 40
 ---
 
 # Project State
@@ -24,16 +24,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-08-19)
 
 **Core value:** Licence-clean, validated, single-source reference packs an agent can load without context bloat.
-**Current focus:** Phase 14 — Ledger + planning hygiene (14-01 complete; phase gates / verify)
+**Current focus:** Phase 15 — Source retries (15-01 complete; phase gates / verify)
 
 ## Current Position
 
 Phase: 15 of 18 (Source retries)
-Plan: Not started
-Status: Ready to plan
-Last activity: 2026-08-20 — Phase 14 complete, transitioned to Phase 15
+Plan: 15-01 complete (1/1)
+Status: Plan complete — phase verify / gates remain
+Last activity: 2026-08-20 — 15-01 executed (FUT-04 DEFERRED, AAF unused, ROSAP document-only)
 
-Progress: [██░░░░░░░░] 20% (plan 1/1 done; phase not complete — gates remain)
+Progress: [████░░░░░░] 40% (milestone plans 2/2 so far across Phases 14–15; phase 15 not complete — gates remain)
 
 ## Shipped — v1.19.0
 
@@ -48,7 +48,7 @@ Honest scope: 2 new packs + leftover RPG chapters + DA remap + map 644 + dual-ga
 
 ## Performance Metrics
 
-- Phases completed: 13/13 prior (v1.17 + v1.18 + v1.19.0 shipped); this milestone 0/5 (Phase 14 still open in gates)
+- Phases completed: 13/13 prior (v1.17 + v1.18 + v1.19.0 shipped); this milestone Phase 14 complete + Phase 15 plan done (gates remain)
 - Packs shipped: 65 directories (63 catalog + 2 signposts)
 
 **Per-Plan Metrics:**
@@ -59,6 +59,7 @@ Honest scope: 2 new packs + leftover RPG chapters + DA remap + map 644 + dual-ga
 | Phase 13 P01 | 6 min | 3 tasks | 13 files |
 | Phase 13 P02 | ~5 min | 2 tasks | 13 content + 4 planning |
 | Phase 14 P01 | 2min | 3 tasks | 5 files |
+| Phase 15 P01 | 4min | 3 tasks | 4 files |
 
 ## Selected seed
 
@@ -89,8 +90,8 @@ SEED-001 — pack depth for se-agents IOs (17 thin-primary competencies). Consum
 
 ## Session Continuity
 
-**Last session:** 2026-08-20T14:35:00.000Z
-**Stopped at:** Phase 14 verify closeout (STATE honesty residuals R-01..R-03)
+**Last session:** 2026-08-20T10:16:32.559Z
+**Stopped at:** Completed 15-01-PLAN.md
 **Resume file:** None
 
 ## Decisions
@@ -98,3 +99,6 @@ SEED-001 — pack depth for se-agents IOs (17 thin-primary competencies). Consum
 - [Phase 14]: Phase 14 archive layout verify-only; no re-move of milestone phase dirs
 - [Phase 14]: Live HYG-20 boxes left unchecked until phase.complete
 - [Phase 14]: STATE residuals R-01..R-03 fixed at verify (progress bar, milestone_name, Ready-to-plan lag)
+- [Phase 15]: FUT-04 remains DEFERRED (ASAFM PDF 403); no Army CBA pack
+- [Phase 15]: AAF Product Support + Software pathway still NOT yet vetted — do not use
+- [Phase 15]: ROSAP Rev E optional check document-only; faa-std-025 Rev F unchanged
