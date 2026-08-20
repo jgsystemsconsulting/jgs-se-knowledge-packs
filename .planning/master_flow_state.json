@@ -2,9 +2,9 @@
   "schema_version": 1,
   "kind": "pointer",
   "active_phase": 17,
-  "active_phase_dir": null,
-  "active_state": null,
+  "active_phase_dir": ".planning/phases/17-tooling-in-02-fut-05",
+  "active_state": ".planning/phases/17-tooling-in-02-fut-05/master_flow_state.json",
   "lock": null,
-  "updated_at": "2026-08-20T11:03:37.974Z",
-  "notes": "Phase 16 verify passed. Next: 17"
+  "updated_at": "2026-08-20T12:35:30.024Z",
+  "notes": "Phase 17 verify passed. Next: 17"
 }

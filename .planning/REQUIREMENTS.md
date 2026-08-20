@@ -29,7 +29,7 @@ Sourced from STATE.md remaining backlog after v1.19.0 ship, stale GSD ledger (Ph
 ### Tooling
 
 - [ ] **TOOL-20-01 (IN-02)**: Minimal committed overlap checker under `tooling/` (stdlib Python preferred). Detects multi-pack chapter/topic collisions that matter for release; runnable in CI or via `check_release.py`
-- [ ] **TOOL-20-02**: Wire TOOL-20-01 into release path (direct call from `check_release.py` or documented mandatory step with gate failure on violations). Thresholds documented; no false-fail on intentional shared support files if excluded by design
+- [x] **TOOL-20-02**: Wire TOOL-20-01 into release path (direct call from `check_release.py` or documented mandatory step with gate failure on violations). Thresholds documented; no false-fail on intentional shared support files if excluded by design
 - [ ] **TOOL-20-03 (FUT-05)**: Deterministic capability-map generator (or exporter) under `tooling/` that regenerates `docs/capability-pack-map.json` (+ md sync if required) from committed inputs without agent judgment for mechanical fields. If full cluster classification cannot be mechanical, deliver the largest deterministic slice + residual agent procedure documented in CONTRACT; do not claim full FUT-05 closed unless byte-stable regen is proven
 
 ### Map + Release
@@ -71,9 +71,9 @@ Sourced from STATE.md remaining backlog after v1.19.0 ship, stale GSD ledger (Ph
 | PACK-20-01 | Phase 16 | Complete |
 | PACK-20-02 | Phase 16 | Complete |
 | PACK-20-03 | Phase 16 | Complete |
-| TOOL-20-01 | Phase 17 | Pending |
-| TOOL-20-02 | Phase 17 | Pending |
-| TOOL-20-03 | Phase 17 | Pending |
+| TOOL-20-01 | Phase 17 | Complete |
+| TOOL-20-02 | Phase 17 | Complete |
+| TOOL-20-03 | Phase 17 | Complete |
 | MAP-20-01 | Phase 18 | Pending |
 | REL-20-01 | Phase 18 | Pending |
 | REL-20-02 | Phase 18 | Pending |
