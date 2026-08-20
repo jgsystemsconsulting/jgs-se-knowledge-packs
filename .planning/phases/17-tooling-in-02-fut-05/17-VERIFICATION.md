@@ -1,3 +1,27 @@
+---
+phase: 17-tooling-in-02-fut-05
+verified: 2026-08-20T13:34:00Z
+status: passed_with_notes
+score: 3/3 must-haves verified
+behavior_unverified: 0
+overrides_applied: 0
+re_verification: false
+gaps: []
+deferred:
+  - "WR-01 write-only errs accumulator in check_overlap (print+return still correct)"
+  - "WR-02 missing packs/ → standalone silent PASS (release path still covered)"
+requirements:
+  - TOOL-20-01
+  - TOOL-20-02
+  - TOOL-20-03
+verdict: passed_with_notes
+phase_complete_safe: true
+notes:
+  - "Overlap checker on release path; FUT-05 honest residual in CONTRACT §8"
+  - "map_version / version trio remain 1.19.0 until Phase 18"
+  - "TOOL-20 boxes left open for host phase.complete / mark-complete"
+---
+
 # Phase 17 Verification — Tooling (IN-02 + FUT-05)
 
 **Phase:** 17-tooling-in-02-fut-05  

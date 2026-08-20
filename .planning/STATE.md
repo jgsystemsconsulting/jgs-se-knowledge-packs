@@ -2,17 +2,17 @@
 gsd_state_version: 1.0
 milestone: v1.19.1
 milestone_name: "**Goal**: Catalog, map, and release surfaces are coherent at v1.19.1; deferrals are visible, not papered over"
-current_phase: 17
-current_phase_name: Tooling (IN-02 + FUT-05)
-status: executing
+current_phase: 18
+current_phase_name: Map + release surface v1.19.1
+status: planning
 stopped_at: Completed 17-01-PLAN.md
-last_updated: "2026-08-20T12:00:00Z"
+last_updated: "2026-08-20T12:36:38.674Z"
 last_activity: 2026-08-20
 last_activity_desc: Phase 17 plan 17-01 complete — IN-02 overlap gate + FUT-05 residual; phase verify remains
 progress:
   total_phases: 5
-  completed_phases: 3
-  total_plans: 5
+  completed_phases: 4
+  total_plans: 4
   completed_plans: 4
   percent: 80
 ---
@@ -28,10 +28,10 @@ See: .planning/PROJECT.md (updated 2026-08-19)
 
 ## Current Position
 
-Phase: 17 of 18 (Tooling (IN-02 + FUT-05))
-Plan: 1 of 1 (17-01 complete)
-Status: Ready to verify
-Last activity: 2026-08-20 — Completed 17-01-PLAN.md (overlap gate + FUT-05 residual)
+Phase: 18 of 18 (Map + release surface v1.19.1)
+Plan: Not started
+Status: Ready to plan
+Last activity: 2026-08-20 — Phase 17 complete, transitioned to Phase 18
 
 Progress: [████████░░] 80% (milestone plans 4/5 across Phases 14–17 execute; phase 17 verify remains)
 

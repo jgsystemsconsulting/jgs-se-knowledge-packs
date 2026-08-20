@@ -1,10 +1,14 @@
 {
   "schema_version": 1,
   "kind": "pointer",
-  "active_phase": 17,
-  "active_phase_dir": ".planning/phases/17-tooling-in-02-fut-05",
-  "active_state": ".planning/phases/17-tooling-in-02-fut-05/master_flow_state.json",
-  "lock": null,
-  "updated_at": "2026-08-20T12:35:30.024Z",
-  "notes": "Phase 17 verify passed. Next: 17"
+  "active_phase": 18,
+  "active_phase_dir": ".planning/phases/18-map-release-surface-v1-19-1",
+  "active_state": ".planning/phases/18-map-release-surface-v1-19-1/master_flow_state.json",
+  "lock": {
+    "phase": 18,
+    "session_hint": "master-flow",
+    "updated_at": "2026-08-20T12:35:31.608Z"
+  },
+  "updated_at": "2026-08-20T12:35:31.609Z",
+  "notes": ""
 }
