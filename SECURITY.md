@@ -59,3 +59,6 @@ phase commit set or under `tooling/`.
 **Acceptance:** those strings are already public tree names in this repository. The
 messages name existing pack directories and chapter files; they do not introduce private
 paths or secrets.
+
+**Review cadence:** re-confirm each phase that FAIL lines still name only public pack
+slugs and chapter basenames.
