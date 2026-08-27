@@ -14,6 +14,7 @@ Rules of construction:
 - Machine-readable version: `docs/capability-pack-map.json`.
 - Machine-readable classification rules (MAP-21-01): `docs/classification-rules.json`.
 - Consumption contract (schema, versioning, refresh): see `docs/capability-map-CONTRACT.md`.
+- Changelog (v1.20.0): generator is the refresh path; membership still 644; no reclassification; no new packs.
 - Changelog (v1.19.1): map_version bump only; membership still 644; no reclassification.
 - Changelog (v1.19.0): added `nasa-std-8719-14` + `is-gps-200n`; leftover RPG `dod-vva-rpg` ch11–ch13; MAP-19-03 MOVE of `federal-bca` ch04+ch06 and `dod-vva-rpg` ch06 into Decision Analysis.
 - Changelog (v1.18.0): added `dod-vva-rpg`, `dote-te-guidebook`, `mil-std-40051`, `dafman-63-119`, `mil-std-881f`, `faa-std-025`, `federal-bca`.

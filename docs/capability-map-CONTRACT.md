@@ -12,8 +12,8 @@ Top-level JSON object:
 ```json
 {
   "schema_version": 2,
-  "map_version": "1.19.1",
-  "generated_on": "2026-08-17",
+  "map_version": "1.20.0",
+  "generated_on": "2026-08-27",
   "clusters": [
     {
       "name": "Systems Thinking & Fundamentals",
@@ -67,19 +67,23 @@ The v1 shape — top level `{"clusters": [...]}` only, with no envelope keys —
 
 When packs change (new pack, new chapter, rename, delete):
 
-1. Agent classification pass per the **rules of construction** in
-   `docs/capability-pack-map.md` (every chapter → exactly one cluster; support
-   files only for essentially single-cluster packs; process definitions →
-   the Standards, Tailoring & Process Models cluster).
-2. Write `docs/capability-pack-map.json` (preserve v2 envelope; update
-   `map_version` / `generated_on`) and sync the human summary tables in
-   `docs/capability-pack-map.md`.
-3. Run `python tooling/check_capability_map.py` — must exit 0 (envelope,
+1. Run `python tooling/generate_capability_map.py --generated-on YYYY-MM-DD`
+   (add `--sync-md` to rewrite the human summary tables). Classification rules
+   (`docs/classification-rules.json`) and note overrides
+   (`docs/capability-pack-map-note-overrides.json`) are committed inputs; cluster
+   assignment and the v2 envelope are produced mechanically by the generator.
+2. Run `python tooling/check_capability_map.py` — must exit 0 (envelope,
    pack/chapter staleness vs `packs/`, file existence, uniqueness, thresholds).
-4. Commit both `.json` and `.md` together.
+3. Commit both `docs/capability-pack-map.json` and `docs/capability-pack-map.md`
+   together.
+
+Mechanical regeneration does not require a live agent to assign clusters. Note
+overrides remain the human tuning surface: the committed 644-row overrides file
+is still a required generator input (the generator fails closed if it is
+missing).
 
 The refresh path still runs `python tooling/check_capability_map.py`, and
-`python tooling/check_release.py` now invokes `check_capability_map.main()`
+`python tooling/check_release.py` invokes `check_capability_map.main()`
 in-process (local/trusted; CI does not exec repo Python).
 
 ## 5. Threshold table
@@ -128,17 +132,15 @@ does not exec repo Python).
   shared basename requires an explicit WHITELIST edit in
   `tooling/check_overlap.py`, not a silent pass.
 
-## 8. FUT-05 residual (mechanical slice vs agent classification)
+## 8. FUT-05 residual (note overrides only)
 
-The largest **deterministic** slice of capability-map correctness already ships
-in `tooling/check_capability_map.py`: v2 envelope checks, bidirectional
-pack/chapter staleness vs `packs/`, file existence, `(pack, chapter)`
-uniqueness across clusters, and name-keyed thin-cluster thresholds.
+Cluster assignment and mechanical envelope fields (`schema_version`,
+`map_version`, `generated_on`, ordered `clusters`) are produced by the committed
+generator `tooling/generate_capability_map.py` from
+`docs/classification-rules.json` plus
+`docs/capability-pack-map-note-overrides.json`.
 
-**Cluster assignment** and `chapters[].note` still require **agent judgment**
-per the rules of construction in `docs/capability-pack-map.md`. Those fields
-cannot be regenerated from committed inputs alone.
-
-This milestone does **not** claim a byte-stable full-map generator. The refresh
-path in section 4 remains the agent classification pass plus the map checker.
-Phase 18 owns any later `map_version` bump on the public release surface.
+The remaining human input is the committed 644-row note-overrides file (one
+note per live chapter). Envelope, staleness, uniqueness, and threshold gates
+stay mechanical in `tooling/check_capability_map.py` and
+`tooling/check_classification_rules.py`.
