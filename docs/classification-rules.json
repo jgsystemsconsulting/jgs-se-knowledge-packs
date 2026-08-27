@@ -1,0 +1,3922 @@
+{
+  "schema_version": 1,
+  "map_version": "1.19.1",
+  "generated_on": "2026-08-27",
+  "rules_of_construction": [
+    "Every chapter in every pack under packs/<slug>/chapters/ is assigned to exactly one capability cluster (best fit).",
+    "Cross-cutting chapters carry a remark noting the strong secondary fit.",
+    "glossary.md / patterns.md / cheatsheet.md are included (marked support file) only for packs that are essentially single-cluster; multi-cluster packs' support files are omitted as ambiguous.",
+    "The two signpost packs (omg-signpost, se-standards-signpost) contain no chapters and are not mapped.",
+    "A standard's own process definitions go to cluster 30 (Standards, Tailoring & Process Models); performing the capability goes to the capability cluster."
+  ],
+  "signpost_packs": [
+    "omg-signpost",
+    "se-standards-signpost"
+  ],
+  "support_filenames": [
+    "glossary.md",
+    "patterns.md",
+    "cheatsheet.md"
+  ],
+  "support_policy": "Support-file membership is encoded per assignment in `assignments` (`is_support` true rows); this field is descriptive and not a derivation rule. Packs with one dominant cluster and only noted cross-cutting chapters elsewhere carry support rows; legacy exceptions: mil-std-881f, nasa-std-8719-14, dod-mq-bok.",
+  "cluster_names": [
+    "Systems Thinking & Fundamentals",
+    "Requirements Engineering",
+    "Requirements Traceability & Allocation",
+    "Architecture & Design",
+    "Interface Management & ICIDs",
+    "Integration",
+    "Verification",
+    "Validation",
+    "Test & Evaluation",
+    "Modeling, MBSE & SysML",
+    "Digital Engineering & Digital Twins",
+    "Configuration Management & Baselines",
+    "Data & Information Management",
+    "Risk Management",
+    "Opportunity/Benefit Management",
+    "Decision Analysis & Trade Studies",
+    "Technical Planning & Work Breakdown",
+    "Measurement & Technical Assessment",
+    "Quality Assurance & Process Compliance",
+    "Safety, Reliability & Survivability",
+    "Cybersecurity & Security Engineering",
+    "Human Systems Integration / Human Factors",
+    "Logistics, Supportability & Sustainment",
+    "Operations, Maintenance & Disposal",
+    "Training & Documentation Delivery",
+    "Project/Program Management",
+    "Supplier, Procurement & Acquisition",
+    "Stakeholder Engagement & Needs",
+    "Governance, Reviews, Gates & Control Points",
+    "Standards, Tailoring & Process Models",
+    "Specialty Engineering",
+    "Assurance & System Assurance"
+  ],
+  "assignments": [
+    {
+      "pack": "dau-se-guidebook",
+      "chapter": "ch01-introduction.md",
+      "cluster": "Systems Thinking & Fundamentals",
+      "is_support": false
+    },
+    {
+      "pack": "dau-se-guidebook",
+      "chapter": "ch02-system-level-considerations.md",
+      "cluster": "Systems Thinking & Fundamentals",
+      "is_support": false
+    },
+    {
+      "pack": "doe-sem",
+      "chapter": "ch01-sem-purpose-and-context.md",
+      "cluster": "Systems Thinking & Fundamentals",
+      "is_support": false
+    },
+    {
+      "pack": "faa-sem",
+      "chapter": "ch01-faa-sem-introduction-ams-lifecycle.md",
+      "cluster": "Systems Thinking & Fundamentals",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-expanded",
+      "chapter": "ch01-nasa-se-expanded-fundamentals-and-se-engine.md",
+      "cluster": "Systems Thinking & Fundamentals",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-handbook",
+      "chapter": "ch01-2-0-fundamentals-of-systems-engineering.md",
+      "cluster": "Systems Thinking & Fundamentals",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-handbook",
+      "chapter": "ch03-2-3-example-of-using-the-se-engine.md",
+      "cluster": "Systems Thinking & Fundamentals",
+      "is_support": false
+    },
+    {
+      "pack": "nist-cps",
+      "chapter": "ch01-nist-cps-introduction-and-what-makes-cps-different.md",
+      "cluster": "Systems Thinking & Fundamentals",
+      "is_support": false
+    },
+    {
+      "pack": "nist-cps",
+      "chapter": "ch02-nist-cps-framework-facets-aspects-concerns.md",
+      "cluster": "Systems Thinking & Fundamentals",
+      "is_support": false
+    },
+    {
+      "pack": "nist-cps",
+      "chapter": "ch07-nist-cps-use-case-analysis-method.md",
+      "cluster": "Systems Thinking & Fundamentals",
+      "is_support": false
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch01-sebok-introduction.md",
+      "cluster": "Systems Thinking & Fundamentals",
+      "is_support": false
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch02-sebok-se-fundamentals.md",
+      "cluster": "Systems Thinking & Fundamentals",
+      "is_support": false
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch03-sebok-nature-of-systems.md",
+      "cluster": "Systems Thinking & Fundamentals",
+      "is_support": false
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch04-sebok-systems-science.md",
+      "cluster": "Systems Thinking & Fundamentals",
+      "is_support": false
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch05-sebok-systems-thinking.md",
+      "cluster": "Systems Thinking & Fundamentals",
+      "is_support": false
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch07-sebok-systems-approach-engineered.md",
+      "cluster": "Systems Thinking & Fundamentals",
+      "is_support": false
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch20-sebok-applications-overview.md",
+      "cluster": "Systems Thinking & Fundamentals",
+      "is_support": false
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch21-sebok-product-systems-engineering.md",
+      "cluster": "Systems Thinking & Fundamentals",
+      "is_support": false
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch22-sebok-service-systems-engineering.md",
+      "cluster": "Systems Thinking & Fundamentals",
+      "is_support": false
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch23-sebok-enterprise-systems-engineering.md",
+      "cluster": "Systems Thinking & Fundamentals",
+      "is_support": false
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch24-sebok-systems-of-systems.md",
+      "cluster": "Systems Thinking & Fundamentals",
+      "is_support": false
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch25-sebok-healthcare-systems-engineering.md",
+      "cluster": "Systems Thinking & Fundamentals",
+      "is_support": false
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch32-sebok-se-software-engineering.md",
+      "cluster": "Systems Thinking & Fundamentals",
+      "is_support": false
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch35-sebok-implementation-examples.md",
+      "cluster": "Systems Thinking & Fundamentals",
+      "is_support": false
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch36-sebok-emerging-knowledge.md",
+      "cluster": "Systems Thinking & Fundamentals",
+      "is_support": false
+    },
+    {
+      "pack": "doe-sem",
+      "chapter": "ch04-requirements-and-functional-design.md",
+      "cluster": "Requirements Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "faa-req-handbook",
+      "chapter": "ch01-faa-req-handbook-foundations-and-introduction.md",
+      "cluster": "Requirements Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "faa-req-handbook",
+      "chapter": "ch02-faa-req-handbook-system-overview-and-boundary.md",
+      "cluster": "Requirements Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "faa-req-handbook",
+      "chapter": "ch03-faa-req-handbook-operational-concepts-and-environmental-assumptions.md",
+      "cluster": "Requirements Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "faa-req-handbook",
+      "chapter": "ch05-faa-req-handbook-system-modes-and-detailed-requirements.md",
+      "cluster": "Requirements Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "faa-req-handbook",
+      "chapter": "ch07-faa-req-handbook-rationale-and-summary.md",
+      "cluster": "Requirements Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "faa-req-handbook",
+      "chapter": "ch08-faa-req-handbook-worked-avionics-examples.md",
+      "cluster": "Requirements Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "faa-sem",
+      "chapter": "ch03-faa-sem-requirements-architecture-crosscutting.md",
+      "cluster": "Requirements Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "gao-agile",
+      "chapter": "ch05-gao-agile-requirements-development-management.md",
+      "cluster": "Requirements Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-handbook",
+      "chapter": "ch18-4-2-technical-requirements-definition.md",
+      "cluster": "Requirements Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-handbook",
+      "chapter": "ch28-6-2-requirements-management.md",
+      "cluster": "Requirements Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "requirements-writing",
+      "chapter": "ch01-quality-characteristics.md",
+      "cluster": "Requirements Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "requirements-writing",
+      "chapter": "ch02-ears-overview.md",
+      "cluster": "Requirements Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "requirements-writing",
+      "chapter": "ch03-ears-patterns.md",
+      "cluster": "Requirements Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "requirements-writing",
+      "chapter": "ch04-applying-ears.md",
+      "cluster": "Requirements Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "requirements-writing",
+      "chapter": "ch05-defects-and-anti-patterns.md",
+      "cluster": "Requirements Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "requirements-writing",
+      "chapter": "cheatsheet.md",
+      "cluster": "Requirements Engineering",
+      "is_support": true
+    },
+    {
+      "pack": "requirements-writing",
+      "chapter": "glossary.md",
+      "cluster": "Requirements Engineering",
+      "is_support": true
+    },
+    {
+      "pack": "requirements-writing",
+      "chapter": "patterns.md",
+      "cluster": "Requirements Engineering",
+      "is_support": true
+    },
+    {
+      "pack": "faa-req-handbook",
+      "chapter": "ch06-faa-req-handbook-software-requirements-and-subsystem-allocation.md",
+      "cluster": "Requirements Traceability & Allocation",
+      "is_support": false
+    },
+    {
+      "pack": "faa-std-025",
+      "chapter": "ch05-verification-and-traceability.md",
+      "cluster": "Requirements Traceability & Allocation",
+      "is_support": false
+    },
+    {
+      "pack": "requirements-writing",
+      "chapter": "ch06-verifiability-and-traceability.md",
+      "cluster": "Requirements Traceability & Allocation",
+      "is_support": false
+    },
+    {
+      "pack": "dau-se-guidebook",
+      "chapter": "ch06-design-considerations.md",
+      "cluster": "Architecture & Design",
+      "is_support": false
+    },
+    {
+      "pack": "dod-mosa",
+      "chapter": "ch01-dod-mosa-introduction-and-policy.md",
+      "cluster": "Architecture & Design",
+      "is_support": false
+    },
+    {
+      "pack": "dod-mosa",
+      "chapter": "ch02-dod-mosa-pillars-and-benefits.md",
+      "cluster": "Architecture & Design",
+      "is_support": false
+    },
+    {
+      "pack": "dod-mosa",
+      "chapter": "ch04-dod-mosa-technical-considerations.md",
+      "cluster": "Architecture & Design",
+      "is_support": false
+    },
+    {
+      "pack": "dod-mosa",
+      "chapter": "ch07-dod-mosa-implementation-appendices.md",
+      "cluster": "Architecture & Design",
+      "is_support": false
+    },
+    {
+      "pack": "dodaf",
+      "chapter": "ch01-introduction-and-dodaf-concepts.md",
+      "cluster": "Architecture & Design",
+      "is_support": false
+    },
+    {
+      "pack": "dodaf",
+      "chapter": "ch03-all-viewpoint-av.md",
+      "cluster": "Architecture & Design",
+      "is_support": false
+    },
+    {
+      "pack": "dodaf",
+      "chapter": "ch04-capability-viewpoint-cv.md",
+      "cluster": "Architecture & Design",
+      "is_support": false
+    },
+    {
+      "pack": "dodaf",
+      "chapter": "ch06-operational-viewpoint-ov.md",
+      "cluster": "Architecture & Design",
+      "is_support": false
+    },
+    {
+      "pack": "dodaf",
+      "chapter": "ch08-services-viewpoint-svcv.md",
+      "cluster": "Architecture & Design",
+      "is_support": false
+    },
+    {
+      "pack": "dodaf",
+      "chapter": "ch10-systems-viewpoint-sv.md",
+      "cluster": "Architecture & Design",
+      "is_support": false
+    },
+    {
+      "pack": "doe-sem",
+      "chapter": "ch05-system-design-and-construction.md",
+      "cluster": "Architecture & Design",
+      "is_support": false
+    },
+    {
+      "pack": "faa-req-handbook",
+      "chapter": "ch04-faa-req-handbook-functional-architecture-and-implementation-constraints.md",
+      "cluster": "Architecture & Design",
+      "is_support": false
+    },
+    {
+      "pack": "faa-sem",
+      "chapter": "ch02-faa-sem-concept-functional-analysis.md",
+      "cluster": "Architecture & Design",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-expanded",
+      "chapter": "ch03-nasa-se-expanded-system-design-processes.md",
+      "cluster": "Architecture & Design",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-handbook",
+      "chapter": "ch19-4-3-logical-decomposition.md",
+      "cluster": "Architecture & Design",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-handbook",
+      "chapter": "ch20-4-4-design-solution-definition.md",
+      "cluster": "Architecture & Design",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-handbook",
+      "chapter": "ch21-5-1-product-implementation.md",
+      "cluster": "Architecture & Design",
+      "is_support": false
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch17-sebok-system-architecture-realization.md",
+      "cluster": "Architecture & Design",
+      "is_support": false
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch34-sebok-se-quality-attributes.md",
+      "cluster": "Architecture & Design",
+      "is_support": false
+    },
+    {
+      "pack": "faa-sem",
+      "chapter": "ch04-faa-sem-technical-management-interface-risk.md",
+      "cluster": "Interface Management & ICIDs",
+      "is_support": false
+    },
+    {
+      "pack": "faa-std-025",
+      "chapter": "ch03-ird-content-requirements.md",
+      "cluster": "Interface Management & ICIDs",
+      "is_support": false
+    },
+    {
+      "pack": "faa-std-025",
+      "chapter": "ch04-icd-content-requirements.md",
+      "cluster": "Interface Management & ICIDs",
+      "is_support": false
+    },
+    {
+      "pack": "is-gps-200n",
+      "chapter": "ch02-interface-definition-and-identification.md",
+      "cluster": "Interface Management & ICIDs",
+      "is_support": false
+    },
+    {
+      "pack": "is-gps-200n",
+      "chapter": "ch03-interface-criteria-pattern.md",
+      "cluster": "Interface Management & ICIDs",
+      "is_support": false
+    },
+    {
+      "pack": "is-gps-200n",
+      "chapter": "ch04-nav-data-as-payload.md",
+      "cluster": "Interface Management & ICIDs",
+      "is_support": false
+    },
+    {
+      "pack": "is-gps-200n",
+      "chapter": "ch05-time-and-definition-hygiene.md",
+      "cluster": "Interface Management & ICIDs",
+      "is_support": false
+    },
+    {
+      "pack": "is-gps-200n",
+      "chapter": "ch06-appendices-as-a-map.md",
+      "cluster": "Interface Management & ICIDs",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-handbook",
+      "chapter": "ch29-6-3-interface-management.md",
+      "cluster": "Interface Management & ICIDs",
+      "is_support": false
+    },
+    {
+      "pack": "dafman-63-119",
+      "chapter": "ch06-integration-itt-and-cyber.md",
+      "cluster": "Integration",
+      "is_support": false
+    },
+    {
+      "pack": "doe-sem",
+      "chapter": "ch06-integration-test-and-acceptance.md",
+      "cluster": "Integration",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-expanded",
+      "chapter": "ch04-nasa-se-expanded-product-realization.md",
+      "cluster": "Integration",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-handbook",
+      "chapter": "ch22-5-2-product-integration.md",
+      "cluster": "Integration",
+      "is_support": false
+    },
+    {
+      "pack": "dod-vva-rpg",
+      "chapter": "ch05-vv-agent-role-new-simulations.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "dote-te-guidebook",
+      "chapter": "ch02-developmental-te.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "faa-ams-vv",
+      "chapter": "ch01-faa-ams-vv-introduction-and-vv-philosophy.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "faa-ams-vv",
+      "chapter": "ch02-faa-ams-vv-implementation-guidance.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "faa-ams-vv",
+      "chapter": "ch03-faa-ams-vv-approach-and-early-lifecycle.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "faa-ams-vv",
+      "chapter": "ch05-faa-ams-vv-solution-implementation.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "faa-ams-vv",
+      "chapter": "ch07-faa-ams-vv-acronyms-checklists-definitions.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "faa-ams-vv",
+      "chapter": "cheatsheet.md",
+      "cluster": "Verification",
+      "is_support": true
+    },
+    {
+      "pack": "faa-ams-vv",
+      "chapter": "glossary.md",
+      "cluster": "Verification",
+      "is_support": true
+    },
+    {
+      "pack": "faa-ams-vv",
+      "chapter": "patterns.md",
+      "cluster": "Verification",
+      "is_support": true
+    },
+    {
+      "pack": "nasa-se-handbook",
+      "chapter": "ch23-5-3-product-verification.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "dod-vva-rpg",
+      "chapter": "ch08-validation-fundamentals.md",
+      "cluster": "Validation",
+      "is_support": false
+    },
+    {
+      "pack": "dod-vva-rpg",
+      "chapter": "ch12-developing-the-referent.md",
+      "cluster": "Validation",
+      "is_support": false
+    },
+    {
+      "pack": "dod-vva-rpg",
+      "chapter": "ch13-conceptual-model-development-and-validation.md",
+      "cluster": "Validation",
+      "is_support": false
+    },
+    {
+      "pack": "dote-te-guidebook",
+      "chapter": "ch03-operational-te.md",
+      "cluster": "Validation",
+      "is_support": false
+    },
+    {
+      "pack": "faa-ams-vv",
+      "chapter": "ch04-faa-ams-vv-investment-analysis.md",
+      "cluster": "Validation",
+      "is_support": false
+    },
+    {
+      "pack": "faa-ams-vv",
+      "chapter": "ch06-faa-ams-vv-in-service-management.md",
+      "cluster": "Validation",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-handbook",
+      "chapter": "ch24-5-4-product-validation.md",
+      "cluster": "Validation",
+      "is_support": false
+    },
+    {
+      "pack": "dafman-63-119",
+      "chapter": "ch01-motrc-framework-and-applicability.md",
+      "cluster": "Test & Evaluation",
+      "is_support": false
+    },
+    {
+      "pack": "dafman-63-119",
+      "chapter": "ch05-dte-and-contractor-testing.md",
+      "cluster": "Test & Evaluation",
+      "is_support": false
+    },
+    {
+      "pack": "dod-te-guidebook",
+      "chapter": "ch01-dod-te-guidebook-te-fundamentals-types-events.md",
+      "cluster": "Test & Evaluation",
+      "is_support": false
+    },
+    {
+      "pack": "dod-te-guidebook",
+      "chapter": "ch02-dod-te-guidebook-te-strategy-documentation.md",
+      "cluster": "Test & Evaluation",
+      "is_support": false
+    },
+    {
+      "pack": "dod-te-guidebook",
+      "chapter": "ch03-dod-te-guidebook-te-organizations-roles.md",
+      "cluster": "Test & Evaluation",
+      "is_support": false
+    },
+    {
+      "pack": "dod-te-guidebook",
+      "chapter": "ch04-dod-te-guidebook-urgent-capability-acquisition.md",
+      "cluster": "Test & Evaluation",
+      "is_support": false
+    },
+    {
+      "pack": "dod-te-guidebook",
+      "chapter": "ch05-dod-te-guidebook-middle-tier-acquisition.md",
+      "cluster": "Test & Evaluation",
+      "is_support": false
+    },
+    {
+      "pack": "dod-te-guidebook",
+      "chapter": "ch06-dod-te-guidebook-major-capability-acquisition.md",
+      "cluster": "Test & Evaluation",
+      "is_support": false
+    },
+    {
+      "pack": "dod-te-guidebook",
+      "chapter": "ch07-dod-te-guidebook-software-acquisition.md",
+      "cluster": "Test & Evaluation",
+      "is_support": false
+    },
+    {
+      "pack": "dod-te-guidebook",
+      "chapter": "ch08-dod-te-guidebook-defense-business-systems.md",
+      "cluster": "Test & Evaluation",
+      "is_support": false
+    },
+    {
+      "pack": "dod-te-guidebook",
+      "chapter": "cheatsheet.md",
+      "cluster": "Test & Evaluation",
+      "is_support": true
+    },
+    {
+      "pack": "dod-te-guidebook",
+      "chapter": "glossary.md",
+      "cluster": "Test & Evaluation",
+      "is_support": true
+    },
+    {
+      "pack": "dod-te-guidebook",
+      "chapter": "patterns.md",
+      "cluster": "Test & Evaluation",
+      "is_support": true
+    },
+    {
+      "pack": "dod-vva-rpg",
+      "chapter": "ch11-te-vv-checklist.md",
+      "cluster": "Test & Evaluation",
+      "is_support": false
+    },
+    {
+      "pack": "dote-te-guidebook",
+      "chapter": "ch01-te-enterprise-overview-and-roles.md",
+      "cluster": "Test & Evaluation",
+      "is_support": false
+    },
+    {
+      "pack": "dote-te-guidebook",
+      "chapter": "ch04-live-fire-te.md",
+      "cluster": "Test & Evaluation",
+      "is_support": false
+    },
+    {
+      "pack": "dote-te-guidebook",
+      "chapter": "ch08-temp-strategy-and-ste-planning.md",
+      "cluster": "Test & Evaluation",
+      "is_support": false
+    },
+    {
+      "pack": "dod-vva-rpg",
+      "chapter": "ch01-key-concepts-and-vva-frame.md",
+      "cluster": "Modeling, MBSE & SysML",
+      "is_support": false
+    },
+    {
+      "pack": "dod-vva-rpg",
+      "chapter": "ch02-user-role-new-simulations.md",
+      "cluster": "Modeling, MBSE & SysML",
+      "is_support": false
+    },
+    {
+      "pack": "dod-vva-rpg",
+      "chapter": "ch03-developer-role-new-simulations.md",
+      "cluster": "Modeling, MBSE & SysML",
+      "is_support": false
+    },
+    {
+      "pack": "dod-vva-rpg",
+      "chapter": "ch07-fidelity.md",
+      "cluster": "Modeling, MBSE & SysML",
+      "is_support": false
+    },
+    {
+      "pack": "dodaf",
+      "chapter": "ch02-dm2-data-groups-overview.md",
+      "cluster": "Modeling, MBSE & SysML",
+      "is_support": false
+    },
+    {
+      "pack": "dodaf",
+      "chapter": "ch11-dm2-data-groups-detail.md",
+      "cluster": "Modeling, MBSE & SysML",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-ms-7009",
+      "chapter": "ch01-ms-scope-criticality-programmatics.md",
+      "cluster": "Modeling, MBSE & SysML",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-ms-7009",
+      "chapter": "ch03-ms-verification-validation.md",
+      "cluster": "Modeling, MBSE & SysML",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-systems-modeling",
+      "chapter": "ch01-nasa-systems-modeling-mbse-overview-se-engine.md",
+      "cluster": "Modeling, MBSE & SysML",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-systems-modeling",
+      "chapter": "ch02-nasa-systems-modeling-model-planning-and-setup.md",
+      "cluster": "Modeling, MBSE & SysML",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-systems-modeling",
+      "chapter": "ch03-nasa-systems-modeling-the-metamodel.md",
+      "cluster": "Modeling, MBSE & SysML",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-systems-modeling",
+      "chapter": "ch04-nasa-systems-modeling-building-stakeholders-requirements-structure.md",
+      "cluster": "Modeling, MBSE & SysML",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-systems-modeling",
+      "chapter": "ch05-nasa-systems-modeling-building-verification-validation.md",
+      "cluster": "Modeling, MBSE & SysML",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-systems-modeling",
+      "chapter": "ch06-nasa-systems-modeling-generating-se-work-products.md",
+      "cluster": "Modeling, MBSE & SysML",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-systems-modeling",
+      "chapter": "ch07-nasa-systems-modeling-methodology-framework-alternative-approaches.md",
+      "cluster": "Modeling, MBSE & SysML",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-systems-modeling",
+      "chapter": "ch08-nasa-systems-modeling-conops-template-with-model-content.md",
+      "cluster": "Modeling, MBSE & SysML",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-systems-modeling",
+      "chapter": "cheatsheet.md",
+      "cluster": "Modeling, MBSE & SysML",
+      "is_support": true
+    },
+    {
+      "pack": "nasa-systems-modeling",
+      "chapter": "glossary.md",
+      "cluster": "Modeling, MBSE & SysML",
+      "is_support": true
+    },
+    {
+      "pack": "nasa-systems-modeling",
+      "chapter": "patterns.md",
+      "cluster": "Modeling, MBSE & SysML",
+      "is_support": true
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch06-sebok-representing-systems-models.md",
+      "cluster": "Modeling, MBSE & SysML",
+      "is_support": false
+    },
+    {
+      "pack": "digital-systems-engineering",
+      "chapter": "ch01-digital-systems-engineering-introduction-and-landscape.md",
+      "cluster": "Digital Engineering & Digital Twins",
+      "is_support": false
+    },
+    {
+      "pack": "digital-systems-engineering",
+      "chapter": "ch02-digital-systems-engineering-goals-of-the-de-strategy.md",
+      "cluster": "Digital Engineering & Digital Twins",
+      "is_support": false
+    },
+    {
+      "pack": "digital-systems-engineering",
+      "chapter": "ch03-digital-systems-engineering-challenges.md",
+      "cluster": "Digital Engineering & Digital Twins",
+      "is_support": false
+    },
+    {
+      "pack": "digital-systems-engineering",
+      "chapter": "ch04-digital-systems-engineering-key-enabling-technologies.md",
+      "cluster": "Digital Engineering & Digital Twins",
+      "is_support": false
+    },
+    {
+      "pack": "digital-systems-engineering",
+      "chapter": "ch05-digital-systems-engineering-framework-and-core-concepts.md",
+      "cluster": "Digital Engineering & Digital Twins",
+      "is_support": false
+    },
+    {
+      "pack": "digital-systems-engineering",
+      "chapter": "ch06-digital-systems-engineering-four-level-framework.md",
+      "cluster": "Digital Engineering & Digital Twins",
+      "is_support": false
+    },
+    {
+      "pack": "digital-systems-engineering",
+      "chapter": "ch07-digital-systems-engineering-concluding-remarks-and-research-agenda.md",
+      "cluster": "Digital Engineering & Digital Twins",
+      "is_support": false
+    },
+    {
+      "pack": "digital-systems-engineering",
+      "chapter": "cheatsheet.md",
+      "cluster": "Digital Engineering & Digital Twins",
+      "is_support": true
+    },
+    {
+      "pack": "digital-systems-engineering",
+      "chapter": "glossary.md",
+      "cluster": "Digital Engineering & Digital Twins",
+      "is_support": true
+    },
+    {
+      "pack": "digital-systems-engineering",
+      "chapter": "patterns.md",
+      "cluster": "Digital Engineering & Digital Twins",
+      "is_support": true
+    },
+    {
+      "pack": "dod-digital-engineering",
+      "chapter": "ch01-dod-digital-engineering-introduction-purpose-vision.md",
+      "cluster": "Digital Engineering & Digital Twins",
+      "is_support": false
+    },
+    {
+      "pack": "dod-digital-engineering",
+      "chapter": "ch02-dod-digital-engineering-goal1-formalize-models.md",
+      "cluster": "Digital Engineering & Digital Twins",
+      "is_support": false
+    },
+    {
+      "pack": "dod-digital-engineering",
+      "chapter": "ch03-dod-digital-engineering-goal2-authoritative-source-of-truth.md",
+      "cluster": "Digital Engineering & Digital Twins",
+      "is_support": false
+    },
+    {
+      "pack": "dod-digital-engineering",
+      "chapter": "ch04-dod-digital-engineering-goal3-technological-innovation.md",
+      "cluster": "Digital Engineering & Digital Twins",
+      "is_support": false
+    },
+    {
+      "pack": "dod-digital-engineering",
+      "chapter": "ch05-dod-digital-engineering-goal4-infrastructure-environments.md",
+      "cluster": "Digital Engineering & Digital Twins",
+      "is_support": false
+    },
+    {
+      "pack": "dod-digital-engineering",
+      "chapter": "ch06-dod-digital-engineering-goal5-culture-workforce.md",
+      "cluster": "Digital Engineering & Digital Twins",
+      "is_support": false
+    },
+    {
+      "pack": "dod-digital-engineering",
+      "chapter": "ch07-dod-digital-engineering-next-steps-conclusion-summary.md",
+      "cluster": "Digital Engineering & Digital Twins",
+      "is_support": false
+    },
+    {
+      "pack": "dod-digital-engineering",
+      "chapter": "cheatsheet.md",
+      "cluster": "Digital Engineering & Digital Twins",
+      "is_support": true
+    },
+    {
+      "pack": "dod-digital-engineering",
+      "chapter": "glossary.md",
+      "cluster": "Digital Engineering & Digital Twins",
+      "is_support": true
+    },
+    {
+      "pack": "dod-digital-engineering",
+      "chapter": "patterns.md",
+      "cluster": "Digital Engineering & Digital Twins",
+      "is_support": true
+    },
+    {
+      "pack": "dote-te-guidebook",
+      "chapter": "ch06-mosa-automation-digital-te.md",
+      "cluster": "Digital Engineering & Digital Twins",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-de-acquisition",
+      "chapter": "ch01-nasa-de-acquisition-framework-rationale-and-dee.md",
+      "cluster": "Digital Engineering & Digital Twins",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-de-acquisition",
+      "chapter": "ch06-nasa-de-acquisition-collaboration-architecture-interoperability.md",
+      "cluster": "Digital Engineering & Digital Twins",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-de-acquisition",
+      "chapter": "ch07-nasa-de-acquisition-mbe-use-cases.md",
+      "cluster": "Digital Engineering & Digital Twins",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-de-acquisition",
+      "chapter": "ch08-nasa-de-acquisition-mbe-plan-development.md",
+      "cluster": "Digital Engineering & Digital Twins",
+      "is_support": false
+    },
+    {
+      "pack": "faa-sem",
+      "chapter": "ch05-faa-sem-configuration-decision-vv.md",
+      "cluster": "Configuration Management & Baselines",
+      "is_support": false
+    },
+    {
+      "pack": "faa-std-025",
+      "chapter": "ch06-revisions-cm-and-approval.md",
+      "cluster": "Configuration Management & Baselines",
+      "is_support": false
+    },
+    {
+      "pack": "is-gps-200n",
+      "chapter": "ch01-is-scope-and-change-control.md",
+      "cluster": "Configuration Management & Baselines",
+      "is_support": false
+    },
+    {
+      "pack": "mil-hdbk-61",
+      "chapter": "ch01-mil-hdbk-61-scope-fundamentals-definitions.md",
+      "cluster": "Configuration Management & Baselines",
+      "is_support": false
+    },
+    {
+      "pack": "mil-hdbk-61",
+      "chapter": "ch02-mil-hdbk-61-lifecycle-management-planning.md",
+      "cluster": "Configuration Management & Baselines",
+      "is_support": false
+    },
+    {
+      "pack": "mil-hdbk-61",
+      "chapter": "ch03-mil-hdbk-61-configuration-identification.md",
+      "cluster": "Configuration Management & Baselines",
+      "is_support": false
+    },
+    {
+      "pack": "mil-hdbk-61",
+      "chapter": "ch04-mil-hdbk-61-configuration-control-change-management.md",
+      "cluster": "Configuration Management & Baselines",
+      "is_support": false
+    },
+    {
+      "pack": "mil-hdbk-61",
+      "chapter": "ch05-mil-hdbk-61-configuration-status-accounting.md",
+      "cluster": "Configuration Management & Baselines",
+      "is_support": false
+    },
+    {
+      "pack": "mil-hdbk-61",
+      "chapter": "ch06-mil-hdbk-61-configuration-verification-audit.md",
+      "cluster": "Configuration Management & Baselines",
+      "is_support": false
+    },
+    {
+      "pack": "mil-hdbk-61",
+      "chapter": "ch08-mil-hdbk-61-tailoring-cm-templates-by-phase.md",
+      "cluster": "Configuration Management & Baselines",
+      "is_support": false
+    },
+    {
+      "pack": "mil-hdbk-61",
+      "chapter": "cheatsheet.md",
+      "cluster": "Configuration Management & Baselines",
+      "is_support": true
+    },
+    {
+      "pack": "mil-hdbk-61",
+      "chapter": "glossary.md",
+      "cluster": "Configuration Management & Baselines",
+      "is_support": true
+    },
+    {
+      "pack": "mil-hdbk-61",
+      "chapter": "patterns.md",
+      "cluster": "Configuration Management & Baselines",
+      "is_support": true
+    },
+    {
+      "pack": "nasa-de-acquisition",
+      "chapter": "ch02-nasa-de-acquisition-drds-and-configuration-data-management.md",
+      "cluster": "Configuration Management & Baselines",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-expanded",
+      "chapter": "ch06-nasa-se-expanded-crosscutting-cm-data-assessment-decision.md",
+      "cluster": "Configuration Management & Baselines",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-handbook",
+      "chapter": "ch31-6-5-configuration-management.md",
+      "cluster": "Configuration Management & Baselines",
+      "is_support": false
+    },
+    {
+      "pack": "dod-vva-rpg",
+      "chapter": "ch09-data-vv-new-simulations.md",
+      "cluster": "Data & Information Management",
+      "is_support": false
+    },
+    {
+      "pack": "dodaf",
+      "chapter": "ch05-data-information-viewpoint-div.md",
+      "cluster": "Data & Information Management",
+      "is_support": false
+    },
+    {
+      "pack": "mil-hdbk-61",
+      "chapter": "ch07-mil-hdbk-61-data-management-emerging-technologies.md",
+      "cluster": "Data & Information Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-de-acquisition",
+      "chapter": "ch05-nasa-de-acquisition-model-based-data-definition.md",
+      "cluster": "Data & Information Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-npr-7150",
+      "chapter": "ch06-nasa-npr-7150-recommended-software-records.md",
+      "cluster": "Data & Information Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-handbook",
+      "chapter": "ch32-6-6-technical-data-management.md",
+      "cluster": "Data & Information Management",
+      "is_support": false
+    },
+    {
+      "pack": "nist-cps",
+      "chapter": "ch05-nist-cps-data-interoperability.md",
+      "cluster": "Data & Information Management",
+      "is_support": false
+    },
+    {
+      "pack": "dod-rio",
+      "chapter": "ch01-dod-rio-foundations.md",
+      "cluster": "Risk Management",
+      "is_support": false
+    },
+    {
+      "pack": "dod-rio",
+      "chapter": "ch02-dod-rio-risk-identification-analysis.md",
+      "cluster": "Risk Management",
+      "is_support": false
+    },
+    {
+      "pack": "dod-rio",
+      "chapter": "ch03-dod-rio-mitigation-monitoring-issues.md",
+      "cluster": "Risk Management",
+      "is_support": false
+    },
+    {
+      "pack": "dod-rio",
+      "chapter": "ch05-dod-rio-aaf-pathways-hardware.md",
+      "cluster": "Risk Management",
+      "is_support": false
+    },
+    {
+      "pack": "dod-rio",
+      "chapter": "ch06-dod-rio-aaf-pathways-software-services.md",
+      "cluster": "Risk Management",
+      "is_support": false
+    },
+    {
+      "pack": "dod-rio",
+      "chapter": "ch07-dod-rio-additional-methods.md",
+      "cluster": "Risk Management",
+      "is_support": false
+    },
+    {
+      "pack": "dod-rio",
+      "chapter": "ch08-dod-rio-process-roles-se-tools.md",
+      "cluster": "Risk Management",
+      "is_support": false
+    },
+    {
+      "pack": "dod-vva-rpg",
+      "chapter": "ch10-risk-and-vva.md",
+      "cluster": "Risk Management",
+      "is_support": false
+    },
+    {
+      "pack": "doe-o-413-3",
+      "chapter": "ch05-risk-safety-and-exceptions.md",
+      "cluster": "Risk Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-ms-7009",
+      "chapter": "ch06-ms-risk-and-decision-reporting.md",
+      "cluster": "Risk Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-risk",
+      "chapter": "ch01-introduction-and-rm-overview.md",
+      "cluster": "Risk Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-risk",
+      "chapter": "ch02-ridm-crm-integration.md",
+      "cluster": "Risk Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-risk",
+      "chapter": "ch03-ridm-part1-identification-of-alternatives.md",
+      "cluster": "Risk Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-risk",
+      "chapter": "ch04-ridm-part2-risk-analysis-of-alternatives.md",
+      "cluster": "Risk Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-risk",
+      "chapter": "ch05-ridm-part3-risk-informed-selection.md",
+      "cluster": "Risk Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-risk",
+      "chapter": "ch06-crm-initialisation-and-planning.md",
+      "cluster": "Risk Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-risk",
+      "chapter": "ch07-crm-identify-and-analyze.md",
+      "cluster": "Risk Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-risk",
+      "chapter": "ch08-crm-plan-step.md",
+      "cluster": "Risk Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-risk",
+      "chapter": "ch09-crm-track-control-communicate.md",
+      "cluster": "Risk Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-risk",
+      "chapter": "ch10-enterprise-risks-and-appendices.md",
+      "cluster": "Risk Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-risk",
+      "chapter": "cheatsheet.md",
+      "cluster": "Risk Management",
+      "is_support": true
+    },
+    {
+      "pack": "nasa-risk",
+      "chapter": "glossary.md",
+      "cluster": "Risk Management",
+      "is_support": true
+    },
+    {
+      "pack": "nasa-risk",
+      "chapter": "patterns.md",
+      "cluster": "Risk Management",
+      "is_support": true
+    },
+    {
+      "pack": "nasa-se-handbook",
+      "chapter": "ch30-6-4-technical-risk-management.md",
+      "cluster": "Risk Management",
+      "is_support": false
+    },
+    {
+      "pack": "nist-ai-rmf",
+      "chapter": "ch01-framing-ai-risk.md",
+      "cluster": "Risk Management",
+      "is_support": false
+    },
+    {
+      "pack": "nist-ai-rmf",
+      "chapter": "ch05-map-function.md",
+      "cluster": "Risk Management",
+      "is_support": false
+    },
+    {
+      "pack": "nist-ai-rmf",
+      "chapter": "ch07-manage-function.md",
+      "cluster": "Risk Management",
+      "is_support": false
+    },
+    {
+      "pack": "dod-rio",
+      "chapter": "ch04-dod-rio-opportunity-cross-program.md",
+      "cluster": "Opportunity/Benefit Management",
+      "is_support": false
+    },
+    {
+      "pack": "federal-bca",
+      "chapter": "ch01-purpose-scope-and-principles.md",
+      "cluster": "Opportunity/Benefit Management",
+      "is_support": false
+    },
+    {
+      "pack": "federal-bca",
+      "chapter": "ch02-identifying-measuring-benefits-costs.md",
+      "cluster": "Opportunity/Benefit Management",
+      "is_support": false
+    },
+    {
+      "pack": "federal-bca",
+      "chapter": "ch03-discounting-and-time.md",
+      "cluster": "Opportunity/Benefit Management",
+      "is_support": false
+    },
+    {
+      "pack": "federal-bca",
+      "chapter": "ch05-distributional-effects-and-incidence.md",
+      "cluster": "Opportunity/Benefit Management",
+      "is_support": false
+    },
+    {
+      "pack": "federal-bca",
+      "chapter": "cheatsheet.md",
+      "cluster": "Opportunity/Benefit Management",
+      "is_support": true
+    },
+    {
+      "pack": "federal-bca",
+      "chapter": "glossary.md",
+      "cluster": "Opportunity/Benefit Management",
+      "is_support": true
+    },
+    {
+      "pack": "federal-bca",
+      "chapter": "patterns.md",
+      "cluster": "Opportunity/Benefit Management",
+      "is_support": true
+    },
+    {
+      "pack": "dod-vva-rpg",
+      "chapter": "ch06-accreditation-agent-role.md",
+      "cluster": "Decision Analysis & Trade Studies",
+      "is_support": false
+    },
+    {
+      "pack": "federal-bca",
+      "chapter": "ch04-uncertainty-and-sensitivity.md",
+      "cluster": "Decision Analysis & Trade Studies",
+      "is_support": false
+    },
+    {
+      "pack": "federal-bca",
+      "chapter": "ch06-reporting-and-decision-use.md",
+      "cluster": "Decision Analysis & Trade Studies",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-ceh",
+      "chapter": "ch06-nasa-ceh-decision-support-analyses.md",
+      "cluster": "Decision Analysis & Trade Studies",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-handbook",
+      "chapter": "ch34-6-8-decision-analysis.md",
+      "cluster": "Decision Analysis & Trade Studies",
+      "is_support": false
+    },
+    {
+      "pack": "doe-sem",
+      "chapter": "ch03-planning-stage.md",
+      "cluster": "Technical Planning & Work Breakdown",
+      "is_support": false
+    },
+    {
+      "pack": "mil-std-881f",
+      "chapter": "ch01-wbs-principles-and-definitions.md",
+      "cluster": "Technical Planning & Work Breakdown",
+      "is_support": false
+    },
+    {
+      "pack": "mil-std-881f",
+      "chapter": "ch02-program-wbs-roles-and-preaward.md",
+      "cluster": "Technical Planning & Work Breakdown",
+      "is_support": false
+    },
+    {
+      "pack": "mil-std-881f",
+      "chapter": "ch03-contract-wbs-and-programmatic-issues.md",
+      "cluster": "Technical Planning & Work Breakdown",
+      "is_support": false
+    },
+    {
+      "pack": "mil-std-881f",
+      "chapter": "ch04-commodity-wbs-air-missile-sea-space.md",
+      "cluster": "Technical Planning & Work Breakdown",
+      "is_support": false
+    },
+    {
+      "pack": "mil-std-881f",
+      "chapter": "ch05-commodity-wbs-ground-umms-launch-is.md",
+      "cluster": "Technical Planning & Work Breakdown",
+      "is_support": false
+    },
+    {
+      "pack": "mil-std-881f",
+      "chapter": "ch06-common-elements-appendix-k.md",
+      "cluster": "Technical Planning & Work Breakdown",
+      "is_support": false
+    },
+    {
+      "pack": "mil-std-881f",
+      "chapter": "ch07-numbering-reporting-sustainment.md",
+      "cluster": "Technical Planning & Work Breakdown",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-npr-7123",
+      "chapter": "ch06-systems-engineering-management-plan.md",
+      "cluster": "Technical Planning & Work Breakdown",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-expanded",
+      "chapter": "ch05-nasa-se-expanded-crosscutting-planning-requirements-interface-risk.md",
+      "cluster": "Technical Planning & Work Breakdown",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-handbook",
+      "chapter": "ch26-6-0-crosscutting-technical-management.md",
+      "cluster": "Technical Planning & Work Breakdown",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-handbook",
+      "chapter": "ch27-6-1-technical-planning.md",
+      "cluster": "Technical Planning & Work Breakdown",
+      "is_support": false
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch15-sebok-technical-management.md",
+      "cluster": "Technical Planning & Work Breakdown",
+      "is_support": false
+    },
+    {
+      "pack": "dod-mosa",
+      "chapter": "ch05-dod-mosa-assessment-tech-change-roadmaps.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": false
+    },
+    {
+      "pack": "gao-agile",
+      "chapter": "ch08-gao-agile-metrics.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": false
+    },
+    {
+      "pack": "gao-tra",
+      "chapter": "ch01-tra-fundamentals.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": false
+    },
+    {
+      "pack": "gao-tra",
+      "chapter": "ch02-technology-readiness-levels.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": false
+    },
+    {
+      "pack": "gao-tra",
+      "chapter": "ch03-critical-technology-elements.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": false
+    },
+    {
+      "pack": "gao-tra",
+      "chapter": "ch04-five-step-tra-process.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": false
+    },
+    {
+      "pack": "gao-tra",
+      "chapter": "ch05-four-characteristics.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": false
+    },
+    {
+      "pack": "gao-tra",
+      "chapter": "ch06-technology-maturation-plans.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": false
+    },
+    {
+      "pack": "gao-tra",
+      "chapter": "ch07-using-tras-in-decisions.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": false
+    },
+    {
+      "pack": "gao-tra",
+      "chapter": "cheatsheet.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": true
+    },
+    {
+      "pack": "gao-tra",
+      "chapter": "glossary.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": true
+    },
+    {
+      "pack": "gao-tra",
+      "chapter": "patterns.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": true
+    },
+    {
+      "pack": "mrl-deskbook",
+      "chapter": "ch01-mrl-deskbook-foundations-and-dod-policy.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": false
+    },
+    {
+      "pack": "mrl-deskbook",
+      "chapter": "ch02-mrl-deskbook-scale-threads-and-trl-relationship.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": false
+    },
+    {
+      "pack": "mrl-deskbook",
+      "chapter": "ch03-mrl-deskbook-adaptive-acquisition-framework.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": false
+    },
+    {
+      "pack": "mrl-deskbook",
+      "chapter": "ch04-mrl-deskbook-conducting-assessments.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": false
+    },
+    {
+      "pack": "mrl-deskbook",
+      "chapter": "ch05-mrl-deskbook-maturation-plans-and-risk.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": false
+    },
+    {
+      "pack": "mrl-deskbook",
+      "chapter": "ch07-mrl-deskbook-tailoring-and-users-guide.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": false
+    },
+    {
+      "pack": "mrl-deskbook",
+      "chapter": "cheatsheet.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": true
+    },
+    {
+      "pack": "mrl-deskbook",
+      "chapter": "glossary.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": true
+    },
+    {
+      "pack": "mrl-deskbook",
+      "chapter": "patterns.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": true
+    },
+    {
+      "pack": "nasa-ms-7009",
+      "chapter": "ch02-ms-development-evidence-capability.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-ms-7009",
+      "chapter": "ch04-ms-uncertainty-sensitivity.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-ms-7009",
+      "chapter": "ch05-ms-use-results-assessment.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-npr-7123",
+      "chapter": "ch08-technology-readiness-levels.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-handbook",
+      "chapter": "ch33-6-7-technical-assessment.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": false
+    },
+    {
+      "pack": "nist-ai-rmf",
+      "chapter": "ch06-measure-function.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": false
+    },
+    {
+      "pack": "nist-stat-handbook",
+      "chapter": "ch01-nist-stat-handbook-exploratory-data-analysis.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": false
+    },
+    {
+      "pack": "nist-stat-handbook",
+      "chapter": "ch02-nist-stat-handbook-measurement-process-characterization.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": false
+    },
+    {
+      "pack": "nist-stat-handbook",
+      "chapter": "ch03-nist-stat-handbook-production-process-characterization.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": false
+    },
+    {
+      "pack": "nist-stat-handbook",
+      "chapter": "ch04-nist-stat-handbook-process-modeling.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": false
+    },
+    {
+      "pack": "nist-stat-handbook",
+      "chapter": "ch05-nist-stat-handbook-process-improvement-doe.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": false
+    },
+    {
+      "pack": "nist-stat-handbook",
+      "chapter": "ch07-nist-stat-handbook-product-and-process-comparisons.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": false
+    },
+    {
+      "pack": "nist-stat-handbook",
+      "chapter": "cheatsheet.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": true
+    },
+    {
+      "pack": "nist-stat-handbook",
+      "chapter": "glossary.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": true
+    },
+    {
+      "pack": "nist-stat-handbook",
+      "chapter": "patterns.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": true
+    },
+    {
+      "pack": "gao-agile",
+      "chapter": "ch09-gao-agile-assessment-reference-auditor-questions-frameworks.md",
+      "cluster": "Quality Assurance & Process Compliance",
+      "is_support": false
+    },
+    {
+      "pack": "mil-hdbk-516",
+      "chapter": "ch02-systems-engineering-criteria.md",
+      "cluster": "Quality Assurance & Process Compliance",
+      "is_support": false
+    },
+    {
+      "pack": "nist-stat-handbook",
+      "chapter": "ch06-nist-stat-handbook-process-monitoring-and-control.md",
+      "cluster": "Quality Assurance & Process Compliance",
+      "is_support": false
+    },
+    {
+      "pack": "faa-rma",
+      "chapter": "ch01-faa-rma-introduction-and-key-documents.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "faa-rma",
+      "chapter": "ch02-faa-rma-fundamentals.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "faa-rma",
+      "chapter": "ch03-faa-rma-lifecycle-stages.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "faa-rma",
+      "chapter": "ch04-faa-rma-technical-management-process.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "faa-rma",
+      "chapter": "ch05-faa-rma-methods-and-tools.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "faa-rma",
+      "chapter": "ch06-faa-rma-glossary-and-definitions.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "faa-rma",
+      "chapter": "ch07-faa-rma-software-reliability.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "faa-rma",
+      "chapter": "ch08-faa-rma-requirements-guidelines.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "faa-rma",
+      "chapter": "cheatsheet.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": true
+    },
+    {
+      "pack": "faa-rma",
+      "chapter": "glossary.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": true
+    },
+    {
+      "pack": "faa-rma",
+      "chapter": "patterns.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": true
+    },
+    {
+      "pack": "faa-system-safety",
+      "chapter": "ch01-faa-system-safety-foundations-policy-process-principles.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "faa-system-safety",
+      "chapter": "ch02-faa-system-safety-acquisition-lifecycle-assessments-contracting.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "faa-system-safety",
+      "chapter": "ch03-faa-system-safety-integrated-hazard-analysis-tasks.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "faa-system-safety",
+      "chapter": "ch04-faa-system-safety-analysis-techniques.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "faa-system-safety",
+      "chapter": "ch05-faa-system-safety-software-test-facilities-safety.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "faa-system-safety",
+      "chapter": "ch06-faa-system-safety-launch-safety-and-training.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "faa-system-safety",
+      "chapter": "ch07-faa-system-safety-orm-human-organizational-factors.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "faa-system-safety",
+      "chapter": "cheatsheet.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": true
+    },
+    {
+      "pack": "faa-system-safety",
+      "chapter": "glossary.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": true
+    },
+    {
+      "pack": "faa-system-safety",
+      "chapter": "patterns.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": true
+    },
+    {
+      "pack": "mil-hdbk-338",
+      "chapter": "ch01-rma-theory-foundations.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "mil-hdbk-338",
+      "chapter": "ch02-specification-allocation-prediction.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "mil-hdbk-338",
+      "chapter": "ch03-parts-management-and-derating.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "mil-hdbk-338",
+      "chapter": "ch04-circuit-design-and-fault-tolerance.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "mil-hdbk-338",
+      "chapter": "ch05-environmental-and-human-reliability.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "mil-hdbk-338",
+      "chapter": "ch06-fmea-fta-and-sneak-circuits.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "mil-hdbk-338",
+      "chapter": "ch07-design-reviews-testability-safety.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "mil-hdbk-338",
+      "chapter": "ch08-data-fracas-demonstration-growth.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "mil-hdbk-338",
+      "chapter": "ch09-systems-reliability-engineering.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "mil-hdbk-338",
+      "chapter": "cheatsheet.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": true
+    },
+    {
+      "pack": "mil-hdbk-338",
+      "chapter": "glossary.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": true
+    },
+    {
+      "pack": "mil-hdbk-338",
+      "chapter": "patterns.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": true
+    },
+    {
+      "pack": "mil-hdbk-516",
+      "chapter": "ch03-structures-criteria.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "mil-hdbk-516",
+      "chapter": "ch04-flight-technology-criteria.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "mil-hdbk-516",
+      "chapter": "ch05-propulsion-criteria.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "mil-hdbk-516",
+      "chapter": "ch06-avionics-e3-and-diagnostics.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "mil-hdbk-516",
+      "chapter": "ch07-computer-systems-and-software.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "mil-std-882",
+      "chapter": "ch01-scope-purpose-definitions.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "mil-std-882",
+      "chapter": "ch02-system-safety-process.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "mil-std-882",
+      "chapter": "ch03-risk-assessment.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "mil-std-882",
+      "chapter": "ch04-software-system-safety.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "mil-std-882",
+      "chapter": "ch05-task-100-management.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "mil-std-882",
+      "chapter": "ch06-task-200-analysis.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "mil-std-882",
+      "chapter": "ch07-task-300-evaluation.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "mil-std-882",
+      "chapter": "ch08-task-400-verification.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "mil-std-882",
+      "chapter": "cheatsheet.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": true
+    },
+    {
+      "pack": "mil-std-882",
+      "chapter": "glossary.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": true
+    },
+    {
+      "pack": "mil-std-882",
+      "chapter": "patterns.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": true
+    },
+    {
+      "pack": "nasa-fault-management",
+      "chapter": "ch01-nasa-fault-management-introduction-and-fm-definitions.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-fault-management",
+      "chapter": "ch02-nasa-fault-management-process.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-fault-management",
+      "chapter": "ch03-nasa-fault-management-requirements-development.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-fault-management",
+      "chapter": "ch04-nasa-fault-management-design-and-architecture.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-fault-management",
+      "chapter": "ch05-nasa-fault-management-analysis-verification-validation.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-fault-management",
+      "chapter": "ch06-nasa-fault-management-operations-and-lifecycle-reviews.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-fault-management",
+      "chapter": "ch07-nasa-fault-management-fundamental-concepts-and-principles.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-fault-management",
+      "chapter": "ch08-nasa-fault-management-organization-and-lessons-learned.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-fault-management",
+      "chapter": "cheatsheet.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": true
+    },
+    {
+      "pack": "nasa-fault-management",
+      "chapter": "glossary.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": true
+    },
+    {
+      "pack": "nasa-fault-management",
+      "chapter": "patterns.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": true
+    },
+    {
+      "pack": "nasa-pra",
+      "chapter": "ch01-nasa-pra-foundations-risk-management-and-pra-framework.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-pra",
+      "chapter": "ch02-nasa-pra-scenario-development-and-logic-modeling.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-pra",
+      "chapter": "ch03-nasa-pra-data-collection-and-bayesian-parameter-estimation.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-pra",
+      "chapter": "ch04-nasa-pra-uncertainty-modeling-and-common-cause-failures.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-pra",
+      "chapter": "ch05-nasa-pra-human-reliability-and-software-risk-assessment.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-pra",
+      "chapter": "ch06-nasa-pra-physical-structural-and-phenomenological-models.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-pra",
+      "chapter": "ch07-nasa-pra-uncertainty-propagation-and-results-presentation.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-pra",
+      "chapter": "ch08-nasa-pra-launch-abort-modeling-and-worked-pra-examples.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-pra",
+      "chapter": "cheatsheet.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": true
+    },
+    {
+      "pack": "nasa-pra",
+      "chapter": "glossary.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": true
+    },
+    {
+      "pack": "nasa-pra",
+      "chapter": "patterns.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": true
+    },
+    {
+      "pack": "nasa-rm-standard",
+      "chapter": "ch01-nasa-rm-standard-scope-and-applicability.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-rm-standard",
+      "chapter": "ch02-nasa-rm-standard-terminology-and-definitions.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-rm-standard",
+      "chapter": "ch03-nasa-rm-standard-objectives-and-strategies.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-rm-standard",
+      "chapter": "ch04-nasa-rm-standard-implementation-requirements.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-rm-standard",
+      "chapter": "ch05-nasa-rm-standard-objectives-hierarchy-and-scope.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-rm-standard",
+      "chapter": "ch06-nasa-rm-standard-evidentiary-analysis-methods.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-rm-standard",
+      "chapter": "cheatsheet.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": true
+    },
+    {
+      "pack": "nasa-rm-standard",
+      "chapter": "glossary.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": true
+    },
+    {
+      "pack": "nasa-rm-standard",
+      "chapter": "patterns.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": true
+    },
+    {
+      "pack": "nasa-system-safety",
+      "chapter": "ch01-introduction.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-system-safety",
+      "chapter": "ch02-key-concepts.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-system-safety",
+      "chapter": "ch03-system-safety-framework-overview.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-system-safety",
+      "chapter": "ch04-safety-objectives-requirements.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-system-safety",
+      "chapter": "cheatsheet.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": true
+    },
+    {
+      "pack": "nasa-system-safety",
+      "chapter": "glossary.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": true
+    },
+    {
+      "pack": "nasa-system-safety",
+      "chapter": "patterns.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": true
+    },
+    {
+      "pack": "nist-stat-handbook",
+      "chapter": "ch08-nist-stat-handbook-assessing-product-reliability.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "cisa-cpg",
+      "chapter": "ch01-cpg-purpose-and-2-0-changes.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "cisa-cpg",
+      "chapter": "ch02-govern-and-identify-goals.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "cisa-cpg",
+      "chapter": "ch03-protect-goals.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "cisa-cpg",
+      "chapter": "ch04-detect-respond-recover-goals.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "cisa-cpg",
+      "chapter": "ch05-it-ot-implementation-and-prioritization.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "cisa-cpg",
+      "chapter": "cheatsheet.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": true
+    },
+    {
+      "pack": "cisa-cpg",
+      "chapter": "glossary.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": true
+    },
+    {
+      "pack": "cisa-cpg",
+      "chapter": "patterns.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": true
+    },
+    {
+      "pack": "dote-te-guidebook",
+      "chapter": "ch05-cybersecurity-te.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "mrl-deskbook",
+      "chapter": "ch08-mrl-deskbook-ot-cybersecurity.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-800-171",
+      "chapter": "ch01-cui-scope-fundamentals-and-structure.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-800-171",
+      "chapter": "ch02-access-control-and-identification.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-800-171",
+      "chapter": "ch03-awareness-personnel-physical.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-800-171",
+      "chapter": "ch04-audit-and-configuration.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-800-171",
+      "chapter": "ch05-incident-maintenance-media.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-800-171",
+      "chapter": "ch06-risk-assessment-monitoring-planning.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-800-171",
+      "chapter": "ch07-communications-and-integrity.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-800-171",
+      "chapter": "ch08-acquisition-and-supply-chain.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-800-171",
+      "chapter": "cheatsheet.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": true
+    },
+    {
+      "pack": "nist-800-171",
+      "chapter": "glossary.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": true
+    },
+    {
+      "pack": "nist-800-171",
+      "chapter": "patterns.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": true
+    },
+    {
+      "pack": "nist-800-37",
+      "chapter": "ch01-nist-800-37-introduction.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-800-37",
+      "chapter": "ch02-nist-800-37-fundamentals.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-800-37",
+      "chapter": "ch03-nist-800-37-process-and-prepare.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-800-37",
+      "chapter": "ch04-nist-800-37-categorize-and-select.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-800-37",
+      "chapter": "ch05-nist-800-37-implement-and-assess.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-800-37",
+      "chapter": "ch06-nist-800-37-authorize.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-800-37",
+      "chapter": "ch07-nist-800-37-monitor.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-800-37",
+      "chapter": "cheatsheet.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": true
+    },
+    {
+      "pack": "nist-800-37",
+      "chapter": "glossary.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": true
+    },
+    {
+      "pack": "nist-800-37",
+      "chapter": "patterns.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": true
+    },
+    {
+      "pack": "nist-800-61",
+      "chapter": "ch01-scope-shift-and-csf-integration.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-800-61",
+      "chapter": "ch02-ir-lifecycle-model.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-800-61",
+      "chapter": "ch03-roles-policies-and-playbooks.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-800-61",
+      "chapter": "ch04-preparation-and-lessons-learned-profile.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-800-61",
+      "chapter": "ch05-detect-respond-recover-profile.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-800-61",
+      "chapter": "ch06-coordination-training-and-improvement.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-800-61",
+      "chapter": "cheatsheet.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": true
+    },
+    {
+      "pack": "nist-800-61",
+      "chapter": "glossary.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": true
+    },
+    {
+      "pack": "nist-800-61",
+      "chapter": "patterns.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": true
+    },
+    {
+      "pack": "nist-cps",
+      "chapter": "ch04-nist-cps-cybersecurity-and-privacy-risk.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-csf",
+      "chapter": "ch01-csf-overview-and-components.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-csf",
+      "chapter": "ch03-identify-id.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-csf",
+      "chapter": "ch04-protect-pr.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-csf",
+      "chapter": "ch05-detect-de.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-csf",
+      "chapter": "ch06-respond-rs.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-csf",
+      "chapter": "ch07-recover-rc.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-csf",
+      "chapter": "cheatsheet.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": true
+    },
+    {
+      "pack": "nist-csf",
+      "chapter": "glossary.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": true
+    },
+    {
+      "pack": "nist-csf",
+      "chapter": "patterns.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": true
+    },
+    {
+      "pack": "nist-ssdf",
+      "chapter": "ch01-introduction-and-how-to-use.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-ssdf",
+      "chapter": "ch02-prepare-the-organization.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-ssdf",
+      "chapter": "ch03-protect-the-software.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-ssdf",
+      "chapter": "ch04-produce-well-secured-software.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-ssdf",
+      "chapter": "ch05-respond-to-vulnerabilities.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-ssdf",
+      "chapter": "cheatsheet.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": true
+    },
+    {
+      "pack": "nist-ssdf",
+      "chapter": "glossary.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": true
+    },
+    {
+      "pack": "nist-ssdf",
+      "chapter": "patterns.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": true
+    },
+    {
+      "pack": "nist-sse",
+      "chapter": "ch01-sse-foundations.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-sse",
+      "chapter": "ch02-sse-framework.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-sse",
+      "chapter": "ch03-design-principles.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-sse",
+      "chapter": "ch04-trustworthiness-and-lifecycle.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-sse",
+      "chapter": "ch05-cyber-resiliency-framework.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-sse",
+      "chapter": "ch06-cyber-resiliency-techniques.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-sse",
+      "chapter": "ch07-cyber-resiliency-design-principles.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-sse",
+      "chapter": "ch08-applying-and-risk.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-sse",
+      "chapter": "cheatsheet.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": true
+    },
+    {
+      "pack": "nist-sse",
+      "chapter": "glossary.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": true
+    },
+    {
+      "pack": "nist-sse",
+      "chapter": "patterns.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": true
+    },
+    {
+      "pack": "faa-hf-std",
+      "chapter": "ch01-faa-hf-std-foundations-and-general-design.md",
+      "cluster": "Human Systems Integration / Human Factors",
+      "is_support": false
+    },
+    {
+      "pack": "faa-hf-std",
+      "chapter": "ch02-faa-hf-std-automation.md",
+      "cluster": "Human Systems Integration / Human Factors",
+      "is_support": false
+    },
+    {
+      "pack": "faa-hf-std",
+      "chapter": "ch03-faa-hf-std-designing-equipment-for-maintenance.md",
+      "cluster": "Human Systems Integration / Human Factors",
+      "is_support": false
+    },
+    {
+      "pack": "faa-hf-std",
+      "chapter": "ch04-faa-hf-std-displays-controls-and-visual-indicators.md",
+      "cluster": "Human Systems Integration / Human Factors",
+      "is_support": false
+    },
+    {
+      "pack": "faa-hf-std",
+      "chapter": "ch05-faa-hf-std-alarms-audio-and-voice-communications.md",
+      "cluster": "Human Systems Integration / Human Factors",
+      "is_support": false
+    },
+    {
+      "pack": "faa-hf-std",
+      "chapter": "ch06-faa-hf-std-chi-information-presentation.md",
+      "cluster": "Human Systems Integration / Human Factors",
+      "is_support": false
+    },
+    {
+      "pack": "faa-hf-std",
+      "chapter": "ch07-faa-hf-std-chi-interaction-and-dialogue.md",
+      "cluster": "Human Systems Integration / Human Factors",
+      "is_support": false
+    },
+    {
+      "pack": "faa-hf-std",
+      "chapter": "ch08-faa-hf-std-input-devices-and-workplace-design.md",
+      "cluster": "Human Systems Integration / Human Factors",
+      "is_support": false
+    },
+    {
+      "pack": "faa-hf-std",
+      "chapter": "ch09-faa-hf-std-safety-environment-anthropometry-documentation.md",
+      "cluster": "Human Systems Integration / Human Factors",
+      "is_support": false
+    },
+    {
+      "pack": "faa-hf-std",
+      "chapter": "cheatsheet.md",
+      "cluster": "Human Systems Integration / Human Factors",
+      "is_support": true
+    },
+    {
+      "pack": "faa-hf-std",
+      "chapter": "glossary.md",
+      "cluster": "Human Systems Integration / Human Factors",
+      "is_support": true
+    },
+    {
+      "pack": "faa-hf-std",
+      "chapter": "patterns.md",
+      "cluster": "Human Systems Integration / Human Factors",
+      "is_support": true
+    },
+    {
+      "pack": "mil-hdbk-516",
+      "chapter": "ch08-crew-systems-criteria.md",
+      "cluster": "Human Systems Integration / Human Factors",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-hsi",
+      "chapter": "ch01-introduction-to-hsi.md",
+      "cluster": "Human Systems Integration / Human Factors",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-hsi",
+      "chapter": "ch02-implementing-hsi.md",
+      "cluster": "Human Systems Integration / Human Factors",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-hsi",
+      "chapter": "ch03-hsi-in-the-see-engine.md",
+      "cluster": "Human Systems Integration / Human Factors",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-hsi",
+      "chapter": "ch04-pre-phase-a-and-phase-a.md",
+      "cluster": "Human Systems Integration / Human Factors",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-hsi",
+      "chapter": "ch05-phases-b-and-c.md",
+      "cluster": "Human Systems Integration / Human Factors",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-hsi",
+      "chapter": "ch06-phases-d-e-f.md",
+      "cluster": "Human Systems Integration / Human Factors",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-hsi",
+      "chapter": "ch07-hsi-products-scaling-tailoring.md",
+      "cluster": "Human Systems Integration / Human Factors",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-hsi",
+      "chapter": "ch08-hsi-plan-writing-and-execution.md",
+      "cluster": "Human Systems Integration / Human Factors",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-hsi",
+      "chapter": "ch09-appendices-hsi-plan-checklist-cases.md",
+      "cluster": "Human Systems Integration / Human Factors",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-hsi",
+      "chapter": "cheatsheet.md",
+      "cluster": "Human Systems Integration / Human Factors",
+      "is_support": true
+    },
+    {
+      "pack": "nasa-hsi",
+      "chapter": "glossary.md",
+      "cluster": "Human Systems Integration / Human Factors",
+      "is_support": true
+    },
+    {
+      "pack": "nasa-hsi",
+      "chapter": "patterns.md",
+      "cluster": "Human Systems Integration / Human Factors",
+      "is_support": true
+    },
+    {
+      "pack": "nasa-se-handbook",
+      "chapter": "ch05-2-6-human-systems-integration-hsi-in-the-se-pr.md",
+      "cluster": "Human Systems Integration / Human Factors",
+      "is_support": false
+    },
+    {
+      "pack": "dote-te-guidebook",
+      "chapter": "ch07-suitability-reliability-growth.md",
+      "cluster": "Logistics, Supportability & Sustainment",
+      "is_support": false
+    },
+    {
+      "pack": "sd-22-dmsms",
+      "chapter": "ch01-sd-22-dmsms-introduction-fundamentals.md",
+      "cluster": "Logistics, Supportability & Sustainment",
+      "is_support": false
+    },
+    {
+      "pack": "sd-22-dmsms",
+      "chapter": "ch02-sd-22-dmsms-policy-lifecycle-guidance.md",
+      "cluster": "Logistics, Supportability & Sustainment",
+      "is_support": false
+    },
+    {
+      "pack": "sd-22-dmsms",
+      "chapter": "ch03-sd-22-dmsms-prepare-program-infrastructure.md",
+      "cluster": "Logistics, Supportability & Sustainment",
+      "is_support": false
+    },
+    {
+      "pack": "sd-22-dmsms",
+      "chapter": "ch04-sd-22-dmsms-identify-monitoring-surveillance.md",
+      "cluster": "Logistics, Supportability & Sustainment",
+      "is_support": false
+    },
+    {
+      "pack": "sd-22-dmsms",
+      "chapter": "ch05-sd-22-dmsms-assess-resolution-need-timing-level.md",
+      "cluster": "Logistics, Supportability & Sustainment",
+      "is_support": false
+    },
+    {
+      "pack": "sd-22-dmsms",
+      "chapter": "ch06-sd-22-dmsms-analyze-resolution-determination.md",
+      "cluster": "Logistics, Supportability & Sustainment",
+      "is_support": false
+    },
+    {
+      "pack": "sd-22-dmsms",
+      "chapter": "ch07-sd-22-dmsms-implement-resolutions.md",
+      "cluster": "Logistics, Supportability & Sustainment",
+      "is_support": false
+    },
+    {
+      "pack": "sd-22-dmsms",
+      "chapter": "ch08-sd-22-dmsms-obsolescence-relationship.md",
+      "cluster": "Logistics, Supportability & Sustainment",
+      "is_support": false
+    },
+    {
+      "pack": "sd-22-dmsms",
+      "chapter": "cheatsheet.md",
+      "cluster": "Logistics, Supportability & Sustainment",
+      "is_support": true
+    },
+    {
+      "pack": "sd-22-dmsms",
+      "chapter": "glossary.md",
+      "cluster": "Logistics, Supportability & Sustainment",
+      "is_support": true
+    },
+    {
+      "pack": "sd-22-dmsms",
+      "chapter": "patterns.md",
+      "cluster": "Logistics, Supportability & Sustainment",
+      "is_support": true
+    },
+    {
+      "pack": "doe-sem",
+      "chapter": "ch07-maintenance-stage.md",
+      "cluster": "Operations, Maintenance & Disposal",
+      "is_support": false
+    },
+    {
+      "pack": "eu-ai-act",
+      "chapter": "ch10-post-market-surveillance.md",
+      "cluster": "Operations, Maintenance & Disposal",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-handbook",
+      "chapter": "ch15-3-8-project-phase-e-operations-and-sustainment.md",
+      "cluster": "Operations, Maintenance & Disposal",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-handbook",
+      "chapter": "ch16-3-9-project-phase-f-closeout.md",
+      "cluster": "Operations, Maintenance & Disposal",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-handbook",
+      "chapter": "ch25-5-5-product-transition.md",
+      "cluster": "Operations, Maintenance & Disposal",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-std-8719-14",
+      "chapter": "ch01-scope-and-applicability.md",
+      "cluster": "Operations, Maintenance & Disposal",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-std-8719-14",
+      "chapter": "ch02-assessment-overview.md",
+      "cluster": "Operations, Maintenance & Disposal",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-std-8719-14",
+      "chapter": "ch03-debris-released-normal-operations.md",
+      "cluster": "Operations, Maintenance & Disposal",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-std-8719-14",
+      "chapter": "ch04-explosions-breakups-collisions.md",
+      "cluster": "Operations, Maintenance & Disposal",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-std-8719-14",
+      "chapter": "ch05-postmission-disposal.md",
+      "cluster": "Operations, Maintenance & Disposal",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-std-8719-14",
+      "chapter": "ch06-reentry-surviving-debris.md",
+      "cluster": "Operations, Maintenance & Disposal",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-std-8719-14",
+      "chapter": "ch07-special-classes-odar-eomp.md",
+      "cluster": "Operations, Maintenance & Disposal",
+      "is_support": false
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch18-sebok-system-maintenance.md",
+      "cluster": "Operations, Maintenance & Disposal",
+      "is_support": false
+    },
+    {
+      "pack": "faa-std-025",
+      "chapter": "ch02-general-format-and-common-content.md",
+      "cluster": "Training & Documentation Delivery",
+      "is_support": false
+    },
+    {
+      "pack": "mil-std-40051",
+      "chapter": "ch01-scope-tm-family-and-applicability.md",
+      "cluster": "Training & Documentation Delivery",
+      "is_support": false
+    },
+    {
+      "pack": "mil-std-40051",
+      "chapter": "ch02-tm-structure-and-work-packages.md",
+      "cluster": "Training & Documentation Delivery",
+      "is_support": false
+    },
+    {
+      "pack": "mil-std-40051",
+      "chapter": "ch03-front-matter-and-back-matter.md",
+      "cluster": "Training & Documentation Delivery",
+      "is_support": false
+    },
+    {
+      "pack": "mil-std-40051",
+      "chapter": "ch04-style-format-and-layout-rules.md",
+      "cluster": "Training & Documentation Delivery",
+      "is_support": false
+    },
+    {
+      "pack": "mil-std-40051",
+      "chapter": "ch05-warnings-cautions-notes-and-hazmat.md",
+      "cluster": "Training & Documentation Delivery",
+      "is_support": false
+    },
+    {
+      "pack": "mil-std-40051",
+      "chapter": "ch06-change-packages-and-revision-marking.md",
+      "cluster": "Training & Documentation Delivery",
+      "is_support": false
+    },
+    {
+      "pack": "mil-std-40051",
+      "chapter": "ch07-content-selection-matrix-and-tailoring.md",
+      "cluster": "Training & Documentation Delivery",
+      "is_support": false
+    },
+    {
+      "pack": "mil-std-40051",
+      "chapter": "ch08-plate-exemplars-and-production-patterns.md",
+      "cluster": "Training & Documentation Delivery",
+      "is_support": false
+    },
+    {
+      "pack": "mil-std-40051",
+      "chapter": "cheatsheet.md",
+      "cluster": "Training & Documentation Delivery",
+      "is_support": true
+    },
+    {
+      "pack": "mil-std-40051",
+      "chapter": "glossary.md",
+      "cluster": "Training & Documentation Delivery",
+      "is_support": true
+    },
+    {
+      "pack": "mil-std-40051",
+      "chapter": "patterns.md",
+      "cluster": "Training & Documentation Delivery",
+      "is_support": true
+    },
+    {
+      "pack": "dod-mosa",
+      "chapter": "ch03-dod-mosa-program-management-considerations.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "dod-mq-bok",
+      "chapter": "ch01-dod-mq-bok-pre-mdd.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "dod-mq-bok",
+      "chapter": "ch02-dod-mq-bok-msa.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "dod-mq-bok",
+      "chapter": "ch03-dod-mq-bok-tmrr.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "dod-mq-bok",
+      "chapter": "ch04-dod-mq-bok-emd.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "dod-mq-bok",
+      "chapter": "ch05-dod-mq-bok-prod-deploy.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "dod-mq-bok",
+      "chapter": "ch06-dod-mq-bok-ops-support.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "dod-vva-rpg",
+      "chapter": "ch04-ms-pm-role-new-simulations.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "dodaf",
+      "chapter": "ch07-project-viewpoint-pv.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "doe-o-413-3",
+      "chapter": "ch01-purpose-applicability-governance.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "doe-o-413-3",
+      "chapter": "ch04-performance-baseline-cost-schedule.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "gao-agile",
+      "chapter": "ch01-gao-agile-introduction-background.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "gao-agile",
+      "chapter": "ch02-gao-agile-adoption-challenges-federal-response.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "gao-agile",
+      "chapter": "ch03-gao-agile-adoption-best-practices.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "gao-agile",
+      "chapter": "ch04-gao-agile-execution-and-controls.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "gao-agile",
+      "chapter": "ch07-gao-agile-program-monitoring-control.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "gao-cost",
+      "chapter": "ch01-gao-cost-fundamentals-credible-estimates.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "gao-cost",
+      "chapter": "ch02-gao-cost-process-planning-program-definition.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "gao-cost",
+      "chapter": "ch03-gao-cost-data-ground-rules-point-estimate.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "gao-cost",
+      "chapter": "ch04-gao-cost-sensitivity-risk-uncertainty.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "gao-cost",
+      "chapter": "ch05-gao-cost-document-present-update.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "gao-cost",
+      "chapter": "ch06-gao-cost-auditing-validating.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "gao-cost",
+      "chapter": "ch07-gao-cost-earned-value-management.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "gao-cost",
+      "chapter": "ch08-gao-cost-specialized-techniques-internal-control.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "gao-cost",
+      "chapter": "cheatsheet.md",
+      "cluster": "Project/Program Management",
+      "is_support": true
+    },
+    {
+      "pack": "gao-cost",
+      "chapter": "glossary.md",
+      "cluster": "Project/Program Management",
+      "is_support": true
+    },
+    {
+      "pack": "gao-cost",
+      "chapter": "patterns.md",
+      "cluster": "Project/Program Management",
+      "is_support": true
+    },
+    {
+      "pack": "gao-schedule",
+      "chapter": "ch01-gao-schedule-introduction-reliable-schedule.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "gao-schedule",
+      "chapter": "ch02-gao-schedule-capturing-and-sequencing-activities.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "gao-schedule",
+      "chapter": "ch03-gao-schedule-resources-and-durations.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "gao-schedule",
+      "chapter": "ch04-gao-schedule-traceability-and-critical-path.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "gao-schedule",
+      "chapter": "ch05-gao-schedule-total-float-and-risk-analysis.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "gao-schedule",
+      "chapter": "ch06-gao-schedule-updating-baseline-four-characteristics.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "gao-schedule",
+      "chapter": "ch07-gao-schedule-auditing-key-questions.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "gao-schedule",
+      "chapter": "ch08-gao-schedule-evm-forward-backward-pass-reference-data.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "gao-schedule",
+      "chapter": "cheatsheet.md",
+      "cluster": "Project/Program Management",
+      "is_support": true
+    },
+    {
+      "pack": "gao-schedule",
+      "chapter": "glossary.md",
+      "cluster": "Project/Program Management",
+      "is_support": true
+    },
+    {
+      "pack": "gao-schedule",
+      "chapter": "patterns.md",
+      "cluster": "Project/Program Management",
+      "is_support": true
+    },
+    {
+      "pack": "nasa-ceh",
+      "chapter": "ch01-nasa-ceh-introduction-and-process-overview.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-ceh",
+      "chapter": "ch02-nasa-ceh-project-definition-tasks.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-ceh",
+      "chapter": "ch03-nasa-ceh-cost-methodology-tasks.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-ceh",
+      "chapter": "ch04-nasa-ceh-cost-estimate-tasks.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-ceh",
+      "chapter": "ch05-nasa-ceh-jcl-analysis.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-ceh",
+      "chapter": "ch07-nasa-ceh-economic-analysis.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-ceh",
+      "chapter": "cheatsheet.md",
+      "cluster": "Project/Program Management",
+      "is_support": true
+    },
+    {
+      "pack": "nasa-ceh",
+      "chapter": "glossary.md",
+      "cluster": "Project/Program Management",
+      "is_support": true
+    },
+    {
+      "pack": "nasa-ceh",
+      "chapter": "patterns.md",
+      "cluster": "Project/Program Management",
+      "is_support": true
+    },
+    {
+      "pack": "nasa-schedule",
+      "chapter": "ch01-nasa-schedule-foundations.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-schedule",
+      "chapter": "ch02-nasa-schedule-management-planning.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-schedule",
+      "chapter": "ch03-nasa-schedule-development-scope-and-boe.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-schedule",
+      "chapter": "ch04-nasa-schedule-development-build-and-outputs.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-schedule",
+      "chapter": "ch05-nasa-schedule-assessment.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-schedule",
+      "chapter": "ch06-nasa-schedule-risk-analysis.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-schedule",
+      "chapter": "ch07-nasa-schedule-maintenance-and-control.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-schedule",
+      "chapter": "ch08-nasa-schedule-documentation-and-communication.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-schedule",
+      "chapter": "cheatsheet.md",
+      "cluster": "Project/Program Management",
+      "is_support": true
+    },
+    {
+      "pack": "nasa-schedule",
+      "chapter": "glossary.md",
+      "cluster": "Project/Program Management",
+      "is_support": true
+    },
+    {
+      "pack": "nasa-schedule",
+      "chapter": "patterns.md",
+      "cluster": "Project/Program Management",
+      "is_support": true
+    },
+    {
+      "pack": "nasa-se-handbook",
+      "chapter": "ch04-2-5-cost-effectiveness-considerations.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-handbook",
+      "chapter": "ch08-3-1-program-formulation.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-handbook",
+      "chapter": "ch09-3-2-program-implementation.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-handbook",
+      "chapter": "ch10-3-3-project-pre-phase-a-concept-studies.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-handbook",
+      "chapter": "ch11-3-4-project-phase-a-concept-and-technology-dev.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-handbook",
+      "chapter": "ch12-3-5-project-phase-b-preliminary-design-and-tec.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-handbook",
+      "chapter": "ch13-3-6-project-phase-c-final-design-and-fabricati.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-handbook",
+      "chapter": "ch14-3-7-project-phase-d-system-assembly-integratio.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch31-sebok-se-project-management.md",
+      "cluster": "Project/Program Management",
+      "is_support": false
+    },
+    {
+      "pack": "dod-mosa",
+      "chapter": "ch06-dod-mosa-acquisition-pathways.md",
+      "cluster": "Supplier, Procurement & Acquisition",
+      "is_support": false
+    },
+    {
+      "pack": "doe-o-413-3",
+      "chapter": "ch03-acquisition-planning-and-ipt.md",
+      "cluster": "Supplier, Procurement & Acquisition",
+      "is_support": false
+    },
+    {
+      "pack": "gao-agile",
+      "chapter": "ch06-gao-agile-federal-contracting-process.md",
+      "cluster": "Supplier, Procurement & Acquisition",
+      "is_support": false
+    },
+    {
+      "pack": "mrl-deskbook",
+      "chapter": "ch06-mrl-deskbook-contract-language.md",
+      "cluster": "Supplier, Procurement & Acquisition",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-de-acquisition",
+      "chapter": "ch03-nasa-de-acquisition-requirements-exchange-and-contract-language.md",
+      "cluster": "Supplier, Procurement & Acquisition",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-de-acquisition",
+      "chapter": "ch04-nasa-de-acquisition-data-acquisition-contract-language.md",
+      "cluster": "Supplier, Procurement & Acquisition",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-npr-7123",
+      "chapter": "ch04-contracted-projects.md",
+      "cluster": "Supplier, Procurement & Acquisition",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-handbook",
+      "chapter": "ch17-4-1-stakeholder-expectations-definition.md",
+      "cluster": "Stakeholder Engagement & Needs",
+      "is_support": false
+    },
+    {
+      "pack": "nist-ai-rmf",
+      "chapter": "ch02-audience-and-ai-actors.md",
+      "cluster": "Stakeholder Engagement & Needs",
+      "is_support": false
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch16-sebok-system-concept-definition.md",
+      "cluster": "Stakeholder Engagement & Needs",
+      "is_support": false
+    },
+    {
+      "pack": "dafman-63-119",
+      "chapter": "ch02-roles-and-certification-official.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": false
+    },
+    {
+      "pack": "dafman-63-119",
+      "chapter": "ch03-continuous-process-and-review-cycle.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": false
+    },
+    {
+      "pack": "dafman-63-119",
+      "chapter": "ch04-certification-memo-and-gates.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": false
+    },
+    {
+      "pack": "dafman-63-119",
+      "chapter": "ch07-templates-documentation-and-tracking.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": false
+    },
+    {
+      "pack": "dau-se-guidebook",
+      "chapter": "ch03-technical-reviews-and-audits.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": false
+    },
+    {
+      "pack": "doe-o-413-3",
+      "chapter": "ch02-critical-decisions-cd0-cd4.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": false
+    },
+    {
+      "pack": "doe-o-413-3",
+      "chapter": "ch06-reviews-responsibilities-crd.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": false
+    },
+    {
+      "pack": "eu-ai-act",
+      "chapter": "ch01-general-provisions.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": false
+    },
+    {
+      "pack": "eu-ai-act",
+      "chapter": "ch02-prohibited-practices.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": false
+    },
+    {
+      "pack": "eu-ai-act",
+      "chapter": "ch05-obligations-operators.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": false
+    },
+    {
+      "pack": "eu-ai-act",
+      "chapter": "ch07-transparency-obligations.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": false
+    },
+    {
+      "pack": "eu-ai-act",
+      "chapter": "ch08-general-purpose-ai.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": false
+    },
+    {
+      "pack": "eu-ai-act",
+      "chapter": "ch09-governance.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": false
+    },
+    {
+      "pack": "eu-ai-act",
+      "chapter": "ch11-penalties-enforcement.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": false
+    },
+    {
+      "pack": "eu-ai-act",
+      "chapter": "cheatsheet.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": true
+    },
+    {
+      "pack": "eu-ai-act",
+      "chapter": "glossary.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": true
+    },
+    {
+      "pack": "eu-ai-act",
+      "chapter": "patterns.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": true
+    },
+    {
+      "pack": "nasa-npr-7123",
+      "chapter": "ch05-lifecycle-technical-reviews.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-npr-7123",
+      "chapter": "ch09-review-entrance-success-criteria.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": false
+    },
+    {
+      "pack": "nist-ai-rmf",
+      "chapter": "ch04-govern-function.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": false
+    },
+    {
+      "pack": "nist-csf",
+      "chapter": "ch02-govern-gv.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": false
+    },
+    {
+      "pack": "dau-se-guidebook",
+      "chapter": "ch04-technical-management-processes.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "dau-se-guidebook",
+      "chapter": "ch05-technical-processes.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "dodaf",
+      "chapter": "ch09-standards-viewpoint-stdv.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "doe-sem",
+      "chapter": "ch02-lifecycle-model-and-quality-reviews.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "faa-std-025",
+      "chapter": "ch01-scope-and-document-family.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "mil-hdbk-516",
+      "chapter": "ch01-scope-applicability-and-tailoring.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-ms-7009",
+      "chapter": "ch07-hdbk-lifecycle-implementation.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-npr-7123",
+      "chapter": "ch01-introduction.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-npr-7123",
+      "chapter": "ch02-institutional-programmatic-requirements.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-npr-7123",
+      "chapter": "ch03-common-technical-processes.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-npr-7123",
+      "chapter": "ch07-definitions.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-npr-7150",
+      "chapter": "ch01-nasa-npr-7150-introduction-purpose-structure.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-npr-7150",
+      "chapter": "ch02-nasa-npr-7150-roles-responsibilities-tailoring.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-npr-7150",
+      "chapter": "ch03-nasa-npr-7150-software-management-requirements.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-npr-7150",
+      "chapter": "ch04-nasa-npr-7150-software-engineering-lifecycle-requirements.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-npr-7150",
+      "chapter": "ch05-nasa-npr-7150-supporting-lifecycle-requirements.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-npr-7150",
+      "chapter": "ch07-nasa-npr-7150-definitions.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-npr-7150",
+      "chapter": "ch08-nasa-npr-7150-software-classifications.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-expanded",
+      "chapter": "ch02-nasa-se-expanded-life-cycle-and-tailoring.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-handbook",
+      "chapter": "ch02-2-1-the-common-technical-processes-and-the-se.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-handbook",
+      "chapter": "ch06-2-7-competency-model-for-systems-engineers.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-se-handbook",
+      "chapter": "ch07-3-0-nasa-program-project-life-cycle.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "nist-ai-rmf",
+      "chapter": "ch08-profiles-and-use.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "nist-cps",
+      "chapter": "ch03-nist-cps-related-standards-and-applying-the-framework.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "nist-csf",
+      "chapter": "ch08-profiles-tiers-and-using-the-csf.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch08-sebok-se-and-management-overview.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch09-sebok-life-cycle-terms-concepts.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch10-sebok-development-approaches.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch11-sebok-agile-approaches.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch12-sebok-life-cycle-model-selection.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch13-sebok-process-concepts.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch14-sebok-process-selection-tailoring.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch19-sebok-se-standards.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch26-sebok-enabling-businesses-enterprises.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch27-sebok-enabling-teams.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch28-sebok-enabling-individuals.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "faa-sem",
+      "chapter": "ch06-faa-sem-specialty-rma-lifecycle-e3-humanfactors.md",
+      "cluster": "Specialty Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "faa-sem",
+      "chapter": "ch07-faa-sem-specialty-infosec-safety-environmental.md",
+      "cluster": "Specialty Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-cps",
+      "chapter": "ch06-nist-cps-timing-and-time-awareness.md",
+      "cluster": "Specialty Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nist-cps",
+      "chapter": "ch08-nist-cps-managing-and-securing-time.md",
+      "cluster": "Specialty Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch29-sebok-related-disciplines-env-geo.md",
+      "cluster": "Specialty Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch30-sebok-se-industrial-engineering.md",
+      "cluster": "Specialty Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "sebok",
+      "chapter": "ch33-sebok-se-physical-domain-disciplines.md",
+      "cluster": "Specialty Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "eu-ai-act",
+      "chapter": "ch03-high-risk-classification.md",
+      "cluster": "Assurance & System Assurance",
+      "is_support": false
+    },
+    {
+      "pack": "eu-ai-act",
+      "chapter": "ch04-high-risk-requirements.md",
+      "cluster": "Assurance & System Assurance",
+      "is_support": false
+    },
+    {
+      "pack": "eu-ai-act",
+      "chapter": "ch06-conformity-assessment.md",
+      "cluster": "Assurance & System Assurance",
+      "is_support": false
+    },
+    {
+      "pack": "eu-ai-act",
+      "chapter": "ch12-annex-iii-high-risk-usecases.md",
+      "cluster": "Assurance & System Assurance",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-system-safety",
+      "chapter": "ch05-system-safety-ensurance-activities.md",
+      "cluster": "Assurance & System Assurance",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-system-safety",
+      "chapter": "ch06-risc-development.md",
+      "cluster": "Assurance & System Assurance",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-system-safety",
+      "chapter": "ch07-risc-evaluation.md",
+      "cluster": "Assurance & System Assurance",
+      "is_support": false
+    },
+    {
+      "pack": "nist-ai-rmf",
+      "chapter": "ch03-trustworthiness-characteristics.md",
+      "cluster": "Assurance & System Assurance",
+      "is_support": false
+    }
+  ]
+}
