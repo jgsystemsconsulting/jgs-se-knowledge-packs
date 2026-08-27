@@ -94,11 +94,23 @@ def check_rules(data: dict, packs_root: Path | None = None) -> list[str]:
         fail(errs, "envelope: assignments must be a list")
         return errs
 
+    expected_assignment_keys = {"pack", "chapter", "cluster", "is_support"}
     seen: set[tuple[str, str]] = set()
     non_support: set[tuple[str, str]] = set()
     for i, entry in enumerate(assignments):
         if not isinstance(entry, dict):
             fail(errs, f"assignments[{i}]: not an object")
+            continue
+        actual_keys = set(entry.keys())
+        if actual_keys != expected_assignment_keys:
+            extra = sorted(actual_keys - expected_assignment_keys)
+            missing = sorted(expected_assignment_keys - actual_keys)
+            bits = []
+            if extra:
+                bits.append(f"unexpected keys {extra}")
+            if missing:
+                bits.append(f"missing keys {missing}")
+            fail(errs, f"assignments[{i}]: " + "; ".join(bits))
             continue
         pack = entry.get("pack")
         chapter = entry.get("chapter")

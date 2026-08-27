@@ -85,6 +85,7 @@ Rules of construction:
 | sebok | ch32-sebok-se-software-engineering.md | SE and software engineering relationship |
 | sebok | ch35-sebok-implementation-examples.md | Implementation examples |
 | sebok | ch36-sebok-emerging-knowledge.md | Emerging SE knowledge |
+
 ## 2. Requirements Engineering
 
 | Pack | Chapter | Why it fits / one-line value |
@@ -108,6 +109,7 @@ Rules of construction:
 | requirements-writing | cheatsheet.md (support file) | Cheatsheet / quick reference |
 | requirements-writing | glossary.md (support file) | Glossary for the pack |
 | requirements-writing | patterns.md (support file) | Patterns/practice heuristics |
+
 ## 3. Requirements Traceability & Allocation
 
 | Pack | Chapter | Why it fits / one-line value |
@@ -115,6 +117,7 @@ Rules of construction:
 | faa-req-handbook | ch06-faa-req-handbook-software-requirements-and-subsystem-allocation.md | Software requirements and subsystem allocation |
 | faa-std-025 | ch05-verification-and-traceability.md | Interface VRTM, verification levels/methods, and who-verifies rules |
 | requirements-writing | ch06-verifiability-and-traceability.md | Verifiability and traceability of requirements (also verification) |
+
 ## 4. Architecture & Design
 
 | Pack | Chapter | Why it fits / one-line value |
@@ -139,6 +142,7 @@ Rules of construction:
 | nasa-se-handbook | ch21-5-1-product-implementation.md | Product implementation/fabrication (also make/buy) |
 | sebok | ch17-sebok-system-architecture-realization.md | System architecture and realization |
 | sebok | ch34-sebok-se-quality-attributes.md | Quality attributes / ilities (also reliability) |
+
 ## 5. Interface Management & ICIDs
 
 | Pack | Chapter | Why it fits / one-line value |
@@ -152,6 +156,7 @@ Rules of construction:
 | is-gps-200n | ch05-time-and-definition-hygiene.md | ICD time, URA/CEI, and reserved/invalid definition hygiene |
 | is-gps-200n | ch06-appendices-as-a-map.md | How a live IS maps normative annexes without dumping payload tables |
 | nasa-se-handbook | ch29-6-3-interface-management.md | Interface management process |
+
 ## 6. Integration
 
 | Pack | Chapter | Why it fits / one-line value |
@@ -160,6 +165,7 @@ Rules of construction:
 | doe-sem | ch06-integration-test-and-acceptance.md | Integration and testing plus installation and acceptance stages (also T&E) |
 | nasa-se-expanded | ch04-nasa-se-expanded-product-realization.md | Product realization: integration, V&V, transition (also verification/validation) |
 | nasa-se-handbook | ch22-5-2-product-integration.md | Product integration process |
+
 ## 7. Verification
 
 | Pack | Chapter | Why it fits / one-line value |
@@ -175,6 +181,7 @@ Rules of construction:
 | faa-ams-vv | glossary.md (support file) | Glossary for the pack |
 | faa-ams-vv | patterns.md (support file) | Patterns/practice heuristics |
 | nasa-se-handbook | ch23-5-3-product-verification.md | Product verification process |
+
 ## 8. Validation
 
 | Pack | Chapter | Why it fits / one-line value |
@@ -186,6 +193,7 @@ Rules of construction:
 | faa-ams-vv | ch04-faa-ams-vv-investment-analysis.md | Validation during investment analysis |
 | faa-ams-vv | ch06-faa-ams-vv-in-service-management.md | In-service validation and V&V mgmt (also ops) |
 | nasa-se-handbook | ch24-5-4-product-validation.md | Product validation process |
+
 ## 9. Test & Evaluation
 
 | Pack | Chapter | Why it fits / one-line value |
@@ -207,6 +215,7 @@ Rules of construction:
 | dote-te-guidebook | ch01-te-enterprise-overview-and-roles.md | DoD T&E enterprise overview; DOT&E vs USD(R&E) roles under DoDI 5000.89 |
 | dote-te-guidebook | ch04-live-fire-te.md | LFT&E survivability and lethality against combat threats (also safety/survivability) |
 | dote-te-guidebook | ch08-temp-strategy-and-ste-planning.md | T&E Strategy/TEMP, test plans, and STE resource planning |
+
 ## 10. Modeling, MBSE & SysML
 
 | Pack | Chapter | Why it fits / one-line value |
@@ -231,6 +240,7 @@ Rules of construction:
 | nasa-systems-modeling | glossary.md (support file) | Glossary for the pack |
 | nasa-systems-modeling | patterns.md (support file) | Patterns/practice heuristics |
 | sebok | ch06-sebok-representing-systems-models.md | Representing systems with models |
+
 ## 11. Digital Engineering & Digital Twins
 
 | Pack | Chapter | Why it fits / one-line value |
@@ -260,6 +270,7 @@ Rules of construction:
 | nasa-de-acquisition | ch06-nasa-de-acquisition-collaboration-architecture-interoperability.md | Collaboration architecture and interoperability |
 | nasa-de-acquisition | ch07-nasa-de-acquisition-mbe-use-cases.md | Model-based engineering use cases |
 | nasa-de-acquisition | ch08-nasa-de-acquisition-mbe-plan-development.md | MBE plan development |
+
 ## 12. Configuration Management & Baselines
 
 | Pack | Chapter | Why it fits / one-line value |
@@ -280,6 +291,7 @@ Rules of construction:
 | nasa-de-acquisition | ch02-nasa-de-acquisition-drds-and-configuration-data-management.md | DRDs, configuration and data mgmt (also data mgmt) |
 | nasa-se-expanded | ch06-nasa-se-expanded-crosscutting-cm-data-assessment-decision.md | Crosscutting CM, data, assessment, decision (also measurement) |
 | nasa-se-handbook | ch31-6-5-configuration-management.md | Configuration management process |
+
 ## 13. Data & Information Management
 
 | Pack | Chapter | Why it fits / one-line value |
@@ -291,6 +303,7 @@ Rules of construction:
 | nasa-npr-7150 | ch06-nasa-npr-7150-recommended-software-records.md | Recommended software records/records retention |
 | nasa-se-handbook | ch32-6-6-technical-data-management.md | Technical data management process |
 | nist-cps | ch05-nist-cps-data-interoperability.md | CPS data interoperability |
+
 ## 14. Risk Management
 
 | Pack | Chapter | Why it fits / one-line value |
@@ -322,6 +335,7 @@ Rules of construction:
 | nist-ai-rmf | ch01-framing-ai-risk.md | Framing AI risk |
 | nist-ai-rmf | ch05-map-function.md | Map function: risk context |
 | nist-ai-rmf | ch07-manage-function.md | Manage function: risk treatment |
+
 ## 15. Opportunity/Benefit Management
 
 | Pack | Chapter | Why it fits / one-line value |
@@ -334,6 +348,7 @@ Rules of construction:
 | federal-bca | cheatsheet.md (support file) | Cheatsheet / quick reference |
 | federal-bca | glossary.md (support file) | Glossary for the pack |
 | federal-bca | patterns.md (support file) | Patterns/practice heuristics |
+
 ## 16. Decision Analysis & Trade Studies
 
 | Pack | Chapter | Why it fits / one-line value |
@@ -343,6 +358,7 @@ Rules of construction:
 | federal-bca | ch06-reporting-and-decision-use.md | Reporting BCA results for OMB/agency decision use (MAP-19-03 move) |
 | nasa-ceh | ch06-nasa-ceh-decision-support-analyses.md | Cost-based decision support and trade analysis |
 | nasa-se-handbook | ch34-6-8-decision-analysis.md | Decision analysis process |
+
 ## 17. Technical Planning & Work Breakdown
 
 | Pack | Chapter | Why it fits / one-line value |
@@ -360,6 +376,7 @@ Rules of construction:
 | nasa-se-handbook | ch26-6-0-crosscutting-technical-management.md | Crosscutting technical management overview |
 | nasa-se-handbook | ch27-6-1-technical-planning.md | Technical planning and SEMP |
 | sebok | ch15-sebok-technical-management.md | Technical management processes overview |
+
 ## 18. Measurement & Technical Assessment
 
 | Pack | Chapter | Why it fits / one-line value |
@@ -400,6 +417,7 @@ Rules of construction:
 | nist-stat-handbook | cheatsheet.md (support file) | Cheatsheet / quick reference |
 | nist-stat-handbook | glossary.md (support file) | Glossary for the pack |
 | nist-stat-handbook | patterns.md (support file) | Patterns/practice heuristics |
+
 ## 19. Quality Assurance & Process Compliance
 
 | Pack | Chapter | Why it fits / one-line value |
@@ -407,6 +425,7 @@ Rules of construction:
 | gao-agile | ch09-gao-agile-assessment-reference-auditor-questions-frameworks.md | Auditor assessment questions (also program mgmt) |
 | mil-hdbk-516 | ch02-systems-engineering-criteria.md | SE airworthiness criteria: design criteria control, tech data, CM, mfg quality (also CM) |
 | nist-stat-handbook | ch06-nist-stat-handbook-process-monitoring-and-control.md | SPC monitoring and control (quality control) |
+
 ## 20. Safety, Reliability & Survivability
 
 | Pack | Chapter | Why it fits / one-line value |
@@ -499,6 +518,7 @@ Rules of construction:
 | nasa-system-safety | glossary.md (support file) | Glossary for the pack |
 | nasa-system-safety | patterns.md (support file) | Patterns/practice heuristics |
 | nist-stat-handbook | ch08-nist-stat-handbook-assessing-product-reliability.md | Assessing product reliability |
+
 ## 21. Cybersecurity & Security Engineering
 
 | Pack | Chapter | Why it fits / one-line value |
@@ -572,6 +592,7 @@ Rules of construction:
 | nist-sse | cheatsheet.md (support file) | Cheatsheet / quick reference |
 | nist-sse | glossary.md (support file) | Glossary for the pack |
 | nist-sse | patterns.md (support file) | Patterns/practice heuristics |
+
 ## 22. Human Systems Integration / Human Factors
 
 | Pack | Chapter | Why it fits / one-line value |
@@ -602,6 +623,7 @@ Rules of construction:
 | nasa-hsi | glossary.md (support file) | Glossary for the pack |
 | nasa-hsi | patterns.md (support file) | Patterns/practice heuristics |
 | nasa-se-handbook | ch05-2-6-human-systems-integration-hsi-in-the-se-pr.md | HSI overview in SE processes |
+
 ## 23. Logistics, Supportability & Sustainment
 
 | Pack | Chapter | Why it fits / one-line value |
@@ -618,6 +640,7 @@ Rules of construction:
 | sd-22-dmsms | cheatsheet.md (support file) | Cheatsheet / quick reference |
 | sd-22-dmsms | glossary.md (support file) | Glossary for the pack |
 | sd-22-dmsms | patterns.md (support file) | Patterns/practice heuristics |
+
 ## 24. Operations, Maintenance & Disposal
 
 | Pack | Chapter | Why it fits / one-line value |
@@ -635,6 +658,7 @@ Rules of construction:
 | nasa-std-8719-14 | ch06-reentry-surviving-debris.md | Reentry surviving-debris casualty risk and controlled-reentry keep-out |
 | nasa-std-8719-14 | ch07-special-classes-odar-eomp.md | Special-class debris limits plus ODAR/EOMP report governance (also Governance) |
 | sebok | ch18-sebok-system-maintenance.md | System maintenance (also sustainment) |
+
 ## 25. Training & Documentation Delivery
 
 | Pack | Chapter | Why it fits / one-line value |
@@ -651,6 +675,7 @@ Rules of construction:
 | mil-std-40051 | cheatsheet.md (support file) | Cheatsheet / quick reference |
 | mil-std-40051 | glossary.md (support file) | Glossary for the pack |
 | mil-std-40051 | patterns.md (support file) | Patterns/practice heuristics |
+
 ## 26. Project/Program Management
 
 | Pack | Chapter | Why it fits / one-line value |
@@ -722,6 +747,7 @@ Rules of construction:
 | nasa-se-handbook | ch13-3-6-project-phase-c-final-design-and-fabricati.md | Phase C final design and fabrication |
 | nasa-se-handbook | ch14-3-7-project-phase-d-system-assembly-integratio.md | Phase D assembly/integration (also integration) |
 | sebok | ch31-sebok-se-project-management.md | SE and project management relationship |
+
 ## 27. Supplier, Procurement & Acquisition
 
 | Pack | Chapter | Why it fits / one-line value |
@@ -733,6 +759,7 @@ Rules of construction:
 | nasa-de-acquisition | ch03-nasa-de-acquisition-requirements-exchange-and-contract-language.md | Requirements exchange and DE contract language |
 | nasa-de-acquisition | ch04-nasa-de-acquisition-data-acquisition-contract-language.md | Data acquisition contract language |
 | nasa-npr-7123 | ch04-contracted-projects.md | Requirements flow to contracted projects |
+
 ## 28. Stakeholder Engagement & Needs
 
 | Pack | Chapter | Why it fits / one-line value |
@@ -740,6 +767,7 @@ Rules of construction:
 | nasa-se-handbook | ch17-4-1-stakeholder-expectations-definition.md | Stakeholder expectations definition |
 | nist-ai-rmf | ch02-audience-and-ai-actors.md | AI actors and stakeholders in the RMF |
 | sebok | ch16-sebok-system-concept-definition.md | System concept definition from stakeholder needs |
+
 ## 29. Governance, Reviews, Gates & Control Points
 
 | Pack | Chapter | Why it fits / one-line value |
@@ -765,6 +793,7 @@ Rules of construction:
 | nasa-npr-7123 | ch09-review-entrance-success-criteria.md | Review entrance/success criteria |
 | nist-ai-rmf | ch04-govern-function.md | Govern function |
 | nist-csf | ch02-govern-gv.md | Govern function (cyber governance) |
+
 ## 30. Standards, Tailoring & Process Models
 
 | Pack | Chapter | Why it fits / one-line value |
@@ -805,6 +834,7 @@ Rules of construction:
 | sebok | ch26-sebok-enabling-businesses-enterprises.md | Enabling businesses/enterprises for SE |
 | sebok | ch27-sebok-enabling-teams.md | Enabling teams |
 | sebok | ch28-sebok-enabling-individuals.md | Enabling individuals (competency) |
+
 ## 31. Specialty Engineering
 
 | Pack | Chapter | Why it fits / one-line value |
@@ -816,6 +846,7 @@ Rules of construction:
 | sebok | ch29-sebok-related-disciplines-env-geo.md | Related disciplines: environment, geospatial |
 | sebok | ch30-sebok-se-industrial-engineering.md | SE and industrial engineering |
 | sebok | ch33-sebok-se-physical-domain-disciplines.md | Physical-domain disciplines (specialties) |
+
 ## 32. Assurance & System Assurance
 
 | Pack | Chapter | Why it fits / one-line value |
