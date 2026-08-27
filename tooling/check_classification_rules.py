@@ -183,6 +183,137 @@ def check_rules(data: dict, packs_root: Path | None = None) -> list[str]:
                     f"coverage: on-disk chapter has no assignment: {pack}/{chapter}",
                 )
 
+    # Fidelity vs live capability-pack-map.json (independent load; no import)
+    if not MAP_PATH.is_file():
+        fail(errs, f"fidelity: map file missing: {MAP_PATH.relative_to(ROOT).as_posix()}")
+        return errs
+    try:
+        with MAP_PATH.open(encoding="utf-8") as fh:
+            live = json.load(fh)
+    except (json.JSONDecodeError, UnicodeDecodeError) as exc:
+        fail(errs, f"fidelity: JSON decode error in map: {exc}")
+        return errs
+    if not isinstance(live, dict):
+        fail(errs, "fidelity: map top-level must be an object")
+        return errs
+
+    live_schema = live.get("schema_version")
+    if not isinstance(live_schema, int) or isinstance(live_schema, bool) or live_schema != 2:
+        fail(errs, f"fidelity: live map schema_version must be int 2, got {live_schema!r}")
+
+    live_mv = live.get("map_version")
+    if live_mv != map_version:
+        fail(
+            errs,
+            f"fidelity: rules map_version {map_version!r} != live map {live_mv!r}",
+        )
+
+    live_clusters = live.get("clusters")
+    if not isinstance(live_clusters, list):
+        fail(errs, "fidelity: live map missing clusters list")
+        return errs
+
+    live_names = []
+    for c in live_clusters:
+        if isinstance(c, dict) and isinstance(c.get("name"), str):
+            live_names.append(c["name"])
+        else:
+            fail(errs, "fidelity: live cluster entry missing name")
+            live_names.append("<unnamed>")
+
+    if cluster_names != live_names:
+        fail(
+            errs,
+            f"fidelity: cluster_names must equal live clusters[].name in order "
+            f"(rules_len={len(cluster_names)}, live_len={len(live_names)})",
+        )
+        for i, (a, b) in enumerate(zip(cluster_names, live_names)):
+            if a != b:
+                fail(errs, f"fidelity: cluster_names[{i}] {a!r} != live {b!r}")
+                break
+        if len(cluster_names) != len(live_names):
+            fail(
+                errs,
+                f"fidelity: cluster_names length {len(cluster_names)} != "
+                f"live {len(live_names)}",
+            )
+
+    expected_signposts = ["omg-signpost", "se-standards-signpost"]
+    if list(signpost_packs) != expected_signposts:
+        fail(
+            errs,
+            f"fidelity: signpost_packs must be {expected_signposts!r}, "
+            f"got {signpost_packs!r}",
+        )
+
+    mkeys: dict[tuple[str, str], tuple[str, bool]] = {}
+    for c in live_clusters:
+        if not isinstance(c, dict):
+            continue
+        cname = c.get("name")
+        if not isinstance(cname, str):
+            continue
+        chapters = c.get("chapters")
+        if not isinstance(chapters, list):
+            continue
+        for ch in chapters:
+            if not isinstance(ch, dict):
+                continue
+            pack = ch.get("pack")
+            raw = ch.get("chapter")
+            if not isinstance(pack, str) or not isinstance(raw, str):
+                continue
+            is_s = raw.endswith(SUPPORT_SUFFIX)
+            base = raw[: -len(SUPPORT_SUFFIX)] if is_s else raw
+            mkeys[(pack, base)] = (cname, is_s)
+
+    akeys: dict[tuple[str, str], tuple[str, bool]] = {}
+    for entry in assignments:
+        if not isinstance(entry, dict):
+            continue
+        pack = entry.get("pack")
+        chapter = entry.get("chapter")
+        cluster = entry.get("cluster")
+        is_support = entry.get("is_support")
+        if (
+            isinstance(pack, str)
+            and isinstance(chapter, str)
+            and isinstance(cluster, str)
+            and type(is_support) is bool
+        ):
+            akeys[(pack, chapter)] = (cluster, is_support)
+
+    only_rules = sorted(set(akeys) - set(mkeys))
+    only_map = sorted(set(mkeys) - set(akeys))
+    if only_rules or only_map:
+        fail(
+            errs,
+            f"fidelity: key-set mismatch (rules_only={len(only_rules)}, "
+            f"map_only={len(only_map)})",
+        )
+        for pack, chapter in only_rules[:10]:
+            fail(errs, f"fidelity: in rules not in map: {pack}/{chapter}")
+        for pack, chapter in only_map[:10]:
+            fail(errs, f"fidelity: in map not in rules: {pack}/{chapter}")
+
+    for key, (cluster, is_s) in akeys.items():
+        if key not in mkeys:
+            continue
+        m_cluster, m_is_s = mkeys[key]
+        pack, chapter = key
+        if cluster != m_cluster:
+            fail(
+                errs,
+                f"fidelity: cluster mismatch for {pack}/{chapter}: "
+                f"rules={cluster!r} map={m_cluster!r}",
+            )
+        if is_s != m_is_s:
+            fail(
+                errs,
+                f"fidelity: is_support mismatch for {pack}/{chapter}: "
+                f"rules={is_s!r} map={m_is_s!r}",
+            )
+
     return errs
 
 
