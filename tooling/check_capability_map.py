@@ -137,6 +137,7 @@ def main() -> int:
             if (
                 "/" in pack
                 or "\\" in pack
+                or ":" in pack
                 or ".." in pack_path.parts
                 or pack_path.is_absolute()
             ):

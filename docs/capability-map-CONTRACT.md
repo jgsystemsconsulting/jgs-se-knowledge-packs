@@ -83,8 +83,9 @@ is still a required generator input (the generator fails closed if it is
 missing).
 
 The refresh path still runs `python tooling/check_capability_map.py`, and
-`python tooling/check_release.py` invokes `check_capability_map.main()`
-in-process (local/trusted; CI does not exec repo Python).
+`python tooling/check_release.py` invokes `check_capability_map.main()` and
+`generate_capability_map.main()` with `--check` in-process (local/trusted; CI
+does not exec repo Python).
 
 ## 5. Threshold table
 

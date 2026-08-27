@@ -127,7 +127,13 @@ def check_rules(
             fail(errs, f"assignments[{i}]: pack must be a non-empty string")
             continue
         pack_path = Path(pack)
-        if "/" in pack or "\\" in pack or ".." in pack_path.parts or pack_path.is_absolute():
+        if (
+            "/" in pack
+            or "\\" in pack
+            or ":" in pack
+            or ".." in pack_path.parts
+            or pack_path.is_absolute()
+        ):
             fail(
                 errs,
                 f"assignments[{i}]: pack must be a basename without separator, got {pack!r}",
@@ -141,7 +147,7 @@ def check_rules(
                 errs,
                 f"assignments[{i}]: chapter must not contain support-file suffix: {chapter!r}",
             )
-        if "/" in chapter or "\\" in chapter:
+        if "/" in chapter or "\\" in chapter or ":" in chapter:
             fail(errs, f"assignments[{i}]: chapter must be a basename, got {chapter!r}")
         if not isinstance(cluster, str) or cluster not in cluster_name_set:
             fail(

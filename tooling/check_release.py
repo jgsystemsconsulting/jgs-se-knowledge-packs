@@ -18,6 +18,8 @@ standard requires for this repo and exits non-zero on any failure:
   9. Capability-pack map freshness via check_capability_map.main() (local/trusted).
  10. Classification-rules completeness via check_classification_rules.main()
      (MAP-21-01; local/trusted).
+ 11. Capability-map generator replay via generate_capability_map.main() --check
+     (MAP-21-05; local/trusted; uses on-disk map generated_on).
 
 stdlib only. This is a LOCAL/trusted gate and may run repo code; the CI workflow
 (.github/workflows/validate.yml) inlines its own checks and never executes repo code.
@@ -245,6 +247,43 @@ def main() -> int:
             )
     except Exception as e:
         fail(errs, f"[classification-rules] check_classification_rules failed to run: {e}")
+
+    # 5g. MAP-21-05: generator replay --check against on-disk map (local/trusted)
+    try:
+        import generate_capability_map  # type: ignore
+        map_path = ROOT / "docs" / "capability-pack-map.json"
+        if not map_path.is_file():
+            fail(errs, "[map-replay] docs/capability-pack-map.json missing")
+        else:
+            try:
+                map_obj = json.loads(map_path.read_text(encoding="utf-8"))
+            except Exception as e:
+                fail(errs, f"[map-replay] cannot read capability-pack-map.json: {e}")
+                map_obj = None
+            if isinstance(map_obj, dict):
+                disk_on = map_obj.get("generated_on")
+                if not isinstance(disk_on, str) or not disk_on:
+                    fail(
+                        errs,
+                        "[map-replay] capability-pack-map.json missing generated_on",
+                    )
+                else:
+                    rc = generate_capability_map.main(
+                        ["--generated-on", disk_on, "--check"]
+                    )
+                    if rc != 0:
+                        fail(
+                            errs,
+                            "[map-replay] generate_capability_map.py --check failed "
+                            "(see output above)",
+                        )
+            elif map_obj is not None:
+                fail(
+                    errs,
+                    "[map-replay] capability-pack-map.json top-level must be an object",
+                )
+    except Exception as e:
+        fail(errs, f"[map-replay] generate_capability_map failed to run: {e}")
 
     # 7. authored-file headers (root + docs + tooling + installers; NOT packs/)
     authored = [ROOT / "README.md", ROOT / "SECURITY.md", ROOT / "CODE_OF_CONDUCT.md",

@@ -17,6 +17,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import datetime
 import json
 import re
 import sys
@@ -36,7 +37,7 @@ NOTE_KEYS = {"pack", "chapter", "note"}
 
 
 def _bad_path_part(value: str) -> bool:
-    if "/" in value or "\\" in value:
+    if "/" in value or "\\" in value or ":" in value:
         return True
     return ".." in Path(value).parts or Path(value).is_absolute()
 
@@ -58,6 +59,12 @@ def generate_map(rules: dict, overrides: dict, generated_on: str) -> dict:
         raise ValueError("overrides: top-level must be an object")
     if not isinstance(generated_on, str) or not GENERATED_ON_RE.fullmatch(generated_on):
         raise ValueError(f"generated_on must match YYYY-MM-DD, got {generated_on!r}")
+    try:
+        datetime.date.fromisoformat(generated_on)
+    except ValueError as exc:
+        raise ValueError(
+            f"generated_on must be a valid calendar date, got {generated_on!r}"
+        ) from exc
 
     schema = rules.get("schema_version")
     if not isinstance(schema, int) or isinstance(schema, bool) or schema != 1:
@@ -111,6 +118,10 @@ def generate_map(rules: dict, overrides: dict, generated_on: str) -> dict:
             raise ValueError(f"assignments[{i}]: pack must be a non-empty string")
         if not isinstance(chapter, str) or not chapter:
             raise ValueError(f"assignments[{i}]: chapter must be a non-empty string")
+        if "\n" in pack or "\r" in pack:
+            raise ValueError(f"assignments[{i}]: pack contains CR or LF: {pack!r}")
+        if "\n" in chapter or "\r" in chapter:
+            raise ValueError(f"assignments[{i}]: chapter contains CR or LF: {chapter!r}")
         if _bad_path_part(pack) or _bad_path_part(chapter):
             raise ValueError(
                 f"assignments[{i}]: pack/chapter path rejected: {pack!r}/{chapter!r}"
@@ -154,6 +165,12 @@ def generate_map(rules: dict, overrides: dict, generated_on: str) -> dict:
             raise ValueError(f"notes[{i}]: chapter must be a non-empty string")
         if not isinstance(note, str) or not note:
             raise ValueError(f"notes[{i}]: note must be a non-empty string")
+        if "\n" in pack or "\r" in pack:
+            raise ValueError(f"notes[{i}]: pack contains CR or LF: {pack!r}")
+        if "\n" in chapter or "\r" in chapter:
+            raise ValueError(f"notes[{i}]: chapter contains CR or LF: {chapter!r}")
+        if "\n" in note or "\r" in note:
+            raise ValueError(f"notes[{i}]: note contains CR or LF: {note!r}")
         if _bad_path_part(pack) or _bad_path_part(chapter):
             raise ValueError(
                 f"notes[{i}]: pack/chapter path rejected: {pack!r}/{chapter!r}"
@@ -250,8 +267,8 @@ def render_md(map_obj: dict, header_prefix: str) -> str:
         lines.append("| Pack | Chapter | Why it fits / one-line value |")
         lines.append("|---|---|---|")
         for ch in cluster["chapters"]:
-            pack = _deslop(ch["pack"])
-            chapter = _deslop(ch["chapter"])
+            pack = _deslop(ch["pack"]).replace("|", "\\|")
+            chapter = _deslop(ch["chapter"]).replace("|", "\\|")
             note = _deslop(ch["note"]).replace("|", "\\|")
             lines.append(f"| {pack} | {chapter} | {note} |")
         lines.append("")
@@ -288,8 +305,20 @@ def main(argv: list[str] | None = None) -> int:
     )
     args = parser.parse_args(argv)
 
+    if args.check and args.sync_md:
+        print("FAIL: illegal combination --check and --sync-md (write nothing)")
+        return 1
+
     if not GENERATED_ON_RE.fullmatch(args.generated_on):
         print(f"FAIL: --generated-on must match YYYY-MM-DD, got {args.generated_on!r}")
+        return 1
+    try:
+        datetime.date.fromisoformat(args.generated_on)
+    except ValueError:
+        print(
+            f"FAIL: --generated-on must be a valid calendar date, "
+            f"got {args.generated_on!r}"
+        )
         return 1
 
     try:
@@ -319,18 +348,24 @@ def main(argv: list[str] | None = None) -> int:
         print("PASS: generated map matches on-disk capability-pack-map.json")
         return 0
 
-    MAP_PATH.write_text(dumps_map(built), encoding="utf-8", newline="\n")
-    print(f"wrote {MAP_PATH.relative_to(ROOT).as_posix()}")
-
+    # Prepare md text before any write when --sync-md so a missing ## Summary
+    # fails closed before MAP_PATH is touched.
+    md_text: str | None = None
     if args.sync_md:
         try:
             existing = MD_PATH.read_text(encoding="utf-8")
             header = _split_md_header(existing)
-            MD_PATH.write_text(render_md(built, header), encoding="utf-8", newline="\n")
-            print(f"wrote {MD_PATH.relative_to(ROOT).as_posix()}")
+            md_text = render_md(built, header)
         except (OSError, ValueError) as exc:
             print(f"FAIL: md sync: {exc}")
             return 1
+
+    MAP_PATH.write_text(dumps_map(built), encoding="utf-8", newline="\n")
+    print(f"wrote {MAP_PATH.relative_to(ROOT).as_posix()}")
+
+    if md_text is not None:
+        MD_PATH.write_text(md_text, encoding="utf-8", newline="\n")
+        print(f"wrote {MD_PATH.relative_to(ROOT).as_posix()}")
 
     return 0
 
