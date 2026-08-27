@@ -16,6 +16,8 @@ standard requires for this repo and exits non-zero on any failure:
   7. JGSC + SPDX header present on authored files (NOT pack content).
   8. Multi-pack chapter-basename overlap via check_overlap.main() (local/trusted).
   9. Capability-pack map freshness via check_capability_map.main() (local/trusted).
+ 10. Classification-rules completeness via check_classification_rules.main()
+     (MAP-21-01; local/trusted).
 
 stdlib only. This is a LOCAL/trusted gate and may run repo code; the CI workflow
 (.github/workflows/validate.yml) inlines its own checks and never executes repo code.
@@ -230,6 +232,19 @@ def main() -> int:
             fail(errs, "[map] check_capability_map.py failed (see output above)")
     except Exception as e:
         fail(errs, f"[map] check_capability_map failed to run: {e}")
+
+    # 5f. classification-rules (MAP-21-01): every live chapter has a rule assignment
+    try:
+        import check_classification_rules  # type: ignore
+        rc = check_classification_rules.main()
+        if rc != 0:
+            fail(
+                errs,
+                "[classification-rules] check_classification_rules.py failed "
+                "(see output above)",
+            )
+    except Exception as e:
+        fail(errs, f"[classification-rules] check_classification_rules failed to run: {e}")
 
     # 7. authored-file headers (root + docs + tooling + installers; NOT packs/)
     authored = [ROOT / "README.md", ROOT / "SECURITY.md", ROOT / "CODE_OF_CONDUCT.md",
