@@ -6,8 +6,9 @@ Working artifact mapping systems-engineering **technical capabilities** to the p
 Rules of construction:
 - Every chapter in every pack under `packs/<slug>/chapters/` is assigned to exactly one capability cluster (best fit).
 - Cross-cutting chapters carry a remark noting the strong secondary fit.
-- `glossary.md` / `patterns.md` / `cheatsheet.md` are included (marked “support file”) only for packs that are
-  essentially single-cluster; multi-cluster packs' support files are omitted as ambiguous.
+- `glossary.md` / `patterns.md` / `cheatsheet.md` may appear as support-file rows; this bullet is descriptive
+  only and defers to `support_policy`. `is_support` assignment rows are the membership source of truth
+  (do not derive omission of multi-cluster pack support files from this rule).
 - The two signpost packs (`omg-signpost`, `se-standards-signpost`) contain no chapters and are not mapped.
 - A standard's own process definitions go to cluster 30; performing the capability goes to the capability cluster.
 - Machine-readable version: `docs/capability-pack-map.json`.

@@ -115,14 +115,36 @@ def main() -> int:
             fail(errs, f"clusters: {name!r} missing chapters list")
             chapters = []
         counts[name] = len(chapters)
-        for entry in chapters:
+        for idx, entry in enumerate(chapters):
             if not isinstance(entry, dict):
                 fail(errs, f"clusters: {name!r} has non-object chapter entry")
+                continue
+            actual_keys = set(entry.keys())
+            expected_keys = {"pack", "chapter", "note"}
+            if actual_keys != expected_keys:
+                fail(
+                    errs,
+                    f"clusters: {name!r}[{idx}] unexpected keys "
+                    f"(got {sorted(actual_keys)}, expected {sorted(expected_keys)})",
+                )
                 continue
             pack = entry.get("pack")
             chapter = entry.get("chapter")
             if not isinstance(pack, str) or not pack:
                 fail(errs, f"clusters: {name!r} entry missing pack")
+                continue
+            pack_path = Path(pack)
+            if (
+                "/" in pack
+                or "\\" in pack
+                or ".." in pack_path.parts
+                or pack_path.is_absolute()
+            ):
+                fail(
+                    errs,
+                    f"clusters: {name!r}[{idx}] pack must be a basename without "
+                    f"separator, got {pack!r}",
+                )
                 continue
             if not isinstance(chapter, str) or not chapter:
                 fail(errs, f"clusters: {name!r} entry missing chapter")
