@@ -87,8 +87,6 @@ def generate_map(rules: dict, overrides: dict, generated_on: str) -> dict:
     notes = overrides.get("notes")
     if not isinstance(notes, list):
         raise ValueError("overrides notes must be a list")
-    if len(notes) != 644:
-        raise ValueError(f"overrides notes length must be 644, got {len(notes)}")
 
     akeys: set[tuple[str, str]] = set()
     assignment_rows: list[dict] = []
@@ -168,7 +166,7 @@ def generate_map(rules: dict, overrides: dict, generated_on: str) -> dict:
 
     only_a = sorted(akeys - nkeys)
     only_n = sorted(nkeys - akeys)
-    if only_a or only_n:
+    if only_a or only_n or len(notes) != 644:
         parts = []
         if only_a:
             p, c = only_a[0]
@@ -176,6 +174,8 @@ def generate_map(rules: dict, overrides: dict, generated_on: str) -> dict:
         if only_n:
             p, c = only_n[0]
             parts.append(f"in notes not in assignments: {p}/{c}")
+        if len(notes) != 644:
+            parts.append(f"notes length must be 644, got {len(notes)}")
         raise ValueError(
             "notes key set must equal assignments key set "
             f"(assignments_only={len(only_a)}, notes_only={len(only_n)}); "
