@@ -31,3 +31,31 @@ and [docs/LICENSING.md](docs/LICENSING.md).
 
 Packs are plain Markdown and the tooling is stdlib Python; there is no runtime server,
 network service, or credential handling in this repository.
+
+## Accepted risks
+
+Logged accepted risks for the capability-map generator work (Phases 19 and 20). These are
+record-keeping entries only; they do not change the reporting policy above.
+
+### T-20-SC / T-19-SC (supply chain, high)
+
+**Risk:** third-party package installs could enter the map tooling path.
+
+**Acceptance:** tooling under `tooling/` is stdlib Python only. These phases do not add
+pip, npm, or cargo installs. Avoidance is verified by import scan of the generator and
+checkers, plus Phase 19/20 commit file lists that contain no `requirements.txt`,
+`pyproject.toml`, or `package.json`.
+
+**Why accepted:** this catalogue has no runtime server, and CI does not execute repo
+Python for map generation or checkers.
+
+**Review cadence:** re-confirm each phase that no dependency manifest appeared in the
+phase commit set or under `tooling/`.
+
+### T-20-08 / T-19-05 (FAIL line disclosure, low)
+
+**Risk:** checker and generator FAIL lines print pack slugs and chapter basenames.
+
+**Acceptance:** those strings are already public tree names in this repository. The
+messages name existing pack directories and chapter files; they do not introduce private
+paths or secrets.
