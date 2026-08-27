@@ -31,8 +31,15 @@ def fail(errs: list[str], msg: str) -> None:
     errs.append(msg)
 
 
-def check_rules(data: dict, packs_root: Path | None = None) -> list[str]:
-    """Validate a rules object against packs_root (default PACKS_ROOT)."""
+def check_rules(
+    data: dict,
+    packs_root: Path | None = None,
+    live_map: dict | None = None,
+) -> list[str]:
+    """Validate a rules object against packs_root (default PACKS_ROOT).
+
+    live_map=None loads MAP_PATH; pass an in-memory map to probe without dirtying disk.
+    """
     errs: list[str] = []
     if packs_root is None:
         packs_root = PACKS_ROOT
@@ -119,6 +126,13 @@ def check_rules(data: dict, packs_root: Path | None = None) -> list[str]:
         if not isinstance(pack, str) or not pack:
             fail(errs, f"assignments[{i}]: pack must be a non-empty string")
             continue
+        pack_path = Path(pack)
+        if "/" in pack or "\\" in pack or ".." in pack_path.parts or pack_path.is_absolute():
+            fail(
+                errs,
+                f"assignments[{i}]: pack must be a basename without separator, got {pack!r}",
+            )
+            continue
         if not isinstance(chapter, str) or not chapter:
             fail(errs, f"assignments[{i}]: chapter must be a non-empty string")
             continue
@@ -196,15 +210,21 @@ def check_rules(data: dict, packs_root: Path | None = None) -> list[str]:
                 )
 
     # Fidelity vs live capability-pack-map.json (independent load; no import)
-    if not MAP_PATH.is_file():
-        fail(errs, f"fidelity: map file missing: {MAP_PATH.relative_to(ROOT).as_posix()}")
-        return errs
-    try:
-        with MAP_PATH.open(encoding="utf-8") as fh:
-            live = json.load(fh)
-    except (json.JSONDecodeError, UnicodeDecodeError) as exc:
-        fail(errs, f"fidelity: JSON decode error in map: {exc}")
-        return errs
+    if live_map is None:
+        if not MAP_PATH.is_file():
+            fail(
+                errs,
+                f"fidelity: map file missing: {MAP_PATH.relative_to(ROOT).as_posix()}",
+            )
+            return errs
+        try:
+            with MAP_PATH.open(encoding="utf-8") as fh:
+                live = json.load(fh)
+        except (json.JSONDecodeError, UnicodeDecodeError) as exc:
+            fail(errs, f"fidelity: JSON decode error in map: {exc}")
+            return errs
+    else:
+        live = live_map
     if not isinstance(live, dict):
         fail(errs, "fidelity: map top-level must be an object")
         return errs
@@ -226,11 +246,11 @@ def check_rules(data: dict, packs_root: Path | None = None) -> list[str]:
         return errs
 
     live_names = []
-    for c in live_clusters:
+    for ci, c in enumerate(live_clusters):
         if isinstance(c, dict) and isinstance(c.get("name"), str):
             live_names.append(c["name"])
         else:
-            fail(errs, "fidelity: live cluster entry missing name")
+            fail(errs, f"fidelity: live cluster entry malformed at index {ci} (missing name)")
             live_names.append("<unnamed>")
 
     if cluster_names != live_names:
@@ -259,21 +279,40 @@ def check_rules(data: dict, packs_root: Path | None = None) -> list[str]:
         )
 
     mkeys: dict[tuple[str, str], tuple[str, bool]] = {}
-    for c in live_clusters:
+    for ci, c in enumerate(live_clusters):
         if not isinstance(c, dict):
+            fail(errs, f"fidelity: malformed live cluster at index {ci} (not an object)")
             continue
         cname = c.get("name")
         if not isinstance(cname, str):
+            fail(
+                errs,
+                f"fidelity: malformed live cluster at index {ci} (name not a string)",
+            )
             continue
         chapters = c.get("chapters")
         if not isinstance(chapters, list):
+            fail(
+                errs,
+                f"fidelity: malformed live cluster {cname!r} chapters (not a list)",
+            )
             continue
-        for ch in chapters:
+        for chi, ch in enumerate(chapters):
             if not isinstance(ch, dict):
+                fail(
+                    errs,
+                    f"fidelity: malformed live chapter at {cname!r}[{chi}] "
+                    f"(not an object)",
+                )
                 continue
             pack = ch.get("pack")
             raw = ch.get("chapter")
             if not isinstance(pack, str) or not isinstance(raw, str):
+                fail(
+                    errs,
+                    f"fidelity: malformed live chapter at {cname!r}[{chi}] "
+                    f"(pack/chapter not strings)",
+                )
                 continue
             is_s = raw.endswith(SUPPORT_SUFFIX)
             base = raw[: -len(SUPPORT_SUFFIX)] if is_s else raw
