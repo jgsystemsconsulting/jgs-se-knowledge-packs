@@ -39,3 +39,9 @@ docs/RELEASE-STANDARD-REPO-PLAN.md
 # Interview-prep artifacts (not part of the knowledge-packs product; kept local)
 System_Retirement_SE_Interview*.pptx
 build_retirement_pptx.js
+
+# graphify scratch + volatile build state
+graphify-out/
+.planning/graphs/.rebuild.lock
+.planning/graphs/.last-build-status.json
+.planning/graphs/.last-build-snapshot.json
