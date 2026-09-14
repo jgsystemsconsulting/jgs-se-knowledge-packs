@@ -10,7 +10,8 @@ standard requires for this repo and exits non-zero on any failure:
   1. Required files present (governance, identity, versioning, RR-S furniture).
   2. No leak sentinels (confidential markers, private-key blocks).
   3. No source-material links published (link policy — see docs/LICENSING.md).
-  4. Version single-source agreement: plugin.json == CHANGELOG top == RELEASE-INFO.txt.
+  4. Version single-source agreement: plugin.json == CHANGELOG top ==
+     RELEASE-INFO.txt == the two website product YAMLs under docs/products/website.
   5. Every pack passes tooling/validate_pack.py (structure + licence tier).
   6. SKILLS.md entry count == number of shipped packs.
   7. JGSC + SPDX header present on authored files (NOT pack content).
@@ -117,6 +118,18 @@ def main() -> int:
     ri = (ROOT / "RELEASE-INFO.txt").read_text(encoding="utf-8") if (ROOT / "RELEASE-INFO.txt").is_file() else ""
     m = re.search(r"Version:\s*([0-9]+\.[0-9]+\.[0-9]+)", ri)
     versions["RELEASE-INFO.txt"] = m.group(1) if m else ""
+    # 4a. CR-01: the two website product YAMLs (RR-B-19 website sources) must carry
+    # the release version too. Scoped to exactly these two paths; packs/*/PACK.yaml
+    # uses source_version (different class) and docs carry keep-class history.
+    expected = versions["RELEASE-INFO.txt"]
+    for rel in ("docs/products/website/01-jgs-se-knowledge-packs.yaml",
+                "docs/products/website/catalog.yaml"):
+        body = (ROOT / rel).read_text(encoding="utf-8", errors="ignore") if (ROOT / rel).is_file() else ""
+        m = re.search(r'version:\s*"([0-9]+\.[0-9]+\.[0-9]+)"', body)
+        got = m.group(1) if m else ""
+        if got != expected:
+            fail(errs, f"[version] {rel}: website YAML version '{got}' "
+                       f"!= RELEASE-INFO '{expected}'")
     distinct = {v for v in versions.values() if v}
     if len(distinct) > 1 or "" in versions.values():
         fail(errs, f"[version] disagreement / missing: {versions}")
