@@ -1,0 +1,8 @@
+# Intentional cross-pack chapter-basename overlaps (TOOL-20).
+# One token per line: a chapter basename allowed to appear under more than one
+# pack. Both gates load this file at runtime and fail closed on an unreadable,
+# malformed, or empty file: tooling/check_overlap.py locally, and the
+# "Chapter basename overlap" step in .github/workflows/validate.yml in CI.
+# Keep sorted. '#' comments and blank lines are ignored; every other line must
+# match [A-Za-z0-9.-]+.
+ch01-introduction.md
