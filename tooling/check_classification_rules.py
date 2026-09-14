@@ -254,6 +254,13 @@ def check_rules(
             f"fidelity: rules map_version {map_version!r} != live map {live_mv!r}",
         )
 
+    live_on = live.get("generated_on")
+    if live_on != generated_on:
+        fail(
+            errs,
+            f"fidelity: rules generated_on {generated_on!r} != live map {live_on!r}",
+        )
+
     live_clusters = live.get("clusters")
     if not isinstance(live_clusters, list):
         fail(errs, "fidelity: live map missing clusters list")

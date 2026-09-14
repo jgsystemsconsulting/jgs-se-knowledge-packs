@@ -86,6 +86,22 @@ def main() -> int:
     assert "| 1. Clean | 0 |" in clean, clean
     assert "## 1. Clean" in clean, clean
 
+    # (d) rules-vs-map generated_on drift fails; equal dates yield no date error
+    errs = check_classification_rules.check_rules(
+        rules_fixture(["C1"], on="2026-01-01"),
+        live_map=map_fixture(["C1"], on="2026-02-02"),
+    )
+    assert (
+        "fidelity: rules generated_on '2026-01-01' != live map '2026-02-02'"
+        in errs
+    ), f"date drift not reported: {errs}"
+    errs = check_classification_rules.check_rules(
+        rules_fixture(["C1"]), live_map=map_fixture(["C1"])
+    )
+    assert not any(
+        m.startswith("fidelity: rules generated_on") for m in errs
+    ), f"false date error on equal dates: {errs}"
+
     print("generate-capability-map tests: OK")
     return 0
 
