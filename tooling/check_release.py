@@ -10,6 +10,8 @@ standard requires for this repo and exits non-zero on any failure:
   1. Required files present (governance, identity, versioning, RR-S furniture).
   2. No leak sentinels (confidential markers, private-key blocks).
   3. No source-material links published (link policy — see docs/LICENSING.md).
+     Banned hosts load from tooling/link-policy-hosts.txt at runtime; the list
+     is data, not a literal in this file.
   4. Version single-source agreement: plugin.json == CHANGELOG top ==
      RELEASE-INFO.txt == the two website product YAMLs under docs/products/website.
   5. Every pack passes tooling/validate_pack.py (structure + licence tier).
@@ -43,7 +45,7 @@ REQUIRED_FILES = [
     ".claude-plugin/marketplace.json", ".claude-plugin/plugin.json",
     "install.py", "install.sh", "install.ps1",
     "docs/SOURCE-VETTING.md", "docs/PACK-SPEC.md", "docs/LICENSING.md", "docs/skill-usage.md",
-    "tooling/validate_pack.py", "tooling/build_pack.py",
+    "tooling/validate_pack.py", "tooling/build_pack.py", "tooling/link-policy-hosts.txt",
 ]
 
 # Assembled from fragments so this scanner file does not flag itself as a leak.
@@ -51,7 +53,39 @@ _PK = "PRIVATE" + " KEY"
 LEAK_SENTINELS = ["CONFI" + "DENTIAL", "BEGIN " + _PK, "BEGIN OPENSSH " + _PK, "BEGIN RSA " + _PK]
 
 # Source-material hosts that must never appear as published links (link policy).
-SOURCE_HOSTS = re.compile(r"https?://[^\s)\"']*(sebokwiki|nasa\.gov|ntrs|nist\.gov|govinfo\.gov|omg\.org|ocw\.mit|dodcio|dod\.mil|dla\.mil|eur-lex|europa\.eu|nato\.int|dau\.edu|cisa\.gov|energy\.gov|nde-ed\.org|everyspec\.com)")
+# The list is data: one plain token per line in tooling/link-policy-hosts.txt.
+HOST_DATA = "tooling/link-policy-hosts.txt"
+_HOST_TOKEN = re.compile(r"^[A-Za-z0-9.-]+$")
+
+
+class LinkPolicyDataError(Exception):
+    """The banned-host data file is missing, empty, or malformed (fail closed)."""
+
+
+def load_banned_hosts() -> list[str]:
+    """Load banned-host tokens from HOST_DATA, sorted and de-duplicated.
+
+    Skips blank lines and '#' comments. Any other malformed line, an unreadable
+    file, or zero tokens raises LinkPolicyDataError so the gate fails closed
+    instead of silently unbanning hosts.
+    """
+    try:
+        lines = (ROOT / HOST_DATA).read_text(encoding="utf-8").splitlines()
+    except OSError as e:
+        raise LinkPolicyDataError(f"cannot read {HOST_DATA}: {e}") from e
+    tokens: list[str] = []
+    for lineno, raw in enumerate(lines, 1):
+        line = raw.strip()
+        if not line or line.startswith("#"):
+            continue
+        if not _HOST_TOKEN.fullmatch(line):
+            raise LinkPolicyDataError(
+                f"malformed line in {HOST_DATA} (line {lineno}): {raw!r}"
+            )
+        tokens.append(line)
+    if not tokens:
+        raise LinkPolicyDataError(f"host list empty ({HOST_DATA} has no tokens)")
+    return sorted(set(tokens))
 
 # Authored-file header sentinels (RR-B-03/04) — checked on JGSC-authored files only,
 # never on pack content (which carries the source's licence).
@@ -77,10 +111,11 @@ def main() -> int:
     # false positive against the link/leak policy, which only governs shippable content.
     # .planning/ is internal GSD workflow state that never ships (not in installers or the
     # packaged plugin) and legitimately holds research URLs as vetting evidence — same
-    # precedent as sources/.build.
+    # precedent as sources/.build. .superpowers/ and docs/superpowers/ hold the same
+    # class of ephemeral SDD/planning briefs (spec text quotes banned source URLs).
     SKIP_DIRS = {".git", "sources", ".build", ".playwright-mcp", "__pycache__",
                  ".worktrees", ".ruff_cache", ".pytest_cache", ".venv", "venv", ".idea", ".vscode",
-                 ".planning"}
+                 ".planning", ".superpowers", "superpowers"}
     text_files = [p for p in ROOT.rglob("*")
                   if p.is_file() and p.suffix in {".md", ".py", ".json", ".yaml", ".yml", ".txt", ".sh", ".ps1"}
                   and not (SKIP_DIRS & set(p.parts))]
@@ -98,13 +133,22 @@ def main() -> int:
     # is exempt from the link ban. Marked by `kind: signpost` in its SKILL.md frontmatter.
     signpost_dirs = {p.parent for p in ROOT.glob("packs/*/SKILL.md")
                      if re.search(r"^kind:\s*signpost\s*$", p.read_text(encoding="utf-8", errors="ignore"), re.M)}
-    for p in text_files:
-        if p.parent in signpost_dirs:
-            continue
-        body = p.read_text(encoding="utf-8", errors="ignore")
-        m = SOURCE_HOSTS.search(body)
-        if m:
-            fail(errs, f"[links] source-material URL in {p.relative_to(ROOT)}: {m.group(0)}")
+    try:
+        hosts = load_banned_hosts()
+        source_hosts = re.compile(
+            r"https?://[^\s)\"']*(" + "|".join(re.escape(t) for t in hosts) + ")"
+        )
+    except LinkPolicyDataError as e:
+        fail(errs, f"[links-parity] {e}")
+        source_hosts = None
+    if source_hosts is not None:
+        for p in text_files:
+            if p.parent in signpost_dirs:
+                continue
+            body = p.read_text(encoding="utf-8", errors="ignore")
+            m = source_hosts.search(body)
+            if m:
+                fail(errs, f"[links] source-material URL in {p.relative_to(ROOT)}: {m.group(0)}")
 
     # 4. version single-source
     versions = {}
