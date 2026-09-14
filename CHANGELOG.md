@@ -9,6 +9,23 @@ All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning follows
 [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Added
+
+- `tooling/link-policy-hosts.txt`: single data file with the 18 banned
+  source-material host tokens; `tooling/check_release.py` loads it at runtime
+  instead of carrying a literal.
+- `tooling/test_link_policy.py`: assert-based checks for the host loader, the
+  ban regex (including the four hosts CI previously missed), and parity
+  reporting.
+
+### Changed
+
+- CI link policy enforces from a trusted inline host set and fails on
+  set-divergence from the data file, closing the four-host gap (cisa.gov,
+  energy.gov, nde-ed.org, everyspec.com) that GitHub Actions missed.
+
 ## [1.20.0]: 2026-08-27
 
 FUT-05 byte-stable capability-map generator on the same catalog 63 / dirs 65
