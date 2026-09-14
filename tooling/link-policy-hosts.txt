@@ -1,0 +1,24 @@
+# Banned source-material hosts (link policy, docs/LICENSING.md section 4).
+# One plain token per line; both gates match it as a URL substring after the scheme.
+# Source of truth: tooling/check_release.py loads this file at runtime.
+# CI (.github/workflows/validate.yml) enforces from a trusted inline copy and
+# fails on any set-divergence from this file. Keep sorted. '#' comments and
+# blank lines are ignored; every other line must match [A-Za-z0-9.-]+.
+cisa.gov
+dau.edu
+dla.mil
+dod.mil
+dodcio
+energy.gov
+eur-lex
+europa.eu
+everyspec.com
+govinfo.gov
+nasa.gov
+nato.int
+nde-ed.org
+nist.gov
+ntrs
+ocw.mit
+omg.org
+sebokwiki
