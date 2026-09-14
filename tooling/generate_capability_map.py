@@ -34,6 +34,7 @@ MAP_VERSION_RE = re.compile(r"^\d+\.\d+\.\d+$")
 GENERATED_ON_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 ASSIGNMENT_KEYS = {"pack", "chapter", "cluster", "is_support"}
 NOTE_KEYS = {"pack", "chapter", "note"}
+_CLUSTER_NAME_FORBIDDEN = ("|", "\r", "\n", "\t")
 
 
 def _bad_path_part(value: str) -> bool:
@@ -81,6 +82,12 @@ def generate_map(rules: dict, overrides: dict, generated_on: str) -> dict:
         or not all(isinstance(n, str) and n for n in cluster_names)
     ):
         raise ValueError("rules cluster_names must be a non-empty list of strings")
+    for i, name in enumerate(cluster_names):
+        if any(c in name for c in _CLUSTER_NAME_FORBIDDEN):
+            raise ValueError(
+                f"rules cluster_names[{i}] contains a forbidden character "
+                f"(|, CR, LF, tab): {name!r}"
+            )
     cluster_name_set = set(cluster_names)
 
     assignments = rules.get("assignments")
@@ -257,12 +264,14 @@ def render_md(map_obj: dict, header_prefix: str) -> str:
     for i, cluster in enumerate(clusters, start=1):
         n = len(cluster["chapters"])
         total += n
-        lines.append(f"| {i}. {cluster['name']} | {n} |")
+        name = cluster["name"].replace("|", "\\|")
+        lines.append(f"| {i}. {name} | {n} |")
     lines.append(f"| **Total** | **{total}** |")
     lines.append("")
 
     for i, cluster in enumerate(clusters, start=1):
-        lines.append(f"## {i}. {cluster['name']}")
+        name = cluster["name"].replace("|", "\\|")
+        lines.append(f"## {i}. {name}")
         lines.append("")
         lines.append("| Pack | Chapter | Why it fits / one-line value |")
         lines.append("|---|---|---|")

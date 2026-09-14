@@ -25,6 +25,7 @@ PACKS_ROOT = ROOT / "packs"
 SUPPORT_SUFFIX = " (support file)"
 MAP_VERSION_RE = re.compile(r"^\d+\.\d+\.\d+$")
 GENERATED_ON_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+_CLUSTER_NAME_FORBIDDEN = ("|", "\r", "\n", "\t")
 
 
 def fail(errs: list[str], msg: str) -> None:
@@ -94,6 +95,13 @@ def check_rules(
     ):
         fail(errs, "envelope: cluster_names must be a list of non-empty strings")
         cluster_names = []
+    for i, name in enumerate(cluster_names):
+        if any(c in name for c in _CLUSTER_NAME_FORBIDDEN):
+            fail(
+                errs,
+                f"envelope: cluster_names[{i}] contains a forbidden character "
+                f"(|, CR, LF, tab): {name!r}",
+            )
     cluster_name_set = set(cluster_names)
 
     assignments = data.get("assignments")

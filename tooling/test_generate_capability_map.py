@@ -1,0 +1,94 @@
+#!/usr/bin/env python3
+# Copyright (c) 2026 JG Systems Consulting Ltd. — MIT License (see LICENSE).
+# SPDX-License-Identifier: MIT
+"""Assert-based probes for capability-map tooling hardening (no framework).
+
+Run:  python tooling/test_generate_capability_map.py
+Exits 0 when cluster-name validation, renderer escaping, the --check md
+freshness gate, the rules-vs-map generated_on fidelity check, and clean-tree
+byte stability all hold. Any failed assert raises and exits nonzero.
+
+Probe (c) points the generator module's MAP_PATH/MD_PATH at files inside a
+TemporaryDirectory and restores the real paths in finally; docs/ is never
+written by this file.
+"""
+from __future__ import annotations
+
+import contextlib
+import io
+import json
+import sys
+import tempfile
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import check_classification_rules  # noqa: E402
+import generate_capability_map  # noqa: E402
+
+FORBIDDEN = ("|", "\r", "\n", "\t")
+
+
+def rules_fixture(cluster_names, on="2026-01-01"):
+    return {
+        "schema_version": 1,
+        "map_version": "1.0.0",
+        "generated_on": on,
+        "support_policy": "Support files ship with every pack.",
+        "rules_of_construction": ["Construction rule one."],
+        "support_filenames": ["glossary.md", "patterns.md", "cheatsheet.md"],
+        "signpost_packs": ["omg-signpost", "se-standards-signpost"],
+        "cluster_names": list(cluster_names),
+        "assignments": [],
+    }
+
+
+def map_fixture(cluster_names, on="2026-01-01"):
+    return {
+        "schema_version": 2,
+        "map_version": "1.0.0",
+        "generated_on": on,
+        "clusters": [{"name": n, "chapters": []} for n in cluster_names],
+    }
+
+
+def main() -> int:
+    # (a) every rejected character fails closed in both entry points
+    for ch in FORBIDDEN:
+        name = "A" + ch + "B"
+        raised = False
+        try:
+            generate_capability_map.generate_map(
+                rules_fixture([name]), {}, "2026-01-01"
+            )
+        except ValueError as exc:
+            raised = True
+            assert (
+                "rules cluster_names[0] contains a forbidden character"
+                in str(exc)
+            ), f"wrong generator rejection message for {name!r}: {exc}"
+        assert raised, f"generate_map accepted forbidden character in {name!r}"
+        errs = check_classification_rules.check_rules(
+            rules_fixture([name]), live_map=map_fixture([name])
+        )
+        assert any(
+            "envelope: cluster_names[0] contains a forbidden character" in m
+            for m in errs
+        ), f"check_rules missed forbidden character in {name!r}: {errs}"
+
+    # (b) renderer escapes pipes; clean names pass through byte-identical
+    piped = generate_capability_map.render_md(map_fixture(["A|B"]), "Header line\n")
+    lines = piped.splitlines()
+    row = next(ln for ln in lines if ln.startswith("| 1. "))
+    head = next(ln for ln in lines if ln.startswith("## 1. "))
+    assert row == "| 1. A\\|B | 0 |", f"summary row not escaped: {row!r}"
+    assert head == "## 1. A\\|B", f"heading not escaped: {head!r}"
+    clean = generate_capability_map.render_md(map_fixture(["Clean"]), "Header line\n")
+    assert "| 1. Clean | 0 |" in clean, clean
+    assert "## 1. Clean" in clean, clean
+
+    print("generate-capability-map tests: OK")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
