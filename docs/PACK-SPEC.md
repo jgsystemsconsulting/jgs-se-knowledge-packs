@@ -94,6 +94,9 @@ cp -r jgs-se-knowledge-packs/packs/sebok ~/.claude/skills/sebok
 python tooling/validate_pack.py packs/<slug>
 ```
 
+Signpost packs (`kind: signpost` in SKILL.md, e.g. `packs/omg-signpost`) skip the
+LICENSE and `chapters/` checks; every other check still applies.
+
 Checks: required files present, frontmatter valid, every chapter link resolves,
 `PACK.yaml` mandatory fields filled, and `license_tier ∈ {1,2,3}`. CI runs this on
 every pack on every PR.
