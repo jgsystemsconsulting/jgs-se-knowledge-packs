@@ -3,9 +3,12 @@
 #
 # RR-S-12 CI quality gate. Self-contained (inline bash + python3 stdlib only); never
 # executes checked-out repository code. Runs on push to main and on every PR.
-# Mirrors tooling/check_release.py (leak sentinels, link policy with signpost
-# exemption, frontmatter lint, catalog validity). Both leak and link gates skip
-# .planning identically (internal GSD workflow state; never ships).
+# Leak sentinels, link policy with signpost exemption, frontmatter lint, catalog
+# validity. Link policy enforces from a trusted inline host set and asserts
+# set-parity against tooling/link-policy-hosts.txt (the data file the local gate
+# tooling/check_release.py loads) before scanning; any divergence fails the build.
+# Both leak and link gates skip .planning identically (internal GSD workflow state;
+# never ships).
 name: validate
 
 on:
@@ -37,12 +40,54 @@ jobs:
       - name: Link policy check (no source-material URLs)
         run: |
           python3 - <<'PY'
-          # Mirror tooling/check_release.py: source-material URLs are banned everywhere
-          # EXCEPT inside a `kind: signpost` pack, which is pure citation by design.
+          # Source-material URLs are banned everywhere EXCEPT inside a `kind: signpost`
+          # pack (pure citation by design). Enforcement uses the trusted inline
+          # TRUSTED_HOSTS copy below, never the PR-editable data file. The parity
+          # assert fails the build if tooling/link-policy-hosts.txt (loaded by the
+          # local gate tooling/check_release.py) drifts from this set in either
+          # direction; a missing or unparseable data file counts as divergence.
           import re, sys, pathlib
-          HOSTS = re.compile(r"https?://[^\s)\"']*(sebokwiki|nasa\.gov|ntrs|nist\.gov|"
-                             r"govinfo\.gov|omg\.org|ocw\.mit|dodcio|dod\.mil|dla\.mil|"
-                             r"eur-lex|europa\.eu|nato\.int|dau\.edu)")
+          TRUSTED_HOSTS = frozenset({
+              "cisa.gov", "dau.edu", "dla.mil", "dod.mil", "dodcio", "energy.gov",
+              "eur-lex", "europa.eu", "everyspec.com", "govinfo.gov", "nasa.gov",
+              "nato.int", "nde-ed.org", "nist.gov", "ntrs", "ocw.mit", "omg.org",
+              "sebokwiki",
+          })
+          DATA_PATH = "tooling/link-policy-hosts.txt"
+          TOKEN = re.compile(r"^[A-Za-z0-9.-]+$")
+
+          def parse_host_file():
+              """Returns (tokens, error); tokens is None exactly when error is set."""
+              try:
+                  lines = pathlib.Path(DATA_PATH).read_text(encoding="utf-8").splitlines()
+              except OSError as e:
+                  return None, f"cannot read {DATA_PATH}: {e}"
+              tokens = []
+              for lineno, raw in enumerate(lines, 1):
+                  line = raw.strip()
+                  if not line or line.startswith("#"):
+                      continue
+                  if not TOKEN.fullmatch(line):
+                      return None, (f"malformed line in {DATA_PATH} "
+                                    f"(line {lineno}): {raw!r}")
+                  tokens.append(line)
+              return tokens, None
+
+          file_tokens, err = parse_host_file()
+          if file_tokens is None:
+              print(f"::error::link-policy parity: {err}")
+              sys.exit(1)
+
+          only_in_file = sorted(set(file_tokens) - TRUSTED_HOSTS)
+          only_in_workflow = sorted(TRUSTED_HOSTS - set(file_tokens))
+          if only_in_file or only_in_workflow:
+              print("::error::link-policy parity: tooling/link-policy-hosts.txt differs "
+                    "from workflow enforcement copy "
+                    f"(only-in-file={only_in_file} only-in-workflow={only_in_workflow})")
+              sys.exit(1)
+
+          HOSTS = re.compile(r"https?://[^\s)\"']*("
+                             + "|".join(re.escape(t) for t in sorted(TRUSTED_HOSTS)) + ")")
           root = pathlib.Path(".")
           signpost_dirs = {
               p.parent for p in root.glob("packs/*/SKILL.md")
@@ -51,7 +96,8 @@ jobs:
           fails = 0
           for p in root.rglob("*"):
               # .planning: internal GSD workflow state, never ships, holds vetting evidence URLs.
-              if p.suffix not in {".md", ".json", ".yaml", ".yml", ".txt"} or ".git" in p.parts or ".planning" in p.parts:
+              # superpowers: process docs, same rationale (coordinator amendment per Task 2 SKIP_DIRS).
+              if p.suffix not in {".md", ".json", ".yaml", ".yml", ".txt"} or ".git" in p.parts or ".planning" in p.parts or "superpowers" in p.parts:
                   continue
               if p.parent in signpost_dirs:
                   continue
