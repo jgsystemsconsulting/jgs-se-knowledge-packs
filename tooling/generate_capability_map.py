@@ -13,6 +13,8 @@ checkers (H-07). Stdlib only.
 Usage:
   python tooling/generate_capability_map.py --generated-on YYYY-MM-DD [--sync-md]
   python tooling/generate_capability_map.py --generated-on YYYY-MM-DD --check
+
+`--check` also asserts docs/capability-pack-map.md freshness and writes nothing when it is stale or missing.
 """
 from __future__ import annotations
 
@@ -355,6 +357,23 @@ def main(argv: list[str] | None = None) -> int:
                     )
             return 1
         print("PASS: generated map matches on-disk capability-pack-map.json")
+        if not MD_PATH.is_file():
+            print("FAIL: md check: capability-pack-map.md missing")
+            return 1
+        try:
+            existing = MD_PATH.read_text(encoding="utf-8")
+            fresh = render_md(built, _split_md_header(existing))
+        except (OSError, ValueError) as exc:
+            print(f"FAIL: md check: {exc}")
+            return 1
+        if fresh != existing:
+            print(
+                "FAIL: capability-pack-map.md is stale; rerun "
+                "tooling/generate_capability_map.py --generated-on "
+                f"{args.generated_on} --sync-md"
+            )
+            return 1
+        print("PASS: capability-pack-map.md is fresh")
         return 0
 
     # Prepare md text before any write when --sync-md so a missing ## Summary

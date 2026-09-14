@@ -102,6 +102,93 @@ def main() -> int:
         m.startswith("fidelity: rules generated_on") for m in errs
     ), f"false date error on equal dates: {errs}"
 
+    # (c) --check md freshness: stale, missing, missing marker, fresh
+    tmp = tempfile.TemporaryDirectory()
+    real_map_path = generate_capability_map.MAP_PATH
+    real_md_path = generate_capability_map.MD_PATH
+    try:
+        generate_capability_map.MAP_PATH = Path(tmp.name) / "map.json"
+        generate_capability_map.MD_PATH = Path(tmp.name) / "map.md"
+        rules = generate_capability_map._load_json(
+            generate_capability_map.RULES_PATH, "rules"
+        )
+        overrides = generate_capability_map._load_json(
+            generate_capability_map.OVERRIDES_PATH, "overrides"
+        )
+        built = generate_capability_map.generate_map(rules, overrides, "2026-01-01")
+        generate_capability_map.MAP_PATH.write_text(
+            generate_capability_map.dumps_map(built), encoding="utf-8"
+        )
+        good_md = generate_capability_map.render_md(built, "Probe header\n")
+
+        def run_check():
+            buf = io.StringIO()
+            with contextlib.redirect_stdout(buf):
+                rc = generate_capability_map.main(
+                    ["--generated-on", "2026-01-01", "--check"]
+                )
+            return rc, buf.getvalue()
+
+        generate_capability_map.MD_PATH.write_text(
+            good_md.replace("## Summary", "## Summary\n<!-- tampered -->", 1),
+            encoding="utf-8",
+        )
+        rc, out = run_check()
+        assert rc == 1, f"stale md did not fail: rc={rc}"
+        assert "capability-pack-map.md is stale" in out, out
+
+        generate_capability_map.MD_PATH.unlink()
+        rc, out = run_check()
+        assert rc == 1, f"missing md did not fail: rc={rc}"
+        assert "md check: capability-pack-map.md missing" in out, out
+
+        generate_capability_map.MD_PATH.write_text("no marker here\n", encoding="utf-8")
+        rc, out = run_check()
+        assert rc == 1, f"missing ## Summary did not fail: rc={rc}"
+        assert "md check:" in out and "## Summary" in out, out
+
+        generate_capability_map.MD_PATH.write_text(good_md, encoding="utf-8")
+        rc, out = run_check()
+        assert rc == 0, f"fresh md failed: rc={rc} out={out}"
+        assert "PASS: capability-pack-map.md is fresh" in out, out
+    finally:
+        generate_capability_map.MAP_PATH = real_map_path
+        generate_capability_map.MD_PATH = real_md_path
+        tmp.cleanup()
+
+    # (e) clean tree stays byte-stable green
+    disk_map = json.loads(
+        generate_capability_map.MAP_PATH.read_text(encoding="utf-8")
+    )
+    disk_on = disk_map["generated_on"]
+    disk_rules = generate_capability_map._load_json(
+        generate_capability_map.RULES_PATH, "rules"
+    )
+    assert disk_rules["generated_on"] == disk_on, "rules vs map date drift"
+    names = disk_rules["cluster_names"]
+    assert len(names) == 32, f"expected 32 cluster names, got {len(names)}"
+    assert not any(
+        c in n for n in names for c in FORBIDDEN
+    ), "live cluster name carries a forbidden character"
+    built = generate_capability_map.generate_map(
+        disk_rules,
+        generate_capability_map._load_json(
+            generate_capability_map.OVERRIDES_PATH, "overrides"
+        ),
+        disk_on,
+    )
+    disk_md = generate_capability_map.MD_PATH.read_text(encoding="utf-8")
+    assert generate_capability_map.render_md(
+        built, generate_capability_map._split_md_header(disk_md)
+    ) == disk_md, "fresh render differs from on-disk capability-pack-map.md"
+    buf = io.StringIO()
+    with contextlib.redirect_stdout(buf):
+        rc = generate_capability_map.main(["--generated-on", disk_on, "--check"])
+    out = buf.getvalue()
+    assert rc == 0, f"--check failed on clean tree: rc={rc} out={out}"
+    assert "PASS: generated map matches on-disk capability-pack-map.json" in out, out
+    assert "PASS: capability-pack-map.md is fresh" in out, out
+
     print("generate-capability-map tests: OK")
     return 0
 
