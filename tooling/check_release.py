@@ -26,6 +26,11 @@ standard requires for this repo and exits non-zero on any failure:
 
 stdlib only. This is a LOCAL/trusted gate and may run repo code; the CI workflow
 (.github/workflows/validate.yml) inlines its own checks and never executes repo code.
+CI-covered: version, index, overlap, map/rules data invariants. Local-only required
+before tag: pack validation, packs.html freshness, full map/rules checks, replay.
+
+Pre-tag rule: run this gate at the exact commit being tagged and require a PASS
+line whose sha matches that commit (a `@ no-git` receipt never satisfies it).
 
 Usage:  python tooling/check_release.py
 """
@@ -33,6 +38,7 @@ from __future__ import annotations
 
 import json
 import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -365,7 +371,20 @@ def main() -> int:
         for e in errs:
             print(f"  - {e}")
         return 1
-    print("RELEASE CHECK: PASS — repo is release-ready against the mechanical gate.")
+    # PASS receipt: version + short sha of the exact commit the gate ran at, so
+    # a pasted transcript is verifiable. Pre-tag rule (docstring): require the
+    # sha to match the commit being tagged. `@ no-git` is distinct and can
+    # never satisfy that match.
+    version = versions["RELEASE-INFO.txt"]
+    try:
+        short_sha = subprocess.run(
+            ["git", "rev-parse", "--short", "HEAD"],
+            capture_output=True, text=True, cwd=ROOT, check=True,
+        ).stdout.strip()
+        receipt = f"v{version} @ {short_sha}"
+    except Exception:
+        receipt = f"v{version} @ no-git"
+    print(f"RELEASE CHECK: PASS ({receipt})")
     return 0
 
 
