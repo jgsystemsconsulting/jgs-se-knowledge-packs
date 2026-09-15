@@ -13,6 +13,19 @@ All notable changes to this project are documented here. Format follows
 
 ### Added
 
+- `.github/workflows/validate.yml`: four inline-stdlib CI steps twinned to the
+  local release gate: `Version single-source` (checks 4 + 4a, both website
+  YAMLs included), `SKILLS index count` (check 6), `Chapter basename overlap`
+  (check 8), and `Map and classification data invariants` (pure-data subset of
+  checks 9 and 10).
+- `tooling/overlap-whitelist.txt`: shared data file for intentional
+  cross-pack chapter-basename overlaps, loaded fail-closed by both
+  `tooling/check_overlap.py` and the CI overlap step.
+- `tooling/test_ci_gate.py`: assert-based probe that extracts the four new
+  heredocs from the workflow by pinned step name, runs negative demos and
+  positive clean-tree runs, and asserts regex literal parity with the local
+  twins (`check_release.py`, `check_capability_map.py`,
+  `check_classification_rules.py`).
 - `tooling/link-policy-hosts.txt`: single data file with the 18 banned
   source-material host tokens; `tooling/check_release.py` loads it at runtime
   instead of carrying a literal.
@@ -22,6 +35,12 @@ All notable changes to this project are documented here. Format follows
 
 ### Changed
 
+- `tooling/check_overlap.py` loads its whitelist from
+  `tooling/overlap-whitelist.txt` (fail-closed) instead of an in-code constant.
+- `tooling/check_release.py` PASS banner now carries the version and short
+  commit sha (`RELEASE CHECK: PASS (v<version> @ <short-sha>)`; `@ no-git`
+  when git is unavailable), and its docstring records the CI-covered vs
+  local-only split plus the pre-tag sha-match rule.
 - CI link policy enforces from a trusted inline host set and fails on
   set-divergence from the data file, closing the four-host gap (cisa.gov,
   energy.gov, nde-ed.org, everyspec.com) that GitHub Actions missed.
