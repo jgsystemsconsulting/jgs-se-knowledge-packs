@@ -121,9 +121,13 @@ def render(rows: list[dict], ver: str) -> str:
 <meta property="og:title" content="Pack reference, JGS SE Knowledge Packs">
 <meta property="og:description" content="Browse and filter all {n_content} systems-engineering knowledge-pack skills by slug, source licence, and coverage.">
 <meta property="og:url" content="{PAGES}/packs.html">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="{PAGES}/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Pack reference, JGS SE Knowledge Packs">
 <meta name="twitter:description" content="Browse and filter all {n_content} systems-engineering knowledge-pack skills.">
+<meta name="twitter:image" content="{PAGES}/assets/og-default.png">
 <style>
 __BRAND_TOKENS__
 *{{box-sizing:border-box}}
