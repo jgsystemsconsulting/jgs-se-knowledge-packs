@@ -179,7 +179,7 @@ Carry-forward status from [2026-09-14 packages](2026-09-14-jgs-se-knowledge-pack
 - **id**: P14
 - **name**: packs-table-polish
 - **size**: S
-- **status**: ready
+- **status**: done
 - **promoted_ids**: []
 - **corroboration**: 1 (cohesion)
 - **deps**: P13
