@@ -54,30 +54,36 @@ h1{font-family:var(--mono);color:var(--text-hi);letter-spacing:-0.02em;font-weig
 .mast .label span{color:var(--text)}
 header.hd{border-bottom:1px solid var(--line);padding-top:var(--pad-section);padding-bottom:2rem}
 header.hd p{margin:1rem 0 0;max-width:64ch;color:var(--text)}
-.tools{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:1.6rem}
-input#q{font-family:var(--mono);font-size:0.9rem;background:var(--ink-2);border:1px solid var(--line);color:var(--text-hi);padding:11px 14px;min-width:min(420px,100%);}
+.hd-still{margin:1.25rem 0 0;max-width:36rem;border:1px solid var(--line);background:var(--ink-2);overflow:hidden}
+.hd-still img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:left center}
+.hd-still figcaption{font-family:var(--mono);font-size:0.6875rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--mute);padding:8px 12px;border-top:1px solid var(--line)}
+.tools{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin-top:1.4rem;padding:10px 12px;background:var(--ink-2);border:1px solid var(--line)}
+input#q{font-family:var(--mono);font-size:0.9rem;background:var(--ink);border:1px solid var(--line);color:var(--text-hi);padding:10px 12px;flex:1 1 16rem;min-width:min(280px,100%)}
 input#q::placeholder{color:var(--mute)}
-#count{font-family:var(--mono);font-size:0.75rem;color:var(--mute-2);text-transform:uppercase;letter-spacing:0.1em}
-.nav{margin-top:1.4rem;font-family:var(--mono);font-size:0.8rem}
-section{padding-top:2rem;padding-bottom:var(--pad-section)}
-table{width:100%;border-collapse:collapse;border:1px solid var(--line)}
-thead th{font-family:var(--mono);text-transform:uppercase;letter-spacing:0.1em;font-size:0.6875rem;font-weight:700;color:var(--mute);text-align:left;padding:12px 16px;background:var(--ink-2);border-bottom:1px solid var(--line);position:sticky;top:0}
-tbody td{padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:top;font-size:0.9rem}
+#count{font-family:var(--mono);font-size:0.75rem;color:var(--mute);text-transform:uppercase;letter-spacing:0.1em;white-space:nowrap}
+.nav{margin-top:1.15rem;font-family:var(--mono);font-size:0.8rem}
+section{padding-top:1.75rem;padding-bottom:var(--pad-section)}
+table{width:100%;border-collapse:collapse;border:1px solid var(--line);background:var(--ink)}
+thead th{font-family:var(--mono);text-transform:uppercase;letter-spacing:0.1em;font-size:0.6875rem;font-weight:700;color:var(--mute);text-align:left;padding:12px 16px;background:var(--ink-2);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:2;box-shadow:0 1px 0 var(--line)}
+tbody td{padding:13px 16px;border-bottom:1px solid var(--line);vertical-align:top;font-size:0.9rem}
+tbody tr:hover td{background:var(--ink-3)}
 tbody tr:last-child td{border-bottom:none}
 td.slug a{font-family:var(--mono);font-weight:700;color:var(--text-hi);font-size:0.85rem;white-space:nowrap}
 td.lic{font-family:var(--mono);font-size:0.75rem;color:var(--mute-2);white-space:nowrap}
 td.desc{color:var(--text)}
 tr.hidden{display:none}
-#empty{display:none;padding:24px 16px;color:var(--mute-2);font-family:var(--mono);font-size:0.85rem}
+#empty{display:none;padding:24px 16px;color:var(--mute-2);font-family:var(--mono);font-size:0.85rem;border:1px solid var(--line);background:var(--ink-2);margin-top:12px}
 footer{padding-top:32px;padding-bottom:48px;color:var(--mute);border-top:1px solid var(--line)}
 footer .label{display:block;margin-bottom:8px}
 @media (max-width:760px){
   thead{display:none}
   table,tbody,tr,td{display:block;width:100%}
-  table{border:none}
-  tbody tr{border:1px solid var(--line);margin-bottom:1px;padding:6px 0;background:var(--ink-2)}
+  table{border:none;background:transparent}
+  tbody tr{border:1px solid var(--line);margin-bottom:8px;padding:8px 0;background:var(--ink-2)}
+  tbody tr:hover td{background:transparent}
   tbody td{border-bottom:none;padding:6px 16px}
   td.lic{color:var(--mute);white-space:normal}
+  .hd-still{max-width:100%}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
@@ -98,6 +104,11 @@ footer .label{display:block;margin-bottom:8px}
   <p>Every knowledge pack in the release, with its source licence and what it covers. Each pack
   is an Agent Skill you invoke by its slug. Type to filter by name, publisher, licence, or topic.
   Click a slug to open its <code>SKILL.md</code> on GitHub.</p>
+  <figure class="hd-still">
+    <img src="assets/still-catalogue.png" width="1200" height="675"
+      alt="Drafting-sheet still of the catalogue families and pack counts.">
+    <figcaption>FIG.CAT · Catalogue families</figcaption>
+  </figure>
   <div class="tools">
     <input id="q" type="search" placeholder="filter, e.g. nasa, risk, public domain, CC BY" aria-label="Filter packs">
     <span id="count"></span>
