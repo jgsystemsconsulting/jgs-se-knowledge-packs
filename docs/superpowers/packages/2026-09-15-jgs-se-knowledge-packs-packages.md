@@ -88,7 +88,7 @@ Carry-forward status from [2026-09-14 packages](2026-09-14-jgs-se-knowledge-pack
 - **id**: P11
 - **name**: labelled-site-stills
 - **size**: S
-- **status**: ready
+- **status**: done
 - **promoted_ids**: []
 - **corroboration**: 1 (value)
 - **deps**: P9, P10
