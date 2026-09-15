@@ -23,11 +23,19 @@ standard requires for this repo and exits non-zero on any failure:
      (MAP-21-01; local/trusted).
  11. Capability-map generator replay via generate_capability_map.main() --check
      (MAP-21-05; local/trusted; uses on-disk map generated_on).
+  12. HTML self-containment ([html-assets]): every docs/*.html page is scanned
+     for external http(s) asset references; hosts must be exactly
+     FIRST_PARTY_HOSTS (github.com, jgsystemsconsulting.github.io) with empty
+     userinfo; data: URIs and relative paths are allowed; protocol-relative
+     URLs fail; zero pages fails closed.
+     Plus brand-token parity ([brand-tokens], P13): the exclusive BRAND-TOKENS
+     slice extracted from docs/index.html must appear verbatim in
+     docs/packs.html.
 
 stdlib only. This is a LOCAL/trusted gate and may run repo code; the CI workflow
 (.github/workflows/validate.yml) inlines its own checks and never executes repo code.
-CI-covered: version, index, overlap, map/rules data invariants. Local-only required
-before tag: pack validation, packs.html freshness, full map/rules checks, replay.
+CI-covered: version, index, overlap, map/rules data invariants, html-assets. Local-only
+required before tag: pack validation, packs.html freshness, full map/rules checks, replay.
 
 Pre-tag rule: run this gate at the exact commit being tagged and require a PASS
 line whose sha matches that commit (a `@ no-git` receipt never satisfies it).
@@ -41,6 +49,7 @@ import re
 import subprocess
 import sys
 from pathlib import Path
+from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -97,6 +106,159 @@ def load_banned_hosts() -> list[str]:
 # never on pack content (which carries the source's licence).
 HEADER_SENTINEL = "Copyright (c) 2026 JG Systems Consulting Ltd."
 SPDX_SENTINEL = "SPDX-License-Identifier: MIT"
+
+# P12 html-assets: first-party allowlist for the docs/*.html self-containment scan.
+FIRST_PARTY_HOSTS = {"github.com", "jgsystemsconsulting.github.io"}
+
+# P13 brand-token markers; the same literals are pinned in test_ci_gate.HTML_ASSET_PAIR.
+BRAND_BEGIN = "/* BRAND-TOKENS:BEGIN"
+BRAND_END = "/* BRAND-TOKENS:END"
+
+# Quote-aware open-tag slicer: does not stop on > inside quoted attribute values.
+TAG_SLICE = re.compile(
+    r"<(link|img|script|iframe|source|video|audio|embed|track|object|base|meta)\b"
+    r"(?:\"[^\"]*\"|'[^']*'|[^>])*>",
+    re.I,
+)
+# Three-branch attribute extractor. Do NOT merge into one conditional named-group
+# quote: an empty optional quote group can take the wrong branch and yield an
+# empty value for unquoted attributes. Value = first non-None of groups d, s, u.
+ATTR = re.compile(
+    r"""(?P<name>href|src|data|srcset|content|http-equiv|property|name)\s*=\s*"""
+    r"""(?:"(?P<d>[^"]*)"|'(?P<s>[^']*)'|(?P<u>[^\s>]+))""",
+    re.I,
+)
+# Inline CSS: url(...) with optional quotes, and @import in all three forms.
+# Intentionally over-broad (a url( inside an inline script string is flagged);
+# that direction is fail closed.
+CSS_URL = re.compile(r"""url\(\s*(['"]?)([^)'"\s]+)\1\s*\)""", re.I)
+CSS_IMPORT = re.compile(
+    r"""@import\s+(?:url\(\s*(['"]?)([^)'"\s]+)\1\s*\)|(['"])([^'"]+)\3)\s*;?""",
+    re.I,
+)
+
+_META_IMAGE_PROPS = {"og:image", "og:image:secure_url"}
+_META_IMAGE_NAMES = {"twitter:image", "twitter:image:src"}
+_HREF_ELEMENTS = {"link", "base"}
+_SRC_ELEMENTS = {"img", "script", "iframe", "source", "video", "audio", "embed", "track"}
+
+
+def scan_html_external_assets(text: str) -> list[str]:
+    """Return the distinct external asset URLs in one HTML document.
+
+    Two passes over the raw text, case-insensitive; regex, not html.parser, so
+    the literals pin byte-identical between this gate and the CI twin
+    (tooling/test_ci_gate.py). Ambiguities resolve toward failing.
+
+    Pass one slices candidate open tags (quote-aware, so a > inside a quoted
+    attribute value does not cut the tag) and reads the asset attributes from
+    a closed taxonomy: link/base href; img/script/iframe/source/video/audio/
+    embed/track src; object data; srcset on any sliced tag (comma-split, first
+    whitespace token per group); meta property og:image / og:image:secure_url
+    and meta name twitter:image / twitter:image:src content; and meta
+    http-equiv=refresh (URL after url= inside content, case-insensitive, with
+    surrounding quotes stripped). Anchors (<a href>) are never scanned: the
+    github.com blob links in the page bodies are navigation, not fetched
+    assets. <base> is included because an absolute base href silently re-hosts
+    every relative asset on the page.
+
+    Pass two sweeps inline CSS: url(...) and @import in double-quote,
+    single-quote, and url(...) forms.
+
+    Classification, in order: empty/# skipped; data: allowed (the favicon
+    embeds http://www.w3.org/2000/svg inside a data URI and must never fail);
+    http(s) allowed only on an exact FIRST_PARTY_HOSTS host with empty
+    userinfo; protocol-relative //host/x fails; any relative form allowed
+    without existence checks.
+
+    Self-host convention: images under docs/assets/, fonts under docs/fonts/,
+    relative references only. Accepted limits: no HTML entity decoding, the
+    closed taxonomy above, no on-disk resolution of relative paths.
+    """
+    def is_external(url: str) -> bool:
+        url = url.strip()
+        if not url or url.startswith("#") or url[:5].lower() == "data:":
+            return False
+        if url[:7].lower() == "http://" or url[:8].lower() == "https://":
+            parts = urlsplit(url)
+            host = (parts.hostname or "").lower()
+            if host in FIRST_PARTY_HOSTS and not parts.username and not parts.password:
+                return False
+            return True
+        return url.startswith("//")
+
+    found: list[str] = []
+
+    def consider(raw: str) -> None:
+        url = raw.strip()
+        if is_external(url) and url not in found:
+            found.append(url)
+
+    for m in TAG_SLICE.finditer(text):
+        tag = m.group(0)
+        elem = m.group(1).lower()
+        attrs = {}
+        for a in ATTR.finditer(tag):
+            value = a.group("d")
+            if value is None:
+                value = a.group("s")
+            if value is None:
+                value = a.group("u")
+            name = a.group("name").lower()
+            if name not in attrs:  # first attribute wins, matching browsers
+                attrs[name] = value
+        if elem in _HREF_ELEMENTS and "href" in attrs:
+            consider(attrs["href"])
+        if elem in _SRC_ELEMENTS and "src" in attrs:
+            consider(attrs["src"])
+        if elem == "object" and "data" in attrs:
+            consider(attrs["data"])
+        if "srcset" in attrs:
+            for group in attrs["srcset"].split(","):
+                tokens = group.strip().split()
+                if tokens:
+                    consider(tokens[0])
+        if elem == "meta":
+            prop = attrs.get("property", "").lower()
+            name_attr = attrs.get("name", "").lower()
+            if prop in _META_IMAGE_PROPS or name_attr in _META_IMAGE_NAMES:
+                if "content" in attrs:
+                    consider(attrs["content"])
+            elif attrs.get("http-equiv", "").strip().lower() == "refresh" and "content" in attrs:
+                m2 = re.search(r"url\s*=\s*(.*)", attrs["content"], re.I)
+                if m2:
+                    target = m2.group(1).strip()
+                    if len(target) >= 2 and target[0] in "\"'" and target[-1] == target[0]:
+                        target = target[1:-1]
+                    consider(target)
+
+    for m in CSS_URL.finditer(text):
+        consider(m.group(2))
+    for m in CSS_IMPORT.finditer(text):
+        consider(m.group(2) if m.group(2) is not None else m.group(4))
+
+    return found
+
+
+def slice_brand_tokens(text: str) -> str:
+    """Exclusive interior between the BRAND-TOKENS BEGIN and END marker lines
+    in docs/index.html. Same algorithm as gen_packs_page.slice_brand_tokens,
+    inlined by twin convention (this gate never imports generator code);
+    raises ValueError on missing, duplicated, reversed, or unbalanced markers.
+    """
+    lines = text.splitlines()
+    begins = [i for i, ln in enumerate(lines) if ln.startswith(BRAND_BEGIN)]
+    ends = [i for i, ln in enumerate(lines) if ln.startswith(BRAND_END)]
+    if len(begins) != 1 or len(ends) != 1:
+        raise ValueError(
+            f"docs/index.html: expected exactly one BRAND-TOKENS BEGIN and one END "
+            f"marker line, found {len(begins)} BEGIN / {len(ends)} END"
+        )
+    if begins[0] >= ends[0]:
+        raise ValueError(
+            "docs/index.html: BRAND-TOKENS:BEGIN must precede BRAND-TOKENS:END"
+        )
+    return "\n".join(lines[begins[0] + 1:ends[0]])
 
 
 def fail(errs: list[str], msg: str) -> None:
@@ -209,8 +371,10 @@ def main() -> int:
         if not re.search(r"Prerequisites|Requirements|^compatibility:", body, re.M | re.I):
             fail(errs, f"[rr-s-13:{pack.name}] SKILL.md missing a prerequisites marker")
 
-    # 5c. RR-B-30: docs/packs.html exists, is em-dash-free, has no third-party asset, and
-    #     matches a fresh generation from SKILLS.md (generated artifact must not drift, RR-B-00).
+    # 5c. RR-B-30: docs/packs.html exists, is em-dash-free, and matches a fresh
+    #     generation from SKILLS.md (generated artifact must not drift, RR-B-00).
+    #     The "no third-party asset" half of RR-B-30 is enforced by check 12
+    #     ([html-assets]) below, which scans docs/packs.html like every page.
     packs_html = ROOT / "docs" / "packs.html"
     if not packs_html.is_file():
         fail(errs, "[rr-b-30] docs/packs.html missing")
@@ -225,6 +389,34 @@ def main() -> int:
                 fail(errs, "[rr-b-30] docs/packs.html is stale; rerun tooling/gen_packs_page.py")
         except Exception as e:
             fail(errs, f"[rr-b-30] cannot verify packs.html generation: {e}")
+
+    # 12. html-assets (P12): every docs/*.html page is self-contained. External
+    #     http(s) assets must sit on an exact FIRST_PARTY_HOSTS host with empty
+    #     userinfo; data: URIs and relative paths are allowed; protocol-relative
+    #     //host/x fails; zero pages fails closed. docs-level glob only (not
+    #     rglob) so docs/superpowers/ planning files stay out of scope.
+    html_pages = sorted((ROOT / "docs").glob("*.html"))
+    if not html_pages:
+        fail(errs, "[html-assets] no docs/*.html found")
+    for page in html_pages:
+        for url in scan_html_external_assets(page.read_text(encoding="utf-8", errors="ignore")):
+            fail(errs, f"[html-assets] external asset in "
+                       f"{page.relative_to(ROOT).as_posix()}: {url}")
+
+    # 12b. brand-token parity (P13): the exclusive BRAND-TOKENS slice extracted
+    #     from docs/index.html must appear verbatim in docs/packs.html. A miss
+    #     means the generated page is stale against the token source of truth.
+    try:
+        index_html = (ROOT / "docs" / "index.html").read_text(encoding="utf-8")
+        brand_block = slice_brand_tokens(index_html)
+        packs_text = (ROOT / "docs" / "packs.html").read_text(encoding="utf-8")
+        if brand_block not in packs_text:
+            fail(errs, "[brand-tokens] docs/packs.html does not carry the index.html "
+                       "brand token block verbatim; rerun tooling/gen_packs_page.py")
+    except ValueError as e:
+        fail(errs, f"[brand-tokens] {e}")
+    except OSError as e:
+        fail(errs, f"[brand-tokens] cannot read page: {e}")
 
     # 6. SKILLS.md entry count == pack count
     skills = (ROOT / "SKILLS.md").read_text(encoding="utf-8") if (ROOT / "SKILLS.md").is_file() else ""

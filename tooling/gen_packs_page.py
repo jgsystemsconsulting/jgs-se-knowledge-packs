@@ -8,7 +8,9 @@ The page is the single source's downstream artifact: it parses the SKILLS.md tab
 (slug, source licence, description) and the version from RELEASE-INFO.txt, then emits a
 self-contained, design-system-compliant HTML page with a client-side filter box. No
 third-party assets, no CDN. Regenerate after any pack/SKILLS.md change so it cannot drift
-(RR-B-00). Em dashes are stripped from emitted copy (RR-B-28).
+(RR-B-00). Brand tokens (fonts plus :root) are not stored here: they are extracted from the
+BRAND-TOKENS marker block in docs/index.html at render time (P13). Em dashes are stripped
+from emitted copy (RR-B-28).
 """
 import re
 import sys
@@ -45,6 +47,39 @@ def version() -> str:
     return m.group(1) if m else "0.0.0"
 
 
+BRAND_BEGIN = "/* BRAND-TOKENS:BEGIN"
+BRAND_END = "/* BRAND-TOKENS:END"
+BRAND_PLACEHOLDER = "__BRAND_TOKENS__"
+
+
+def slice_brand_tokens(text: str) -> str:
+    """Exclusive interior between the BRAND-TOKENS BEGIN and END marker lines.
+
+    docs/index.html is the single source of truth for brand tokens (P13); the
+    BEGIN and END comment lines themselves are not part of the slice. Raises
+    ValueError (a plain Exception, never SystemExit) on missing, duplicated,
+    reversed, or unbalanced markers so importers of brand_tokens()/render()
+    (tooling/check_release.py rr-b-30) see a normal exception.
+    """
+    lines = text.splitlines()
+    begins = [i for i, ln in enumerate(lines) if ln.startswith(BRAND_BEGIN)]
+    ends = [i for i, ln in enumerate(lines) if ln.startswith(BRAND_END)]
+    if len(begins) != 1 or len(ends) != 1:
+        raise ValueError(
+            f"expected exactly one BRAND-TOKENS BEGIN and one END marker line, "
+            f"found {len(begins)} BEGIN / {len(ends)} END"
+        )
+    if begins[0] >= ends[0]:
+        raise ValueError("BRAND-TOKENS:BEGIN must precede BRAND-TOKENS:END")
+    return "\n".join(lines[begins[0] + 1:ends[0]])
+
+
+def brand_tokens() -> str:
+    """The brand-token block copied verbatim from docs/index.html."""
+    index = ROOT / "docs" / "index.html"
+    return slice_brand_tokens(index.read_text(encoding="utf-8"))
+
+
 REPO = "https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs"
 PAGES = "https://jgsystemsconsulting.github.io/jgs-se-knowledge-packs"
 
@@ -67,7 +102,7 @@ def render(rows: list[dict], ver: str) -> str:
         )
     rows_html = "\n".join(cells)
 
-    return f"""<!doctype html>
+    html_out = f"""<!doctype html>
 <!--
   Copyright (c) 2026 JG Systems Consulting Ltd. MIT License (see ../LICENSE).
   SPDX-License-Identifier: MIT
@@ -86,24 +121,15 @@ def render(rows: list[dict], ver: str) -> str:
 <meta property="og:title" content="Pack reference, JGS SE Knowledge Packs">
 <meta property="og:description" content="Browse and filter all {n_content} systems-engineering knowledge-pack skills by slug, source licence, and coverage.">
 <meta property="og:url" content="{PAGES}/packs.html">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="{PAGES}/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Pack reference, JGS SE Knowledge Packs">
 <meta name="twitter:description" content="Browse and filter all {n_content} systems-engineering knowledge-pack skills.">
+<meta name="twitter:image" content="{PAGES}/assets/og-default.png">
 <style>
-@font-face{{font-family:'JetBrains Mono';src:url('fonts/JetBrainsMono-Regular.woff2') format('woff2');font-weight:400;font-display:swap}}
-@font-face{{font-family:'JetBrains Mono';src:url('fonts/JetBrainsMono-Bold.woff2') format('woff2');font-weight:700;font-display:swap}}
-@font-face{{font-family:'Inter';src:url('fonts/Inter-Regular.woff2') format('woff2');font-weight:400;font-display:swap}}
-@font-face{{font-family:'Inter';src:url('fonts/Inter-SemiBold.woff2') format('woff2');font-weight:600;font-display:swap}}
-:root{{
-  --ink:#0a0a0b; --ink-2:#111113; --ink-3:#16171a; --ink-4:#1e2024;
-  --line:#2a2d33; --line-2:#3a3e46;
-  --mute:#6b7078; --mute-2:#8b9099;
-  --text:#c7ccd3; --text-hi:#e8ebf0;
-  --paper:#f4f2ec; --paper-ink:#0a0a0b;
-  --mono:'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;
-  --sans:'Inter',ui-sans-serif,system-ui,sans-serif;
-  --pad-x:clamp(24px,4vw,80px); --pad-section:clamp(48px,6vw,96px);
-}}
+__BRAND_TOKENS__
 *{{box-sizing:border-box}}
 html{{-webkit-text-size-adjust:100%}}
 body{{margin:0;background:var(--ink);color:var(--mute-2);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}}
@@ -118,36 +144,43 @@ h1{{font-family:var(--mono);color:var(--text-hi);letter-spacing:-0.02em;font-wei
 .mast .label span{{color:var(--text)}}
 header.hd{{border-bottom:1px solid var(--line);padding-top:var(--pad-section);padding-bottom:2rem}}
 header.hd p{{margin:1rem 0 0;max-width:64ch;color:var(--text)}}
-.tools{{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:1.6rem}}
-input#q{{font-family:var(--mono);font-size:0.9rem;background:var(--ink-2);border:1px solid var(--line);color:var(--text-hi);padding:11px 14px;min-width:min(420px,100%);}}
+.hd-still{{margin:1.25rem 0 0;max-width:36rem;border:1px solid var(--line);background:var(--ink-2);overflow:hidden}}
+.hd-still img{{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:left center}}
+.hd-still figcaption{{font-family:var(--mono);font-size:0.6875rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--mute);padding:8px 12px;border-top:1px solid var(--line)}}
+.tools{{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin-top:1.4rem;padding:10px 12px;background:var(--ink-2);border:1px solid var(--line)}}
+input#q{{font-family:var(--mono);font-size:0.9rem;background:var(--ink);border:1px solid var(--line);color:var(--text-hi);padding:10px 12px;flex:1 1 16rem;min-width:min(280px,100%)}}
 input#q::placeholder{{color:var(--mute)}}
-#count{{font-family:var(--mono);font-size:0.75rem;color:var(--mute-2);text-transform:uppercase;letter-spacing:0.1em}}
-.nav{{margin-top:1.4rem;font-family:var(--mono);font-size:0.8rem}}
-section{{padding-top:2rem;padding-bottom:var(--pad-section)}}
-table{{width:100%;border-collapse:collapse;border:1px solid var(--line)}}
-thead th{{font-family:var(--mono);text-transform:uppercase;letter-spacing:0.1em;font-size:0.6875rem;font-weight:700;color:var(--mute);text-align:left;padding:12px 16px;background:var(--ink-2);border-bottom:1px solid var(--line);position:sticky;top:0}}
-tbody td{{padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:top;font-size:0.9rem}}
+#count{{font-family:var(--mono);font-size:0.75rem;color:var(--mute);text-transform:uppercase;letter-spacing:0.1em;white-space:nowrap}}
+.nav{{margin-top:1.15rem;font-family:var(--mono);font-size:0.8rem}}
+section{{padding-top:1.75rem;padding-bottom:var(--pad-section)}}
+table{{width:100%;border-collapse:collapse;border:1px solid var(--line);background:var(--ink)}}
+thead th{{font-family:var(--mono);text-transform:uppercase;letter-spacing:0.1em;font-size:0.6875rem;font-weight:700;color:var(--mute);text-align:left;padding:12px 16px;background:var(--ink-2);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:2;box-shadow:0 1px 0 var(--line)}}
+tbody td{{padding:13px 16px;border-bottom:1px solid var(--line);vertical-align:top;font-size:0.9rem}}
+tbody tr:hover td{{background:var(--ink-3)}}
 tbody tr:last-child td{{border-bottom:none}}
 td.slug a{{font-family:var(--mono);font-weight:700;color:var(--text-hi);font-size:0.85rem;white-space:nowrap}}
 td.lic{{font-family:var(--mono);font-size:0.75rem;color:var(--mute-2);white-space:nowrap}}
 td.desc{{color:var(--text)}}
 tr.hidden{{display:none}}
-#empty{{display:none;padding:24px 16px;color:var(--mute-2);font-family:var(--mono);font-size:0.85rem}}
+#empty{{display:none;padding:24px 16px;color:var(--mute-2);font-family:var(--mono);font-size:0.85rem;border:1px solid var(--line);background:var(--ink-2);margin-top:12px}}
 footer{{padding-top:32px;padding-bottom:48px;color:var(--mute);border-top:1px solid var(--line)}}
 footer .label{{display:block;margin-bottom:8px}}
 @media (max-width:760px){{
   thead{{display:none}}
   table,tbody,tr,td{{display:block;width:100%}}
-  table{{border:none}}
-  tbody tr{{border:1px solid var(--line);margin-bottom:1px;padding:6px 0;background:var(--ink-2)}}
+  table{{border:none;background:transparent}}
+  tbody tr{{border:1px solid var(--line);margin-bottom:8px;padding:8px 0;background:var(--ink-2)}}
+  tbody tr:hover td{{background:transparent}}
   tbody td{{border-bottom:none;padding:6px 16px}}
   td.lic{{color:var(--mute);white-space:normal}}
+  .hd-still{{max-width:100%}}
 }}
 @media (prefers-reduced-motion:reduce){{*{{transition:none!important;animation:none!important}}}}
 </style>
 </head>
 <body>
 
+<!-- Masthead and footer chrome stay hand-mirrored in docs/index.html; only the BRAND-TOKENS block auto-syncs. -->
 <div class="mast"><div class="wrap">
   <span class="label">CLASSIFICATION: <span>PUBLIC</span></span>
   <span class="label">LICENCE: <span>MIT (TOOLING)</span></span>
@@ -161,6 +194,11 @@ footer .label{{display:block;margin-bottom:8px}}
   <p>Every knowledge pack in the release, with its source licence and what it covers. Each pack
   is an Agent Skill you invoke by its slug. Type to filter by name, publisher, licence, or topic.
   Click a slug to open its <code>SKILL.md</code> on GitHub.</p>
+  <figure class="hd-still">
+    <img src="assets/still-catalogue.png" width="1200" height="675"
+      alt="Drafting-sheet still of the catalogue families and pack counts.">
+    <figcaption>FIG.CAT · Catalogue families</figcaption>
+  </figure>
   <div class="tools">
     <input id="q" type="search" placeholder="filter, e.g. nasa, risk, public domain, CC BY" aria-label="Filter packs">
     <span id="count"></span>
@@ -209,6 +247,8 @@ footer .label{{display:block;margin-bottom:8px}}
 </html>
 """
 
+    return html_out.replace(BRAND_PLACEHOLDER, brand_tokens())
+
 
 def main() -> int:
     rows = parse_skills()
@@ -222,4 +262,14 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    try:
+        raise SystemExit(main())
+    except ValueError as e:
+        print(f"ERROR: {e}", file=sys.stderr)
+        print(
+            "restore exactly one BRAND-TOKENS:BEGIN and one BRAND-TOKENS:END "
+            "marker line in docs/index.html, then rerun",
+            file=sys.stderr,
+        )
+        raise SystemExit(1) from e
+

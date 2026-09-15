@@ -17,6 +17,7 @@
 #   SKILLS index count                         twins check_release 6 (complete port)
 #   Chapter basename overlap                   twins check_release 8, shared tooling/overlap-whitelist.txt
 #   Map and classification data invariants     pure-data subset of check_release 9 + 10
+#   HTML self-containment                      twins check_release 12 [html-assets] (literal twin (hosts + regex pins)) plus [brand-tokens] (P13)
 #
 # CI does not cover, and why: full validate_pack (non-trivial parser; a fork
 # invites permanent drift), RR-B-30 packs.html regeneration equality (needs the
@@ -125,6 +126,155 @@ jobs:
                   print(f"::error file={p}::source-material URL: {m.group(0)} (see docs/LICENSING.md)")
                   fails += 1
           print("no source-material links" if not fails else f"{fails} link-policy violation(s)")
+          sys.exit(1 if fails else 0)
+          PY
+
+      - name: HTML self-containment
+        run: |
+          python3 - <<'PY'
+          # Twins tooling/check_release.py check 12 ([html-assets]) as a complete
+          # port. The host set and all four regex literals below are
+          # byte-identical to the local gate's; tooling/test_ci_gate.py asserts
+          # that parity and executes this shipped heredoc. Self-host convention:
+          # images under docs/assets/, fonts under docs/fonts/, relative
+          # references only. Fail closed: zero docs/*.html also fails.
+          import re, sys, pathlib
+          from urllib.parse import urlsplit
+
+          FIRST_PARTY_HOSTS = {"github.com", "jgsystemsconsulting.github.io"}
+
+          TAG_SLICE = re.compile(
+              r"<(link|img|script|iframe|source|video|audio|embed|track|object|base|meta)\b"
+              r"(?:\"[^\"]*\"|'[^']*'|[^>])*>",
+              re.I,
+          )
+          ATTR = re.compile(
+              r"""(?P<name>href|src|data|srcset|content|http-equiv|property|name)\s*=\s*"""
+              r"""(?:"(?P<d>[^"]*)"|'(?P<s>[^']*)'|(?P<u>[^\s>]+))""",
+              re.I,
+          )
+          CSS_URL = re.compile(r"""url\(\s*(['"]?)([^)'"\s]+)\1\s*\)""", re.I)
+          CSS_IMPORT = re.compile(
+              r"""@import\s+(?:url\(\s*(['"]?)([^)'"\s]+)\1\s*\)|(['"])([^'"]+)\3)\s*;?""",
+              re.I,
+          )
+          _META_IMAGE_PROPS = {"og:image", "og:image:secure_url"}
+          _META_IMAGE_NAMES = {"twitter:image", "twitter:image:src"}
+          _HREF_ELEMENTS = {"link", "base"}
+          _SRC_ELEMENTS = {"img", "script", "iframe", "source", "video", "audio", "embed", "track"}
+
+          def scan_html_external_assets(text: str) -> list[str]:
+              def is_external(url: str) -> bool:
+                  url = url.strip()
+                  if not url or url.startswith("#") or url[:5].lower() == "data:":
+                      return False
+                  if url[:7].lower() == "http://" or url[:8].lower() == "https://":
+                      parts = urlsplit(url)
+                      host = (parts.hostname or "").lower()
+                      if host in FIRST_PARTY_HOSTS and not parts.username and not parts.password:
+                          return False
+                      return True
+                  return url.startswith("//")
+
+              found = []
+
+              def consider(raw: str) -> None:
+                  url = raw.strip()
+                  if is_external(url) and url not in found:
+                      found.append(url)
+
+              for m in TAG_SLICE.finditer(text):
+                  tag = m.group(0)
+                  elem = m.group(1).lower()
+                  attrs = {}
+                  for a in ATTR.finditer(tag):
+                      value = a.group("d")
+                      if value is None:
+                          value = a.group("s")
+                      if value is None:
+                          value = a.group("u")
+                      name = a.group("name").lower()
+                      if name not in attrs:  # first attribute wins, matching browsers
+                          attrs[name] = value
+                  if elem in _HREF_ELEMENTS and "href" in attrs:
+                      consider(attrs["href"])
+                  if elem in _SRC_ELEMENTS and "src" in attrs:
+                      consider(attrs["src"])
+                  if elem == "object" and "data" in attrs:
+                      consider(attrs["data"])
+                  if "srcset" in attrs:
+                      for group in attrs["srcset"].split(","):
+                          tokens = group.strip().split()
+                          if tokens:
+                              consider(tokens[0])
+                  if elem == "meta":
+                      prop = attrs.get("property", "").lower()
+                      name_attr = attrs.get("name", "").lower()
+                      if prop in _META_IMAGE_PROPS or name_attr in _META_IMAGE_NAMES:
+                          if "content" in attrs:
+                              consider(attrs["content"])
+                      elif attrs.get("http-equiv", "").strip().lower() == "refresh" and "content" in attrs:
+                          m2 = re.search(r"url\s*=\s*(.*)", attrs["content"], re.I)
+                          if m2:
+                              target = m2.group(1).strip()
+                              if len(target) >= 2 and target[0] in "\"'" and target[-1] == target[0]:
+                                  target = target[1:-1]
+                              consider(target)
+
+              for m in CSS_URL.finditer(text):
+                  consider(m.group(2))
+              for m in CSS_IMPORT.finditer(text):
+                  consider(m.group(2) if m.group(2) is not None else m.group(4))
+
+              return found
+
+          pages = sorted(pathlib.Path("docs").glob("*.html"))
+          if not pages:
+              print("::error::[html-assets] no docs/*.html found")
+              sys.exit(1)
+          fails = 0
+          for page in pages:
+              for url in scan_html_external_assets(page.read_text(encoding="utf-8", errors="ignore")):
+                  print(f"::error file={page.as_posix()}::[html-assets] external asset in {page.as_posix()}: {url}")
+                  fails += 1
+          # P13 brand-token parity: the exclusive BRAND-TOKENS slice extracted
+          # from docs/index.html must appear verbatim in docs/packs.html.
+          # Marker literals are pinned by tooling/test_ci_gate.py HTML_ASSET_PAIR.
+          BRAND_BEGIN = "/* BRAND-TOKENS:BEGIN"
+          BRAND_END = "/* BRAND-TOKENS:END"
+
+          def slice_brand_tokens(text: str) -> str:
+              lines = text.splitlines()
+              begins = [i for i, ln in enumerate(lines) if ln.startswith(BRAND_BEGIN)]
+              ends = [i for i, ln in enumerate(lines) if ln.startswith(BRAND_END)]
+              if len(begins) != 1 or len(ends) != 1:
+                  raise ValueError(
+                      f"expected exactly one BRAND-TOKENS BEGIN and one END marker line, "
+                      f"found {len(begins)} BEGIN / {len(ends)} END"
+                  )
+              if begins[0] >= ends[0]:
+                  raise ValueError("BRAND-TOKENS:BEGIN must precede BRAND-TOKENS:END")
+              return "\n".join(lines[begins[0] + 1:ends[0]])
+
+          try:
+              index_html = pathlib.Path("docs/index.html").read_text(encoding="utf-8")
+              brand_block = slice_brand_tokens(index_html)
+              packs_text = pathlib.Path("docs/packs.html").read_text(encoding="utf-8")
+              if brand_block not in packs_text:
+                  print("::error::[brand-tokens] docs/packs.html does not carry the "
+                        "index.html brand token block verbatim; rerun "
+                        "tooling/gen_packs_page.py")
+                  fails += 1
+              elif not fails:
+                  print("[brand-tokens] index.html brand block present in packs.html")
+          except ValueError as e:
+              print(f"::error::[brand-tokens] {e}")
+              fails += 1
+          except OSError as e:
+              print(f"::error::[brand-tokens] cannot read page: {e}")
+              fails += 1
+          if not fails:
+              print("[html-assets] all docs/*.html pages self-contained")
           sys.exit(1 if fails else 0)
           PY
 
