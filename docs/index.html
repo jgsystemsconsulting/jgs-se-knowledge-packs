@@ -98,6 +98,11 @@ code{font-family:var(--mono)}
 .pk b{font-family:var(--mono);color:var(--text-hi);font-weight:700;font-size:0.875rem}
 .pk span{display:block;font-size:0.85rem;color:var(--mute-2);margin-top:2px}
 
+/* Labelled body stills (P11); separate from .hero-still (P10) */
+.still{margin:1.6rem 0 0;border:1px solid var(--line);background:var(--ink-2);padding:0}
+.still img{display:block;width:100%;height:auto;border-bottom:1px solid var(--line)}
+.still figcaption{font-family:var(--mono);font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--mute);padding:12px 16px;margin:0}
+
 /* Drafting-sheet footer */
 .sheet{background:var(--ink-2);border:1px solid var(--line);background-image:linear-gradient(var(--ink-3) 1px,transparent 1px),linear-gradient(90deg,var(--ink-3) 1px,transparent 1px);background-size:40px 40px;padding:28px;margin-top:var(--pad-section);position:relative}
 .sheet .tb{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;border-top:1px solid var(--line);margin-top:20px;padding-top:14px}
@@ -181,6 +186,12 @@ footer .label{display:block;margin-bottom:8px}
 
 <span class="muted"># or just ask: each pack's description makes the agent load it on a match</span>
 "What does the NASA risk handbook say about risk acceptance?"</code></pre>
+  <figure class="still">
+    <img src="assets/still-using-a-pack.png" width="1200" height="675"
+      alt="Drafting-sheet still of slash-invoking a pack topic so the agent loads one chapter."
+      decoding="async" loading="lazy">
+    <figcaption>FIG.03 · Slash-invoke a topic; the pack index routes one chapter into context.</figcaption>
+  </figure>
   <p style="margin:1.2rem 0 0;max-width:62ch;color:var(--text)">Each pack uses <strong>progressive disclosure</strong>: an always-loaded <code>SKILL.md</code> index decides which single chapter answers your question and loads only that, so a large source never fills the context window. Full detail in <a href="https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/blob/main/docs/skill-usage.md">docs/skill-usage.md</a>.</p>
 </div></section>
 
@@ -223,6 +234,12 @@ python install.py --agent all   <span class="muted"># claude · openclaw · copi
     <div class="pk"><b>CISA / DHS &middot; 1</b><span>Cross-Sector Cybersecurity Performance Goals 2.0</span></div>
     <div class="pk"><b>EU / academic / JGS &middot; 4</b><span>EU AI Act 2024/1689, Digital Systems Engineering (arXiv), EARS requirements-writing, plus OMG &amp; SE-standards signposts</span></div>
   </div>
+  <figure class="still">
+    <img src="assets/still-catalogue.png" width="1200" height="675"
+      alt="Drafting-sheet still of the catalogue families and pack counts."
+      decoding="async" loading="lazy">
+    <figcaption>FIG.06 · Fifty-four packs across open sources; filter the full list on packs.html.</figcaption>
+  </figure>
   <p style="margin:1.4rem 0 0;color:var(--text)">Browse and filter the full catalogue on the
   <a href="packs.html">pack reference page</a>, or read the raw index in
   <a href="https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/blob/main/SKILLS.md">SKILLS.md</a>.</p>
