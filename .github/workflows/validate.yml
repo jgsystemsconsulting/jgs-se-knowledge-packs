@@ -4,11 +4,30 @@
 # RR-S-12 CI quality gate. Self-contained (inline bash + python3 stdlib only); never
 # executes checked-out repository code. Runs on push to main and on every PR.
 # Leak sentinels, link policy with signpost exemption, frontmatter lint, catalog
-# validity. Link policy enforces from a trusted inline host set and asserts
-# set-parity against tooling/link-policy-hosts.txt (the data file the local gate
-# tooling/check_release.py loads) before scanning; any divergence fails the build.
-# Both leak and link gates skip .planning identically (internal GSD workflow state;
-# never ships).
+# validity, version single-source, SKILLS index count, chapter basename overlap,
+# and map/classification data invariants. Link policy enforces from a trusted
+# inline host set and asserts set-parity against tooling/link-policy-hosts.txt
+# (the data file the local gate tooling/check_release.py loads) before scanning;
+# any divergence fails the build. Both leak and link gates skip .planning
+# identically (internal GSD workflow state; never ships).
+#
+# Coverage map vs the local gate (run `python tooling/check_release.py` before
+# tagging; CI green is not release-ready):
+#   Version single-source                      twins check_release 4 + 4a (complete port)
+#   SKILLS index count                         twins check_release 6 (complete port)
+#   Chapter basename overlap                   twins check_release 8, shared tooling/overlap-whitelist.txt
+#   Map and classification data invariants     pure-data subset of check_release 9 + 10
+#
+# CI does not cover, and why: full validate_pack (non-trivial parser; a fork
+# invites permanent drift), RR-B-30 packs.html regeneration equality (needs the
+# generator), full map threshold and note logic, full classification semantics
+# beyond set coverage, and generate_capability_map --check replay (definitionally
+# generator execution).
+#
+# Honest residual on the overlap whitelist: tooling/overlap-whitelist.txt is
+# PR-editable, so a PR can relax that gate in both places at once. That is the
+# same posture as the old in-code constant (also PR-editable); review is the
+# control, and the data file removes accidental divergence between the gates.
 name: validate
 
 on:
@@ -132,3 +151,255 @@ jobs:
 
       - name: Catalog JSON valid
         run: python3 -c "import json; json.load(open('catalog.json')); print('catalog.json OK')"
+
+      - name: Version single-source
+        run: |
+          python3 - <<'PY'
+          # Twins tooling/check_release.py checks 4 + 4a. The three version
+          # regex literals below are byte-identical to the local gate's;
+          # tooling/test_ci_gate.py asserts that parity and fails on drift.
+          import json, os, re, sys
+          versions = {}
+          try:
+              with open(".claude-plugin/plugin.json", encoding="utf-8") as fh:
+                  versions["plugin.json"] = json.load(fh).get("version", "")
+          except Exception as e:
+              print(f"::error::[version] cannot read plugin.json: {e}")
+              versions["plugin.json"] = ""
+          cl = open("CHANGELOG.md", encoding="utf-8").read() if os.path.isfile("CHANGELOG.md") else ""
+          m = re.search(r"^##\s*\[(\d+\.\d+\.\d+)\]", cl, re.M)
+          versions["CHANGELOG.md"] = m.group(1) if m else ""
+          ri = open("RELEASE-INFO.txt", encoding="utf-8").read() if os.path.isfile("RELEASE-INFO.txt") else ""
+          m = re.search(r"Version:\s*([0-9]+\.[0-9]+\.[0-9]+)", ri)
+          versions["RELEASE-INFO.txt"] = m.group(1) if m else ""
+          fails = 0
+          # 4a. both website product YAMLs must carry the release version.
+          expected = versions["RELEASE-INFO.txt"]
+          for rel in ("docs/products/website/01-jgs-se-knowledge-packs.yaml",
+                      "docs/products/website/catalog.yaml"):
+              body = open(rel, encoding="utf-8", errors="ignore").read() if os.path.isfile(rel) else ""
+              m = re.search(r'version:\s*"([0-9]+\.[0-9]+\.[0-9]+)"', body)
+              got = m.group(1) if m else ""
+              if got != expected:
+                  print(f"::error file={rel}::[version] website YAML version '{got}' != RELEASE-INFO '{expected}'")
+                  fails += 1
+          distinct = {v for v in versions.values() if v}
+          if len(distinct) > 1 or "" in versions.values():
+              print(f"::error::[version] disagreement / missing: {versions}")
+              fails += 1
+          sys.exit(1 if fails else 0)
+          PY
+
+      - name: SKILLS index count
+        run: |
+          python3 - <<'PY'
+          # Twins tooling/check_release.py check 6 (SKILLS.md entries vs shipped
+          # packs, signpost-aware). The link regex and the signpost regex are
+          # byte-identical to the local gate's; tooling/test_ci_gate.py asserts it.
+          import re, sys, pathlib
+          root = pathlib.Path(".")
+          signpost_dirs = {
+              p.parent for p in root.glob("packs/*/SKILL.md")
+              if re.search(r"^kind:\s*signpost\s*$", p.read_text(encoding="utf-8", errors="ignore"), re.M)
+          }
+          packs = sorted(p for p in root.glob("packs/*") if p.is_dir() and p not in signpost_dirs)
+          skills = (root / "SKILLS.md").read_text(encoding="utf-8") if (root / "SKILLS.md").is_file() else ""
+          signpost_names = {d.name for d in signpost_dirs}
+          entry_slugs = re.findall(r"\[`([^`]+)`\]\(packs/", skills)
+          entry_count = len([s for s in entry_slugs if s not in signpost_names])
+          if packs and entry_count != len(packs):
+              print(f"::error::[index] SKILLS.md lists {entry_count} packs but {len(packs)} are shipped")
+              sys.exit(1)
+          print(f"[index] SKILLS.md entries match shipped packs ({entry_count})")
+          PY
+
+      - name: Chapter basename overlap
+        run: |
+          python3 - <<'PY'
+          # Twins tooling/check_overlap.py. The whitelist lives in the shared
+          # data file tooling/overlap-whitelist.txt, read fail-closed by both
+          # gates (parity by construction). Honest residual: the data file is
+          # PR-editable, so a PR can relax this gate in both places at once,
+          # the same posture as the old in-code constant; review is the control.
+          import re, sys, pathlib
+          DATA_PATH = "tooling/overlap-whitelist.txt"
+          TOKEN = re.compile(r"^[A-Za-z0-9.-]+$")
+
+          def load_whitelist():
+              # Mirrors the link-policy-hosts.txt reader: [A-Za-z0-9.-]+ tokens,
+              # '#' comments and blank lines ignored; unreadable or malformed
+              # file and zero tokens all fail closed.
+              try:
+                  lines = pathlib.Path(DATA_PATH).read_text(encoding="utf-8").splitlines()
+              except OSError as e:
+                  return None, f"cannot read {DATA_PATH}: {e}"
+              tokens = set()
+              for lineno, raw in enumerate(lines, 1):
+                  line = raw.strip()
+                  if not line or line.startswith("#"):
+                      continue
+                  if not TOKEN.fullmatch(line):
+                      return None, f"malformed line in {DATA_PATH} (line {lineno}): {raw!r}"
+                  tokens.add(line)
+              if not tokens:
+                  return None, f"whitelist empty ({DATA_PATH} has no tokens)"
+              return tokens, None
+
+          whitelist, err = load_whitelist()
+          if whitelist is None:
+              print(f"::error::[overlap] whitelist data file: {err}")
+              sys.exit(1)
+          chaps = {}
+          for p in sorted(pathlib.Path(".").glob("packs/*/chapters/*.md")):
+              slug = p.parent.parent.name
+              chaps.setdefault(p.name, []).append(slug)
+          bad = {name: packs for name, packs in chaps.items()
+                 if len(packs) > 1 and name not in whitelist}
+          if bad:
+              for name in sorted(bad):
+                  print(f"::error::[overlap] {name}: {', '.join(sorted(bad[name]))}")
+              sys.exit(1)
+          print("[overlap] no un-whitelisted chapter basename collisions")
+          PY
+
+      - name: Map and classification data invariants
+        run: |
+          python3 - <<'PY'
+          # Pure-data subset of tooling/check_capability_map.py (check 9) and
+          # tooling/check_classification_rules.py (check 10). Envelope pins and
+          # disk-set derivation mirror the local twins exactly so the two gates
+          # cannot disagree; thresholds, note/override consistency, support
+          # policy, and generator replay stay local-only.
+          import json, os, re, sys, pathlib
+          SUPPORT_SUFFIX = " (support file)"
+          MAP_VERSION_RE = re.compile(r"^\d+\.\d+\.\d+$")
+          GENERATED_ON_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+          fails = 0
+
+          def report(tag, path, msgs):
+              global fails
+              for msg in msgs:
+                  print(f"::error file={path}::{tag} {msg}")
+                  fails += 1
+
+          def envelope(path, tag, want_schema):
+              if not os.path.isfile(path):
+                  report(tag, path, [f"file missing: {path}"])
+                  return None, "", ""
+              try:
+                  with open(path, encoding="utf-8") as fh:
+                      data = json.load(fh)
+              except (json.JSONDecodeError, UnicodeDecodeError) as e:
+                  report(tag, path, [f"JSON decode error: {e}"])
+                  return None, "", ""
+              if not isinstance(data, dict):
+                  report(tag, path, ["top-level JSON must be an object"])
+                  return None, "", ""
+              errs = []
+              schema = data.get("schema_version")
+              if not isinstance(schema, int) or isinstance(schema, bool) or schema != want_schema:
+                  errs.append(f"schema_version must be int {want_schema}, got {schema!r}")
+              mv = data.get("map_version")
+              if not mv:
+                  errs.append("missing or empty map_version")
+              elif not isinstance(mv, str) or not MAP_VERSION_RE.fullmatch(mv):
+                  errs.append(f"map_version must match N.N.N, got {mv!r}")
+              go = data.get("generated_on")
+              if not go:
+                  errs.append("missing or empty generated_on")
+              elif not isinstance(go, str) or not GENERATED_ON_RE.fullmatch(go):
+                  errs.append(f"generated_on must match YYYY-MM-DD, got {go!r}")
+              report(tag, path, errs)
+              return data, mv, go
+
+          map_data, map_mv, map_go = envelope("docs/capability-pack-map.json", "[map-data]", 2)
+          rules_data, rules_mv, rules_go = envelope("docs/classification-rules.json", "[rules-data]", 1)
+
+          if map_mv and rules_mv and map_mv != rules_mv:
+              print(f"::error::[map-data] map_version mismatch: map {map_mv!r} != rules {rules_mv!r}")
+              fails += 1
+          if map_go and rules_go and map_go != rules_go:
+              print(f"::error::[rules-data] generated_on mismatch: map {map_go!r} != rules {rules_go!r}")
+              fails += 1
+
+          packs_root = pathlib.Path("packs")
+
+          # map chapters vs disk; same derivation as check_capability_map.py
+          # (packs by chapters/ dir existence, all files on disk, support-file
+          # rows excluded from the map side)
+          if isinstance(map_data, dict):
+              clusters = map_data.get("clusters")
+              if not isinstance(clusters, list):
+                  report("[map-data]", "docs/capability-pack-map.json", ["missing or non-list clusters"])
+                  clusters = []
+              map_chapters = set()
+              for cluster in clusters:
+                  if not isinstance(cluster, dict):
+                      continue
+                  chapters = cluster.get("chapters")
+                  if not isinstance(chapters, list):
+                      continue
+                  for entry in chapters:
+                      if not isinstance(entry, dict):
+                          continue
+                      pack, chapter = entry.get("pack"), entry.get("chapter")
+                      if not isinstance(pack, str) or not isinstance(chapter, str) or not pack:
+                          continue
+                      if chapter.endswith(SUPPORT_SUFFIX):
+                          continue
+                      map_chapters.add((pack, chapter))
+              on_disk_packs = (
+                  {p.name for p in packs_root.iterdir() if p.is_dir() and (p / "chapters").is_dir()}
+                  if packs_root.is_dir() else set()
+              )
+              disk_chapters = set()
+              for pack_name in sorted(on_disk_packs):
+                  for path in (packs_root / pack_name / "chapters").iterdir():
+                      if path.is_file():
+                          disk_chapters.add((pack_name, path.name))
+              only_disk = sorted(disk_chapters - map_chapters)
+              only_map = sorted(map_chapters - disk_chapters)
+              msgs = [f"chapter-set: on disk not in map: {p}/{c}" for p, c in only_disk[:20]]
+              if len(only_disk) > 20:
+                  msgs.append(f"chapter-set: ... and {len(only_disk) - 20} more on-disk-only")
+              msgs += [f"chapter-set: in map not on disk: {p}/{c}" for p, c in only_map[:20]]
+              if len(only_map) > 20:
+                  msgs.append(f"chapter-set: ... and {len(only_map) - 20} more map-only")
+              report("[map-data]", "docs/capability-pack-map.json", msgs)
+
+          # rules coverage vs disk; same derivation as
+          # check_classification_rules.py (packs/*/chapters/*.md; signpost packs
+          # have no chapters/ dir so the glob is inherently signpost-free;
+          # signpost_packs is read as a set for exclusion only, and its exact
+          # value fidelity stays a local-only guarantee)
+          if isinstance(rules_data, dict):
+              assignments = rules_data.get("assignments")
+              if not isinstance(assignments, list):
+                  report("[rules-data]", "docs/classification-rules.json", ["missing or non-list assignments"])
+                  assignments = []
+              sp = rules_data.get("signpost_packs")
+              signpost_set = {s for s in sp if isinstance(s, str)} if isinstance(sp, list) else set()
+              non_support = set()
+              msgs = []
+              for entry in assignments:
+                  if not isinstance(entry, dict):
+                      continue
+                  pack, chapter, is_support = entry.get("pack"), entry.get("chapter"), entry.get("is_support")
+                  if is_support is not False:
+                      continue  # support rows skipped; support policy stays local
+                  if not isinstance(pack, str) or not pack or not isinstance(chapter, str) or not chapter:
+                      continue
+                  non_support.add((pack, chapter))
+                  if pack in signpost_set:
+                      msgs.append(f"signpost: assignment for signpost pack {pack!r} ({chapter})")
+                  if not (packs_root / pack / "chapters" / chapter).is_file():
+                      msgs.append(f"coverage: assignment has no on-disk chapter: packs/{pack}/chapters/{chapter}")
+              for path in packs_root.glob("*/chapters/*.md"):
+                  if (path.parent.parent.name, path.name) not in non_support:
+                      msgs.append(f"coverage: on-disk chapter has no assignment: {path.parent.parent.name}/{path.name}")
+              report("[rules-data]", "docs/classification-rules.json", msgs)
+
+          if not fails:
+              print("[map-data]/[rules-data] data invariants OK")
+          sys.exit(1 if fails else 0)
+          PY
