@@ -62,8 +62,11 @@ h1,h2,h3{font-family:var(--mono);color:var(--text-hi);letter-spacing:-0.02em;fon
 
 /* Hero */
 .hero{border-bottom:1px solid var(--line);padding-top:var(--pad-section);padding-bottom:var(--pad-section)}
+.hero-grid{display:grid;gap:clamp(28px,4vw,48px);align-items:center;grid-template-columns:minmax(0,1.05fr) minmax(0,0.95fr)}
 .hero h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.05;color:var(--text-hi)}
 .hero p.lede{margin:1.4rem 0 0;max-width:60ch;font-size:1.05rem;color:var(--text)}
+.hero-still{margin:0;border:1px solid var(--line);background:var(--ink-2);overflow:hidden}
+.hero-still img{display:block;width:100%;height:auto;aspect-ratio:20/9;object-fit:cover;object-position:left center}
 .cta{margin-top:2.2rem;display:flex;flex-wrap:wrap;gap:14px}
 .btn{font-family:var(--mono);font-weight:700;letter-spacing:0.06em;font-size:0.8125rem;text-transform:uppercase;padding:12px 20px;border:1px solid var(--line);background:transparent;color:var(--text-hi);cursor:pointer;display:inline-flex;gap:10px;align-items:center}
 .btn.primary{background:var(--paper);color:var(--paper-ink);border-color:var(--paper)}
@@ -102,7 +105,8 @@ footer{padding-top:32px;padding-bottom:48px;color:var(--mute)}
 footer .label{display:block;margin-bottom:8px}
 
 @media (max-width:860px){
-  .cells.c3,.cells.c2,.packs{grid-template-columns:1fr}
+  .cells.c3,.cells.c2,.packs,.hero-grid{grid-template-columns:1fr}
+  .hero-still{order:-1}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
@@ -119,17 +123,24 @@ footer .label{display:block;margin-bottom:8px}
 </div></div>
 
 <!-- Hero -->
-<header class="hero"><div class="wrap">
-  <span class="label">JG Systems Consulting Ltd. · Agent Skills</span>
-  <h1>SE Knowledge Packs</h1>
-  <p class="lede">Installable knowledge-pack skills for coding agents, reconstructed from
-  genuinely open systems-engineering bodies of knowledge, vetted, attributed, and shareable
-  by construction. Ask a topic; your agent reads the right chapter and answers from
-  reference notes, not a hazy recollection.</p>
-  <div class="cta">
-    <a class="btn primary" href="https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs">View the repository <span aria-hidden="true">&rarr;</span></a>
-    <a class="btn" href="packs.html">Browse the catalogue <span aria-hidden="true">&rarr;</span></a>
+<header class="hero"><div class="wrap hero-grid">
+  <div class="hero-copy">
+    <span class="label">JG Systems Consulting Ltd. · Agent Skills</span>
+    <h1>SE Knowledge Packs</h1>
+    <p class="lede">Installable knowledge-pack skills for coding agents, reconstructed from
+    genuinely open systems-engineering bodies of knowledge, vetted, attributed, and shareable
+    by construction. Ask a topic; your agent reads the right chapter and answers from
+    reference notes, not a hazy recollection.</p>
+    <div class="cta">
+      <a class="btn primary" href="https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs">View the repository <span aria-hidden="true">&rarr;</span></a>
+      <a class="btn" href="packs.html">Browse the catalogue <span aria-hidden="true">&rarr;</span></a>
+    </div>
   </div>
+  <figure class="hero-still">
+    <img src="assets/hero-still.png" width="1600" height="720"
+      alt="Dark drafting-sheet brand still for JGS SE Knowledge Packs: ink ground, paper spine, section mark, and public sheet labels."
+      decoding="async" fetchpriority="high">
+  </figure>
 </div></header>
 
 <!-- §01 What it is -->
