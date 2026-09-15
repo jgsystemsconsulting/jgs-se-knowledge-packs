@@ -23,11 +23,14 @@ standard requires for this repo and exits non-zero on any failure:
      (MAP-21-01; local/trusted).
  11. Capability-map generator replay via generate_capability_map.main() --check
      (MAP-21-05; local/trusted; uses on-disk map generated_on).
- 12. HTML self-containment ([html-assets]): every docs/*.html page is scanned
+  12. HTML self-containment ([html-assets]): every docs/*.html page is scanned
      for external http(s) asset references; hosts must be exactly
      FIRST_PARTY_HOSTS (github.com, jgsystemsconsulting.github.io) with empty
      userinfo; data: URIs and relative paths are allowed; protocol-relative
      URLs fail; zero pages fails closed.
+     Plus brand-token parity ([brand-tokens], P13): the exclusive BRAND-TOKENS
+     slice extracted from docs/index.html must appear verbatim in
+     docs/packs.html.
 
 stdlib only. This is a LOCAL/trusted gate and may run repo code; the CI workflow
 (.github/workflows/validate.yml) inlines its own checks and never executes repo code.
@@ -106,6 +109,10 @@ SPDX_SENTINEL = "SPDX-License-Identifier: MIT"
 
 # P12 html-assets: first-party allowlist for the docs/*.html self-containment scan.
 FIRST_PARTY_HOSTS = {"github.com", "jgsystemsconsulting.github.io"}
+
+# P13 brand-token markers; the same literals are pinned in test_ci_gate.HTML_ASSET_PAIR.
+BRAND_BEGIN = "/* BRAND-TOKENS:BEGIN"
+BRAND_END = "/* BRAND-TOKENS:END"
 
 # Quote-aware open-tag slicer: does not stop on > inside quoted attribute values.
 TAG_SLICE = re.compile(
@@ -231,6 +238,27 @@ def scan_html_external_assets(text: str) -> list[str]:
         consider(m.group(2) if m.group(2) is not None else m.group(4))
 
     return found
+
+
+def slice_brand_tokens(text: str) -> str:
+    """Exclusive interior between the BRAND-TOKENS BEGIN and END marker lines
+    in docs/index.html. Same algorithm as gen_packs_page.slice_brand_tokens,
+    inlined by twin convention (this gate never imports generator code);
+    raises ValueError on missing, duplicated, reversed, or unbalanced markers.
+    """
+    lines = text.splitlines()
+    begins = [i for i, ln in enumerate(lines) if ln.startswith(BRAND_BEGIN)]
+    ends = [i for i, ln in enumerate(lines) if ln.startswith(BRAND_END)]
+    if len(begins) != 1 or len(ends) != 1:
+        raise ValueError(
+            f"docs/index.html: expected exactly one BRAND-TOKENS BEGIN and one END "
+            f"marker line, found {len(begins)} BEGIN / {len(ends)} END"
+        )
+    if begins[0] >= ends[0]:
+        raise ValueError(
+            "docs/index.html: BRAND-TOKENS:BEGIN must precede BRAND-TOKENS:END"
+        )
+    return "\n".join(lines[begins[0] + 1:ends[0]])
 
 
 def fail(errs: list[str], msg: str) -> None:
@@ -374,6 +402,21 @@ def main() -> int:
         for url in scan_html_external_assets(page.read_text(encoding="utf-8", errors="ignore")):
             fail(errs, f"[html-assets] external asset in "
                        f"{page.relative_to(ROOT).as_posix()}: {url}")
+
+    # 12b. brand-token parity (P13): the exclusive BRAND-TOKENS slice extracted
+    #     from docs/index.html must appear verbatim in docs/packs.html. A miss
+    #     means the generated page is stale against the token source of truth.
+    try:
+        index_html = (ROOT / "docs" / "index.html").read_text(encoding="utf-8")
+        brand_block = slice_brand_tokens(index_html)
+        packs_text = (ROOT / "docs" / "packs.html").read_text(encoding="utf-8")
+        if brand_block not in packs_text:
+            fail(errs, "[brand-tokens] docs/packs.html does not carry the index.html "
+                       "brand token block verbatim; rerun tooling/gen_packs_page.py")
+    except ValueError as e:
+        fail(errs, f"[brand-tokens] {e}")
+    except OSError as e:
+        fail(errs, f"[brand-tokens] cannot read page: {e}")
 
     # 6. SKILLS.md entry count == pack count
     skills = (ROOT / "SKILLS.md").read_text(encoding="utf-8") if (ROOT / "SKILLS.md").is_file() else ""

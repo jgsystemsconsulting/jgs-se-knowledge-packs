@@ -17,7 +17,7 @@
 #   SKILLS index count                         twins check_release 6 (complete port)
 #   Chapter basename overlap                   twins check_release 8, shared tooling/overlap-whitelist.txt
 #   Map and classification data invariants     pure-data subset of check_release 9 + 10
-#   HTML self-containment                      twins check_release 12 [html-assets] (literal twin (hosts + regex pins))
+#   HTML self-containment                      twins check_release 12 [html-assets] (literal twin (hosts + regex pins)) plus [brand-tokens] (P13)
 #
 # CI does not cover, and why: full validate_pack (non-trivial parser; a fork
 # invites permanent drift), RR-B-30 packs.html regeneration equality (needs the
@@ -237,6 +237,42 @@ jobs:
               for url in scan_html_external_assets(page.read_text(encoding="utf-8", errors="ignore")):
                   print(f"::error file={page.as_posix()}::[html-assets] external asset in {page.as_posix()}: {url}")
                   fails += 1
+          # P13 brand-token parity: the exclusive BRAND-TOKENS slice extracted
+          # from docs/index.html must appear verbatim in docs/packs.html.
+          # Marker literals are pinned by tooling/test_ci_gate.py HTML_ASSET_PAIR.
+          BRAND_BEGIN = "/* BRAND-TOKENS:BEGIN"
+          BRAND_END = "/* BRAND-TOKENS:END"
+
+          def slice_brand_tokens(text: str) -> str:
+              lines = text.splitlines()
+              begins = [i for i, ln in enumerate(lines) if ln.startswith(BRAND_BEGIN)]
+              ends = [i for i, ln in enumerate(lines) if ln.startswith(BRAND_END)]
+              if len(begins) != 1 or len(ends) != 1:
+                  raise ValueError(
+                      f"expected exactly one BRAND-TOKENS BEGIN and one END marker line, "
+                      f"found {len(begins)} BEGIN / {len(ends)} END"
+                  )
+              if begins[0] >= ends[0]:
+                  raise ValueError("BRAND-TOKENS:BEGIN must precede BRAND-TOKENS:END")
+              return "\n".join(lines[begins[0] + 1:ends[0]])
+
+          try:
+              index_html = pathlib.Path("docs/index.html").read_text(encoding="utf-8")
+              brand_block = slice_brand_tokens(index_html)
+              packs_text = pathlib.Path("docs/packs.html").read_text(encoding="utf-8")
+              if brand_block not in packs_text:
+                  print("::error::[brand-tokens] docs/packs.html does not carry the "
+                        "index.html brand token block verbatim; rerun "
+                        "tooling/gen_packs_page.py")
+                  fails += 1
+              elif not fails:
+                  print("[brand-tokens] index.html brand block present in packs.html")
+          except ValueError as e:
+              print(f"::error::[brand-tokens] {e}")
+              fails += 1
+          except OSError as e:
+              print(f"::error::[brand-tokens] cannot read page: {e}")
+              fails += 1
           if not fails:
               print("[html-assets] all docs/*.html pages self-contained")
           sys.exit(1 if fails else 0)

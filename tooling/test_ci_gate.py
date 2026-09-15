@@ -20,8 +20,8 @@ Regex parity pins (P4 pin-plus-parity, extended to the five new steps):
   - MAP_VERSION_RE / GENERATED_ON_RE must appear verbatim in validate.yml and
     both local twins (check_capability_map.py, check_classification_rules.py)
   - the html-assets host set, TAG_SLICE/ATTR/CSS_URL/CSS_IMPORT pattern text,
-    and the meta image tokens must appear verbatim in both check_release.py
-    and validate.yml (HTML_ASSET_PAIR)
+    and the meta image tokens plus the BRAND-TOKENS marker literals (P13) must
+    appear verbatim in both check_release.py and validate.yml (HTML_ASSET_PAIR)
 """
 from __future__ import annotations
 
@@ -75,6 +75,8 @@ HTML_ASSET_PAIR = [
     ("meta og:image:secure_url", '"og:image:secure_url"'),
     ("meta twitter:image", '"twitter:image"'),
     ("meta twitter:image:src", '"twitter:image:src"'),
+    ("brand-tokens BEGIN marker", '"/* BRAND-TOKENS:BEGIN"'),
+    ("brand-tokens END marker", '"/* BRAND-TOKENS:END"'),
 ]
 
 # Literals pinned per local twin (map/classification envelope).
@@ -223,7 +225,14 @@ HTML_CLEAN_PAGE = (
     '<img src="https://github.com/jgs-se/asset/raw/main/og.png" alt="hero">\n'
     "<style>@font-face{src:url('fonts/Inter-Regular.woff2')}\n"
     '@import "css/site.css";</style>\n'
+    "<style>\n"
+    "/* BRAND-TOKENS:BEGIN (single source; tooling/gen_packs_page.py copies this verbatim) */\n"
+    ":root{--ink:#0a0a0b;--paper:#f4f2ec}\n"
+    "/* BRAND-TOKENS:END */\n"
+    "</style>\n"
 )
+
+BRAND_SLICE = ":root{--ink:#0a0a0b;--paper:#f4f2ec}\n"
 
 
 def main() -> int:
@@ -372,9 +381,23 @@ def main() -> int:
         # html-assets: zero pages fails closed
         demo({"README.md": "x\n"}, "HTML self-containment",
              "[html-assets] no docs/*.html found", "html-zero-files")
-        # html-assets: data URI, relative fonts/@import, and allowlisted hosts pass
-        demo_ok({"docs/index.html": HTML_CLEAN_PAGE},
+        # html-assets: data URI, relative fonts/@import, and allowlisted hosts pass;
+        # brand-token parity holds when packs.html carries the index.html slice
+        demo_ok({"docs/index.html": HTML_CLEAN_PAGE,
+                 "docs/packs.html": "<style>\n" + BRAND_SLICE + "</style>\n"},
                 "HTML self-containment", "html-clean-ok")
+        # brand-tokens: a hand-edited hex in the packs.html copy fails
+        demo({"docs/index.html": HTML_CLEAN_PAGE,
+              "docs/packs.html": "<style>:root{--ink:#0b0b0c;--paper:#f4f2ec}</style>\n"},
+             "HTML self-containment",
+             "[brand-tokens] docs/packs.html does not carry the index.html brand "
+             "token block verbatim", "html-brand-drift")
+        # brand-tokens: missing markers fail [brand-tokens], not a crash
+        demo({"docs/index.html":
+              "<!doctype html>\n<style>:root{--ink:#0a0a0b}</style>\n"},
+             "HTML self-containment",
+             "[brand-tokens] expected exactly one BRAND-TOKENS BEGIN",
+             "html-brand-markers-missing")
 
     # 3. positive runs against the real repo tree: what CI sees on a clean tree
     for step in PINNED_STEPS:
