@@ -23,11 +23,16 @@ standard requires for this repo and exits non-zero on any failure:
      (MAP-21-01; local/trusted).
  11. Capability-map generator replay via generate_capability_map.main() --check
      (MAP-21-05; local/trusted; uses on-disk map generated_on).
+ 12. HTML self-containment ([html-assets]): every docs/*.html page is scanned
+     for external http(s) asset references; hosts must be exactly
+     FIRST_PARTY_HOSTS (github.com, jgsystemsconsulting.github.io) with empty
+     userinfo; data: URIs and relative paths are allowed; protocol-relative
+     URLs fail; zero pages fails closed.
 
 stdlib only. This is a LOCAL/trusted gate and may run repo code; the CI workflow
 (.github/workflows/validate.yml) inlines its own checks and never executes repo code.
-CI-covered: version, index, overlap, map/rules data invariants. Local-only required
-before tag: pack validation, packs.html freshness, full map/rules checks, replay.
+CI-covered: version, index, overlap, map/rules data invariants, html-assets. Local-only
+required before tag: pack validation, packs.html freshness, full map/rules checks, replay.
 
 Pre-tag rule: run this gate at the exact commit being tagged and require a PASS
 line whose sha matches that commit (a `@ no-git` receipt never satisfies it).
@@ -338,8 +343,10 @@ def main() -> int:
         if not re.search(r"Prerequisites|Requirements|^compatibility:", body, re.M | re.I):
             fail(errs, f"[rr-s-13:{pack.name}] SKILL.md missing a prerequisites marker")
 
-    # 5c. RR-B-30: docs/packs.html exists, is em-dash-free, has no third-party asset, and
-    #     matches a fresh generation from SKILLS.md (generated artifact must not drift, RR-B-00).
+    # 5c. RR-B-30: docs/packs.html exists, is em-dash-free, and matches a fresh
+    #     generation from SKILLS.md (generated artifact must not drift, RR-B-00).
+    #     The "no third-party asset" half of RR-B-30 is enforced by check 12
+    #     ([html-assets]) below, which scans docs/packs.html like every page.
     packs_html = ROOT / "docs" / "packs.html"
     if not packs_html.is_file():
         fail(errs, "[rr-b-30] docs/packs.html missing")
@@ -354,6 +361,19 @@ def main() -> int:
                 fail(errs, "[rr-b-30] docs/packs.html is stale; rerun tooling/gen_packs_page.py")
         except Exception as e:
             fail(errs, f"[rr-b-30] cannot verify packs.html generation: {e}")
+
+    # 12. html-assets (P12): every docs/*.html page is self-contained. External
+    #     http(s) assets must sit on an exact FIRST_PARTY_HOSTS host with empty
+    #     userinfo; data: URIs and relative paths are allowed; protocol-relative
+    #     //host/x fails; zero pages fails closed. docs-level glob only (not
+    #     rglob) so docs/superpowers/ planning files stay out of scope.
+    html_pages = sorted((ROOT / "docs").glob("*.html"))
+    if not html_pages:
+        fail(errs, "[html-assets] no docs/*.html found")
+    for page in html_pages:
+        for url in scan_html_external_assets(page.read_text(encoding="utf-8", errors="ignore")):
+            fail(errs, f"[html-assets] external asset in "
+                       f"{page.relative_to(ROOT).as_posix()}: {url}")
 
     # 6. SKILLS.md entry count == pack count
     skills = (ROOT / "SKILLS.md").read_text(encoding="utf-8") if (ROOT / "SKILLS.md").is_file() else ""
