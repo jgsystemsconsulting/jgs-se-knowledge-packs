@@ -124,6 +124,11 @@ SKILLS_ONE_LINK = (
     "- [`alpha`](packs/alpha/SKILL.md)\n"
     "- [`omg-signpost`](packs/omg-signpost/SKILL.md)\n"
 )
+SKILLS_CONTENT_ONLY = (
+    "# Skills\n\n"
+    "- [`alpha`](packs/alpha/SKILL.md)\n"
+    "- [`beta`](packs/beta/SKILL.md)\n"
+)
 SIGNPOST_MARKED = "---\nname: omg-signpost\nkind: signpost\n---\nbody\n"
 SIGNPOST_UNMARKED = "---\nname: omg-signpost\n---\nbody\n"
 
@@ -263,6 +268,11 @@ def main() -> int:
         # index positive: the signpost link is filtered and the count matches
         demo_ok(index_tree(SKILLS_FILTERED, SIGNPOST_MARKED),
                 "SKILLS index count", "index-filter-ok")
+        # index negative: signpost pack present but NOT marked, so the filter
+        # must not drop it from the shipped count
+        demo(index_tree(SKILLS_CONTENT_ONLY, SIGNPOST_UNMARKED), "SKILLS index count",
+             "[index] SKILLS.md lists 2 packs but 3 are shipped",
+             "index-signpost-unmarked")
 
         # overlap: an un-whitelisted shared basename fails with both packs
         demo(overlap_tree(True), "Chapter basename overlap",
