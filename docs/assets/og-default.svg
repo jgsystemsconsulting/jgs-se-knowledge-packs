@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="JGS SE Knowledge Packs">
+  <title>JGS SE Knowledge Packs</title>
+  <rect width="1200" height="630" fill="#0a0a0b"/>
+  <rect width="1200" height="56" fill="#111113"/>
+  <line x1="0" y1="56" x2="1200" y2="56" stroke="#2a2d33" stroke-width="1"/>
+  <rect x="48" y="68" width="1104" height="514" fill="none" stroke="#2a2d33" stroke-width="2"/>
+  <rect x="48" y="68" width="8" height="514" fill="#f4f2ec"/>
+  <text x="76" y="36" font-family="ui-monospace, Consolas, monospace" font-size="18" font-weight="700" fill="#6b7078" letter-spacing="0.12em">JGS SYSTEMS CONSULTING</text>
+  <text x="900" y="36" font-family="ui-monospace, Consolas, monospace" font-size="18" font-weight="700" fill="#6b7078" letter-spacing="0.08em">DOC-ID  JGS-SE-KP/OG</text>
+  <text x="96" y="320" font-family="ui-monospace, Consolas, monospace" font-size="180" font-weight="700" fill="#f4f2ec">§</text>
+  <text x="248" y="250" font-family="ui-monospace, Consolas, monospace" font-size="56" font-weight="700" fill="#e8ebf0">JGS SE Knowledge Packs</text>
+  <line x1="248" y1="268" x2="920" y2="268" stroke="#f4f2ec" stroke-width="3"/>
+  <text x="248" y="320" font-family="ui-monospace, Consolas, monospace" font-size="26" fill="#c7ccd3">Licence-vetted systems-engineering skills</text>
+  <text x="248" y="358" font-family="ui-monospace, Consolas, monospace" font-size="26" fill="#6b7078">for coding agents  ·  open sources only</text>
+  <line x1="76" y1="530" x2="1124" y2="530" stroke="#2a2d33" stroke-width="1"/>
+  <text x="76" y="560" font-family="ui-monospace, Consolas, monospace" font-size="18" fill="#6b7078">jgsystemsconsulting.github.io/jgs-se-knowledge-packs</text>
+  <text x="980" y="560" font-family="ui-monospace, Consolas, monospace" font-size="18" fill="#6b7078">PUBLIC  ·  MIT</text>
+</svg>
