@@ -60,7 +60,7 @@ Carry-forward status from [2026-09-14 packages](2026-09-14-jgs-se-knowledge-pack
 - **id**: P10
 - **name**: landing-hero-still
 - **size**: M
-- **status**: ready
+- **status**: done
 - **promoted_ids**: []
 - **corroboration**: 2 (value, cohesion)
 - **deps**: P9, P13
