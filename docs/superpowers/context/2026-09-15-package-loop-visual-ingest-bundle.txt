@@ -1,0 +1,70 @@
+
+# PACKAGE-LOOP INGEST BUNDLE
+date: 2026-09-15
+project: jgs-se-knowledge-packs
+mode: light
+trigger: user intent — visual improvements to the website, with images; suggest use taste skill, design skills, image creation
+prior_packages: docs/superpowers/packages/2026-09-14-jgs-se-knowledge-packs-packages.md (P1-P7 done; P8 phase21-planning-ledger-close in-flight)
+prior_backlog: docs/superpowers/backlog.md (no website/visual rows)
+
+## USER INTENT (evidence source of record for this run)
+- Goal: visual improvements to the public website
+- With images (OG cards, labelled site stills, brand imagery as appropriate)
+- Suggested methods: taste skill, design skills, image creation (jgs-image-gen / grok-imagine)
+- Constraints from repo: self-contained static GH Pages under docs/; no third-party CDN/tracking; dark drafting-document JGS brand already inlined; fonts self-hosted in docs/fonts/
+- Definition of done (inferred): landing + packs pages look stronger with intentional visuals; OG/share cards not text-only summary; stay on-brand; one-run packages
+
+## REPO SURVEY
+Purpose: curated catalogue of 63 open SE knowledge-pack skills; install via python install.py. Not a product SPA.
+Website: static GitHub Pages — docs/index.html (landing, 244 lines, inline CSS), docs/packs.html (catalogue table, ~105KB), docs/fonts/*.woff2, docs/products/website/*.yaml (RR-B-19 marketing YAML, versions already 1.20.0 via P1).
+No Hugo/Next/Astro/package.json. No image asset dirs under docs/ (no png/jpg/webp). Favicon is data: URI SVG § glyph.
+Recent git (15): CI/release gates only — no visual/website design commits.
+TODO/FIXME UI: none live.
+CI: validate.yml has link/version/map gates; zero visual regression / HTML visual tests.
+.planning/ exists (GSD); Phase 21 product work largely closed on disk; P8 ledger close still in-flight (frozen unless user names it).
+
+## WEBSITE SURFACE DETAIL
+docs/index.html header comment: "Self-contained (inline CSS, no third-party asset/CDN/tracking). JGS brand & design system: dark drafting-document aesthetic."
+Tokens: --ink #0a0a0b, --paper #f4f2ec, JetBrains Mono + Inter self-hosted.
+Sections: masthead (CLASSIFICATION/LICENCE/DOC-ID/REV 1.20.0), hero (text+CTA only, no image), cells grid, pack list, drafting-sheet footer.
+OG/Twitter: og:title/description/url present; twitter:card=summary (NOT summary_large_image); NO og:image, NO twitter:image.
+packs.html: same brand tokens, filterable table, same summary card meta without images.
+docs/products/website/01-jgs-se-knowledge-packs.yaml: features/positioning only, no pricing; catalog.yaml lists products.
+
+## PRIOR PACKAGES STATUS
+P1 align-website-yaml-versions done
+P2 gate-website-yaml-versions done (absorbed)
+P3 close-phase21-ship-surface done
+P4 ci-link-policy-parity done
+P5 ci-local-gate-coverage-gap done
+P6 validate-pack-signpost-parity done
+P7 map-tooling-residual-harden done
+P8 phase21-planning-ledger-close in-flight (FROZEN — do not re-open unless user names it)
+
+## BACKLOG OPEN/NEEDS-INFO (groom signals; none are visual)
+b-03 catalog.json metadata drift open
+b-06 seed .planning/BACKLOG needs-info
+b-07 pytest suite needs-info
+b-09 restore eval pytest needs-info
+b-10 TODO-sentinel needs-info
+b-11 OneDrive paths open
+b-12 duplicate installers open
+b-13 per-pack content-quality gate open
+b-14 check_release double-read perf open
+b-15 oversized Phase21 grab needs-info
+b-16 MAP vs REL tick needs-info
+deferred: b-01 source packs, b-02 se-agents
+promoted/dropped: b-04 b-05 b-08 b-17
+
+## DESIGN / IMAGE STATE
+- Brand exists only as inline CSS in the two HTML files
+- No OG images, screenshots, hero art, product stills
+- No taste notes / design tokens file outside HTML
+- jgs-image-gen available in agent roster (local grok-imagine proxy) for OG cards and labelled site stills
+- taste-skill and design-style-select available as skills for visual direction before assets
+
+## LENS GUIDANCE FOR THIS RUN
+Focus candidates on website visual improvement packages sized for one superpowers-process full run each.
+Respect frozen P8. Do not re-package done P1-P7.
+Kill pure tooling/CI pet work unless it directly unblocks visual ship.
+Image work must stay self-hosted (no CDN), on-brand, and preferably under docs/ (or docs/assets/) for GH Pages.
