@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # Copyright (c) 2026 JG Systems Consulting Ltd. — MIT License (see LICENSE).
 # SPDX-License-Identifier: MIT
-"""Assert-based probe for the four inline CI gates in .github/workflows/validate.yml.
+"""Assert-based probe for the five inline CI gates in .github/workflows/validate.yml.
 
 Run:  python tooling/test_ci_gate.py
 Exits 0 when regex literal parity, heredoc extraction, negative demos, and
@@ -14,11 +14,14 @@ the gates as local functions if extraction matched zero heredocs, but zero
 extraction already fails this probe loudly, so the fallback is effectively
 unreachable and no mirror lives in this file.
 
-Regex parity pins (P4 pin-plus-parity, extended to the four new steps):
+Regex parity pins (P4 pin-plus-parity, extended to the five new steps):
   - three version regexes, the SKILLS link regex, and the signpost regex must
     appear verbatim in both tooling/check_release.py and validate.yml
   - MAP_VERSION_RE / GENERATED_ON_RE must appear verbatim in validate.yml and
     both local twins (check_capability_map.py, check_classification_rules.py)
+  - the html-assets host set, TAG_SLICE/ATTR/CSS_URL/CSS_IMPORT pattern text,
+    and the meta image tokens must appear verbatim in both check_release.py
+    and validate.yml (HTML_ASSET_PAIR)
 """
 from __future__ import annotations
 
@@ -41,6 +44,7 @@ PINNED_STEPS = [
     "SKILLS index count",
     "Chapter basename overlap",
     "Map and classification data invariants",
+    "HTML self-containment",
 ]
 
 # Literals that must appear verbatim in check_release.py AND validate.yml.
@@ -50,6 +54,27 @@ RELEASE_PAIR = [
     ("website YAML version", r'version:\s*"([0-9]+\.[0-9]+\.[0-9]+)"'),
     ("SKILLS link", r"\[`([^`]+)`\]\(packs/"),
     ("signpost kind", r"^kind:\s*signpost\s*$"),
+]
+
+# Literals that must appear verbatim in check_release.py AND validate.yml
+# ([html-assets] self-containment scan, P12). Byte parity is the drift control.
+HTML_ASSET_PAIR = [
+    ("first-party host (github)", '"github.com"'),
+    ("first-party host (pages)", '"jgsystemsconsulting.github.io"'),
+    ("TAG_SLICE element list",
+     r"<(link|img|script|iframe|source|video|audio|embed|track|object|base|meta)\b"),
+    ("TAG_SLICE quote-aware tail", r"(?:\"[^\"]*\"|'[^']*'|[^>])*>"),
+    ("ATTR name groups",
+     r"(?P<name>href|src|data|srcset|content|http-equiv|property|name)\s*=\s*"),
+    ("ATTR value branches",
+     r"""(?:"(?P<d>[^"]*)"|'(?P<s>[^']*)'|(?P<u>[^\s>]+))"""),
+    ("CSS_URL", r"""url\(\s*(['"]?)([^)'"\s]+)\1\s*\)"""),
+    ("CSS_IMPORT",
+     r"""@import\s+(?:url\(\s*(['"]?)([^)'"\s]+)\1\s*\)|(['"])([^'"]+)\3)\s*;?"""),
+    ("meta og:image", '"og:image"'),
+    ("meta og:image:secure_url", '"og:image:secure_url"'),
+    ("meta twitter:image", '"twitter:image"'),
+    ("meta twitter:image:src", '"twitter:image:src"'),
 ]
 
 # Literals pinned per local twin (map/classification envelope).
@@ -190,6 +215,17 @@ def map_rules_tree(
     return files
 
 
+HTML_CLEAN_PAGE = (
+    '<!doctype html>\n'
+    '<link rel="icon" href="data:image/svg+xml,%3Csvg '
+    "xmlns='http://www.w3.org/2000/svg'%3E\">\n"
+    '<link rel="canonical" href="https://jgsystemsconsulting.github.io/jgs-se-knowledge-packs/">\n'
+    '<img src="https://github.com/jgs-se/asset/raw/main/og.png" alt="hero">\n'
+    "<style>@font-face{src:url('fonts/Inter-Regular.woff2')}\n"
+    '@import "css/site.css";</style>\n'
+)
+
+
 def main() -> int:
     workflow_text = WORKFLOW.read_text(encoding="utf-8")
     release_text = RELEASE_TWIN.read_text(encoding="utf-8")
@@ -222,6 +258,16 @@ def main() -> int:
             f"{name} missing from validate.yml"
         )
 
+    for name, literal in HTML_ASSET_PAIR:
+        assert literal in release_text, (
+            "regex drifted between check_release.py and validate.yml; sync them: "
+            f"{name} missing from check_release.py"
+        )
+        assert literal in workflow_text, (
+            "regex drifted between check_release.py and validate.yml; sync them: "
+            f"{name} missing from validate.yml"
+        )
+
     # 2. extraction of the shipped heredocs by pinned step name
     bodies: dict[str, str] = {}
     for step in PINNED_STEPS:
@@ -232,7 +278,7 @@ def main() -> int:
             "text, so fix the step name or the heredoc markers"
         )
         bodies[step] = body
-    assert len(bodies) == len(PINNED_STEPS), "expected exactly four pinned heredocs"
+    assert len(bodies) == len(PINNED_STEPS), "expected exactly five pinned heredocs"
 
     with tempfile.TemporaryDirectory() as td:
         tmp = Path(td)
@@ -312,6 +358,23 @@ def main() -> int:
         demo(map_rules_tree(rules_obj=r3), "Map and classification data invariants",
              "generated_on mismatch: map '2026-01-01' != rules '2026-01-02'",
              "rules-date-mismatch")
+
+        # html-assets: an external img fails with a file-tagged annotation
+        demo({"docs/index.html":
+              '<!doctype html>\n<img src="https://cdn.example/track.png">\n'},
+             "HTML self-containment",
+             "[html-assets] external asset in docs/index.html", "html-external-img")
+        # html-assets: protocol-relative src fails
+        demo({"docs/index.html": '<script src="//cdn.example/x.js"></script>\n'},
+             "HTML self-containment",
+             "[html-assets] external asset in docs/index.html: //cdn.example/x.js",
+             "html-protocol-relative")
+        # html-assets: zero pages fails closed
+        demo({"README.md": "x\n"}, "HTML self-containment",
+             "[html-assets] no docs/*.html found", "html-zero-files")
+        # html-assets: data URI, relative fonts/@import, and allowlisted hosts pass
+        demo_ok({"docs/index.html": HTML_CLEAN_PAGE},
+                "HTML self-containment", "html-clean-ok")
 
     # 3. positive runs against the real repo tree: what CI sees on a clean tree
     for step in PINNED_STEPS:
