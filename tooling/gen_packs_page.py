@@ -8,7 +8,9 @@ The page is the single source's downstream artifact: it parses the SKILLS.md tab
 (slug, source licence, description) and the version from RELEASE-INFO.txt, then emits a
 self-contained, design-system-compliant HTML page with a client-side filter box. No
 third-party assets, no CDN. Regenerate after any pack/SKILLS.md change so it cannot drift
-(RR-B-00). Em dashes are stripped from emitted copy (RR-B-28).
+(RR-B-00). Brand tokens (fonts plus :root) are not stored here: they are extracted from the
+BRAND-TOKENS marker block in docs/index.html at render time (P13). Em dashes are stripped
+from emitted copy (RR-B-28).
 """
 import re
 import sys
@@ -45,6 +47,39 @@ def version() -> str:
     return m.group(1) if m else "0.0.0"
 
 
+BRAND_BEGIN = "/* BRAND-TOKENS:BEGIN"
+BRAND_END = "/* BRAND-TOKENS:END"
+BRAND_PLACEHOLDER = "__BRAND_TOKENS__"
+
+
+def slice_brand_tokens(text: str) -> str:
+    """Exclusive interior between the BRAND-TOKENS BEGIN and END marker lines.
+
+    docs/index.html is the single source of truth for brand tokens (P13); the
+    BEGIN and END comment lines themselves are not part of the slice. Raises
+    ValueError (a plain Exception, never SystemExit) on missing, duplicated,
+    reversed, or unbalanced markers so importers of brand_tokens()/render()
+    (tooling/check_release.py rr-b-30) see a normal exception.
+    """
+    lines = text.splitlines()
+    begins = [i for i, ln in enumerate(lines) if ln.startswith(BRAND_BEGIN)]
+    ends = [i for i, ln in enumerate(lines) if ln.startswith(BRAND_END)]
+    if len(begins) != 1 or len(ends) != 1:
+        raise ValueError(
+            f"expected exactly one BRAND-TOKENS BEGIN and one END marker line, "
+            f"found {len(begins)} BEGIN / {len(ends)} END"
+        )
+    if begins[0] >= ends[0]:
+        raise ValueError("BRAND-TOKENS:BEGIN must precede BRAND-TOKENS:END")
+    return "\n".join(lines[begins[0] + 1:ends[0]])
+
+
+def brand_tokens() -> str:
+    """The brand-token block copied verbatim from docs/index.html."""
+    index = ROOT / "docs" / "index.html"
+    return slice_brand_tokens(index.read_text(encoding="utf-8"))
+
+
 REPO = "https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs"
 PAGES = "https://jgsystemsconsulting.github.io/jgs-se-knowledge-packs"
 
@@ -67,7 +102,7 @@ def render(rows: list[dict], ver: str) -> str:
         )
     rows_html = "\n".join(cells)
 
-    return f"""<!doctype html>
+    html_out = f"""<!doctype html>
 <!--
   Copyright (c) 2026 JG Systems Consulting Ltd. MIT License (see ../LICENSE).
   SPDX-License-Identifier: MIT
@@ -90,20 +125,7 @@ def render(rows: list[dict], ver: str) -> str:
 <meta name="twitter:title" content="Pack reference, JGS SE Knowledge Packs">
 <meta name="twitter:description" content="Browse and filter all {n_content} systems-engineering knowledge-pack skills.">
 <style>
-@font-face{{font-family:'JetBrains Mono';src:url('fonts/JetBrainsMono-Regular.woff2') format('woff2');font-weight:400;font-display:swap}}
-@font-face{{font-family:'JetBrains Mono';src:url('fonts/JetBrainsMono-Bold.woff2') format('woff2');font-weight:700;font-display:swap}}
-@font-face{{font-family:'Inter';src:url('fonts/Inter-Regular.woff2') format('woff2');font-weight:400;font-display:swap}}
-@font-face{{font-family:'Inter';src:url('fonts/Inter-SemiBold.woff2') format('woff2');font-weight:600;font-display:swap}}
-:root{{
-  --ink:#0a0a0b; --ink-2:#111113; --ink-3:#16171a; --ink-4:#1e2024;
-  --line:#2a2d33; --line-2:#3a3e46;
-  --mute:#6b7078; --mute-2:#8b9099;
-  --text:#c7ccd3; --text-hi:#e8ebf0;
-  --paper:#f4f2ec; --paper-ink:#0a0a0b;
-  --mono:'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;
-  --sans:'Inter',ui-sans-serif,system-ui,sans-serif;
-  --pad-x:clamp(24px,4vw,80px); --pad-section:clamp(48px,6vw,96px);
-}}
+__BRAND_TOKENS__
 *{{box-sizing:border-box}}
 html{{-webkit-text-size-adjust:100%}}
 body{{margin:0;background:var(--ink);color:var(--mute-2);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}}
@@ -148,6 +170,7 @@ footer .label{{display:block;margin-bottom:8px}}
 </head>
 <body>
 
+<!-- Masthead and footer chrome stay hand-mirrored in docs/index.html; only the BRAND-TOKENS block auto-syncs. -->
 <div class="mast"><div class="wrap">
   <span class="label">CLASSIFICATION: <span>PUBLIC</span></span>
   <span class="label">LICENCE: <span>MIT (TOOLING)</span></span>
@@ -209,6 +232,8 @@ footer .label{{display:block;margin-bottom:8px}}
 </html>
 """
 
+    return html_out.replace(BRAND_PLACEHOLDER, brand_tokens())
+
 
 def main() -> int:
     rows = parse_skills()
@@ -222,4 +247,14 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    try:
+        raise SystemExit(main())
+    except ValueError as e:
+        print(f"ERROR: {e}", file=sys.stderr)
+        print(
+            "restore exactly one BRAND-TOKENS:BEGIN and one BRAND-TOKENS:END "
+            "marker line in docs/index.html, then rerun",
+            file=sys.stderr,
+        )
+        raise SystemExit(1) from e
+
