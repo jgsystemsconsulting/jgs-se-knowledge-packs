@@ -1,0 +1,47 @@
+
+# PACKAGE-LOOP INGEST BUNDLE (re-run light)
+date: 2026-09-16
+project: jgs-se-knowledge-packs
+mode: light
+branch: main @ d62e352 (visual cut merged and pushed)
+trigger: bare /package-loop after visual cut ship + user noticed stale 54-pack catalogue copy
+
+## LIVE FACTS
+- packs/ dirs: 65 = 63 content + 2 signposts (omg-signpost, se-standards-signpost)
+- docs/packs.html: "65 skills" (correct live table, 65 rows)
+- README badge: packs-63 (content packs)
+- docs/index.html:226 STALE: "54 packs · 2 signposts"
+- docs/index.html:228-235 family chips hand-sum to 54 (NASA15 DoD13 NIST9 FAA6 GAO4 DOE2 CISA1 EU/JGS4)
+- docs/index.html:241 figcaption "Fifty-four packs"
+- docs/assets/still-catalogue.svg:12 STALE "54 packs · 2 signposts"; PNG companion same art
+- RELEASE CHECK PASS v1.20.0 @ d62e352; html-assets and ci-gate OK
+
+## PRIOR PACKAGES (2026-09-15 visual cut) statuses
+P1-P7 done (tooling). P8 phase21-planning-ledger-close IN-FLIGHT FROZEN unless user names it.
+P9 og-share-cards done; P10 landing-hero-still done; P11 labelled-site-stills done;
+P12 html-self-contain-scan done; P13 brand-token-sync done; P14 packs-table-polish done.
+Done packages leave candidate space. New ids continue P15+.
+
+## BACKLOG (groom signals)
+open: b-03 catalog.json metadata drift; b-11 OneDrive paths; b-12 duplicate installers; b-13 content-quality gate; b-14 check_release double-read; html-self-contain-scan-1 ATTR over-match
+needs-info: b-06,b-07,b-09,b-10,b-15,b-16,b-18,b-22,b-23
+deferred: b-01,b-02
+promoted: b-04,b-05,b-08 (P7/P8)
+dropped: b-17,b-19,b-20,b-21,b-24,b-25
+b-23 Git LFS: images now on disk under docs/assets/ (P9 landed) - groom candidate
+
+## USER THREAD INTENT (recent)
+- Visual website with images: shipped P9-P14
+- User asked why still says 54 packs if 65 skills: confirmed stale marketing copy on landing + still-catalogue
+
+## REPO PURPOSE
+Open SE knowledge-pack catalogue; static GH Pages docs/; install.py; no SPA.
+
+## GATES / CI
+Local check_release eleven+ checks PASS. CI validate.yml has html self-containment twin. No pack-count consistency gate between index family chips and packs/.
+
+## FROZEN
+P8 in-flight frozen. Do not reopen done P1-P7 or P9-P14 unless residual delta proven.
+
+## LENS GUIDANCE
+Prefer packages that close real public-facing falsehoods (stale counts) and honest ship path. Kill pets. One-run SP sizes. Image regen of still-catalogue in scope if count fix needs art match.
