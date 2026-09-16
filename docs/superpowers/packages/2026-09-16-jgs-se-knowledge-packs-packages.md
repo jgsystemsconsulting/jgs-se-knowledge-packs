@@ -59,7 +59,7 @@ Done packages are out of the candidate space. New work starts at **P15**.
 - **id**: P16
 - **name**: catalog-live-set-parity
 - **size**: M
-- **status**: ready
+- **status**: done
 - **promoted_ids**: [b-03]
 - **corroboration**: 1 (risk)
 - **deps**: none
