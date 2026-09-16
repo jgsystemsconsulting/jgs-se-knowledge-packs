@@ -35,12 +35,16 @@ standard requires for this repo and exits non-zero on any failure:
      signpost count M from packs/*/SKILL.md frontmatter must equal the §06
      headline, chip COUNT sum (with exactly one Signposts chip equal to M),
      figcaption N/M, and still-catalogue.svg subtitle/footer N/M.
+  14. Catalog live-set parity ([catalog-live-set], P16): content pack slug set from
+     packs/*/SKILL.md (signposts excluded) must equal catalog.json packs[].slug
+     where status is live or absent; signpost slugs must not appear in
+     catalog.packs. planned[] is free. updated is review-only after the b-03 bump.
 
 stdlib only. This is a LOCAL/trusted gate and may run repo code; the CI workflow
 (.github/workflows/validate.yml) inlines its own checks and never executes repo code.
 CI-covered: version, index, overlap, map/rules data invariants, html-assets,
-catalogue-count. Local-only required before tag: pack validation, packs.html
-freshness, full map/rules checks, replay.
+catalogue-count, catalog-live-set. Local-only required before tag: pack validation,
+packs.html freshness, full map/rules checks, replay.
 
 Pre-tag rule: run this gate at the exact commit being tagged and require a PASS
 line whose sha matches that commit (a `@ no-git` receipt never satisfies it).
@@ -288,45 +292,52 @@ CATALOGUE_SVG_NM_RE = re.compile(
 STILL_CATALOGUE_SVG = "docs/assets/still-catalogue.svg"
 
 
-def inventory_pack_counts(packs_root: Path) -> tuple[int, int, list[str]]:
-    """Return (content_N, signpost_M, errors) from packs/*/SKILL.md frontmatter.
+def inventory_pack_slugs(
+    packs_root: Path, tag: str = "[catalogue-count]"
+) -> tuple[set[str], set[str], list[str]]:
+    """Return (content_slugs, signpost_slugs, errors) from packs/*/SKILL.md.
 
     Every immediate child directory must contain SKILL.md with parseable YAML
     frontmatter between --- fences. A frontmatter line matching
     ^kind:\\s*signpost\\s*$ (case-insensitive) marks a signpost; all others are
-    content packs. Live counts never come from a hardcoded constant.
+    content packs. Live sets never come from a hardcoded constant. ``tag`` prefixes
+    fail messages so callers can attribute catalogue-count vs catalog-live-set.
     """
     errs: list[str] = []
+    content: set[str] = set()
+    signposts: set[str] = set()
     if not packs_root.is_dir():
-        return 0, 0, [f"[catalogue-count] packs root missing: {packs_root}"]
-    content = 0
-    signposts = 0
+        return content, signposts, [f"{tag} packs root missing: {packs_root}"]
     for child in sorted(p for p in packs_root.iterdir() if p.is_dir()):
         skill = child / "SKILL.md"
         if not skill.is_file():
-            errs.append(
-                f"[catalogue-count] missing SKILL.md in packs/{child.name}"
-            )
+            errs.append(f"{tag} missing SKILL.md in packs/{child.name}")
             continue
         try:
             text = skill.read_text(encoding="utf-8")
         except OSError as e:
-            errs.append(
-                f"[catalogue-count] cannot read packs/{child.name}/SKILL.md: {e}"
-            )
+            errs.append(f"{tag} cannot read packs/{child.name}/SKILL.md: {e}")
             continue
         m = re.match(r"^---\s*\n(.*?)\n---\s*(?:\n|$)", text, re.S)
         if not m:
             errs.append(
-                f"[catalogue-count] unparseable frontmatter in packs/{child.name}/SKILL.md"
+                f"{tag} unparseable frontmatter in packs/{child.name}/SKILL.md"
             )
             continue
         fm = m.group(1)
         if re.search(r"^kind:\s*signpost\s*$", fm, re.I | re.M):
-            signposts += 1
+            signposts.add(child.name)
         else:
-            content += 1
+            content.add(child.name)
     return content, signposts, errs
+
+
+def inventory_pack_counts(packs_root: Path) -> tuple[int, int, list[str]]:
+    """Return (content_N, signpost_M, errors); wrapper over inventory_pack_slugs."""
+    content, signposts, errs = inventory_pack_slugs(
+        packs_root, tag="[catalogue-count]"
+    )
+    return len(content), len(signposts), errs
 
 
 def slice_catalogue_section(html: str) -> str | None:
@@ -519,6 +530,96 @@ def check_catalogue_count(
     return errs
 
 
+# P16 catalog-live-set: live slug set vs packs/. Literals pinned in validate.yml
+# (test_ci_gate CATALOG_LIVE_SET_PAIR).
+CATALOG_JSON_PATH = "catalog.json"
+CATALOG_LIVE_SET_TAG = "[catalog-live-set]"
+
+
+def check_catalog_live_set(
+    packs_root: Path, catalog: dict | None, catalog_error: str | None = None
+) -> list[str]:
+    """Fail-closed equality of content pack slugs vs catalog.json live packs[].
+
+    Live catalog slugs are entries with status 'live' or missing status. Signpost
+    pack dirs must not appear in catalog.packs under any status. planned[] is free.
+    """
+    errs: list[str] = []
+    if catalog_error:
+        errs.append(f"{CATALOG_LIVE_SET_TAG} {catalog_error}")
+        return errs
+    if not isinstance(catalog, dict):
+        errs.append(f"{CATALOG_LIVE_SET_TAG} {CATALOG_JSON_PATH} root must be an object")
+        return errs
+
+    content, signposts, inv_errs = inventory_pack_slugs(
+        packs_root, tag=CATALOG_LIVE_SET_TAG
+    )
+    errs.extend(inv_errs)
+    if inv_errs:
+        return errs
+
+    packs_list = catalog.get("packs")
+    if not isinstance(packs_list, list):
+        errs.append(
+            f"{CATALOG_LIVE_SET_TAG} {CATALOG_JSON_PATH} packs must be a list"
+        )
+        return errs
+
+    live: set[str] = set()
+    all_slugs: set[str] = set()
+    duplicates: list[str] = []
+    bad_entries = 0
+    for i, entry in enumerate(packs_list):
+        if not isinstance(entry, dict):
+            bad_entries += 1
+            continue
+        slug = entry.get("slug")
+        if not isinstance(slug, str) or not slug.strip():
+            bad_entries += 1
+            continue
+        slug = slug.strip()
+        if slug in all_slugs:
+            duplicates.append(slug)
+        all_slugs.add(slug)
+        status = entry.get("status")
+        if status is None or status == "live":
+            live.add(slug)
+
+    if bad_entries:
+        errs.append(
+            f"{CATALOG_LIVE_SET_TAG} {CATALOG_JSON_PATH} packs has {bad_entries} "
+            "entries missing a non-empty string slug"
+        )
+    if duplicates:
+        errs.append(
+            f"{CATALOG_LIVE_SET_TAG} duplicate slug(s) in {CATALOG_JSON_PATH} packs: "
+            f"{sorted(set(duplicates))}"
+        )
+
+    only_packs = sorted(content - live)
+    only_catalog = sorted(live - content)
+    if only_packs or only_catalog:
+        parts = []
+        if only_packs:
+            parts.append(f"only in packs/: {only_packs}")
+        if only_catalog:
+            parts.append(f"only in catalog.packs live: {only_catalog}")
+        errs.append(
+            f"{CATALOG_LIVE_SET_TAG} live slug set mismatch "
+            f"(content packs {len(content)} vs catalog live {len(live)}): "
+            + "; ".join(parts)
+        )
+
+    signposts_in_catalog = sorted(signposts & all_slugs)
+    if signposts_in_catalog:
+        errs.append(
+            f"{CATALOG_LIVE_SET_TAG} signpost slug(s) must not appear in "
+            f"{CATALOG_JSON_PATH} packs: {signposts_in_catalog}"
+        )
+    return errs
+
+
 def fail(errs: list[str], msg: str) -> None:
     errs.append(msg)
 
@@ -698,6 +799,25 @@ def main() -> int:
             ROOT / "packs", index_for_cat, svg_text, svg_missing=svg_missing
         ):
             fail(errs, msg)
+
+    # 14. catalog-live-set (P16): content pack slug set must equal catalog.json
+    #     packs[].slug where status is live or absent; signposts stay out of packs[].
+    catalog_obj: dict | None = None
+    catalog_err: str | None = None
+    catalog_path = ROOT / CATALOG_JSON_PATH
+    if not catalog_path.is_file():
+        catalog_err = f"missing {CATALOG_JSON_PATH}"
+    else:
+        try:
+            raw = json.loads(catalog_path.read_text(encoding="utf-8"))
+            if isinstance(raw, dict):
+                catalog_obj = raw
+            else:
+                catalog_err = f"{CATALOG_JSON_PATH} root must be an object"
+        except (OSError, json.JSONDecodeError) as e:
+            catalog_err = f"cannot read/parse {CATALOG_JSON_PATH}: {e}"
+    for msg in check_catalog_live_set(ROOT / "packs", catalog_obj, catalog_err):
+        fail(errs, msg)
 
     # 6. SKILLS.md entry count == pack count
     skills = (ROOT / "SKILLS.md").read_text(encoding="utf-8") if (ROOT / "SKILLS.md").is_file() else ""

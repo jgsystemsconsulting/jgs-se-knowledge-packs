@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # Copyright (c) 2026 JG Systems Consulting Ltd. — MIT License (see LICENSE).
 # SPDX-License-Identifier: MIT
-"""Assert-based probe for the six inline CI gates in .github/workflows/validate.yml.
+"""Assert-based probe for the seven inline CI gates in .github/workflows/validate.yml.
 
 Run:  python tooling/test_ci_gate.py
 Exits 0 when regex literal parity, heredoc extraction, negative demos, and
@@ -14,7 +14,7 @@ the gates as local functions if extraction matched zero heredocs, but zero
 extraction already fails this probe loudly, so the fallback is effectively
 unreachable and no mirror lives in this file.
 
-Regex parity pins (P4 pin-plus-parity, extended to the six pinned steps):
+Regex parity pins (P4 pin-plus-parity, extended to the seven pinned steps):
   - three version regexes, the SKILLS link regex, and the signpost regex must
     appear verbatim in both tooling/check_release.py and validate.yml
   - MAP_VERSION_RE / GENERATED_ON_RE must appear verbatim in validate.yml and
@@ -24,6 +24,8 @@ Regex parity pins (P4 pin-plus-parity, extended to the six pinned steps):
     appear verbatim in both check_release.py and validate.yml (HTML_ASSET_PAIR)
   - catalogue-count section marker, h2/chip/SVG regexes, SVG path, and tag
     (P15) must appear verbatim in both check_release.py and validate.yml
+  - catalog-live-set path/tag literals (P16) must appear verbatim in both
+    check_release.py and validate.yml (CATALOG_LIVE_SET_PAIR)
 """
 from __future__ import annotations
 
@@ -48,6 +50,7 @@ PINNED_STEPS = [
     "Map and classification data invariants",
     "HTML self-containment",
     "Landing catalogue counts",
+    "Catalog live-set parity",
 ]
 
 # Literals that must appear verbatim in check_release.py AND validate.yml.
@@ -95,6 +98,13 @@ CATALOGUE_COUNT_PAIR = [
      r"(\d+)\s+packs\s*(?:&middot;|·)\s*(\d+)\s+signposts"),
     ("still-catalogue svg path", '"docs/assets/still-catalogue.svg"'),
     ("catalogue-count tag", "[catalogue-count]"),
+]
+
+# Literals that must appear verbatim in check_release.py AND validate.yml
+# ([catalog-live-set] machine catalogue honesty, P16). Byte parity is the drift control.
+CATALOG_LIVE_SET_PAIR = [
+    ("catalog.json path", '"catalog.json"'),
+    ("catalog-live-set tag", "[catalog-live-set]"),
 ]
 
 # Literals pinned per local twin (map/classification envelope).
@@ -305,6 +315,16 @@ def main() -> int:
             f"{name} missing from validate.yml"
         )
 
+    for name, literal in CATALOG_LIVE_SET_PAIR:
+        assert literal in release_text, (
+            "regex drifted between check_release.py and validate.yml; sync them: "
+            f"{name} missing from check_release.py"
+        )
+        assert literal in workflow_text, (
+            "regex drifted between check_release.py and validate.yml; sync them: "
+            f"{name} missing from validate.yml"
+        )
+
     # 2. extraction of the shipped heredocs by pinned step name
     bodies: dict[str, str] = {}
     for step in PINNED_STEPS:
@@ -315,7 +335,7 @@ def main() -> int:
             "text, so fix the step name or the heredoc markers"
         )
         bodies[step] = body
-    assert len(bodies) == len(PINNED_STEPS), "expected exactly six pinned heredocs"
+    assert len(bodies) == len(PINNED_STEPS), "expected exactly seven pinned heredocs"
 
     with tempfile.TemporaryDirectory() as td:
         tmp = Path(td)
@@ -458,6 +478,22 @@ def main() -> int:
              "[catalogue-count] §06 h2 states 62 packs / 0 signposts "
              "but live inventory is 1 packs / 0 signposts",
              "catalogue-stale-h2")
+
+        # catalog-live-set: phantom live slug fails only-in-catalog
+        demo({
+            "packs/alpha/SKILL.md": (
+                "---\nname: alpha\ndescription: x\n---\n# alpha\n"
+            ),
+            "catalog.json": json.dumps({
+                "updated": "2026-08-27",
+                "packs": [
+                    {"slug": "alpha", "status": "live"},
+                    {"slug": "phantom", "status": "live"},
+                ],
+            }),
+        }, "Catalog live-set parity",
+             "[catalog-live-set] live slug set mismatch",
+             "catalog-live-set-phantom")
 
     # 3. positive runs against the real repo tree: what CI sees on a clean tree
     for step in PINNED_STEPS:

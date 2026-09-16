@@ -19,6 +19,7 @@
 #   Map and classification data invariants     pure-data subset of check_release 9 + 10
 #   HTML self-containment                      twins check_release 12 [html-assets] (literal twin (hosts + regex pins)) plus [brand-tokens] (P13)
 #   Landing catalogue counts                    twins check_release 13 [catalogue-count]
+#   Catalog live-set parity                     twins check_release 14 [catalog-live-set]
 #
 # CI does not cover, and why: full validate_pack (non-trivial parser; a fork
 # invites permanent drift), RR-B-30 packs.html regeneration equality (needs the
@@ -536,6 +537,131 @@ jobs:
 
       - name: Catalog JSON valid
         run: python3 -c "import json; json.load(open('catalog.json')); print('catalog.json OK')"
+
+      - name: Catalog live-set parity
+        run: |
+          python3 - <<'PY'
+          # Twins tooling/check_release.py check 14 ([catalog-live-set]) as a complete
+          # stdlib port. Never executes repo code. Shared literals are pinned by
+          # tooling/test_ci_gate.py (CATALOG_LIVE_SET_PAIR).
+          import json, re, sys, pathlib
+
+          CATALOG_JSON_PATH = "catalog.json"
+          CATALOG_LIVE_SET_TAG = "[catalog-live-set]"
+
+          def inventory_pack_slugs(packs_root):
+              errs = []
+              content, signposts = set(), set()
+              if not packs_root.is_dir():
+                  return content, signposts, [f"{CATALOG_LIVE_SET_TAG} packs root missing: {packs_root}"]
+              for child in sorted(p for p in packs_root.iterdir() if p.is_dir()):
+                  skill = child / "SKILL.md"
+                  if not skill.is_file():
+                      errs.append(f"{CATALOG_LIVE_SET_TAG} missing SKILL.md in packs/{child.name}")
+                      continue
+                  try:
+                      text = skill.read_text(encoding="utf-8")
+                  except OSError as e:
+                      errs.append(f"{CATALOG_LIVE_SET_TAG} cannot read packs/{child.name}/SKILL.md: {e}")
+                      continue
+                  m = re.match(r"^---\s*\n(.*?)\n---\s*(?:\n|$)", text, re.S)
+                  if not m:
+                      errs.append(
+                          f"{CATALOG_LIVE_SET_TAG} unparseable frontmatter in packs/{child.name}/SKILL.md"
+                      )
+                      continue
+                  fm = m.group(1)
+                  if re.search(r"^kind:\s*signpost\s*$", fm, re.I | re.M):
+                      signposts.add(child.name)
+                  else:
+                      content.add(child.name)
+              return content, signposts, errs
+
+          fails = 0
+          packs_root = pathlib.Path("packs")
+          content, signposts, inv_errs = inventory_pack_slugs(packs_root)
+          for e in inv_errs:
+              print(f"::error::{e}")
+              fails += 1
+          if inv_errs:
+              sys.exit(1)
+
+          try:
+              raw = json.loads(pathlib.Path(CATALOG_JSON_PATH).read_text(encoding="utf-8"))
+          except (OSError, json.JSONDecodeError) as e:
+              print(f"::error::{CATALOG_LIVE_SET_TAG} cannot read/parse {CATALOG_JSON_PATH}: {e}")
+              sys.exit(1)
+          if not isinstance(raw, dict):
+              print(f"::error::{CATALOG_LIVE_SET_TAG} {CATALOG_JSON_PATH} root must be an object")
+              sys.exit(1)
+
+          packs_list = raw.get("packs")
+          if not isinstance(packs_list, list):
+              print(f"::error::{CATALOG_LIVE_SET_TAG} {CATALOG_JSON_PATH} packs must be a list")
+              sys.exit(1)
+
+          live, all_slugs = set(), set()
+          duplicates = []
+          bad_entries = 0
+          for entry in packs_list:
+              if not isinstance(entry, dict):
+                  bad_entries += 1
+                  continue
+              slug = entry.get("slug")
+              if not isinstance(slug, str) or not slug.strip():
+                  bad_entries += 1
+                  continue
+              slug = slug.strip()
+              if slug in all_slugs:
+                  duplicates.append(slug)
+              all_slugs.add(slug)
+              status = entry.get("status")
+              if status is None or status == "live":
+                  live.add(slug)
+
+          if bad_entries:
+              print(
+                  f"::error::{CATALOG_LIVE_SET_TAG} {CATALOG_JSON_PATH} packs has {bad_entries} "
+                  "entries missing a non-empty string slug"
+              )
+              fails += 1
+          if duplicates:
+              print(
+                  f"::error::{CATALOG_LIVE_SET_TAG} duplicate slug(s) in {CATALOG_JSON_PATH} packs: "
+                  f"{sorted(set(duplicates))}"
+              )
+              fails += 1
+
+          only_packs = sorted(content - live)
+          only_catalog = sorted(live - content)
+          if only_packs or only_catalog:
+              parts = []
+              if only_packs:
+                  parts.append(f"only in packs/: {only_packs}")
+              if only_catalog:
+                  parts.append(f"only in catalog.packs live: {only_catalog}")
+              print(
+                  f"::error::{CATALOG_LIVE_SET_TAG} live slug set mismatch "
+                  f"(content packs {len(content)} vs catalog live {len(live)}): "
+                  + "; ".join(parts)
+              )
+              fails += 1
+
+          signposts_in_catalog = sorted(signposts & all_slugs)
+          if signposts_in_catalog:
+              print(
+                  f"::error::{CATALOG_LIVE_SET_TAG} signpost slug(s) must not appear in "
+                  f"{CATALOG_JSON_PATH} packs: {signposts_in_catalog}"
+              )
+              fails += 1
+
+          if fails:
+              sys.exit(1)
+          print(
+              f"{CATALOG_LIVE_SET_TAG} catalog live set matches "
+              f"{len(content)} content packs (signposts excluded)"
+          )
+          PY
 
       - name: Version single-source
         run: |
