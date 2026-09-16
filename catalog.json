@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "repository": "jgs-se-knowledge-packs",
   "scope": "systems engineering",
-  "updated": "2026-08-17",
+  "updated": "2026-08-27",
   "packs": [
     {
       "slug": "faa-rma",

@@ -9,18 +9,18 @@
   <rect x="32" y="68" width="1136" height="575" fill="none" stroke="#2a2d33" stroke-width="2"/>
   <rect x="32" y="68" width="8" height="575" fill="#f4f2ec"/>
   <text x="64" y="140" font-family="ui-monospace, Consolas, monospace" font-size="48" font-weight="700" fill="#e8ebf0">§06 · The catalogue</text>
-  <text x="64" y="188" font-family="ui-monospace, Consolas, monospace" font-size="24" fill="#c7ccd3">54 packs  ·  2 signposts  ·  open sources only</text>
+  <text x="64" y="188" font-family="ui-monospace, Consolas, monospace" font-size="24" fill="#c7ccd3">63 packs  ·  2 signposts  ·  open sources only</text>
   <text x="80" y="250" font-family="ui-monospace, Consolas, monospace" font-size="26" font-weight="700" fill="#e8ebf0">NASA</text>
-  <text x="400" y="250" font-family="ui-monospace, Consolas, monospace" font-size="26" fill="#f4f2ec">15</text>
+  <text x="400" y="250" font-family="ui-monospace, Consolas, monospace" font-size="26" fill="#f4f2ec">16</text>
   <text x="80" y="310" font-family="ui-monospace, Consolas, monospace" font-size="26" font-weight="700" fill="#e8ebf0">DoD / DAU / OSD</text>
-  <text x="400" y="310" font-family="ui-monospace, Consolas, monospace" font-size="26" fill="#f4f2ec">13</text>
+  <text x="400" y="310" font-family="ui-monospace, Consolas, monospace" font-size="26" fill="#f4f2ec">19</text>
   <text x="80" y="370" font-family="ui-monospace, Consolas, monospace" font-size="26" font-weight="700" fill="#e8ebf0">NIST</text>
   <text x="400" y="370" font-family="ui-monospace, Consolas, monospace" font-size="26" fill="#f4f2ec">09</text>
   <text x="80" y="430" font-family="ui-monospace, Consolas, monospace" font-size="26" font-weight="700" fill="#e8ebf0">FAA</text>
-  <text x="400" y="430" font-family="ui-monospace, Consolas, monospace" font-size="26" fill="#f4f2ec">06</text>
+  <text x="400" y="430" font-family="ui-monospace, Consolas, monospace" font-size="26" fill="#f4f2ec">07</text>
   <text x="80" y="490" font-family="ui-monospace, Consolas, monospace" font-size="26" font-weight="700" fill="#e8ebf0">GAO</text>
   <text x="400" y="490" font-family="ui-monospace, Consolas, monospace" font-size="26" fill="#f4f2ec">04</text>
   <line x1="48" y1="605" x2="1152" y2="605" stroke="#2a2d33"/>
-  <text x="56" y="640" font-family="ui-monospace, Consolas, monospace" font-size="18" fill="#6b7078">54 PACKS · 2 SIGNPOSTS · FILTER ON packs.html</text>
+  <text x="56" y="640" font-family="ui-monospace, Consolas, monospace" font-size="18" fill="#6b7078">63 PACKS · 2 SIGNPOSTS · FILTER ON packs.html</text>
   <text x="1144" y="640" text-anchor="end" font-family="ui-monospace, Consolas, monospace" font-size="18" fill="#6b7078">PUBLIC  ·  MIT</text>
 </svg>
