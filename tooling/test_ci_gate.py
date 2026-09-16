@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # Copyright (c) 2026 JG Systems Consulting Ltd. — MIT License (see LICENSE).
 # SPDX-License-Identifier: MIT
-"""Assert-based probe for the five inline CI gates in .github/workflows/validate.yml.
+"""Assert-based probe for the six inline CI gates in .github/workflows/validate.yml.
 
 Run:  python tooling/test_ci_gate.py
 Exits 0 when regex literal parity, heredoc extraction, negative demos, and
@@ -14,7 +14,7 @@ the gates as local functions if extraction matched zero heredocs, but zero
 extraction already fails this probe loudly, so the fallback is effectively
 unreachable and no mirror lives in this file.
 
-Regex parity pins (P4 pin-plus-parity, extended to the five new steps):
+Regex parity pins (P4 pin-plus-parity, extended to the six pinned steps):
   - three version regexes, the SKILLS link regex, and the signpost regex must
     appear verbatim in both tooling/check_release.py and validate.yml
   - MAP_VERSION_RE / GENERATED_ON_RE must appear verbatim in validate.yml and
@@ -22,6 +22,8 @@ Regex parity pins (P4 pin-plus-parity, extended to the five new steps):
   - the html-assets host set, TAG_SLICE/ATTR/CSS_URL/CSS_IMPORT pattern text,
     and the meta image tokens plus the BRAND-TOKENS marker literals (P13) must
     appear verbatim in both check_release.py and validate.yml (HTML_ASSET_PAIR)
+  - catalogue-count section marker, h2/chip/SVG regexes, SVG path, and tag
+    (P15) must appear verbatim in both check_release.py and validate.yml
 """
 from __future__ import annotations
 
@@ -45,6 +47,7 @@ PINNED_STEPS = [
     "Chapter basename overlap",
     "Map and classification data invariants",
     "HTML self-containment",
+    "Landing catalogue counts",
 ]
 
 # Literals that must appear verbatim in check_release.py AND validate.yml.
@@ -77,6 +80,21 @@ HTML_ASSET_PAIR = [
     ("meta twitter:image:src", '"twitter:image:src"'),
     ("brand-tokens BEGIN marker", '"/* BRAND-TOKENS:BEGIN"'),
     ("brand-tokens END marker", '"/* BRAND-TOKENS:END"'),
+]
+
+# Literals that must appear verbatim in check_release.py AND validate.yml
+# ([catalogue-count] landing honesty, P15). Byte parity is the drift control.
+CATALOGUE_COUNT_PAIR = [
+    ("catalogue section marker", '"<!-- §06 The catalogue -->"'),
+    ("catalogue h2 pattern",
+     r"<h2>\s*(\d+)\s+packs\s*(?:&middot;|·)\s*(\d+)\s+signposts\s*</h2>"),
+    ("catalogue chip pattern", r'<div\s+class="pk"\s*>\s*<b>(.*?)</b>'),
+    ("catalogue chip count pattern",
+     r"^(?P<label>.*?)\s*(?:&middot;|·)\s*(?P<count>\d+)\s*$"),
+    ("catalogue svg nm pattern",
+     r"(\d+)\s+packs\s*(?:&middot;|·)\s*(\d+)\s+signposts"),
+    ("still-catalogue svg path", '"docs/assets/still-catalogue.svg"'),
+    ("catalogue-count tag", "[catalogue-count]"),
 ]
 
 # Literals pinned per local twin (map/classification envelope).
@@ -277,6 +295,16 @@ def main() -> int:
             f"{name} missing from validate.yml"
         )
 
+    for name, literal in CATALOGUE_COUNT_PAIR:
+        assert literal in release_text, (
+            "regex drifted between check_release.py and validate.yml; sync them: "
+            f"{name} missing from check_release.py"
+        )
+        assert literal in workflow_text, (
+            "regex drifted between check_release.py and validate.yml; sync them: "
+            f"{name} missing from validate.yml"
+        )
+
     # 2. extraction of the shipped heredocs by pinned step name
     bodies: dict[str, str] = {}
     for step in PINNED_STEPS:
@@ -287,7 +315,7 @@ def main() -> int:
             "text, so fix the step name or the heredoc markers"
         )
         bodies[step] = body
-    assert len(bodies) == len(PINNED_STEPS), "expected exactly five pinned heredocs"
+    assert len(bodies) == len(PINNED_STEPS), "expected exactly six pinned heredocs"
 
     with tempfile.TemporaryDirectory() as td:
         tmp = Path(td)
@@ -398,6 +426,38 @@ def main() -> int:
              "HTML self-containment",
              "[brand-tokens] expected exactly one BRAND-TOKENS BEGIN",
              "html-brand-markers-missing")
+
+        # catalogue-count: stale h2 (62 packs) fails live-versus-stated
+        cat_pack = (
+            "---\nname: alpha\ndescription: x\n---\n# alpha\n"
+        )
+        cat_index_stale = (
+            "<!-- §06 The catalogue -->\n"
+            "<section><div class=\"wrap\">\n"
+            "  <h2>62 packs &middot; 0 signposts</h2>\n"
+            "  <div class=\"packs\">\n"
+            "    <div class=\"pk\"><b>Demo &middot; 1</b><span>one pack</span></div>\n"
+            "    <div class=\"pk\"><b>Signposts &middot; 0</b><span>none</span></div>\n"
+            "  </div>\n"
+            "  <figcaption>FIG.06 · 1 packs plus 0 signposts across open sources; "
+            "filter the full list on packs.html.</figcaption>\n"
+            "</div></section>\n"
+            "<!-- §07 Licensing -->\n"
+        )
+        cat_svg_ok = (
+            '<svg xmlns="http://www.w3.org/2000/svg">\n'
+            '<text>1 packs  ·  0 signposts  ·  open sources only</text>\n'
+            '<text>1 PACKS · 0 SIGNPOSTS · FILTER ON packs.html</text>\n'
+            "</svg>\n"
+        )
+        demo({
+            "packs/alpha/SKILL.md": cat_pack,
+            "docs/index.html": cat_index_stale,
+            "docs/assets/still-catalogue.svg": cat_svg_ok,
+        }, "Landing catalogue counts",
+             "[catalogue-count] §06 h2 states 62 packs / 0 signposts "
+             "but live inventory is 1 packs / 0 signposts",
+             "catalogue-stale-h2")
 
     # 3. positive runs against the real repo tree: what CI sees on a clean tree
     for step in PINNED_STEPS:

@@ -18,6 +18,7 @@
 #   Chapter basename overlap                   twins check_release 8, shared tooling/overlap-whitelist.txt
 #   Map and classification data invariants     pure-data subset of check_release 9 + 10
 #   HTML self-containment                      twins check_release 12 [html-assets] (literal twin (hosts + regex pins)) plus [brand-tokens] (P13)
+#   Landing catalogue counts                    twins check_release 13 [catalogue-count]
 #
 # CI does not cover, and why: full validate_pack (non-trivial parser; a fork
 # invites permanent drift), RR-B-30 packs.html regeneration equality (needs the
@@ -275,6 +276,240 @@ jobs:
               fails += 1
           if not fails:
               print("[html-assets] all docs/*.html pages self-contained")
+          sys.exit(1 if fails else 0)
+          PY
+
+      - name: Landing catalogue counts
+        run: |
+          python3 - <<'PY'
+          # Twins tooling/check_release.py check 13 ([catalogue-count]) as a complete
+          # port. Section marker, h2/chip/SVG regex literals below are byte-identical
+          # to the local gate; tooling/test_ci_gate.py asserts that parity and
+          # executes this shipped heredoc. Never executes checkout repository code.
+          import re, sys, pathlib
+
+          CATALOGUE_SECTION_MARKER = "<!-- §06 The catalogue -->"
+          CATALOGUE_H2_RE = re.compile(
+              r"<h2>\s*(\d+)\s+packs\s*(?:&middot;|·)\s*(\d+)\s+signposts\s*</h2>",
+              re.I,
+          )
+          CATALOGUE_CHIP_RE = re.compile(
+              r'<div\s+class="pk"\s*>\s*<b>(.*?)</b>',
+              re.I | re.S,
+          )
+          CATALOGUE_CHIP_COUNT_RE = re.compile(
+              r"^(?P<label>.*?)\s*(?:&middot;|·)\s*(?P<count>\d+)\s*$",
+              re.S,
+          )
+          CATALOGUE_SVG_NM_RE = re.compile(
+              r"(\d+)\s+packs\s*(?:&middot;|·)\s*(\d+)\s+signposts",
+              re.I,
+          )
+          STILL_CATALOGUE_SVG = "docs/assets/still-catalogue.svg"
+
+          def inventory_pack_counts(packs_root):
+              errs = []
+              if not packs_root.is_dir():
+                  return 0, 0, [f"[catalogue-count] packs root missing: {packs_root}"]
+              content = 0
+              signposts = 0
+              for child in sorted(p for p in packs_root.iterdir() if p.is_dir()):
+                  skill = child / "SKILL.md"
+                  if not skill.is_file():
+                      errs.append(f"[catalogue-count] missing SKILL.md in packs/{child.name}")
+                      continue
+                  try:
+                      text = skill.read_text(encoding="utf-8")
+                  except OSError as e:
+                      errs.append(f"[catalogue-count] cannot read packs/{child.name}/SKILL.md: {e}")
+                      continue
+                  m = re.match(r"^---\s*\n(.*?)\n---\s*(?:\n|$)", text, re.S)
+                  if not m:
+                      errs.append(
+                          f"[catalogue-count] unparseable frontmatter in packs/{child.name}/SKILL.md"
+                      )
+                      continue
+                  fm = m.group(1)
+                  if re.search(r"^kind:\s*signpost\s*$", fm, re.I | re.M):
+                      signposts += 1
+                  else:
+                      content += 1
+              return content, signposts, errs
+
+          def slice_catalogue_section(html):
+              start = html.find(CATALOGUE_SECTION_MARKER)
+              if start < 0:
+                  return None
+              rest = html[start + len(CATALOGUE_SECTION_MARKER):]
+              nxt = re.search(r"\n<!--\s*§", rest)
+              if nxt:
+                  return html[start:start + len(CATALOGUE_SECTION_MARKER) + nxt.start()]
+              return html[start:]
+
+          def parse_catalogue_chips(section):
+              errs = []
+              content_sum = 0
+              signpost_count = None
+              signpost_chips = 0
+              for m in CATALOGUE_CHIP_RE.finditer(section):
+                  inner = re.sub(r"\s+", " ", m.group(1)).strip()
+                  cm = CATALOGUE_CHIP_COUNT_RE.match(inner)
+                  if not cm:
+                      errs.append(f"[catalogue-count] unparseable chip label: {inner!r}")
+                      continue
+                  label = cm.group("label")
+                  count = int(cm.group("count"))
+                  if re.search(r"signpost", label, re.I):
+                      signpost_chips += 1
+                      signpost_count = count
+                  else:
+                      content_sum += count
+              return content_sum, signpost_count, signpost_chips, errs
+
+          def parse_svg_catalogue_nm(svg_text):
+              texts = re.findall(r"<text\b[^>]*>(.*?)</text>", svg_text, re.I | re.S)
+              subtitle = None
+              footer = None
+              for raw in texts:
+                  t = re.sub(r"\s+", " ", raw).strip()
+                  m = CATALOGUE_SVG_NM_RE.search(t)
+                  if not m:
+                      continue
+                  pair = (int(m.group(1)), int(m.group(2)))
+                  if "open sources" in t.lower():
+                      subtitle = pair
+                  elif "filter" in t.lower() or "packs.html" in t.lower():
+                      footer = pair
+                  elif subtitle is None:
+                      subtitle = pair
+                  else:
+                      footer = pair
+              return subtitle, footer
+
+          fails = 0
+          n_live, m_live, inv_errs = inventory_pack_counts(pathlib.Path("packs"))
+          for e in inv_errs:
+              print(f"::error::{e}")
+              fails += 1
+          if inv_errs:
+              sys.exit(1)
+
+          try:
+              index_html = pathlib.Path("docs/index.html").read_text(encoding="utf-8")
+          except OSError as e:
+              print(f"::error::[catalogue-count] cannot read docs/index.html: {e}")
+              sys.exit(1)
+
+          section = slice_catalogue_section(index_html)
+          if section is None:
+              print(f"::error::[catalogue-count] missing section marker {CATALOGUE_SECTION_MARKER!r} in docs/index.html")
+              fails += 1
+          else:
+              h2 = CATALOGUE_H2_RE.search(section)
+              if not h2:
+                  print(
+                      f"::error::[catalogue-count] §06 h2 must match '<N> packs · <M> signposts' "
+                      f"(live {n_live} packs / {m_live} signposts)"
+                  )
+                  fails += 1
+              else:
+                  n_h2, m_h2 = int(h2.group(1)), int(h2.group(2))
+                  if n_h2 != n_live or m_h2 != m_live:
+                      print(
+                          f"::error::[catalogue-count] §06 h2 states {n_h2} packs / {m_h2} signposts "
+                          f"but live inventory is {n_live} packs / {m_live} signposts"
+                      )
+                      fails += 1
+
+              content_sum, signpost_count, signpost_chips, chip_errs = parse_catalogue_chips(section)
+              for e in chip_errs:
+                  print(f"::error::{e}")
+                  fails += 1
+              if signpost_chips != 1:
+                  print(
+                      f"::error::[catalogue-count] expected exactly one Signposts chip, found {signpost_chips} "
+                      f"(live signposts {m_live})"
+                  )
+                  fails += 1
+              elif signpost_count != m_live:
+                  print(
+                      f"::error::[catalogue-count] Signposts chip COUNT {signpost_count} != live signposts {m_live}"
+                  )
+                  fails += 1
+              if content_sum != n_live:
+                  print(
+                      f"::error::[catalogue-count] content chip COUNT sum {content_sum} != live content packs {n_live}"
+                  )
+                  fails += 1
+
+              caps = re.findall(r"<figcaption\b[^>]*>(.*?)</figcaption>", section, re.I | re.S)
+              if not caps:
+                  print("::error::[catalogue-count] §06 figcaption missing")
+                  fails += 1
+              else:
+                  cap = re.sub(r"\s+", " ", caps[0]).strip()
+                  prescribed = (
+                      "FIG.06 · Sixty-three packs plus two signposts across open sources; "
+                      "filter the full list on packs.html."
+                  )
+                  cap_norm = cap.replace("&middot;", "·")
+                  ok = False
+                  if re.sub(r"\s+", " ", prescribed).strip() == cap_norm:
+                      ok = True
+                  elif str(n_live) in cap and str(m_live) in cap:
+                      ok = True
+                  else:
+                      if n_live == 63 and m_live == 2:
+                          if re.search(r"sixty[-\s]?three", cap, re.I) and re.search(r"\btwo\b", cap, re.I):
+                              ok = True
+                  if not ok:
+                      print(
+                          f"::error::[catalogue-count] §06 figcaption must carry live N={n_live} and M={m_live} "
+                          f"(digit or word form); got {cap!r}"
+                      )
+                      fails += 1
+
+          svg_path = pathlib.Path(STILL_CATALOGUE_SVG)
+          if not svg_path.is_file():
+              print(f"::error::[catalogue-count] missing {STILL_CATALOGUE_SVG}")
+              fails += 1
+          else:
+              try:
+                  svg_text = svg_path.read_text(encoding="utf-8")
+              except OSError as e:
+                  print(f"::error::[catalogue-count] cannot read {STILL_CATALOGUE_SVG}: {e}")
+                  fails += 1
+              else:
+                  sub_nm, foot_nm = parse_svg_catalogue_nm(svg_text)
+                  if sub_nm is None:
+                      print(
+                          f"::error::[catalogue-count] {STILL_CATALOGUE_SVG} subtitle missing "
+                          f"'N packs · M signposts' (live {n_live}/{m_live})"
+                      )
+                      fails += 1
+                  elif sub_nm != (n_live, m_live):
+                      print(
+                          f"::error::[catalogue-count] {STILL_CATALOGUE_SVG} subtitle states "
+                          f"{sub_nm[0]} packs / {sub_nm[1]} signposts but live is "
+                          f"{n_live} packs / {m_live} signposts"
+                      )
+                      fails += 1
+                  if foot_nm is None:
+                      print(
+                          f"::error::[catalogue-count] {STILL_CATALOGUE_SVG} footer missing "
+                          f"'N packs · M signposts' (live {n_live}/{m_live})"
+                      )
+                      fails += 1
+                  elif foot_nm != (n_live, m_live):
+                      print(
+                          f"::error::[catalogue-count] {STILL_CATALOGUE_SVG} footer states "
+                          f"{foot_nm[0]} packs / {foot_nm[1]} signposts but live is "
+                          f"{n_live} packs / {m_live} signposts"
+                      )
+                      fails += 1
+
+          if not fails:
+              print(f"[catalogue-count] landing matches live {n_live} packs / {m_live} signposts")
           sys.exit(1 if fails else 0)
           PY
 

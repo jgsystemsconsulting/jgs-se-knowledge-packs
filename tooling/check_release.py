@@ -31,11 +31,16 @@ standard requires for this repo and exits non-zero on any failure:
      Plus brand-token parity ([brand-tokens], P13): the exclusive BRAND-TOKENS
      slice extracted from docs/index.html must appear verbatim in
      docs/packs.html.
+  13. Landing catalogue counts ([catalogue-count], P15): live content count N and
+     signpost count M from packs/*/SKILL.md frontmatter must equal the §06
+     headline, chip COUNT sum (with exactly one Signposts chip equal to M),
+     figcaption N/M, and still-catalogue.svg subtitle/footer N/M.
 
 stdlib only. This is a LOCAL/trusted gate and may run repo code; the CI workflow
 (.github/workflows/validate.yml) inlines its own checks and never executes repo code.
-CI-covered: version, index, overlap, map/rules data invariants, html-assets. Local-only
-required before tag: pack validation, packs.html freshness, full map/rules checks, replay.
+CI-covered: version, index, overlap, map/rules data invariants, html-assets,
+catalogue-count. Local-only required before tag: pack validation, packs.html
+freshness, full map/rules checks, replay.
 
 Pre-tag rule: run this gate at the exact commit being tagged and require a PASS
 line whose sha matches that commit (a `@ no-git` receipt never satisfies it).
@@ -261,6 +266,259 @@ def slice_brand_tokens(text: str) -> str:
     return "\n".join(lines[begins[0] + 1:ends[0]])
 
 
+# P15 catalogue-count: section marker, h2, chip COUNT, SVG N/M. Literals below are
+# pinned byte-identical in .github/workflows/validate.yml (test_ci_gate CATALOGUE_COUNT_PAIR).
+CATALOGUE_SECTION_MARKER = "<!-- §06 The catalogue -->"
+CATALOGUE_H2_RE = re.compile(
+    r"<h2>\s*(\d+)\s+packs\s*(?:&middot;|·)\s*(\d+)\s+signposts\s*</h2>",
+    re.I,
+)
+CATALOGUE_CHIP_RE = re.compile(
+    r'<div\s+class="pk"\s*>\s*<b>(.*?)</b>',
+    re.I | re.S,
+)
+CATALOGUE_CHIP_COUNT_RE = re.compile(
+    r"^(?P<label>.*?)\s*(?:&middot;|·)\s*(?P<count>\d+)\s*$",
+    re.S,
+)
+CATALOGUE_SVG_NM_RE = re.compile(
+    r"(\d+)\s+packs\s*(?:&middot;|·)\s*(\d+)\s+signposts",
+    re.I,
+)
+STILL_CATALOGUE_SVG = "docs/assets/still-catalogue.svg"
+
+
+def inventory_pack_counts(packs_root: Path) -> tuple[int, int, list[str]]:
+    """Return (content_N, signpost_M, errors) from packs/*/SKILL.md frontmatter.
+
+    Every immediate child directory must contain SKILL.md with parseable YAML
+    frontmatter between --- fences. A frontmatter line matching
+    ^kind:\\s*signpost\\s*$ (case-insensitive) marks a signpost; all others are
+    content packs. Live counts never come from a hardcoded constant.
+    """
+    errs: list[str] = []
+    if not packs_root.is_dir():
+        return 0, 0, [f"[catalogue-count] packs root missing: {packs_root}"]
+    content = 0
+    signposts = 0
+    for child in sorted(p for p in packs_root.iterdir() if p.is_dir()):
+        skill = child / "SKILL.md"
+        if not skill.is_file():
+            errs.append(
+                f"[catalogue-count] missing SKILL.md in packs/{child.name}"
+            )
+            continue
+        try:
+            text = skill.read_text(encoding="utf-8")
+        except OSError as e:
+            errs.append(
+                f"[catalogue-count] cannot read packs/{child.name}/SKILL.md: {e}"
+            )
+            continue
+        m = re.match(r"^---\s*\n(.*?)\n---\s*(?:\n|$)", text, re.S)
+        if not m:
+            errs.append(
+                f"[catalogue-count] unparseable frontmatter in packs/{child.name}/SKILL.md"
+            )
+            continue
+        fm = m.group(1)
+        if re.search(r"^kind:\s*signpost\s*$", fm, re.I | re.M):
+            signposts += 1
+        else:
+            content += 1
+    return content, signposts, errs
+
+
+def slice_catalogue_section(html: str) -> str | None:
+    """Return docs/index.html text from §06 marker to the next section comment."""
+    start = html.find(CATALOGUE_SECTION_MARKER)
+    if start < 0:
+        return None
+    rest = html[start + len(CATALOGUE_SECTION_MARKER):]
+    nxt = re.search(r"\n<!--\s*§", rest)
+    if nxt:
+        return html[start:start + len(CATALOGUE_SECTION_MARKER) + nxt.start()]
+    return html[start:]
+
+
+def parse_catalogue_h2(section: str) -> tuple[int, int] | None:
+    """Parse §06 h2 as (packs_N, signposts_M); entity-aware middot."""
+    m = CATALOGUE_H2_RE.search(section)
+    if not m:
+        return None
+    return int(m.group(1)), int(m.group(2))
+
+
+def parse_catalogue_chips(section: str) -> tuple[int, int | None, int, list[str]]:
+    """Return (content_sum, signpost_count_or_None, signpost_chip_n, errors).
+
+    COUNT is only the integer after the separator in the <b> label. Digits inside
+    <span> descriptions are ignored. Exactly one chip whose label contains
+    'signpost' (case-insensitive) is required by the caller.
+    """
+    errs: list[str] = []
+    content_sum = 0
+    signpost_count: int | None = None
+    signpost_chips = 0
+    for m in CATALOGUE_CHIP_RE.finditer(section):
+        inner = re.sub(r"\s+", " ", m.group(1)).strip()
+        cm = CATALOGUE_CHIP_COUNT_RE.match(inner)
+        if not cm:
+            errs.append(
+                f"[catalogue-count] unparseable chip label: {inner!r}"
+            )
+            continue
+        label = cm.group("label")
+        count = int(cm.group("count"))
+        if re.search(r"signpost", label, re.I):
+            signpost_chips += 1
+            signpost_count = count
+        else:
+            content_sum += count
+    return content_sum, signpost_count, signpost_chips, errs
+
+
+def parse_svg_catalogue_nm(svg_text: str) -> tuple[tuple[int, int] | None, tuple[int, int] | None]:
+    """Return (subtitle_NM, footer_NM) pairs from still-catalogue.svg text nodes."""
+    texts = re.findall(r"<text\b[^>]*>(.*?)</text>", svg_text, re.I | re.S)
+    subtitle = None
+    footer = None
+    for raw in texts:
+        t = re.sub(r"\s+", " ", raw).strip()
+        m = CATALOGUE_SVG_NM_RE.search(t)
+        if not m:
+            continue
+        pair = (int(m.group(1)), int(m.group(2)))
+        if "open sources" in t.lower():
+            subtitle = pair
+        elif "filter" in t.lower() or "packs.html" in t.lower():
+            footer = pair
+        elif subtitle is None:
+            subtitle = pair
+        else:
+            footer = pair
+    return subtitle, footer
+
+
+def check_catalogue_count(
+    packs_root: Path,
+    index_html: str,
+    svg_text: str | None,
+    svg_missing: bool = False,
+) -> list[str]:
+    """Fail-closed equality of live N/M vs landing §06 and still-catalogue.svg."""
+    errs: list[str] = []
+    n_live, m_live, inv_errs = inventory_pack_counts(packs_root)
+    errs.extend(inv_errs)
+    if inv_errs:
+        return errs
+
+    section = slice_catalogue_section(index_html)
+    if section is None:
+        errs.append(
+            "[catalogue-count] missing section marker "
+            f"{CATALOGUE_SECTION_MARKER!r} in docs/index.html"
+        )
+        return errs
+
+    h2 = parse_catalogue_h2(section)
+    if h2 is None:
+        errs.append(
+            f"[catalogue-count] §06 h2 must match '<N> packs · <M> signposts' "
+            f"(live {n_live} packs / {m_live} signposts)"
+        )
+    else:
+        n_h2, m_h2 = h2
+        if n_h2 != n_live or m_h2 != m_live:
+            errs.append(
+                f"[catalogue-count] §06 h2 states {n_h2} packs / {m_h2} signposts "
+                f"but live inventory is {n_live} packs / {m_live} signposts"
+            )
+
+    content_sum, signpost_count, signpost_chips, chip_errs = parse_catalogue_chips(section)
+    errs.extend(chip_errs)
+    if signpost_chips != 1:
+        errs.append(
+            f"[catalogue-count] expected exactly one Signposts chip, found {signpost_chips} "
+            f"(live signposts {m_live})"
+        )
+    elif signpost_count != m_live:
+        errs.append(
+            f"[catalogue-count] Signposts chip COUNT {signpost_count} != live signposts {m_live}"
+        )
+    if content_sum != n_live:
+        errs.append(
+            f"[catalogue-count] content chip COUNT sum {content_sum} != live content packs {n_live}"
+        )
+
+    # Figcaption: digits N and M, or prescribed word-form caption.
+    caps = re.findall(r"<figcaption\b[^>]*>(.*?)</figcaption>", section, re.I | re.S)
+    if not caps:
+        errs.append("[catalogue-count] §06 figcaption missing")
+    else:
+        cap = re.sub(r"\s+", " ", caps[0]).strip()
+        prescribed = (
+            "FIG.06 · Sixty-three packs plus two signposts across open sources; "
+            "filter the full list on packs.html."
+        )
+        cap_norm = cap.replace("&middot;", "·")
+        ok = False
+        if re.sub(r"\s+", " ", prescribed).strip() == cap_norm:
+            ok = True
+        elif str(n_live) in cap and str(m_live) in cap:
+            ok = True
+        else:
+            # word-form: sixty-three / two when live is 63/2; else require digits
+            words = {
+                0: "zero", 1: "one", 2: "two", 3: "three", 4: "four", 5: "five",
+                6: "six", 7: "seven", 8: "eight", 9: "nine", 10: "ten",
+            }
+            # Accept "Sixty-three" style for 63 via digits-or-words containing both
+            if n_live == 63 and m_live == 2:
+                if re.search(r"sixty[-\s]?three", cap, re.I) and re.search(
+                    r"\btwo\b", cap, re.I
+                ):
+                    ok = True
+            if not ok and n_live in words and m_live in words:
+                if re.search(rf"\b{words[n_live]}\b", cap, re.I) and re.search(
+                    rf"\b{words[m_live]}\b", cap, re.I
+                ):
+                    ok = True
+        if not ok:
+            errs.append(
+                f"[catalogue-count] §06 figcaption must carry live N={n_live} and M={m_live} "
+                f"(digit or word form); got {cap!r}"
+            )
+
+    if svg_missing or svg_text is None:
+        errs.append(f"[catalogue-count] missing {STILL_CATALOGUE_SVG}")
+    else:
+        sub_nm, foot_nm = parse_svg_catalogue_nm(svg_text)
+        if sub_nm is None:
+            errs.append(
+                f"[catalogue-count] {STILL_CATALOGUE_SVG} subtitle missing "
+                f"'N packs · M signposts' (live {n_live}/{m_live})"
+            )
+        elif sub_nm != (n_live, m_live):
+            errs.append(
+                f"[catalogue-count] {STILL_CATALOGUE_SVG} subtitle states "
+                f"{sub_nm[0]} packs / {sub_nm[1]} signposts but live is "
+                f"{n_live} packs / {m_live} signposts"
+            )
+        if foot_nm is None:
+            errs.append(
+                f"[catalogue-count] {STILL_CATALOGUE_SVG} footer missing "
+                f"'N packs · M signposts' (live {n_live}/{m_live})"
+            )
+        elif foot_nm != (n_live, m_live):
+            errs.append(
+                f"[catalogue-count] {STILL_CATALOGUE_SVG} footer states "
+                f"{foot_nm[0]} packs / {foot_nm[1]} signposts but live is "
+                f"{n_live} packs / {m_live} signposts"
+            )
+    return errs
+
+
 def fail(errs: list[str], msg: str) -> None:
     errs.append(msg)
 
@@ -417,6 +675,29 @@ def main() -> int:
         fail(errs, f"[brand-tokens] {e}")
     except OSError as e:
         fail(errs, f"[brand-tokens] cannot read page: {e}")
+
+    # 13. catalogue-count (P15): live packs/ N+M must equal landing §06 headline,
+    #     chip COUNTs (with Signposts chip), figcaption, and still-catalogue.svg
+    #     subtitle/footer. Family membership and SVG row counts are review-only.
+    try:
+        index_for_cat = (ROOT / "docs" / "index.html").read_text(encoding="utf-8")
+    except OSError as e:
+        fail(errs, f"[catalogue-count] cannot read docs/index.html: {e}")
+        index_for_cat = ""
+    svg_path = ROOT / STILL_CATALOGUE_SVG
+    svg_missing = not svg_path.is_file()
+    svg_text = None
+    if not svg_missing:
+        try:
+            svg_text = svg_path.read_text(encoding="utf-8")
+        except OSError as e:
+            fail(errs, f"[catalogue-count] cannot read {STILL_CATALOGUE_SVG}: {e}")
+            svg_missing = True
+    if index_for_cat:
+        for msg in check_catalogue_count(
+            ROOT / "packs", index_for_cat, svg_text, svg_missing=svg_missing
+        ):
+            fail(errs, msg)
 
     # 6. SKILLS.md entry count == pack count
     skills = (ROOT / "SKILLS.md").read_text(encoding="utf-8") if (ROOT / "SKILLS.md").is_file() else ""
