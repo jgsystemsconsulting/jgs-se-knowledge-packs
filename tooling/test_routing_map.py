@@ -105,6 +105,7 @@ def main() -> int:
             swap(text)
             errs = check_release.check_routing_map(packs)
             assert errs, errs
+            assert all(TAG in e for e in errs), errs
             for f in fragments:
                 assert any(f in e for e in errs), (f, errs)
             return errs
@@ -164,11 +165,9 @@ def main() -> int:
         expect(
             _orch(topics=["| setup | first |  |"]),
             "missing from ### Topics Packs column",
+            "alpha",
+            "`beta`",
         )
-        swap(_orch(topics=["| setup | first |  |"]))
-        errs = check_release.check_routing_map(packs)
-        assert any("alpha" in e for e in errs), errs
-        assert any("`beta`" in e for e in errs), errs
 
         # 11. plain-text token in a pack cell (rule 4 parse failure)
         expect(
