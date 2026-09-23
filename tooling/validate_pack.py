@@ -10,8 +10,8 @@ Usage:
 
 Checks (see docs/PACK-SPEC.md and docs/SOURCE-VETTING.md):
   - required files present: SKILL.md and PACK.yaml always; content packs also need
-    LICENSE and chapters/ with >=1 chapter (signpost packs, marked `kind: signpost`
-    in SKILL.md, carry neither and skip those two checks)
+    LICENSE and chapters/ with >=1 chapter (non-content packs, marked `kind: signpost`
+    or `kind: orchestrator` in SKILL.md, carry neither and skip those two checks)
   - SKILL.md has YAML frontmatter with name + description; name matches folder slug
   - every chapters/chNN-*.md link in SKILL.md resolves to a real file
   - PACK.yaml has the mandatory fields filled
@@ -62,17 +62,18 @@ def check_pack(pack_dir: Path) -> list[str]:
     lic = pack_dir / "LICENSE"
     chapters = pack_dir / "chapters"
 
-    # Signpost detection: same regex as check_release.py so both tools
-    # classify a pack identically. Read once here; reused by the
-    # frontmatter block below instead of a second read.
+    # Non-content kind detection (signpost, orchestrator): same regex style as
+    # check_release.py so both tools classify a pack identically. Read once
+    # here; reused by the frontmatter block below instead of a second read.
     body = skill.read_text(encoding="utf-8", errors="ignore") if skill.is_file() else ""
     is_signpost = bool(re.search(r"^kind:\s*signpost\s*$", body, re.M))
+    is_orchestrator = bool(re.search(r"^kind:\s*orchestrator\s*$", body, re.M))
 
     if not skill.is_file():
         errors.append("missing SKILL.md")
     if not pack_yaml.is_file():
         errors.append("missing PACK.yaml")
-    if not is_signpost:
+    if not (is_signpost or is_orchestrator):
         if not lic.is_file():
             errors.append("missing LICENSE (must reproduce the source's terms)")
         if not chapters.is_dir():
