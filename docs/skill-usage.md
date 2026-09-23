@@ -58,10 +58,13 @@ Modes and gates:
 
 Every claim cites a file read that session, as `[slug chNN]`, `[slug index]`, or
 `[slug glossary|patterns|cheatsheet]`, and every answer ends with a **Sources** block
-listing each pack's source and licence. Host modes: with sub-agents it reads packs in
-parallel; otherwise in sequence; on transform installs it reads the inlined index files and
+listing each pack's source and licence (Licences table, else `Public Domain (US Government work)`;
+signposts as `MIT (signpost)`; NC/SA terms in full). Host modes: with sub-agents it reads
+packs in parallel (failed brief reruns in the main thread); otherwise in sequence; on
+transform installs it reads the inlined index files, names chapters as follow-ups, and
 labels the answer `index-level`; when no member file is readable it reports the route only
-and makes no SE claims.
+and makes no SE claims. Agency filter keeps candidates on named agency rows when one
+survives, else keeps all and says so. Thin packs step down to the next on the row.
 
 ## Scope & honesty
 

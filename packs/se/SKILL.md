@@ -33,21 +33,28 @@ to open.
 ### Routing
 
 1. Match Topics keywords case-insensitively, with synonym judgement (e.g. "V&V" hits verification and validation rows).
-2. When the question names an agency that survives the filter, keep only packs that also appear on that Agency contexts row.
-3. No match: name the three closest Topics rows, suggest a rephrase or a direct `/<slug>`, and make **no SE claims**.
+2. Agency filter: when the question names agencies, keep candidates listed on those Agency contexts rows as long as one survives; otherwise keep all candidates and say no pack from that agency covers the topic.
+3. Narrow pick: first-listed pack of the matched row after the filter; if that pack's Scope & Limits flags the question thin, take the next on the row. The consult stays narrow (no gate).
+4. Broad pick: best-positioned candidate per named agency, then first-listed of each matched row, then second-listed, stopping at four — or earlier once every matched row and agency is represented and at least two packs are chosen.
+5. No match: name the three closest Topics rows, suggest a rephrase or a direct `/<slug>`, and make **no SE claims**.
 
 ### Reading
 
-A pack lives at `../<slug>/` from this folder. For each selected pack: read its
-`SKILL.md` index; open at most two chapters from its Topic Index / Chapter Index;
-open one support file (`glossary.md`, `patterns.md`, or `cheatsheet.md`) only for
-term, technique, or decision-rule questions. At most four packs total.
+A pack lives at `../<slug>/` from this folder (native installs put members side by side). For each selected pack: read its `SKILL.md` index; open at most two chapters from its Topic Index / Chapter Index; open one support file (`glossary.md`, `patterns.md`, or `cheatsheet.md`) only for term, technique, or decision-rule questions. At most four packs total. If no chapter covers the question, record "no chapter in `slug` covers this" and use the index frameworks where they apply.
 
 ### Citations and Sources
 
 Cite only files read this session, in these forms: `[slug chNN]`, `[slug index]`,
 `[slug glossary|patterns|cheatsheet]`. Every answer ends with a **Sources** block
-listing each pack's slug, its `**Source**` line, and its licence.
+listing each pack's slug, its `**Source**` line, and its licence. Content-pack
+licences come from the Licences table, else the label `Public Domain (US Government work)`.
+Signpost lines read `MIT (signpost)`. Non-commercial and share-alike terms appear in full.
+
+### Edge cases
+
+- Bare `/se` with no argument: print usage and three example questions (e.g. requirements quality, NASA risk process, hazard analysis draft).
+- Sub-agent failure: rerun that brief in the main thread.
+- Thin-pack step-down: if the selected pack's Scope & Limits flags the question thin, take the next pack on the row; the consult stays narrow.
 
 ## Routing map
 
@@ -133,10 +140,16 @@ Pick the highest mode the host can run:
 
 | Mode | When | Behaviour |
 |---|---|---|
-| Fan-out | Sub-agents available | One brief per pack in parallel; main thread composes the answer. |
+| Fan-out | Sub-agents available | One brief per pack in parallel; main thread composes the answer. On sub-agent failure, rerun that brief in the main thread. |
 | Sequential | No sub-agents, member files readable | Same briefs one at a time; write each pack's notes before opening the next. |
-| Index-only | Transform installs (Codex, Gemini, Cursor rules) | Read sibling index files when readable: `~/.codex/prompts/<slug>.md`, `~/.gemini/commands/jgs-se-knowledge-packs/<slug>.toml`, `./.cursor/rules/<slug>.mdc`. Cite `[slug index]` only and label the answer `index-level: chapter bodies not installed`. |
+| Index-only | Transform installs (Codex, Gemini, Cursor rules) | Read sibling index files when readable. Cite `[slug index]` only, name chapters as follow-ups, and label the answer `index-level: chapter bodies not installed`. |
 | Route-only | No member file readable | Report the routing decision and the `/slug` commands only. Make **no SE claims**. |
+
+**Native-root fallback.** When the skill folder is not revealed, try
+`~/.claude/skills/`, `~/.openclaw/skills/`, `~/.copilot/skills/`, each with and
+without the `jgs-se-knowledge-packs/` namespace. Transform index files live at
+`~/.codex/prompts/<slug>.md`, `~/.gemini/commands/jgs-se-knowledge-packs/<slug>.toml`,
+and `./.cursor/rules/<slug>.mdc`.
 
 Narrow consults read in the main thread on every host. A missing routed pack is
 noted and skipped; if none remain, fall back to route-only.
