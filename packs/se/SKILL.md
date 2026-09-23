@@ -7,7 +7,7 @@ description: "Orchestrator (not a knowledge pack): routes a free-text systems-en
 
 <!-- argument-hint: [free-text systems-engineering question] -->
 
-# SE Orchestrator — routes questions to the right knowledge packs
+# SE Orchestrator: routes questions to the right knowledge packs
 
 **This is an orchestrator, not a knowledge pack.** It carries **no source content**.
 On explicit `/se <question>` it matches your question to installed catalogue packs,
