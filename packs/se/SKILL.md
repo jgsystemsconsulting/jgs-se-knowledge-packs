@@ -35,7 +35,7 @@ to open.
 1. Match Topics keywords case-insensitively, with synonym judgement (e.g. "V&V" hits verification and validation rows).
 2. Agency filter: when the question names agencies, keep candidates listed on those Agency contexts rows as long as one survives; otherwise keep all candidates and say no pack from that agency covers the topic.
 3. Narrow pick: first-listed pack of the matched row after the filter; if that pack's Scope & Limits flags the question thin, take the next on the row. The consult stays narrow (no gate).
-4. Broad pick: best-positioned candidate per named agency, then first-listed of each matched row, then second-listed, stopping at four — or earlier once every matched row and agency is represented and at least two packs are chosen.
+4. Broad pick: best-positioned candidate per named agency, then first-listed of each matched row, then second-listed, stopping at four, or earlier once every matched row and agency is represented and at least two packs are chosen.
 5. No match: name the three closest Topics rows, suggest a rephrase or a direct `/<slug>`, and make **no SE claims**.
 
 ### Reading
