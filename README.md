@@ -7,7 +7,7 @@ SPDX-License-Identifier: MIT
 
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT%20(tooling)-blue" alt="License: MIT (tooling)">
-  <img src="https://img.shields.io/badge/version-1.20.0-green" alt="Version 1.20.0">
+  <img src="https://img.shields.io/badge/version-1.21.0-green" alt="Version 1.21.0">
   <img src="https://img.shields.io/badge/packs-63-blueviolet" alt="63 packs">
   <img src="https://img.shields.io/badge/tested%20with-Claude%20Code-8A2BE2" alt="Tested with Claude Code">
   <img src="https://img.shields.io/badge/scope-systems%20engineering-orange" alt="Scope: systems engineering">
@@ -55,14 +55,15 @@ and install the catalogue for you.
 ```text
 You are installing jgs-se-knowledge-packs, an open catalogue (MIT tooling) of
 systems-engineering knowledge-pack skills by JG Systems Consulting Ltd.
-Repository: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs (version 1.20.0).
+Repository: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs (version 1.21.0).
 Do this in order:
 1. Read README.md, docs/skill-usage.md, and CHANGELOG.md so you understand what you are
    installing. There are NO external prerequisites: packs are plain Markdown skills.
 2. Run `python install.py --dry-run` and show me the pack list and target
    (~/.claude/skills/jgs-se-knowledge-packs/). If it looks right, run `python install.py`.
 3. Verify: list the installed packs under the target and confirm the count matches SKILLS.md.
-4. Tell me to restart Claude Code, then try `/sebok systems of systems`.
+4. Tell me to restart Claude Code, then try `/sebok systems of systems` or ask
+   `/se what are the EARS requirement patterns?`.
 5. Pack CONTENT is under each source's own licence (see NOTICE); keep attribution intact.
 ```
 
@@ -182,12 +183,19 @@ the OMG modelling specs; `se-standards-signpost` maps the whole SE standards lan
 owner, whether it can be packaged, and where to get it. They exist because most SE standards
 are paywalled or all-rights-reserved (see [docs/SOURCE-VETTING.md](docs/SOURCE-VETTING.md)).
 
+**Orchestrator** (not a pack, zero source content): `se` is an explicit `/se <question>` entry
+point that routes your systems-engineering question through a curated topic, agency, and
+deliverable map to one to four packs, reads them with you, and answers with pack and chapter
+citations. Use it when you do not know which `/<slug>` to ask.
+
 ## Usage
 
 ```bash
 /sebok                      # load core frameworks for reference
 /sebok systems of systems   # routes to the right chapter, answers from the pack
 /sebok ch20                 # load a specific chapter
+/se what are the EARS requirement patterns?   # orchestrator: routes to the right pack(s), answers with citations
+/se how do NASA and DoD differ on risk acceptance?   # broad question: one plan, the packs read together
 ```
 
 Each pack ships an always-loaded `SKILL.md` index plus on-demand `chapters/`, a glossary,
@@ -226,4 +234,4 @@ questions, see [labs.jgsystemsconsulting.com/licensing.html](https://labs.jgsyst
 
 ## Version
 
-See [CHANGELOG.md](CHANGELOG.md). Current: 1.20.0.
+See [CHANGELOG.md](CHANGELOG.md). Current: 1.21.0.

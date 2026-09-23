@@ -39,6 +39,36 @@ A pack uses progressive disclosure so a large source doesn't fill your context w
 So the agent reads `SKILL.md`, decides which one chapter answers your question, and loads
 just that.
 
+## The /se orchestrator
+
+`se` is not a knowledge pack: it carries no source content. On an explicit `/se <question>`
+it matches your question to installed packs through a curated routing map (topics, agency
+contexts, deliverables), reads them, and answers with pack and chapter citations. Use it
+when you do not know which `/<slug>` to ask. Bare `/se` prints usage and examples.
+
+Modes and gates:
+
+- **Narrow consult** (one topic row matches, at most one agency): reads the best single
+  pack, no gate, ends with "Also relevant" runners-up.
+- **Broad consult** (two or more rows or agencies, or a compare/contrast/survey verb): one
+  plan approval naming the packs, then it runs to done; disagreements are listed per source,
+  never averaged.
+- **Deliverable** (an artifact verb plus a deliverable name): plan approval, then stage
+  pauses after Draft and after Review. Draft builds the artifact with citations; Review
+  lists cited findings and a revised artifact; Verify is a results table only (no edits).
+  A review/verify request on a user artifact starts at that stage. No matching row: name
+  closest Deliverables rows or offer a broad consult; never improvise a chain.
+
+Every claim cites a file read that session, as `[slug chNN]`, `[slug index]`, or
+`[slug glossary|patterns|cheatsheet]`, and every answer ends with a **Sources** block
+listing each pack's source and licence (Licences table, else `Public Domain (US Government work)`;
+signposts as `MIT (signpost)`; NC/SA terms in full). Host modes: with sub-agents it reads
+packs in parallel (failed brief reruns in the main thread); otherwise in sequence; on
+transform installs it reads the inlined index files, names chapters as follow-ups, and
+labels the answer `index-level`; when no member file is readable it reports the route only
+and makes no SE claims. Agency filter keeps candidates on named agency rows when one
+survives, else keeps all and says so. Thin packs step down to the next on the row.
+
 ## Scope & honesty
 
 Each pack's `SKILL.md` states what its source is **thin** on. Knowledge packs are reference

@@ -38,6 +38,14 @@ kind: signpost
 ---
 """
 
+ORCHESTRATOR_SKILL = """---
+name: {slug}
+kind: orchestrator
+disable-model-invocation: true
+description: "Demo orchestrator used by the validator probe. Explicit invocation only."
+---
+"""
+
 PACK_YAML = """slug: {slug}
 title: "Demo Pack"
 publisher: "JG Systems Consulting Ltd."
@@ -106,7 +114,18 @@ def main() -> int:
         errs = validate_pack.check_pack(no_desc)
         assert errs == ["SKILL.md frontmatter missing 'description'"], errs
 
-    # (7) both live signpost packs pass on the real tree (read-only)
+        # (7) orchestrator shape (SKILL.md + PACK.yaml only) passes
+        orch = build_pack(root, "demo-orch", skill=ORCHESTRATOR_SKILL,
+                          license_=False, chapters=False)
+        assert validate_pack.check_pack(orch) == [], validate_pack.check_pack(orch)
+
+        # (8) orchestrator without PACK.yaml still fails
+        orch_np = build_pack(root, "demo-orch-np", skill=ORCHESTRATOR_SKILL,
+                             pack_yaml=False, license_=False, chapters=False)
+        errs = validate_pack.check_pack(orch_np)
+        assert errs == ["missing PACK.yaml"], errs
+
+    # (9) both live signpost packs pass on the real tree (read-only)
     for slug in ("omg-signpost", "se-standards-signpost"):
         live = REPO_ROOT / "packs" / slug
         assert live.is_dir(), f"live signpost pack missing: {live}"

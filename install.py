@@ -122,9 +122,52 @@ def transform_to(agent: str, pack: Path, fm: dict, body: str) -> tuple[Path, str
     raise ValueError(f"unknown transform fmt for {agent}")
 
 
-def install_native(agent: str, packs: list[Path], base: Path, dry: bool) -> None:
+def _pack_yaml_slug(path: Path) -> str | None:
+    """Return the top-level slug: value from a PACK.yaml, or None if missing/unreadable."""
+    if not path.is_file():
+        return None
+    try:
+        text = path.read_text(encoding="utf-8")
+    except OSError:
+        return None
+    for line in text.splitlines():
+        if line.startswith("slug:"):
+            return line.partition(":")[2].strip().strip('"').strip("'")
+    return None
+
+
+def is_catalogue_owned_native(dest: Path, slug: str) -> bool:
+    """True when dest/PACK.yaml exists and its slug: equals the member slug."""
+    return _pack_yaml_slug(dest / "PACK.yaml") == slug
+
+
+def is_catalogue_owned_transform(dest: Path, slug: str) -> bool:
+    """True when dest contains the transform provenance comment for this slug."""
+    if not dest.is_file():
+        return False
+    try:
+        text = dest.read_text(encoding="utf-8")
+    except OSError:
+        return False
+    marker = f"jgs-se-knowledge-packs: '{slug}' transformed for"
+    return marker in text
+
+
+def _report_skip(name: str, dest: Path, dry: bool) -> None:
+    verb = "would skip" if dry else "skip"
+    print(f"  {verb} (not catalogue-owned)  {name} -> {dest}")
+    print("  remove or rename the entry above, then re-run the installer")
+
+
+def install_native(agent: str, packs: list[Path], base: Path, dry: bool) -> int:
+    """Install native packs. Returns the number of destinations skipped as not catalogue-owned."""
+    skips = 0
     for p in packs:
         dest = base / p.name
+        if dest.exists() and not is_catalogue_owned_native(dest, p.name):
+            _report_skip(p.name, dest, dry)
+            skips += 1
+            continue
         if dry:
             print(f"  would install  {p.name:<24} -> {dest}")
             continue
@@ -132,31 +175,53 @@ def install_native(agent: str, packs: list[Path], base: Path, dry: bool) -> None
             shutil.rmtree(dest)
         shutil.copytree(p, dest)
         print(f"  installed  {p.name:<24} -> {dest}")
+    return skips
 
 
-def install_transform(agent: str, packs: list[Path], base: Path, dry: bool) -> None:
+def install_transform(agent: str, packs: list[Path], base: Path, dry: bool) -> int:
+    """Install transform packs. Returns the number of destinations skipped as not catalogue-owned."""
+    skips = 0
     for p in packs:
         fm, body = read_skill_md(p)
         rel, content = transform_to(agent, p, fm, body)
         dest = base / rel
+        if dest.exists() and not is_catalogue_owned_transform(dest, p.name):
+            _report_skip(p.name, dest, dry)
+            skips += 1
+            continue
         if dry:
             print(f"  would write    {p.name:<24} -> {dest}")
             continue
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(content, encoding="utf-8")
         print(f"  wrote      {p.name:<24} -> {dest}")
+    return skips
 
 
-def install_for_agent(agent: str, packs: list[Path], override: str | None, flat: bool, dry: bool) -> None:
+def install_native_guarded(agent: str, packs: list[Path], base: Path, dry: bool) -> int:
+    """Test-facing wrapper: dry-run always 0; else 1 if any skip else 0."""
+    skips = install_native(agent, packs, base, dry)
+    return 0 if dry else (1 if skips else 0)
+
+
+def install_transform_guarded(agent: str, packs: list[Path], base: Path, dry: bool) -> int:
+    """Test-facing wrapper: dry-run always 0; else 1 if any skip else 0."""
+    skips = install_transform(agent, packs, base, dry)
+    return 0 if dry else (1 if skips else 0)
+
+
+def install_for_agent(agent: str, packs: list[Path], override: str | None, flat: bool, dry: bool) -> int:
+    """Install one agent. Returns skip count from the underlying install path."""
     spec = AGENTS[agent]
     base = base_for(agent, override, flat)
     print(f"[{agent}] {spec['label']}  ({spec['kind']})")
     print(f"  target  : {base}{'  (flat)' if flat and spec['kind'] == 'native' else ''}")
     if spec["kind"] == "native":
-        install_native(agent, packs, base, dry)
+        skips = install_native(agent, packs, base, dry)
     else:
-        install_transform(agent, packs, base, dry)
+        skips = install_transform(agent, packs, base, dry)
     print()
+    return skips
 
 
 def main(argv: list[str]) -> int:
@@ -198,14 +263,19 @@ def main(argv: list[str]) -> int:
     print(f"  agents      : {', '.join(targets)}")
     print()
 
+    skips = 0
     for agent in targets:
-        install_for_agent(agent, packs, args.target, args.flat, args.dry_run)
+        skips += install_for_agent(agent, packs, args.target, args.flat, args.dry_run)
 
     if args.dry_run:
         print("Dry run — nothing written. Re-run without --dry-run to install.")
-    else:
-        print(f"Installed {len(packs)} pack(s) for {len(targets)} agent(s). "
-              f"Restart your agent, then invoke a pack by its slug, e.g. /{packs[0].name}.")
+        return 0
+    if skips:
+        print(f"Installed with {skips} skip(s) for {len(targets)} agent(s). "
+              f"Resolve skips above, then re-run.")
+        return 1
+    print(f"Installed {len(packs)} pack(s) for {len(targets)} agent(s). "
+          f"Restart your agent, then invoke a pack by its slug, e.g. /{packs[0].name}.")
     return 0
 
 

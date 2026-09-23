@@ -80,4 +80,7 @@ agentskills.io `SKILL.md` and pointing back here.
   unaffected (Codex prompts are already top-level; Gemini keeps the namespace as a command group).
 - **Custom target** (`--target DIR`) overrides the destination for a single agent (not valid with
   `--agent all`).
+- **`/se` on transform agents** answers at index level: it reads the inlined index files when
+  the host allows and labels its answers `index-level`; when no member file is readable it
+  reports the route only, with no SE claims.
 - No third-party dependencies: the installer is stdlib-only Python.

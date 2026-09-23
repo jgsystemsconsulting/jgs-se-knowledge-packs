@@ -8,6 +8,12 @@ SPDX-License-Identifier: MIT
 Thanks for helping grow the catalogue. The bar for a pack is **quality + provenance**:
 faithful to its source, and legally redistributable.
 
+The catalogue ships three member kinds: **content packs** (reconstructed reference notes
+from one vetted source), **signposts** (citation-only maps of sources that cannot be
+packaged), and the **`se` orchestrator** (routes `/se <question>` to packs; no source
+content). This guide is about adding a content pack; see docs/PACK-SPEC.md for the
+member kinds.
+
 ## Before you build: vet the source
 
 This is the non-negotiable first step. Read [docs/SOURCE-VETTING.md](docs/SOURCE-VETTING.md)
@@ -33,8 +39,10 @@ python tooling/build_pack.py --slug <slug> --title "..." --publisher "..." \
 #      chapters + glossary/patterns/cheatsheet, then the SKILL.md index.
 # 3. Fill the TODOs in packs/<slug>/PACK.yaml and packs/<slug>/LICENSE.
 # 4. Add a catalog row and rebuild catalog.json (see tooling/ or hand-edit).
+# 5. Add the slug to the /se map (packs/se/SKILL.md Topics row + agency row;
+#    Licences row when not public domain).
 
-# 5. Validate:
+# 6. Validate:
 python tooling/validate_pack.py packs/<slug>
 ```
 

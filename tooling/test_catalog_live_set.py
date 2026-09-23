@@ -20,8 +20,15 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import check_release  # noqa: E402
 
 
-def _write_skill(path: Path, name: str, *, signpost: bool = False) -> None:
-    kind = "kind: signpost\n" if signpost else ""
+def _write_skill(
+    path: Path, name: str, *, signpost: bool = False, orchestrator: bool = False
+) -> None:
+    if signpost:
+        kind = "kind: signpost\n"
+    elif orchestrator:
+        kind = "kind: orchestrator\n"
+    else:
+        kind = ""
     path.write_text(
         f"---\nname: {name}\n{kind}description: x\n---\n# {name}\n",
         encoding="utf-8",
@@ -39,12 +46,13 @@ def main() -> int:
         _write_skill(packs / "beta" / "SKILL.md", "beta")
         _write_skill(packs / "omega-sign" / "SKILL.md", "omega-sign", signpost=True)
 
-        content, signs, errs = check_release.inventory_pack_slugs(
+        content, signs, orchs, errs = check_release.inventory_pack_slugs(
             packs, tag="[catalog-live-set]"
         )
         assert errs == [], errs
         assert content == {"alpha", "beta"}, content
         assert signs == {"omega-sign"}, signs
+        assert orchs == set(), orchs
 
         good_catalog = {
             "updated": "2026-08-27",
@@ -103,6 +111,20 @@ def main() -> int:
             and "omega-sign" in e
             for e in bad3
         ), bad3
+
+        (packs / "omega-orch").mkdir()
+        _write_skill(packs / "omega-orch" / "SKILL.md", "omega-orch", orchestrator=True)
+        # still clean: orchestrator absent from catalog like a signpost
+        assert check_release.check_catalog_live_set(packs, good_catalog) == []
+        # catalog listing an orchestrator fails like a signpost
+        bad_orch = dict(
+            good_catalog,
+            packs=good_catalog["packs"] + [{"slug": "omega-orch", "status": "live"}],
+        )
+        errs = check_release.check_catalog_live_set(packs, bad_orch)
+        assert any(
+            "[catalog-live-set]" in e and "omega-orch" in e for e in errs
+        ), errs
 
         # ghost dir without SKILL.md fails closed
         (packs / "ghost").mkdir()

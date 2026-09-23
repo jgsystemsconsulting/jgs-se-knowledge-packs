@@ -10,7 +10,7 @@ open source. It follows the [Agent Skills](https://github.com/agentskills/agents
 `SKILL.md` convention, so it loads in Claude Code, GitHub Copilot CLI, and Amp without
 modification.
 
-## Required layout
+## Required layout (content packs)
 
 ```
 packs/<slug>/
@@ -94,8 +94,13 @@ cp -r jgs-se-knowledge-packs/packs/sebok ~/.claude/skills/sebok
 python tooling/validate_pack.py packs/<slug>
 ```
 
-Signpost packs (`kind: signpost` in SKILL.md, e.g. `packs/omg-signpost`) skip the
-LICENSE and `chapters/` checks; every other check still applies.
+Member kinds (`kind:` in SKILL.md frontmatter):
+
+| Kind | Members | Requires | Skips |
+|---|---|---|---|
+| content pack (default) | the 63 catalogue packs | Full layout above: `LICENSE` reproducing the source's terms and `chapters/` with at least one chapter | Nothing |
+| `signpost` | `packs/omg-signpost`, `packs/se-standards-signpost` | `SKILL.md` + `PACK.yaml`, all remaining checks | The `LICENSE` and `chapters/` checks (citation-only, zero reproduced content) |
+| `orchestrator` | `packs/se` | `SKILL.md` + `PACK.yaml`, all remaining checks | The `LICENSE` and `chapters/` checks (routes to packs, no source content). Its `SKILL.md` body carries the whole routing map and ships in every transform prompt, so it is reviewed against a 24,000-byte ceiling (a review criterion, not a gate). |
 
 Checks: required files present, frontmatter valid, every chapter link resolves,
 `PACK.yaml` mandatory fields filled, and `license_tier ∈ {1,2,3}`. CI runs this on

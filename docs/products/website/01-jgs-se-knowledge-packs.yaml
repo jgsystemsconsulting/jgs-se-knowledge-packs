@@ -12,7 +12,7 @@ tagline: >
   construction.
 product_class: agent-skills
 status: live
-version: "1.20.0"
+version: "1.21.0"
 repository: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs
 license: MIT (tooling); pack content under each source's own licence
 vendor: JG Systems Consulting Ltd.
@@ -59,6 +59,12 @@ features:
       Two citation-only signposts map the parts of the landscape that can't be packaged:
       the OMG modelling specs and the full SE standards landscape (~55 standards), each
       with its owner, redistributability status, and where to get it.
+  - title: /se orchestrator
+    detail: >
+      An explicit /se <question> entry point for when you don't know which pack to ask.
+      It routes your systems-engineering question through a curated topic, agency, and
+      deliverable map to the right packs, reads them with you, and answers with pack and
+      chapter citations. Carries no source content itself.
   - title: Open Agent Skills format, multi-agent install
     detail: >
       Packs follow the open agentskills.io SKILL.md standard. One stdlib-only installer
