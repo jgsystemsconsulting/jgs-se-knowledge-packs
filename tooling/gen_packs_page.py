@@ -90,10 +90,15 @@ def render(rows: list[dict], ver: str) -> str:
     for r in rows:
         slug = html.escape(r["slug"])
         licence = html.escape(r["licence"])
+        # Frontmatter descriptions carry markdown (**bold**, `code`); render them,
+        # keep the filter copy plain.
+        plain = r["desc"].replace("**", "").replace("`", "")
         desc = html.escape(r["desc"])
+        desc = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", desc)
+        desc = re.sub(r"`([^`]+)`", r"<code>\1</code>", desc)
         href = f"{REPO}/blob/main/{r['path']}"
         # data-text powers the client-side filter (slug + licence + description, lowercased)
-        data = html.escape(f"{r['slug']} {r['licence']} {r['desc']}".lower(), quote=True)
+        data = html.escape(f"{r['slug']} {r['licence']} {plain}".lower(), quote=True)
         cells.append(
             f'<tr data-text="{data}">'
             f'<td class="slug"><a href="{href}">{slug}</a></td>'

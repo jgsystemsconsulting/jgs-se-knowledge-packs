@@ -187,6 +187,14 @@ footer .label{display:block;margin-bottom:8px}
 
 <span class="muted"># or just ask: each pack's description makes the agent load it on a match</span>
 "What does the NASA risk handbook say about risk acceptance?"</code></pre>
+  <h3 style="margin:2.4rem 0 0.6rem;font-size:1rem">Not sure which pack? Ask /se</h3>
+  <p style="margin:0;max-width:62ch;color:var(--text)">The <code>/se</code> orchestrator routes a free-text
+  systems-engineering question to the right pack or packs, reads them, and answers with pack and chapter
+  citations. It carries no source content and answers only when explicitly invoked, so it pairs with every
+  pack in the catalogue.</p>
+  <pre style="margin-top:1.2rem"><code>/se what does the NASA risk handbook say about risk acceptance?   <span class="muted"># narrow: routes one pack</span>
+/se compare how DoD and NASA guide verification planning            <span class="muted"># broad: proposes a plan first</span>
+/se draft the risk section of a SEMP                                <span class="muted"># deliverable: pauses at each stage</span></code></pre>
   <p style="margin:1.2rem 0 0;max-width:62ch;color:var(--text)">Each pack uses <strong>progressive disclosure</strong>: an always-loaded <code>SKILL.md</code> index decides which single chapter answers your question and loads only that, so a large source never fills the context window. Full detail in <a href="https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/blob/main/docs/skill-usage.md">docs/skill-usage.md</a>.</p>
 </div></section>
 
