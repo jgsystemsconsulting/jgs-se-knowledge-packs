@@ -42,13 +42,22 @@ to open.
 
 A pack lives at `../<slug>/` from this folder (native installs put members side by side). For each selected pack: read its `SKILL.md` index; open at most two chapters from its Topic Index / Chapter Index; open one support file (`glossary.md`, `patterns.md`, or `cheatsheet.md`) only for term, technique, or decision-rule questions. At most four packs total. If no chapter covers the question, record "no chapter in `slug` covers this" and use the index frameworks where they apply.
 
+Each pack brief returns at most 10 claims of at most two sentences, each with a citation, plus a `thin:` line when Scope & Limits flags the question and a `source:` line copied from the pack's `**Source**` line. No claim from outside its pack.
+
 ### Citations and Sources
 
 Cite only files read this session, in these forms: `[slug chNN]`, `[slug index]`,
-`[slug glossary|patterns|cheatsheet]`. Every answer ends with a **Sources** block
-listing each pack's slug, its `**Source**` line, and its licence. Content-pack
-licences come from the Licences table, else the label `Public Domain (US Government work)`.
-Signpost lines read `MIT (signpost)`. Non-commercial and share-alike terms appear in full.
+`[slug glossary|patterns|cheatsheet]`. Drop uncited claims. Agreeing claims merge into one statement carrying every citation. Where the packs are silent, say so; no fallback to model memory. Every answer ends with a **Sources** block listing each pack's slug, its `**Source**` line, and its licence. Content-pack licences come from the Licences table, else the label `Public Domain (US Government work)`. Signpost lines read `MIT (signpost)`. Non-commercial and share-alike terms appear in full.
+
+### Deliverable stage chains
+
+The matched Deliverables row is the chain. Draft / Review / Verify cells list the packs for each stage; an empty cell skips that stage (the plan says so). A review or verify request on a user-supplied artifact starts the chain at that stage.
+
+- **Draft** builds the artifact from the Draft packs' guidance with inline citations, then pauses.
+- **Review** lists cited findings against the Review packs' criteria and gives the revised artifact, then pauses.
+- **Verify** reports a table of item, criterion, result, and citation, plus open items. It edits nothing and offers fixes as a follow-up.
+
+Output goes in the reply unless the user names a file. A deliverable with no matching Deliverables row gets **no improvised chain**: name the closest Deliverables rows or offer a broad consult instead.
 
 ### Edge cases
 

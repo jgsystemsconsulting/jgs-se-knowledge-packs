@@ -54,7 +54,10 @@ Modes and gates:
   plan approval naming the packs, then it runs to done; disagreements are listed per source,
   never averaged.
 - **Deliverable** (an artifact verb plus a deliverable name): plan approval, then stage
-  pauses after Draft and after Review.
+  pauses after Draft and after Review. Draft builds the artifact with citations; Review
+  lists cited findings and a revised artifact; Verify is a results table only (no edits).
+  A review/verify request on a user artifact starts at that stage. No matching row: name
+  closest Deliverables rows or offer a broad consult; never improvise a chain.
 
 Every claim cites a file read that session, as `[slug chNN]`, `[slug index]`, or
 `[slug glossary|patterns|cheatsheet]`, and every answer ends with a **Sources** block
