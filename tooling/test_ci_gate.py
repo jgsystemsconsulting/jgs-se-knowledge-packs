@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # Copyright (c) 2026 JG Systems Consulting Ltd. — MIT License (see LICENSE).
 # SPDX-License-Identifier: MIT
-"""Assert-based probe for the seven inline CI gates in .github/workflows/validate.yml.
+"""Assert-based probe for the eight inline CI gates in .github/workflows/validate.yml.
 
 Run:  python tooling/test_ci_gate.py
 Exits 0 when regex literal parity, heredoc extraction, negative demos, and
@@ -14,7 +14,7 @@ the gates as local functions if extraction matched zero heredocs, but zero
 extraction already fails this probe loudly, so the fallback is effectively
 unreachable and no mirror lives in this file.
 
-Regex parity pins (P4 pin-plus-parity, extended to the seven pinned steps):
+Regex parity pins (P4 pin-plus-parity, extended to the eight pinned steps):
   - three version regexes, the SKILLS link regex, and the signpost regex must
     appear verbatim in both tooling/check_release.py and validate.yml
   - MAP_VERSION_RE / GENERATED_ON_RE must appear verbatim in validate.yml and
@@ -26,6 +26,9 @@ Regex parity pins (P4 pin-plus-parity, extended to the seven pinned steps):
     (P15) must appear verbatim in both check_release.py and validate.yml
   - catalog-live-set path/tag literals (P16) must appear verbatim in both
     check_release.py and validate.yml (CATALOG_LIVE_SET_PAIR)
+  - routing-map markers, headings, slug/orchestrator regexes, tag, and
+    Public Domain prefix (P17) must appear verbatim in both check_release.py
+    and validate.yml (ROUTING_MAP_PAIR)
 """
 from __future__ import annotations
 
@@ -51,6 +54,7 @@ PINNED_STEPS = [
     "HTML self-containment",
     "Landing catalogue counts",
     "Catalog live-set parity",
+    "Routing map coverage",
 ]
 
 # Literals that must appear verbatim in check_release.py AND validate.yml.
@@ -106,6 +110,24 @@ CATALOGUE_COUNT_PAIR = [
 CATALOG_LIVE_SET_PAIR = [
     ("catalog.json path", '"catalog.json"'),
     ("catalog-live-set tag", "[catalog-live-set]"),
+]
+
+# Literals that must appear verbatim in check_release.py AND validate.yml
+# ([routing-map] orchestrator map coverage, P17). Byte parity is the drift control.
+# Slug class is pinned as the SLUG_RE body landed in Tasks 4/6 (`^[a-z0-9-]+$`);
+# the plan-stage combined form `([a-z0-9-]+)` inside backticks is not a source
+# literal in either twin (backticks use `([^`]*)`, then SLUG_RE.fullmatch).
+ROUTING_MAP_PAIR = [
+    ("begin marker", "<!-- ROUTING-MAP:BEGIN -->"),
+    ("end marker", "<!-- ROUTING-MAP:END -->"),
+    ("topics heading", "### Topics"),
+    ("agency heading", "### Agency contexts"),
+    ("deliverables heading", "### Deliverables"),
+    ("licences heading", "### Licences"),
+    ("slug token", r"^[a-z0-9-]+$"),
+    ("orchestrator kind", r"^kind:\s*orchestrator\s*$"),
+    ("routing tag", "[routing-map]"),
+    ("public domain prefix", "Public Domain"),
 ]
 
 # Literals pinned per local twin (map/classification envelope).
@@ -326,6 +348,16 @@ def main() -> int:
             f"{name} missing from validate.yml"
         )
 
+    for name, literal in ROUTING_MAP_PAIR:
+        assert literal in release_text, (
+            "regex drifted between check_release.py and validate.yml; sync them: "
+            f"{name} missing from check_release.py"
+        )
+        assert literal in workflow_text, (
+            "regex drifted between check_release.py and validate.yml; sync them: "
+            f"{name} missing from validate.yml"
+        )
+
     # 2. extraction of the shipped heredocs by pinned step name
     bodies: dict[str, str] = {}
     for step in PINNED_STEPS:
@@ -336,7 +368,7 @@ def main() -> int:
             "text, so fix the step name or the heredoc markers"
         )
         bodies[step] = body
-    assert len(bodies) == len(PINNED_STEPS), "expected exactly seven pinned heredocs"
+    assert len(bodies) == len(PINNED_STEPS), "expected exactly eight pinned heredocs"
 
     with tempfile.TemporaryDirectory() as td:
         tmp = Path(td)
@@ -495,6 +527,57 @@ def main() -> int:
         }, "Catalog live-set parity",
              "[catalog-live-set] live slug set mismatch",
              "catalog-live-set-phantom")
+
+        # routing-map: Topics drops one content slug → coverage failure
+        routing_map_skill = textwrap.dedent(
+            """\
+            ---
+            name: se
+            kind: orchestrator
+            description: x
+            ---
+            <!-- ROUTING-MAP:BEGIN -->
+            ### Topics
+            | Topic | Keywords | Packs (best first) |
+            |---|---|---|
+            | setup | first | `alpha` |
+            ### Agency contexts
+            | Agency | Keywords | Packs |
+            |---|---|---|
+            | refit | later | `alpha` |
+            ### Deliverables
+            | Deliverable | Keywords | Draft | Review | Verify |
+            |---|---|---|---|---|
+            | plan | now | `alpha` | `beta` |  |
+            ### Licences
+            | Pack | Licence |
+            |---|---|
+            <!-- ROUTING-MAP:END -->
+            """
+        )
+        demo({
+            "packs/alpha/SKILL.md": (
+                "---\nname: alpha\ndescription: x\n---\n# alpha\n"
+            ),
+            "packs/alpha/PACK.yaml": 'license: "Public Domain"\n',
+            "packs/beta/SKILL.md": (
+                "---\nname: beta\ndescription: x\n---\n# beta\n"
+            ),
+            "packs/beta/PACK.yaml": 'license: "Public Domain"\n',
+            "packs/se/SKILL.md": routing_map_skill,
+            "packs/se/PACK.yaml": (
+                'slug: se\nkind: orchestrator\nlicense: "MIT"\n'
+            ),
+        }, "Routing map coverage",
+             "[routing-map]",
+             "routing-map-topics-drop")
+        # Same fixture must name the dropped slug in the twin output.
+        d_rm = tmp / "routing-map-topics-drop"
+        rc_rm, out_rm = run_gate(bodies["Routing map coverage"], d_rm)
+        assert rc_rm != 0, f"routing-map-topics-drop: expected failure\n{out_rm}"
+        assert "beta" in out_rm, (
+            f"routing-map-topics-drop: expected dropped slug 'beta' in output\n{out_rm}"
+        )
 
     # 3. positive runs against the real repo tree: what CI sees on a clean tree
     for step in PINNED_STEPS:

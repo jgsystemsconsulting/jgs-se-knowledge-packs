@@ -201,15 +201,11 @@ def main() -> int:
             f"{TAG} exactly one orchestrator member required: 2 found"
         ], errs
 
-    # Real tree: Task 7 (packs/se) has not landed yet, so the fail-closed
-    # "0 found" error is the expected mid-pipeline state. When Task 7 lands,
-    # flip this assert to `real == []`.
+    # Real tree: packs/se is present; the map must be clean.
     real = check_release.check_routing_map(ROOT / "packs")
-    assert real == [
-        f"{TAG} exactly one orchestrator member required: 0 found"
-    ], real
+    assert real == [], real
 
-    print("routing-map probe: OK (demo matrix, real-tree fail-closed state)")
+    print("routing-map probe: OK (demo matrix, real-tree clean)")
     return 0
 
 

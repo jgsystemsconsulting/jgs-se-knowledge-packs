@@ -6,7 +6,7 @@ Generated from each pack's SKILL.md frontmatter. Regenerate with tooling/gen_ski
 
 # jgs-se-knowledge-packs — Pack Index
 
-63 packs (+2 signposts) in this release. Each pack is an Agent Skill installed as `/<slug>`.
+63 packs (+2 signposts, +1 orchestrator) in this release. Each pack is an Agent Skill installed as `/<slug>`.
 
 | Pack | Source licence | Description |
 |------|----------------|-------------|
@@ -75,3 +75,4 @@ Generated from each pack's SKILL.md frontmatter. Regenerate with tooling/gen_ski
 | [`is-gps-200n`](packs/is-gps-200n/SKILL.md) | Public Domain (US Gov) | Knowledge base from IS-GPS-200 Rev N (NAVSTAR GPS Space Segment / Navigation User Segment Interfaces). Use as a worked ICD/IS exemplar: what an interface specification is, DIST-A and IRN/CCB change control, interface definition vs identification, composite-signal criteria patterns, NAV data as payload families, and time/definition hygiene. Covers Rev N synthesized notes only; does not transcribe Apps II–IV bit fields or PRN/Gold-code tables, and does not replace faa-std-025 preparation rules. |
 | [`omg-signpost`](packs/omg-signpost/SKILL.md) | MIT (signpost) | **Signpost, not a pack** — points to the official OMG specs (UML, SysML, BPMN, UAF…) at omg.org with zero reproduced content. OMG specs can't be packaged (licence forbids it), so this cites where to get them. |
 | [`se-standards-signpost`](packs/se-standards-signpost/SKILL.md) | MIT (signpost) | **Signpost, not a pack** — the full SE standards landscape (ISO/IEC/IEEE 15288/24748/29148/42010, INCOSE SE Handbook & Vision 2035, SAE/EIA, ECSS, NATO AAP-48, CMMI, NIST SP 800-160…) with each standard's owner, redistributability status, and where to get it. Zero reproduced content; most are paywalled/all-rights-reserved and point to the owner, the open ones point to the real pack. |
+| [`se`](packs/se/SKILL.md) | MIT (orchestrator) | **Orchestrator, not a pack**: type `/se <question>` and it routes your systems-engineering question through a curated topic, agency, and deliverable map to the right pack(s), reads them, and answers with pack and chapter citations. Explicit invocation only; zero source content. |

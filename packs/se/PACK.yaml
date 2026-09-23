@@ -1,0 +1,12 @@
+slug: se
+kind: orchestrator
+title: "SE Orchestrator — routes questions to the right knowledge packs"
+publisher: "JG Systems Consulting Ltd."
+license: "MIT"
+license_tier: 2
+commercial_use: true
+notes: >
+  Orchestrator, NOT a knowledge pack. Runs only on explicit `/se <question>`.
+  Contains zero third-party source content: a hand-curated routing map over the
+  catalogue's own public packs plus original guidance text. Content is
+  original (MIT, JG Systems Consulting Ltd.).
