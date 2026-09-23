@@ -11,8 +11,14 @@ All notable changes to this project are documented here. Format follows
 
 ## [Unreleased]
 
+## [1.21.0]: 2026-09-23
+
 ### Added
 
+- **SE orchestrator** (`se`, 0 ch): explicit `/se <question>` entry point. Routes through a curated topic, agency, and deliverable map to one to four packs and cites pack and chapter on every claim. Tier 2 (original MIT, zero source content).
+- `kind: orchestrator` member kind in `tooling/validate_pack.py` and checks 13/14, with the landing-count and live-set CI twins updated.
+- Check 15 `[routing-map]` with its CI twin and probe suite: exactly one orchestrator, marker and heading grammar, slug resolution, Topics coverage of every content pack, licence parity.
+- Installer clobber guard: replaces only catalogue-owned destinations; foreign entries are skipped with a message and exit 1.
 - `.github/workflows/validate.yml`: four inline-stdlib CI steps twinned to the
   local release gate: `Version single-source` (checks 4 + 4a, both website
   YAMLs included), `SKILLS index count` (check 6), `Chapter basename overlap`
@@ -35,6 +41,7 @@ All notable changes to this project are documented here. Format follows
 
 ### Changed
 
+- Registered `se` on SKILLS.md, docs/packs.html, NOTICE, README, and the Cursor manifest. catalog.json unchanged by design (content packs only).
 - `tooling/check_overlap.py` loads its whitelist from
   `tooling/overlap-whitelist.txt` (fail-closed) instead of an in-code constant.
 - `tooling/check_release.py` PASS banner now carries the version and short
@@ -44,6 +51,8 @@ All notable changes to this project are documented here. Format follows
 - CI link policy enforces from a trusted inline host set and fails on
   set-divergence from the data file, closing the four-host gap (cisa.gov,
   energy.gov, nde-ed.org, everyspec.com) that GitHub Actions missed.
+
+Catalogue now 63 packs (+2 signposts, +1 orchestrator).
 
 ## [1.20.0]: 2026-08-27
 

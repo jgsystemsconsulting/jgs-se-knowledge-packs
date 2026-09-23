@@ -7,7 +7,7 @@ SPDX-License-Identifier: MIT
 
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT%20(tooling)-blue" alt="License: MIT (tooling)">
-  <img src="https://img.shields.io/badge/version-1.20.0-green" alt="Version 1.20.0">
+  <img src="https://img.shields.io/badge/version-1.21.0-green" alt="Version 1.21.0">
   <img src="https://img.shields.io/badge/packs-63-blueviolet" alt="63 packs">
   <img src="https://img.shields.io/badge/tested%20with-Claude%20Code-8A2BE2" alt="Tested with Claude Code">
   <img src="https://img.shields.io/badge/scope-systems%20engineering-orange" alt="Scope: systems engineering">
@@ -55,7 +55,7 @@ and install the catalogue for you.
 ```text
 You are installing jgs-se-knowledge-packs, an open catalogue (MIT tooling) of
 systems-engineering knowledge-pack skills by JG Systems Consulting Ltd.
-Repository: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs (version 1.20.0).
+Repository: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs (version 1.21.0).
 Do this in order:
 1. Read README.md, docs/skill-usage.md, and CHANGELOG.md so you understand what you are
    installing. There are NO external prerequisites: packs are plain Markdown skills.
@@ -234,4 +234,4 @@ questions, see [labs.jgsystemsconsulting.com/licensing.html](https://labs.jgsyst
 
 ## Version
 
-See [CHANGELOG.md](CHANGELOG.md). Current: 1.20.0.
+See [CHANGELOG.md](CHANGELOG.md). Current: 1.21.0.
