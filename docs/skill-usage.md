@@ -39,6 +39,30 @@ A pack uses progressive disclosure so a large source doesn't fill your context w
 So the agent reads `SKILL.md`, decides which one chapter answers your question, and loads
 just that.
 
+## The /se orchestrator
+
+`se` is not a knowledge pack: it carries no source content. On an explicit `/se <question>`
+it matches your question to installed packs through a curated routing map (topics, agency
+contexts, deliverables), reads them, and answers with pack and chapter citations. Use it
+when you do not know which `/<slug>` to ask. Bare `/se` prints usage and examples.
+
+Modes and gates:
+
+- **Narrow consult** (one topic row matches, at most one agency): reads the best single
+  pack, no gate, ends with "Also relevant" runners-up.
+- **Broad consult** (two or more rows or agencies, or a compare/contrast/survey verb): one
+  plan approval naming the packs, then it runs to done; disagreements are listed per source,
+  never averaged.
+- **Deliverable** (an artifact verb plus a deliverable name): plan approval, then stage
+  pauses after Draft and after Review.
+
+Every claim cites a file read that session, as `[slug chNN]`, `[slug index]`, or
+`[slug glossary|patterns|cheatsheet]`, and every answer ends with a **Sources** block
+listing each pack's source and licence. Host modes: with sub-agents it reads packs in
+parallel; otherwise in sequence; on transform installs it reads the inlined index files and
+labels the answer `index-level`; when no member file is readable it reports the route only
+and makes no SE claims.
+
 ## Scope & honesty
 
 Each pack's `SKILL.md` states what its source is **thin** on. Knowledge packs are reference

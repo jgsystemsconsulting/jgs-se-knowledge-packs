@@ -62,7 +62,8 @@ Do this in order:
 2. Run `python install.py --dry-run` and show me the pack list and target
    (~/.claude/skills/jgs-se-knowledge-packs/). If it looks right, run `python install.py`.
 3. Verify: list the installed packs under the target and confirm the count matches SKILLS.md.
-4. Tell me to restart Claude Code, then try `/sebok systems of systems`.
+4. Tell me to restart Claude Code, then try `/sebok systems of systems` or ask
+   `/se what are the EARS requirement patterns?`.
 5. Pack CONTENT is under each source's own licence (see NOTICE); keep attribution intact.
 ```
 
@@ -182,12 +183,19 @@ the OMG modelling specs; `se-standards-signpost` maps the whole SE standards lan
 owner, whether it can be packaged, and where to get it. They exist because most SE standards
 are paywalled or all-rights-reserved (see [docs/SOURCE-VETTING.md](docs/SOURCE-VETTING.md)).
 
+**Orchestrator** (not a pack, zero source content): `se` is an explicit `/se <question>` entry
+point that routes your systems-engineering question through a curated topic, agency, and
+deliverable map to one to four packs, reads them with you, and answers with pack and chapter
+citations. Use it when you do not know which `/<slug>` to ask.
+
 ## Usage
 
 ```bash
 /sebok                      # load core frameworks for reference
 /sebok systems of systems   # routes to the right chapter, answers from the pack
 /sebok ch20                 # load a specific chapter
+/se what are the EARS requirement patterns?   # orchestrator: routes to the right pack(s), answers with citations
+/se how do NASA and DoD differ on risk acceptance?   # broad question: one plan, the packs read together
 ```
 
 Each pack ships an always-loaded `SKILL.md` index plus on-demand `chapters/`, a glossary,

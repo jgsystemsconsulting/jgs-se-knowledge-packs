@@ -9,14 +9,17 @@ This product contains two separately licensed layers:
 1. TOOLING & SCAFFOLDING (MIT License, JG Systems Consulting Ltd.)
    Everything outside packs/<slug>/: tooling/, docs/, installers, CI, repo structure.
 
-2. PACK CONTENT (each under its upstream open source's own licence)
-   The reconstructed reference notes inside each packs/<slug>/ directory are derived
-   from openly-licensed or public-domain sources and carry that source's licence.
-   Attribution is provided textually below and in each packs/<slug>/LICENSE; no
-   source-material download links are published (see docs/LICENSING.md).
+2. PACK CONTENT (each content pack under its upstream open source's own licence)
+   The reconstructed reference notes inside each content pack's packs/<slug>/ directory
+   are derived from openly-licensed or public-domain sources and carry that source's
+   licence. Attribution is provided textually below and in each packs/<slug>/LICENSE; no
+   source-material download links are published (see docs/LICENSING.md). Three shipped
+   members are exceptions with no attribution block below: packs/omg-signpost,
+   packs/se-standards-signpost, and packs/se hold no third-party content and are
+   original JG Systems Consulting Ltd. work under the repo's MIT licence.
 
 -----------------------------------------------------------------------------------
-Third-party source attributions (one block per shipped pack)
+Third-party source attributions (one block per shipped content pack)
 -----------------------------------------------------------------------------------
 
 [pack: sebok]
