@@ -40,11 +40,15 @@ standard requires for this repo and exits non-zero on any failure:
      catalog.json packs[].slug where status is live or absent; signpost and
      orchestrator slugs must not appear in catalog.packs. planned[] is free.
      updated is review-only after the b-03 bump.
+  15. Routing map coverage ([routing-map], /se): exactly one kind: orchestrator
+     member; ROUTING-MAP markers and four subheadings; pack-cell slug resolution
+     and Topics coverage of every content slug; licence parity for non-Public-Domain
+     content packs.
 
 stdlib only. This is a LOCAL/trusted gate and may run repo code; the CI workflow
 (.github/workflows/validate.yml) inlines its own checks and never executes repo code.
 CI-covered: version, index, overlap, map/rules data invariants, html-assets,
-catalogue-count, catalog-live-set. Local-only required before tag: pack validation,
+catalogue-count, catalog-live-set, routing-map. Local-only required before tag: pack validation,
 packs.html freshness, full map/rules checks, replay.
 
 Pre-tag rule: run this gate at the exact commit being tagged and require a PASS
@@ -634,6 +638,292 @@ def check_catalog_live_set(
     return errs
 
 
+# P17 routing-map: /se orchestrator map coverage. Literals pinned in validate.yml
+# (test_ci_gate ROUTING_MAP_PAIR; twin lands in Task 6).
+ROUTING_MAP_TAG = "[routing-map]"
+ROUTING_MAP_BEGIN = "<!-- ROUTING-MAP:BEGIN -->"
+ROUTING_MAP_END = "<!-- ROUTING-MAP:END -->"
+ROUTING_MAP_HEADINGS = (
+    "### Topics",
+    "### Agency contexts",
+    "### Deliverables",
+    "### Licences",
+)
+# Pack-bearing column indexes (zero-based) per pinned header.
+ROUTING_MAP_PACK_COLS = {
+    "### Topics": (2,),  # Packs (best first)
+    "### Agency contexts": (2,),  # Packs
+    "### Deliverables": (2, 3, 4),  # Draft, Review, Verify
+    "### Licences": (0,),  # Pack
+}
+ROUTING_MAP_SLUG_RE = re.compile(r"^[a-z0-9-]+$")
+ROUTING_MAP_BACKTICK_RE = re.compile(r"`([^`]*)`")
+ROUTING_MAP_SEP_RE = re.compile(r"^[\|\-:\s]+$")
+ROUTING_MAP_LICENSE_RE = re.compile(r"^license:\s*(.*)$", re.M)
+
+
+def _routing_map_split_row(line: str) -> list[str]:
+    """Split a Markdown table row into stripped cell strings."""
+    raw = line.strip()
+    if raw.startswith("|"):
+        raw = raw[1:]
+    if raw.endswith("|"):
+        raw = raw[:-1]
+    return [c.strip() for c in raw.split("|")]
+
+
+def _routing_map_is_separator(line: str) -> bool:
+    s = line.strip()
+    return bool(s) and ROUTING_MAP_SEP_RE.fullmatch(s) is not None
+
+
+def _routing_map_pack_yaml_license(pack_dir: Path) -> str | None:
+    """Return PACK.yaml license value with surrounding double quotes stripped, or None."""
+    path = pack_dir / "PACK.yaml"
+    if not path.is_file():
+        return None
+    try:
+        text = path.read_text(encoding="utf-8")
+    except OSError:
+        return None
+    m = ROUTING_MAP_LICENSE_RE.search(text)
+    if not m:
+        return None
+    val = m.group(1).strip()
+    if len(val) >= 2 and val[0] == '"' and val[-1] == '"':
+        val = val[1:-1]
+    return val
+
+
+def check_routing_map(packs_root: Path) -> list[str]:
+    """Fail-closed routing-map coverage for the single orchestrator member.
+
+    Rules 1-6: exactly one kind: orchestrator; ROUTING-MAP markers and four
+    subheadings; backticked slug resolution; pack-cell grammar; Topics Packs
+    column covers every content slug; Licences parity for non-Public-Domain
+    content packs. Every message is prefixed [routing-map].
+    """
+    tag = ROUTING_MAP_TAG
+    errs: list[str] = []
+
+    content, _signposts, orchestrators, inv_errs = inventory_pack_slugs(
+        packs_root, tag=tag
+    )
+    errs.extend(inv_errs)
+
+    if len(orchestrators) != 1:
+        errs.append(
+            f"{tag} exactly one orchestrator member required: "
+            f"{len(orchestrators)} found"
+        )
+        return errs
+
+    orch_slug = next(iter(orchestrators))
+    skill_path = packs_root / orch_slug / "SKILL.md"
+    try:
+        skill_text = skill_path.read_text(encoding="utf-8")
+    except OSError as e:
+        errs.append(f"{tag} cannot read packs/{orch_slug}/SKILL.md: {e}")
+        return errs
+
+    n_begin = skill_text.count(ROUTING_MAP_BEGIN)
+    n_end = skill_text.count(ROUTING_MAP_END)
+    if n_begin != 1 or n_end != 1:
+        errs.append(
+            f"{tag} expected exactly one {ROUTING_MAP_BEGIN} and one "
+            f"{ROUTING_MAP_END}, found {n_begin} BEGIN / {n_end} END"
+        )
+        return errs
+    begin_at = skill_text.find(ROUTING_MAP_BEGIN)
+    end_at = skill_text.find(ROUTING_MAP_END)
+    if begin_at >= end_at:
+        errs.append(
+            f"{tag} {ROUTING_MAP_BEGIN} must precede {ROUTING_MAP_END}"
+        )
+        return errs
+
+    region = skill_text[begin_at + len(ROUTING_MAP_BEGIN) : end_at]
+
+    # Heading presence and order (each exactly once).
+    positions: dict[str, int] = {}
+    for h in ROUTING_MAP_HEADINGS:
+        matches = list(re.finditer(re.escape(h), region))
+        if len(matches) != 1:
+            errs.append(
+                f"{tag} expected exactly one '{h}' in routing map, "
+                f"found {len(matches)}"
+            )
+            continue
+        positions[h] = matches[0].start()
+    if len(positions) != len(ROUTING_MAP_HEADINGS):
+        return errs
+    ordered = sorted(positions, key=positions.get)
+    if ordered != list(ROUTING_MAP_HEADINGS):
+        errs.append(
+            f"{tag} routing-map subheadings must appear in order "
+            f"{list(ROUTING_MAP_HEADINGS)}; found {ordered}"
+        )
+        return errs
+
+    # Slice region into per-heading bodies (text after heading until next heading).
+    heading_spans: list[tuple[str, str]] = []
+    for i, h in enumerate(ROUTING_MAP_HEADINGS):
+        start = positions[h] + len(h)
+        end = (
+            positions[ROUTING_MAP_HEADINGS[i + 1]]
+            if i + 1 < len(ROUTING_MAP_HEADINGS)
+            else len(region)
+        )
+        heading_spans.append((h, region[start:end]))
+
+    topics_pack_tokens: set[str] = set()
+    licence_rows: dict[str, str] = {}  # pack slug -> licence cell text
+
+    for heading, body in heading_spans:
+        pack_cols = ROUTING_MAP_PACK_COLS[heading]
+        lines = body.splitlines()
+        table_lines = [ln for ln in lines if ln.strip().startswith("|")]
+        if not table_lines:
+            errs.append(f"{tag} {heading}: no table rows found")
+            continue
+
+        # Classify rows: first non-separator is header; skip separators; rest data.
+        header_cells: list[str] | None = None
+        data_rows: list[tuple[str, list[str]]] = []  # (raw_line, cells)
+        for ln in table_lines:
+            if _routing_map_is_separator(ln):
+                continue
+            cells = _routing_map_split_row(ln)
+            if header_cells is None:
+                header_cells = cells
+                continue
+            data_rows.append((ln.strip(), cells))
+
+        if header_cells is None:
+            errs.append(f"{tag} {heading}: missing header row")
+            continue
+
+        needed = max(pack_cols) + 1
+        if len(header_cells) < needed:
+            errs.append(
+                f"{tag} {heading}: header has {len(header_cells)} column(s), "
+                f"need at least {needed}"
+            )
+            continue
+
+        for raw_line, cells in data_rows:
+            row_label = cells[0] if cells else raw_line
+            if len(cells) < needed:
+                errs.append(
+                    f"{tag} {heading}: row {row_label!r} has {len(cells)} "
+                    f"column(s), need at least {needed}"
+                )
+                continue
+
+            # Rule 3: every backticked span on the row must be a slug token, and
+            # must name an existing packs/<token>/SKILL.md (not the orchestrator).
+            for m in ROUTING_MAP_BACKTICK_RE.finditer(raw_line):
+                token = m.group(1)
+                if not ROUTING_MAP_SLUG_RE.fullmatch(token):
+                    errs.append(
+                        f"{tag} {heading}: backticked span `{token}` is not a "
+                        f"slug token on row {row_label!r}"
+                    )
+                    continue
+                if token == orch_slug:
+                    errs.append(
+                        f"{tag} {heading}: orchestrator slug `{token}` must not "
+                        f"appear as a routing target on row {row_label!r}"
+                    )
+                    continue
+                target = packs_root / token / "SKILL.md"
+                if not target.is_file():
+                    errs.append(
+                        f"{tag} {heading}: unknown pack slug `{token}` on row "
+                        f"{row_label!r}"
+                    )
+
+            # Rule 4: pack-bearing cells hold only backticked slugs or are empty.
+            for col_i in pack_cols:
+                cell = cells[col_i]
+                remainder = ROUTING_MAP_BACKTICK_RE.sub("", cell)
+                if re.search(r"[^\s,]", remainder):
+                    errs.append(
+                        f"{tag} {heading}: pack cell has non-slug text on row "
+                        f"{row_label!r}: {cell!r}"
+                    )
+                    continue
+                # Collect Topics coverage tokens (column index 2 only).
+                if heading == "### Topics" and col_i == 2:
+                    for tm in ROUTING_MAP_BACKTICK_RE.finditer(cell):
+                        tok = tm.group(1)
+                        if ROUTING_MAP_SLUG_RE.fullmatch(tok):
+                            topics_pack_tokens.add(tok)
+
+            # Rule 6 gather: Licences pack + licence cells.
+            if heading == "### Licences":
+                pack_cell = cells[0]
+                lic_cell = cells[1] if len(cells) > 1 else ""
+                slugs_in_pack = [
+                    tm.group(1)
+                    for tm in ROUTING_MAP_BACKTICK_RE.finditer(pack_cell)
+                    if ROUTING_MAP_SLUG_RE.fullmatch(tm.group(1))
+                ]
+                if len(slugs_in_pack) != 1:
+                    errs.append(
+                        f"{tag} {heading}: Pack cell must hold exactly one "
+                        f"backticked slug on row {row_label!r}"
+                    )
+                else:
+                    slug = slugs_in_pack[0]
+                    if slug in licence_rows:
+                        errs.append(
+                            f"{tag} {heading}: duplicate Pack row for `{slug}`"
+                        )
+                    licence_rows[slug] = lic_cell.strip()
+
+    # Rule 5: Topics Packs column covers every content slug.
+    missing = sorted(content - topics_pack_tokens)
+    for slug in missing:
+        errs.append(
+            f"{tag} content slug `{slug}` missing from ### Topics Packs column"
+        )
+
+    # Rule 6: licence parity for non-Public-Domain content packs.
+    expected_lic: dict[str, str] = {}
+    for slug in sorted(content):
+        lic = _routing_map_pack_yaml_license(packs_root / slug)
+        if lic is None:
+            errs.append(
+                f"{tag} cannot read license: from packs/{slug}/PACK.yaml"
+            )
+            continue
+        if not lic.startswith("Public Domain"):
+            expected_lic[slug] = lic
+
+    expected_set = set(expected_lic)
+    found_set = set(licence_rows)
+    for slug in sorted(expected_set - found_set):
+        errs.append(
+            f"{tag} ### Licences missing row for non-Public-Domain pack `{slug}`"
+        )
+    for slug in sorted(found_set - expected_set):
+        errs.append(
+            f"{tag} ### Licences extra row for `{slug}` "
+            f"(not a non-Public-Domain content pack)"
+        )
+    for slug in sorted(expected_set & found_set):
+        cell = licence_rows[slug]
+        want = expected_lic[slug]
+        if cell != want:
+            errs.append(
+                f"{tag} ### Licences licence cell for `{slug}` is {cell!r}, "
+                f"expected {want!r}"
+            )
+
+    return errs
+
+
 def fail(errs: list[str], msg: str) -> None:
     errs.append(msg)
 
@@ -832,6 +1122,9 @@ def main() -> int:
             catalog_err = f"cannot read/parse {CATALOG_JSON_PATH}: {e}"
     for msg in check_catalog_live_set(ROOT / "packs", catalog_obj, catalog_err):
         fail(errs, msg)
+
+    # 15. routing map coverage ([routing-map], /se)
+    errs.extend(check_routing_map(ROOT / "packs"))
 
     # 6. SKILLS.md entry count == pack count
     skills = (ROOT / "SKILLS.md").read_text(encoding="utf-8") if (ROOT / "SKILLS.md").is_file() else ""
