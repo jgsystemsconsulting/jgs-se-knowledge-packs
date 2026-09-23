@@ -1,4 +1,4 @@
-# Capability Pack Map — Consumption Contract
+# Capability Pack Map: Consumption Contract
 
 Standalone contract for downstream consumers (notably an se-agents generator
 repo that binds roles/skills to pack chapters). This document governs
@@ -55,7 +55,7 @@ Notes, ordering, and metadata are optional for generation.
 
 ## 3. Deprecation (v1 keyless shape)
 
-The v1 shape — top level `{"clusters": [...]}` only, with no envelope keys — is
+The v1 shape: top level `{"clusters": [...]}` only, with no envelope keys: is
 **DEPRECATED**.
 
 - v1 consumers **must** migrate to reading `schema_version` first.
@@ -72,7 +72,7 @@ When packs change (new pack, new chapter, rename, delete):
    (`docs/classification-rules.json`) and note overrides
    (`docs/capability-pack-map-note-overrides.json`) are committed inputs; cluster
    assignment and the v2 envelope are produced mechanically by the generator.
-2. Run `python tooling/check_capability_map.py` — must exit 0 (envelope,
+2. Run `python tooling/check_capability_map.py`: must exit 0 (envelope,
    pack/chapter staleness vs `packs/`, file existence, uniqueness, thresholds).
 3. Commit both `docs/capability-pack-map.json` and `docs/capability-pack-map.md`
    together.
@@ -108,7 +108,7 @@ are correctness floors for the agent-enablement surface, not upper bounds.
 
 ## 6. Live snapshot vs residue
 
-The live committed snapshot is **628+** chapter entries — post-regen **644**
+The live committed snapshot is **628+** chapter entries: post-regen **644**
 (16 classified chapters, 0 new support-file rows). Older draft counts (e.g. 502)
 are obsolete; consumers must read the live JSON. **Cybersecurity & Security
 Engineering** (live 69 entries / 10 packs) and **Digital Engineering & Digital

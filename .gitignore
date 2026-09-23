@@ -45,3 +45,6 @@ graphify-out/
 .planning/graphs/.rebuild.lock
 .planning/graphs/.last-build-status.json
 .planning/graphs/.last-build-snapshot.json
+
+# maintainer-only planning artifacts (RR-B-35)
+docs/superpowers/

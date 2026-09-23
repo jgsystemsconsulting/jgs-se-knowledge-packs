@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability (private)
+    url: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/security/advisories/new
+    about: Report security issues privately, never as a public issue.
+  - name: Licensing concern about a pack
+    url: mailto:support@jgsystemsconsulting.com?subject=licensing
+    about: If a pack misrepresents its source's licence or should not be redistributed.

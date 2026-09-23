@@ -197,7 +197,7 @@ patterns, and a cheatsheet. Full guidance: [docs/skill-usage.md](docs/skill-usag
 
 Vet the source (tier + licence, not on the Excluded list) → extract text (built on the
 MIT-licensed [`jgs-reference-skill`](https://github.com/jgsystemsconsulting/jgs-reference-skill)
-engine — a fork of [`book-to-skill`](https://github.com/virgiliojr94/book-to-skill)) → map
+engine: a fork of [`book-to-skill`](https://github.com/virgiliojr94/book-to-skill)) → map
 structure to chapter offsets → generate reference-depth chapters in parallel + glossary /
 patterns / cheatsheet + the `SKILL.md` index → attach provenance (`PACK.yaml` + a `LICENSE`
 reproducing the source's terms) → validate. Contract: [docs/PACK-SPEC.md](docs/PACK-SPEC.md).
@@ -214,6 +214,9 @@ Two separable layers:
 Per-pack source attributions are in [NOTICE](NOTICE). Why every pack is lawful to reconstitute
 and redistribute (including why no source-material links are published) is set out in
 [docs/LICENSING.md](docs/LICENSING.md).
+
+No purchase or licence key is needed to use this tooling. For commercial licensing
+questions, see [labs.jgsystemsconsulting.com/licensing.html](https://labs.jgsystemsconsulting.com/licensing.html).
 
 ## Support & security
 

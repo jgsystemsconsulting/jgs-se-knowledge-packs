@@ -1,0 +1,29 @@
+name: Bug report
+description: Report a defect or incorrect output
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: From RELEASE-INFO.txt or the product's version output
+    validations: {required: true}
+  - type: input
+    id: surface
+    attributes:
+      label: Pack / tool / feature
+      description: Which pack or part of the tooling misbehaved
+    validations: {required: true}
+  - type: textarea
+    id: repro
+    attributes:
+      label: What happened, and how to reproduce it
+      description: Inputs, expected vs actual result, environment details
+    validations: {required: true}
+  - type: checkboxes
+    id: hygiene
+    attributes:
+      label: Hygiene
+      options:
+        - label: I confirm this report contains no tokens, keys, or credentials.
+          required: true

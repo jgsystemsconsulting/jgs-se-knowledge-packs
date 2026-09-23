@@ -7,8 +7,10 @@ SPDX-License-Identifier: MIT
 
 ## Reporting a vulnerability
 
-Report privately to **`support@jgsystemsconsulting.com`**. Please do **not** open a
-public issue for a security report.
+Report privately via a [GitHub security advisory](https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/security/advisories/new),
+or open a pull request with the fix. Please do **not** open a public issue for a
+security report. If neither route works for you, `support@jgsystemsconsulting.com`
+is the org's shared, monitored support inbox.
 
 - Include a description, affected files/packs, and reproduction steps.
 - Expect an acknowledgement within **5 working days**.
