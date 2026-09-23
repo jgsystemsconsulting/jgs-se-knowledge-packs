@@ -67,6 +67,15 @@ def main() -> int:
         assert errs == [], errs
         assert (n, m) == (2, 1), (n, m)
 
+        (packs / "omega-orch").mkdir()
+        (packs / "omega-orch" / "SKILL.md").write_text(
+            "---\nname: omega-orch\nkind: orchestrator\ndescription: o\n---\n# o\n",
+            encoding="utf-8",
+        )
+        n, m, errs = check_release.inventory_pack_counts(packs)
+        assert errs == [], errs
+        assert (n, m) == (2, 1), (n, m)  # orchestrator in neither bucket
+
         # missing SKILL.md fails closed
         (packs / "ghost").mkdir()
         n2, m2, errs2 = check_release.inventory_pack_counts(packs)

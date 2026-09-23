@@ -60,6 +60,7 @@ RELEASE_PAIR = [
     ("website YAML version", r'version:\s*"([0-9]+\.[0-9]+\.[0-9]+)"'),
     ("SKILLS link", r"\[`([^`]+)`\]\(packs/"),
     ("signpost kind", r"^kind:\s*signpost\s*$"),
+    ("orchestrator kind", r"^kind:\s*orchestrator\s*$"),
 ]
 
 # Literals that must appear verbatim in check_release.py AND validate.yml

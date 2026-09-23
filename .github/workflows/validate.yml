@@ -333,6 +333,8 @@ jobs:
                   fm = m.group(1)
                   if re.search(r"^kind:\s*signpost\s*$", fm, re.I | re.M):
                       signposts += 1
+                  elif re.search(r"^kind:\s*orchestrator\s*$", fm, re.I | re.M):
+                      pass
                   else:
                       content += 1
               return content, signposts, errs
@@ -551,9 +553,9 @@ jobs:
 
           def inventory_pack_slugs(packs_root):
               errs = []
-              content, signposts = set(), set()
+              content, signposts, orchestrators = set(), set(), set()
               if not packs_root.is_dir():
-                  return content, signposts, [f"{CATALOG_LIVE_SET_TAG} packs root missing: {packs_root}"]
+                  return content, signposts, orchestrators, [f"{CATALOG_LIVE_SET_TAG} packs root missing: {packs_root}"]
               for child in sorted(p for p in packs_root.iterdir() if p.is_dir()):
                   skill = child / "SKILL.md"
                   if not skill.is_file():
@@ -573,13 +575,15 @@ jobs:
                   fm = m.group(1)
                   if re.search(r"^kind:\s*signpost\s*$", fm, re.I | re.M):
                       signposts.add(child.name)
+                  elif re.search(r"^kind:\s*orchestrator\s*$", fm, re.I | re.M):
+                      orchestrators.add(child.name)
                   else:
                       content.add(child.name)
-              return content, signposts, errs
+              return content, signposts, orchestrators, errs
 
           fails = 0
           packs_root = pathlib.Path("packs")
-          content, signposts, inv_errs = inventory_pack_slugs(packs_root)
+          content, signposts, orchestrators, inv_errs = inventory_pack_slugs(packs_root)
           for e in inv_errs:
               print(f"::error::{e}")
               fails += 1
@@ -652,6 +656,14 @@ jobs:
               print(
                   f"::error::{CATALOG_LIVE_SET_TAG} signpost slug(s) must not appear in "
                   f"{CATALOG_JSON_PATH} packs: {signposts_in_catalog}"
+              )
+              fails += 1
+
+          orchestrators_in_catalog = sorted(orchestrators & all_slugs)
+          if orchestrators_in_catalog:
+              print(
+                  f"::error::{CATALOG_LIVE_SET_TAG} orchestrator slug(s) must not appear in "
+                  f"{CATALOG_JSON_PATH} packs: {orchestrators_in_catalog}"
               )
               fails += 1
 

@@ -36,9 +36,10 @@ standard requires for this repo and exits non-zero on any failure:
      headline, chip COUNT sum (with exactly one Signposts chip equal to M),
      figcaption N/M, and still-catalogue.svg subtitle/footer N/M.
   14. Catalog live-set parity ([catalog-live-set], P16): content pack slug set from
-     packs/*/SKILL.md (signposts excluded) must equal catalog.json packs[].slug
-     where status is live or absent; signpost slugs must not appear in
-     catalog.packs. planned[] is free. updated is review-only after the b-03 bump.
+     packs/*/SKILL.md (signposts and orchestrators excluded) must equal
+     catalog.json packs[].slug where status is live or absent; signpost and
+     orchestrator slugs must not appear in catalog.packs. planned[] is free.
+     updated is review-only after the b-03 bump.
 
 stdlib only. This is a LOCAL/trusted gate and may run repo code; the CI workflow
 (.github/workflows/validate.yml) inlines its own checks and never executes repo code.
@@ -294,20 +295,24 @@ STILL_CATALOGUE_SVG = "docs/assets/still-catalogue.svg"
 
 def inventory_pack_slugs(
     packs_root: Path, tag: str = "[catalogue-count]"
-) -> tuple[set[str], set[str], list[str]]:
-    """Return (content_slugs, signpost_slugs, errors) from packs/*/SKILL.md.
+) -> tuple[set[str], set[str], set[str], list[str]]:
+    """Return (content_slugs, signpost_slugs, orchestrator_slugs, errors).
 
     Every immediate child directory must contain SKILL.md with parseable YAML
     frontmatter between --- fences. A frontmatter line matching
-    ^kind:\\s*signpost\\s*$ (case-insensitive) marks a signpost; all others are
-    content packs. Live sets never come from a hardcoded constant. ``tag`` prefixes
+    ^kind:\\s*signpost\\s*$ (case-insensitive) marks a signpost;
+    ^kind:\\s*orchestrator\\s*$ marks an orchestrator; all others are content
+    packs. Live sets never come from a hardcoded constant. ``tag`` prefixes
     fail messages so callers can attribute catalogue-count vs catalog-live-set.
     """
     errs: list[str] = []
     content: set[str] = set()
     signposts: set[str] = set()
+    orchestrators: set[str] = set()
     if not packs_root.is_dir():
-        return content, signposts, [f"{tag} packs root missing: {packs_root}"]
+        return content, signposts, orchestrators, [
+            f"{tag} packs root missing: {packs_root}"
+        ]
     for child in sorted(p for p in packs_root.iterdir() if p.is_dir()):
         skill = child / "SKILL.md"
         if not skill.is_file():
@@ -327,14 +332,16 @@ def inventory_pack_slugs(
         fm = m.group(1)
         if re.search(r"^kind:\s*signpost\s*$", fm, re.I | re.M):
             signposts.add(child.name)
+        elif re.search(r"^kind:\s*orchestrator\s*$", fm, re.I | re.M):
+            orchestrators.add(child.name)
         else:
             content.add(child.name)
-    return content, signposts, errs
+    return content, signposts, orchestrators, errs
 
 
 def inventory_pack_counts(packs_root: Path) -> tuple[int, int, list[str]]:
     """Return (content_N, signpost_M, errors); wrapper over inventory_pack_slugs."""
-    content, signposts, errs = inventory_pack_slugs(
+    content, signposts, _orchestrators, errs = inventory_pack_slugs(
         packs_root, tag="[catalogue-count]"
     )
     return len(content), len(signposts), errs
@@ -542,7 +549,8 @@ def check_catalog_live_set(
     """Fail-closed equality of content pack slugs vs catalog.json live packs[].
 
     Live catalog slugs are entries with status 'live' or missing status. Signpost
-    pack dirs must not appear in catalog.packs under any status. planned[] is free.
+    and orchestrator pack dirs must not appear in catalog.packs under any status.
+    planned[] is free.
     """
     errs: list[str] = []
     if catalog_error:
@@ -552,7 +560,7 @@ def check_catalog_live_set(
         errs.append(f"{CATALOG_LIVE_SET_TAG} {CATALOG_JSON_PATH} root must be an object")
         return errs
 
-    content, signposts, inv_errs = inventory_pack_slugs(
+    content, signposts, orchestrators, inv_errs = inventory_pack_slugs(
         packs_root, tag=CATALOG_LIVE_SET_TAG
     )
     errs.extend(inv_errs)
@@ -616,6 +624,12 @@ def check_catalog_live_set(
         errs.append(
             f"{CATALOG_LIVE_SET_TAG} signpost slug(s) must not appear in "
             f"{CATALOG_JSON_PATH} packs: {signposts_in_catalog}"
+        )
+    orchestrators_in_catalog = sorted(orchestrators & all_slugs)
+    if orchestrators_in_catalog:
+        errs.append(
+            f"{CATALOG_LIVE_SET_TAG} orchestrator slug(s) must not appear in "
+            f"{CATALOG_JSON_PATH} packs: {orchestrators_in_catalog}"
         )
     return errs
 
