@@ -9,6 +9,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
 <title>Pack reference, JGS SE Knowledge Packs (66 skills)</title>
 <meta name="description" content="Browse and filter all 66 JGS SE Knowledge Pack skills by slug, source licence, and coverage: NASA, NIST, DoD, GAO, FAA, and SEBoK packs for coding agents.">
 <link rel="canonical" href="https://jgsystemsconsulting.github.io/jgs-se-knowledge-packs/packs.html">
@@ -54,9 +55,6 @@ h1{font-family:var(--mono);color:var(--text-hi);letter-spacing:-0.02em;font-weig
 .mast .label span{color:var(--text)}
 header.hd{border-bottom:1px solid var(--line);padding-top:var(--pad-section);padding-bottom:2rem}
 header.hd p{margin:1rem 0 0;max-width:64ch;color:var(--text)}
-.hd-still{margin:1.25rem 0 0;max-width:36rem;border:1px solid var(--line);background:var(--ink-2);overflow:hidden}
-.hd-still img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:left center}
-.hd-still figcaption{font-family:var(--mono);font-size:0.6875rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--mute);padding:8px 12px;border-top:1px solid var(--line)}
 .tools{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin-top:1.4rem;padding:10px 12px;background:var(--ink-2);border:1px solid var(--line)}
 input#q{font-family:var(--mono);font-size:0.9rem;background:var(--ink);border:1px solid var(--line);color:var(--text-hi);padding:10px 12px;flex:1 1 16rem;min-width:min(280px,100%)}
 input#q::placeholder{color:var(--mute)}
@@ -83,7 +81,6 @@ footer .label{display:block;margin-bottom:8px}
   tbody tr:hover td{background:transparent}
   tbody td{border-bottom:none;padding:6px 16px}
   td.lic{color:var(--mute);white-space:normal}
-  .hd-still{max-width:100%}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
@@ -104,11 +101,6 @@ footer .label{display:block;margin-bottom:8px}
   <p>Every knowledge pack in the release, with its source licence and what it covers. Each pack
   is an Agent Skill you invoke by its slug. Type to filter by name, publisher, licence, or topic.
   Click a slug to open its <code>SKILL.md</code> on GitHub.</p>
-  <figure class="hd-still">
-    <img src="assets/still-catalogue.png" width="1200" height="675"
-      alt="Drafting-sheet still of the catalogue families and pack counts.">
-    <figcaption>FIG.CAT · Catalogue families</figcaption>
-  </figure>
   <div class="tools">
     <input id="q" type="search" placeholder="filter, e.g. nasa, risk, public domain, CC BY" aria-label="Filter packs">
     <span id="count"></span>

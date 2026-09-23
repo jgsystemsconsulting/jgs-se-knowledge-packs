@@ -34,7 +34,7 @@ standard requires for this repo and exits non-zero on any failure:
   13. Landing catalogue counts ([catalogue-count], P15): live content count N and
      signpost count M from packs/*/SKILL.md frontmatter must equal the §06
      headline, chip COUNT sum (with exactly one Signposts chip equal to M),
-     figcaption N/M, and still-catalogue.svg subtitle/footer N/M.
+     and still-catalogue.svg subtitle/footer N/M.
   14. Catalog live-set parity ([catalog-live-set], P16): content pack slug set from
      packs/*/SKILL.md (signposts and orchestrators excluded) must equal
      catalog.json packs[].slug where status is live or absent; signpost and
@@ -472,45 +472,6 @@ def check_catalogue_count(
         errs.append(
             f"[catalogue-count] content chip COUNT sum {content_sum} != live content packs {n_live}"
         )
-
-    # Figcaption: digits N and M, or prescribed word-form caption.
-    caps = re.findall(r"<figcaption\b[^>]*>(.*?)</figcaption>", section, re.I | re.S)
-    if not caps:
-        errs.append("[catalogue-count] §06 figcaption missing")
-    else:
-        cap = re.sub(r"\s+", " ", caps[0]).strip()
-        prescribed = (
-            "FIG.06 · Sixty-three packs plus two signposts across open sources; "
-            "filter the full list on packs.html."
-        )
-        cap_norm = cap.replace("&middot;", "·")
-        ok = False
-        if re.sub(r"\s+", " ", prescribed).strip() == cap_norm:
-            ok = True
-        elif str(n_live) in cap and str(m_live) in cap:
-            ok = True
-        else:
-            # word-form: sixty-three / two when live is 63/2; else require digits
-            words = {
-                0: "zero", 1: "one", 2: "two", 3: "three", 4: "four", 5: "five",
-                6: "six", 7: "seven", 8: "eight", 9: "nine", 10: "ten",
-            }
-            # Accept "Sixty-three" style for 63 via digits-or-words containing both
-            if n_live == 63 and m_live == 2:
-                if re.search(r"sixty[-\s]?three", cap, re.I) and re.search(
-                    r"\btwo\b", cap, re.I
-                ):
-                    ok = True
-            if not ok and n_live in words and m_live in words:
-                if re.search(rf"\b{words[n_live]}\b", cap, re.I) and re.search(
-                    rf"\b{words[m_live]}\b", cap, re.I
-                ):
-                    ok = True
-        if not ok:
-            errs.append(
-                f"[catalogue-count] §06 figcaption must carry live N={n_live} and M={m_live} "
-                f"(digit or word form); got {cap!r}"
-            )
 
     if svg_missing or svg_text is None:
         errs.append(f"[catalogue-count] missing {STILL_CATALOGUE_SVG}")
