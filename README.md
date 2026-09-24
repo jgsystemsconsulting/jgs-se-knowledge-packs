@@ -11,6 +11,7 @@ SPDX-License-Identifier: MIT
   <img src="https://img.shields.io/badge/packs-63-blueviolet" alt="63 packs">
   <img src="https://img.shields.io/badge/tested%20with-Claude%20Code-8A2BE2" alt="Tested with Claude Code">
   <img src="https://img.shields.io/badge/scope-systems%20engineering-orange" alt="Scope: systems engineering">
+  <a href="https://skills.sh/jgsystemsconsulting/jgs-se-knowledge-packs"><img src="https://skills.sh/b/jgsystemsconsulting/jgs-se-knowledge-packs" alt="skills.sh installs"></a>
 </p>
 
 <p align="center">
@@ -69,6 +70,17 @@ Do this in order:
 4. Tell me to restart Claude Code, then try `/sebok systems of systems` or ask
    `/se what are the EARS requirement patterns?`.
 5. Pack CONTENT is under each source's own licence (see NOTICE); keep attribution intact.
+```
+
+## Install with the skills CLI
+
+The catalogue is listed on [skills.sh](https://skills.sh/jgsystemsconsulting/jgs-se-knowledge-packs).
+With the Vercel skills CLI you can pull packs without cloning:
+
+```bash
+npx skills add jgsystemsconsulting/jgs-se-knowledge-packs -l              # list available packs
+npx skills add jgsystemsconsulting/jgs-se-knowledge-packs --skill sebok   # install one pack
+npx skills add jgsystemsconsulting/jgs-se-knowledge-packs --all           # install the catalogue
 ```
 
 ## Install manually
