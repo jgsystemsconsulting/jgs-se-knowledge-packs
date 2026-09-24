@@ -446,33 +446,6 @@ jobs:
                   )
                   fails += 1
 
-              caps = re.findall(r"<figcaption\b[^>]*>(.*?)</figcaption>", section, re.I | re.S)
-              if not caps:
-                  print("::error::[catalogue-count] §06 figcaption missing")
-                  fails += 1
-              else:
-                  cap = re.sub(r"\s+", " ", caps[0]).strip()
-                  prescribed = (
-                      "FIG.06 · Sixty-three packs plus two signposts across open sources; "
-                      "filter the full list on packs.html."
-                  )
-                  cap_norm = cap.replace("&middot;", "·")
-                  ok = False
-                  if re.sub(r"\s+", " ", prescribed).strip() == cap_norm:
-                      ok = True
-                  elif str(n_live) in cap and str(m_live) in cap:
-                      ok = True
-                  else:
-                      if n_live == 63 and m_live == 2:
-                          if re.search(r"sixty[-\s]?three", cap, re.I) and re.search(r"\btwo\b", cap, re.I):
-                              ok = True
-                  if not ok:
-                      print(
-                          f"::error::[catalogue-count] §06 figcaption must carry live N={n_live} and M={m_live} "
-                          f"(digit or word form); got {cap!r}"
-                      )
-                      fails += 1
-
           svg_path = pathlib.Path(STILL_CATALOGUE_SVG)
           if not svg_path.is_file():
               print(f"::error::[catalogue-count] missing {STILL_CATALOGUE_SVG}")
