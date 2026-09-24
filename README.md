@@ -30,6 +30,10 @@ read once and then can't recall when you need it mid-task. A **knowledge pack** 
 skill your coding agent loads on demand: ask `/sebok systems of systems` and the agent reads the
 right chapter and answers from reconstructed reference notes, not a hazy recollection.
 
+Don't know which pack to ask? The catalogue ships one orchestrator: `/se <question>` routes your
+systems-engineering question to the right pack or packs, reads them, and answers with pack and
+chapter citations. It carries no source content and answers only when explicitly invoked.
+
 This is a curated catalogue of those packs for **systems engineers**, built to one rule that makes
 it different from "point a tool at a PDF":
 
