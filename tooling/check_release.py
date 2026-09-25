@@ -14,6 +14,7 @@ standard requires for this repo and exits non-zero on any failure:
      is data, not a literal in this file.
   4. Version single-source agreement: plugin.json == CHANGELOG top ==
      RELEASE-INFO.txt == the two website product YAMLs under docs/products/website.
+     Plus [site-version]: docs/index.html softwareVersion, masthead REV, and footer Rev equal RELEASE-INFO.txt.
   5. Every pack passes tooling/validate_pack.py (structure + licence tier).
   6. SKILLS.md entry count == number of shipped packs.
   7. JGSC + SPDX header present on authored files (NOT pack content).
@@ -966,6 +967,15 @@ def main() -> int:
         if got != expected:
             fail(errs, f"[version] {rel}: website YAML version '{got}' "
                        f"!= RELEASE-INFO '{expected}'")
+    # [site-version]: docs/index.html loci must equal RELEASE-INFO (ported from jgs-lit-memory).
+    page = (ROOT / "docs/index.html").read_text(encoding="utf-8") if (ROOT / "docs/index.html").is_file() else ""
+    for name, pat in (("softwareVersion", r'"softwareVersion":\s*"(\d+\.\d+\.\d+)"'),
+                      ("masthead REV", r"REV <b>(\d+\.\d+\.\d+)</b>"),
+                      ("footer Rev", r'<span class="label">Rev</span><b>(\d+\.\d+\.\d+)</b>')):
+        m = re.search(pat, page)
+        got = m.group(1) if m else ""
+        if got != expected:
+            fail(errs, f"[site-version] docs/index.html {name} '{got}' != RELEASE-INFO '{expected}'")
     distinct = {v for v in versions.values() if v}
     if len(distinct) > 1 or "" in versions.values():
         fail(errs, f"[version] disagreement / missing: {versions}")

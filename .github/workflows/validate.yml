@@ -1008,6 +1008,16 @@ jobs:
               if got != expected:
                   print(f"::error file={rel}::[version] website YAML version '{got}' != RELEASE-INFO '{expected}'")
                   fails += 1
+          # [site-version]: docs/index.html loci must equal RELEASE-INFO.
+          page = open("docs/index.html", encoding="utf-8").read() if os.path.isfile("docs/index.html") else ""
+          for name, pat in (("softwareVersion", r'"softwareVersion":\s*"(\d+\.\d+\.\d+)"'),
+                            ("masthead REV", r"REV <b>(\d+\.\d+\.\d+)</b>"),
+                            ("footer Rev", r'<span class="label">Rev</span><b>(\d+\.\d+\.\d+)</b>')):
+              m = re.search(pat, page)
+              got = m.group(1) if m else ""
+              if got != expected:
+                  print(f"::error file=docs/index.html::[site-version] {name} '{got}' != RELEASE-INFO '{expected}'")
+                  fails += 1
           distinct = {v for v in versions.values() if v}
           if len(distinct) > 1 or "" in versions.values():
               print(f"::error::[version] disagreement / missing: {versions}")

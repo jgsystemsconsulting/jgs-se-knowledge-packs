@@ -65,6 +65,9 @@ RELEASE_PAIR = [
     ("SKILLS link", r"\[`([^`]+)`\]\(packs/"),
     ("signpost kind", r"^kind:\s*signpost\s*$"),
     ("orchestrator kind", r"^kind:\s*orchestrator\s*$"),
+    ("site softwareVersion", r'"softwareVersion":\s*"(\d+\.\d+\.\d+)"'),
+    ("site masthead REV", r"REV <b>(\d+\.\d+\.\d+)</b>"),
+    ("site footer Rev", r'<span class="label">Rev</span><b>(\d+\.\d+\.\d+)</b>'),
 ]
 
 # Literals that must appear verbatim in check_release.py AND validate.yml
@@ -396,6 +399,17 @@ def main() -> int:
         demo(v2, "Version single-source",
              "website YAML version '' != RELEASE-INFO '1.2.3'",
              "version-website-missing")
+        # site-version: all sources agree at 1.2.3 but the page masthead says 9.9.9
+        v3 = dict(VERSION_BASE)
+        v3["RELEASE-INFO.txt"] = "Version:    1.2.3\n"
+        v3["docs/index.html"] = ('{"softwareVersion":"1.2.3"} REV <b>9.9.9</b> '
+                                 '<span class="label">Rev</span><b>1.2.3</b>\n')
+        demo(v3, "Version single-source", "[site-version]", "site-version-drift")
+        # site-version positive: every locus agrees
+        v4 = dict(v3)
+        v4["docs/index.html"] = ('{"softwareVersion": "1.2.3"} REV <b>1.2.3</b> '
+                                 '<span class="label">Rev</span><b>1.2.3</b>\n')
+        demo_ok(v4, "Version single-source", "site-version-ok")
 
         # index: with the signpost marker, the signpost link is NOT counted,
         # so one content link vs two shipped packs fails
