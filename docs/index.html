@@ -19,13 +19,13 @@
 <meta property="og:title" content="JGS SE Knowledge Packs">
 <meta property="og:description" content="Licence-vetted systems-engineering knowledge-pack skills for coding agents, reconstructed from genuinely open sources.">
 <meta property="og:url" content="https://jgsystemsconsulting.github.io/jgs-se-knowledge-packs/">
-<meta property="og:image" content="https://jgsystemsconsulting.github.io/jgs-se-knowledge-packs/assets/og-default.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image" content="https://jgsystemsconsulting.github.io/jgs-se-knowledge-packs/title-card.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="720">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="JGS SE Knowledge Packs">
 <meta name="twitter:description" content="Licence-vetted systems-engineering knowledge-pack skills for coding agents, reconstructed from genuinely open sources.">
-<meta name="twitter:image" content="https://jgsystemsconsulting.github.io/jgs-se-knowledge-packs/assets/og-default.png">
+<meta name="twitter:image" content="https://jgsystemsconsulting.github.io/jgs-se-knowledge-packs/title-card.png">
 <style>
 /* Self-hosted brand fonts (drop the woff2 into docs/fonts/ before publish; falls back to
    system mono/sans meanwhile per the token stacks). No third-party CDN. */
@@ -76,6 +76,9 @@ nav.site a:hover{color:var(--text-hi);border:0}
 .btn.primary{background:var(--paper);color:var(--paper-ink);border-color:var(--paper)}
 .btn:hover{border-bottom-color:var(--line)}
 .btn.primary:hover{background:#fff}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,440px);gap:clamp(32px,5vw,72px);align-items:center}
+.hero-media{margin:0}
+.hero-media img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:6px}
 
 /* Sections */
 section{padding-top:var(--pad-section);padding-bottom:var(--pad-section);border-bottom:1px solid var(--line)}
@@ -111,6 +114,7 @@ footer .label{display:block;margin-bottom:8px}
 
 @media (max-width:860px){
   .cells.c3,.cells.c2,.packs{grid-template-columns:1fr}
+  .hero .wrap{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
@@ -137,16 +141,22 @@ footer .label{display:block;margin-bottom:8px}
 
 <!-- Hero -->
 <header class="hero"><div class="wrap">
-  <span class="label">JG Systems Consulting Ltd. · Agent Skills</span>
-  <h1>SE Knowledge Packs</h1>
-  <p class="lede">Installable knowledge-pack skills for coding agents, reconstructed from
-  genuinely open systems-engineering bodies of knowledge, vetted, attributed, and shareable
-  by construction. Ask a topic; your agent reads the right chapter and answers from
-  reference notes, not a hazy recollection.</p>
-  <div class="cta">
-    <a class="btn primary" href="https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs">View the repository <span aria-hidden="true">&rarr;</span></a>
-    <a class="btn" href="packs.html">Browse the catalogue <span aria-hidden="true">&rarr;</span></a>
+  <div class="hero-copy">
+    <span class="label">JG Systems Consulting Ltd. · Agent Skills</span>
+    <h1>SE Knowledge Packs</h1>
+    <p class="lede">Installable knowledge-pack skills for coding agents, reconstructed from
+    genuinely open systems-engineering bodies of knowledge, vetted, attributed, and shareable
+    by construction. Ask a topic; your agent reads the right chapter and answers from
+    reference notes, not a hazy recollection.</p>
+    <div class="cta">
+      <a class="btn primary" href="https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs">View the repository <span aria-hidden="true">&rarr;</span></a>
+      <a class="btn" href="packs.html">Browse the catalogue <span aria-hidden="true">&rarr;</span></a>
+    </div>
   </div>
+  <figure class="hero-media">
+    <img src="title-card.png" width="1280" height="720"
+      alt="Skill-overview title card for JGS SE Knowledge Packs: 63 licence-vetted systems-engineering knowledge packs from NASA, NIST, DoD, GAO, and SEBoK, installable as agent skills. QR code links to the repository.">
+  </figure>
 </div></header>
 
 <!-- §01 What it is -->
