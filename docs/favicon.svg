@@ -1,0 +1,6 @@
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. Source: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs. See LICENSE. -->
+<!-- SPDX-License-Identifier: MIT -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="7" fill="#f4f2ec"/>
+  <text x="16" y="23" text-anchor="middle" font-family="JetBrains Mono, ui-monospace, monospace" font-size="20" font-weight="700" fill="#0a0a0b">&#167;</text>
+</svg>
