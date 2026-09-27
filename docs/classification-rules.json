@@ -1,17 +1,19 @@
 {
   "schema_version": 1,
-  "map_version": "1.20.0",
-  "generated_on": "2026-08-27",
+  "map_version": "1.22.0",
+  "generated_on": "2026-09-27",
   "rules_of_construction": [
     "Every chapter in every pack under packs/<slug>/chapters/ is assigned to exactly one capability cluster (best fit).",
     "Cross-cutting chapters carry a remark noting the strong secondary fit.",
     "glossary.md / patterns.md / cheatsheet.md may appear as support-file rows; this bullet is descriptive only and defers to support_policy. is_support assignment rows are the membership source of truth (do not derive omission of multi-cluster pack support files from this rule).",
-    "The two signpost packs (omg-signpost, se-standards-signpost) contain no chapters and are not mapped.",
+    "The four signpost packs (omg-signpost, se-standards-signpost, automotive-signpost, functional-safety-signpost) contain no chapters and are not mapped.",
     "A standard's own process definitions go to cluster 30 (Standards, Tailoring & Process Models); performing the capability goes to the capability cluster."
   ],
   "signpost_packs": [
     "omg-signpost",
-    "se-standards-signpost"
+    "se-standards-signpost",
+    "automotive-signpost",
+    "functional-safety-signpost"
   ],
   "support_filenames": [
     "glossary.md",
@@ -3916,6 +3918,42 @@
       "pack": "nist-ai-rmf",
       "chapter": "ch03-trustworthiness-characteristics.md",
       "cluster": "Assurance & System Assurance",
+      "is_support": false
+    },
+    {
+      "pack": "nhtsa-vehicle",
+      "chapter": "ch01-nhtsa-vehicle-introduction.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "nhtsa-vehicle",
+      "chapter": "ch02-nhtsa-cyber-practices.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nhtsa-vehicle",
+      "chapter": "ch03-nhtsa-ads-vision.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "nhtsa-vehicle",
+      "chapter": "ch04-nhtsa-fmvss-occupant.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "nhtsa-vehicle",
+      "chapter": "ch05-nhtsa-fmvss-brakes-lighting.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "nhtsa-vehicle",
+      "chapter": "ch06-nhtsa-fmvss-fuel-ev.md",
+      "cluster": "Safety, Reliability & Survivability",
       "is_support": false
     }
   ]
