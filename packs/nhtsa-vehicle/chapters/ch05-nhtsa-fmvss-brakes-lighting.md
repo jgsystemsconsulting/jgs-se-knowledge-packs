@@ -68,7 +68,7 @@ Incorporated ASTM and SAE test methods named in these sections are cited by name
 
 **Official short title:** Light vehicle brake systems.
 
-**Applies to:** Passenger cars (from the section's start-of-applicability dates) and multipurpose passenger vehicles, trucks, and buses at or below the light GVWR threshold stated in the section. Older vehicles in those classes may have been able to certify to 105 instead during transition windows the section describes.
+**Applies to:** Passenger cars manufactured on or after the section's start-of-applicability date, and multipurpose passenger vehicles, trucks, and buses at or below the light GVWR threshold manufactured on or after their start-of-applicability date. In addition, at the manufacturer's option, passenger cars and light multipurpose/truck/bus vehicles built before those dates may meet this standard (135) instead of Standard No. 105.
 
 **Performance area:** Service and parking brake performance for light vehicles under normal and emergency driving conditions, including adhesion utilization, fade, partial-system failure, and related brake-system checks defined in the section. This is the primary light-vehicle brake performance standard complementary to 105 for heavier hydraulic/electric classes and to 126/127 for stability and AEB.
 

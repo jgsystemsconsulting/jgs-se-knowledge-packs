@@ -18,10 +18,10 @@ This chapter is the **US vision document**. Taxonomy anchors such as SAE J3016 a
 
 ADS 2.0 has two major parts:
 
-1. **Section 1 , Voluntary Guidance** for ADS designers and related entities, built around twelve priority safety design elements and a Voluntary Safety Self-Assessment path.
-2. **Section 2 , Technical Assistance to States**, covering federal/state role split, practices for legislatures, and practices for state highway safety officials.
+1. **Section 1: Voluntary Guidance** for ADS designers and related entities, built around twelve priority safety design elements and a Voluntary Safety Self-Assessment path.
+2. **Section 2: Technical Assistance to States**, covering federal/state role split, practices for legislatures, and practices for state highway safety officials.
 
- entities in scope include traditional vehicle manufacturers and other parties that manufacture, design, supply, test, sell, operate, or deploy ADSs. The voluntary guidance focuses on design aspects of motor vehicles and systems that incorporate higher automation (the document anchors its focus using SAE automation taxonomy without this pack reprinting those level tables). Commercial motor vehicle operations remain under their own federal regime; ADS 2.0 points readers there rather than absorbing FMCSA rules.
+Entities in scope include traditional vehicle manufacturers and other parties that manufacture, design, supply, test, sell, operate, or deploy ADSs. The voluntary guidance focuses on design aspects of motor vehicles and systems that incorporate higher automation (the document anchors its focus using SAE automation taxonomy without this pack reprinting those level tables). Commercial motor vehicle operations remain under their own federal regime; ADS 2.0 points readers there rather than absorbing FMCSA rules.
 
 ## Federal Enforcement Context (as the document frames it)
 
@@ -99,21 +99,21 @@ When legislatures act, the document urges them to avoid unnecessary barriers to 
 
 ### Practices for state highway safety officials
 
-A practical framework offered to States covers:
+A practical framework offered to States follows the document's own seven headings:
 
-1. **Administrative structure** , lead agencies, coordination with aging and disability offices, law enforcement, and other stakeholders.
-2. **Authority and regulation** , whether new rules are needed at all; many States can work inside existing authorities.
-3. **Permission to test on public roads** , application to a designated lead agency, multi-state coordination, and the ability to request modifications before approval.
-4. **Test drivers and operations** , training expectations and operational constraints for entities granted test access.
-5. **Registration and titling** , how ADS test and deployment vehicles are identified in State records.
-6. **Public safety officials** , how police, fire, and EMS learn to interact with ADS behaviors and safe states.
-7. **Liability and insurance** , State choices about financial responsibility as automation changes who was "driving."
+1. **Administrative.** Lead agency and related oversight choices; coordination with stakeholders the State finds useful. NHTSA does not require States to invent new entities.
+2. **Application for entities to test ADSs on public roadways.** What a State may ask an entity to file (identity, vehicle identifiers, test operators, safety/compliance plan, financial-responsibility evidence, test-operator training summary) for recordkeeping and assurance.
+3. **Permission for entities to test ADSs on public roadways.** How a State that grants test permission may involve law enforcement, request application changes, and notify approval; preference that permission stay at State level with local coordination.
+4. **Specific considerations for ADS test drivers and operations.** Test-driver training summaries, traffic-rule and crash-reporting expectations, and the licensed-driver role for lower automation versus fully automated operation under stated conditions.
+5. **Considerations for registration and titling.** Identifying ADS capability on title/registration records and handling significant ADS upgrades.
+6. **Working with public safety officials.** How police, fire, and EMS learn to interact with ADS behaviors and safe states.
+7. **Liability and insurance.** State choices about financial responsibility as automation changes who was "driving."
 
 The tone is assistance, not a single mandatory State program template.
 
 ## Key Takeaways
 
-1. ADS 2.0 is **voluntary guidance** and a **vision** document; per the SOURCE-VETTING post-v1.21.0 row it remains NHTSA's current ADS guidance as of the 2026-09-25 check (FR evidence 2026-07-31), with a successor in draft , **not** final federal ADS policy.
+1. ADS 2.0 is **voluntary guidance** and a **vision** document; per the SOURCE-VETTING post-v1.21.0 row it remains NHTSA's current ADS guidance as of the 2026-09-25 check (FR evidence 2026-07-31), with a successor in draft; **not** final federal ADS policy.
 2. Twelve priority safety design elements (system safety, ODD, OEDR, fallback, validation, HMI, cybersecurity, crashworthiness, post-crash behavior, data recording, education, and law compliance) structure industry self-documentation.
 3. The **Voluntary Safety Self-Assessment** is encouraged for trust and transparency; the guidance does not cast it as a legal admission ticket.
 4. States are asked to keep **federal/state roles** clear and **not** to codify this voluntary guidance into State law as a development or deployment mandate.

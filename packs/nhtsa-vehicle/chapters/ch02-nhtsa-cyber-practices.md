@@ -22,22 +22,23 @@ The heart of the guidance is a set of enumerated general practices. Themes below
 
 ### Leadership priority on product cybersecurity
 
-Leadership is expected to treat product cybersecurity as an explicit priority, resource it, and set culture so cybersecurity enters design early rather than as a late gate. Without that signal, development teams lack cover to trade schedule or features for safety-relevant cyber work.
+Leadership is expected to set corporate cybersecurity priorities and foster a culture that can handle rising vehicle and equipment cyber risk. Emphasis from leadership down through staff signals that cybersecurity risk is managed seriously and helps the organization prioritize cybersecurity work throughout product development.
 
-### Vehicle development process with explicit cybersecurity considerations
+### General approach and vehicle development process
 
-The document expects cybersecurity to be built into the vehicle development process, not bolted on after architecture lock. Practices under this heading (drawn from kept pages) cover:
+The document opens its general practices with a layered posture: assume some vehicle systems can be compromised, reduce the chance an attack succeeds, and limit harm when access is gained. It points industry at NIST's Cybersecurity Framework functions (Identify, Protect, Detect, Respond, Recover) as a way to build that layered approach, with risk-based focus on safety-critical vehicle control systems, elimination of risk sources where feasible, field detection and response, designed-in recovery, and industry lesson-sharing (including Auto-ISAC participation).
 
-- **Process and risk assessment.** Define how cybersecurity work runs inside product development; assess risk so safety-critical exposures are visible before release decisions.
+Under the vehicle-development heading, kept-page practices cover:
+
 - **Sensor vulnerability risks.** Treat manipulation of sensor inputs (not only classical software exploits) as in-scope for modern vehicles, including automated and driver-assistance features that trust perception data.
 - **Removal or mitigation of safety-critical risks.** Prefer eliminating or reducing safety-critical cyber risk in design; residual risk should be conscious, not accidental.
-- **Protections / layered defenses.** Use layered protections so a single failed control does not open the safety-relevant path.
+- **Protections / layered defenses.** Use layered protections matched to assessed risk so a single failed control does not open the safety-relevant path; communicate clear cybersecurity expectations to suppliers that support those protections.
 - **Inventory and management of hardware and software assets.** Know what hardware and software is on each vehicle build, including third-party and open-source components, with enough detail to map newly published vulnerabilities to fielded fleets and to retain a history of version updates over the vehicle life.
-- **Cybersecurity testing and vulnerability identification.** Test for vulnerabilities with methods appropriate to the architecture; identify weaknesses before and after integration.
-- **Monitoring, containment, and remediation.** Plan how issues found in the field are detected, contained, and fixed.
-- **Data, documentation, and information sharing.** Capture attack and incident-relevant data; document analyses; share appropriately through industry channels such as Auto-ISAC and comparable mechanisms.
+- **Cybersecurity testing and vulnerability identification.** Evaluate off-the-shelf and open-source components against known vulnerabilities; run product cybersecurity testing (including penetration testing) with qualified testers separate from the developers; document each vulnerability's disposition.
+- **Monitoring, containment, and remediation.** Establish rapid incident detection and remediation that can protect occupants and nearby road users and move the vehicle toward a minimal risk condition when a cyberattack is detected.
+- **Data, documentation, and information sharing.** Capture attack-relevant data; document design choices and analyses under version control; share appropriately through Auto-ISAC and comparable mechanisms.
 - **Continuous risk monitoring and assessment.** Revisit risk as systems, connectivity, and the threat landscape change after start of production.
-- **Industry best practices.** Stay aligned with evolving industry practice rather than freezing a one-time checklist.
+- **Industry best practices.** Follow secure software development practice, stay current with named industry and government guidance sources, and take part in automotive standards and Auto-ISAC best-practice work as new risks appear.
 
 ### Information sharing
 
@@ -45,23 +46,23 @@ NHTSA recounts the policy push that led industry to stand up Auto-ISAC and conti
 
 ### Security vulnerability reporting program
 
-Organizations that design or manufacture vehicle systems are expected to give external researchers a clear, confidential path to report vulnerabilities, with policies that make responsible disclosure workable.
+Industry members should make it easy for the security research community and the public to report information to them. The guidance calls for each organization to create its own vulnerability reporting policies and mechanisms so those reports can help find cybersecurity weaknesses.
 
 ### Organizational incident response process
 
-Not every attack can be predicted. The guidance expects a prepared incident-response capability: roles, communication paths, containment and recovery actions, and reporting of incidents, exploits, and vulnerabilities to Auto-ISAC promptly, with parallel attention to appropriate government reporting channels where applicable. Exercises and readiness checks belong with the process, not only paper plans.
+Detailed incident-response planning text on the screened-out pages is not used here. From kept pages, the same safety outcome is already in the general and development practices: timely detection and rapid response to field cyber incidents, designed-in recovery, rapid detection and remediation capabilities, and transition toward a minimal risk condition when a cyberattack is found, plus collection and industry sharing of attack-relevant information.
 
 ### Self-auditing
 
-The document pushes documented process management and periodic review. Industry is encouraged to run organizational and product cybersecurity audits on a recurring cadence (the text discusses annual consideration). Public-facing summaries of audit posture are described as useful for stakeholders and consumers when organizations choose to release them. The guidance encourages thorough work-product discipline; it does not itself define a third-party certification scheme.
+Industry is encouraged to consider organizational and product cybersecurity audits on an annual cadence. Public versions of audit reports are described as useful for stakeholders and consumers when organizations choose to release them. (Process-management documentation detail that sat only on screened-out pages is omitted.)
 
-## Who Must Act (document sections 5–7)
+## Aftermarket devices and serviceability (document sections 6–7)
 
-**Vehicle manufacturers** carry end-to-end responsibility for the cybersecurity of the vehicle as delivered and supported, including supplier-provided content they integrate.
+**Vehicle manufacturers** should account for consumer-owned and aftermarket devices that connect through the interfaces the manufacturer provides, apply reasonable protections against the risks those devices introduce, and authenticate third-party connections with appropriately limited access.
 
-**Aftermarket device manufacturers** sit on interfaces that touch many vehicle types with uneven vehicle-side defenses. The guidance tells them to put strong cybersecurity protections on their own products rather than assuming the vehicle will absorb the risk.
+**Aftermarket device manufacturers** connect into cyber-physical systems that can affect safety of life, across vehicle types with uneven vehicle-side defenses. The guidance tells them to put strong cybersecurity protections on their own products rather than assuming the vehicle will absorb the risk.
 
-**Serviceability.** Vehicles remain in service for years. Service channels, dealer tools, and maintenance paths are part of the cybersecurity surface. Convenience of repair must be weighed against opening privileged operations to attackers who reverse engineer service paths.
+**Serviceability.** Vehicles remain on the road for years and need maintenance and repair. Industry should plan for serviceability by owners and third parties, and should provide strong cybersecurity protections that do not unduly block alternative repair channels the owner authorizes. Cybersecurity is not a license to lock out service; serviceability is not a license to weaken cyber controls.
 
 ## Technical Best Practices (document section 8)
 
@@ -73,15 +74,15 @@ Production vehicles should not leave developer or debugging interfaces exposed i
 
 ### Cryptographic techniques and credentials
 
-Cryptography ages. Algorithms, key lengths, and credential handling should stay current for the intended lifetime and use case. Prefer designs that avoid global secrets shared across large vehicle populations when public-key approaches fit the problem. Protect keys and credentials in storage and in use.
+Cryptography ages with computing capability. Techniques should stay current and non-obsolescent for the intended application; implementation quality matters as much as algorithm choice. Credentials that grant elevated access to vehicle platforms (passwords, certificates, keys) should be protected from unauthorized disclosure or modification. A credential taken from one vehicle should not unlock other vehicles. For diagnostic access in particular, global symmetric keys and ad-hoc cryptographic techniques should be minimized.
 
 ### Vehicle diagnostic functionality
 
-Diagnostic services are powerful by design. Limit what an unauthenticated or weakly authenticated party can do through diagnostic interfaces, especially operations that reflash software or move actuators.
+Diagnostic features support repair but can be abused against vehicle systems. Limit diagnostics to the vehicle operating mode that serves the feature's purpose, and design them so misuse outside that purpose has minimal dangerous effect (for example, constraining which brakes can be disabled, at what speed, and for how long).
 
-### Diagnostic tools, internal communications, and event logs
+### Event logs (fleet trend review)
 
-(Tooling and in-vehicle network topics continue across the screened pages; synthesis from adjacent kept content and later subsections.) Treat diagnostic tools as sensitive assets whose credentials and capabilities can be reverse engineered. Internal vehicle messaging that carries control or safety-relevant state needs integrity and authenticity protections appropriate to the harm of spoofed messages. Event logs that support forensics and fleet trend detection should be retained and reviewed so repeated attack patterns surface.
+Where logs can be aggregated across vehicles, review them periodically for cyberattack trends. (Subsections on diagnostic tools and vehicle internal communications that sat only on a screened-out page are omitted.)
 
 ### Wireless paths into vehicles
 
@@ -108,8 +109,8 @@ For UNECE cybersecurity type-approval context use `automotive-signpost`. For ISO
 
 1. The 2022 document is **voluntary guidance**, not a regulation and not a mandate; application is a manufacturer decision.
 2. Leadership priority, a development process that includes cybersecurity, inventory of hardware/software assets, testing, monitoring, sharing, vulnerability intake, incident response, and self-audit form the **organizational** spine.
-3. Technical practices stress closing debug paths, current cryptography, constrained diagnostics, protected internal messaging, segmented wireless architectures, and **authenticated, anti-rollback** software updates including OTA.
-4. Auto-ISAC-style **information sharing** and researcher-facing **vulnerability reporting** are first-class expectations, not optional extras.
+3. Technical practices stress closing debug paths, current cryptography and per-vehicle credentials, constrained diagnostics, fleet log trend review, segmented wireless architectures, and **authenticated, anti-rollback** software updates including OTA.
+4. Auto-ISAC-style **information sharing** and **vulnerability reporting policies/mechanisms** are first-class expectations, not optional extras.
 5. Third-party standards named in the source are pointers only; this pack does not reproduce them. Continue at `automotive-signpost` and `functional-safety-signpost`.
 
 ## Connects To

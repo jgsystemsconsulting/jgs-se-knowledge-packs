@@ -10,11 +10,11 @@ The three sources play different roles. The cybersecurity document is non-bindin
 
 ## What the Pack Contains
 
-**Document 1 , Cybersecurity Best Practices for the Safety of Modern Vehicles (Updated 2022, final).** NHTSA's updated voluntary guidance on organizational and technical practices that reduce safety risk from vehicle cybersecurity. Chapter 2 synthesizes the practice areas the 2022 document itself uses. Four PDF pages that carried verbatim third-party standard requirement text in footnotes were screened out of the source base; the pack does not draw prose from those pages.
+**Document 1: Cybersecurity Best Practices for the Safety of Modern Vehicles (Updated 2022, final).** NHTSA's updated voluntary guidance on organizational and technical practices that reduce safety risk from vehicle cybersecurity. Chapter 2 synthesizes the practice areas the 2022 document itself uses. Four PDF pages that carried verbatim third-party standard requirement text in footnotes were screened out of the source base; the pack does not draw prose from those pages.
 
-**Document 2 , Automated Driving Systems 2.0: A Vision for Safety (2017).** NHTSA's voluntary guidance organized around twelve priority safety design elements, a Voluntary Safety Self-Assessment path, and technical assistance material aimed at States. Chapter 3 synthesizes that structure. Currency is fixed by the pack's SOURCE-VETTING row rather than by restating later draft policy as if it had already replaced ADS 2.0.
+**Document 2: Automated Driving Systems 2.0: A Vision for Safety (2017).** NHTSA's voluntary guidance organized around twelve priority safety design elements, a Voluntary Safety Self-Assessment path, and technical assistance material aimed at States. Chapter 3 synthesizes that structure. Currency is fixed by the pack's SOURCE-VETTING row rather than by restating later draft policy as if it had already replaced ADS 2.0.
 
-**Document 3 , Sixteen FMVSS sections at eCFR 2025-01-01.** The pinned snapshot includes all sixteen section identifiers below. Chapters 4 through 6 cover them by theme (occupant protection; brakes, stability, and lighting; fuel and electric-vehicle integrity including minimum sound). Official short titles come from the section headings in that snapshot.
+**Document 3: Sixteen FMVSS sections at eCFR 2025-01-01.** The pinned snapshot includes all sixteen section identifiers below. Chapters 4 through 6 cover them by theme (occupant protection; brakes, stability, and lighting; fuel and electric-vehicle integrity including minimum sound). Official short titles come from the section headings in that snapshot.
 
 | Section id | Official short title (heading) |
 |---|---|
@@ -47,7 +47,7 @@ Pinned date for the FMVSS text: **2025-01-01** (eCFR versioner). Section 571.141
 
 ## How to Read the Later Chapters
 
-- Chapter 2 follows the 2022 cybersecurity document's own headings: purpose and scope, general best practices (leadership, development process, information sharing, vulnerability reporting, incident response, self-auditing), audience and serviceability notes, and technical best practices.
+- Chapter 2 follows the 2022 cybersecurity document's own headings: purpose and scope, general best practices (leadership, development process, information sharing, vulnerability reporting, incident response, self-auditing), aftermarket-device and serviceability notes (document sections 6–7), and technical best practices.
 - Chapter 3 follows ADS 2.0's voluntary-guidance spine (twelve safety elements and the self-assessment) and the States technical-assistance section, with the currency caveat required by SOURCE-VETTING.
 - Chapters 4–6 give, for each selected FMVSS section, the official short title, the vehicle classes the section applies to, and a synthesized note on the performance area it governs. No tables are copied from the XML; no clause text is reproduced.
 
