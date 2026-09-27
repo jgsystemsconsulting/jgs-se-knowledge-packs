@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "map_version": "1.20.0",
-  "generated_on": "2026-08-27",
+  "map_version": "1.22.0",
+  "generated_on": "2026-09-27",
   "clusters": [
     {
       "name": "Systems Thinking & Fundamentals",
@@ -1915,6 +1915,26 @@
           "pack": "nist-stat-handbook",
           "chapter": "ch08-nist-stat-handbook-assessing-product-reliability.md",
           "note": "Assessing product reliability"
+        },
+        {
+          "pack": "nhtsa-vehicle",
+          "chapter": "ch03-nhtsa-ads-vision.md",
+          "note": "Synthesized notes from NHTSA ADS 2.0 with the currency caveat"
+        },
+        {
+          "pack": "nhtsa-vehicle",
+          "chapter": "ch04-nhtsa-fmvss-occupant.md",
+          "note": "FMVSS occupant protection selections: 201, 208, 209, 210, 214, 226"
+        },
+        {
+          "pack": "nhtsa-vehicle",
+          "chapter": "ch05-nhtsa-fmvss-brakes-lighting.md",
+          "note": "FMVSS brake, stability, lighting, and driver-present selections"
+        },
+        {
+          "pack": "nhtsa-vehicle",
+          "chapter": "ch06-nhtsa-fmvss-fuel-ev.md",
+          "note": "FMVSS fuel system integrity and EV electrical selections"
         }
       ]
     },
@@ -2265,6 +2285,11 @@
           "pack": "nist-sse",
           "chapter": "patterns.md (support file)",
           "note": "Patterns/practice heuristics"
+        },
+        {
+          "pack": "nhtsa-vehicle",
+          "chapter": "ch02-nhtsa-cyber-practices.md",
+          "note": "Synthesized notes from the NHTSA 2022 vehicle cybersecurity guidance"
         }
       ]
     },
@@ -3295,6 +3320,11 @@
           "pack": "sebok",
           "chapter": "ch28-sebok-enabling-individuals.md",
           "note": "Enabling individuals (competency)"
+        },
+        {
+          "pack": "nhtsa-vehicle",
+          "chapter": "ch01-nhtsa-vehicle-introduction.md",
+          "note": "Scope statement for the NHTSA vehicle pack: three sources, pinned date, refusals"
         }
       ]
     },

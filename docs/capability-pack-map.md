@@ -43,8 +43,8 @@ Rules of construction:
 | 17. Technical Planning & Work Breakdown | 13 |
 | 18. Measurement & Technical Assessment | 36 |
 | 19. Quality Assurance & Process Compliance | 3 |
-| 20. Safety, Reliability & Survivability | 88 |
-| 21. Cybersecurity & Security Engineering | 69 |
+| 20. Safety, Reliability & Survivability | 92 |
+| 21. Cybersecurity & Security Engineering | 70 |
 | 22. Human Systems Integration / Human Factors | 26 |
 | 23. Logistics, Supportability & Sustainment | 12 |
 | 24. Operations, Maintenance & Disposal | 13 |
@@ -53,10 +53,10 @@ Rules of construction:
 | 27. Supplier, Procurement & Acquisition | 7 |
 | 28. Stakeholder Engagement & Needs | 3 |
 | 29. Governance, Reviews, Gates & Control Points | 21 |
-| 30. Standards, Tailoring & Process Models | 36 |
+| 30. Standards, Tailoring & Process Models | 37 |
 | 31. Specialty Engineering | 7 |
 | 32. Assurance & System Assurance | 8 |
-| **Total** | **644** |
+| **Total** | **650** |
 
 ## 1. Systems Thinking & Fundamentals
 
@@ -520,6 +520,10 @@ Rules of construction:
 | nasa-system-safety | glossary.md (support file) | Glossary for the pack |
 | nasa-system-safety | patterns.md (support file) | Patterns/practice heuristics |
 | nist-stat-handbook | ch08-nist-stat-handbook-assessing-product-reliability.md | Assessing product reliability |
+| nhtsa-vehicle | ch03-nhtsa-ads-vision.md | Synthesized notes from NHTSA ADS 2.0 with the currency caveat |
+| nhtsa-vehicle | ch04-nhtsa-fmvss-occupant.md | FMVSS occupant protection selections: 201, 208, 209, 210, 214, 226 |
+| nhtsa-vehicle | ch05-nhtsa-fmvss-brakes-lighting.md | FMVSS brake, stability, lighting, and driver-present selections |
+| nhtsa-vehicle | ch06-nhtsa-fmvss-fuel-ev.md | FMVSS fuel system integrity and EV electrical selections |
 
 ## 21. Cybersecurity & Security Engineering
 
@@ -594,6 +598,7 @@ Rules of construction:
 | nist-sse | cheatsheet.md (support file) | Cheatsheet / quick reference |
 | nist-sse | glossary.md (support file) | Glossary for the pack |
 | nist-sse | patterns.md (support file) | Patterns/practice heuristics |
+| nhtsa-vehicle | ch02-nhtsa-cyber-practices.md | Synthesized notes from the NHTSA 2022 vehicle cybersecurity guidance |
 
 ## 22. Human Systems Integration / Human Factors
 
@@ -836,6 +841,7 @@ Rules of construction:
 | sebok | ch26-sebok-enabling-businesses-enterprises.md | Enabling businesses/enterprises for SE |
 | sebok | ch27-sebok-enabling-teams.md | Enabling teams |
 | sebok | ch28-sebok-enabling-individuals.md | Enabling individuals (competency) |
+| nhtsa-vehicle | ch01-nhtsa-vehicle-introduction.md | Scope statement for the NHTSA vehicle pack: three sources, pinned date, refusals |
 
 ## 31. Specialty Engineering
 

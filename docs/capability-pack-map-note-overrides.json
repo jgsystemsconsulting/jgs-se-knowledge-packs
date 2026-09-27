@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "map_version": "1.20.0",
+  "map_version": "1.22.0",
   "generated_on": "2026-08-27",
   "notes": [
     {
@@ -3222,6 +3222,36 @@
       "pack": "nist-ai-rmf",
       "chapter": "ch03-trustworthiness-characteristics.md",
       "note": "Trustworthiness characteristics of AI"
+    },
+    {
+      "pack": "nhtsa-vehicle",
+      "chapter": "ch01-nhtsa-vehicle-introduction.md",
+      "note": "Scope statement for the NHTSA vehicle pack: three sources, pinned date, refusals"
+    },
+    {
+      "pack": "nhtsa-vehicle",
+      "chapter": "ch02-nhtsa-cyber-practices.md",
+      "note": "Synthesized notes from the NHTSA 2022 vehicle cybersecurity guidance"
+    },
+    {
+      "pack": "nhtsa-vehicle",
+      "chapter": "ch03-nhtsa-ads-vision.md",
+      "note": "Synthesized notes from NHTSA ADS 2.0 with the currency caveat"
+    },
+    {
+      "pack": "nhtsa-vehicle",
+      "chapter": "ch04-nhtsa-fmvss-occupant.md",
+      "note": "FMVSS occupant protection selections: 201, 208, 209, 210, 214, 226"
+    },
+    {
+      "pack": "nhtsa-vehicle",
+      "chapter": "ch05-nhtsa-fmvss-brakes-lighting.md",
+      "note": "FMVSS brake, stability, lighting, and driver-present selections"
+    },
+    {
+      "pack": "nhtsa-vehicle",
+      "chapter": "ch06-nhtsa-fmvss-fuel-ev.md",
+      "note": "FMVSS fuel system integrity and EV electrical selections"
     }
   ]
 }

@@ -6,7 +6,7 @@ generate_capability_map.py — rebuild docs/capability-pack-map.json from
 classification-rules.json + capability-pack-map-note-overrides.json (MAP-21-02/03/04).
 
 Cluster assignment and envelope fields are generator output. Notes come only from
-the mandatory 644-row overrides file (H-01). Support membership comes from
+the mandatory 650-row overrides file (H-01). Support membership comes from
 is_support rows, not rules_of_construction (H-03). Does not import sibling
 checkers (H-07). Stdlib only.
 
@@ -192,7 +192,7 @@ def generate_map(rules: dict, overrides: dict, generated_on: str) -> dict:
 
     only_a = sorted(akeys - nkeys)
     only_n = sorted(nkeys - akeys)
-    if only_a or only_n or len(notes) != 644:
+    if only_a or only_n or len(notes) != 650:
         parts = []
         if only_a:
             p, c = only_a[0]
@@ -200,8 +200,8 @@ def generate_map(rules: dict, overrides: dict, generated_on: str) -> dict:
         if only_n:
             p, c = only_n[0]
             parts.append(f"in notes not in assignments: {p}/{c}")
-        if len(notes) != 644:
-            parts.append(f"notes length must be 644, got {len(notes)}")
+        if len(notes) != 650:
+            parts.append(f"notes length must be 650, got {len(notes)}")
         raise ValueError(
             "notes key set must equal assignments key set "
             f"(assignments_only={len(only_a)}, notes_only={len(only_n)}); "
