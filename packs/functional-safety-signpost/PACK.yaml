@@ -1,0 +1,16 @@
+slug: functional-safety-signpost
+kind: signpost
+title: "Functional Safety Standards Signpost (citation pointers only)"
+publisher: "JG Systems Consulting Ltd."
+license: "MIT"
+license_tier: 2
+commercial_use: true
+notes: >
+  Signpost, NOT a knowledge pack. Contains zero source content: only
+  designations, editions, owners, redistributability status, and official
+  catalogue URLs. IEC 61508, ISO 26262, ISO/SAE 21434, UL 4600, SAE J3016,
+  and ASPICE are Excluded under docs/SOURCE-VETTING.md. Open paths point at
+  mil-std-882 and nhtsa-vehicle, which are US Government practice and not
+  equivalents of the excluded rows. Overlap with automotive-signpost is
+  intentional. Content is original (MIT, JG Systems Consulting Ltd.).
+  Trademarks named for identification only.
