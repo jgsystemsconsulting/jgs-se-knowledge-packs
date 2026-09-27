@@ -1,0 +1,16 @@
+slug: automotive-signpost
+kind: signpost
+title: "Automotive Standards Signpost (citation pointers only)"
+publisher: "JG Systems Consulting Ltd."
+license: "MIT"
+license_tier: 2
+commercial_use: true
+notes: >
+  Signpost, NOT a knowledge pack. Contains zero source content: only
+  designations, editions, owners, redistributability status, and official
+  catalogue URLs. ISO 26262, ASPICE, SAE J3016, and UNECE R155/R156 are
+  Excluded under docs/SOURCE-VETTING.md (paywalled or no redistribution
+  grant). The one open path is the nhtsa-vehicle pack, which is US
+  Government guidance and not an equivalent of any excluded row. Content is
+  original (MIT, JG Systems Consulting Ltd.). Trademarks named for
+  identification only.
