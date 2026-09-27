@@ -1,0 +1,31 @@
+slug: nhtsa-vehicle
+title: "NHTSA Vehicle Safety: Cybersecurity Best Practices, ADS 2.0, and FMVSS Selections"
+publisher: "NHTSA (US Department of Transportation)"
+source_version: "NHTSA Cybersecurity Best Practices for the Safety of Modern Vehicles (Updated 2022, final, 24 pp); NHTSA Automated Driving Systems 2.0: A Vision for Safety (2017, 36 pp); 49 CFR Part 571 sections 102, 103, 105, 108, 126, 127, 135, 141, 201, 208, 209, 210, 214, 226, 301, 305 at eCFR versioner date 2025-01-01"
+license: "Public Domain (US Government work, 17 U.S.C. § 105)"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "jgs-reference-skill extraction + synthesized chapter notes from three US Government sources"
+  source_pages: 56
+  chapters: 6
+  built_on: "2026-09-27"
+notes: >
+  US Government work, not subject to copyright in the United States under
+  17 U.S.C. § 105. Three sources: NHTSA Cybersecurity Best Practices for the
+  Safety of Modern Vehicles (Updated 2022, final), NHTSA Automated Driving
+  Systems 2.0: A Vision for Safety (2017), and a 16-section selection of
+  49 CFR Part 571 (FMVSS) pinned at eCFR versioner date 2025-01-01. Free to
+  reproduce, transform, and redistribute, including commercially; no
+  attribution, non-commercial, or share-alike obligation attaches.
+  Attribution to NHTSA is courtesy, not obligation, and NHTSA does not
+  endorse this pack. THIRD-PARTY CAVEAT: the sources cite ISO, SAE, and
+  UNECE standards by name; this pack names them and reproduces none of their
+  text. The third-party screen dropped pages 8, 13, 14, and 18 of the
+  Cyber 2022 PDF (verbatim ISO/SAE 21434 footnote text), so source_pages
+  records the 56 kept pages of the two PDFs (24 + 36 minus 4; the FMVSS
+  selection arrives as XML, not pages). No source-material link published
+  (see docs/LICENSING.md).
+change_indication: "reconstructed as synthesized reference notes"

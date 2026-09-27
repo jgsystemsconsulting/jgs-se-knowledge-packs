@@ -1,0 +1,48 @@
+nhtsa-vehicle pack — content licence
+=====================================
+
+This pack is derived from three US Government sources:
+    NHTSA Cybersecurity Best Practices for the Safety of Modern Vehicles,
+        Updated 2022 (final), 24 pages
+    NHTSA Automated Driving Systems 2.0: A Vision for Safety, 2017, 36 pages
+    49 CFR Part 571 (Federal Motor Vehicle Safety Standards), sections 102,
+        103, 105, 108, 126, 127, 135, 141, 201, 208, 209, 210, 214, 226, 301,
+        and 305, as published by the eCFR versioner at date 2025-01-01
+    NHTSA (US Department of Transportation)
+
+Source licence: Public Domain (US Government work, 17 U.S.C. § 105)  (tier 1 — see
+../../docs/SOURCE-VETTING.md)
+No source-material download link is published (see ../../docs/LICENSING.md).
+
+SOURCE TERMS (as carried by the sources)
+----------------------------------------
+All three sources are works of the U.S. Federal Government. Under 17 U.S.C.
+§ 105 they are not subject to copyright protection in the United States. The
+PDFs carry no separate publisher licence notice beyond that government-work
+status. Use of the publications does not imply NHTSA or USDOT endorsement of
+any derivative product.
+
+OBLIGATIONS CARRIED FORWARD
+---------------------------
+Because the sources are U.S. Government works not subject to domestic
+copyright, NO attribution, non-commercial, or share-alike obligation attaches
+to them. The content of this pack may therefore be reproduced, transformed,
+and redistributed freely, including commercially. As a courtesy (not an
+obligation):
+  - Attribution to NHTSA is provided in PACK.yaml and throughout the pack.
+  - NHTSA does not endorse this pack; nothing here should be read as a NHTSA
+    endorsement.
+  - "NHTSA" and the publication titles are used nominatively to identify the
+    sources.
+
+THIRD-PARTY CAVEAT
+------------------
+This pack omits pages 8, 13, 14, and 18 of NHTSA's Cybersecurity Best Practices
+for the Safety of Modern Vehicles (2022), which quote ISO/SAE 21434 requirement
+text verbatim in footnotes; the omitted requirements are cited by number only.
+FMVSS section text incorporates SAE, ASTM, ISO, and MIL specifications by
+reference; this pack names them and reproduces none of them. Other standards
+cited by name in the extracts are not reproduced.
+
+NOTE: This licence governs the CONTENT of this pack and is independent of the
+repository's MIT licence (which covers tooling only).
