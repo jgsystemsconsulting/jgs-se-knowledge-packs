@@ -63,6 +63,6 @@ Pinned date for the FMVSS text: **2025-01-01** (eCFR versioner). Section 571.141
 
 - **ch02 (cyber practices):** organizational and technical practices from the 2022 cybersecurity guidance.
 - **ch03 (ADS vision):** twelve safety design elements, self-assessment, and State roles from ADS 2.0.
-- **ch04, ch06 (FMVSS selection):** occupant, chassis/lighting, and fuel/EV performance standards in the 16-section list.
+- **ch04–ch06 (FMVSS selection):** occupant, chassis/lighting, and fuel/EV performance standards in the 16-section list.
 - **`automotive-signpost` / `functional-safety-signpost`:** industry standards this pack deliberately does not reproduce.
 - **Open SE process models:** life-cycle and risk process packs that sit beside vehicle performance standards rather than inside them.

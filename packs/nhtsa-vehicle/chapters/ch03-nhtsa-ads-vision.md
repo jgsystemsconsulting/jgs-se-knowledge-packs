@@ -123,5 +123,5 @@ The tone is assistance, not a single mandatory State program template.
 
 - **ch01 (introduction):** pack refusals, including "not final ADS policy" and "not SAE J3016."
 - **ch02 (cyber practices):** detailed NHTSA vehicle cybersecurity guidance that ADS element 7 points toward at vision level.
-- **ch04, ch06 (FMVSS):** federal vehicle performance standards that still apply to vehicles regardless of automation narratives in ADS 2.0.
+- **ch04–ch06 (FMVSS):** federal vehicle performance standards that still apply to vehicles regardless of automation narratives in ADS 2.0.
 - **`automotive-signpost`:** SAE J3016 and related ADS taxonomy/regulatory pointers this chapter deliberately does not reproduce.
