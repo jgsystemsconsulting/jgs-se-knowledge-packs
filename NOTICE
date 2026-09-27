@@ -13,10 +13,11 @@ This product contains two separately licensed layers:
    The reconstructed reference notes inside each content pack's packs/<slug>/ directory
    are derived from openly-licensed or public-domain sources and carry that source's
    licence. Attribution is provided textually below and in each packs/<slug>/LICENSE; no
-   source-material download links are published (see docs/LICENSING.md). Three shipped
-   members are exceptions with no attribution block below: packs/omg-signpost,
-   packs/se-standards-signpost, and packs/se hold no third-party content and are
-   original JG Systems Consulting Ltd. work under the repo's MIT licence.
+source-material download links are published (see docs/LICENSING.md). Five shipped
+members are exceptions with no attribution block below: packs/omg-signpost,
+packs/se-standards-signpost, packs/automotive-signpost, packs/functional-safety-signpost,
+and packs/se hold no third-party content and are
+original JG Systems Consulting Ltd. work under the repo's MIT licence.
 
 -----------------------------------------------------------------------------------
 Third-party source attributions (one block per shipped content pack)
@@ -723,6 +724,18 @@ Third-party source attributions (one block per shipped content pack)
   Terms  : public domain, no copyright, free to reproduce, transform, and redistribute
            (including commercially). Attribution is courtesy, not obligation; the source
            agency does not endorse this pack. See packs/is-gps-200n/LICENSE.
+
+[pack: nhtsa-vehicle]
+  Source : NHTSA Cybersecurity Best Practices for the Safety of Modern Vehicles
+           (Updated 2022, final); NHTSA Automated Driving Systems 2.0: A Vision
+           for Safety (2017); 49 CFR Part 571 selections at eCFR 2025-01-01
+  Author : NHTSA (US Department of Transportation)
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. Attribution to NHTSA is courtesy, not
+           obligation; NHTSA does not endorse this pack. The sources cite ISO,
+           SAE, and UNECE standards by name; this pack reproduces none of that
+           text. See packs/nhtsa-vehicle/LICENSE.
 
 -----------------------------------------------------------------------------------
 The build pipeline uses the jgs-reference-skill extraction engine (MIT License,

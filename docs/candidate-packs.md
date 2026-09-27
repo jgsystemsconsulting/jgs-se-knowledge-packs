@@ -80,7 +80,7 @@ Each is one working day or less: SKILL.md with tables mapping the paywalled stan
 
 - `functional-safety-signpost`: IEC 61508, ISO 26262, ISO-SAE 21434. Free paths: MIL-STD-882 (`mil-std-882`), NHTSA cybersecurity guidance (proposed `nhtsa-vehicle`), FDA software guidance (proposed `fda-med-device`).
 - `avionics-signpost`: DO-178C, DO-254, ARP4754A, ARP4761. Free paths: FAA Order 8110.49 (proposed `faa-8110-49`), existing `faa-*` packs, EASA AMC material (proposed `easa-rules`).
-- `automotive-signpost`: ISO 26262, ASPICE, SAE J3016. Free paths: UNECE R155/R156, NHTSA guidance (proposed `nhtsa-vehicle`).
+- `automotive-signpost`: ISO 26262, ASPICE, SAE J3016, UNECE R155/R156 (signpost-only; © UNECE, no redistribution grant, verified 2026-09-25). Open path: `nhtsa-vehicle` (US Government guidance, not a UNECE equivalent).
 - `rail-signpost`: EN 50126/50128/50129. Free paths: CSM regulations on EUR-Lex, RSSB standard summaries.
 - `space-signpost`: ECSS family. Free paths: the existing NASA packs cover most ECSS-equivalent ground; the signpost names the ECSS document for each need and links to the ECSS catalogue.
 - `maritime-signpost`: SOLAS, class rules. Free path: USCG material.

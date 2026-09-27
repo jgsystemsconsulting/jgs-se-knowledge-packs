@@ -98,8 +98,8 @@ Member kinds (`kind:` in SKILL.md frontmatter):
 
 | Kind | Members | Requires | Skips |
 |---|---|---|---|
-| content pack (default) | the 63 catalogue packs | Full layout above: `LICENSE` reproducing the source's terms and `chapters/` with at least one chapter | Nothing |
-| `signpost` | `packs/omg-signpost`, `packs/se-standards-signpost` | `SKILL.md` + `PACK.yaml`, all remaining checks | The `LICENSE` and `chapters/` checks (citation-only, zero reproduced content) |
+| content pack (default) | the 64 catalogue packs | Full layout above: `LICENSE` reproducing the source's terms and `chapters/` with at least one chapter | Nothing |
+| `signpost` | `packs/omg-signpost`, `packs/se-standards-signpost`, `packs/automotive-signpost`, `packs/functional-safety-signpost` | `SKILL.md` + `PACK.yaml`, all remaining checks | The `LICENSE` and `chapters/` checks (citation-only, zero reproduced content) |
 | `orchestrator` | `packs/se` | `SKILL.md` + `PACK.yaml`, all remaining checks | The `LICENSE` and `chapters/` checks (routes to packs, no source content). Its `SKILL.md` body carries the whole routing map and ships in every transform prompt, so it is reviewed against a 24,000-byte ceiling (a review criterion, not a gate). |
 
 Checks: required files present, frontmatter valid, every chapter link resolves,
