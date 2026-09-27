@@ -27,6 +27,7 @@
     "skills"
   ],
   "skills": [
+    "./packs/automotive-signpost/SKILL.md",
     "./packs/cisa-cpg/SKILL.md",
     "./packs/dafman-63-119/SKILL.md",
     "./packs/dau-se-guidebook/SKILL.md",
@@ -50,6 +51,7 @@
     "./packs/faa-std-025/SKILL.md",
     "./packs/faa-system-safety/SKILL.md",
     "./packs/federal-bca/SKILL.md",
+    "./packs/functional-safety-signpost/SKILL.md",
     "./packs/gao-agile/SKILL.md",
     "./packs/gao-cost/SKILL.md",
     "./packs/gao-schedule/SKILL.md",
@@ -78,6 +80,7 @@
     "./packs/nasa-std-8719-14/SKILL.md",
     "./packs/nasa-system-safety/SKILL.md",
     "./packs/nasa-systems-modeling/SKILL.md",
+    "./packs/nhtsa-vehicle/SKILL.md",
     "./packs/nist-800-171/SKILL.md",
     "./packs/nist-800-37/SKILL.md",
     "./packs/nist-800-61/SKILL.md",

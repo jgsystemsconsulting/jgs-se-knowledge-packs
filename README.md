@@ -7,8 +7,8 @@ SPDX-License-Identifier: MIT
 
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT%20(tooling)-blue" alt="License: MIT (tooling)">
-  <img src="https://img.shields.io/badge/version-1.21.0-green" alt="Version 1.21.0">
-  <img src="https://img.shields.io/badge/packs-63-blueviolet" alt="63 packs">
+  <img src="https://img.shields.io/badge/version-1.22.0-green" alt="Version 1.22.0">
+  <img src="https://img.shields.io/badge/packs-64-blueviolet" alt="64 packs">
   <img src="https://img.shields.io/badge/tested%20with-Claude%20Code-8A2BE2" alt="Tested with Claude Code">
   <img src="https://img.shields.io/badge/scope-systems%20engineering-orange" alt="Scope: systems engineering">
   <a href="https://skills.sh/jgsystemsconsulting/jgs-se-knowledge-packs"><img src="https://skills.sh/b/jgsystemsconsulting/jgs-se-knowledge-packs" alt="skills.sh installs"></a>
@@ -187,6 +187,7 @@ always-loaded `SKILL.md` index inlined into one file. Full detail and the per-ag
 | `mil-std-40051` | MIL-STD-40051-2C: Page-Based Technical Manuals (15 Dec 2015) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `nasa-std-8719-14` | NASA-STD-8719.14C: Process for Limiting Orbital Debris (Approved 2021-11-05) | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
 | `is-gps-200n` | IS-GPS-200N: NAVSTAR GPS Space Segment / Navigation User Segment Interfaces | Public domain (US gov) | 🟢 1 | ✅ live (6 chapters) |
+| `nhtsa-vehicle` | NHTSA Vehicle Safety: Cybersecurity Best Practices, ADS 2.0, and FMVSS Selections | Public domain (US gov) | 🟢 1 | ✅ live (6 chapters) |
 | `mit-ocw-se` | MIT OCW Fundamentals of Systems Engineering | CC BY-NC-SA | 🟡 2 | 🔜 planned |
 
 `doe-o-413-3` (formerly `doe-413-3b`; old slug kept as a catalog alias) tracks the current DOE O 413.3 series edition (O 413.3C, which cancels O 413.3B Chg 7).
@@ -196,7 +197,11 @@ Machine-readable index: [SKILLS.md](SKILLS.md) · [catalog.json](catalog.json).
 **Signposts** (citation-only, not packs, zero reproduced content): `omg-signpost` points to
 the OMG modelling specs; `se-standards-signpost` maps the whole SE standards landscape
 (ISO/IEC/IEEE, INCOSE, SAE/EIA, ECSS, NATO, CMMI, NIST SP 800-160…) with each standard's
-owner, whether it can be packaged, and where to get it. They exist because most SE standards
+owner, whether it can be packaged, and where to get it. `automotive-signpost` points to the
+automotive standards landscape (ISO 26262, ASPICE, SAE J3016, UNECE R155/R156) and
+`functional-safety-signpost` points to the functional safety landscape (IEC 61508, ISO 26262,
+ISO/SAE 21434, UL 4600, SAE J3016, ASPICE); both are citation-only, and the open path for
+both is `nhtsa-vehicle`. They exist because most SE standards
 are paywalled or all-rights-reserved (see [docs/SOURCE-VETTING.md](docs/SOURCE-VETTING.md)).
 
 **Orchestrator** (not a pack, zero source content): `se` is an explicit `/se <question>` entry
