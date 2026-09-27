@@ -102,10 +102,10 @@ Adding any pack from this list needs: the pack folder per PACK-SPEC.md, a tier a
 Repo: docs/PACK-SPEC.md, docs/SOURCE-VETTING.md, docs/LICENSING.md, SKILLS.md, catalog.json, tooling/. External (fetched 2026-09-24):
 
 - [FDA medical devices](https://www.fda.gov/medical-devices)
-- [MDCG endorsed guidance](https://health.ec.europa.eu/medical-devices-sector/new-regulations/guidance-mdcg-endorsed-documents-and-other-guidance_en)
+- MDCG endorsed guidance (EU Commission)
 - [MHRA publications](https://www.gov.uk/government/organisations/medicines-and-healthcare-products-regulatory-agency)
 - [JSP collection on gov.uk](https://www.gov.uk/government/collections/joint-service-publication-jsp)
-- [EASA Easy Access Rules](https://www.easa.europa.eu/en/document-library/easy-access-rules)
+- EASA Easy Access Rules (EU Aviation Safety Agency)
 - [ECSS standards](https://ecss.nl/standards/)
 - [NRC document collections](https://www.nrc.gov/reading-rm/doc-collections/)
 - [ONR publications](https://www.onr.org.uk/publications/)
@@ -114,6 +114,6 @@ Repo: docs/PACK-SPEC.md, docs/SOURCE-VETTING.md, docs/LICENSING.md, SKILLS.md, c
 - [NHTSA](https://www.nhtsa.gov/)
 - [3GPP specifications](https://www.3gpp.org/specifications)
 - [ETSI standards](https://www.etsi.org/standards)
-- [EUR-Lex](https://eur-lex.europa.eu/)
+- EUR-Lex (EU legal database)
 - [awesome-safety-critical](https://github.com/stanislaw/awesome-safety-critical)
 - [Agent Skills specification](https://github.com/agentskills/agentskills)
