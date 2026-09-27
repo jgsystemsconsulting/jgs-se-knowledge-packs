@@ -13,11 +13,11 @@ This product contains two separately licensed layers:
    The reconstructed reference notes inside each content pack's packs/<slug>/ directory
    are derived from openly-licensed or public-domain sources and carry that source's
    licence. Attribution is provided textually below and in each packs/<slug>/LICENSE; no
-source-material download links are published (see docs/LICENSING.md). Five shipped
-members are exceptions with no attribution block below: packs/omg-signpost,
-packs/se-standards-signpost, packs/automotive-signpost, packs/functional-safety-signpost,
-and packs/se hold no third-party content and are
-original JG Systems Consulting Ltd. work under the repo's MIT licence.
+   source-material download links are published (see docs/LICENSING.md). Five shipped
+   members are exceptions with no attribution block below: packs/omg-signpost,
+   packs/se-standards-signpost, packs/automotive-signpost, packs/functional-safety-signpost,
+   and packs/se hold no third-party content and are
+   original JG Systems Consulting Ltd. work under the repo's MIT licence.
 
 -----------------------------------------------------------------------------------
 Third-party source attributions (one block per shipped content pack)
