@@ -47,7 +47,7 @@ Verification method: direct fetches of publisher landing and download pages on 2
 | Nuclear / energy | NRC NUREGs and regulatory guides, ONR publications, HSE indg/pubns series | US public domain; OGL v3 | FULL |
 | Aviation (Europe) | EASA Easy Access Rules, certification specs, AMC/GM | Free download, reuse with acknowledgement | FULL (vet per doc) |
 | Automotive (US) | NHTSA FMVSS, cybersecurity and guidance documents | US public domain | FULL |
-| Automotive (UNECE) | UNECE R155 / R156 texts | Free on unece.org (fetch verification failed once; re-verify before build) | FULL (re-verify) |
+| Automotive (UNECE) | UNECE R155 / R156 texts | Free download, © UNECE, no redistribution grant | SIGNPOST (verified 2026-09-25) |
 | Civil infrastructure | FHWA guidance incl. ITS systems-engineering material, FEMA docs | US public domain | FULL |
 | Telecom | 3GPP specifications, ETSI standards, IETF RFCs | Free downloads (3GPP and ETSI confirmed) | FULL (different audience) |
 | Functional safety / automotive standards | ISO 26262, IEC 61508, ISO-SAE 21434 | Paywalled, hard stop | SIGNPOST |
@@ -68,7 +68,7 @@ Full packs follow docs/PACK-SPEC.md: SKILL.md, PACK.yaml, LICENSE, and chapters 
 - `med-device-eu` (tier 2/3, vet per doc). Sources: MDCG endorsed guidance (free, EU reuse with attribution), MHRA guidance (OGL v3). Chapter candidates: clinical evaluation, post-market surveillance, software as a medical device.
 - `uk-defence-*` (tier 2/3, vet per doc). Sources: JSP publications on gov.uk (OGL v3) for safety, assurance, and requirements practice; selected DEF-STANs from UK Defence Standardization, which downloads free but carries per-document licence terms. Note SOURCE-VETTING.md already lists Def Stan 00-051 as unvetted, which is the right caution: each document gets its own licence statement before packaging. Start with one JSP pack and expand the family.
 - `faa-8110-49` (tier 1). FAA Order 8110.49, software certification guidance for DO-178C usage. Public domain, sits naturally beside the existing faa family, and gives the avionics audience a real pack to land on from the signpost.
-- `nhtsa-vehicle` (tier 1). Sources: FMVSS selections, NHTSA Cybersecurity Best Practices for the Safe and Secure Design of Modern Vehicles, automated-vehicles guidance. Public domain. Gives automotive engineers open primary content despite the ISO paywall.
+- `nhtsa-vehicle` (tier 1). Sources: FMVSS selections, NHTSA Cybersecurity Best Practices for the Safety of Modern Vehicles (final 2022), automated-vehicles guidance. Public domain. Gives automotive engineers open primary content despite the ISO paywall.
 - `nrc-nuclear` (tier 1). Sources: NRC regulatory guides and selected NUREGs (digital systems, software assurance: NUREG-0800 chapters, RG 1.168 and siblings). Public domain, and a sibling to `nasa-system-safety` and the DOE packs already in the catalogue.
 - `easa-rules` (tier 2/3, vet per doc). Sources: EASA Easy Access Rules volumes and certification specs. Free downloads; reuse terms need per-document confirmation. Start with one volume relevant to software and systems (for example the rules covering 1309 safety objectives) rather than the whole library.
 - `fhwa-its-se` (tier 1). FHWA/USDOT systems-engineering guidance for intelligent transportation systems. Public domain, extends the catalogue into civil infrastructure with genuinely SE-shaped content rather than construction codes.
@@ -91,7 +91,7 @@ Oil and gas (thin open base beyond HSE guidance, weak tie to the agent audience)
 
 ## Vetting cautions
 
-Three risks need handling during build, not after. First, OGL v3 and EU reuse terms require forward attribution and, for OGL, source linking inside the pack; PACK.yaml license_tier 2 conditions cover this, but each pack's LICENSE must reproduce the actual licence text. Second, per-document licences vary inside DEF-STAN, EASA, and MDCG libraries, so the pack build for those sectors must record an in-source licence statement per document, per SOURCE-VETTING.md. Third, UNECE availability rests on one failed fetch plus prior knowledge; re-verify before committing to `automotive-signpost` content that depends on it.
+Three risks need handling during build, not after. First, OGL v3 and EU reuse terms require forward attribution and, for OGL, source linking inside the pack; PACK.yaml license_tier 2 conditions cover this, but each pack's LICENSE must reproduce the actual licence text. Second, per-document licences vary inside DEF-STAN, EASA, and MDCG libraries, so the pack build for those sectors must record an in-source licence statement per document, per SOURCE-VETTING.md. Third, UNECE R155/R156 were re-verified on 2026-09-25 and the outcome reverses the original scan verdict: the texts download free but carry © UNECE with no redistribution grant, so they are signpost-only (SOURCE-VETTING.md, post-v1.21.0 table) and `automotive-signpost` may only point at them, never reproduce them.
 
 ## Mechanics of adding a pack
 

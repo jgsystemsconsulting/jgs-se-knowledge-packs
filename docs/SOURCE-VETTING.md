@@ -212,6 +212,24 @@ recording the exact cover/inside-front copyright/reuse statement.
 - **Recorded outcome (2026-08-14):** deferred-excluded for this milestone; no pack build
   until the in-document terms are recorded by a registered DSTAN user.
 
+### Vetted candidates (post-v1.21.0 automotive scan): decisions dated 2026-09-25; page-count item closed 2026-09-27
+
+Source URLs are held in internal build notes only (Link Policy: never published in
+docs or packs). NHTSA rows rest on 17 U.S.C. § 105 (US Government works); the
+in-PDF copyright screen is confirmed on the extracted copy at build time.
+
+| Source | Tier | Licence evidence |
+|---|---|---|
+| **NHTSA Cybersecurity Best Practices for the Safety of Modern Vehicles (Updated 2022, final; 24 pp)** | Tier 1 | US Government work (17 U.S.C. § 105); NHTSA-authored guidance. FR notice doc 2022-19507 (7 pp), docket NHTSA-2020-0087. Title correction vs the candidate scan: the exact title is "...for the Safety of Modern Vehicles", not "...Safe and Secure Design...". Live nhtsa.gov returned 403 to the build host on 2026-09-25 and again 2026-09-27 (curl and WebFetch); the final PDF was verified from the Internet Archive capture of the official nhtsa.gov file (snapshot 2022-09-15): cover reads "September 2022 / Updated 2022", 24 pages. This closes the 2026-09-25 open item: the final and the January 2021 draft both run 24 pp, so page count alone cannot tell them apart; the cover date does. Confirm §105 and no third-party inserts on the extracted copy at build. (Verified 2026-09-25; page count closed 2026-09-27.) |
+| **NHTSA ADS 2.0 (Automated Driving Systems 2.0: A Vision for Safety)** | Tier 1 | US Government work (17 U.S.C. § 105). Currency check 2026-09-25: ADS 2.0 remains NHTSA's current ADS guidance (evidenced by the FR action of 2026-07-31); a successor policy exists in draft. Re-check currency at build so the pack does not overstate it. |
+| **FMVSS selections (49 CFR part 571 parts, eCFR text)** | Tier 1 | US Government work (17 U.S.C. § 105) / edicts of government. Statute-basis row: part selection and the absence of third-party inserts are confirmed at build. |
+| **UNECE R155 / R156** | Excluded (signpost-only) | Free download from unece.org, but © UNECE with no redistribution or derivative grant found; archived official PDFs were verified 2026-09-25 and are **not** US public domain. This supersedes the "FULL (re-verify)" verdict in candidate-packs.md. A signpost may carry designation, edition, owner, and official URL; zero regulation text enters a pack. (Verified 2026-09-25.) |
+| **ISO 26262 / ISO-SAE 21434 / IEC 61508 / UL 4600 / SAE J3016** | Excluded (signpost-only) | Paywalled SDO catalogues (ISO, SAE, IEC, UL). Signpost rows carry designation, title, edition, owner, and official catalogue URL only. (Verified 2026-09-25.) |
+| **ASPICE 4.0 (Automotive SPICE PAM 4.0)** | Excluded (signpost-only) | Free download from VDA QMC, © VDA QMC under the PUBLIC mark; no derivatives without consent. Signpost-only. (Verified 2026-09-25.) |
+
+Build constraint carried from this scan: zero paywalled or © -held text enters any
+automotive pack; signpost tables stay metadata-only.
+
 ---
 
 ## Carrying conditions forward
