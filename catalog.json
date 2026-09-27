@@ -61,7 +61,7 @@
     },
     {
       "slug": "nist-800-37",
-      "title": "NIST SP 800-37 Rev 2 \u2014 Risk Management Framework (RMF)",
+      "title": "NIST SP 800-37 Rev 2 — Risk Management Framework (RMF)",
       "publisher": "NIST (US Department of Commerce)",
       "source_version": "Revision 2 (December 2018)",
       "license": "Public Domain (US Government work)",
@@ -72,7 +72,7 @@
     },
     {
       "slug": "nist-sse",
-      "title": "NIST SP 800-160 \u2014 Systems Security Engineering (Vol 1 + Vol 2)",
+      "title": "NIST SP 800-160 — Systems Security Engineering (Vol 1 + Vol 2)",
       "publisher": "NIST (US Department of Commerce)",
       "source_version": "Vol 1 Rev 1 (2022) + Vol 2 Rev 1 (2021)",
       "license": "Public Domain (US Government work)",
@@ -160,7 +160,7 @@
     },
     {
       "slug": "nasa-npr-7123",
-      "title": "NASA NPR 7123.1D \u2014 Systems Engineering Processes and Requirements",
+      "title": "NASA NPR 7123.1D — Systems Engineering Processes and Requirements",
       "publisher": "NASA",
       "source_version": "Rev D w/Change 2 (2023)",
       "license": "Public Domain (US Government work)",
@@ -204,7 +204,7 @@
     },
     {
       "slug": "mil-std-882",
-      "title": "MIL-STD-882E \u2014 DoD Standard Practice: System Safety (w/Change 1)",
+      "title": "MIL-STD-882E — DoD Standard Practice: System Safety (w/Change 1)",
       "publisher": "US Department of Defense",
       "source_version": "Rev E w/Change 1 (2023)",
       "license": "Public Domain (US Government work)",
@@ -226,7 +226,7 @@
     },
     {
       "slug": "dodaf",
-      "title": "DoD Architecture Framework (DoDAF) 2.02 Change 1 \u2014 Volume II",
+      "title": "DoD Architecture Framework (DoDAF) 2.02 Change 1 — Volume II",
       "publisher": "US Department of Defense",
       "source_version": "2.02 Change 1 (2015)",
       "license": "Public Domain (US Government work)",
@@ -237,10 +237,10 @@
     },
     {
       "slug": "eu-ai-act",
-      "title": "EU Artificial Intelligence Act \u2014 Regulation (EU) 2024/1689",
+      "title": "EU Artificial Intelligence Act — Regulation (EU) 2024/1689",
       "publisher": "European Union (Official Journal)",
       "source_version": "Regulation (EU) 2024/1689",
-      "license": "EU OJ \u2014 reproduction authorised with source acknowledgement",
+      "license": "EU OJ — reproduction authorised with source acknowledgement",
       "license_tier": 2,
       "commercial_use": true,
       "chapters": 12,
@@ -270,7 +270,7 @@
     },
     {
       "slug": "dod-mosa",
-      "title": "DoD MOSA \u2014 Implementing a Modular Open Systems Approach in DoD Programs (OUSD R&E)",
+      "title": "DoD MOSA — Implementing a Modular Open Systems Approach in DoD Programs (OUSD R&E)",
       "publisher": "US Department of Defense (Office of the Under Secretary of Defense for Research and Engineering)",
       "source_version": "February 2025 (DOPSR 25-T-1210)",
       "license": "Public Domain (US Government work); Distribution A",
@@ -490,7 +490,7 @@
     },
     {
       "slug": "nasa-npr-7150",
-      "title": "NASA NPR 7150.2D \u2014 NASA Software Engineering Requirements",
+      "title": "NASA NPR 7150.2D — NASA Software Engineering Requirements",
       "publisher": "NASA",
       "source_version": "NPR 7150.2D (Effective March 08, 2022)",
       "license": "Public Domain (US Government work, 17 U.S.C. 105)",
@@ -695,6 +695,17 @@
       "publisher": "US Space Force / Space Systems Command (MilComm & PNT)",
       "source_version": "IS-GPS-200 Rev N (cover date 01-AUG-2022; public-release revision record)",
       "license": "Public Domain (US Government work)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 6,
+      "status": "live"
+    },
+    {
+      "slug": "nhtsa-vehicle",
+      "title": "NHTSA Vehicle Safety: Cybersecurity Best Practices, ADS 2.0, and FMVSS Selections",
+      "publisher": "NHTSA (US Department of Transportation)",
+      "source_version": "Cyber 2022 final; ADS 2.0 (2017); 49 CFR Part 571 selections at eCFR 2025-01-01",
+      "license": "Public Domain (US Government work, 17 U.S.C. § 105)",
       "license_tier": 1,
       "commercial_use": true,
       "chapters": 6,

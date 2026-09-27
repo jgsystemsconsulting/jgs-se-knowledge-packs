@@ -6,7 +6,7 @@ Generated from each pack's SKILL.md frontmatter. Regenerate with tooling/gen_ski
 
 # jgs-se-knowledge-packs — Pack Index
 
-63 packs (+2 signposts, +1 orchestrator) in this release. Each pack is an Agent Skill installed as `/<slug>`.
+64 packs (+4 signposts, +1 orchestrator) in this release. Each pack is an Agent Skill installed as `/<slug>`.
 
 | Pack | Source licence | Description |
 |------|----------------|-------------|
@@ -76,3 +76,6 @@ Generated from each pack's SKILL.md frontmatter. Regenerate with tooling/gen_ski
 | [`omg-signpost`](packs/omg-signpost/SKILL.md) | MIT (signpost) | **Signpost, not a pack** — points to the official OMG specs (UML, SysML, BPMN, UAF…) at omg.org with zero reproduced content. OMG specs can't be packaged (licence forbids it), so this cites where to get them. |
 | [`se-standards-signpost`](packs/se-standards-signpost/SKILL.md) | MIT (signpost) | **Signpost, not a pack** — the full SE standards landscape (ISO/IEC/IEEE 15288/24748/29148/42010, INCOSE SE Handbook & Vision 2035, SAE/EIA, ECSS, NATO AAP-48, CMMI, NIST SP 800-160…) with each standard's owner, redistributability status, and where to get it. Zero reproduced content; most are paywalled/all-rights-reserved and point to the owner, the open ones point to the real pack. |
 | [`se`](packs/se/SKILL.md) | MIT (orchestrator) | **Orchestrator, not a pack**: type `/se <question>` and it routes your systems-engineering question through a curated topic, agency, and deliverable map to the right pack(s), reads them, and answers with pack and chapter citations. Explicit invocation only; zero source content. |
+| [`nhtsa-vehicle`](packs/nhtsa-vehicle/SKILL.md) | Public Domain (US Government work, 17 U.S.C. § 105) | Synthesized reference notes from NHTSA Cybersecurity Best Practices for the Safety of Modern Vehicles (Updated 2022), Automated Driving Systems 2.0, and a 16-section selection of 49 CFR Part 571 pinned at eCFR 2025-01-01. Not ISO 26262, not ASPICE, not ISO/SAE 21434, not UNECE R155/R156, not SAE J3016, and not full Part 571. |
+| [`automotive-signpost`](packs/automotive-signpost/SKILL.md) | MIT (signpost) | **Signpost, not a pack** — automotive standards landscape (ISO 26262, ASPICE, SAE J3016, UNECE R155, UNECE R156) with designation, edition, owner, and catalogue URL only. Zero reproduced content. The one open path is `nhtsa-vehicle`. |
+| [`functional-safety-signpost`](packs/functional-safety-signpost/SKILL.md) | MIT (signpost) | **Signpost, not a pack** — functional safety standards landscape (IEC 61508, ISO 26262, ISO/SAE 21434, UL 4600, SAE J3016, ASPICE) with designation, edition, owner, and catalogue URL only. Zero reproduced content. Open paths point at `mil-std-882` and `nhtsa-vehicle`, which are not equivalents. |
