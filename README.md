@@ -60,7 +60,7 @@ and install the catalogue for you.
 ```text
 You are installing jgs-se-knowledge-packs, an open catalogue (MIT tooling) of
 systems-engineering knowledge-pack skills by JG Systems Consulting Ltd.
-Repository: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs (version 1.21.0).
+Repository: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs (version 1.22.0).
 Do this in order:
 1. Read README.md, docs/skill-usage.md, and CHANGELOG.md so you understand what you are
    installing. There are NO external prerequisites: packs are plain Markdown skills.
@@ -255,4 +255,4 @@ questions, see [labs.jgsystemsconsulting.com/licensing.html](https://labs.jgsyst
 
 ## Version
 
-See [CHANGELOG.md](CHANGELOG.md). Current: 1.21.0.
+See [CHANGELOG.md](CHANGELOG.md). Current: 1.22.0.

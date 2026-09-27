@@ -11,6 +11,16 @@ All notable changes to this project are documented here. Format follows
 
 ## [Unreleased]
 
+## [1.22.0]: 2026-09-27
+
+### Added
+
+- `nhtsa-vehicle` (6 ch): synthesized reference notes from NHTSA Cybersecurity Best Practices for the Safety of Modern Vehicles (Updated 2022, final), Automated Driving Systems 2.0, and a 16-section selection of 49 CFR Part 571 pinned at eCFR versioner date 2025-01-01. Tier 1, public domain under 17 U.S.C. § 105.
+- `automotive-signpost` (signpost, 0 ch): citation-only pointers for ISO 26262, ASPICE, SAE J3016, UNECE R155, and UNECE R156. The open path is `nhtsa-vehicle`. Tier 2, MIT, JG Systems Consulting Ltd.
+- `functional-safety-signpost` (signpost, 0 ch): citation-only pointers for IEC 61508, ISO 26262, ISO/SAE 21434, UL 4600, SAE J3016, and ASPICE. Tier 2, MIT, JG Systems Consulting Ltd.
+
+Catalogue counts move from 63 content packs and 2 signposts to 64 and 4 (69 skills including the `/se` orchestrator).
+
 ## [1.21.0]: 2026-09-23
 
 ### Added
