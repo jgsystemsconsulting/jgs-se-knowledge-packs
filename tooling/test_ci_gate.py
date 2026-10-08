@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # Copyright (c) 2026 JG Systems Consulting Ltd. — MIT License (see LICENSE).
 # SPDX-License-Identifier: MIT
-"""Assert-based probe for the eight inline CI gates in .github/workflows/validate.yml.
+"""Assert-based probe for the nine inline CI gates in .github/workflows/validate.yml.
 
 Run:  python tooling/test_ci_gate.py
 Exits 0 when regex literal parity, heredoc extraction, negative demos, and
@@ -14,7 +14,7 @@ the gates as local functions if extraction matched zero heredocs, but zero
 extraction already fails this probe loudly, so the fallback is effectively
 unreachable and no mirror lives in this file.
 
-Regex parity pins (P4 pin-plus-parity, extended to the eight pinned steps):
+Regex parity pins (P4 pin-plus-parity, extended to the nine pinned steps):
   - three version regexes, the SKILLS link regex, and the signpost regex must
     appear verbatim in both tooling/check_release.py and validate.yml
   - MAP_VERSION_RE / GENERATED_ON_RE must appear verbatim in validate.yml and
@@ -29,6 +29,9 @@ Regex parity pins (P4 pin-plus-parity, extended to the eight pinned steps):
   - routing-map markers, headings, slug/orchestrator regexes, tag, and
     Public Domain prefix (P17) must appear verbatim in both check_release.py
     and validate.yml (ROUTING_MAP_PAIR)
+  - the [orphan-chapter] / [chapter-depth] / [topic-index] tags and the
+    MIN_CHAPTER_LINES = 30 floor must appear verbatim in both
+    tooling/check_pack_quality.py and validate.yml (PACK_QUALITY_PAIR)
 """
 from __future__ import annotations
 
@@ -44,6 +47,7 @@ WORKFLOW = ROOT / ".github" / "workflows" / "validate.yml"
 RELEASE_TWIN = ROOT / "tooling" / "check_release.py"
 MAP_TWIN = ROOT / "tooling" / "check_capability_map.py"
 RULES_TWIN = ROOT / "tooling" / "check_classification_rules.py"
+QUALITY_TWIN = ROOT / "tooling" / "check_pack_quality.py"
 
 # Extraction markers; byte-for-byte the `- name:` values in validate.yml.
 PINNED_STEPS = [
@@ -55,6 +59,7 @@ PINNED_STEPS = [
     "Landing catalogue counts",
     "Catalog live-set parity",
     "Routing map coverage",
+    "Pack content quality",
 ]
 
 # Literals that must appear verbatim in check_release.py AND validate.yml.
@@ -131,6 +136,16 @@ ROUTING_MAP_PAIR = [
     ("orchestrator kind", r"^kind:\s*orchestrator\s*$"),
     ("routing tag", "[routing-map]"),
     ("public domain prefix", "Public Domain"),
+]
+
+# Literals that must appear verbatim in tooling/check_pack_quality.py AND
+# validate.yml ([pack-quality] content gate). Byte parity is the drift
+# control; the CI step is a pure-data subset of check_release check 16.
+PACK_QUALITY_PAIR = [
+    ("orphan-chapter tag", "[orphan-chapter]"),
+    ("chapter-depth tag", "[chapter-depth]"),
+    ("topic-index tag", "[topic-index]"),
+    ("chapter depth floor", "MIN_CHAPTER_LINES = 30"),
 ]
 
 # Literals pinned per local twin (map/classification envelope).
@@ -292,6 +307,7 @@ BRAND_SLICE = ":root{--ink:#0a0a0b;--paper:#f4f2ec}\n"
 def main() -> int:
     workflow_text = WORKFLOW.read_text(encoding="utf-8")
     release_text = RELEASE_TWIN.read_text(encoding="utf-8")
+    quality_twin_text = QUALITY_TWIN.read_text(encoding="utf-8")
 
     # 1. literal parity: the drift control comes first, it is the cheapest check
     for name, literal in RELEASE_PAIR:
@@ -361,6 +377,16 @@ def main() -> int:
             f"{name} missing from validate.yml"
         )
 
+    for name, literal in PACK_QUALITY_PAIR:
+        assert literal in quality_twin_text, (
+            "literal drifted between check_pack_quality.py and validate.yml; "
+            f"sync them: {name} missing from check_pack_quality.py"
+        )
+        assert literal in workflow_text, (
+            "literal drifted between check_pack_quality.py and validate.yml; "
+            f"sync them: {name} missing from validate.yml"
+        )
+
     # 2. extraction of the shipped heredocs by pinned step name
     bodies: dict[str, str] = {}
     for step in PINNED_STEPS:
@@ -371,7 +397,7 @@ def main() -> int:
             "text, so fix the step name or the heredoc markers"
         )
         bodies[step] = body
-    assert len(bodies) == len(PINNED_STEPS), "expected exactly eight pinned heredocs"
+    assert len(bodies) == len(PINNED_STEPS), "expected exactly nine pinned heredocs"
 
     with tempfile.TemporaryDirectory() as td:
         tmp = Path(td)
@@ -592,6 +618,41 @@ def main() -> int:
         assert "beta" in out_rm, (
             f"routing-map-topics-drop: expected dropped slug 'beta' in output\n{out_rm}"
         )
+
+        # pack-quality: an on-disk chapter the SKILL.md never mentions
+        demo({
+            "packs/alpha/SKILL.md": "---\nname: alpha\ndescription: x\n---\n# alpha\n",
+            "packs/alpha/chapters/ch01-intro.md": "intro\n",
+        }, "Pack content quality", "[orphan-chapter]", "quality-orphan")
+        # pack-quality: a 25-line chapter under the floor
+        demo({
+            "packs/alpha/SKILL.md": (
+                "---\nname: alpha\ndescription: x\n---\n"
+                "# alpha\n[ch01](chapters/ch01-thin.md)\n"
+            ),
+            "packs/alpha/chapters/ch01-thin.md": "line\n" * 25,
+        }, "Pack content quality", "[chapter-depth]", "quality-depth")
+        # pack-quality: a Topic Index token pointing at a missing chapter
+        demo({
+            "packs/alpha/SKILL.md": (
+                "---\nname: alpha\ndescription: x\n---\n"
+                "# alpha\n[ch01](chapters/ch01-intro.md)\n"
+                "## Topic Index\n- **Ghost** \u2192 ch09\n"
+            ),
+            "packs/alpha/chapters/ch01-intro.md": "intro\n",
+        }, "Pack content quality", "[topic-index]", "quality-topic")
+        # pack-quality positive: an en-dash range expands to every covered chapter
+        demo_ok({
+            "packs/alpha/SKILL.md": (
+                "---\nname: alpha\ndescription: x\n---\n"
+                "# alpha\n[ch02](chapters/ch02-a.md)\n"
+                "[ch03](chapters/ch03-b.md)\n[ch04](chapters/ch04-c.md)\n"
+                "## Topic Index\n- **Span** \u2192 ch02\u2013ch04\n"
+            ),
+            "packs/alpha/chapters/ch02-a.md": "x\n" * 30,
+            "packs/alpha/chapters/ch03-b.md": "x\n" * 30,
+            "packs/alpha/chapters/ch04-c.md": "x\n" * 30,
+        }, "Pack content quality", "quality-range-ok")
 
     # 3. positive runs against the real repo tree: what CI sees on a clean tree
     for step in PINNED_STEPS:

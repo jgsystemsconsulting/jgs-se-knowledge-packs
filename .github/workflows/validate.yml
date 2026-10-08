@@ -21,6 +21,7 @@
 #   Landing catalogue counts                    twins check_release 13 [catalogue-count]
 #   Catalog live-set parity                     twins check_release 14 [catalog-live-set]
 #   Routing map coverage                        twins check_release 15 [routing-map]
+#   Pack content quality                       pure-data subset of check_release 16 [pack-quality] (orphan chapters, depth floor, topic-index resolution)
 #
 # CI does not cover, and why: full validate_pack (non-trivial parser; a fork
 # invites permanent drift), RR-B-30 packs.html regeneration equality (needs the
@@ -975,6 +976,52 @@ jobs:
           if errs:
               sys.exit(1)
           print(f"{tag} routing map covers {len(content)} content packs")
+          PY
+
+      - name: Pack content quality
+        run: |
+          python3 - <<'PY'
+          # Pure-data subset of tooling/check_pack_quality.py (check_release
+          # check 16). Same three checks, same tags, same floor constant; the
+          # local twin owns per-pack reporting and the full gate chain. Known
+          # subset limit: this glob never sees a pack dir with no SKILL.md;
+          # the structural validator catches those upstream.
+          import re, sys, pathlib
+          MIN_CHAPTER_LINES = 30
+          fails = 0
+          for skill_path in sorted(pathlib.Path("packs").glob("*/SKILL.md")):
+              pack = skill_path.parent
+              body = skill_path.read_text(encoding="utf-8", errors="ignore")
+              if re.search(r"^kind:\s*(signpost|orchestrator)\s*$", body, re.M):
+                  continue
+              chapters = sorted((pack / "chapters").glob("ch[0-9][0-9]-*.md"))
+              for p in chapters:
+                  if p.name not in body:
+                      print(f"::error file={p}::[orphan-chapter] {p.name} on disk but not referenced in SKILL.md")
+                      fails += 1
+                  n = len(p.read_text(encoding="utf-8", errors="ignore").splitlines())
+                  if n < MIN_CHAPTER_LINES:
+                      print(f"::error file={p}::[chapter-depth] {p.name} has {n} lines, floor is {MIN_CHAPTER_LINES}")
+                      fails += 1
+              m = re.search(r"^##[ \t]*Topic Index[ \t]*$(.*?)(?=^##[ \t]|\Z)", body, re.M | re.S)
+              if not m:
+                  print(f"::error file={skill_path}::[topic-index] {pack.name} has no Topic Index section")
+                  fails += 1
+                  continue
+              refs = set()
+              rest = m.group(1)
+              for r in re.finditer(r"ch(\d{2})[ \t]*\u2013[ \t]*ch(\d{2})", rest):
+                  lo, hi = sorted((int(r.group(1)), int(r.group(2))))
+                  refs.update(f"ch{i:02d}" for i in range(lo, hi + 1))
+                  rest = rest.replace(r.group(0), " ")
+              refs.update("ch" + t for t in re.findall(r"ch(\d{2})", rest))
+              for ref in sorted(refs):
+                  if not any((pack / "chapters").glob(ref + "-*.md")):
+                      print(f"::error file={skill_path}::[topic-index] Topic Index token {ref} resolves to no chapter in {pack.name}")
+                      fails += 1
+          if not fails:
+              print("[pack-quality] orphan chapters, depth floor, topic index OK")
+          sys.exit(1 if fails else 0)
           PY
 
       - name: Version single-source
