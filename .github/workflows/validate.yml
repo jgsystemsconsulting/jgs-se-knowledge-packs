@@ -27,9 +27,12 @@
 # invites permanent drift), RR-B-30 packs.html regeneration equality (needs the
 # generator), full map threshold and note logic, full classification semantics
 # beyond set coverage, generate_capability_map --check replay (definitionally
-# generator execution), and website YAML feature titles claiming "N packs"
+# generator execution), website YAML feature titles claiming "N packs"
 # (local check 4a only: the count comes from inventory_pack_slugs, and CI does
-# not execute repository code).
+# not execute repository code), and tracked-sources/ emptiness (local check 17
+# only: tracked state is git index state no pure-data check can see, CI does
+# not execute repository code, and an inline git step would be an unpinned
+# duplicate).
 #
 # Honest residual on the overlap whitelist: tooling/overlap-whitelist.txt is
 # PR-editable, so a PR can relax that gate in both places at once. That is the
