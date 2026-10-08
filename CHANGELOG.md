@@ -11,6 +11,19 @@ All notable changes to this project are documented here. Format follows
 
 ## [Unreleased]
 
+### Fixed
+
+- `requirements-writing` (2 chapters, 1 index row): split the compound Unwanted-behaviour examples in ch03 and ch04 into single-action requirements, added a Complex pattern worked example on the pack's running pump example, and routed the Complex pattern from the Topic Index.
+- `dodaf` (1 index row): the JCIDS row now routes to ch04 and ch11 only; ch02 carries a data-group mapping table, not JCIDS substance.
+
+### Changed
+
+- `nasa-se-handbook`: five chapter files renamed to their full source-section names (no mid-word cuts) with all references updated and the capability map regenerated; six thin chapters (ch02, ch05, ch08, ch09, ch10, ch15) deepened to reference depth (65+ lines each) from the pack's own sources.
+
+### Added
+
+- tooling: `check_pack_quality` gate (orphan chapter files, 30-line chapter floor, Topic Index resolution with en-dash range expansion) as check_release check 16, a probe (`tooling/test_pack_quality.py`), and the ninth CI step "Pack content quality" pinned with parity literals in `test_ci_gate.py`. PACK-SPEC now states the real CI/local split.
+
 ## [1.22.0]: 2026-09-27
 
 ### Added
