@@ -9,9 +9,21 @@ NASA's Systems Engineering Engine is a structured meta-process that orchestrates
 
 **Process Families:**
 - **System Design Processes** (1–4): Capture and decompose requirements; define logical and design solutions
+  - Key INPUTS: Baselined stakeholder expectations (Needs, Goals, Objectives), the Concept of Operations, constraints, and technical requirements allocated from the level above.
+  - Key ACTIVITIES: Elicit and baseline expectations, derive functional and performance requirements, perform functional analysis and logical decomposition, define and evaluate design solutions traceable to expectations.
+  - Key OUTPUTS: Validated technical requirements, logical architectures and functional models, design specifications that allocate requirements to the level below.
 - **Product Realization Processes** (5–9): Implement, integrate, verify, validate, and transition products
+  - Key INPUTS: Design solution outputs (build-to documentation, technical data package) and realized products arriving from the tier below.
+  - Key ACTIVITIES: Implement products at the lowest tier, integrate bottom-up with functional tests at each level, verify "shall" statements by test, analysis, inspection, or demonstration, validate against stakeholder expectations, transition products upward or to the customer.
+  - Key OUTPUTS: Realized, verified, and validated products at each tier, verification and validation reports, enablement package items (manuals, training, support equipment).
 - **Technical Management Processes** (10–15): Plan, control, manage interfaces, risks, configuration, and data
+  - Key INPUTS: Baselined requirements and designs, program plans, interface inventories, risk and configuration data.
+  - Key ACTIVITIES: Develop the SEMP and a product-oriented WBS, manage requirements with bidirectional traceability, define interfaces in ICDs, run continuous risk management, control baselines and changes through CCBs, capture and protect technical data.
+  - Key OUTPUTS: Controlled baselines, approved plans and schedules, approved ICDs, a risk state with trigger thresholds, archived and protected engineering data.
 - **Technical Assessment Processes** (16–17): Assess technical maturity and inform design decisions
+  - Key INPUTS: TPM trends and technical leading indicators, review work products, and maturity evidence prepared for each gate.
+  - Key ACTIVITIES: Trend TPMs against alert zones, conduct technical and peer reviews under defined entrance and success criteria, structure alternatives and lifecycle decisions through Decision Analysis.
+  - Key OUTPUTS: Readiness assessments and review dispositions, KDP recommendations, documented selection decisions with rationale.
 
 ## Key Concepts
 - **System Design Processes**: The upstream half of the engine; include Stakeholder Expectations Definition, Technical Requirements Definition, Logical Decomposition, and Design Solution Definition. These processes flow requirements downward from the level above to the level below.
@@ -22,11 +34,20 @@ NASA's Systems Engineering Engine is a structured meta-process that orchestrates
 - **Requirements Flow Down**: Allocation of stakeholder expectations and top-level technical requirements progressively to lower levels of the product structure hierarchy.
 - **Product Flow Up**: Integration and validation of realized products from lower levels to progressively higher levels of system integration and verification.
 - **Cross-Cutting Processes**: Technical Management and Assessment processes that operate in parallel with System Design and Product Realization to provide control, risk mitigation, and visibility.
+- **Recursive and Iterative Application**: Each Product Breakdown Structure tier and each lifecycle phase spawns a fresh engine pass; the System Design side runs top-down per tier, the Product Realization side runs bottom-up, and implementation happens only at the lowest tier while higher tiers integrate already-realized products.
+- **Tier-Depth Discipline**: Stopping decomposition too early orphans requirements and hides interfaces; decomposing deeper than engineering judgment warrants (circuit-board detail in Phase A) burns resources without proportional risk reduction. Stop when feasibility is demonstrated.
+- **Baselined Inputs Between Engine Steps**: Each step baselines its outputs before the next step consumes them. Expectations that are not baselined stop requirements work, because unbaselined expectations cause scope creep and orphaned requirements.
+- **Successive Refinement Across Phases**: Each phase's pass refines the baselines of the previous pass rather than starting over; design changes are incremental refinements of approved baselines and grow costlier beyond Phase B.
+- **Engine Products Mature by Phase**: The same processes produce different fidelity per phase; verification and validation, for example, mature from approach (Phases A/B) to preliminary plans (C) to initial results (D) to baseline (E), and each KDP expects the documented maturity state.
+- **Technical Reviews as Engine Control Points**: Formal reviews (MCR, SRR, SDR/MDR, PDR, CDR, SIR, ORR, FRR, DR) attach to the KDP gates where engine outputs baseline. A review convenes only after objective entrance criteria are met and is judged against success criteria, with a Standing Review Board advising the decision authority.
+- **Gate Outcomes and Health Signals**: The KDP authority approves, conditionally approves with actions, or disapproves progression based on maturity evidence. Requirement volatility after baseline and RID/RFA burndown near a milestone are process-health signals that the left side of the engine stabilized before the right side leaned on it.
 
 ## Mental Models
 - **Think of the SE Engine as a two-way street**: Requirements and constraints flow downward; design solutions, implementation evidence, and validation results flow upward. Both flows must be managed in lockstep to prevent rework and integration surprises.
 - **Use the 17 processes as a checklist, not a sequence**: At each product level, System Design processes define *what* is needed; Product Realization processes build and verify *how* it is done; Technical Management processes keep both synchronized and controlled.
 - **Recognize recursive application**: The same process framework applies at system level, subsystem level, component level, and lower — with appropriate scope and detail at each tier.
+- **Entrance criteria are cheap filters**: A review convened before its entrance criteria are met discovers foundational gaps mid-review; criteria-based filters allow early termination without convening the board. Schedule reviews when the evidence exists, not when the calendar says so.
+- **Left side defines, right side proves**: At every tier the left-side processes convert intent into baselines and the right-side processes convert baselines into evidence; a tier is finished when evidence flows up with the same discipline that requirements flowed down.
 
 ## Key Takeaways
 1. **The 17 processes are not sequential stages; they are parallel, overlapping disciplines.** A program applies all of them at each level of the product structure concurrently, with Technical Management and Assessment running continuously across both System Design and Product Realization.
@@ -41,3 +62,5 @@ NASA's Systems Engineering Engine is a structured meta-process that orchestrates
 - **Requirements Management and Traceability**: Directly enabled by the System Design processes (1–2) and supported by cross-cutting Technical Management (Processes 11, 14, 15).
 - **Configuration Management and Baseline Control**: Maintained by Technical Management Process 14 to preserve integrity as the product structure evolves.
 - **Technical Risk Management**: Continuous discipline (Process 13) applied to design decisions, integration hazards, and lifecycle uncertainties across all 17 processes.
+- **NASA Program/Project Life Cycle (Section 3.0)**: Defines the KDP gate structure and phase sequence where engine passes baseline their outputs and draw down the baselines of the pass before.
+- **Technical Assessment (Section 6.7)**: Owns the entrance and success criteria tables, TPM trending, and Standing Review Board mechanics that the engine's assessment processes execute at each gate.
