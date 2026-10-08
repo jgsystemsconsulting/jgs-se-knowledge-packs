@@ -39,7 +39,9 @@ packs/<slug>/
     navigates)
   - `## Supporting Files`
   - `## Scope & Limits` (what the pack does *not* cover; which source version)
-- Every `chapters/` link in the index must resolve to a real file (CI checks this).
+- Every `chapters/` link in the index must resolve to a real file (checked by
+  `tooling/validate_pack.py` in the local release gate; CI does not run the
+  structural validator, see the Validation section below).
 
 ## Chapter file rules
 
@@ -103,5 +105,9 @@ Member kinds (`kind:` in SKILL.md frontmatter):
 | `orchestrator` | `packs/se` | `SKILL.md` + `PACK.yaml`, all remaining checks | The `LICENSE` and `chapters/` checks (routes to packs, no source content). Its `SKILL.md` body carries the whole routing map and ships in every transform prompt, so it is reviewed against a 24,000-byte ceiling (a review criterion, not a gate). |
 
 Checks: required files present, frontmatter valid, every chapter link resolves,
-`PACK.yaml` mandatory fields filled, and `license_tier ∈ {1,2,3}`. CI runs this on
-every pack on every PR.
+`PACK.yaml` mandatory fields filled, and `license_tier ∈ {1,2,3}`. The validator
+runs locally via `tooling/check_release.py` (check 5) and is deliberately kept
+out of CI to avoid parser fork drift; CI runs inline data-invariant heredocs
+instead (see the `.github/workflows/validate.yml` header), including a
+pack-quality subset (orphan chapter files, 30-line chapter floor, Topic Index
+resolution) twinned with `tooling/check_pack_quality.py` (check 16).
