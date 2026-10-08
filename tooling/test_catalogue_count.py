@@ -6,6 +6,8 @@
 Run:  python tooling/test_catalogue_count.py
 Exits 0 when h2 extraction, chip summing, signpost-chip exclusion, SVG N/M
 parse, frontmatter signpost detection, and the real-tree check all hold.
+parse_catalogue_chips returns a 5-tuple; orchestrator_chip_n is the fourth
+element and is 0 on the fixture section (no orchestrator chip).
 Any failed assert raises and exits nonzero.
 """
 from __future__ import annotations
@@ -90,10 +92,11 @@ def main() -> int:
     assert check_release.parse_catalogue_h2(sec_dot) == (3, 1)
 
     # chip sum ignores span digits; signpost chip excluded from content sum
-    content_sum, sp_count, sp_n, chip_errs = check_release.parse_catalogue_chips(sec)
+    content_sum, sp_count, sp_n, orch_n, chip_errs = check_release.parse_catalogue_chips(sec)
     assert chip_errs == [], chip_errs
     assert content_sum == 3, content_sum
     assert sp_count == 1 and sp_n == 1
+    assert orch_n == 0, orch_n
 
     # SVG subtitle + footer
     sub, foot = check_release.parse_svg_catalogue_nm(SVG)

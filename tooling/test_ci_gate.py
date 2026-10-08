@@ -107,6 +107,7 @@ CATALOGUE_COUNT_PAIR = [
     ("catalogue chip pattern", r'<div\s+class="pk"\s*>\s*<b>(.*?)</b>'),
     ("catalogue chip count pattern",
      r"^(?P<label>.*?)\s*(?:&middot;|·)\s*(?P<count>\d+)\s*$"),
+    ("orchestrator chip class", r"orchestrator"),
     ("catalogue svg nm pattern",
      r"(\d+)\s+packs\s*(?:&middot;|·)\s*(\d+)\s+signposts"),
     ("still-catalogue svg path", '"docs/assets/still-catalogue.svg"'),
@@ -575,6 +576,44 @@ def main() -> int:
              "[catalogue-count] §06 h2 states 62 packs / 0 signposts "
              "but live inventory is 0 packs / 1 signposts",
              "catalogue-mixed-case-signpost")
+
+        # catalogue-count: an orchestrator chip's COUNT is discarded. COUNT 9
+        # is the regression hook: a branch that falls through to the content
+        # arm makes content_sum 10 against live N of 1, so the step exits
+        # nonzero and demo_ok fails. Label is not the whole word, which locks
+        # the same case-insensitive substring match the signpost class uses.
+        cat_index_orch = (
+            "<!-- §06 The catalogue -->\n"
+            "<section><div class=\"wrap\">\n"
+            "  <h2>1 packs &middot; 0 signposts</h2>\n"
+            "  <div class=\"packs\">\n"
+            "    <div class=\"pk\"><b>Demo &middot; 1</b><span>one pack</span></div>\n"
+            "    <div class=\"pk\"><b>Signposts &middot; 0</b><span>none</span></div>\n"
+            "    <div class=\"pk\"><b>SE orchestrator &middot; 9</b><span>ignored count</span></div>\n"
+            "  </div>\n"
+            "</div></section>\n"
+            "<!-- §07 Licensing -->\n"
+        )
+        demo_ok({
+            "packs/alpha/SKILL.md": cat_pack,
+            "docs/index.html": cat_index_orch,
+            "docs/assets/still-catalogue.svg": cat_svg_ok,
+        }, "Landing catalogue counts", "catalogue-orchestrator-chip-ok")
+
+        # catalogue-count: a second orchestrator chip fails closed. Zero chips
+        # stays valid; the at-most-one sentence has no live-count tail.
+        cat_index_two_orch = cat_index_orch.replace(
+            "    <div class=\"pk\"><b>SE orchestrator &middot; 9</b><span>ignored count</span></div>\n",
+            "    <div class=\"pk\"><b>SE orchestrator &middot; 9</b><span>ignored count</span></div>\n"
+            "    <div class=\"pk\"><b>Other orchestrator &middot; 1</b><span>second</span></div>\n",
+        )
+        demo({
+            "packs/alpha/SKILL.md": cat_pack,
+            "docs/index.html": cat_index_two_orch,
+            "docs/assets/still-catalogue.svg": cat_svg_ok,
+        }, "Landing catalogue counts",
+             "[catalogue-count] expected at most one orchestrator chip, found 2",
+             "catalogue-two-orchestrator-chips")
 
         # catalog-live-set: phantom live slug fails only-in-catalog
         demo({

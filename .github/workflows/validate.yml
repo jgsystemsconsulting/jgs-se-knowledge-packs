@@ -293,7 +293,10 @@ jobs:
           # Twins tooling/check_release.py check 13 ([catalogue-count]) as a complete
           # port. Section marker, h2/chip/SVG regex literals below are byte-identical
           # to the local gate; tooling/test_ci_gate.py asserts that parity and
-          # executes this shipped heredoc. Never executes checkout repository code.
+          # executes this shipped heredoc. Chip classes: content COUNT sums into N,
+          # exactly one Signposts chip must equal M, and an orchestrator-labelled
+          # chip is exempt from N and M and may appear at most once. Never executes
+          # checkout repository code.
           import re, sys, pathlib
 
           CATALOGUE_SECTION_MARKER = "<!-- §06 The catalogue -->"
@@ -361,6 +364,7 @@ jobs:
               content_sum = 0
               signpost_count = None
               signpost_chips = 0
+              orchestrator_chips = 0
               for m in CATALOGUE_CHIP_RE.finditer(section):
                   inner = re.sub(r"\s+", " ", m.group(1)).strip()
                   cm = CATALOGUE_CHIP_COUNT_RE.match(inner)
@@ -372,9 +376,11 @@ jobs:
                   if re.search(r"signpost", label, re.I):
                       signpost_chips += 1
                       signpost_count = count
+                  elif re.search(r"orchestrator", label, re.I):
+                      orchestrator_chips += 1
                   else:
                       content_sum += count
-              return content_sum, signpost_count, signpost_chips, errs
+              return content_sum, signpost_count, signpost_chips, orchestrator_chips, errs
 
           def parse_svg_catalogue_nm(svg_text):
               texts = re.findall(r"<text\b[^>]*>(.*?)</text>", svg_text, re.I | re.S)
@@ -431,7 +437,7 @@ jobs:
                       )
                       fails += 1
 
-              content_sum, signpost_count, signpost_chips, chip_errs = parse_catalogue_chips(section)
+              content_sum, signpost_count, signpost_chips, orchestrator_chips, chip_errs = parse_catalogue_chips(section)
               for e in chip_errs:
                   print(f"::error::{e}")
                   fails += 1
@@ -444,6 +450,11 @@ jobs:
               elif signpost_count != m_live:
                   print(
                       f"::error::[catalogue-count] Signposts chip COUNT {signpost_count} != live signposts {m_live}"
+                  )
+                  fails += 1
+              if orchestrator_chips > 1:
+                  print(
+                      f"::error::[catalogue-count] expected at most one orchestrator chip, found {orchestrator_chips}"
                   )
                   fails += 1
               if content_sum != n_live:

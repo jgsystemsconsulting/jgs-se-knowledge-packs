@@ -37,8 +37,9 @@ standard requires for this repo and exits non-zero on any failure:
      docs/packs.html.
   13. Landing catalogue counts ([catalogue-count], P15): live content count N and
      signpost count M from packs/*/SKILL.md frontmatter must equal the §06
-     headline, chip COUNT sum (with exactly one Signposts chip equal to M),
-     and still-catalogue.svg subtitle/footer N/M.
+     headline, chip COUNT sum (exactly one Signposts chip equal to M; an
+     orchestrator-labelled chip is exempt from N and M and may appear at most
+     once), and still-catalogue.svg subtitle/footer N/M.
   14. Catalog live-set parity ([catalog-live-set], P16): content pack slug set from
      packs/*/SKILL.md (signposts and orchestrators excluded) must equal
      catalog.json packs[].slug where status is live or absent; signpost and
@@ -383,17 +384,22 @@ def parse_catalogue_h2(section: str) -> tuple[int, int] | None:
     return int(m.group(1)), int(m.group(2))
 
 
-def parse_catalogue_chips(section: str) -> tuple[int, int | None, int, list[str]]:
-    """Return (content_sum, signpost_count_or_None, signpost_chip_n, errors).
+def parse_catalogue_chips(section: str) -> tuple[int, int | None, int, int, list[str]]:
+    """Return (content_sum, signpost_count_or_None, signpost_chip_n,
+    orchestrator_chip_n, errors).
 
     COUNT is only the integer after the separator in the <b> label. Digits inside
-    <span> descriptions are ignored. Exactly one chip whose label contains
-    'signpost' (case-insensitive) is required by the caller.
+    <span> descriptions are ignored. A chip whose label contains 'signpost'
+    (case-insensitive) is a signpost chip. Else a chip whose label contains
+    'orchestrator' (case-insensitive) is an orchestrator chip and its COUNT is
+    discarded. Every other parsed chip adds its COUNT to content_sum. The caller
+    requires exactly one signpost chip and at most one orchestrator chip.
     """
     errs: list[str] = []
     content_sum = 0
     signpost_count: int | None = None
     signpost_chips = 0
+    orchestrator_chips = 0
     for m in CATALOGUE_CHIP_RE.finditer(section):
         inner = re.sub(r"\s+", " ", m.group(1)).strip()
         cm = CATALOGUE_CHIP_COUNT_RE.match(inner)
@@ -407,9 +413,11 @@ def parse_catalogue_chips(section: str) -> tuple[int, int | None, int, list[str]
         if re.search(r"signpost", label, re.I):
             signpost_chips += 1
             signpost_count = count
+        elif re.search(r"orchestrator", label, re.I):
+            orchestrator_chips += 1
         else:
             content_sum += count
-    return content_sum, signpost_count, signpost_chips, errs
+    return content_sum, signpost_count, signpost_chips, orchestrator_chips, errs
 
 
 def parse_svg_catalogue_nm(svg_text: str) -> tuple[tuple[int, int] | None, tuple[int, int] | None]:
@@ -469,7 +477,7 @@ def check_catalogue_count(
                 f"but live inventory is {n_live} packs / {m_live} signposts"
             )
 
-    content_sum, signpost_count, signpost_chips, chip_errs = parse_catalogue_chips(section)
+    content_sum, signpost_count, signpost_chips, orchestrator_chips, chip_errs = parse_catalogue_chips(section)
     errs.extend(chip_errs)
     if signpost_chips != 1:
         errs.append(
@@ -479,6 +487,10 @@ def check_catalogue_count(
     elif signpost_count != m_live:
         errs.append(
             f"[catalogue-count] Signposts chip COUNT {signpost_count} != live signposts {m_live}"
+        )
+    if orchestrator_chips > 1:
+        errs.append(
+            f"[catalogue-count] expected at most one orchestrator chip, found {orchestrator_chips}"
         )
     if content_sum != n_live:
         errs.append(
@@ -1108,9 +1120,9 @@ def main() -> int:
     except OSError as e:
         fail(errs, f"[brand-tokens] cannot read page: {e}")
 
-    # 13. catalogue-count (P15): live packs/ N+M must equal landing §06 headline,
-    #     chip COUNTs (with Signposts chip), figcaption, and still-catalogue.svg
-    #     subtitle/footer. Family membership and SVG row counts are review-only.
+    # 13. catalogue-count (P15): live packs/ N+M must equal the landing §06 h2,
+    #     chip COUNTs (content sum, exactly one Signposts chip, at most one
+    #     orchestrator chip), and still-catalogue.svg subtitle/footer.
     try:
         index_for_cat = (ROOT / "docs" / "index.html").read_text(encoding="utf-8")
     except OSError as e:
