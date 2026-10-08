@@ -1,7 +1,7 @@
 <!--
 Copyright (c) 2026 JG Systems Consulting Ltd. — MIT License (see LICENSE).
 SPDX-License-Identifier: MIT
-Generated from each pack's SKILL.md frontmatter. Regenerate with tooling/gen_skills_index.py.
+SKILLS.md is hand-maintained. After a pack change, regenerate docs/packs.html with: python tooling/gen_packs_page.py
 -->
 
 # jgs-se-knowledge-packs — Pack Index
