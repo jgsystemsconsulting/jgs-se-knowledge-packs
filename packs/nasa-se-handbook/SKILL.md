@@ -21,7 +21,7 @@ Use this pack when you need NASA's systems-engineering process model: the **SE E
 - **With a chapter** — ask for `ch20` to load Design Solution Definition.
 - **Browse** — ask "what chapters do you have?" for the full index.
 
-Supporting files: `glossary.md` (108 terms), `patterns.md` (20 techniques), `cheatsheet.md` (decision rules, phase/KDP/review gates, cost thresholds).
+Supporting files: `glossary.md` (108 terms), `patterns.md` (21 techniques), `cheatsheet.md` (decision rules, phase/KDP/review gates, cost thresholds).
 
 ## Core Frameworks & Mental Models
 
@@ -97,7 +97,7 @@ Supporting files: `glossary.md` (108 terms), `patterns.md` (20 techniques), `che
 ## Supporting Files
 
 - [glossary.md](glossary.md) — 108 NASA SE terms with chapter refs
-- [patterns.md](patterns.md) — 20 techniques (SE Engine application, trade studies, V&V methods, risk, CM, reviews)
+- [patterns.md](patterns.md) — 21 techniques (SE Engine application, trade studies, V&V methods, risk, CM, reviews)
 - [cheatsheet.md](cheatsheet.md) — decision rules, phase/KDP/review-gate table, cost-of-late-fix thresholds, tells & smells
 
 ---
