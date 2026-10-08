@@ -444,6 +444,15 @@ def main() -> int:
         # index positive: the signpost link is filtered and the count matches
         demo_ok(index_tree(SKILLS_FILTERED, SIGNPOST_MARKED),
                 "SKILLS index count", "index-filter-ok")
+        # index-filter: a mixed-case signpost is excluded from the shipped
+        # count, same as the lowercase one. New input, not a mutation of
+        # SIGNPOST_MARKED, which the lowercase demos above depend on.
+        # Site 6 (validate.yml link-policy heredoc, :120) shares this pattern
+        # but has no pinned step; its flag drift is not executed by this probe.
+        demo_ok(index_tree(
+            SKILLS_FILTERED,
+            "---\nname: omg-signpost\nkind: Signpost\n---\nbody\n",
+        ), "SKILLS index count", "index-filter-mixed-case-ok")
         # index negative: signpost pack present but NOT marked, so the filter
         # must not drop it from the shipped count
         demo(index_tree(SKILLS_CONTENT_ONLY, SIGNPOST_UNMARKED), "SKILLS index count",
@@ -552,6 +561,21 @@ def main() -> int:
              "but live inventory is 1 packs / 0 signposts",
              "catalogue-stale-h2")
 
+        # catalogue-count: a mixed-case signpost counts as a signpost, so a
+        # section claiming 1 pack / 0 signposts fails live-versus-stated.
+        # Locks the re.I the catalogue-count twin already carries (validate.yml
+        # :338). Stripping it reclassifies the pack as content and the live
+        # side of the message becomes 1 packs / 0 signposts, which the section
+        # agrees with, so the step exits 0 and this demo fails.
+        demo({
+            "packs/alpha/SKILL.md": "---\nname: alpha\nKind: Signpost\n---\n# alpha\n",
+            "docs/index.html": cat_index_stale,
+            "docs/assets/still-catalogue.svg": cat_svg_ok,
+        }, "Landing catalogue counts",
+             "[catalogue-count] §06 h2 states 62 packs / 0 signposts "
+             "but live inventory is 0 packs / 1 signposts",
+             "catalogue-mixed-case-signpost")
+
         # catalog-live-set: phantom live slug fails only-in-catalog
         demo({
             "packs/alpha/SKILL.md": (
@@ -653,6 +677,15 @@ def main() -> int:
             "packs/alpha/chapters/ch03-b.md": "x\n" * 30,
             "packs/alpha/chapters/ch04-c.md": "x\n" * 30,
         }, "Pack content quality", "quality-range-ok")
+        # pack-quality: a mixed-case signpost with a stub chapter and no topic
+        # index is skipped. This is the only probe that executes the site 7
+        # alternation (validate.yml:997). Without re.I the step reports
+        # [chapter-depth] for the 5-line chapter and [topic-index] for the
+        # missing section, and demo_ok fails.
+        demo_ok({
+            "packs/alpha/SKILL.md": "---\nname: alpha\nKind: Signpost\n---\n# alpha\n",
+            "packs/alpha/chapters/ch01-stub.md": "line\n" * 5,
+        }, "Pack content quality", "quality-mixed-case-skip-ok")
 
     # 3. positive runs against the real repo tree: what CI sees on a clean tree
     for step in PINNED_STEPS:

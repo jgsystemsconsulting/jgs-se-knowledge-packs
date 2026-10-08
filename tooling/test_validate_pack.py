@@ -46,6 +46,21 @@ description: "Demo orchestrator used by the validator probe. Explicit invocation
 ---
 """
 
+SIGNPOST_SKILL_MIXED = """---
+name: {slug}
+Kind: Signpost
+description: "Demo signpost used by the validator probe."
+---
+"""
+
+ORCHESTRATOR_SKILL_MIXED = """---
+name: {slug}
+Kind: Orchestrator
+disable-model-invocation: true
+description: "Demo orchestrator used by the validator probe. Explicit invocation only."
+---
+"""
+
 PACK_YAML = """slug: {slug}
 title: "Demo Pack"
 publisher: "JG Systems Consulting Ltd."
@@ -124,6 +139,16 @@ def main() -> int:
                              pack_yaml=False, license_=False, chapters=False)
         errs = validate_pack.check_pack(orch_np)
         assert errs == ["missing PACK.yaml"], errs
+
+        # (8b) mixed-case signpost skips LICENSE and chapters
+        sign_mixed = build_pack(root, "demo-signpost-mixed", skill=SIGNPOST_SKILL_MIXED,
+                                license_=False, chapters=False)
+        assert validate_pack.check_pack(sign_mixed) == [], validate_pack.check_pack(sign_mixed)
+
+        # (8c) mixed-case orchestrator skips LICENSE and chapters
+        orch_mixed = build_pack(root, "demo-orch-mixed", skill=ORCHESTRATOR_SKILL_MIXED,
+                                license_=False, chapters=False)
+        assert validate_pack.check_pack(orch_mixed) == [], validate_pack.check_pack(orch_mixed)
 
     # (9) both live signpost packs pass on the real tree (read-only)
     for slug in ("omg-signpost", "se-standards-signpost"):

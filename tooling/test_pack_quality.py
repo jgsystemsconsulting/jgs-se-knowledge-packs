@@ -114,6 +114,28 @@ def main() -> int:
         (p / "chapters" / "ch01-intro.md").unlink()
         assert check_pack_quality.check_pack(p) == []
 
+        # 6b. mixed-case kind skip: same bypass, same broken-tree proof
+        p = _pack(
+            packs,
+            "sign-mixed",
+            "Read chapters/ch01-intro.md.\n\n## Topic Index\n\n- **Intro** \u2192 ch01\n",
+            {"ch01-intro.md": 30},
+            kind="Signpost",
+        )
+        assert check_pack_quality.check_pack(p) == []
+        (p / "chapters" / "ch01-intro.md").unlink()
+        assert check_pack_quality.check_pack(p) == []
+
+        # 6c. mixed-case orchestrator skip; the signpost unlink above proves the skip
+        p = _pack(
+            packs,
+            "orch-mixed",
+            "Read chapters/ch01-intro.md.\n\n## Topic Index\n\n- **Intro** \u2192 ch01\n",
+            {"ch01-intro.md": 30},
+            kind="Orchestrator",
+        )
+        assert check_pack_quality.check_pack(p) == []
+
     # 7. real tree: every shipped pack passes and main() exits 0
     for p in sorted((ROOT / "packs").iterdir()):
         if p.is_dir():
