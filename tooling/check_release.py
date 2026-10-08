@@ -45,11 +45,16 @@ standard requires for this repo and exits non-zero on any failure:
      member; ROUTING-MAP markers and four subheadings; pack-cell slug resolution
      and Topics coverage of every content slug; licence parity for non-Public-Domain
      content packs.
+  16. Pack content quality ([pack-quality]): every chapters/chNN-*.md file is
+     referenced by its pack's SKILL.md (no orphans), every chapter file is at
+     least 30 lines, and every chNN token in each SKILL.md ## Topic Index
+     (en-dash ranges expanded) resolves to an on-disk chapter; content packs
+     only, via tooling/check_pack_quality.check_pack.
 
 stdlib only. This is a LOCAL/trusted gate and may run repo code; the CI workflow
 (.github/workflows/validate.yml) inlines its own checks and never executes repo code.
 CI-covered: version, index, overlap, map/rules data invariants, html-assets,
-catalogue-count, catalog-live-set, routing-map. Local-only required before tag: pack validation,
+catalogue-count, catalog-live-set, routing-map, pack-quality (data subset). Local-only required before tag: pack validation,
 packs.html freshness, full map/rules checks, replay.
 
 Pre-tag rule: run this gate at the exact commit being tagged and require a PASS
@@ -1096,6 +1101,18 @@ def main() -> int:
 
     # 15. routing map coverage ([routing-map], /se)
     errs.extend(check_routing_map(ROOT / "packs"))
+
+    # 16. pack quality ([pack-quality]): orphaned chapter files, 30-line chapter
+    #     floor, and Topic Index chapter resolution via check_pack_quality
+    #     (content packs only; signposts and orchestrators skip inside the twin)
+    try:
+        import check_pack_quality  # type: ignore
+        for pack in packs:
+            qerrs = check_pack_quality.check_pack(pack)
+            for e in qerrs:
+                fail(errs, f"[pack-quality:{pack.name}] {e}")
+    except Exception as e:
+        fail(errs, f"[pack-quality] check_pack_quality failed to run: {e}")
 
     # 6. SKILLS.md entry count == pack count
     skills = (ROOT / "SKILLS.md").read_text(encoding="utf-8") if (ROOT / "SKILLS.md").is_file() else ""
