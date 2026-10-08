@@ -47,7 +47,7 @@ def check_pack(pack_dir: Path) -> list[str]:
     skill = pack_dir / "SKILL.md"
 
     # Kind detection: same two regexes as validate_pack.py / check_release.py
-    # so all three tools classify a pack identically.
+    # so all three tools classify a pack identically, case-insensitive.
     body = ""
     have_skill = skill.is_file()
     if have_skill:
@@ -56,8 +56,8 @@ def check_pack(pack_dir: Path) -> list[str]:
         except OSError:
             have_skill = False
     if have_skill and (
-        re.search(r"^kind:\s*signpost\s*$", body, re.M)
-        or re.search(r"^kind:\s*orchestrator\s*$", body, re.M)
+        re.search(r"^kind:\s*signpost\s*$", body, re.I | re.M)
+        or re.search(r"^kind:\s*orchestrator\s*$", body, re.I | re.M)
     ):
         return []
     if not have_skill:

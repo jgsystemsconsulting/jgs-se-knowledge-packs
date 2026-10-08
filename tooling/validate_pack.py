@@ -63,11 +63,12 @@ def check_pack(pack_dir: Path) -> list[str]:
     chapters = pack_dir / "chapters"
 
     # Non-content kind detection (signpost, orchestrator): same regex style as
-    # check_release.py so both tools classify a pack identically. Read once
-    # here; reused by the frontmatter block below instead of a second read.
+    # check_release.py so both tools classify a pack identically, and
+    # case-insensitive, so Kind: Signpost classifies the same as kind: signpost.
+    # Read once here; reused by the frontmatter block below instead of a second read.
     body = skill.read_text(encoding="utf-8", errors="ignore") if skill.is_file() else ""
-    is_signpost = bool(re.search(r"^kind:\s*signpost\s*$", body, re.M))
-    is_orchestrator = bool(re.search(r"^kind:\s*orchestrator\s*$", body, re.M))
+    is_signpost = bool(re.search(r"^kind:\s*signpost\s*$", body, re.I | re.M))
+    is_orchestrator = bool(re.search(r"^kind:\s*orchestrator\s*$", body, re.I | re.M))
 
     if not skill.is_file():
         errors.append("missing SKILL.md")

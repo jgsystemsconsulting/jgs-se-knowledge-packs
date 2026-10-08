@@ -117,7 +117,7 @@ jobs:
           root = pathlib.Path(".")
           signpost_dirs = {
               p.parent for p in root.glob("packs/*/SKILL.md")
-              if re.search(r"^kind:\s*signpost\s*$", p.read_text(encoding="utf-8", errors="ignore"), re.M)
+              if re.search(r"^kind:\s*signpost\s*$", p.read_text(encoding="utf-8", errors="ignore"), re.I | re.M)
           }
           fails = 0
           for p in root.rglob("*"):
@@ -994,7 +994,7 @@ jobs:
           for skill_path in sorted(pathlib.Path("packs").glob("*/SKILL.md")):
               pack = skill_path.parent
               body = skill_path.read_text(encoding="utf-8", errors="ignore")
-              if re.search(r"^kind:\s*(signpost|orchestrator)\s*$", body, re.M):
+              if re.search(r"^kind:\s*(signpost|orchestrator)\s*$", body, re.I | re.M):
                   continue
               chapters = sorted((pack / "chapters").glob("ch[0-9][0-9]-*.md"))
               for p in chapters:
@@ -1084,7 +1084,7 @@ jobs:
           root = pathlib.Path(".")
           signpost_dirs = {
               p.parent for p in root.glob("packs/*/SKILL.md")
-              if re.search(r"^kind:\s*signpost\s*$", p.read_text(encoding="utf-8", errors="ignore"), re.M)
+              if re.search(r"^kind:\s*signpost\s*$", p.read_text(encoding="utf-8", errors="ignore"), re.I | re.M)
           }
           packs = sorted(p for p in root.glob("packs/*") if p.is_dir() and p not in signpost_dirs)
           skills = (root / "SKILLS.md").read_text(encoding="utf-8") if (root / "SKILLS.md").is_file() else ""

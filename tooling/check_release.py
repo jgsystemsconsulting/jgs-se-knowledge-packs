@@ -931,9 +931,10 @@ def main() -> int:
     # 3. no source-material links (exclude pack chapter content — those are prose, but
     #    they are synthesized and should also be clean; include them to be strict)
     # ponytail: a "signpost" pack is pure citation — it MUST name where a spec lives, so it
-    # is exempt from the link ban. Marked by `kind: signpost` in its SKILL.md frontmatter.
+    # is exempt from the link ban. Marked by `kind: signpost` in its SKILL.md frontmatter,
+    # matched case-insensitive, same rule as inventory_pack_slugs.
     signpost_dirs = {p.parent for p in ROOT.glob("packs/*/SKILL.md")
-                     if re.search(r"^kind:\s*signpost\s*$", p.read_text(encoding="utf-8", errors="ignore"), re.M)}
+                     if re.search(r"^kind:\s*signpost\s*$", p.read_text(encoding="utf-8", errors="ignore"), re.I | re.M)}
     try:
         hosts = load_banned_hosts()
         source_hosts = re.compile(
