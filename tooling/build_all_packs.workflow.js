@@ -2,16 +2,25 @@
  * Copyright (c) 2026 JG Systems Consulting Ltd. — MIT License (see ../LICENSE).
  * SPDX-License-Identifier: MIT
  *
- * build_all_packs.workflow.js — the "one go" orchestrator for docs/BUILD-PLAN.md.
+ * build_all_packs.workflow.js: the one-go build orchestrator. No separate build-plan doc is maintained in this repo.
  * Builds every backlog pack whose source is staged under sources/<slug>/, through a
  * gated pipeline (vet -> extract -> outline -> scaffold -> chapters -> verify), then
  * registers the passers once. Fail-closed: a pack that fails vet/overlap/validate is
  * NOT registered. Does NOT git commit or push — packs land in the working tree for review.
  *
- * Launch:
+ * Launch (Workflow host; args is a host-injected binding, not parsed argv):
+ *   packsDir (optional): repo root. Default is the parent of this script's directory.
+ *   refSkillDir (required): checkout of the sibling jgs-reference-skill repo. No default.
+ *     The run throws if it is missing or empty.
+ *   slugs (optional): slug list. Omit to build every key in META.
+ *   skipRegister (optional): truthy skips the Register phase.
  *   Workflow({ scriptPath: ".../tooling/build_all_packs.workflow.js",
- *              args: { slugs: ["nasa-systems-modeling"] } })   // omit slugs => all staged
+ *              args: { refSkillDir: ".../jgs-reference-skill",
+ *                      slugs: ["nasa-systems-modeling"] } })
  */
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
 export const meta = {
   name: 'build-all-packs',
   description: 'Build every staged backlog pack end-to-end (vet→extract→outline→scaffold→chapters→verify) and register the passers.',
@@ -21,8 +30,11 @@ export const meta = {
   ],
 }
 
-const PACKS = (args && args.packsDir) || '/c/Users/gower/OneDrive/Documents/GitHub/jgs-se-knowledge-packs'
-const REF = (args && args.refSkillDir) || '/c/Users/gower/OneDrive/Documents/GitHub/jgs-reference-skill'
+const PACKS = (args && args.packsDir) || path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
+const REF = (args && args.refSkillDir) || ''
+if (!REF) {
+  throw new Error('build_all_packs: missing required arg refSkillDir (path to the sibling jgs-reference-skill checkout). Pass args.refSkillDir. There is no default.')
+}
 const PD = 'Public Domain (US Government work)'
 
 // slug -> source identity + the one critical build caveat (full row is in docs/PACK-BACKLOG.md)
