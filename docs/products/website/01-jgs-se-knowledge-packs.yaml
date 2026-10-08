@@ -44,21 +44,33 @@ features:
       Each pack is an always-loaded SKILL.md index plus on-demand chapters, a glossary,
       patterns, and a cheatsheet, so a large body of knowledge never fills the context
       window; the agent loads only the chapter your question routes to.
-  - title: 46 packs across the SE landscape
+  - title: 64 packs across the SE catalogue
     detail: >
-      NASA (14: SE Handbook & Expanded Guidance, NPR 7123/7150, risk, system safety,
-      fault management, HSI, PRA, R&M, schedule, cost, digital engineering, modeling),
-      DoD/DAU/OSD (11: SE Guidebook, MIL-STD-882, DoDAF, MOSA, RIO, M&Q BoK, T&E,
-      MIL-HDBK-61 CM, MRL, SD-22 DMSMS), NIST (7: AI RMF, SSDF, CSF, SP 800-160 SSE,
-      SP 800-37 RMF, cyber-physical systems, statistics), FAA (6: RMA, SEM, system safety,
-      human factors, AMS V&V, requirements management), GAO (4: technology readiness, cost,
-      schedule, agile), plus EU AI Act, arXiv digital systems engineering, and EARS
-      requirements writing.
+      NASA (16): SE Handbook and Expanded Guidance, NPR 7123 / 7150, risk, system
+      safety, fault management, HSI, PRA, R&M, schedule, cost estimating, digital
+      engineering acquisition, systems modeling, M&S 7009, orbital debris 8719.
+      DoD / DAU / OSD (19): SE Guidebook, MIL-STD-882E, DoDAF, MOSA, RIO, digital
+      engineering, M&Q BoK, T&E, V&V RPG, MIL-HDBK-61 CM, MRL Deskbook, SD-22 DMSMS,
+      MIL-HDBK-338B, MIL-HDBK-516C, MIL-STD-40051, MIL-STD-881F, DAFMAN 63-119,
+      DOT&E T&E, IS-GPS-200N. NIST (9): AI RMF, SSDF, CSF 2.0, SP 800-160 SSE,
+      SP 800-37 RMF, Cyber-Physical Systems, NIST/SEMATECH statistics, SP 800-171 CUI,
+      SP 800-61 incident response. FAA (7): RMA Handbook, Systems Engineering Manual,
+      System Safety, Human Factors Design Std, AMS V&V, Requirements Engineering
+      Management, STD-025 interface documentation. GAO (4): Technology Readiness,
+      Cost Estimating, Schedule Assessment, Agile Assessment guides. DOE (2):
+      Systems Engineering Methodology (SEM3), capital-asset project management
+      (O 413.3). CISA / DHS (1): Cross-Sector Cybersecurity Performance Goals 2.0.
+      OMB / cross-federal (1): Federal benefit-cost analysis (OMB Circular A-94).
+      NHTSA / USDOT (1): FMVSS selections, vehicle cybersecurity best practices,
+      ADS vision. EU / academic / JGS (4): EU AI Act 2024/1689, Digital Systems
+      Engineering (arXiv), EARS requirements-writing, SEBoK.
   - title: Standards signposts
     detail: >
-      Two citation-only signposts map the parts of the landscape that can't be packaged:
-      the OMG modelling specs and the full SE standards landscape (~55 standards), each
-      with its owner, redistributability status, and where to get it.
+      Four citation-only signposts map the parts of the landscape that can't be
+      packaged: the OMG modelling specs, the full SE standards landscape (~55
+      standards), the automotive standards landscape (ISO 26262, ASPICE, SAE J3016,
+      UNECE R155/R156), and functional safety (IEC 61508, ISO/SAE 21434, UL 4600),
+      each with its owner, redistributability status, and where to get it.
   - title: /se orchestrator
     detail: >
       An explicit /se <question> entry point for when you don't know which pack to ask.
