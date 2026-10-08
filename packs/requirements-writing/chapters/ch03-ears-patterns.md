@@ -32,7 +32,9 @@ The same need, written in each relevant pattern (original examples):
 - *Event-driven:* "When the operator presses Start, the pump controller shall ramp the motor to the target speed within 3 seconds."
 - *State-driven:* "While in Maintenance mode, the pump controller shall inhibit motor commands."
 - *Optional-feature:* "Where the remote-telemetry option is installed, the pump controller shall publish outlet pressure once per second."
-- *Unwanted-behaviour:* "If outlet pressure exceeds 8 bar, then the pump controller shall stop the motor and raise an over-pressure alarm."
+- *Unwanted-behaviour:* "If outlet pressure exceeds 8 bar, then the pump controller shall stop the motor."
+- *Unwanted-behaviour:* "If outlet pressure exceeds 8 bar, then the pump controller shall raise an over-pressure alarm."
+- *Complex (While + When):* "While the controller is in Maintenance mode, when the outlet pressure exceeds 8 bar, the pump controller shall activate the over-pressure warning light."
 
 ## Key Takeaways
 1. Choose the pattern from the trigger; the response clause is identical across all of them.

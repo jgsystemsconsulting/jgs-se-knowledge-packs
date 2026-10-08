@@ -21,7 +21,8 @@ Adopting EARS in practice is two moves: pick the right pattern from the trigger,
 ## Worked Example
 Before/after conversions (original):
 - *Before:* "The system should quickly recover and notify the user if something goes wrong."
-  *After (Unwanted-behaviour):* "If a processing error occurs, then the gateway shall restart the affected service within 5 seconds and post a fault notification to the operator console."
+  *After (Unwanted-behaviour, requirement 1):* "If a processing error occurs, then the gateway shall restart the affected service within 5 seconds."
+  *After (Unwanted-behaviour, requirement 2):* "If a processing error occurs, then the gateway shall post a fault notification to the operator console."
 - *Before:* "Reports can be exported when needed."
   *After (Event-driven):* "When the user selects Export, the reporting module shall produce a PDF of the current view within 2 seconds."
 - *Before:* "The interface must be available."

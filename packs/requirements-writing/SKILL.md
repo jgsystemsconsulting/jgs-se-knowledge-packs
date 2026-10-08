@@ -53,6 +53,7 @@ Supporting files: `glossary.md`, `patterns.md`, `cheatsheet.md` (the EARS patter
 ## Topic Index
 
 - **EARS patterns (When/While/Where/If-Then)** → ch03, ch04
+- **Complex pattern (state + event)** → ch03
 - **Quality characteristics (necessary, unambiguous, singular…)** → ch01
 - **Ambiguity / weak words / compound requirements** → ch05
 - **Embedded design in requirements** → ch05, ch01
