@@ -98,7 +98,7 @@ Key cross-mapping: all 8 viewpoints draw on some subset of these 11 groups; the 
 - **IDEAS Foundation** → ch01, ch11
 - **Information modeling** → ch05
 - **Interface identification** → ch10, ch08
-- **JCIDS** → ch02, ch04, ch11
+- **JCIDS** → ch04, ch11
 - **Measures (MoE, MoD, QoS)** → ch02, ch04, ch10
 - **Mission threads** → ch06
 - **Operational architecture** → ch06
