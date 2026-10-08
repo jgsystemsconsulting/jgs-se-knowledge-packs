@@ -43,16 +43,16 @@ Supporting files: `glossary.md` (108 terms), `patterns.md` (20 techniques), `che
 | [ch02](chapters/ch02-2-1-the-common-technical-processes-and-the-se.md) | 2.1 Common Technical Processes & SE Engine | The 17 processes; process families |
 | [ch03](chapters/ch03-2-3-example-of-using-the-se-engine.md) | 2.3 Example of Using the SE Engine | SE Engine; Product Breakdown Structure |
 | [ch04](chapters/ch04-2-5-cost-effectiveness-considerations.md) | 2.5 Cost-Effectiveness Considerations | Design trade studies; cost-effectiveness |
-| [ch05](chapters/ch05-2-6-human-systems-integration-hsi-in-the-se-pr.md) | 2.6 Human Systems Integration (HSI) | HSI Plan |
+| [ch05](chapters/ch05-2-6-human-systems-integration-hsi-in-the-se-process.md) | 2.6 Human Systems Integration (HSI) | HSI Plan |
 | [ch06](chapters/ch06-2-7-competency-model-for-systems-engineers.md) | 2.7 SE Competency Model | NASA SE Competency Model |
 | [ch07](chapters/ch07-3-0-nasa-program-project-life-cycle.md) | 3.0 Program/Project Life Cycle | Life-cycle model; Key Decision Points |
 | [ch08](chapters/ch08-3-1-program-formulation.md) | 3.1 Program Formulation | Program coupling taxonomy |
 | [ch09](chapters/ch09-3-2-program-implementation.md) | 3.2 Program Implementation | Program technical activities; reviews |
 | [ch10](chapters/ch10-3-3-project-pre-phase-a-concept-studies.md) | 3.3 Pre-Phase A: Concept Studies | ConOps; Analysis of Alternatives |
-| [ch11](chapters/ch11-3-4-project-phase-a-concept-and-technology-dev.md) | 3.4 Phase A: Concept & Tech Development | SEMP; mission architecture |
-| [ch12](chapters/ch12-3-5-project-phase-b-preliminary-design-and-tec.md) | 3.5 Phase B: Preliminary Design | Phase B baseline; the PDR |
-| [ch13](chapters/ch13-3-6-project-phase-c-final-design-and-fabricati.md) | 3.6 Phase C: Final Design & Fabrication | Detailed design package; CDR |
-| [ch14](chapters/ch14-3-7-project-phase-d-system-assembly-integratio.md) | 3.7 Phase D: AI&T, Launch | Assembly/integration/V&V; FRR/MRR |
+| [ch11](chapters/ch11-3-4-project-phase-a-concept-and-technology-development.md) | 3.4 Phase A: Concept & Tech Development | SEMP; mission architecture |
+| [ch12](chapters/ch12-3-5-project-phase-b-preliminary-design-and-technology-completion.md) | 3.5 Phase B: Preliminary Design | Phase B baseline; the PDR |
+| [ch13](chapters/ch13-3-6-project-phase-c-final-design-and-fabrication.md) | 3.6 Phase C: Final Design & Fabrication | Detailed design package; CDR |
+| [ch14](chapters/ch14-3-7-project-phase-d-system-assembly-integration-and-test-launch.md) | 3.7 Phase D: AI&T, Launch | Assembly/integration/V&V; FRR/MRR |
 | [ch15](chapters/ch15-3-8-project-phase-e-operations-and-sustainment.md) | 3.8 Phase E: Operations & Sustainment | Mission operations; sustainment |
 | [ch16](chapters/ch16-3-9-project-phase-f-closeout.md) | 3.9 Phase F: Closeout | Compliance matrix; NPR 7123.1 tailoring |
 | [ch17](chapters/ch17-4-1-stakeholder-expectations-definition.md) | 4.1 Stakeholder Expectations | NGOs; ConOps; MOEs |

@@ -629,7 +629,7 @@ Rules of construction:
 | nasa-hsi | cheatsheet.md (support file) | Cheatsheet / quick reference |
 | nasa-hsi | glossary.md (support file) | Glossary for the pack |
 | nasa-hsi | patterns.md (support file) | Patterns/practice heuristics |
-| nasa-se-handbook | ch05-2-6-human-systems-integration-hsi-in-the-se-pr.md | HSI overview in SE processes |
+| nasa-se-handbook | ch05-2-6-human-systems-integration-hsi-in-the-se-process.md | HSI overview in SE processes |
 
 ## 23. Logistics, Supportability & Sustainment
 
@@ -749,10 +749,10 @@ Rules of construction:
 | nasa-se-handbook | ch08-3-1-program-formulation.md | Program formulation |
 | nasa-se-handbook | ch09-3-2-program-implementation.md | Program implementation |
 | nasa-se-handbook | ch10-3-3-project-pre-phase-a-concept-studies.md | Pre-Phase A concept studies |
-| nasa-se-handbook | ch11-3-4-project-phase-a-concept-and-technology-dev.md | Phase A concept and technology development |
-| nasa-se-handbook | ch12-3-5-project-phase-b-preliminary-design-and-tec.md | Phase B preliminary design |
-| nasa-se-handbook | ch13-3-6-project-phase-c-final-design-and-fabricati.md | Phase C final design and fabrication |
-| nasa-se-handbook | ch14-3-7-project-phase-d-system-assembly-integratio.md | Phase D assembly/integration (also integration) |
+| nasa-se-handbook | ch11-3-4-project-phase-a-concept-and-technology-development.md | Phase A concept and technology development |
+| nasa-se-handbook | ch12-3-5-project-phase-b-preliminary-design-and-technology-completion.md | Phase B preliminary design |
+| nasa-se-handbook | ch13-3-6-project-phase-c-final-design-and-fabrication.md | Phase C final design and fabrication |
+| nasa-se-handbook | ch14-3-7-project-phase-d-system-assembly-integration-and-test-launch.md | Phase D assembly/integration (also integration) |
 | sebok | ch31-sebok-se-project-management.md | SE and project management relationship |
 
 ## 27. Supplier, Procurement & Acquisition

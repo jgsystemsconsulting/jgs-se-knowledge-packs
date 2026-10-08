@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "map_version": "1.22.0",
-  "generated_on": "2026-09-27",
+  "generated_on": "2026-10-08",
   "rules_of_construction": [
     "Every chapter in every pack under packs/<slug>/chapters/ is assigned to exactly one capability cluster (best fit).",
     "Cross-cutting chapters carry a remark noting the strong secondary fit.",
@@ -2800,7 +2800,7 @@
     },
     {
       "pack": "nasa-se-handbook",
-      "chapter": "ch05-2-6-human-systems-integration-hsi-in-the-se-pr.md",
+      "chapter": "ch05-2-6-human-systems-integration-hsi-in-the-se-process.md",
       "cluster": "Human Systems Integration / Human Factors",
       "is_support": false
     },
@@ -3400,25 +3400,25 @@
     },
     {
       "pack": "nasa-se-handbook",
-      "chapter": "ch11-3-4-project-phase-a-concept-and-technology-dev.md",
+      "chapter": "ch11-3-4-project-phase-a-concept-and-technology-development.md",
       "cluster": "Project/Program Management",
       "is_support": false
     },
     {
       "pack": "nasa-se-handbook",
-      "chapter": "ch12-3-5-project-phase-b-preliminary-design-and-tec.md",
+      "chapter": "ch12-3-5-project-phase-b-preliminary-design-and-technology-completion.md",
       "cluster": "Project/Program Management",
       "is_support": false
     },
     {
       "pack": "nasa-se-handbook",
-      "chapter": "ch13-3-6-project-phase-c-final-design-and-fabricati.md",
+      "chapter": "ch13-3-6-project-phase-c-final-design-and-fabrication.md",
       "cluster": "Project/Program Management",
       "is_support": false
     },
     {
       "pack": "nasa-se-handbook",
-      "chapter": "ch14-3-7-project-phase-d-system-assembly-integratio.md",
+      "chapter": "ch14-3-7-project-phase-d-system-assembly-integration-and-test-launch.md",
       "cluster": "Project/Program Management",
       "is_support": false
     },

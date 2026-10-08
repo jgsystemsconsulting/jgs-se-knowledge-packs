@@ -2290,7 +2290,7 @@
     },
     {
       "pack": "nasa-se-handbook",
-      "chapter": "ch05-2-6-human-systems-integration-hsi-in-the-se-pr.md",
+      "chapter": "ch05-2-6-human-systems-integration-hsi-in-the-se-process.md",
       "note": "HSI overview in SE processes"
     },
     {
@@ -2790,22 +2790,22 @@
     },
     {
       "pack": "nasa-se-handbook",
-      "chapter": "ch11-3-4-project-phase-a-concept-and-technology-dev.md",
+      "chapter": "ch11-3-4-project-phase-a-concept-and-technology-development.md",
       "note": "Phase A concept and technology development"
     },
     {
       "pack": "nasa-se-handbook",
-      "chapter": "ch12-3-5-project-phase-b-preliminary-design-and-tec.md",
+      "chapter": "ch12-3-5-project-phase-b-preliminary-design-and-technology-completion.md",
       "note": "Phase B preliminary design"
     },
     {
       "pack": "nasa-se-handbook",
-      "chapter": "ch13-3-6-project-phase-c-final-design-and-fabricati.md",
+      "chapter": "ch13-3-6-project-phase-c-final-design-and-fabrication.md",
       "note": "Phase C final design and fabrication"
     },
     {
       "pack": "nasa-se-handbook",
-      "chapter": "ch14-3-7-project-phase-d-system-assembly-integratio.md",
+      "chapter": "ch14-3-7-project-phase-d-system-assembly-integration-and-test-launch.md",
       "note": "Phase D assembly/integration (also integration)"
     },
     {
