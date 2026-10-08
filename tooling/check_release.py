@@ -53,6 +53,9 @@ standard requires for this repo and exits non-zero on any failure:
      least 30 lines, and every chNN token in each SKILL.md ## Topic Index
      (en-dash ranges expanded) resolves to an on-disk chapter; content packs
      only, via tooling/check_pack_quality.check_pack.
+  17. Tracked sources/ emptiness ([sources-untracked]): git ls-files -z scoped
+     to sources/ must return no path. Local only, because CI does not execute
+     repository code.
 
 stdlib only. This is a LOCAL/trusted gate and may run repo code; the CI workflow
 (.github/workflows/validate.yml) inlines its own checks and never executes repo code.
@@ -894,6 +897,33 @@ def check_routing_map(packs_root: Path) -> list[str]:
     return errs
 
 
+def check_sources_untracked(root: Path) -> list[str]:
+    """Fail when any path under sources/ is tracked.
+
+    Reads git index state, not file content, so a force-added path that
+    .gitignore would otherwise hide still fails. Fails closed when git is
+    missing or errors: this check's subject is git state, unlike the PASS
+    receipt, which degrades to @ no-git. Local only; CI does not execute
+    repository code.
+    """
+    tag = "[sources-untracked]"
+    try:
+        proc = subprocess.run(
+            ["git", "ls-files", "-z", "sources/"],
+            cwd=root, capture_output=True, text=True, check=True,
+        )
+    except Exception as e:
+        return [f"{tag} git ls-files failed: {e}"]
+    tracked = [p for p in proc.stdout.split("\0") if p]
+    if not tracked:
+        return []
+    shown = ", ".join(tracked[:5])
+    return [
+        f"{tag} {len(tracked)} tracked path(s) under sources/: "
+        f"{shown} ({len(tracked)} total)"
+    ]
+
+
 def fail(errs: list[str], msg: str) -> None:
     errs.append(msg)
 
@@ -1134,6 +1164,10 @@ def main() -> int:
                 fail(errs, f"[pack-quality:{pack.name}] {e}")
     except Exception as e:
         fail(errs, f"[pack-quality] check_pack_quality failed to run: {e}")
+
+    # 17. tracked sources/ emptiness ([sources-untracked]): git index state,
+    #     local only. A force-add survives .gitignore, so only ls-files sees it.
+    errs.extend(check_sources_untracked(ROOT))
 
     # 6. SKILLS.md entry count == pack count
     skills = (ROOT / "SKILLS.md").read_text(encoding="utf-8") if (ROOT / "SKILLS.md").is_file() else ""
