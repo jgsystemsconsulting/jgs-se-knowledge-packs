@@ -15,6 +15,9 @@ standard requires for this repo and exits non-zero on any failure:
   4. Version single-source agreement: plugin.json == CHANGELOG top ==
      RELEASE-INFO.txt == the two website product YAMLs under docs/products/website.
      Plus [site-version]: docs/index.html softwareVersion, masthead REV, and footer Rev equal RELEASE-INFO.txt.
+     Plus [pack-count]: an "N packs" claim in either website YAML must equal the
+     live content-pack count from inventory_pack_slugs (signposts and orchestrators
+     excluded). Local only; CI does not re-implement the inventory.
   5. Every pack passes tooling/validate_pack.py (structure + licence tier).
   6. SKILLS.md entry count == number of shipped packs.
   7. JGSC + SPDX header present on authored files (NOT pack content).
@@ -963,15 +966,32 @@ def main() -> int:
     # 4a. CR-01: the two website product YAMLs (RR-B-19 website sources) must carry
     # the release version too. Scoped to exactly these two paths; packs/*/PACK.yaml
     # uses source_version (different class) and docs carry keep-class history.
+    # [pack-count]: the same two files are scanned for "N packs" claims. Each
+    # integer must equal the live content-pack count. Local only: CI does not
+    # execute repository code, so it cannot call inventory_pack_slugs, and this
+    # pattern is deliberately not copied into validate.yml.
     expected = versions["RELEASE-INFO.txt"]
-    for rel in ("docs/products/website/01-jgs-se-knowledge-packs.yaml",
-                "docs/products/website/catalog.yaml"):
+    content, _signposts, _orchestrators, inv_errs = inventory_pack_slugs(
+        ROOT / "packs", tag="[pack-count]"
+    )
+    for msg in inv_errs:
+        fail(errs, msg)
+    website_yamls = ("docs/products/website/01-jgs-se-knowledge-packs.yaml",
+                     "docs/products/website/catalog.yaml")
+    for rel in website_yamls:
         body = (ROOT / rel).read_text(encoding="utf-8", errors="ignore") if (ROOT / rel).is_file() else ""
         m = re.search(r'version:\s*"([0-9]+\.[0-9]+\.[0-9]+)"', body)
         got = m.group(1) if m else ""
         if got != expected:
             fail(errs, f"[version] {rel}: website YAML version '{got}' "
                        f"!= RELEASE-INFO '{expected}'")
+        if inv_errs:
+            continue
+        for cm in re.finditer(r"(\d+)\s+packs\b", body, re.I):
+            claimed = int(cm.group(1))
+            if claimed != len(content):
+                fail(errs, f"[pack-count] {rel}: claims {claimed} packs, "
+                           f"live content count is {len(content)}")
     # [site-version]: docs/index.html loci must equal RELEASE-INFO (ported from jgs-lit-memory).
     page = (ROOT / "docs/index.html").read_text(encoding="utf-8") if (ROOT / "docs/index.html").is_file() else ""
     for name, pat in (("softwareVersion", r'"softwareVersion":\s*"(\d+\.\d+\.\d+)"'),

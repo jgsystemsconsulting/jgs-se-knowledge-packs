@@ -13,7 +13,7 @@
 #
 # Coverage map vs the local gate (run `python tooling/check_release.py` before
 # tagging; CI green is not release-ready):
-#   Version single-source                      twins check_release 4 + 4a (complete port)
+#   Version single-source                      twins check_release 4 + 4a version part (pack-count claim check is local-only)
 #   SKILLS index count                         twins check_release 6 (complete port)
 #   Chapter basename overlap                   twins check_release 8, shared tooling/overlap-whitelist.txt
 #   Map and classification data invariants     pure-data subset of check_release 9 + 10
@@ -26,8 +26,10 @@
 # CI does not cover, and why: full validate_pack (non-trivial parser; a fork
 # invites permanent drift), RR-B-30 packs.html regeneration equality (needs the
 # generator), full map threshold and note logic, full classification semantics
-# beyond set coverage, and generate_capability_map --check replay (definitionally
-# generator execution).
+# beyond set coverage, generate_capability_map --check replay (definitionally
+# generator execution), and website YAML feature titles claiming "N packs"
+# (local check 4a only: the count comes from inventory_pack_slugs, and CI does
+# not execute repository code).
 #
 # Honest residual on the overlap whitelist: tooling/overlap-whitelist.txt is
 # PR-editable, so a PR can relax that gate in both places at once. That is the
