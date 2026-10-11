@@ -1,0 +1,517 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "slug": "faa-rma",
+      "publisher": "FAA",
+      "document": "FAA-HDBK-006D (8 October 2020)",
+      "version": "FAA-HDBK-006D (8 October 2020)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "nasa-pra",
+      "publisher": "NASA",
+      "document": "Second Edition (December 2011)",
+      "version": "Second Edition (December 2011)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "nasa-se-expanded",
+      "publisher": "NASA",
+      "document": "SP-2016-6105-SUPPL Vol 1 (March 2016)",
+      "version": "SP-2016-6105-SUPPL Vol 1 (March 2016)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "nist-cps",
+      "publisher": "NIST (US Department of Commerce)",
+      "document": "Version 1.0 (June 2017)",
+      "version": "Version 1.0 (June 2017)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "digital-systems-engineering",
+      "publisher": "arXiv (Old Dominion University)",
+      "document": "arXiv:2002.11672 (2020)",
+      "version": "arXiv:2002.11672 (2020)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "nist-800-37",
+      "publisher": "NIST (US Department of Commerce)",
+      "document": "Revision 2 (December 2018)",
+      "version": "Revision 2 (December 2018)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "nist-sse",
+      "publisher": "NIST (US Department of Commerce)",
+      "document": "Vol 1 Rev 1 (2022) + Vol 2 Rev 1 (2021)",
+      "version": "Vol 1 Rev 1 (2022) + Vol 2 Rev 1 (2021)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "gao-tra",
+      "publisher": "US Government Accountability Office (GAO)",
+      "document": "GAO-20-48G (Jan 2020, reissued with revisions 11 Feb 2020)",
+      "version": "GAO-20-48G (Jan 2020, reissued 11 Feb 2020)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "dau-se-guidebook",
+      "publisher": "US Department of Defense (Office of the Under Secretary of Defense for Research and Engineering)",
+      "document": "February 2022 (DOPSR Case # 22-S-0595)",
+      "version": "February 2022 (DOPSR Case # 22-S-0595)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "sebok",
+      "publisher": "BKCASE Project (Trustees of the Stevens Institute of Technology)",
+      "document": "v2.14 (released 2026-05-18)",
+      "version": "v2.14 (released 2026-05-18)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "nasa-se-handbook",
+      "publisher": "NASA",
+      "document": "Rev 2 (2016)",
+      "version": "Rev 2 (2016)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "nist-ai-rmf",
+      "publisher": "NIST (US Department of Commerce)",
+      "document": "1.0 (January 2023)",
+      "version": "1.0 (January 2023)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "nist-ssdf",
+      "publisher": "NIST (US Department of Commerce)",
+      "document": "1.1 (February 2022)",
+      "version": "1.1 (February 2022)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "nist-csf",
+      "publisher": "NIST (US Department of Commerce)",
+      "document": "2.0 (February 2024)",
+      "version": "2.0 (February 2024)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "nasa-npr-7123",
+      "publisher": "NASA",
+      "document": "Rev D w/Change 2 (2023)",
+      "version": "Rev D w/Change 2 (2023)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "nasa-risk",
+      "publisher": "NASA",
+      "document": "v1.0 (November 2011)",
+      "version": "v1.0 (November 2011)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "nasa-system-safety",
+      "publisher": "NASA",
+      "document": "v1.0 (November 2014)",
+      "version": "v1.0 (November 2014)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "nasa-hsi",
+      "publisher": "NASA",
+      "document": "(November 2015)",
+      "version": "(November 2015)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "mil-std-882",
+      "publisher": "US Department of Defense",
+      "document": "Rev E w/Change 1 (2023)",
+      "version": "Rev E w/Change 1 (2023)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "requirements-writing",
+      "publisher": "JG Systems Consulting Ltd. (original synthesis)",
+      "document": "2026",
+      "version": "2026",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "dodaf",
+      "publisher": "US Department of Defense",
+      "document": "2.02 Change 1 (2015)",
+      "version": "2.02 Change 1 (2015)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "eu-ai-act",
+      "publisher": "European Union (Official Journal)",
+      "document": "Regulation (EU) 2024/1689 (13 June 2024)",
+      "version": "Regulation (EU) 2024/1689",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "faa-sem",
+      "publisher": "US Federal Aviation Administration (FAA)",
+      "document": "Version 1.0.1 (2014-06-19)",
+      "version": "Version 1.0.1 (2014-06-19)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "nasa-schedule",
+      "publisher": "NASA",
+      "document": "Revision 2 (Effective 2024-03-15)",
+      "version": "Revision 2 (Effective 2024-03-15)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "dod-mosa",
+      "publisher": "US Department of Defense (Office of the Under Secretary of Defense for Research and Engineering)",
+      "document": "February 2025 (DOPSR 25-T-1210)",
+      "version": "February 2025 (DOPSR 25-T-1210)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "nasa-rm-standard",
+      "publisher": "NASA",
+      "document": "Revision A (2017-06-13), superseding NASA-STD-8729.1",
+      "version": "Revision A (2017-06-13)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "dod-rio",
+      "publisher": "US Department of Defense (Office of the Under Secretary of Defense for Research and Engineering)",
+      "document": "September 2023, Incorporating Change 2.2 (December 2023)",
+      "version": "September 2023, Incorporating Change 2.2 (December 2023)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "dod-digital-engineering",
+      "publisher": "US Department of Defense (Office of the Deputy Assistant Secretary of Defense for Systems Engineering, ODASD(SE) / OUSD R&E)",
+      "document": "June 2018",
+      "version": "June 2018",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "nasa-de-acquisition",
+      "publisher": "NASA, Office of the NASA Chief Engineer",
+      "document": "Baseline (2020-04-01), superseding NASA-HDBK-0008",
+      "version": "Baseline (2020-04-01), superseding NASA-HDBK-0008",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "nasa-fault-management",
+      "publisher": "NASA",
+      "document": "Draft 2 (April 2, 2012)",
+      "version": "Draft 2 (April 2, 2012)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "faa-system-safety",
+      "publisher": "FAA (US Department of Transportation, Federal Aviation Administration)",
+      "document": "December 30, 2000",
+      "version": "December 30, 2000",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "faa-hf-std",
+      "publisher": "FAA (Federal Aviation Administration, US Department of Transportation)",
+      "document": "HF-STD-001B (December 30, 2016)",
+      "version": "HF-STD-001B (December 30, 2016)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "dod-mq-bok",
+      "publisher": "OUSD(R&E) Systems Engineering and Architecture",
+      "document": "Version 3.0 (July 2025)",
+      "version": "Version 3.0 (July 2025)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "gao-cost",
+      "publisher": "GAO",
+      "document": "GAO-20-195G (March 2020)",
+      "version": "GAO-20-195G (March 2020)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "gao-schedule",
+      "publisher": "US Government Accountability Office (GAO)",
+      "document": "GAO-16-89G (December 2015)",
+      "version": "GAO-16-89G (December 2015)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "nasa-ceh",
+      "publisher": "NASA",
+      "document": "v4.0 (February 2015)",
+      "version": "v4.0 (February 2015)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "nasa-systems-modeling",
+      "publisher": "NASA (Office of the NASA Chief Engineer)",
+      "document": "Rev A (2025-03-12)",
+      "version": "Rev A (2025-03-12)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "dod-te-guidebook",
+      "publisher": "US Department of Defense, Office of the Under Secretary of Defense for Research and Engineering (OUSD R&E)",
+      "document": "August 2022",
+      "version": "August 2022",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "faa-ams-vv",
+      "publisher": "FAA",
+      "document": "Version 3.0 (April 2017)",
+      "version": "Version 3.0 (April 2017)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "gao-agile",
+      "publisher": "US Government Accountability Office (GAO)",
+      "document": "GAO-24-105506 (Nov 2023, rev. Dec 15 2023)",
+      "version": "GAO-24-105506 (Nov 2023, rev. Dec 15 2023)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "mil-hdbk-61",
+      "publisher": "US Department of Defense",
+      "document": "61B, 7 April 2020 (cataloged with Change 1, 15 Aug 2025)",
+      "version": "61B, 7 April 2020 (cataloged with Change 1, 15 Aug 2025)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "mrl-deskbook",
+      "publisher": "OSD Manufacturing Technology Program with the Joint Service/Industry MRL Working Group",
+      "document": "Version 2022 (1 October 2022 update)",
+      "version": "Version 2022 (1 October 2022 update)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "faa-req-handbook",
+      "publisher": "US Department of Transportation, Federal Aviation Administration (DOT/FAA)",
+      "document": "June 2009 (Final Report)",
+      "version": "DOT/FAA/AR-08/32 (June 2009, Final Report)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "sd-22-dmsms",
+      "publisher": "Defense Standardization Program Office (DSPO)",
+      "document": "FY24 Working Draft (April 2024)",
+      "version": "FY24 Working Draft (April 2024)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "nasa-npr-7150",
+      "publisher": "NASA",
+      "document": "NPR 7150.2D (Effective March 08, 2022)",
+      "version": "NPR 7150.2D (Effective March 08, 2022)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "nist-stat-handbook",
+      "publisher": "NIST (US Department of Commerce) with SEMATECH",
+      "document": "2012 ed., updated October 2022 (NIST HB 151)",
+      "version": "2012 ed., updated October 2022 (NIST HB 151)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "nist-800-171",
+      "publisher": "NIST",
+      "document": "Rev. 3, final 2024-05-14 (DOI 10.6028/NIST.SP.800-171r3)",
+      "version": "Rev. 3, final 2024-05-14 (DOI 10.6028/NIST.SP.800-171r3)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "nist-800-61",
+      "publisher": "NIST",
+      "document": "Rev. 3, final 2025-04-03 (DOI 10.6028/NIST.SP.800-61r3)",
+      "version": "Rev. 3, final 2025-04-03 (DOI 10.6028/NIST.SP.800-61r3)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "cisa-cpg",
+      "publisher": "CISA",
+      "document": "CPG 2.0 (2024-25 refresh, aligned to NIST CSF 2.0 incl. GOVERN)",
+      "version": "CPG 2.0 (2024-25 refresh, aligned to NIST CSF 2.0 incl. GOVERN)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "doe-sem",
+      "publisher": "US Department of Energy",
+      "document": "SEM3 (SEM3_1231.pdf)",
+      "version": "SEM3 (SEM3_1231.pdf)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "mil-hdbk-338",
+      "publisher": "US Department of Defense",
+      "document": "MIL-HDBK-338B, 1 Oct 1998 (Notice 2, 2007)",
+      "version": "MIL-HDBK-338B, 1 Oct 1998 (Notice 2, 2007)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "mil-hdbk-516",
+      "publisher": "US Department of Defense",
+      "document": "516C, 12 Dec 2014 (Change 1, 2016)",
+      "version": "516C, 12 Dec 2014 (Change 1, 2016)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "nasa-ms-7009",
+      "publisher": "NASA",
+      "document": "STD-7009B approved 2024-03-05 + HDBK-7009B (2026-02-03)",
+      "version": "STD-7009B approved 2024-03-05 + HDBK-7009B (2026-02-03)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "doe-o-413-3",
+      "publisher": "US Department of Energy",
+      "document": "O 413.3C approved 2026-08-05 (cancels O 413.3B Chg 7, 2023-06-21)",
+      "version": "O 413.3C approved 2026-08-05 (cancels O 413.3B Chg 7, 2023-06-21)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "dod-vva-rpg",
+      "publisher": "US Department of Defense (OUSD(R&E) CTO / M&S Office)",
+      "document": "RPG web edition (no dated rev; retrieved 2026-08-16)",
+      "version": "RPG web edition (no dated rev; retrieved 2026-08-16)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "faa-std-025",
+      "publisher": "FAA",
+      "document": "Rev F (2007-11-30, everyspec mirror; ROSAP rev E blocked at build)",
+      "version": "Rev F (2007-11-30, everyspec mirror; ROSAP rev E blocked at build)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "dote-te-guidebook",
+      "publisher": "US Department of Defense (DOT&E)",
+      "document": "8.02 (Aug 2022, DMI mirror)",
+      "version": "8.02 (Aug 2022, DMI mirror)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "dafman-63-119",
+      "publisher": "US Department of the Air Force",
+      "document": "DAFMAN 63-119, 15 Apr 2021",
+      "version": "DAFMAN 63-119, 15 Apr 2021",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "federal-bca",
+      "publisher": "OMB",
+      "document": "A-94 revised 2023-11-09 (whitehouse.gov PDF retrieved 2026-08-16); Army CBA Guide NOT included (fetch failed)",
+      "version": "Circular A-94 (2023-11-09) only; Army CBA excluded at build (source unreachable)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "mil-std-881f",
+      "publisher": "US Department of Defense",
+      "document": "MIL-STD-881F, 13 May 2022",
+      "version": "MIL-STD-881F, 13 May 2022",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "mil-std-40051",
+      "publisher": "US Department of Defense (DLA)",
+      "document": "MIL-STD-40051-2C, 15 DEC 2015 (-2C slice of split family)",
+      "version": "MIL-STD-40051-2C, 15 DEC 2015",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "nasa-std-8719-14",
+      "publisher": "NASA",
+      "document": "NASA-STD-8719.14C (Approved 2021-11-05)",
+      "version": "NASA-STD-8719.14C (Approved 2021-11-05)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "is-gps-200n",
+      "publisher": "US Space Force / Space Systems Command (MilComm & PNT)",
+      "document": "IS-GPS-200 Rev N (cover date 01-AUG-2022; public-release revision record)",
+      "version": "IS-GPS-200 Rev N (cover date 01-AUG-2022; public-release revision record)",
+      "last_checked": "",
+      "hint": ""
+    },
+    {
+      "slug": "nhtsa-vehicle",
+      "publisher": "NHTSA (US Department of Transportation)",
+      "document": "NHTSA Cybersecurity Best Practices for the Safety of Modern Vehicles (Updated 2022, final, 24 pp); NHTSA Automated Driving Systems 2.0: A Vision for Safety (2017, 36 pp); 49 CFR Part 571 sections 102, 103, 105, 108, 126, 127, 135, 141, 201, 208, 209, 210, 214, 226, 301, 305 at eCFR versioner date 2025-01-01",
+      "version": "Cyber 2022 final; ADS 2.0 (2017); 49 CFR Part 571 selections at eCFR 2025-01-01",
+      "last_checked": "",
+      "hint": ""
+    }
+  ]
+}
