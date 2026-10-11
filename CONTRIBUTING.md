@@ -27,6 +27,10 @@ and confirm:
 
 If a source is merely "free to download," that is not enough. Free ≠ redistributable.
 
+Source freshness is checked monthly against the revision each live pack was built
+from; see [docs/SOURCE-FRESHNESS.md](docs/SOURCE-FRESHNESS.md). A rebuild stays a
+maintainer decision, made from that report.
+
 ## Build the pack
 
 ```bash
