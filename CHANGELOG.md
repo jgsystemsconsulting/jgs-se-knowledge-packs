@@ -24,6 +24,12 @@ All notable changes to this project are documented here. Format follows
 
 - tooling: `check_pack_quality` gate (orphan chapter files, 30-line chapter floor, Topic Index resolution with en-dash range expansion) as check_release check 16, a probe (`tooling/test_pack_quality.py`), and the ninth CI step "Pack content quality" pinned with parity literals in `test_ci_gate.py`. PACK-SPEC now states the real CI/local split.
 
+## [1.22.1]: 2026-10-11
+
+### Added
+
+- Source freshness watch: `docs/source-watchlist.json` (URL-free, one entry per live catalog pack), `tooling/check_source_watch.py` (validate and record modes, stdlib only), and check 18 of the local release gate (docstring entry and `.zcode` scan skip ship in 1.22.1; the check call itself wires up after the first calibration run). Reports land in `.zcode/source-watch/`. The watch never edits pack content; a rebuild stays a maintainer decision. See `docs/SOURCE-FRESHNESS.md`.
+
 ## [1.22.0]: 2026-09-27
 
 ### Added
