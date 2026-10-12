@@ -111,6 +111,7 @@ Output goes in the reply unless the user names a file. A deliverable with no mat
 | GPS & GNSS interfaces | GPS, GNSS, NAVSTAR, space segment interface, ranging signal | `is-gps-200n`, `faa-std-025` |
 | Medical device software | FDA, QMSR, 510(k), device software, SaMD, eSTAR | `fda-med-device` |
 | Avionics software assurance | DO-178C, DO-254, 8110.49, airborne software, AEH, conformity | `faa-8110-49` |
+| Defence safety management | JSP 815, defence safety, SMS, safety case, assurance | `jsp-815` |
 
 ### Agency contexts
 | Agency | Keywords | Packs |
@@ -146,6 +147,7 @@ Output goes in the reply unless the user names a file. A deliverable with no mat
 | `requirements-writing` | Original guidance (CC BY 4.0); cited methods not reproduced |
 | `digital-systems-engineering` | CC BY 4.0 |
 | `eu-ai-act` | EU Official Journal — reproduction authorised with source acknowledgement (Decision 2011/833/EU) |
+| `jsp-815` | Open Government Licence v3.0 |
 <!-- ROUTING-MAP:END -->
 
 ## Host modes

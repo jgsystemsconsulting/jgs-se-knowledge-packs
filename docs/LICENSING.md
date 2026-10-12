@@ -54,6 +54,7 @@ derivative works**:
   modify, and distribute modified versions, provided the copyright notice is reproduced,
   modifications are noted, and the trademarked spec name is not applied to the modified
   work. Our packs comply with all three.
+- **Open Government Licence v3.0** (JSP 815): grants a worldwide, royalty-free, perpetual, non-exclusive right to copy, publish, distribute, transmit, adapt, and exploit the information commercially, on condition of attribution, and grants no right to imply official status or endorsement.
 
 In every Tier-2 case, reconstitution is **the licensed use, not a grey area**.
 

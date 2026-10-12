@@ -771,6 +771,19 @@ Third-party source attributions (one block per shipped content pack)
            ARP4761A by reference; this pack reproduces none of that text. See
            packs/faa-8110-49/LICENSE.
 
+[pack: jsp-815]
+  Source : JSP 815 Defence Safety Management System V1.3 (Framework, Elements
+           1-12, Annexes A-G, published 2026-09-01); Annex H Audit Manual V1.2
+           (published 2026-09-01). Originating body: Directorate of Defence
+           Safety, Ministry of Defence. (c) Crown copyright.
+  Author : Ministry of Defence
+  Licence: Open Government Licence v3.0
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : attribution required. Contains public sector information licensed
+           under the Open Government Licence v3.0. The Ministry of Defence does
+           not endorse this pack. ISO 45001 is named and not reproduced. See
+           packs/jsp-815/LICENSE.
+
 -----------------------------------------------------------------------------------
 The build pipeline uses the jgs-reference-skill extraction engine (MIT License,
 © JG Systems Consulting Ltd; a fork of book-to-skill, © the book-to-skill authors).
