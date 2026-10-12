@@ -528,6 +528,14 @@
       "version": "FAA Order 8110.49A, Software Approval Guidelines (effective 2018-03-29, cancels 8110.49 Change 2 dated 2017-04-10); AC 20-115D, Airborne Software Development Assurance Using EUROCAE ED-12() and RTCA DO-178() (issued 2017-07-21); AC 20-152A, Development Assurance for Airborne Electronic Hardware (issued 2022-10-07); AC 00-69, Best Practices for Airborne Software Development Assurance Using EUROCAE ED-12() and RTCA DO-178() (issued 2017-07-21)",
       "last_checked": "",
       "hint": ""
+    },
+    {
+      "slug": "jsp-815",
+      "publisher": "Ministry of Defence",
+      "document": "JSP 815 Defence Safety Management System V1.3 (Framework, Elements 1-12, Annexes A-G, published 2026-09-01); Annex H Audit Manual V1.2 (published 2026-09-01)",
+      "version": "JSP 815 Defence Safety Management System V1.3 (Framework, Elements 1-12, Annexes A-G, published 2026-09-01); Annex H Audit Manual V1.2 (published 2026-09-01)",
+      "last_checked": "",
+      "hint": ""
     }
   ]
 }

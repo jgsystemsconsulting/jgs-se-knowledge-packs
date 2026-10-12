@@ -41,22 +41,22 @@ Rules of construction:
 | 15. Opportunity/Benefit Management | 8 |
 | 16. Decision Analysis & Trade Studies | 5 |
 | 17. Technical Planning & Work Breakdown | 13 |
-| 18. Measurement & Technical Assessment | 36 |
+| 18. Measurement & Technical Assessment | 37 |
 | 19. Quality Assurance & Process Compliance | 4 |
-| 20. Safety, Reliability & Survivability | 93 |
+| 20. Safety, Reliability & Survivability | 94 |
 | 21. Cybersecurity & Security Engineering | 73 |
 | 22. Human Systems Integration / Human Factors | 26 |
 | 23. Logistics, Supportability & Sustainment | 12 |
-| 24. Operations, Maintenance & Disposal | 13 |
-| 25. Training & Documentation Delivery | 12 |
+| 24. Operations, Maintenance & Disposal | 14 |
+| 25. Training & Documentation Delivery | 13 |
 | 26. Project/Program Management | 67 |
-| 27. Supplier, Procurement & Acquisition | 9 |
+| 27. Supplier, Procurement & Acquisition | 10 |
 | 28. Stakeholder Engagement & Needs | 3 |
-| 29. Governance, Reviews, Gates & Control Points | 23 |
-| 30. Standards, Tailoring & Process Models | 43 |
+| 29. Governance, Reviews, Gates & Control Points | 24 |
+| 30. Standards, Tailoring & Process Models | 46 |
 | 31. Specialty Engineering | 7 |
-| 32. Assurance & System Assurance | 9 |
-| **Total** | **675** |
+| 32. Assurance & System Assurance | 10 |
+| **Total** | **685** |
 
 ## 1. Systems Thinking & Fundamentals
 
@@ -428,6 +428,7 @@ Rules of construction:
 | nist-stat-handbook | cheatsheet.md (support file) | Cheatsheet / quick reference |
 | nist-stat-handbook | glossary.md (support file) | Glossary for the pack |
 | nist-stat-handbook | patterns.md (support file) | Patterns/practice heuristics |
+| jsp-815 | ch09-performance-incidents-communication.md | Performance, incident, and communication notes from JSP 815 |
 
 ## 19. Quality Assurance & Process Compliance
 
@@ -535,6 +536,7 @@ Rules of construction:
 | nhtsa-vehicle | ch05-nhtsa-fmvss-brakes-lighting.md | FMVSS brake, stability, lighting, and driver-present selections |
 | nhtsa-vehicle | ch06-nhtsa-fmvss-fuel-ev.md | FMVSS fuel system integrity and EV electrical selections |
 | faa-8110-49 | ch13-design-level-error-handling.md | Design-level error handling notes from FAA airborne software guidance |
+| jsp-815 | ch05-risk-assessment-and-safety-cases.md | Risk assessment and safety-case notes from JSP 815 |
 
 ## 21. Cybersecurity & Security Engineering
 
@@ -679,6 +681,7 @@ Rules of construction:
 | nasa-std-8719-14 | ch06-reentry-surviving-debris.md | Reentry surviving-debris casualty risk and controlled-reentry keep-out |
 | nasa-std-8719-14 | ch07-special-classes-odar-eomp.md | Special-class debris limits plus ODAR/EOMP report governance (also Governance) |
 | sebok | ch18-sebok-system-maintenance.md | System maintenance (also sustainment) |
+| jsp-815 | ch08-equipment-and-infrastructure.md | Equipment and infrastructure safety notes from JSP 815 |
 
 ## 25. Training & Documentation Delivery
 
@@ -696,6 +699,7 @@ Rules of construction:
 | mil-std-40051 | cheatsheet.md (support file) | Cheatsheet / quick reference |
 | mil-std-40051 | glossary.md (support file) | Glossary for the pack |
 | mil-std-40051 | patterns.md (support file) | Patterns/practice heuristics |
+| jsp-815 | ch07-competence-and-delegation.md | Competence and delegation notes from JSP 815 |
 
 ## 26. Project/Program Management
 
@@ -782,6 +786,7 @@ Rules of construction:
 | nasa-npr-7123 | ch04-contracted-projects.md | Requirements flow to contracted projects |
 | faa-8110-49 | ch09-aeh-cots-ip.md | AEH COTS intellectual-property notes from AC 20-152A |
 | faa-8110-49 | ch10-cots-devices-and-cbas.md | COTS device and CBAS notes from the FAA airborne hardware guidance |
+| jsp-815 | ch06-supervision-contracting-control.md | Supervision, contracting, and control notes from JSP 815 |
 
 ## 28. Stakeholder Engagement & Needs
 
@@ -818,6 +823,7 @@ Rules of construction:
 | nist-csf | ch02-govern-gv.md | Govern function (cyber governance) |
 | faa-8110-49 | ch02-software-review-process.md | FAA software review process under Order 8110.49A, certification-staff notes |
 | faa-8110-49 | ch03-level-of-faa-involvement.md | Level of FAA involvement decisions under Order 8110.49A |
+| jsp-815 | ch03-leadership-and-organisation.md | Defence safety leadership and organisation notes from JSP 815 |
 
 ## 30. Standards, Tailoring & Process Models
 
@@ -866,6 +872,9 @@ Rules of construction:
 | fda-med-device | ch12-submissions-estar.md | eSTAR program synthesis, program page content current 2026-09-21, page not copied |
 | faa-8110-49 | ch01-airborne-approval-map.md | FAA airborne approval map from Order 8110.49A and the three ACs; standards named, not quoted |
 | faa-8110-49 | ch05-do-178c-recognition-and-transition.md | AC 20-115D recognition of ED-12C and DO-178C, standard named and not quoted |
+| jsp-815 | ch01-defence-safety-jsp-map.md | JSP 815 map of the Defence SMS Framework and Direction and Guidance; ISO 45001 named, not quoted |
+| jsp-815 | ch02-sms-structure-and-assurance-stages.md | Defence SMS structure and assurance stages from JSP 815 |
+| jsp-815 | ch04-legislation-and-exemptions.md | Legislation and exemption notes from JSP 815; statute named, not reproduced as a substitute |
 
 ## 31. Specialty Engineering
 
@@ -892,3 +901,4 @@ Rules of construction:
 | nasa-system-safety | ch07-risc-evaluation.md | Safety case evaluation |
 | nist-ai-rmf | ch03-trustworthiness-characteristics.md | Trustworthiness characteristics of AI |
 | faa-8110-49 | ch07-aeh-custom-devices.md | AEH custom-device assurance notes from AC 20-152A, DO-254 named and not quoted |
+| jsp-815 | ch10-assurance-and-audit.md | Assurance and audit notes from JSP 815 Annex H V1.2 |

@@ -732,6 +732,17 @@
       "commercial_use": true,
       "chapters": 13,
       "status": "live"
+    },
+    {
+      "slug": "jsp-815",
+      "title": "JSP 815: Defence Safety Management System (Framework and Direction and Guidance)",
+      "publisher": "Ministry of Defence",
+      "source_version": "JSP 815 Defence Safety Management System V1.3 (Framework, Elements 1-12, Annexes A-G, published 2026-09-01); Annex H Audit Manual V1.2 (published 2026-09-01)",
+      "license": "Open Government Licence v3.0",
+      "license_tier": 2,
+      "commercial_use": true,
+      "chapters": 10,
+      "status": "live"
     }
   ],
   "planned": [

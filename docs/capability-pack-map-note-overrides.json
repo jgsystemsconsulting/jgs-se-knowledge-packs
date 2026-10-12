@@ -3377,6 +3377,56 @@
       "pack": "faa-8110-49",
       "chapter": "ch13-design-level-error-handling.md",
       "note": "Design-level error handling notes from FAA airborne software guidance"
+    },
+    {
+      "pack": "jsp-815",
+      "chapter": "ch01-defence-safety-jsp-map.md",
+      "note": "JSP 815 map of the Defence SMS Framework and Direction and Guidance; ISO 45001 named, not quoted"
+    },
+    {
+      "pack": "jsp-815",
+      "chapter": "ch02-sms-structure-and-assurance-stages.md",
+      "note": "Defence SMS structure and assurance stages from JSP 815"
+    },
+    {
+      "pack": "jsp-815",
+      "chapter": "ch03-leadership-and-organisation.md",
+      "note": "Defence safety leadership and organisation notes from JSP 815"
+    },
+    {
+      "pack": "jsp-815",
+      "chapter": "ch04-legislation-and-exemptions.md",
+      "note": "Legislation and exemption notes from JSP 815; statute named, not reproduced as a substitute"
+    },
+    {
+      "pack": "jsp-815",
+      "chapter": "ch05-risk-assessment-and-safety-cases.md",
+      "note": "Risk assessment and safety-case notes from JSP 815"
+    },
+    {
+      "pack": "jsp-815",
+      "chapter": "ch06-supervision-contracting-control.md",
+      "note": "Supervision, contracting, and control notes from JSP 815"
+    },
+    {
+      "pack": "jsp-815",
+      "chapter": "ch07-competence-and-delegation.md",
+      "note": "Competence and delegation notes from JSP 815"
+    },
+    {
+      "pack": "jsp-815",
+      "chapter": "ch08-equipment-and-infrastructure.md",
+      "note": "Equipment and infrastructure safety notes from JSP 815"
+    },
+    {
+      "pack": "jsp-815",
+      "chapter": "ch09-performance-incidents-communication.md",
+      "note": "Performance, incident, and communication notes from JSP 815"
+    },
+    {
+      "pack": "jsp-815",
+      "chapter": "ch10-assurance-and-audit.md",
+      "note": "Assurance and audit notes from JSP 815 Annex H V1.2"
     }
   ]
 }
