@@ -721,6 +721,17 @@
       "commercial_use": true,
       "chapters": 12,
       "status": "live"
+    },
+    {
+      "slug": "faa-8110-49",
+      "title": "FAA Airborne Software and AEH Approval Guidance",
+      "publisher": "Federal Aviation Administration",
+      "source_version": "FAA Order 8110.49A, Software Approval Guidelines (effective 2018-03-29, cancels 8110.49 Change 2 dated 2017-04-10); AC 20-115D, Airborne Software Development Assurance Using EUROCAE ED-12() and RTCA DO-178() (issued 2017-07-21); AC 20-152A, Development Assurance for Airborne Electronic Hardware (issued 2022-10-07); AC 00-69, Best Practices for Airborne Software Development Assurance Using EUROCAE ED-12() and RTCA DO-178() (issued 2017-07-21)",
+      "license": "Public Domain (US Government work, 17 U.S.C. § 105)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 13,
+      "status": "live"
     }
   ],
   "planned": [

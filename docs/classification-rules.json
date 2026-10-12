@@ -4027,6 +4027,84 @@
       "chapter": "ch12-submissions-estar.md",
       "cluster": "Standards, Tailoring & Process Models",
       "is_support": false
+    },
+    {
+      "pack": "faa-8110-49",
+      "chapter": "ch01-airborne-approval-map.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "faa-8110-49",
+      "chapter": "ch02-software-review-process.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": false
+    },
+    {
+      "pack": "faa-8110-49",
+      "chapter": "ch03-level-of-faa-involvement.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": false
+    },
+    {
+      "pack": "faa-8110-49",
+      "chapter": "ch04-software-conformity-inspection.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "faa-8110-49",
+      "chapter": "ch05-do-178c-recognition-and-transition.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "faa-8110-49",
+      "chapter": "ch06-legacy-software-fls-ums.md",
+      "cluster": "Configuration Management & Baselines",
+      "is_support": false
+    },
+    {
+      "pack": "faa-8110-49",
+      "chapter": "ch07-aeh-custom-devices.md",
+      "cluster": "Assurance & System Assurance",
+      "is_support": false
+    },
+    {
+      "pack": "faa-8110-49",
+      "chapter": "ch08-aeh-verification-tools-reuse.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "faa-8110-49",
+      "chapter": "ch09-aeh-cots-ip.md",
+      "cluster": "Supplier, Procurement & Acquisition",
+      "is_support": false
+    },
+    {
+      "pack": "faa-8110-49",
+      "chapter": "ch10-cots-devices-and-cbas.md",
+      "cluster": "Supplier, Procurement & Acquisition",
+      "is_support": false
+    },
+    {
+      "pack": "faa-8110-49",
+      "chapter": "ch11-software-change-impact-analysis.md",
+      "cluster": "Configuration Management & Baselines",
+      "is_support": false
+    },
+    {
+      "pack": "faa-8110-49",
+      "chapter": "ch12-data-and-control-coupling-practices.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "faa-8110-49",
+      "chapter": "ch13-design-level-error-handling.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
     }
   ]
 }

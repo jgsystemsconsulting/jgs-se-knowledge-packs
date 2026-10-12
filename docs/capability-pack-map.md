@@ -30,12 +30,12 @@ Rules of construction:
 | 4. Architecture & Design | 20 |
 | 5. Interface Management & ICIDs | 9 |
 | 6. Integration | 4 |
-| 7. Verification | 13 |
+| 7. Verification | 16 |
 | 8. Validation | 7 |
 | 9. Test & Evaluation | 17 |
 | 10. Modeling, MBSE & SysML | 20 |
 | 11. Digital Engineering & Digital Twins | 25 |
-| 12. Configuration Management & Baselines | 17 |
+| 12. Configuration Management & Baselines | 19 |
 | 13. Data & Information Management | 7 |
 | 14. Risk Management | 27 |
 | 15. Opportunity/Benefit Management | 8 |
@@ -43,20 +43,20 @@ Rules of construction:
 | 17. Technical Planning & Work Breakdown | 13 |
 | 18. Measurement & Technical Assessment | 36 |
 | 19. Quality Assurance & Process Compliance | 4 |
-| 20. Safety, Reliability & Survivability | 92 |
+| 20. Safety, Reliability & Survivability | 93 |
 | 21. Cybersecurity & Security Engineering | 73 |
 | 22. Human Systems Integration / Human Factors | 26 |
 | 23. Logistics, Supportability & Sustainment | 12 |
 | 24. Operations, Maintenance & Disposal | 13 |
 | 25. Training & Documentation Delivery | 12 |
 | 26. Project/Program Management | 67 |
-| 27. Supplier, Procurement & Acquisition | 7 |
+| 27. Supplier, Procurement & Acquisition | 9 |
 | 28. Stakeholder Engagement & Needs | 3 |
-| 29. Governance, Reviews, Gates & Control Points | 21 |
-| 30. Standards, Tailoring & Process Models | 41 |
+| 29. Governance, Reviews, Gates & Control Points | 23 |
+| 30. Standards, Tailoring & Process Models | 43 |
 | 31. Specialty Engineering | 7 |
-| 32. Assurance & System Assurance | 8 |
-| **Total** | **662** |
+| 32. Assurance & System Assurance | 9 |
+| **Total** | **675** |
 
 ## 1. Systems Thinking & Fundamentals
 
@@ -186,6 +186,9 @@ Rules of construction:
 | nasa-se-handbook | ch23-5-3-product-verification.md | Product verification process |
 | fda-med-device | ch03-software-validation.md | General Principles of Software Validation, January 2002, taught as the 2002 guidance not as CSA |
 | fda-med-device | ch04-computer-software-assurance.md | Computer Software Assurance final guidance, February 2026, docket FDA-2022-D-0795 |
+| faa-8110-49 | ch04-software-conformity-inspection.md | Software conformity inspection notes from Order 8110.49A |
+| faa-8110-49 | ch08-aeh-verification-tools-reuse.md | AEH verification, tools, and reuse notes from AC 20-152A |
+| faa-8110-49 | ch12-data-and-control-coupling-practices.md | Data and control coupling practices from FAA airborne software guidance |
 
 ## 8. Validation
 
@@ -297,6 +300,8 @@ Rules of construction:
 | nasa-se-expanded | ch06-nasa-se-expanded-crosscutting-cm-data-assessment-decision.md | Crosscutting CM, data, assessment, decision (also measurement) |
 | nasa-se-handbook | ch31-6-5-configuration-management.md | Configuration management process |
 | fda-med-device | ch10-software-changes-510k.md | Software change decisions for 510(k) submissions under FDA device-software guidance |
+| faa-8110-49 | ch06-legacy-software-fls-ums.md | Field-loadable and user-modifiable software notes from Order 8110.49A |
+| faa-8110-49 | ch11-software-change-impact-analysis.md | Software change impact analysis notes from Order 8110.49A |
 
 ## 13. Data & Information Management
 
@@ -529,6 +534,7 @@ Rules of construction:
 | nhtsa-vehicle | ch04-nhtsa-fmvss-occupant.md | FMVSS occupant protection selections: 201, 208, 209, 210, 214, 226 |
 | nhtsa-vehicle | ch05-nhtsa-fmvss-brakes-lighting.md | FMVSS brake, stability, lighting, and driver-present selections |
 | nhtsa-vehicle | ch06-nhtsa-fmvss-fuel-ev.md | FMVSS fuel system integrity and EV electrical selections |
+| faa-8110-49 | ch13-design-level-error-handling.md | Design-level error handling notes from FAA airborne software guidance |
 
 ## 21. Cybersecurity & Security Engineering
 
@@ -774,6 +780,8 @@ Rules of construction:
 | nasa-de-acquisition | ch03-nasa-de-acquisition-requirements-exchange-and-contract-language.md | Requirements exchange and DE contract language |
 | nasa-de-acquisition | ch04-nasa-de-acquisition-data-acquisition-contract-language.md | Data acquisition contract language |
 | nasa-npr-7123 | ch04-contracted-projects.md | Requirements flow to contracted projects |
+| faa-8110-49 | ch09-aeh-cots-ip.md | AEH COTS intellectual-property notes from AC 20-152A |
+| faa-8110-49 | ch10-cots-devices-and-cbas.md | COTS device and CBAS notes from the FAA airborne hardware guidance |
 
 ## 28. Stakeholder Engagement & Needs
 
@@ -808,6 +816,8 @@ Rules of construction:
 | nasa-npr-7123 | ch09-review-entrance-success-criteria.md | Review entrance/success criteria |
 | nist-ai-rmf | ch04-govern-function.md | Govern function |
 | nist-csf | ch02-govern-gv.md | Govern function (cyber governance) |
+| faa-8110-49 | ch02-software-review-process.md | FAA software review process under Order 8110.49A, certification-staff notes |
+| faa-8110-49 | ch03-level-of-faa-involvement.md | Level of FAA involvement decisions under Order 8110.49A |
 
 ## 30. Standards, Tailoring & Process Models
 
@@ -854,6 +864,8 @@ Rules of construction:
 | fda-med-device | ch08-software-function-scope.md | Which device software functions the premarket documentation guidance covers |
 | fda-med-device | ch11-clinical-decision-support.md | Clinical Decision Support Software final guidance, January 2026, docket FDA-2017-D-6569 |
 | fda-med-device | ch12-submissions-estar.md | eSTAR program synthesis, program page content current 2026-09-21, page not copied |
+| faa-8110-49 | ch01-airborne-approval-map.md | FAA airborne approval map from Order 8110.49A and the three ACs; standards named, not quoted |
+| faa-8110-49 | ch05-do-178c-recognition-and-transition.md | AC 20-115D recognition of ED-12C and DO-178C, standard named and not quoted |
 
 ## 31. Specialty Engineering
 
@@ -879,3 +891,4 @@ Rules of construction:
 | nasa-system-safety | ch06-risc-development.md | Risk-informed safety case development |
 | nasa-system-safety | ch07-risc-evaluation.md | Safety case evaluation |
 | nist-ai-rmf | ch03-trustworthiness-characteristics.md | Trustworthiness characteristics of AI |
+| faa-8110-49 | ch07-aeh-custom-devices.md | AEH custom-device assurance notes from AC 20-152A, DO-254 named and not quoted |

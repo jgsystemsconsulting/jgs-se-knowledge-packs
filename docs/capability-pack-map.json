@@ -505,6 +505,21 @@
           "pack": "fda-med-device",
           "chapter": "ch04-computer-software-assurance.md",
           "note": "Computer Software Assurance final guidance, February 2026, docket FDA-2022-D-0795"
+        },
+        {
+          "pack": "faa-8110-49",
+          "chapter": "ch04-software-conformity-inspection.md",
+          "note": "Software conformity inspection notes from Order 8110.49A"
+        },
+        {
+          "pack": "faa-8110-49",
+          "chapter": "ch08-aeh-verification-tools-reuse.md",
+          "note": "AEH verification, tools, and reuse notes from AC 20-152A"
+        },
+        {
+          "pack": "faa-8110-49",
+          "chapter": "ch12-data-and-control-coupling-practices.md",
+          "note": "Data and control coupling practices from FAA airborne software guidance"
         }
       ]
     },
@@ -960,6 +975,16 @@
           "pack": "fda-med-device",
           "chapter": "ch10-software-changes-510k.md",
           "note": "Software change decisions for 510(k) submissions under FDA device-software guidance"
+        },
+        {
+          "pack": "faa-8110-49",
+          "chapter": "ch06-legacy-software-fls-ums.md",
+          "note": "Field-loadable and user-modifiable software notes from Order 8110.49A"
+        },
+        {
+          "pack": "faa-8110-49",
+          "chapter": "ch11-software-change-impact-analysis.md",
+          "note": "Software change impact analysis notes from Order 8110.49A"
         }
       ]
     },
@@ -1960,6 +1985,11 @@
           "pack": "nhtsa-vehicle",
           "chapter": "ch06-nhtsa-fmvss-fuel-ev.md",
           "note": "FMVSS fuel system integrity and EV electrical selections"
+        },
+        {
+          "pack": "faa-8110-49",
+          "chapter": "ch13-design-level-error-handling.md",
+          "note": "Design-level error handling notes from FAA airborne software guidance"
         }
       ]
     },
@@ -3045,6 +3075,16 @@
           "pack": "nasa-npr-7123",
           "chapter": "ch04-contracted-projects.md",
           "note": "Requirements flow to contracted projects"
+        },
+        {
+          "pack": "faa-8110-49",
+          "chapter": "ch09-aeh-cots-ip.md",
+          "note": "AEH COTS intellectual-property notes from AC 20-152A"
+        },
+        {
+          "pack": "faa-8110-49",
+          "chapter": "ch10-cots-devices-and-cbas.md",
+          "note": "COTS device and CBAS notes from the FAA airborne hardware guidance"
         }
       ]
     },
@@ -3175,6 +3215,16 @@
           "pack": "nist-csf",
           "chapter": "ch02-govern-gv.md",
           "note": "Govern function (cyber governance)"
+        },
+        {
+          "pack": "faa-8110-49",
+          "chapter": "ch02-software-review-process.md",
+          "note": "FAA software review process under Order 8110.49A, certification-staff notes"
+        },
+        {
+          "pack": "faa-8110-49",
+          "chapter": "ch03-level-of-faa-involvement.md",
+          "note": "Level of FAA involvement decisions under Order 8110.49A"
         }
       ]
     },
@@ -3385,6 +3435,16 @@
           "pack": "fda-med-device",
           "chapter": "ch12-submissions-estar.md",
           "note": "eSTAR program synthesis, program page content current 2026-09-21, page not copied"
+        },
+        {
+          "pack": "faa-8110-49",
+          "chapter": "ch01-airborne-approval-map.md",
+          "note": "FAA airborne approval map from Order 8110.49A and the three ACs; standards named, not quoted"
+        },
+        {
+          "pack": "faa-8110-49",
+          "chapter": "ch05-do-178c-recognition-and-transition.md",
+          "note": "AC 20-115D recognition of ED-12C and DO-178C, standard named and not quoted"
         }
       ]
     },
@@ -3470,6 +3530,11 @@
           "pack": "nist-ai-rmf",
           "chapter": "ch03-trustworthiness-characteristics.md",
           "note": "Trustworthiness characteristics of AI"
+        },
+        {
+          "pack": "faa-8110-49",
+          "chapter": "ch07-aeh-custom-devices.md",
+          "note": "AEH custom-device assurance notes from AC 20-152A, DO-254 named and not quoted"
         }
       ]
     }
