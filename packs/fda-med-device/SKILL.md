@@ -6,7 +6,7 @@ description: "Reconstructed reference notes on US FDA medical-device software re
 <!-- argument-hint: [FDA device software topic, regulation question, submission section, chapter number] -->
 
 # FDA Device Software Guidance and the QMSR
-**Source**: U.S. FDA (CDRH/CBER), 13-source reference set: twelve guidance and rule documents S1-S12 plus the FDA QMSR overview page S4a, dated 2002-01-11 to 2026-02-03, pinned 2026-09-24 | **Licence**: Public Domain (US Government work, 17 U.S.C. 105) | **Chapters**: 12
+**Source**: U.S. FDA (CDRH/CBER). Adapted from the sibling 2026-09-24 prototype build (chapter citations S1-S12 and S4a follow that build's row scheme) and re-checked against the 2026-10-12 FDA source pin, the seven documents named in PACK.yaml | **Licence**: Public Domain (US Government work, 17 U.S.C. 105) | **Chapters**: 12
 
 ## When to use
 **Prerequisites:** none: plain Markdown; no MCP server, API key, or licence tier needed at runtime.
@@ -111,12 +111,12 @@ The electronic Submission Template And Repository (eSTAR) structures 510(k) and 
 
 ## Scope & Limits
 
-**Covers**: US FDA regulation of software in and around medical devices, as stated in the thirteen pinned sources: premarket pathways and submission content, software documentation levels, validation and computer software assurance, the QMSR, device cybersecurity, software-function scope boundaries (CDS, MDDS), off-the-shelf software, the 510(k) change trigger, and eSTAR.
+**Covers**: US FDA regulation of software in and around medical devices, as stated in FDA guidance and rule text and re-checked against the 2026-10-12 source pin: premarket pathways and submission content, software documentation levels, validation and computer software assurance, the QMSR, device cybersecurity, software-function scope boundaries (CDS, MDDS), off-the-shelf software, the 510(k) change trigger, and eSTAR.
 
-**Does not cover**: EU MDR, UKCA, or any non-US regime (a med-device-eu pack is planned; nothing in this pack answers EU questions). No text from ISO 13485, ISO 9000, ISO 14971, or IEC 62304: those standards are named and their obligations summarized only as FDA states them. No drug, biologic, or combination-product rules, and no FDA enforcement policy beyond what the pinned documents state.
+**Does not cover**: EU MDR, UKCA, or any non-US regime (a med-device-eu pack is planned; nothing in this pack answers EU questions). No text from ISO 13485, ISO 9000, ISO 14971, or IEC 62304: those standards are named and their obligations summarized only as FDA states them. ISO 13485:2016 is incorporated by reference into 21 CFR 820 and stays copyrighted. A reader who needs the standard buys it or reads it at the ANSI IBR portal. No drug, biologic, or combination-product rules, and no FDA enforcement policy beyond what the pinned documents state.
 
 **Not legal advice.** The pack is synthesized reference notes reconstructed from the sources, with quotations capped at two sentences. It is not a substitute for the guidance documents themselves, not regulatory counsel, and not a compliance determination. FDA guidance contains nonbinding recommendations; the rule text and regulations are the binding layer.
 
-**Source dates**: pinned 2026-09-24, documents dated 2002-01-11 to 2026-02-03, with the eCFR part 820 text current as of 2026-09-22. Later FDA actions, draft guidances, and docket activity after the pin date are out of scope. Check fda.gov for current versions before relying on any single requirement.
+**Source dates**: re-checked against the 2026-10-12 FDA source pin, whose current documents are named in PACK.yaml, including the February 2026 CSA and cybersecurity finals, the January 2026 CDS final, and the eSTAR program page (content current 2026-09-21). A chapter that teaches a guidance outside that pin keeps the sibling build's citation date for it. Later FDA actions, draft guidances, and docket activity after the pin date are out of scope. Check fda.gov for current versions before relying on any single requirement.
 
 **Licence & attribution**: public domain (US Government work, 17 U.S.C. 105); FDA is credited as a courtesy in the repository NOTICE, not as a legal obligation, and does not endorse this pack. See `LICENSE` for the per-source vetting record, including dockets and supersession statements confirmed from the source texts.
