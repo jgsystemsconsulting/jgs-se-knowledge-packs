@@ -754,6 +754,23 @@ Third-party source attributions (one block per shipped content pack)
            ISO 13485 by reference and name IEC 62304; this pack reproduces
            none of that text. See packs/fda-med-device/LICENSE.
 
+[pack: faa-8110-49]
+  Source : FAA Order 8110.49A, Software Approval Guidelines (effective
+           2018-03-29, cancels 8110.49 Change 2 dated 2017-04-10); AC 20-115D,
+           Airborne Software Development Assurance Using EUROCAE ED-12() and
+           RTCA DO-178() (issued 2017-07-21); AC 20-152A, Development Assurance
+           for Airborne Electronic Hardware (issued 2022-10-07); AC 00-69,
+           Best Practices for Airborne Software Development Assurance Using
+           EUROCAE ED-12() and RTCA DO-178() (issued 2017-07-21)
+  Author : Federal Aviation Administration
+  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : public domain, no copyright. Attribution to the FAA is courtesy, not
+           obligation; the FAA does not endorse this pack. The sources recognize
+           DO-178C, DO-254, EUROCAE ED-12C and ED-80, and SAE ARP4754B and
+           ARP4761A by reference; this pack reproduces none of that text. See
+           packs/faa-8110-49/LICENSE.
+
 -----------------------------------------------------------------------------------
 The build pipeline uses the jgs-reference-skill extraction engine (MIT License,
 © JG Systems Consulting Ltd; a fork of book-to-skill, © the book-to-skill authors).
