@@ -1,18 +1,18 @@
 faa-8110-49 pack: content licence
 =================================
 
-This pack is derived from the four US Federal Aviation Administration (FAA)
-documents listed below (S1 to S4 of the source-vetting record). Their landing-
-page URLs are held in the build record dated 2026-09-25 and are not reproduced
-here; the repository link policy bans source-material hosts (see
-../../docs/LICENSING.md).
+This pack adapts the sibling prototype build and re-vets, below, the four
+documents of the 2026-10-12 FAA source pin, rows S1 to S4 as in the sibling
+build. Their landing-page URLs are held in the sibling build record dated
+2026-09-25 and are not reproduced here; the repository link policy bans
+source-material hosts (see ../../docs/LICENSING.md).
 
-Source licence: Public Domain (US Government work, 17 U.S.C. 105)  (tier 1; see
+Source licence: Public Domain (US Government work, 17 U.S.C. § 105)  (tier 1; see
 ../../docs/SOURCE-VETTING.md). No source-material download link is published.
 
 All four sources are works of the United States Government prepared by FAA
 staff of the Aircraft Certification Service (AIR), and are NOT subject to
-copyright protection in the United States (17 U.S.C. 105). They are in the
+copyright protection in the United States (17 U.S.C. § 105). They are in the
 public domain: anyone may reproduce, transform, and redistribute them for any
 purpose, including commercially, without permission and without any attribution
 or share-alike obligation.
@@ -46,7 +46,7 @@ S1  FAA Order 8110.49A, Software Approval Guidelines
     Chapters 5 to 16 of Chg 2 were deleted in the change to 8110.49A because
     their topics duplicate AC 20-115D and AC 00-69 material (or were removed);
     this pack reconstructs what remains.
-    Basis: US Government work, 17 U.S.C. 105
+    Basis: US Government work, 17 U.S.C. § 105
     Reconstructs: the FAA software review process (certification liaison, desk
     and on-site reviews, review planning agreements, review objectives), the
     level-of-involvement determination (criteria and the three Appendix A
@@ -60,7 +60,7 @@ S2  AC 20-115D, Airborne Software Development Assurance Using EUROCAE ED-12( )
     Issued: 2017-07-21   Initiated by: AIR-134   Status: Active
     Cancellation: cancels AC 20-115C, Airborne Software Assurance, dated
     July 19, 2013 (confirmed from PDF, para 3).
-    Basis: US Government work, 17 U.S.C. 105
+    Basis: US Government work, 17 U.S.C. § 105
     Reconstructs: which RTCA/EUROCAE documents the FAA recognizes for airborne
     software (ED-12C/DO-178C plus the DO-330 to DO-333 supplement set), the
     criteria for continuing to use ED-12B/DO-178B processes for new
@@ -76,7 +76,7 @@ S3  AC 20-152A, Development Assurance for Airborne Electronic Hardware
     Cancellation: cancels AC 20-152, RTCA, Inc., Document RTCA/DO-254, Design
     Assurance Guidance for Airborne Electronic Hardware, dated June 30, 2005
     (confirmed from PDF).
-    Basis: US Government work, 17 U.S.C. 105
+    Basis: US Government work, 17 U.S.C. § 105
     Reconstructs: when ED-80/DO-254 applies, the simple versus complex custom
     device classification and its assurance consequences, verification topics
     (robustness, the HDL code coverage method), tool assessment and
@@ -93,7 +93,7 @@ S4  AC 00-69, Best Practices for Airborne Software Development Assurance Using
     Service (AIR)   Advisory Circular
     Issued: 2017-07-21   Initiated by: AIR-134   Status: Active
     Cancellation: none. No prior AC 00-69 is cancelled. Change field blank.
-    Basis: US Government work, 17 U.S.C. 105
+    Basis: US Government work, 17 U.S.C. § 105
     Reconstructs: the change impact analysis best-practice contents (what a CIA
     identifies and which change classes it addresses), the clarification that
     data coupling and control coupling are distinct and both required, and the
