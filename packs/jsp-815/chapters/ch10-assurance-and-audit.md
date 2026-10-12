@@ -77,7 +77,7 @@ ISO column is clause numbers only. JSP column is Expectation theme from the Elem
 | E6.4 | Training programmes are in place that include safety skills enabling the workforce to meet Defence requirements. | 7.2, A6.1.1 |
 | E6.5 | A competency process is in place to assess and assure qualifications, behaviours, skills of the workforce to meet Defence safety requirem... | 8.1.4.1, A6.1.1 |
 | E7.1 | The Defence Area has mechanisms in place to identify and assess safety risks and requirements associated with equipment throughout its en... | (no discrete clause number pinned in Annex F layout) |
-| E7.2 | The Defence Area has mechanisms in place to ensure that equipment safety cases are developed, | 6.1.3 |
+| E7.2 | The Defence Area has mechanisms in place to ensure that equipment safety cases are developed... | 6.1.3 |
 | E7.3 | The Defence Area has mechanisms in place to ensure equipment is compliant with statute and Defence regulation throughout its lifecycle. W... | (no discrete clause number pinned in Annex F layout) |
 | E7.4 | The Defence Area has processes in place to ensure equipment is always maintained and operated within defined design and operating limits.... | A8.1, 8.1.1 |
 | E7.5 | The Defence Area has mechanisms in place to ensure physical changes to equipment (including major software changes), materials and associ... | A8.1.3, A8.1.4.1 |

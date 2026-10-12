@@ -96,8 +96,9 @@ Where compliance with safety legislation cannot be achieved, an exemption certif
 - `cheatsheet.md`: Element and Expectation index, assurance stages table, exemption certificate steps, safety case trigger checklist, audit cycle steps.
 
 ## Scope & Limits
-- **Source versions:** JSP 815 V1.3 (Framework, Elements 1 to 12, Annexes A to F) and Annex H V1.2, published 2026-09-01. Built from the 20 published PDF attachments; page provenance is in [LICENSE](LICENSE).
-- **Not in this pack:** JSP 376, JSP 375, and JSP 816 are named by the source and by ch01 as related publications but are separate documents not in this catalogue; this pack names them by title and makes no claims about their contents. DEF-STAN 00-051 is unverified as a public document and DEF-STAN 00-970 is not public; neither appears here. Annex G (Assurance Toolkit spreadsheet) is excluded.
+- **Source versions:** JSP 815 Defence Safety Management System V1.3 (Framework, Elements 1 to 12, Annexes A to G) and Annex H Audit Manual V1.2, all published 2026-09-01; the pin was re-verified 2026-10-12. The notes were built from the 20 published PDF attachments in the sibling prototype; page provenance is in [LICENSE](LICENSE).
+- **Policy, not statute:** JSP 815 is Ministry of Defence policy and guidance; it is not statute. Legal obligations come from legislation, and ch04 covers how the JSP relates to statute and regulators.
+- **Not in this pack:** No other JSP is reproduced: JSP 375, JSP 376, JSP 520, and JSP 816 are named by the source and by ch01 as related publications but are separate documents not in this catalogue; this pack names them by title and makes no claims about their contents. DEF-STAN standards are out of scope: DEF-STAN 00-051 is unverified as a public document and DEF-STAN 00-970 is not public; neither appears here. Annex G (Assurance Toolkit spreadsheet) is named in the pin but is not reproduced.
 - **ISO 45001:** clause numbers only, via the Annex F mapping. No ISO text is included.
 - **Fidelity:** Performance Statements are summarised as themes; Expectation wording is paraphrased except short defined terms. Chapters cite the attachment rows and paragraph or Expectation numbers behind each claim.
 - **Status:** this pack is not MOD guidance and has no official status; nothing in it suggests Ministry of Defence endorsement.

@@ -39,7 +39,9 @@ https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
 
 This pack contains reconstructed reference notes, not reproductions. Content
 was restructured and summarised from the source; passages are paraphrased
-except short defined terms.
+except short defined terms. ISO 45001 text is not reproduced in this pack:
+the standard is named only, and the Annex F mapping carries clause numbers
+alone.
 
 6. Non-endorsement
 
@@ -131,7 +133,7 @@ E8
 Title: JSP 815 - Element 8: Infrastructure design, build and maintenance v1.3
 Version: 1.3
 Pages: 15
-URL: https://assets.publishing.service.gov.uk/media/6a9051dd5a0c25165ae46638/202600901_JSP815_Element_8_V1.3_O.pdf
+URL: https://assets.publishing.service.gov.uk/media/6a9051dd5a0c25165ae46638/20260901_JSP815_Element_8_V1.3_O.pdf
 Used in: ch08
 
 E9

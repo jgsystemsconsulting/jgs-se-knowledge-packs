@@ -91,4 +91,4 @@ DSA regulators, detailed workplace procedures, acquisition safety methods, EMS c
 - **ch02**: PDCA basis, Safety Function role, Element / Expectation / Performance Statement hierarchy, ISO 45001 alignment claim, assurance stages.
 - **ch03 to ch10**: the 12 Elements and annexes grouped by the pinned chapter table.
 - **ch04**: legislation, Defence policy, DSA regulators, exemption certificates (Element 3 and Annex B).
-- **glossary.md / cheatsheet.md**: terms and quick indexes once Task 9 lands.
+- **glossary.md / cheatsheet.md**: terms and quick indexes.
