@@ -1,0 +1,300 @@
+JSP 815 pack: content licence
+=============================
+
+1. Attribution statement
+
+Contains public sector information licensed under the Open Government
+Licence v3.0.
+
+2. Source identification
+
+Source 1, the Framework:
+  JSP 815: Defence Safety Management System (SMS) Framework, V1.3,
+  published 2026-09-01, Ministry of Defence, © Crown copyright.
+
+Source 2, the Direction and Guidance volume:
+  JSP 815: Defence Safety Management System (SMS) Direction and Guidance,
+  V1.3 (includes Annex H at V1.2), published 2026-09-01, Ministry of
+  Defence, © Crown copyright.
+
+3. Source links
+
+Framework publication page (P1):
+https://www.gov.uk/government/publications/defence-safety-management-system-jsp-815-part-1
+Direction and Guidance publication page (P2):
+https://www.gov.uk/government/publications/defence-safety-management-system-jsp-815-volume-2
+Collection page (P0):
+https://www.gov.uk/government/collections/defence-safety-management-system-jsp-815
+
+Both publication pages carry the gov.uk footer sentence: "All content is
+available under the Open Government Licence v3.0, except where otherwise
+stated" (pages fetched 2026-09-25).
+
+4. Licence
+
+Open Government Licence v3.0:
+https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+
+5. Nature of this pack
+
+This pack contains reconstructed reference notes, not reproductions. Content
+was restructured and summarised from the source; passages are paraphrased
+except short defined terms.
+
+6. Non-endorsement
+
+Nothing in this pack suggests that the Ministry of Defence endorses it or
+that it has any official status.
+
+7. Excluded material
+
+The following material is excluded from the licence grant and is not
+reproduced in this pack:
+- ISO 45001 clause text quoted in Annex F. The pack carries clause numbers
+  only, per the Annex F mapping.
+- Third-party passages quoted in the source: the HSE definition of safety
+  culture (Element 1), the HSE definition of competence (Element 6), the
+  MOD-HSE Memorandum of Understanding passage on RIDDOR reporting
+  (Element 10), and the ISO 19011 Annex B audit technique list (Element 12).
+- MOD crests and logos, and military insignia.
+- Annex G Assurance Toolkit (spreadsheet).
+
+8. Scope
+
+This licence governs the content of this pack (SKILL.md, chapters/,
+glossary.md, cheatsheet.md). The repository's MIT licence covers tooling and
+scaffolding only.
+
+9. Per-source record
+
+One block per attachment used in the build (20 of the 21 published
+attachments; the spreadsheet in section 7 gets no block). "Used in" names
+this pack's chapters (ch01 to ch10).
+
+F
+Title: JSP 815: Defence Safety Management System (SMS) Framework v1.3
+Version: 1.3
+Pages: 14
+URL: https://assets.publishing.service.gov.uk/media/6a96a418f5b35599aec18fdc/20260901_JSP815_Defence_Safety_Management_System_Guidance_Framework_V1.3_O.pdf
+Used in: ch01, ch02
+
+E1
+Title: JSP 815 - Element 1: Leadership, governance and culture v1.3
+Version: 1.3
+Pages: 18
+URL: https://assets.publishing.service.gov.uk/media/6a9051dc9a177a1decf97af4/20260901_JSP815_Element_1_V1.3_O.pdf
+Used in: ch03
+
+E2
+Title: JSP 815 - Element 2: Organisation and dependencies v1.3
+Version: 1.3
+Pages: 16
+URL: https://assets.publishing.service.gov.uk/media/6a9051dcf5b35599aec18ed0/20260901_JSP815_Element_2_V1.3_O.pdf
+Used in: ch03
+
+E3
+Title: JSP 815 - Element 3: Legislation, policy, regulations and guidance v1.3
+Version: 1.3
+Pages: 18
+URL: https://assets.publishing.service.gov.uk/media/6a9051dc9a177a1decf97af5/20260901_JSP815_Element_3_V1.3_O.pdf
+Used in: ch04
+
+E4
+Title: JSP 815 - Element 4: Risk assessments and safety cases v1.3
+Version: 1.3
+Pages: 23
+URL: https://assets.publishing.service.gov.uk/media/6a9051dc01bbff0bf8f97afa/20260901_JSP815_Element_4_V1.3_O.pdf
+Used in: ch05
+
+E5
+Title: JSP 815 - Element 5: Supervision, contracting and control activities v1.3
+Version: 1.3
+Pages: 17
+URL: https://assets.publishing.service.gov.uk/media/6a9051dc3b22fb169dc18efb/20260901_JSP815_Element_5_V1.3_O.pdf
+Used in: ch06
+
+E6
+Title: JSP 815 - Element 6: Personnel competence, resources and training v1.3
+Version: 1.3
+Pages: 14
+URL: https://assets.publishing.service.gov.uk/media/6a9051dcf5b35599aec18ed1/20260901_JSP815_Element_6_V1.3_O.pdf
+Used in: ch07
+
+E7
+Title: JSP 815 - Element 7: Equipment design, manufacture and maintenance v1.3
+Version: 1.3
+Pages: 20
+URL: https://assets.publishing.service.gov.uk/media/6a9051dc3b22fb169dc18efc/20260901_JSP815_Element_7_V1.3_O.pdf
+Used in: ch08
+
+E8
+Title: JSP 815 - Element 8: Infrastructure design, build and maintenance v1.3
+Version: 1.3
+Pages: 15
+URL: https://assets.publishing.service.gov.uk/media/6a9051dd5a0c25165ae46638/202600901_JSP815_Element_8_V1.3_O.pdf
+Used in: ch08
+
+E9
+Title: JSP 815 - Element 9: Performance, management information and reporting v1.3
+Version: 1.3
+Pages: 12
+URL: https://assets.publishing.service.gov.uk/media/6a9051dcdf4246cf45e4661e/20260901_JSP815_Element_9_V1.3_O.pdf
+Used in: ch09
+
+E10
+Title: JSP 815 - Element 10: Accident - Incident management and emergency response v1.3
+Version: 1.3
+Pages: 14
+URL: https://assets.publishing.service.gov.uk/media/6a9051dd3b22fb169dc18eff/20260901_JSP_815_Element_10_V1.3_O.pdf
+Used in: ch09
+
+E11
+Title: JSP 815 - Element 11: Communications and stakeholder engagement v1.3
+Version: 1.3
+Pages: 13
+URL: https://assets.publishing.service.gov.uk/media/6a9051dc3b22fb169dc18efd/20260901_JSP815_Element_11_V1.3_O.pdf
+Used in: ch09
+
+E12
+Title: JSP 815 - Element 12: Assurance v1.3
+Version: 1.3
+Pages: 18
+URL: https://assets.publishing.service.gov.uk/media/6a9051ddf5b35599aec18ed2/20260901_JSP815_Element_12_V1.3_O.pdf
+Used in: ch10
+
+AA
+Title: JSP 815 - Annex A: Applicability of Instructions for SEMS (Element 2) v1.3
+Version: 1.3
+Pages: 9
+URL: https://assets.publishing.service.gov.uk/media/6a9051ddf5b35599aec18ed3/20260901_JSP_815_Annex_A_V1.3_O.pdf
+Used in: ch03
+
+AB
+Title: JSP 815 - Annex B: Exemption Certificate Process (Element 3) v1.3
+Version: 1.3
+Pages: 6
+URL: https://assets.publishing.service.gov.uk/media/6a9051dd01bbff0bf8f97afb/20260901_JSP_815_Annex_B_V1.3_O.pdf
+Used in: ch04
+
+AC
+Title: JSP 815 - Annex C: Duty of Care on Deployments (Element 5) v1.3
+Version: 1.3
+Pages: 7
+URL: https://assets.publishing.service.gov.uk/media/6a9051dd3b22fb169dc18efe/20260901_JSP_815_Annex_C_V1.3_O.pdf
+Used in: ch06
+
+AD
+Title: JSP 815 - Annex D: HoE ResponsibilitIies v1.3
+Version: 1.3
+Pages: 6
+URL: https://assets.publishing.service.gov.uk/media/6a9051dddf4246cf45e4661f/20260901_JSP_815_Annex_D_V1.3_O.pdf
+Used in: ch06
+
+AE
+Title: JSP 815 - Annex E: Safety Aspects for Letters of Delegation (Element 6) v1.3
+Version: 1.3
+Pages: 4
+URL: https://assets.publishing.service.gov.uk/media/6a9051dd9a177a1decf97af6/20260901_JSP_815_Annex_E_V1.3_O.pdf
+Used in: ch07
+
+AF
+Title: JSP 815 - Annex F: SP 815 Mapping to ISO 45001 (Element 12) v1.3
+Version: 1.3
+Pages: 21
+URL: https://assets.publishing.service.gov.uk/media/6a9051dd01bbff0bf8f97afc/20260901_JSP_815_Annex_F_V1.3_O.pdf
+Used in: ch10
+
+AH
+Title: JSP 815 - Annex H: Audit Manual v1.2 (editable PDF)
+Version: 1.2
+Pages: 34
+URL: https://assets.publishing.service.gov.uk/media/6a9055d69a177a1decf97af8/20260901_JSP_815_Annex_H_V1.2_O.pdf
+Used in: ch10
+
+Open Government Licence v3.0 (full text, copied from The National Archives on 2026-09-25)
+
+You are encouraged to use and re-use the Information that is available under this licence freely and flexibly, with only a few conditions.
+
+Using Information under this licence
+
+Use of copyright and database right material expressly made available under this licence (the 'Information') indicates your acceptance of the terms and conditions below.
+
+The Licensor grants you a worldwide, royalty-free, perpetual, non-exclusive licence to use the Information subject to the conditions below.
+
+This licence does not affect your freedom under fair dealing or fair use or any other copyright or database right exceptions and limitations.
+
+You are free to:
+
+copy, publish, distribute and transmit the Information;
+
+adapt the Information;
+
+exploit the Information commercially and non-commercially for example, by combining it with other Information, or by including it in your own product or application.
+
+You must (where you do any of the above):
+
+acknowledge the source of the Information in your product or application by including or linking to any attribution statement specified by the Information Provider(s) and, where possible, provide a link to this licence;
+
+If the Information Provider does not provide a specific attribution statement, you must use the following:
+
+Contains public sector information licensed under the Open Government Licence v3.0.
+
+If you are using Information from several Information Providers and listing multiple attributions is not practical in your product or application, you may include a URI or hyperlink to a resource that contains the required attribution statements.
+
+These are important conditions of this licence and if you fail to comply with them the rights granted to you under this licence, or any similar licence granted by the Licensor, will end automatically.
+
+Exemptions
+
+This licence does not cover:
+
+personal data in the Information;
+
+Information that has not been accessed by way of publication or disclosure under information access legislation (including the Freedom of Information Acts for the UK and Scotland) by or with the consent of the Information Provider;
+
+departmental or public sector organisation logos, crests and the Royal Arms except where they form an integral part of a document or dataset;
+
+military insignia;
+
+third party rights the Information Provider is not authorised to license;
+
+other intellectual property rights, including patents, trade marks, and design rights; and
+
+identity documents such as the British Passport
+
+Non-endorsement
+
+This licence does not grant you any right to use the Information in a way that suggests any official status or that the Information Provider and/or Licensor endorse you or your use of the Information.
+
+No warranty
+
+The Information is licensed 'as is' and the Information Provider and/or Licensor excludes all representations, warranties, obligations and liabilities in relation to the Information to the maximum extent permitted by law.
+
+The Information Provider and/or Licensor are not liable for any errors or omissions in the Information and shall not be liable for any loss, injury or damage of any kind caused by its use. The Information Provider does not guarantee the continued supply of the Information.
+
+Governing Law
+
+This licence is governed by the laws of the jurisdiction in which the Information Provider has its principal place of business, unless otherwise specified by the Information Provider.
+
+Definitions
+
+In this licence, the terms below have the following meanings:
+
+'Information' means information protected by copyright or by database right (for example, literary and artistic works, content, data and source code) offered for use under the terms of this licence.
+
+'Information Provider' means the person or organisation providing the Information under this licence.
+
+'Licensor' means any Information Provider which has the authority to offer Information under the terms of this licence or the Keeper of Public Records, who has the authority to offer Information subject to Crown copyright and Crown database rights and Information subject to copyright and database right that has been assigned to or acquired by the Crown, under the terms of this licence.
+
+'Use' means doing any act which is restricted by copyright or database right, whether in the original medium or in any other medium, and includes without limitation distributing, copying, adapting, modifying as may be technically necessary to use it in a different mode or format.
+
+'You', 'you' and 'your' means the natural or legal person, or body of persons corporate or incorporate, acquiring rights in the Information (whether the Information is obtained directly from the Licensor or otherwise) under this licence.
+
+About the Open Government Licence
+
+The National Archives has developed this licence as a tool to enable Information Providers in the public sector to license the use and re-use of their Information under a common open licence. The National Archives invites public sector bodies owning their own copyright and database rights to permit the use of their Information under this licence.
+
+The Keeper of the Public Records has authority to license Information subject to copyright and database right owned by the Crown. The extent of the offer to license this Information under the terms of this licence is set out in the UK Government Licensing Framework.
+
+This is version 3.0 of the Open Government Licence. The National Archives may, from time to time, issue new versions of the Open Government Licence. If you are already using Information under a previous version of the Open Government Licence, the terms of that licence will continue to apply.
+
+These terms are compatible with the Creative Commons Attribution License 4.0 and the Open Data Commons Attribution License, both of which license copyright and database rights. This means that when the Information is adapted and licensed under either of those licences, you automatically satisfy the conditions of the OGL when you comply with the other licence. The OGLv3.0 is Open Definition compliant.
