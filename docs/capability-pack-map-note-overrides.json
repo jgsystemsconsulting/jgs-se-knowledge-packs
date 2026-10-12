@@ -3252,6 +3252,66 @@
       "pack": "nhtsa-vehicle",
       "chapter": "ch06-nhtsa-fmvss-fuel-ev.md",
       "note": "FMVSS fuel system integrity and EV electrical selections"
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch01-regulatory-landscape.md",
+      "note": "FDA device-software regulatory landscape and the QMSR incorporation of ISO 13485 by reference, standard not quoted"
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch02-premarket-software-documentation.md",
+      "note": "Content of Premarket Submissions for Device Software Functions, June 2023 guidance notes"
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch03-software-validation.md",
+      "note": "General Principles of Software Validation, January 2002, taught as the 2002 guidance not as CSA"
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch04-computer-software-assurance.md",
+      "note": "Computer Software Assurance final guidance, February 2026, docket FDA-2022-D-0795"
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch05-qmsr-quality-management.md",
+      "note": "QMSR amendments to 21 CFR 820, effective 2026-02-02, ISO 13485 named and not quoted"
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch06-cybersecurity-qms.md",
+      "note": "Cybersecurity in Medical Devices QMS considerations, February 2026 final, one document with premarket content"
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch07-cybersecurity-premarket.md",
+      "note": "Premarket cybersecurity submission content from the February 2026 cybersecurity guidance"
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch08-software-function-scope.md",
+      "note": "Which device software functions the premarket documentation guidance covers"
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch09-premarket-cyber-documentation.md",
+      "note": "Premarket cyber documentation expectations from the February 2026 cybersecurity guidance"
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch10-software-changes-510k.md",
+      "note": "Software change decisions for 510(k) submissions under FDA device-software guidance"
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch11-clinical-decision-support.md",
+      "note": "Clinical Decision Support Software final guidance, January 2026, docket FDA-2017-D-6569"
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch12-submissions-estar.md",
+      "note": "eSTAR program synthesis, program page content current 2026-09-21, page not copied"
     }
   ]
 }

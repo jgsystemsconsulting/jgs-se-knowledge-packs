@@ -3955,6 +3955,78 @@
       "chapter": "ch06-nhtsa-fmvss-fuel-ev.md",
       "cluster": "Safety, Reliability & Survivability",
       "is_support": false
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch01-regulatory-landscape.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch02-premarket-software-documentation.md",
+      "cluster": "Requirements Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch03-software-validation.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch04-computer-software-assurance.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch05-qmsr-quality-management.md",
+      "cluster": "Quality Assurance & Process Compliance",
+      "is_support": false
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch06-cybersecurity-qms.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch07-cybersecurity-premarket.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch08-software-function-scope.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch09-premarket-cyber-documentation.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch10-software-changes-510k.md",
+      "cluster": "Configuration Management & Baselines",
+      "is_support": false
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch11-clinical-decision-support.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch12-submissions-estar.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
     }
   ]
 }

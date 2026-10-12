@@ -25,26 +25,26 @@ Rules of construction:
 | Cluster | Entries |
 |---|---|
 | 1. Systems Thinking & Fundamentals | 25 |
-| 2. Requirements Engineering | 19 |
+| 2. Requirements Engineering | 20 |
 | 3. Requirements Traceability & Allocation | 3 |
 | 4. Architecture & Design | 20 |
 | 5. Interface Management & ICIDs | 9 |
 | 6. Integration | 4 |
-| 7. Verification | 11 |
+| 7. Verification | 13 |
 | 8. Validation | 7 |
 | 9. Test & Evaluation | 17 |
 | 10. Modeling, MBSE & SysML | 20 |
 | 11. Digital Engineering & Digital Twins | 25 |
-| 12. Configuration Management & Baselines | 16 |
+| 12. Configuration Management & Baselines | 17 |
 | 13. Data & Information Management | 7 |
 | 14. Risk Management | 27 |
 | 15. Opportunity/Benefit Management | 8 |
 | 16. Decision Analysis & Trade Studies | 5 |
 | 17. Technical Planning & Work Breakdown | 13 |
 | 18. Measurement & Technical Assessment | 36 |
-| 19. Quality Assurance & Process Compliance | 3 |
+| 19. Quality Assurance & Process Compliance | 4 |
 | 20. Safety, Reliability & Survivability | 92 |
-| 21. Cybersecurity & Security Engineering | 70 |
+| 21. Cybersecurity & Security Engineering | 73 |
 | 22. Human Systems Integration / Human Factors | 26 |
 | 23. Logistics, Supportability & Sustainment | 12 |
 | 24. Operations, Maintenance & Disposal | 13 |
@@ -53,10 +53,10 @@ Rules of construction:
 | 27. Supplier, Procurement & Acquisition | 7 |
 | 28. Stakeholder Engagement & Needs | 3 |
 | 29. Governance, Reviews, Gates & Control Points | 21 |
-| 30. Standards, Tailoring & Process Models | 37 |
+| 30. Standards, Tailoring & Process Models | 41 |
 | 31. Specialty Engineering | 7 |
 | 32. Assurance & System Assurance | 8 |
-| **Total** | **650** |
+| **Total** | **662** |
 
 ## 1. Systems Thinking & Fundamentals
 
@@ -111,6 +111,7 @@ Rules of construction:
 | requirements-writing | cheatsheet.md (support file) | Cheatsheet / quick reference |
 | requirements-writing | glossary.md (support file) | Glossary for the pack |
 | requirements-writing | patterns.md (support file) | Patterns/practice heuristics |
+| fda-med-device | ch02-premarket-software-documentation.md | Content of Premarket Submissions for Device Software Functions, June 2023 guidance notes |
 
 ## 3. Requirements Traceability & Allocation
 
@@ -183,6 +184,8 @@ Rules of construction:
 | faa-ams-vv | glossary.md (support file) | Glossary for the pack |
 | faa-ams-vv | patterns.md (support file) | Patterns/practice heuristics |
 | nasa-se-handbook | ch23-5-3-product-verification.md | Product verification process |
+| fda-med-device | ch03-software-validation.md | General Principles of Software Validation, January 2002, taught as the 2002 guidance not as CSA |
+| fda-med-device | ch04-computer-software-assurance.md | Computer Software Assurance final guidance, February 2026, docket FDA-2022-D-0795 |
 
 ## 8. Validation
 
@@ -293,6 +296,7 @@ Rules of construction:
 | nasa-de-acquisition | ch02-nasa-de-acquisition-drds-and-configuration-data-management.md | DRDs, configuration and data mgmt (also data mgmt) |
 | nasa-se-expanded | ch06-nasa-se-expanded-crosscutting-cm-data-assessment-decision.md | Crosscutting CM, data, assessment, decision (also measurement) |
 | nasa-se-handbook | ch31-6-5-configuration-management.md | Configuration management process |
+| fda-med-device | ch10-software-changes-510k.md | Software change decisions for 510(k) submissions under FDA device-software guidance |
 
 ## 13. Data & Information Management
 
@@ -427,6 +431,7 @@ Rules of construction:
 | gao-agile | ch09-gao-agile-assessment-reference-auditor-questions-frameworks.md | Auditor assessment questions (also program mgmt) |
 | mil-hdbk-516 | ch02-systems-engineering-criteria.md | SE airworthiness criteria: design criteria control, tech data, CM, mfg quality (also CM) |
 | nist-stat-handbook | ch06-nist-stat-handbook-process-monitoring-and-control.md | SPC monitoring and control (quality control) |
+| fda-med-device | ch05-qmsr-quality-management.md | QMSR amendments to 21 CFR 820, effective 2026-02-02, ISO 13485 named and not quoted |
 
 ## 20. Safety, Reliability & Survivability
 
@@ -599,6 +604,9 @@ Rules of construction:
 | nist-sse | glossary.md (support file) | Glossary for the pack |
 | nist-sse | patterns.md (support file) | Patterns/practice heuristics |
 | nhtsa-vehicle | ch02-nhtsa-cyber-practices.md | Synthesized notes from the NHTSA 2022 vehicle cybersecurity guidance |
+| fda-med-device | ch06-cybersecurity-qms.md | Cybersecurity in Medical Devices QMS considerations, February 2026 final, one document with premarket content |
+| fda-med-device | ch07-cybersecurity-premarket.md | Premarket cybersecurity submission content from the February 2026 cybersecurity guidance |
+| fda-med-device | ch09-premarket-cyber-documentation.md | Premarket cyber documentation expectations from the February 2026 cybersecurity guidance |
 
 ## 22. Human Systems Integration / Human Factors
 
@@ -842,6 +850,10 @@ Rules of construction:
 | sebok | ch27-sebok-enabling-teams.md | Enabling teams |
 | sebok | ch28-sebok-enabling-individuals.md | Enabling individuals (competency) |
 | nhtsa-vehicle | ch01-nhtsa-vehicle-introduction.md | Scope statement for the NHTSA vehicle pack: three sources, pinned date, refusals |
+| fda-med-device | ch01-regulatory-landscape.md | FDA device-software regulatory landscape and the QMSR incorporation of ISO 13485 by reference, standard not quoted |
+| fda-med-device | ch08-software-function-scope.md | Which device software functions the premarket documentation guidance covers |
+| fda-med-device | ch11-clinical-decision-support.md | Clinical Decision Support Software final guidance, January 2026, docket FDA-2017-D-6569 |
+| fda-med-device | ch12-submissions-estar.md | eSTAR program synthesis, program page content current 2026-09-21, page not copied |
 
 ## 31. Specialty Engineering
 

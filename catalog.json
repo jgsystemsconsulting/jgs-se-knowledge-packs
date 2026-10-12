@@ -710,6 +710,17 @@
       "commercial_use": true,
       "chapters": 6,
       "status": "live"
+    },
+    {
+      "slug": "fda-med-device",
+      "title": "FDA Medical Device Software Reference (QMSR and device software guidance)",
+      "publisher": "FDA (CDRH/CBER)",
+      "source_version": "QMSR final rule 89 FR 7496 (2024-01709, published 2024-02-02, effective 2026-02-02) amending 21 CFR 820; Content of Premarket Submissions for Device Software Functions (June 2023, FDA-2021-D-0775); General Principles of Software Validation (January 2002, FDA-1997-D-0029); Computer Software Assurance for Production and Quality Management System Software (February 2026, FDA-2022-D-0795); Cybersecurity in Medical Devices: Quality Management System Considerations and Content of Premarket Submissions (February 2026, FDA-2021-D-1158); Clinical Decision Support Software (January 2026, FDA-2017-D-6569); eSTAR program page (content current 2026-09-21)",
+      "license": "Public Domain (US Government work, 17 U.S.C. § 105)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 12,
+      "status": "live"
     }
   ],
   "planned": [
