@@ -112,6 +112,7 @@ Output goes in the reply unless the user names a file. A deliverable with no mat
 | Medical device software | FDA, QMSR, 510(k), device software, SaMD, eSTAR | `fda-med-device` |
 | Avionics software assurance | DO-178C, DO-254, 8110.49, airborne software, AEH, conformity | `faa-8110-49` |
 | Defence safety management | JSP 815, defence safety, SMS, safety case, assurance | `jsp-815` |
+| Nuclear software assurance | NRC, regulatory guide, NUREG, digital safety systems, software assurance, BTP 7-14 | `nrc-nuclear` |
 
 ### Agency contexts
 | Agency | Keywords | Packs |
@@ -127,6 +128,7 @@ Output goes in the reply unless the user names a file. A deliverable with no mat
 | EU | EU, European Union, AI Act, regulation | `eu-ai-act` |
 | NHTSA / USDOT | NHTSA, USDOT, FMVSS, vehicle safety standard, automated driving systems | `nhtsa-vehicle` |
 | FDA | FDA, CDRH, QMSR, 21 CFR 820, 510(k) | `fda-med-device` |
+| NRC | NRC, regulatory guide, NUREG, BTP 7-14 | `nrc-nuclear` |
 
 ### Deliverables
 | Deliverable | Keywords | Draft | Review | Verify |
