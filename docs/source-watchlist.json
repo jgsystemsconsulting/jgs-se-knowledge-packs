@@ -536,6 +536,14 @@
       "version": "JSP 815 Defence Safety Management System V1.3 (Framework, Elements 1-12, Annexes A-G, published 2026-09-01); Annex H Audit Manual V1.2 (published 2026-09-01)",
       "last_checked": "",
       "hint": ""
+    },
+    {
+      "slug": "nrc-nuclear",
+      "publisher": "U.S. Nuclear Regulatory Commission",
+      "document": "RG 1.168 Rev 2, Verification, Validation, Reviews, and Audits for Digital Computer Software Used in Safety Systems of Nuclear Power Plants (July 2013, ML13073A210); RG 1.169 Rev 1, Configuration Management Plans for Digital Computer Software Used in Safety Systems of Nuclear Power Plants (July 2013, ML12355A642); RG 1.170 Rev 1, Software Test Documentation for Digital Computer Software Used in Safety Systems of Nuclear Power Plants (July 2013, ML13003A216); RG 1.171 Rev 1, Software Unit Testing for Digital Computer Software Used in Safety Systems of Nuclear Power Plants (July 2013, ML13004A375); RG 1.172 Rev 1, Software Requirements Specifications for Digital Computer Software Used in Safety Systems of Nuclear Power Plants (July 2013, ML13007A173); RG 1.173 Rev 1, Developing Software Life Cycle Processes for Digital Computer Software Used in Safety Systems of Nuclear Power Plants (July 2013, ML13009A190); NUREG-0800 BTP 7-14 Rev 6, Guidance on Software Reviews for Digital Computer-Based Instrumentation and Control Systems (August 2016, ML16019A308)",
+      "version": "RG 1.168 Rev 2, Verification, Validation, Reviews, and Audits for Digital Computer Software Used in Safety Systems of Nuclear Power Plants (July 2013, ML13073A210); RG 1.169 Rev 1, Configuration Management Plans for Digital Computer Software Used in Safety Systems of Nuclear Power Plants (July 2013, ML12355A642); RG 1.170 Rev 1, Software Test Documentation for Digital Computer Software Used in Safety Systems of Nuclear Power Plants (July 2013, ML13003A216); RG 1.171 Rev 1, Software Unit Testing for Digital Computer Software Used in Safety Systems of Nuclear Power Plants (July 2013, ML13004A375); RG 1.172 Rev 1, Software Requirements Specifications for Digital Computer Software Used in Safety Systems of Nuclear Power Plants (July 2013, ML13007A173); RG 1.173 Rev 1, Developing Software Life Cycle Processes for Digital Computer Software Used in Safety Systems of Nuclear Power Plants (July 2013, ML13009A190); NUREG-0800 BTP 7-14 Rev 6, Guidance on Software Reviews for Digital Computer-Based Instrumentation and Control Systems (August 2016, ML16019A308)",
+      "last_checked": "",
+      "hint": ""
     }
   ]
 }

@@ -4165,6 +4165,54 @@
       "chapter": "ch10-assurance-and-audit.md",
       "cluster": "Assurance & System Assurance",
       "is_support": false
+    },
+    {
+      "pack": "nrc-nuclear",
+      "chapter": "ch01-nrc-software-assurance-framework.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "nrc-nuclear",
+      "chapter": "ch02-software-life-cycle-processes.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "nrc-nuclear",
+      "chapter": "ch03-software-requirements-specifications.md",
+      "cluster": "Requirements Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nrc-nuclear",
+      "chapter": "ch04-software-configuration-management-plans.md",
+      "cluster": "Configuration Management & Baselines",
+      "is_support": false
+    },
+    {
+      "pack": "nrc-nuclear",
+      "chapter": "ch05-verification-validation-reviews-audits.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "nrc-nuclear",
+      "chapter": "ch06-test-documentation-and-unit-testing.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "nrc-nuclear",
+      "chapter": "ch07-btp-7-14-staff-software-review.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": false
+    },
+    {
+      "pack": "nrc-nuclear",
+      "chapter": "ch08-endorsed-standards-and-adjacent-guidance.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
     }
   ]
 }

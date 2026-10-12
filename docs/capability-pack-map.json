@@ -235,6 +235,11 @@
           "pack": "fda-med-device",
           "chapter": "ch02-premarket-software-documentation.md",
           "note": "Content of Premarket Submissions for Device Software Functions, June 2023 guidance notes"
+        },
+        {
+          "pack": "nrc-nuclear",
+          "chapter": "ch03-software-requirements-specifications.md",
+          "note": "Software requirements specification notes from RG 1.172 Rev 1"
         }
       ]
     },
@@ -520,6 +525,16 @@
           "pack": "faa-8110-49",
           "chapter": "ch12-data-and-control-coupling-practices.md",
           "note": "Data and control coupling practices from FAA airborne software guidance"
+        },
+        {
+          "pack": "nrc-nuclear",
+          "chapter": "ch05-verification-validation-reviews-audits.md",
+          "note": "Verification, validation, review, and audit notes from RG 1.168 Rev 2"
+        },
+        {
+          "pack": "nrc-nuclear",
+          "chapter": "ch06-test-documentation-and-unit-testing.md",
+          "note": "Test documentation and unit testing notes from RG 1.170 Rev 1 and RG 1.171 Rev 1"
         }
       ]
     },
@@ -985,6 +1000,11 @@
           "pack": "faa-8110-49",
           "chapter": "ch11-software-change-impact-analysis.md",
           "note": "Software change impact analysis notes from Order 8110.49A"
+        },
+        {
+          "pack": "nrc-nuclear",
+          "chapter": "ch04-software-configuration-management-plans.md",
+          "note": "Software configuration management plan notes from RG 1.169 Rev 1"
         }
       ]
     },
@@ -3255,6 +3275,11 @@
           "pack": "jsp-815",
           "chapter": "ch03-leadership-and-organisation.md",
           "note": "Defence safety leadership and organisation notes from JSP 815"
+        },
+        {
+          "pack": "nrc-nuclear",
+          "chapter": "ch07-btp-7-14-staff-software-review.md",
+          "note": "BTP 7-14 Rev 6 staff software review notes for implementation and design outputs"
         }
       ]
     },
@@ -3490,6 +3515,21 @@
           "pack": "jsp-815",
           "chapter": "ch04-legislation-and-exemptions.md",
           "note": "Legislation and exemption notes from JSP 815; statute named, not reproduced as a substitute"
+        },
+        {
+          "pack": "nrc-nuclear",
+          "chapter": "ch01-nrc-software-assurance-framework.md",
+          "note": "NRC software-assurance framework for digital safety systems; seven-document map"
+        },
+        {
+          "pack": "nrc-nuclear",
+          "chapter": "ch02-software-life-cycle-processes.md",
+          "note": "Software life cycle process notes from RG 1.173 Rev 1 and BTP 7-14 planning review"
+        },
+        {
+          "pack": "nrc-nuclear",
+          "chapter": "ch08-endorsed-standards-and-adjacent-guidance.md",
+          "note": "Endorsed IEEE, IEC, and IAEA standards named by designation and edition, not reproduced"
         }
       ]
     },

@@ -25,17 +25,17 @@ Rules of construction:
 | Cluster | Entries |
 |---|---|
 | 1. Systems Thinking & Fundamentals | 25 |
-| 2. Requirements Engineering | 20 |
+| 2. Requirements Engineering | 21 |
 | 3. Requirements Traceability & Allocation | 3 |
 | 4. Architecture & Design | 20 |
 | 5. Interface Management & ICIDs | 9 |
 | 6. Integration | 4 |
-| 7. Verification | 16 |
+| 7. Verification | 18 |
 | 8. Validation | 7 |
 | 9. Test & Evaluation | 17 |
 | 10. Modeling, MBSE & SysML | 20 |
 | 11. Digital Engineering & Digital Twins | 25 |
-| 12. Configuration Management & Baselines | 19 |
+| 12. Configuration Management & Baselines | 20 |
 | 13. Data & Information Management | 7 |
 | 14. Risk Management | 27 |
 | 15. Opportunity/Benefit Management | 8 |
@@ -52,11 +52,11 @@ Rules of construction:
 | 26. Project/Program Management | 67 |
 | 27. Supplier, Procurement & Acquisition | 10 |
 | 28. Stakeholder Engagement & Needs | 3 |
-| 29. Governance, Reviews, Gates & Control Points | 24 |
-| 30. Standards, Tailoring & Process Models | 46 |
+| 29. Governance, Reviews, Gates & Control Points | 25 |
+| 30. Standards, Tailoring & Process Models | 49 |
 | 31. Specialty Engineering | 7 |
 | 32. Assurance & System Assurance | 10 |
-| **Total** | **685** |
+| **Total** | **693** |
 
 ## 1. Systems Thinking & Fundamentals
 
@@ -112,6 +112,7 @@ Rules of construction:
 | requirements-writing | glossary.md (support file) | Glossary for the pack |
 | requirements-writing | patterns.md (support file) | Patterns/practice heuristics |
 | fda-med-device | ch02-premarket-software-documentation.md | Content of Premarket Submissions for Device Software Functions, June 2023 guidance notes |
+| nrc-nuclear | ch03-software-requirements-specifications.md | Software requirements specification notes from RG 1.172 Rev 1 |
 
 ## 3. Requirements Traceability & Allocation
 
@@ -189,6 +190,8 @@ Rules of construction:
 | faa-8110-49 | ch04-software-conformity-inspection.md | Software conformity inspection notes from Order 8110.49A |
 | faa-8110-49 | ch08-aeh-verification-tools-reuse.md | AEH verification, tools, and reuse notes from AC 20-152A |
 | faa-8110-49 | ch12-data-and-control-coupling-practices.md | Data and control coupling practices from FAA airborne software guidance |
+| nrc-nuclear | ch05-verification-validation-reviews-audits.md | Verification, validation, review, and audit notes from RG 1.168 Rev 2 |
+| nrc-nuclear | ch06-test-documentation-and-unit-testing.md | Test documentation and unit testing notes from RG 1.170 Rev 1 and RG 1.171 Rev 1 |
 
 ## 8. Validation
 
@@ -302,6 +305,7 @@ Rules of construction:
 | fda-med-device | ch10-software-changes-510k.md | Software change decisions for 510(k) submissions under FDA device-software guidance |
 | faa-8110-49 | ch06-legacy-software-fls-ums.md | Field-loadable and user-modifiable software notes from Order 8110.49A |
 | faa-8110-49 | ch11-software-change-impact-analysis.md | Software change impact analysis notes from Order 8110.49A |
+| nrc-nuclear | ch04-software-configuration-management-plans.md | Software configuration management plan notes from RG 1.169 Rev 1 |
 
 ## 13. Data & Information Management
 
@@ -824,6 +828,7 @@ Rules of construction:
 | faa-8110-49 | ch02-software-review-process.md | FAA software review process under Order 8110.49A, certification-staff notes |
 | faa-8110-49 | ch03-level-of-faa-involvement.md | Level of FAA involvement decisions under Order 8110.49A |
 | jsp-815 | ch03-leadership-and-organisation.md | Defence safety leadership and organisation notes from JSP 815 |
+| nrc-nuclear | ch07-btp-7-14-staff-software-review.md | BTP 7-14 Rev 6 staff software review notes for implementation and design outputs |
 
 ## 30. Standards, Tailoring & Process Models
 
@@ -875,6 +880,9 @@ Rules of construction:
 | jsp-815 | ch01-defence-safety-jsp-map.md | JSP 815 map of the Defence SMS Framework and Direction and Guidance; ISO 45001 named, not quoted |
 | jsp-815 | ch02-sms-structure-and-assurance-stages.md | Defence SMS structure and assurance stages from JSP 815 |
 | jsp-815 | ch04-legislation-and-exemptions.md | Legislation and exemption notes from JSP 815; statute named, not reproduced as a substitute |
+| nrc-nuclear | ch01-nrc-software-assurance-framework.md | NRC software-assurance framework for digital safety systems; seven-document map |
+| nrc-nuclear | ch02-software-life-cycle-processes.md | Software life cycle process notes from RG 1.173 Rev 1 and BTP 7-14 planning review |
+| nrc-nuclear | ch08-endorsed-standards-and-adjacent-guidance.md | Endorsed IEEE, IEC, and IAEA standards named by designation and edition, not reproduced |
 
 ## 31. Specialty Engineering
 
