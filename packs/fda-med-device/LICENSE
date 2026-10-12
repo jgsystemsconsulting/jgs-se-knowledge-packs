@@ -2,12 +2,17 @@ fda-med-device pack: content licence
 ====================================
 
 This pack adapts the sibling prototype build and re-vets, below, the seven
-documents of the 2026-10-12 FDA source pin. Chapter citations keep the sibling
-build's source-row scheme (S1 to S12 plus S4a); rows for documents outside the
-pin stay recorded in the sibling source-vetting record and are not re-vetted
-here. Landing-page URLs are held in the sibling build spec dated 2026-09-24 and
-are not reproduced here; the repository link policy bans source-material hosts
-(see ../../docs/LICENSING.md).
+documents of the 2026-10-12 FDA source pin, rows S1 to S4 and S6 to S8. Row
+numbers follow the sibling build's scheme so chapter citations resolve: sibling
+rows S4a (FDA QMSR overview page) and S5 (the rule text as codified at 21 CFR
+Part 820) are merged into S4, the rule they restate, and sibling rows S11 and
+S12 (the eSTAR 510(k) and De Novo template guidances) are program sub-issues
+named under S8. Three sibling rows sit outside the pin and carry no row here:
+the Off-The-Shelf Software guidance (2023), the 510(k) Software Change guidance
+(2017), and the MDDS guidance (2022); chapters that teach them cite the guidance
+by name and are marked as synthesis. Landing-page URLs are held in the sibling
+build spec dated 2026-09-24 and are not reproduced here; the repository link
+policy bans source-material hosts (see ../../docs/LICENSING.md).
 
 Source licence: Public Domain (US Government work, 17 U.S.C. § 105)  (tier 1;
 see ../../docs/SOURCE-VETTING.md). No source-material download link is
@@ -18,7 +23,7 @@ Government prepared by FDA staff, and are NOT subject to copyright protection in
 the United States (17 U.S.C. § 105). They are in the public domain: anyone may
 reproduce, transform, and redistribute them for any purpose, including
 commercially, without permission. Material published on fda.gov, including the
-eSTAR program page (S13), is covered by the FDA Website Policies statement,
+eSTAR program page (S8), is covered by the FDA Website Policies statement,
 "Linking to or Copying Information":
 
     "Unless otherwise noted, the contents of the FDA website (www.fda.gov) — both
@@ -85,6 +90,9 @@ S4  Medical Devices; Quality System Regulation Amendments (final rule)
     No. 23, Friday, February 2, 2024; the rule runs to p. 7523)
     FR Doc. 2024-01709   Docket: FDA-2021-N-0507   RIN: 0910-AH99
     Basis: US Government work, 17 U.S.C. § 105
+    Merged rows: sibling rows S4a (FDA QMSR overview page) and S5 (the rule text
+    as codified at 21 CFR Part 820, eCFR text sourced from 89 FR 7523) restate
+    this rule and its codified text; chapters citing them cite S4.
     Reconstructs: what the QMSR change did to 21 CFR part 820, the incorporation by
     reference of ISO 13485:2016, FDA-specific additions retained outside ISO 13485,
     and the transition timeline. Summarised as obligations in FDA's words; no ISO
@@ -112,13 +120,17 @@ S7  Clinical Decision Support Software
     guidance reads them, and the boundary cases and worked examples.
     Used in: ch01, ch11
 
-S13 eSTAR program page
+S8  eSTAR program page
     Publisher: FDA (CDRH)   Web page   Content current: 2026-09-21
     Basis: US Government work, 17 U.S.C. § 105 (FDA Website Policies
     public-domain statement, quoted above)
-    Reconstructs: nothing verbatim; ch12 synthesizes the eSTAR program framing
-    and does not copy the page.
-    Used in: ch12
+    Program sub-issues: the Electronic Submission Template for Medical Device
+    510(k) Submissions (issued 2023-10-02) and the Electronic Submission Template
+    for Medical Device De Novo Requests (issued 2024-08-23), sibling rows S11 and
+    S12; the chapter names them for structure detail and reproduces neither them
+    nor the page.
+    Reconstructs: nothing verbatim; ch12 synthesizes the eSTAR program framing.
+    Used in: ch01, ch12
 
 
 EXCLUDED MATERIAL (cited by name only; no text reproduced)
