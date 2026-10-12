@@ -1,0 +1,28 @@
+slug: faa-8110-49
+title: "FAA Airborne Software and Hardware Approval Guidance (Order 8110.49A, AC 20-115D, AC 20-152A, and AC 00-69 Best Practices)"
+publisher: "U.S. Federal Aviation Administration (AIR); reconstructed by JG Systems Consulting Ltd"
+source_version: "S1 Order 8110.49A (2018-03-29); S2 AC 20-115D (2017-07-21); S3 AC 20-152A (2022-10-07); S4 AC 00-69 (2017-07-21). Pinned 2026-09-27."
+license: "Public Domain (US Government work, 17 U.S.C. 105)"
+license_tier: 1
+commercial_use: true
+share_alike: false
+attribution_required: false
+build:
+  method: "reconstructed reference notes from FAA PDFs, per-chapter source slices"
+  source_pages: 71
+  chapters: 13
+  built_on: "2026-09-27"
+notes: >
+  US Government works, public domain (17 U.S.C. 105); not subject to US copyright.
+  Free to reproduce, transform, and redistribute (including commercially); no
+  attribution or share-alike obligation. Attribution to the FAA is provided in
+  LICENSE/NOTICE as a courtesy only, and the FAA does not endorse this pack.
+  Content is synthesized/transformed reference notes; no long verbatim passages
+  are reproduced. Four-source set: FAA Order 8110.49A (2018-03-29), AC 20-115D
+  (2017-07-21), AC 20-152A (2022-10-07), AC 00-69 (2017-07-21); per-source
+  vetting records in LICENSE.
+  RTCA DO-178C and its supplements (DO-330 to DO-333), DO-254, EUROCAE ED-12C
+  and ED-80, and SAE ARP4754B/ARP4761A are copyrighted and paywalled; no text
+  from them is reproduced, they are cited by name only. See avionics-signpost.
+  No source-material download link is published (see docs/LICENSING.md).
+change_indication: "reconstructed as synthesized reference notes"
