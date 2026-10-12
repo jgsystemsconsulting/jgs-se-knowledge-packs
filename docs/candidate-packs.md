@@ -13,7 +13,7 @@ Build in this order:
 
 | # | Pack | Kind | Why first |
 |---|------|------|-----------|
-| 1 | `fda-med-device` | full | FDA guidance is public domain, high volume, zero competition, large audience |
+| 1 | `fda-med-device` | full | built 2026-10-12. FDA guidance is public domain, high volume, zero competition, large audience |
 | 2 | `functional-safety-signpost` | signpost | ISO 26262 / IEC 61508 are the most-demanded paywalled standards; the repo already ships their free public cousins |
 | 3 | `avionics-signpost` plus `faa-8110-49` | signpost + full | DO-178C demand is proven; FAA Order 8110.49 is its free public-domain counterpart and fits the existing faa family |
 | 4 | `uk-defence` family (JSP series first) | full | OGL-licensed, no open competitor, and UK sourcing matches the consultancy's identity |
@@ -64,7 +64,7 @@ Full packs follow docs/PACK-SPEC.md: SKILL.md, PACK.yaml, LICENSE, and chapters 
 
 ### Full packs
 
-- `fda-med-device` (tier 1). Sources: FDA guidance documents on device software, the Quality Management System Regulation (21 CFR 820 as amended by the QMSR), premarket submission guidance, and cybersecurity guidance. All US government works. This is the strongest single opportunity: high publication volume, clear chapter boundaries, an audience that already asks agents about IEC 62304, and no open competitor.
+- `fda-med-device` (tier 1). Built 2026-10-12. Sources: FDA guidance documents on device software, the Quality Management System Regulation (21 CFR 820 as amended by the QMSR), premarket submission guidance, and cybersecurity guidance. All US government works. This is the strongest single opportunity: high publication volume, clear chapter boundaries, an audience that already asks agents about IEC 62304, and no open competitor.
 - `med-device-eu` (tier 2/3, vet per doc). Sources: MDCG endorsed guidance (free, EU reuse with attribution), MHRA guidance (OGL v3). Chapter candidates: clinical evaluation, post-market surveillance, software as a medical device.
 - `uk-defence-*` (tier 2/3, vet per doc). Sources: JSP publications on gov.uk (OGL v3) for safety, assurance, and requirements practice; selected DEF-STANs from UK Defence Standardization, which downloads free but carries per-document licence terms. Note SOURCE-VETTING.md already lists Def Stan 00-051 as unvetted, which is the right caution: each document gets its own licence statement before packaging. Start with one JSP pack and expand the family.
 - `faa-8110-49` (tier 1). FAA Order 8110.49, software certification guidance for DO-178C usage. Public domain, sits naturally beside the existing faa family, and gives the avionics audience a real pack to land on from the signpost.
@@ -78,7 +78,7 @@ Full packs follow docs/PACK-SPEC.md: SKILL.md, PACK.yaml, LICENSE, and chapters 
 
 Each is one working day or less: SKILL.md with tables mapping the paywalled standard to its free public analogue in this catalogue, plus official catalogue URLs.
 
-- `functional-safety-signpost`: IEC 61508, ISO 26262, ISO-SAE 21434. Free paths: MIL-STD-882 (`mil-std-882`), NHTSA cybersecurity guidance (proposed `nhtsa-vehicle`), FDA software guidance (proposed `fda-med-device`).
+- `functional-safety-signpost`: IEC 61508, ISO 26262, ISO-SAE 21434. Free paths: MIL-STD-882 (`mil-std-882`), NHTSA cybersecurity guidance (proposed `nhtsa-vehicle`), FDA software guidance (`fda-med-device`, built 2026-10-12).
 - `avionics-signpost`: DO-178C, DO-254, ARP4754A, ARP4761. Free paths: FAA Order 8110.49 (proposed `faa-8110-49`), existing `faa-*` packs, EASA AMC material (proposed `easa-rules`).
 - `automotive-signpost`: ISO 26262, ASPICE, SAE J3016, UNECE R155/R156 (signpost-only; © UNECE, no redistribution grant, verified 2026-09-25). Open path: `nhtsa-vehicle` (US Government guidance, not a UNECE equivalent).
 - `rail-signpost`: EN 50126/50128/50129. Free paths: CSM regulations on EUR-Lex, RSSB standard summaries.

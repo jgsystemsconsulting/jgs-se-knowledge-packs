@@ -23,6 +23,7 @@ All notable changes to this project are documented here. Format follows
 ### Added
 
 - tooling: `check_pack_quality` gate (orphan chapter files, 30-line chapter floor, Topic Index resolution with en-dash range expansion) as check_release check 16, a probe (`tooling/test_pack_quality.py`), and the ninth CI step "Pack content quality" pinned with parity literals in `test_ci_gate.py`. PACK-SPEC now states the real CI/local split.
+- `fda-med-device` (12 ch): synthesized reference notes from FDA device software guidance and the QMSR final rule (89 FR 7496, 2024-01709, effective 2026-02-02), including the June 2023 premarket software documentation guidance, the January 2002 software validation guidance, the February 2026 CSA and cybersecurity finals, the January 2026 CDS guidance, and the eSTAR program page (content current 2026-09-21). Tier 1, public domain under 17 U.S.C. § 105. ISO 13485 and IEC 62304 are named and not quoted.
 
 ## [1.22.1]: 2026-10-11
 

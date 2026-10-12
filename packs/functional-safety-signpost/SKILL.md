@@ -46,8 +46,7 @@ the Status cell.
 | **SAE J3016** | 202104 | SAE | 🔴 Excluded. `https://www.sae.org/standards/content/j3016_202104/` | see `automotive-signpost` and `nhtsa-vehicle`; level definitions are not restated here |
 | **ASPICE PAM** | 4.0 | VDA QMC | 🔴 Excluded. `https://vda-qmc.de/en/software-processes/automotive-spice/` | none in this catalogue |
 
-FDA software guidance is not in this catalogue, and this signpost does not list
-it as a live pack.
+`fda-med-device` is a live pack in this catalogue (FDA device software guidance and the QMSR). It is not an open path for IEC 61508, ISO 26262, or ISO/SAE 21434.
 
 ---
 *Signpost content is original JG Systems Consulting Ltd. work, MIT licensed. Trademarks and standard designations are named for identification only.*

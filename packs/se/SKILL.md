@@ -109,6 +109,7 @@ Output goes in the reply unless the user names a file. A deliverable with no mat
 | SE standards landscape lookup | ISO/IEC/IEEE standards, INCOSE handbook, ECSS, SAE, where to get a standard | `se-standards-signpost`, `sebok` |
 | Vehicle safety & automotive | vehicle safety, automotive, FMVSS, ADS, automated driving, vehicle cybersecurity | `nhtsa-vehicle`, `automotive-signpost`, `functional-safety-signpost` |
 | GPS & GNSS interfaces | GPS, GNSS, NAVSTAR, space segment interface, ranging signal | `is-gps-200n`, `faa-std-025` |
+| Medical device software | FDA, QMSR, 510(k), device software, SaMD, eSTAR | `fda-med-device` |
 
 ### Agency contexts
 | Agency | Keywords | Packs |
@@ -123,6 +124,7 @@ Output goes in the reply unless the user names a file. A deliverable with no mat
 | OMB | OMB, circular A-94, federal benefit-cost | `federal-bca` |
 | EU | EU, European Union, AI Act, regulation | `eu-ai-act` |
 | NHTSA / USDOT | NHTSA, USDOT, FMVSS, vehicle safety standard, automated driving systems | `nhtsa-vehicle` |
+| FDA | FDA, CDRH, QMSR, 21 CFR 820, 510(k) | `fda-med-device` |
 
 ### Deliverables
 | Deliverable | Keywords | Draft | Review | Verify |
