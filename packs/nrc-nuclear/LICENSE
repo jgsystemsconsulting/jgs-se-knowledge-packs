@@ -1,0 +1,182 @@
+nrc-nuclear pack: content licence
+=================================
+
+This pack is derived from the seven US Nuclear Regulatory Commission (NRC)
+sources listed below (S1 to S7 of the source-vetting record). Their landing-page
+URLs are held in the local source manifest dated 2026-09-26 and are not
+reproduced here; the repository link policy bans source-material hosts (see
+../../docs/LICENSING.md).
+
+Source licence: Public Domain (US Government work, 17 U.S.C. 105)  (tier 1; see
+../../docs/SOURCE-VETTING.md). No source-material download link is published.
+
+All seven sources are works of the United States Government prepared by NRC
+staff, and are NOT subject to copyright protection in the United States
+(17 U.S.C. 105). They are in the public domain: anyone may reproduce, transform,
+and redistribute them for any purpose, including commercially, without
+permission and without any attribution or share-alike obligation.
+
+Attribution to the NRC is provided as a courtesy (see the repository NOTICE),
+not as a legal obligation. The NRC does not endorse this pack or its authors.
+
+Each source below carries a vetting block: exact title, revision and date, ML
+accession, licence basis, what the pack reconstructs from it, and the chapters
+that use it. Titles and section structures were checked against the local
+source-text captures on 2026-09-26.
+
+Reconstruction: all pack content is synthesized reference notes in the authors'
+own words. The documents themselves are not republished here; quotations are
+limited to short passages (two-sentence cap per quote, enforced by the pack
+gates).
+
+NOTE: This file governs the CONTENT of this pack. The repository tooling is
+licensed separately under MIT (see ../../LICENSE).
+
+
+THE SEVEN SOURCES
+=================
+
+S1  Regulatory Guide 1.168, "Verification, Validation, Reviews, and Audits for
+    Digital Computer Software Used in Safety Systems of Nuclear Power Plants"
+    Publisher: US Nuclear Regulatory Commission
+    Revision 2   Issued: July 2013   ML accession: ML13073A210
+    Licence: Public Domain (US Government work)
+    Reconstructs: the guide's purpose and discussion background, and the staff
+    regulatory guidance on verification and validation of digital computer
+    software used in safety systems: software integrity, software reliability,
+    independence of software verification and validation, conformance of
+    materials, quality assurance, tools for software development, verification
+    and validation tasks, and reviews and audits.
+    Used in: ch01, ch05
+
+S2  Regulatory Guide 1.169, "Configuration Management Plans for Digital Computer
+    Software Used in Safety Systems of Nuclear Power Plants"
+    Publisher: US Nuclear Regulatory Commission
+    Revision 1   Issued: July 2013   ML accession: ML12355A642
+    Licence: Public Domain (US Government work)
+    Reconstructs: the guide's purpose and discussion background, and the staff
+    regulatory guidance on the content of a software configuration management
+    plan: configuration identification, configuration control, interface
+    control, and configuration status accounting for safety-system software.
+    Used in: ch01, ch04
+
+S3  Regulatory Guide 1.170, "Test Documentation for Digital Computer Software
+    Used in Safety Systems of Nuclear Power Plants"
+    Publisher: US Nuclear Regulatory Commission
+    Revision 1   Issued: July 2013   ML accession: ML13003A216
+    Licence: Public Domain (US Government work)
+    Reconstructs: the guide's purpose and discussion background, and the staff
+    regulatory guidance on software test documentation: the test plan, test
+    design specification, test case specification, test procedure, and test
+    results and reports for safety-system software.
+    Used in: ch01, ch06
+
+S4  Regulatory Guide 1.171, "Software Unit Testing for Digital Computer Software
+    Used in Safety Systems of Nuclear Power Plants"
+    Publisher: US Nuclear Regulatory Commission
+    Revision 1   Issued: July 2013   ML accession: ML13004A375
+    Licence: Public Domain (US Government work)
+    Reconstructs: the guide's purpose and discussion background, and the staff
+    regulatory guidance on unit testing of safety-system software: unit test
+    planning, test case design and coverage, test execution and recording, and
+    evaluation of unit test results.
+    Used in: ch01, ch06
+
+S5  Regulatory Guide 1.172, "Software Requirement Specifications for Digital
+    Computer Software and Complex Electronics Used in Safety Systems of Nuclear
+    Power Plants"
+    Publisher: US Nuclear Regulatory Commission
+    Revision 1   Issued: July 2013   ML accession: ML13007A173
+    Licence: Public Domain (US Government work)
+    Reconstructs: the guide's purpose and discussion background, and the staff
+    regulatory guidance on the content of a software requirements
+    specification for safety-system software and complex electronics:
+    functional and performance requirements, design constraints, and the
+    qualities of a good requirements specification.
+    Used in: ch01, ch03
+
+S6  Regulatory Guide 1.173, "Developing Software Life-Cycle Processes for
+    Digital Computer Software Used in Safety Systems of Nuclear Power Plants"
+    Publisher: US Nuclear Regulatory Commission
+    Revision 1   Issued: July 2013   ML accession: ML13009A190
+    Licence: Public Domain (US Government work)
+    Reconstructs: the guide's purpose and discussion background, and the staff
+    regulatory guidance on developing software life cycle processes: process
+    definition and integration, development, verification and validation,
+    configuration management, and the software plans that document them.
+    Used in: ch01, ch02
+
+S7  NUREG-0800 Standard Review Plan, Branch Technical Position 7-14, "Guidance
+    on Software Reviews for Digital Computer-Based Instrumentation and Control
+    Systems"
+    Publisher: US Nuclear Regulatory Commission
+    Revision 6   Issued: August 2016   ML accession: ML16019A308
+    Licence: Public Domain (US Government work)
+    Reconstructs: the staff's software review positions: the background and
+    review of the description of the software aspects of the application;
+    the information to be reviewed; the acceptance criteria for planning
+    (the software management, development, quality assurance, integration,
+    installation, maintenance, training, operations, and safety plans, plus
+    the verification and validation, configuration management, and test plan
+    reviews); the acceptance criteria for implementation; the acceptance
+    criteria for design outputs (the requirements, architecture, and design
+    outputs, and the implementation, integration, and installation outputs);
+    and the review procedures.
+    Used in: ch01, ch02, ch04, ch05, ch06, ch07
+
+
+EXCLUDED MATERIAL (cited by designation and edition only; no text reproduced)
+=============================================================================
+
+The following standards and guides are endorsed, referenced, or adjacent to the
+seven sources. They are NOT licensed to this pack: the NRC documents name them,
+and the pack restates only the NRC's own recognition and discussion text. It
+reproduces no standard text, table, requirement, or clause wording from any of
+them.
+
+-   X1  IEEE Std 603-1991, criteria for safety systems for nuclear power
+        generating stations. Copyrighted; cited by designation and edition only.
+-   X2  IEEE Std 7-4.3.2-2003, criteria for programmable digital devices in
+        safety systems. Copyrighted; cited by designation and edition only.
+-   X3  IEEE Std 828-2005, configuration management in systems and software.
+        Copyrighted; cited by designation and edition only.
+-   X4  IEEE Std 829-2008, software test documentation. Copyrighted; cited by
+        designation and edition only.
+-   X5  IEEE Std 830-1998, recommended practice for software requirements
+        specifications. Copyrighted; cited by designation and edition only.
+-   X6  IEEE Std 1008-1987, software unit testing. Copyrighted; cited by
+        designation and edition only.
+-   X7  IEEE Std 1012-2004, software verification and validation. Copyrighted;
+        cited by designation and edition only.
+-   X8  IEEE Std 1028-2008, software reviews and audits. Copyrighted; cited by
+        designation and edition only.
+-   X9  IEEE Std 1074-2006, developing software life cycle processes.
+        Copyrighted; cited by designation and edition only.
+-   X10 IEC 60880, edition 2.0, 2006, software for I&C systems performing
+        category A functions. Copyrighted; cited by designation and edition
+        only.
+-   X11 IEC 61513, edition 2.0, 2011, nuclear power plant I&C important to
+        safety. Copyrighted; cited by designation and edition only.
+-   X12 IEC 62138, edition 2.0, 2018, software for I&C systems performing
+        category B or C functions. Copyrighted; cited by designation and
+        edition only.
+-   X13 IAEA safety guides on computer-based safety systems of nuclear power
+        plants (for example SSG-39). Copyrighted; cited by designation only.
+-   X14 Regulatory Guide 1.152, Revision 4, July 2023 (ML23054A463), guidance
+        on programmable logic controllers in non-safety applications. A US
+        Government work and therefore public domain, but outside this pack's
+        pinned source set; named as an adjacent document only.
+-   X15 NUREG-0800 Branch Technical Position 7-18, Revision 6 (ML16019A327),
+        and Branch Technical Position 7-19, Revision 9, May 2024
+        (ML24005A077), with Standard Review Plan Appendix 7.1-D, Revision 1
+        (ML16019A114), on guidance for evaluation of defense in depth and
+        diversity. US Government works outside the pinned source set; named as
+        adjacent documents only.
+-   X16 NUREG/CR contractor reports supporting the endorsed standards (for
+        example NUREG/CR-6463 on safety software). Named by designation only;
+        no contractor-report text is reproduced.
+
+Buy copyrighted items from IEEE, IEC, or IAEA as applicable. The designation
+and edition citations above exist so a reader can locate the standards; the
+cleared status of S1 to S7 and the exclusion rationale are recorded in
+../../docs/SOURCE-VETTING.md.
