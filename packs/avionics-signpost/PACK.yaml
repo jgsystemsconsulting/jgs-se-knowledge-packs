@@ -1,0 +1,13 @@
+slug: avionics-signpost
+kind: signpost
+title: "Avionics Development Assurance Standards: Signpost (pointers only)"
+publisher: "JG Systems Consulting Ltd."
+license: "MIT"
+license_tier: 2
+commercial_use: true
+notes: >
+  Signpost, not a knowledge pack. Zero standards-body text. Rows carry
+  designation, title, edition, owner, status, and the owner's URL only.
+  DO-178C, DO-254, ARP4754B, ARP4761A and EUROCAE equivalents are Excluded
+  under docs/SOURCE-VETTING.md. Free FAA paths point to faa-8110-49.
+  Trademarks named for identification only.
