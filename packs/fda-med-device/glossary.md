@@ -2,7 +2,7 @@
 
 Terms as FDA uses them in the pinned sources, with the chapters that carry the detail.
 
-- **510(k)**: Premarket notification under FD&C Act section 510(k): the path for devices relying on substantial equivalence to a legally marketed predicate. Software and firmware changes to a 510(k)-subject device run the S9 decision sequence before a new filing is chosen. eSTAR is the mandatory authoring format since 2023-10-01. → ch01, ch10, ch12
+- **510(k)**: Premarket notification under FD&C Act section 510(k): the path for devices relying on substantial equivalence to a legally marketed predicate. Software and firmware changes to a 510(k)-subject device run the 510(k) software-change guidance's decision sequence before a new filing is chosen. eSTAR is the mandatory authoring format since 2023-10-01. → ch01, ch10, ch12
 - **CADe/CADx**: Computer-assisted detection or diagnosis software that analyzes medical images or signals. Assessing the clinical implications of an image, signal, or pattern fails CDS Criterion 1, so these functions stay devices. → ch11
 - **CDS (clinical decision support)**: Software that supports or provides recommendations to a health care professional about prevention, diagnosis, or treatment. Non-Device CDS must meet all four criteria of FD&C Act section 520(o)(1)(E); failing any one keeps the function a device. → ch11
 - **CGMP**: Current good manufacturing practice: the device quality-system requirements FDA enforces. Under the QMSR, 21 CFR part 820 carries those requirements with ISO 13485:2016 incorporated by reference. → ch05

@@ -44,7 +44,7 @@ Decision rules for device software questions. Each checklist names the chapter t
 
 ## Does my change need a new 510(k)? → ch10
 
-- Presumption of assessment, not presumption of filing: run the S9 sequence. "Document" (no new 510(k)) is a recorded outcome, not an ignore.
+- Presumption of assessment, not presumption of filing: run the 510(k) software-change guidance's sequence. "Document" (no new 510(k)) is a recorded outcome, not an ignore.
 - Intent to significantly affect safety or effectiveness? New 510(k) likely, regardless of later questions.
 - Q1: change solely to strengthen cybersecurity with no other impact? Often no. Q2: solely restoring the cleared specification? Often no.
 - Q3a: new or modified risk of significant harm not effectively mitigated on the cleared device, or Q3b: new or modified risk control for such harm? Likely yes. Q4: significant effect on clinical functionality or performance specifications? Likely yes.
@@ -79,7 +79,7 @@ Decision rules for device software questions. Each checklist names the chapter t
 
 | Smell | Likely gap | Chapter |
 |-------|------------|---------|
-| Version number used as the regulatory classification | The S9 flowchart was never run | ch10 |
+| Version number used as the regulatory classification | The 510(k) software-change guidance's flowchart was never run | ch10 |
 | Module-by-module documentation depth | Device-as-a-whole rule missed | ch02 |
 | Static SBOM spreadsheet without support data | SBOM content floor unmet | ch07 |
 | "We hold an ISO certificate" as QMSR compliance | Certificate is not compliance | ch05 |
