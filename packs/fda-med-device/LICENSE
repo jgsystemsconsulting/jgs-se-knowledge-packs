@@ -1,0 +1,188 @@
+fda-med-device pack: content licence
+====================================
+
+This pack is derived from the thirteen sources listed below (rows S1 to S12 plus
+S4a of the source-vetting record). Their landing-page URLs are held in the build
+spec dated 2026-09-24 and are not reproduced here; the repository link policy
+bans source-material hosts (see ../../docs/LICENSING.md).
+
+Source licence: Public Domain (US Government work, 17 U.S.C. 105)  (tier 1; see
+../../docs/SOURCE-VETTING.md). No source-material download link is published.
+
+The guidance documents and the final rule are works of the United States
+Government prepared by FDA staff, and are NOT subject to copyright protection in
+the United States (17 U.S.C. 105). They are in the public domain: anyone may
+reproduce, transform, and redistribute them for any purpose, including
+commercially, without permission. Material published on fda.gov, including the
+QMSR overview page (S4a), is covered by the FDA Website Policies statement,
+"Linking to or Copying Information":
+
+    "Unless otherwise noted, the contents of the FDA website (www.fda.gov) — both
+     text and graphics — are not copyrighted. They are in the public domain and
+     may be republished, reprinted and otherwise used freely by anyone."
+
+Federal regulations and Federal Register rule text (S4, S5) are US Government
+works under the same statute.
+
+Attribution to FDA is provided as a courtesy (see the repository NOTICE), not as
+a legal obligation. FDA does not endorse this pack or its authors.
+
+Each source below carries a vetting block: exact title, pinned date, docket or
+FR document where known, licence basis, what the pack reconstructs from it, and
+the chapters that use it. Items marked "confirmed from PDF" were checked against
+the local source-text captures on 2026-09-24; where a docket is printed only on
+the FDA landing page and not in the PDF, the landing-page value is pinned.
+
+Reconstruction: all pack content is synthesized reference notes in the authors'
+own words. Quotations are limited to short passages (two-sentence cap per quote,
+enforced by the pack gates). The documents themselves are not republished here.
+
+NOTE: This file governs the CONTENT of this pack. The repository tooling is
+licensed separately under MIT (see ../../LICENSE).
+
+
+THE THIRTEEN SOURCES
+====================
+
+S1  Content of Premarket Submissions for Device Software Functions
+    Publisher: FDA (CDRH)   Issued: 2023-06-14   Status: Final   Docket: FDA-2021-D-0775
+    Basis: US Government work, 17 U.S.C. 105
+    Supersedes: "Guidance for the Content of Premarket Submissions for Software
+    Contained in Medical Devices" (May 2005), per its cover page.
+    Reconstructs: the Basic and Enhanced documentation levels, the level-of-concern
+    driver, and the premarket software documentation elements.
+    Used in: ch01, ch02
+
+S2  General Principles of Software Validation
+    Publisher: FDA (CDRH, CBER)   Issued: 2002-01-11 (Version 2.0)   Status: Final
+    Docket: FDA-1997-D-0029 (landing page)
+    Basis: US Government work, 17 U.S.C. 105
+    Superseded in part: Section 6, "Validation of Automated Process Equipment and
+    Quality System Software," is superseded by S3 (confirmed from the S3 PDF text,
+    2026-09-24); the remaining sections stay in force and are used here.
+    Reconstructs: validation principles, lifecycle software validation activities,
+    validation of changes, independence, and record expectations.
+    Used in: ch01, ch03, ch04
+
+S3  Computer Software Assurance for Production and Quality Management System Software
+    Publisher: FDA (CDRH, CBER)   Issued: 2026-02-03   Status: Final   Docket: FDA-2022-D-0795
+    Basis: US Government work, 17 U.S.C. 105
+    Supersedes: "Computer Software Assurance for Production and Quality System
+    Software," issued 2025-09-24 (confirmed from PDF). Supplements S2 except that
+    it supersedes Section 6 of S2, "Validation of Automated Process Equipment and
+    Quality System Software" (confirmed from PDF, 2026-09-24).
+    Reconstructs: risk-based assurance for production and QMS software, intended-use
+    determination, assurance-activity selection, and record content.
+    Used in: ch01, ch04
+
+S4  Medical Devices; Quality System Regulation Amendments (final rule)
+    Publisher: FDA (HHS)   Published: 2024-02-02   Effective: 2026-02-02   Status: Final rule
+    Citation: 89 FR 7496 (start page confirmed from the rule text header: Vol. 89,
+    No. 23, Friday, February 2, 2024; the rule runs to p. 7523)
+    FR Doc. 2024-01709   Docket: FDA-2021-N-0507   RIN: 0910-AH99
+    Basis: US Government work, 17 U.S.C. 105
+    Reconstructs: what the QMSR change did to 21 CFR part 820, the incorporation by
+    reference of ISO 13485:2016, FDA-specific additions retained outside ISO 13485,
+    and the transition timeline. Summarised as obligations in FDA's words; no ISO
+    text is reproduced.
+    Used in: ch01, ch05
+
+S4a Quality Management System Regulation (QMSR), FDA overview page
+    Publisher: FDA (CDRH)   Web page   Fetched: 2026-09-24
+    Basis: FDA Website Policies public-domain statement (quoted above)
+    Reconstructs: the effective date and the incorporation-by-reference scope as
+    FDA states them for readers, cross-checked against S4.
+    Used in: ch01, ch05
+
+S5  eCFR 21 CFR Part 820, Quality Management System Regulation (current text)
+    Publisher: Office of the Federal Register (eCFR)   Regulation
+    Text currency: Title 21 "up to date as of 9/22/2026," last amended 9/22/2026
+    (per the eCFR capture header); retrieved 2026-09-24
+    Basis: US Government work, 17 U.S.C. 105
+    Reconstructs: the structure and obligations of the current Part 820 as amended
+    by S4. Summarised, not republished; section numbers only.
+    Used in: ch01, ch05
+
+S6  Cybersecurity in Medical Devices: Quality Management System Considerations
+    and Content of Premarket Submissions
+    Publisher: FDA (CDRH, CBER)   Issued: 2026-02-03   Status: Final   Docket: FDA-2021-D-1158
+    Basis: US Government work, 17 U.S.C. 105
+    Supersedes: "Cybersecurity in Medical Devices: Quality System Considerations
+    and Content of Premarket Submissions," issued 2025-06-27 (confirmed from PDF).
+    Reconstructs: the secure product development framework, threat modelling,
+    cybersecurity risk management, security architecture views, SBOM content and
+    placement, cybersecurity labelling, and postmarket vulnerability management.
+    Used in: ch01, ch06, ch07, ch09
+
+S7  Clinical Decision Support Software
+    Publisher: FDA (CDRH, CBER)   Issued: 2026-01-29   Status: Final
+    Docket: FDA-2017-D-6569 (recorded from the PDF cover page)
+    Basis: US Government work, 17 U.S.C. 105
+    Supersedes: "Clinical Decision Support Software," issued 2026-01-06 (per its
+    cover page).
+    Reconstructs: the four statutory criteria for non-device CDS as the 2026
+    guidance reads them, and the boundary cases and worked examples.
+    Used in: ch01, ch11
+
+S8  Off-The-Shelf Software Use in Medical Devices
+    Publisher: FDA (CDRH)   Issued: 2023-08-11   Status: Final   Docket: FDA-2019-D-3598
+    Basis: US Government work, 17 U.S.C. 105
+    Originally issued: 1999-09-09; the 2023 final supersedes the 1999 guidance
+    (per its cover page).
+    Reconstructs: OTS/SOUP documentation, the risk-based level of verification and
+    validation evidence, and maintenance and obsolescence expectations.
+    Used in: ch01, ch08
+
+S9  Deciding When to Submit a 510(k) for a Software Change to an Existing Device
+    Publisher: FDA (CDRH, CBER)   Issued: 2017-10-25   Status: Final   Docket: FDA-2016-D-2021
+    Basis: US Government work, 17 U.S.C. 105
+    Reconstructs: the change-assessment flowchart logic, its question sequence,
+    and how a no-510(k) decision is documented.
+    Used in: ch01, ch10
+
+S10 Medical Device Data Systems, Medical Image Storage Devices, and Medical Image
+    Communications Devices
+    Publisher: FDA (CDRH)   Issued: 2022-09-28   Status: Final   Docket: FDA-2014-D-0798
+    Basis: US Government work, 17 U.S.C. 105
+    Originally issued: 2015-02-09 (per its cover page).
+    Reconstructs: the MDDS and image-storage/communications function categories
+    and how the 21st Century Cures software provisions moved them outside the
+    device definition.
+    Used in: ch01, ch08
+
+S11 Electronic Submission Template for Medical Device 510(k) Submissions
+    Publisher: FDA (CDRH)   Issued: 2023-10-02   Status: Final   Docket: FDA-2021-D-0872
+    Basis: US Government work, 17 U.S.C. 105
+    Originally issued: 2022-09-22; eSTAR 510(k) submissions mandatory from
+    2023-10-01 (per the guidance and landing page).
+    Reconstructs: the eSTAR 510(k) template structure and what it enforces for
+    software and cybersecurity content.
+    Used in: ch01, ch12
+
+S12 Electronic Submission Template for Medical Device De Novo Requests
+    Publisher: FDA (CDRH)   Issued: 2024-08-23   Status: Final
+    Docket: FDA-2023-D-3788 (recorded from the PDF cover page)
+    Basis: US Government work, 17 U.S.C. 105
+    eSTAR De Novo submissions mandatory from 2025-10-01 (per the landing page).
+    Reconstructs: the eSTAR De Novo template structure and its mandatory date.
+    Used in: ch01, ch12
+
+
+EXCLUDED MATERIAL (cited by name only; no text reproduced)
+=========================================================
+
+The following standards are copyrighted and are NOT licensed to this pack. The
+pack names them and describes FDA's own obligations only; it reproduces no
+standard text, table, or clause wording.
+
+-   ISO 13485:2016, "Medical devices: Quality management systems. Requirements
+    for regulatory purposes." Incorporated by reference into 21 CFR 820 by S4; the
+    incorporation changes the regulatory status of the standard, not its
+    copyright.
+-   ISO 9000:2015, "Quality management systems: Fundamentals and vocabulary"
+    (clause 3 vocabulary is incorporated by reference alongside ISO 13485:2016).
+-   ISO 14971, "Medical devices: Application of risk management to medical devices."
+-   IEC 62304, "Medical device software: Software life cycle processes."
+
+These exclusions and the cleared status of S1 to S12 plus S4a are recorded in
+../../docs/SOURCE-VETTING.md.
