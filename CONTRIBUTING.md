@@ -42,7 +42,11 @@ python tooling/build_pack.py --slug <slug> --title "..." --publisher "..." \
 #    - extract text (jgs-reference-skill), map chapter offsets, generate reference-depth
 #      chapters + glossary/patterns/cheatsheet, then the SKILL.md index.
 # 3. Fill the TODOs in packs/<slug>/PACK.yaml and packs/<slug>/LICENSE.
-# 4. Add a catalog row and rebuild catalog.json (see tooling/ or hand-edit).
+# 4. Registration depends on kind. A live catalog pack: add a catalog row,
+#    rebuild catalog.json (see tooling/ or hand-edit), and add a watchlist
+#    entry in docs/source-watchlist.json (see docs/SOURCE-FRESHNESS.md).
+#    A signpost or an orchestrator: do not add a catalog row and do not add
+#    a watchlist entry.
 # 5. Add the slug to the /se map (packs/se/SKILL.md Topics row + agency row;
 #    Licences row when not public domain).
 

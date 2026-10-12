@@ -95,7 +95,7 @@ Three risks need handling during build, not after. First, OGL v3 and EU reuse te
 
 ## Mechanics of adding a pack
 
-Adding any pack from this list needs: the pack folder per PACK-SPEC.md, a tier assignment under SOURCE-VETTING.md rules, regeneration of SKILLS.md, a catalog.json entry, and updates to the `/se` orchestrator routing and the capability map (`docs/capability-map.json`, checked by `tooling/check_capability_map.py`). Gates: `tooling/validate_pack.py`, `tooling/check_release.py`, and the CI gate. Nothing new is required from the tooling for full or signpost kinds.
+Adding a pack from this list needs: the pack folder per PACK-SPEC.md, a tier assignment under SOURCE-VETTING.md rules, regeneration of SKILLS.md, an update to the `/se` orchestrator routing, and an update to the capability map (`docs/capability-pack-map.json`, checked by `tooling/check_capability_map.py`). A live catalog pack (any kind other than signpost or orchestrator) also gets a catalog.json row and a watchlist entry in `docs/source-watchlist.json` (one entry per live catalog pack; see docs/SOURCE-FRESHNESS.md). A signpost or an orchestrator gets neither a catalog row nor a watchlist entry. Gates: `tooling/validate_pack.py`, `tooling/check_release.py`, and the CI gate.
 
 ## Sources consulted
 
