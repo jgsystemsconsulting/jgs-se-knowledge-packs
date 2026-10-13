@@ -28,6 +28,7 @@
   ],
   "skills": [
     "./packs/automotive-signpost/SKILL.md",
+    "./packs/avionics-signpost/SKILL.md",
     "./packs/cisa-cpg/SKILL.md",
     "./packs/dafman-63-119/SKILL.md",
     "./packs/dau-se-guidebook/SKILL.md",

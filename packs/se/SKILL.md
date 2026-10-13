@@ -110,7 +110,7 @@ Output goes in the reply unless the user names a file. A deliverable with no mat
 | Vehicle safety & automotive | vehicle safety, automotive, FMVSS, ADS, automated driving, vehicle cybersecurity | `nhtsa-vehicle`, `automotive-signpost`, `functional-safety-signpost` |
 | GPS & GNSS interfaces | GPS, GNSS, NAVSTAR, space segment interface, ranging signal | `is-gps-200n`, `faa-std-025` |
 | Medical device software | FDA, QMSR, 510(k), device software, SaMD, eSTAR | `fda-med-device` |
-| Avionics software assurance | DO-178C, DO-254, 8110.49, airborne software, AEH, conformity | `faa-8110-49` |
+| Avionics software assurance | DO-178C, DO-254, 8110.49, airborne software, AEH, conformity | `faa-8110-49`, `avionics-signpost` |
 | Defence safety management | JSP 815, defence safety, SMS, safety case, assurance | `jsp-815` |
 | Nuclear software assurance | NRC, regulatory guide, NUREG, digital safety systems, software assurance, BTP 7-14 | `nrc-nuclear` |
 
