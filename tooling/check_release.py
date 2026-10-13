@@ -1307,6 +1307,19 @@ def main() -> int:
     except Exception as e:
         fail(errs, f"[map-replay] generate_capability_map failed to run: {e}")
 
+    # 5h. source watch freshness: every watchlist entry checked within STALE_DAYS.
+    # Local only. Wired after calibration filled every last_checked (D-06).
+    try:
+        import check_source_watch  # type: ignore
+        rc = check_source_watch.main([])
+        if rc != 0:
+            fail(
+                errs,
+                "[source-watch] check_source_watch.py failed (see output above)",
+            )
+    except Exception as e:
+        fail(errs, f"[source-watch] check_source_watch failed to run: {e}")
+
     # 7. authored-file headers (root + docs + tooling + installers; NOT packs/)
     authored = [ROOT / "README.md", ROOT / "SECURITY.md", ROOT / "CODE_OF_CONDUCT.md",
                 ROOT / "CHANGELOG.md", ROOT / "SKILLS.md", ROOT / "CONTRIBUTING.md",
