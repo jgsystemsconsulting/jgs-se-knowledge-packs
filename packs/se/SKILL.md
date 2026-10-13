@@ -110,7 +110,7 @@ Output goes in the reply unless the user names a file. A deliverable with no mat
 | Vehicle safety & automotive | vehicle safety, automotive, FMVSS, ADS, automated driving, vehicle cybersecurity | `nhtsa-vehicle`, `automotive-signpost`, `functional-safety-signpost` |
 | GPS & GNSS interfaces | GPS, GNSS, NAVSTAR, space segment interface, ranging signal | `is-gps-200n`, `faa-std-025` |
 | Medical device software | FDA, QMSR, 510(k), device software, SaMD, eSTAR | `fda-med-device` |
-| Avionics software assurance | DO-178C, DO-254, 8110.49, airborne software, AEH, conformity | `faa-8110-49`, `avionics-signpost` |
+| Avionics software assurance | DO-178C, DO-254, 8110.49, airborne software, AEH, conformity | `faa-8110-49`, `avionics-signpost`, `easa-rules` |
 | Defence safety management | JSP 815, defence safety, SMS, safety case, assurance | `jsp-815` |
 | Nuclear software assurance | NRC, regulatory guide, NUREG, digital safety systems, software assurance, BTP 7-14 | `nrc-nuclear` |
 
@@ -129,6 +129,7 @@ Output goes in the reply unless the user names a file. A deliverable with no mat
 | NHTSA / USDOT | NHTSA, USDOT, FMVSS, vehicle safety standard, automated driving systems | `nhtsa-vehicle` |
 | FDA | FDA, CDRH, QMSR, 21 CFR 820, 510(k) | `fda-med-device` |
 | NRC | NRC, regulatory guide, NUREG, BTP 7-14 | `nrc-nuclear` |
+| EASA | EASA, AMC 20-115D, AMC 20-152A, Easy Access Rules | `easa-rules` |
 
 ### Deliverables
 | Deliverable | Keywords | Draft | Review | Verify |
@@ -150,6 +151,7 @@ Output goes in the reply unless the user names a file. A deliverable with no mat
 | `digital-systems-engineering` | CC BY 4.0 |
 | `eu-ai-act` | EU Official Journal — reproduction authorised with source acknowledgement (Decision 2011/833/EU) |
 | `jsp-815` | Open Government Licence v3.0 |
+| `easa-rules` | Per-document: EASA site reproduction-with-acknowledgement grant, qualified by ED Decision all-rights-reserved footers; reconstructed notes with attribution; official PDFs not redistributed; commercial use pending per-document determination |
 <!-- ROUTING-MAP:END -->
 
 ## Host modes
