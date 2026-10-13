@@ -15,7 +15,7 @@ Build in this order:
 |---|------|------|-----------|
 | 1 | `fda-med-device` | full | built 2026-10-12. FDA guidance is public domain, high volume, zero competition, large audience |
 | 2 | `functional-safety-signpost` | signpost | ISO 26262 / IEC 61508 are the most-demanded paywalled standards; the repo already ships their free public cousins |
-| 3 | `avionics-signpost` plus `faa-8110-49` | signpost + full | partially built 2026-10-12 (faa-8110-49 done, avionics-signpost pending). DO-178C demand is proven; FAA Order 8110.49 is its free public-domain counterpart and fits the existing faa family |
+| 3 | `avionics-signpost` plus `faa-8110-49` | signpost + full | built 2026-10-12. DO-178C demand is proven; FAA Order 8110.49 is its free public-domain counterpart and fits the existing faa family |
 | 4 | `uk-defence` family (JSP series first) | full | partially built 2026-10-12 (jsp-815 done, other JSPs and DEF-STANs pending). OGL-licensed, no open competitor, and UK sourcing matches the consultancy's identity |
 | 5 | `med-device-eu` | full | MDCG guidance is free to reuse with attribution; MHRA is OGL |
 | 6 | `nhtsa-vehicle` plus `automotive-signpost` | full + signpost | NHTSA material is public domain; the signpost maps ISO 26262 / ISO-SAE 21434 to open paths |
@@ -79,7 +79,7 @@ Full packs follow docs/PACK-SPEC.md: SKILL.md, PACK.yaml, LICENSE, and chapters 
 Each is one working day or less: SKILL.md with tables mapping the paywalled standard to its free public analogue in this catalogue, plus official catalogue URLs.
 
 - `functional-safety-signpost`: IEC 61508, ISO 26262, ISO-SAE 21434. Free paths: MIL-STD-882 (`mil-std-882`), NHTSA cybersecurity guidance (proposed `nhtsa-vehicle`), FDA software guidance (`fda-med-device`, built 2026-10-12).
-- `avionics-signpost`: DO-178C, DO-254, ARP4754A, ARP4761. Free paths: FAA Order 8110.49 (`faa-8110-49`, built 2026-10-12), existing `faa-*` packs, EASA AMC material (proposed `easa-rules`).
+- `avionics-signpost` (built 2026-10-12): DO-178C, DO-254, ARP4754B, ARP4761A. Free paths: FAA Order 8110.49 (`faa-8110-49`, built 2026-10-12), existing `faa-*` packs, EASA AMC texts, named, not packed.
 - `automotive-signpost`: ISO 26262, ASPICE, SAE J3016, UNECE R155/R156 (signpost-only; © UNECE, no redistribution grant, verified 2026-09-25). Open path: `nhtsa-vehicle` (US Government guidance, not a UNECE equivalent).
 - `rail-signpost`: EN 50126/50128/50129. Free paths: CSM regulations on EUR-Lex, RSSB standard summaries.
 - `space-signpost`: ECSS family. Free paths: the existing NASA packs cover most ECSS-equivalent ground; the signpost names the ECSS document for each need and links to the ECSS catalogue.

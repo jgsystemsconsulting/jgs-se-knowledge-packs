@@ -27,6 +27,7 @@ All notable changes to this project are documented here. Format follows
 - `faa-8110-49` (13 ch): synthesized reference notes from FAA Order 8110.49A (effective 2018-03-29) and ACs 20-115D, 20-152A, and 00-69 (issued 2017-07-21, 2022-10-07, and 2017-07-21). Tier 1, public domain under 17 U.S.C. § 105. DO-178C, DO-254, EUROCAE ED-12C and ED-80, and SAE ARP4754B and ARP4761A are named and not quoted.
 - `jsp-815` (10 ch): synthesized reference notes from JSP 815 Defence Safety Management System V1.3 (Framework, Elements 1-12, Annexes A-G, published 2026-09-01) and Annex H Audit Manual V1.2 (published 2026-09-01). Tier 2, Open Government Licence v3.0, attribution required. ISO 45001 is named and not reproduced.
 - `nrc-nuclear` (8 ch): synthesized reference notes from RG 1.168 Rev 2, RG 1.169 Rev 1, RG 1.170 Rev 1, RG 1.171 Rev 1, RG 1.172 Rev 1, RG 1.173 Rev 1 (all July 2013), and NUREG-0800 BTP 7-14 Rev 6 (August 2016). Tier 1, public domain under 17 U.S.C. § 105. Endorsed IEEE, IEC, and IAEA standards are named and not reproduced.
+- `avionics-signpost` (signpost, 0 ch): citation-only pointers for DO-178C/ED-12C and its supplements, DO-254/ED-80, ARP4754B, and ARP4761A, plus the free FAA and EASA regulator paths. Tier 2, MIT, JG Systems Consulting Ltd. The open path is `faa-8110-49`. No EASA pack. Catalogue counts move from 4 signposts to 5 (74 skills including the `/se` orchestrator); content packs stay at 68.
 
 ## [1.22.1]: 2026-10-11
 

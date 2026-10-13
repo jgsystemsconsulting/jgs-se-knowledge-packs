@@ -70,10 +70,11 @@ features:
       NRC (1): digital safety-system software assurance guidance.
   - title: Standards signposts
     detail: >
-      Four citation-only signposts map the parts of the landscape that can't be
+      Five citation-only signposts map the parts of the landscape that can't be
       packaged: the OMG modelling specs, the full SE standards landscape (~55
       standards), the automotive standards landscape (ISO 26262, ASPICE, SAE J3016,
-      UNECE R155/R156), and functional safety (IEC 61508, ISO/SAE 21434, UL 4600),
+      UNECE R155/R156), functional safety (IEC 61508, ISO/SAE 21434, UL 4600),
+      and avionics development assurance (DO-178C, DO-254, ARP4754B, ARP4761A),
       each with its owner, redistributability status, and where to get it.
   - title: /se orchestrator
     detail: >
