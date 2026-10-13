@@ -1,0 +1,26 @@
+slug: easa-rules
+title: "EASA AMC 20-115D and AMC 20-152A (airborne software and AEH development assurance)"
+publisher: "European Union Aviation Safety Agency; reconstructed by JG Systems Consulting Ltd"
+source_version: "S1 AMC 20-115D (ED Decision 2017/020/R, AMC-20 Amendment 14; consolidated in Amendment 23); S2 AMC 20-152A (ED Decision 2020/010/R, AMC-20 Amendment 19; consolidated in Amendment 23); S3 EAR AMC-20 Amendment 23 (June 2023) as retrieval carrier; S5/S6 decision anchors. Pinned 2026-09-26."
+license: "Per-document: EASA site reproduction-with-acknowledgement grant, qualified by ED Decision all-rights-reserved footers; reconstructed notes with attribution; official PDFs not redistributed; commercial use pending per-document determination"
+license_tier: 2
+commercial_use: false
+share_alike: false
+attribution_required: true
+build:
+  method: "Adapted from the sibling jgs-aviation-knowledge-packs prototype and re-checked against the 2026-10-13 EASA source pin. Not a new extraction."
+  source_pages: 36
+  chapters: 7
+  built_on: "2026-09-26"
+notes: >
+  Per-document licence, stated per source. The EASA copyright page authorises
+  reproduction with acknowledgement unless otherwise stated. ED Decision
+  2017/020/R and 2020/010/R PDFs say all rights reserved. The Easy Access Rules
+  AMC-20 compilation (Amendment 23, June 2023) is marked not an official
+  publication. This pack ships original reconstructed notes with attribution
+  and links, not the AMC text and not the PDFs. commercial_use stays false
+  until a per-document determination says otherwise. Attribution, the EAR
+  disclaimer, and the decision anchors are in packs/easa-rules/LICENSE.
+  RTCA DO-178C, DO-254, and EUROCAE ED-12C and ED-80 are named only and not
+  reproduced. Pin re-verified 2026-10-13 against the EASA source pages.
+change_indication: "reconstructed as synthesized reference notes"
