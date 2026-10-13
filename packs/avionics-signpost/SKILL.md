@@ -1,8 +1,10 @@
 ---
 name: avionics-signpost
 kind: signpost
-description: "Signpost (not a knowledge pack) for the avionics development assurance standards landscape: RTCA DO-178C / EUROCAE ED-12C and its supplements (DO-330/ED-215, DO-331/ED-218, DO-332/ED-217, DO-333/ED-216); RTCA DO-254 / EUROCAE ED-80; SAE ARP4754B and ARP4761A; and the free regulator documents that recognise them (FAA AC 20-115D, AC 20-152A, Order 8110.49A; EASA AMC 20-115D and AMC 20-152A). Contains no source content: each row carries only the designation, title, edition, owner, redistributability status, and the owner's URL. Use when you need to identify, cite, or locate an avionics standard; paywalled rows point to the owner, free rows point to the regulator text or the in-repo faa-8110-49 or easa-rules pack."
+description: "Signpost (not a knowledge pack) for the avionics development assurance standards landscape: RTCA DO-178C / EUROCAE ED-12C and its supplements (DO-330/ED-215, DO-331/ED-218, DO-332/ED-217, DO-333/ED-216); RTCA DO-254 / EUROCAE ED-80; SAE ARP4754B and ARP4761A; and the free regulator documents that recognise them (FAA AC 20-115D, AC 20-152A, Order 8110.49A; EASA AMC 20-115D and AMC 20-152A). Contains no source content: each row carries only the designation, title, edition, owner, redistributability status, and the owner's URL. Use when you need to identify, cite, or locate an avionics standard; paywalled rows point to the owner, free rows point to the regulator text, and the FAA rows also name the in-repo faa-8110-49 pack."
 ---
+
+<!-- argument-hint: [standard designation or topic, e.g. DO-178C / DO-254 / ARP4754B / ARP4761A / AC 20-115D / AC 20-152A / Order 8110.49A] -->
 
 # Avionics Development Assurance Standards: Signpost (pointers only)
 
@@ -62,9 +64,14 @@ from here.
 | AC 20-115D | Airborne Software Development Assurance Using EUROCAE ED-12( ) and RTCA DO-178( ). FAA recognition of DO-178C/ED-12C; the FAA text this repo packages builds on it. | 2017-07-21 | FAA | Open, pack: faa-8110-49 | https://www.faa.gov/regulations_policies/advisory_circulars/index.cfm/go/document.information/documentID/1032046 |
 | AC 20-152A | Development Assurance for Airborne Electronic Hardware. FAA recognition of DO-254/ED-80, including the simple versus complex device treatment. | 2022-10-07 | FAA | Open, pack: faa-8110-49 | https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_20-152A.pdf |
 | FAA Order 8110.49A | Software Approval Guidelines. How FAA offices plan and conduct software reviews and conformity inspections; the base text of pack faa-8110-49. | 2018-03-29 | FAA | Open, pack: faa-8110-49 | https://www.faa.gov/documentLibrary/media/Order/FAA_Order_8110.49A.pdf |
-| AMC 20-115D and AMC 20-152A | EASA acceptance of DO-178C and DO-254, published inside Easy Access Rules for Acceptable Means of Compliance for Airworthiness of Products, Parts and Appliances (AMC-20). The Amendment 23 volume lists AMC 20-115D, Airborne Software Development Assurance Using EUROCAE ED-12 and RTCA DO-178, and AMC 20-152A. | Amendment 14 origin (ED Decision 2017/020/R) and Amendment 19 origin (ED Decision 2020/010/R), consolidated in EAR Amendment 23 (June 2023) | EASA | Open, pack: easa-rules. The origin decisions: ED Decision 2017/020/R (https://www.easa.europa.eu/en/document-library/agency-decisions/ed-decision-2017020r) and ED Decision 2020/010/R (https://www.easa.europa.eu/en/document-library/agency-decisions/ed-decision-2020010r) | https://www.easa.europa.eu/en/document-library/easy-access-rules/easy-access-rules-acceptable-means-compliance-airworthiness |
+| AMC 20-115D and AMC 20-152A | EASA acceptance of DO-178C and DO-254, published inside Easy Access Rules for Acceptable Means of Compliance for Airworthiness of Products, Parts and Appliances (AMC-20). The Amendment 23 volume lists AMC 20-115D, Airborne Software Development Assurance Using EUROCAE ED-12 and RTCA DO-178, and AMC 20-152A. | Amendment 14 origin (ED Decision 2017/020/R) and Amendment 19 origin (ED Decision 2020/010/R), consolidated in EAR Amendment 23 (June 2023) | EASA | Open. No pack in this catalogue. The origin decisions: ED Decision 2017/020/R (https://www.easa.europa.eu/en/document-library/agency-decisions/ed-decision-2017020r) and ED Decision 2020/010/R (https://www.easa.europa.eu/en/document-library/agency-decisions/ed-decision-2020010r) | https://www.easa.europa.eu/en/document-library/easy-access-rules/easy-access-rules-acceptable-means-compliance-airworthiness |
+
+## Scope & Limits
+
+- No reproduced standards text. Rows carry designation, title, edition, owner, status, and URL only.
+- No EASA pack in this catalogue. The AMC row carries the free URL and nothing more.
+- Editions are pinned as the How to use note states. Do not treat a row as a newer edition than the one printed.
+- SAE rows carry the edition letter only. ARP4754B and ARP4761A have no publication date in this signpost.
 
 ---
-*Signpost content © JG Systems Consulting Ltd. (MIT). Standard designations and titles
-are named for reference only; "RTCA", "EUROCAE", "SAE", and document numbers are the
-property of their respective owners. Named for identification, not endorsement.*
+*Signpost content is original JG Systems Consulting Ltd. work, MIT licensed. Trademarks and standard designations are named for identification only.*
