@@ -4268,6 +4268,66 @@
       "chapter": "cheatsheet.md",
       "cluster": "Standards, Tailoring & Process Models",
       "is_support": true
+    },
+    {
+      "pack": "med-device-eu",
+      "chapter": "ch01-eu-uk-device-software-orientation.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "med-device-eu",
+      "chapter": "ch02-samd-qualification-classification.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "med-device-eu",
+      "chapter": "ch03-mhra-software-qualification.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "med-device-eu",
+      "chapter": "ch04-clinical-evidence-legacy-devices.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "med-device-eu",
+      "chapter": "ch05-clinical-evaluation-assessment-report.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "med-device-eu",
+      "chapter": "ch06-pmcf-plan.md",
+      "cluster": "Quality Assurance & Process Compliance",
+      "is_support": false
+    },
+    {
+      "pack": "med-device-eu",
+      "chapter": "ch07-pmcf-evaluation-report.md",
+      "cluster": "Quality Assurance & Process Compliance",
+      "is_support": false
+    },
+    {
+      "pack": "med-device-eu",
+      "chapter": "ch08-mhra-uk-device-obligations.md",
+      "cluster": "Quality Assurance & Process Compliance",
+      "is_support": false
+    },
+    {
+      "pack": "med-device-eu",
+      "chapter": "glossary.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": true
+    },
+    {
+      "pack": "med-device-eu",
+      "chapter": "cheatsheet.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": true
     }
   ]
 }

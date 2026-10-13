@@ -3512,6 +3512,56 @@
       "pack": "easa-rules",
       "chapter": "cheatsheet.md",
       "note": "Decision rules for which AMC governs, which DAL row applies, and where the FAA twin sits"
+    },
+    {
+      "pack": "med-device-eu",
+      "chapter": "ch01-eu-uk-device-software-orientation.md",
+      "note": "Which MDCG or MHRA document answers which device-software question, and how this pack differs from fda-med-device"
+    },
+    {
+      "pack": "med-device-eu",
+      "chapter": "ch02-samd-qualification-classification.md",
+      "note": "MDCG 2019-11 rev.1 qualification decision and the software classification rules, including the rev.1 changes"
+    },
+    {
+      "pack": "med-device-eu",
+      "chapter": "ch03-mhra-software-qualification.md",
+      "note": "MHRA qualification boundary for apps and stand-alone software, and where it diverges from the MDCG reading"
+    },
+    {
+      "pack": "med-device-eu",
+      "chapter": "ch04-clinical-evidence-legacy-devices.md",
+      "note": "What MDCG 2020-6 counts as sufficient clinical evidence for a legacy device"
+    },
+    {
+      "pack": "med-device-eu",
+      "chapter": "ch05-clinical-evaluation-assessment-report.md",
+      "note": "MDCG 2020-13 template as a map of what a clinical evaluation assessment report contains"
+    },
+    {
+      "pack": "med-device-eu",
+      "chapter": "ch06-pmcf-plan.md",
+      "note": "What an MDCG 2020-7 PMCF plan commits to"
+    },
+    {
+      "pack": "med-device-eu",
+      "chapter": "ch07-pmcf-evaluation-report.md",
+      "note": "How an MDCG 2020-8 PMCF evaluation report closes the plan"
+    },
+    {
+      "pack": "med-device-eu",
+      "chapter": "ch08-mhra-uk-device-obligations.md",
+      "note": "UKCA-era obligations the MHRA guidance states for device software"
+    },
+    {
+      "pack": "med-device-eu",
+      "chapter": "glossary.md",
+      "note": "SaMD, legacy device, PMCF, PMS, clinical evaluation, CEAR, MDR, IVDR, UKCA, MDCG, each pointing at the chapter that teaches it"
+    },
+    {
+      "pack": "med-device-eu",
+      "chapter": "cheatsheet.md",
+      "note": "Which chapter answers the qualification question, which template to open, and which regime a question belongs to"
     }
   ]
 }

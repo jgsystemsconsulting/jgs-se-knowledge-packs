@@ -30,7 +30,7 @@ Rules of construction:
 | 4. Architecture & Design | 20 |
 | 5. Interface Management & ICIDs | 9 |
 | 6. Integration | 4 |
-| 7. Verification | 18 |
+| 7. Verification | 20 |
 | 8. Validation | 7 |
 | 9. Test & Evaluation | 17 |
 | 10. Modeling, MBSE & SysML | 20 |
@@ -42,7 +42,7 @@ Rules of construction:
 | 16. Decision Analysis & Trade Studies | 5 |
 | 17. Technical Planning & Work Breakdown | 13 |
 | 18. Measurement & Technical Assessment | 37 |
-| 19. Quality Assurance & Process Compliance | 4 |
+| 19. Quality Assurance & Process Compliance | 7 |
 | 20. Safety, Reliability & Survivability | 94 |
 | 21. Cybersecurity & Security Engineering | 73 |
 | 22. Human Systems Integration / Human Factors | 26 |
@@ -53,10 +53,10 @@ Rules of construction:
 | 27. Supplier, Procurement & Acquisition | 10 |
 | 28. Stakeholder Engagement & Needs | 3 |
 | 29. Governance, Reviews, Gates & Control Points | 25 |
-| 30. Standards, Tailoring & Process Models | 54 |
+| 30. Standards, Tailoring & Process Models | 59 |
 | 31. Specialty Engineering | 7 |
 | 32. Assurance & System Assurance | 14 |
-| **Total** | **702** |
+| **Total** | **712** |
 
 ## 1. Systems Thinking & Fundamentals
 
@@ -192,6 +192,8 @@ Rules of construction:
 | faa-8110-49 | ch12-data-and-control-coupling-practices.md | Data and control coupling practices from FAA airborne software guidance |
 | nrc-nuclear | ch05-verification-validation-reviews-audits.md | Verification, validation, review, and audit notes from RG 1.168 Rev 2 |
 | nrc-nuclear | ch06-test-documentation-and-unit-testing.md | Test documentation and unit testing notes from RG 1.170 Rev 1 and RG 1.171 Rev 1 |
+| med-device-eu | ch04-clinical-evidence-legacy-devices.md | What MDCG 2020-6 counts as sufficient clinical evidence for a legacy device |
+| med-device-eu | ch05-clinical-evaluation-assessment-report.md | MDCG 2020-13 template as a map of what a clinical evaluation assessment report contains |
 
 ## 8. Validation
 
@@ -442,6 +444,9 @@ Rules of construction:
 | mil-hdbk-516 | ch02-systems-engineering-criteria.md | SE airworthiness criteria: design criteria control, tech data, CM, mfg quality (also CM) |
 | nist-stat-handbook | ch06-nist-stat-handbook-process-monitoring-and-control.md | SPC monitoring and control (quality control) |
 | fda-med-device | ch05-qmsr-quality-management.md | QMSR amendments to 21 CFR 820, effective 2026-02-02, ISO 13485 named and not quoted |
+| med-device-eu | ch06-pmcf-plan.md | What an MDCG 2020-7 PMCF plan commits to |
+| med-device-eu | ch07-pmcf-evaluation-report.md | How an MDCG 2020-8 PMCF evaluation report closes the plan |
+| med-device-eu | ch08-mhra-uk-device-obligations.md | UKCA-era obligations the MHRA guidance states for device software |
 
 ## 20. Safety, Reliability & Survivability
 
@@ -888,6 +893,11 @@ Rules of construction:
 | easa-rules | ch05-amc-20-152a-scope.md | AMC 20-152A purpose, applicability, and DAL A-C coverage with the DAL D note |
 | easa-rules | glossary.md (support file) | Key terms (AEH, AltMoC, CBA, COTS, DAL, ETSO, GM) with chapter references |
 | easa-rules | cheatsheet.md (support file) | Decision rules for which AMC governs, which DAL row applies, and where the FAA twin sits |
+| med-device-eu | ch01-eu-uk-device-software-orientation.md | Which MDCG or MHRA document answers which device-software question, and how this pack differs from fda-med-device |
+| med-device-eu | ch02-samd-qualification-classification.md | MDCG 2019-11 rev.1 qualification decision and the software classification rules, including the rev.1 changes |
+| med-device-eu | ch03-mhra-software-qualification.md | MHRA qualification boundary for apps and stand-alone software, and where it diverges from the MDCG reading |
+| med-device-eu | glossary.md (support file) | SaMD, legacy device, PMCF, PMS, clinical evaluation, CEAR, MDR, IVDR, UKCA, MDCG, each pointing at the chapter that teaches it |
+| med-device-eu | cheatsheet.md (support file) | Which chapter answers the qualification question, which template to open, and which regime a question belongs to |
 
 ## 31. Specialty Engineering
 
