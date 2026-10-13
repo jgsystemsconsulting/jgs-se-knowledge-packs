@@ -1,0 +1,25 @@
+slug: med-device-eu
+title: "EU and UK Medical Device Software Reference (MDCG guidance and MHRA software guidance)"
+publisher: "European Commission (MDCG) and UK MHRA"
+source_version: "MDCG 2019-11 rev.1 (June 2025); MDCG 2020-6 (April 2020); MDCG 2020-13 (July 2020); MDCG 2020-7 (April 2020); MDCG 2020-8 (April 2020); MHRA Medical devices: software applications (2023-07-01) with its stand-alone software guidance. Captured 2026-10-13."
+license: "Per-document: European Commission reuse policy (Decision 2011/833/EU, CC BY 4.0, attribution and indication of changes) for the MDCG documents; Open Government Licence v3.0 for the MHRA guidance; reconstructed notes with attribution; official PDFs not redistributed"
+license_tier: 2
+commercial_use: false
+share_alike: false
+attribution_required: true
+build:
+  method: "Built from MDCG and MHRA sources captured 2026-10-13."
+  source_pages: 154
+  chapters: 8
+  built_on: "2026-10-13"
+notes: >
+  Per-document licence, stated per source in LICENSE. MDCG documents are
+  covered by the European Commission reuse policy (Decision 2011/833/EU,
+  CC BY 4.0): attribution is required and changes are indicated.
+  MDCG guidance is not legally binding. The MHRA guidance is UK-specific
+  and is covered by the Open Government Licence v3.0. This pack ships
+  original reconstructed notes with attribution, not the guidance text
+  and not the PDFs. commercial_use stays false because the pack-level
+  flag follows the weaker grant. IEC 62304, ISO 13485, and ISO 14971 are
+  named only and not reproduced. MDR and IVDR are named only.
+change_indication: "reconstructed as synthesized reference notes"

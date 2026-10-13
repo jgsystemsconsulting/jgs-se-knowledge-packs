@@ -1,0 +1,122 @@
+med-device-eu pack: content licence
+====================================
+
+This file governs the content of this pack (SKILL.md, chapters/,
+glossary.md, cheatsheet.md). The repository's MIT licence covers tooling
+and scaffolding only. The pack ships original reconstructed reference
+notes with attribution; the guidance documents themselves and the official
+PDFs are not redistributed.
+
+1. Attribution statement
+
+The six sources carry two public-sector grants. The five MDCG documents
+(S1 to S5) are European Commission material reused under the Commission's
+reuse policy, Decision 2011/833/EU, which licenses Commission content
+under the Creative Commons Attribution 4.0 International licence
+(CC BY 4.0) unless otherwise indicated. The MHRA guidance (S6) is UK
+public sector information licensed under the Open Government Licence
+v3.0.
+
+CC BY 4.0 deed: https://creativecommons.org/licenses/by/4.0/
+OGL v3 deed: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+
+2. European Commission reuse statement
+
+The MDCG documents are reused under the European Commission's reuse
+policy, Decision 2011/833/EU of 12 December 2011 on the reuse of
+Commission documents. Reuse of Commission documents is authorised under
+that decision, subject to its terms, provided the source is appropriately
+credited and changes are indicated. This pack credits each document in
+section 5, and the indication of changes required by the decision is
+satisfied by the change_indication field of PACK.yaml ("reconstructed as
+synthesized reference notes"): the pack is synthesized notes with
+attribution and reproduces no guidance text.
+
+Commission-side source links, which serve attribution only. The Open
+Government Licence does not cover Commission documents, so these two
+links are not OGL condition links:
+
+Endorsed-guidance index: https://health.ec.europa.eu/medical-devices-sector/new-regulations/guidance-mdcg-endorsed-documents-and-other-guidance_en
+Commission legal notice: https://commission.europa.eu/legal-notice_en
+
+3. Open Government Licence v3.0 attribution (MHRA)
+
+Contains public sector information licensed under the Open Government Licence v3.0.
+
+Source of the MHRA information, as the OGL acknowledgement condition
+requires:
+
+Publication page: https://www.gov.uk/government/publications/medical-devices-software-applications-apps
+OGL v3 deed: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+
+4. Non-endorsement and publisher disclaimers
+
+The European Commission does not endorse this pack. The Medicines and
+Healthcare products Regulatory Agency (MHRA) does not endorse this pack.
+Neither publisher has any official status in relation to it.
+
+MDCG status statement, recorded as the publisher's own disclaimer, stated
+in the PDFs (page 1 of each MDCG document, S1 to S5) and copied from the
+capture record: "Any views expressed in this document are not legally
+binding and only the Court of Justice of the European Union can give
+binding interpretations of Union law." That sentence is the publishers'
+statement about the guidance's legal status; it is not a licence
+restriction.
+
+5. Per-source record
+
+One block per source, S1 to S6, each with the in-source licence statement
+from the capture record. "Used in" names this pack's chapters.
+
+S1  MDCG 2019-11 rev.1, Qualification and classification of software
+    Date: June 2025
+    In-source statement: none found in the PDF; page-level grant applies
+    (Commission legal notice).
+    Publisher notice on page 1: "Any views expressed in this document are
+    not legally binding and only the Court of Justice of the European
+    Union can give binding interpretations of Union law."
+    Used in: ch01, ch02
+
+S2  MDCG 2020-6, Sufficient clinical evidence for legacy devices
+    Date: April 2020
+    In-source statement: none found in the PDF; page-level grant applies
+    (Commission legal notice).
+    Publisher notice on page 1: "Any views expressed in this document are
+    not legally binding and only the Court of Justice of the European
+    Union can give binding interpretations of Union law."
+    Used in: ch01, ch04
+
+S3  MDCG 2020-13, Clinical evaluation assessment report template
+    Date: July 2020
+    In-source statement: none found in the PDF; page-level grant applies
+    (Commission legal notice).
+    Publisher notice on page 1: "Any views expressed in this document are
+    not legally binding and only the Court of Justice of the European
+    Union can give binding interpretations of Union law."
+    Used in: ch01, ch05
+
+S4  MDCG 2020-7, PMCF plan template
+    Date: April 2020
+    In-source statement: none found in the PDF; page-level grant applies
+    (Commission legal notice).
+    Publisher notice on page 1: "Any views expressed in this document are
+    not legally binding and only the Court of Justice of the European
+    Union can give binding interpretations of Union law."
+    Used in: ch01, ch06
+
+S5  MDCG 2020-8, PMCF evaluation report template
+    Date: April 2020
+    In-source statement: none found in the PDF; page-level grant applies
+    (Commission legal notice).
+    Publisher notice on page 1: "Any views expressed in this document are
+    not legally binding and only the Court of Justice of the European
+    Union can give binding interpretations of Union law."
+    Used in: ch01, ch07
+
+S6  MHRA Medical devices: software applications, plus the stand-alone software guidance PDF
+    Date: 2023-07-01
+    Publication page: https://www.gov.uk/government/publications/medical-devices-software-applications-apps
+    In-source statement: none found in the PDF; page-level grant applies
+    (gov.uk OGL footer: "All content is available under the Open
+    Government Licence v3.0, except where otherwise stated")
+    Used in: ch01, ch03, ch08
