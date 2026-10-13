@@ -140,10 +140,12 @@ def check_watchlist(
     planned = set()
     if isinstance(catalog, dict):
         for row in catalog.get("packs", []):
-            if isinstance(row, dict) and row.get("status", "live") in ("live", None, ""):
-                slug = row.get("slug")
-                if isinstance(slug, str):
-                    live.add(slug)
+            if isinstance(row, dict):
+                status = row.get("status")
+                if status is None or status == "live":
+                    slug = row.get("slug")
+                    if isinstance(slug, str):
+                        live.add(slug)
         for row in catalog.get("planned", []):
             if isinstance(row, dict) and isinstance(row.get("slug"), str):
                 planned.add(row["slug"])

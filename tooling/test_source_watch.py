@@ -41,8 +41,14 @@ def watch(entries):
     return {"schema_version": 1, "sources": entries}
 
 
-def catalog(*slugs):
-    return {"packs": [{"slug": s, "status": "live"} for s in slugs]}
+def catalog(*slugs, status="live"):
+    rows = []
+    for s in slugs:
+        row = {"slug": s}
+        if status is not None:
+            row["status"] = status
+        rows.append(row)
+    return {"packs": rows}
 
 
 def check(data, cat, kinds=None, today=TODAY):
@@ -139,6 +145,24 @@ def test_empty_last_checked_fails_rule_5_only():
     assert errs_no_stale == [], errs_no_stale
 
 
+def test_missing_status_counts_as_live():
+    # No status key: live, same as check_release.py:586-588.
+    cat = catalog("faa-rma", status=None)
+    assert "status" not in cat["packs"][0]
+    errs = check(watch([entry()]), cat)
+    assert errs == [], errs
+    missing = check(watch([entry("nist-ssdf", publisher="NIST")]), cat)
+    expect_fail(missing, "has no watchlist entry")
+
+
+def test_empty_string_status_is_not_live():
+    # An explicit empty string is neither absent nor "live".
+    cat = catalog("faa-rma", status="")
+    assert cat["packs"][0]["status"] == ""
+    errs = check(watch([entry()]), cat)
+    expect_fail(errs, "is not a live catalog pack")
+
+
 def test_record_updates_one_entry(tmp_path):
     data = watch([entry("faa-rma"), entry("nist-ssdf", publisher="NIST")])
     path = tmp_path / "watch.json"
@@ -186,6 +210,8 @@ def main() -> int:
     test_stale_date_fails()
     test_fresh_date_passes()
     test_empty_last_checked_fails_rule_5_only()
+    test_missing_status_counts_as_live()
+    test_empty_string_status_is_not_live()
     with tempfile.TemporaryDirectory() as d:
         root = Path(d)
         test_record_updates_one_entry(root)
