@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "map_version": "1.22.0",
-  "generated_on": "2026-08-27",
+  "generated_on": "2026-10-13",
   "notes": [
     {
       "pack": "dau-se-guidebook",
@@ -3467,6 +3467,51 @@
       "pack": "nrc-nuclear",
       "chapter": "ch08-endorsed-standards-and-adjacent-guidance.md",
       "note": "Endorsed IEEE, IEC, and IAEA standards named by designation and edition, not reproduced"
+    },
+    {
+      "pack": "easa-rules",
+      "chapter": "ch01-moc-map.md",
+      "note": "Which AMC answers which question, with the ED Decision anchors and the AltMoC rule"
+    },
+    {
+      "pack": "easa-rules",
+      "chapter": "ch02-amc-20-115d-scope.md",
+      "note": "AMC 20-115D purpose, applicability, and its replacement of AMC 20-115C"
+    },
+    {
+      "pack": "easa-rules",
+      "chapter": "ch03-software-assurance-115d.md",
+      "note": "Software life cycle assurance as AMC 20-115D frames it, plus process reuse and transition"
+    },
+    {
+      "pack": "easa-rules",
+      "chapter": "ch04-transition-tools-gm.md",
+      "note": "Tool qualification pointer and GM1 to GM3 clarification material for AMC 20-115D"
+    },
+    {
+      "pack": "easa-rules",
+      "chapter": "ch05-amc-20-152a-scope.md",
+      "note": "AMC 20-152A purpose, applicability, and DAL A-C coverage with the DAL D note"
+    },
+    {
+      "pack": "easa-rules",
+      "chapter": "ch06-aeh-objectives.md",
+      "note": "AEH objectives AMC 20-152A adds for custom devices, COTS devices, and circuit board assemblies"
+    },
+    {
+      "pack": "easa-rules",
+      "chapter": "ch07-joint-sw-aeh-workflow.md",
+      "note": "Joint software and hardware certification workflow and the PSAC/PHAC-style planning interfaces"
+    },
+    {
+      "pack": "easa-rules",
+      "chapter": "glossary.md",
+      "note": "Key terms (AEH, AltMoC, CBA, COTS, DAL, ETSO, GM) with chapter references"
+    },
+    {
+      "pack": "easa-rules",
+      "chapter": "cheatsheet.md",
+      "note": "Decision rules for which AMC governs, which DAL row applies, and where the FAA twin sits"
     }
   ]
 }

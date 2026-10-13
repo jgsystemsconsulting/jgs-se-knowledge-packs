@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "map_version": "1.22.0",
-  "generated_on": "2026-10-08",
+  "generated_on": "2026-10-13",
   "rules_of_construction": [
     "Every chapter in every pack under packs/<slug>/chapters/ is assigned to exactly one capability cluster (best fit).",
     "Cross-cutting chapters carry a remark noting the strong secondary fit.",
@@ -4214,6 +4214,60 @@
       "chapter": "ch08-endorsed-standards-and-adjacent-guidance.md",
       "cluster": "Standards, Tailoring & Process Models",
       "is_support": false
+    },
+    {
+      "pack": "easa-rules",
+      "chapter": "ch01-moc-map.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "easa-rules",
+      "chapter": "ch02-amc-20-115d-scope.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "easa-rules",
+      "chapter": "ch03-software-assurance-115d.md",
+      "cluster": "Assurance & System Assurance",
+      "is_support": false
+    },
+    {
+      "pack": "easa-rules",
+      "chapter": "ch04-transition-tools-gm.md",
+      "cluster": "Assurance & System Assurance",
+      "is_support": false
+    },
+    {
+      "pack": "easa-rules",
+      "chapter": "ch05-amc-20-152a-scope.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "easa-rules",
+      "chapter": "ch06-aeh-objectives.md",
+      "cluster": "Assurance & System Assurance",
+      "is_support": false
+    },
+    {
+      "pack": "easa-rules",
+      "chapter": "ch07-joint-sw-aeh-workflow.md",
+      "cluster": "Assurance & System Assurance",
+      "is_support": false
+    },
+    {
+      "pack": "easa-rules",
+      "chapter": "glossary.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": true
+    },
+    {
+      "pack": "easa-rules",
+      "chapter": "cheatsheet.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": true
     }
   ]
 }

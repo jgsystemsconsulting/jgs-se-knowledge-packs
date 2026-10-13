@@ -53,10 +53,10 @@ Rules of construction:
 | 27. Supplier, Procurement & Acquisition | 10 |
 | 28. Stakeholder Engagement & Needs | 3 |
 | 29. Governance, Reviews, Gates & Control Points | 25 |
-| 30. Standards, Tailoring & Process Models | 49 |
+| 30. Standards, Tailoring & Process Models | 54 |
 | 31. Specialty Engineering | 7 |
-| 32. Assurance & System Assurance | 10 |
-| **Total** | **693** |
+| 32. Assurance & System Assurance | 14 |
+| **Total** | **702** |
 
 ## 1. Systems Thinking & Fundamentals
 
@@ -883,6 +883,11 @@ Rules of construction:
 | nrc-nuclear | ch01-nrc-software-assurance-framework.md | NRC software-assurance framework for digital safety systems; seven-document map |
 | nrc-nuclear | ch02-software-life-cycle-processes.md | Software life cycle process notes from RG 1.173 Rev 1 and BTP 7-14 planning review |
 | nrc-nuclear | ch08-endorsed-standards-and-adjacent-guidance.md | Endorsed IEEE, IEC, and IAEA standards named by designation and edition, not reproduced |
+| easa-rules | ch01-moc-map.md | Which AMC answers which question, with the ED Decision anchors and the AltMoC rule |
+| easa-rules | ch02-amc-20-115d-scope.md | AMC 20-115D purpose, applicability, and its replacement of AMC 20-115C |
+| easa-rules | ch05-amc-20-152a-scope.md | AMC 20-152A purpose, applicability, and DAL A-C coverage with the DAL D note |
+| easa-rules | glossary.md (support file) | Key terms (AEH, AltMoC, CBA, COTS, DAL, ETSO, GM) with chapter references |
+| easa-rules | cheatsheet.md (support file) | Decision rules for which AMC governs, which DAL row applies, and where the FAA twin sits |
 
 ## 31. Specialty Engineering
 
@@ -910,3 +915,7 @@ Rules of construction:
 | nist-ai-rmf | ch03-trustworthiness-characteristics.md | Trustworthiness characteristics of AI |
 | faa-8110-49 | ch07-aeh-custom-devices.md | AEH custom-device assurance notes from AC 20-152A, DO-254 named and not quoted |
 | jsp-815 | ch10-assurance-and-audit.md | Assurance and audit notes from JSP 815 Annex H V1.2 |
+| easa-rules | ch03-software-assurance-115d.md | Software life cycle assurance as AMC 20-115D frames it, plus process reuse and transition |
+| easa-rules | ch04-transition-tools-gm.md | Tool qualification pointer and GM1 to GM3 clarification material for AMC 20-115D |
+| easa-rules | ch06-aeh-objectives.md | AEH objectives AMC 20-152A adds for custom devices, COTS devices, and circuit board assemblies |
+| easa-rules | ch07-joint-sw-aeh-workflow.md | Joint software and hardware certification workflow and the PSAC/PHAC-style planning interfaces |

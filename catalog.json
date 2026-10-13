@@ -754,6 +754,17 @@
       "commercial_use": true,
       "chapters": 8,
       "status": "live"
+    },
+    {
+      "slug": "easa-rules",
+      "title": "EASA AMC 20-115D and AMC 20-152A (airborne software and AEH development assurance)",
+      "publisher": "European Union Aviation Safety Agency; reconstructed by JG Systems Consulting Ltd",
+      "source_version": "S1 AMC 20-115D (ED Decision 2017/020/R, AMC-20 Amendment 14; consolidated in Amendment 23); S2 AMC 20-152A (ED Decision 2020/010/R, AMC-20 Amendment 19; consolidated in Amendment 23); S3 EAR AMC-20 Amendment 23 (June 2023) as retrieval carrier; S5/S6 decision anchors. Pinned 2026-09-26.",
+      "license": "Per-document: EASA site reproduction-with-acknowledgement grant, qualified by ED Decision all-rights-reserved footers; reconstructed notes with attribution; official PDFs not redistributed; commercial use pending per-document determination",
+      "license_tier": 2,
+      "commercial_use": false,
+      "chapters": 7,
+      "status": "live"
     }
   ],
   "planned": [
