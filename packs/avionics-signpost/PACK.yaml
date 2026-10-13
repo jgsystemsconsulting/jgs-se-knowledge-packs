@@ -10,5 +10,5 @@ notes: >
   designation, title, edition, owner, status, and the owner's URL only.
   DO-178C, DO-254, ARP4754B, ARP4761A and EUROCAE equivalents are Excluded
   paywalled standards with no redistribution grant. Free FAA paths point to faa-8110-49.
-  The EASA AMC texts are named with their free URLs. This catalogue ships
-  no EASA pack. Trademarks named for identification only.
+  The EASA AMC texts are named with their free URLs. The open path is
+  packs/easa-rules. Trademarks named for identification only.
