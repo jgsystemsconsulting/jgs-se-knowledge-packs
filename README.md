@@ -8,7 +8,7 @@ SPDX-License-Identifier: MIT
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT%20(tooling)-blue" alt="License: MIT (tooling)">
   <img src="https://img.shields.io/badge/version-1.22.1-green" alt="Version 1.22.1">
-  <img src="https://img.shields.io/badge/packs-69-blueviolet" alt="69 packs">
+  <img src="https://img.shields.io/badge/packs-70-blueviolet" alt="70 packs">
   <img src="https://img.shields.io/badge/tested%20with-Claude%20Code-8A2BE2" alt="Tested with Claude Code">
   <img src="https://img.shields.io/badge/scope-systems%20engineering-orange" alt="Scope: systems engineering">
   <a href="https://skills.sh/jgsystemsconsulting/jgs-se-knowledge-packs"><img src="https://skills.sh/b/jgsystemsconsulting/jgs-se-knowledge-packs" alt="skills.sh installs"></a>

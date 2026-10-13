@@ -6,7 +6,7 @@ SKILLS.md is hand-maintained. After a pack change, regenerate docs/packs.html wi
 
 # jgs-se-knowledge-packs — Pack Index
 
-69 packs (+5 signposts, +1 orchestrator) in this release. Each pack is an Agent Skill installed as `/<slug>`.
+70 packs (+5 signposts, +1 orchestrator) in this release. Each pack is an Agent Skill installed as `/<slug>`.
 
 | Pack | Source licence | Description |
 |------|----------------|-------------|
@@ -82,6 +82,7 @@ SKILLS.md is hand-maintained. After a pack change, regenerate docs/packs.html wi
 | [`nhtsa-vehicle`](packs/nhtsa-vehicle/SKILL.md) | Public Domain (US Government work, 17 U.S.C. § 105) | Synthesized reference notes from NHTSA Cybersecurity Best Practices for the Safety of Modern Vehicles (Updated 2022), Automated Driving Systems 2.0, and a 16-section selection of 49 CFR Part 571 pinned at eCFR 2025-01-01. Not ISO 26262, not ASPICE, not ISO/SAE 21434, not UNECE R155/R156, not SAE J3016, and not full Part 571. |
 | [`nrc-nuclear`](packs/nrc-nuclear/SKILL.md) | Public Domain (US Government work, 17 U.S.C. § 105) | Synthesized reference notes from RG 1.168 Rev 2, RG 1.169-1.173 Rev 1, and NUREG-0800 BTP 7-14 Rev 6; endorsed IEEE, IEC, and IAEA standards named, not reproduced. |
 | [`fda-med-device`](packs/fda-med-device/SKILL.md) | Public Domain (US Government work, 17 U.S.C. § 105) | Synthesized reference notes from FDA device software guidance, the QMSR final rule amending 21 CFR 820 (effective 2026-02-02), premarket submission guidance, cybersecurity guidance (February 2026), and the eSTAR program page. Not EU MDR, not UKCA, not IEC 62304 clause text, and not ISO 13485 clause text. |
+| [`med-device-eu`](packs/med-device-eu/SKILL.md) | Per-document (Commission reuse CC BY 4.0; OGL v3.0) | Synthesized reference notes on EU MDCG and UK MHRA device-software guidance: SaMD qualification, clinical evaluation, and PMCF, captured 2026-10-13. Not FDA, not IEC 62304 clause text. |
 | [`automotive-signpost`](packs/automotive-signpost/SKILL.md) | MIT (signpost) | **Signpost, not a pack** — automotive standards landscape (ISO 26262, ASPICE, SAE J3016, UNECE R155, UNECE R156) with designation, edition, owner, and catalogue URL only. Zero reproduced content. The one open path is `nhtsa-vehicle`. |
 | [`avionics-signpost`](packs/avionics-signpost/SKILL.md) | MIT (signpost) | **Signpost, not a pack** — Avionics development assurance standards (DO-178C/ED-12C and supplements, DO-254/ED-80, ARP4754B, ARP4761A) with designation, edition, owner, and owner URL only. Zero reproduced content. Open paths point at `faa-8110-49`. |
 | [`functional-safety-signpost`](packs/functional-safety-signpost/SKILL.md) | MIT (signpost) | **Signpost, not a pack** — functional safety standards landscape (IEC 61508, ISO 26262, ISO/SAE 21434, UL 4600, SAE J3016, ASPICE) with designation, edition, owner, and catalogue URL only. Zero reproduced content. Open paths point at `mil-std-882` and `nhtsa-vehicle`, which are not equivalents. |
