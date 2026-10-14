@@ -560,6 +560,14 @@
       "version": "MDCG 2019-11 rev.1 (June 2025); MDCG 2020-6 (April 2020); MDCG 2020-13 (July 2020); MDCG 2020-7 (April 2020); MDCG 2020-8 (April 2020); MHRA Medical devices: software applications (2023-07-01) with its stand-alone software guidance. Captured 2026-10-13.",
       "last_checked": "2026-10-13",
       "hint": ""
+    },
+    {
+      "slug": "jsp-376",
+      "publisher": "Ministry of Defence",
+      "document": "JSP 376 Defence Acquisition Safety Policy V1.1 (April 2024)",
+      "version": "JSP 376 Defence Acquisition Safety Policy V1.1 (April 2024)",
+      "last_checked": "2026-10-14",
+      "hint": ""
     }
   ]
 }

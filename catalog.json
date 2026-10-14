@@ -776,6 +776,17 @@
       "commercial_use": false,
       "chapters": 8,
       "status": "live"
+    },
+    {
+      "slug": "jsp-376",
+      "title": "JSP 376: Defence Acquisition Safety Policy",
+      "publisher": "Ministry of Defence",
+      "source_version": "JSP 376 Defence Acquisition Safety Policy V1.1 (April 2024)",
+      "license": "Open Government Licence v3.0",
+      "license_tier": 2,
+      "commercial_use": true,
+      "chapters": 8,
+      "status": "live"
     }
   ],
   "planned": [
