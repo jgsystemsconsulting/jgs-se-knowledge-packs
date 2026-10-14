@@ -20,7 +20,7 @@ Build in this order:
 | 5 | `med-device-eu` | full | MDCG guidance is free to reuse with attribution; MHRA is OGL |
 | 6 | `nhtsa-vehicle` plus `automotive-signpost` | full + signpost | NHTSA material is public domain; the signpost maps ISO 26262 / ISO-SAE 21434 to open paths |
 | 7 | `nrc-nuclear`, `easa-rules` | full | partially built 2026-10-12 (nrc-nuclear done, easa-rules pending). NRC guides are public domain; EASA Easy Access Rules are free downloads |
-| 8 | `rail-signpost` (built 2026-10-14), `space-signpost` (built 2026-10-14), `maritime-signpost` | signpost | Cheap to build, each takes a day, and together they close the sector map |
+| 8 | `rail-signpost` (built 2026-10-14), `space-signpost` (built 2026-10-14), `maritime-signpost` (built 2026-10-14) | signpost | Cheap to build, each takes a day, and together they close the sector map |
 
 The signposts first among these cost almost nothing: a signpost pack is one SKILL.md and one PACK.yaml with no reproduced source content, so items 2 and the signpost half of 6 and 8 are the fastest visible progress. The full packs follow the existing pack spec with no new tooling.
 
@@ -54,7 +54,7 @@ Verification method: direct fetches of publisher landing and download pages on 2
 | Avionics | DO-178C / DO-254, ARP4754A / ARP4761 | Paywalled (RTCA / SAE) | SIGNPOST |
 | Rail | EN 50126 / 50128 / 50129 paywalled; CSM regulations free on EUR-Lex; RSSB view-only | Mixed | SIGNPOST |
 | Space (Europe) | ECSS standards | Free after registration under ECSS licence; repo vetting already excludes ECSS from packaging | SIGNPOST |
-| Maritime | IMO and class-society rules paywalled or unclear; USCG material public domain | Mixed | SIGNPOST |
+| Maritime | IMO and class-society rules paywalled or unclear; USCG material public domain | Mixed | SIGNPOST (built 2026-10-14) |
 | Oil and gas | HSE offshore / COMAH guidance (OGL); NORSOK unverified | Thin SE tie beyond existing process-safety packs | LATER |
 | Semiconductors | NIST electronics publications | Component specs, off-scope for SE agents | NOT NOW |
 
@@ -83,7 +83,7 @@ Each is one working day or less: SKILL.md with tables mapping the paywalled stan
 - `automotive-signpost`: ISO 26262, ASPICE, SAE J3016, UNECE R155/R156 (signpost-only; © UNECE, no redistribution grant, verified 2026-09-25). Open path: `nhtsa-vehicle` (US Government guidance, not a UNECE equivalent).
 - `rail-signpost` (built 2026-10-14): EN 50126/50128/50129. Free paths: CSM 402/2013 (as amended by 2015/1136) and ORR guidance. RSSB summaries only. EN 50128 and EN 50129 have no free full text.
 - `space-signpost` (built 2026-10-14): ECSS family. ECSS is free after registration and excluded from packaging. Free paths: the existing NASA packs. Structures, mechanisms, communications, ground operations, space environment, radiation methods, and PA/QA management have no in-repo pack.
-- `maritime-signpost`: SOLAS, class rules. Free path: USCG material.
+- `maritime-signpost` (built 2026-10-14): SOLAS, ISM, ISPS, and COLREGS are IMO sales publications. Free paths are USCG material (eCFR Title 46 and the Navigation Rules PDF), UK MCA notices under OGL v3.0, and class portals (DNV, ABS, Bureau Veritas). Class rules stay copyrighted. Lloyd's Register was not confirmed.
 
 ### Not now, with reasons
 

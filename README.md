@@ -201,7 +201,7 @@ owner, whether it can be packaged, and where to get it. `automotive-signpost` po
 automotive standards landscape (ISO 26262, ASPICE, SAE J3016, UNECE R155/R156) and
 `functional-safety-signpost` points to the functional safety landscape (IEC 61508, ISO 26262,
 ISO/SAE 21434, UL 4600, SAE J3016, ASPICE); both are citation-only, and the open path for
-both is `nhtsa-vehicle`. `avionics-signpost` points at the avionics development assurance standards (DO-178C, DO-254, ARP4754B, ARP4761A) with `faa-8110-49` as the open path. `rail-signpost` points at EN 50126, EN 50128, and EN 50129, with CSM regulations and ORR guidance as the free paths and no in-repo pack. `space-signpost` points at ECSS documents with catalogue links, free paths are existing NASA packs, and several needs have no in-repo pack. They exist because most SE standards
+both is `nhtsa-vehicle`. `avionics-signpost` points at the avionics development assurance standards (DO-178C, DO-254, ARP4754B, ARP4761A) with `faa-8110-49` as the open path. `rail-signpost` points at EN 50126, EN 50128, and EN 50129, with CSM regulations and ORR guidance as the free paths and no in-repo pack. `space-signpost` points at ECSS documents with catalogue links, free paths are existing NASA packs, and several needs have no in-repo pack. `maritime-signpost` points at SOLAS, ISM, ISPS, COLREGS, and class rules; free paths are USCG material (including the Navigation Rules PDF and eCFR Title 46), UK MCA notices, and class portals; no in-repo pack covers these instruments. They exist because most SE standards
 are paywalled or all-rights-reserved (see [docs/SOURCE-VETTING.md](docs/SOURCE-VETTING.md)).
 
 **Orchestrator** (not a pack, zero source content): `se` is an explicit `/se <question>` entry
