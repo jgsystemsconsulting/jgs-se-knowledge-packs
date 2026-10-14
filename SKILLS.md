@@ -6,7 +6,7 @@ SKILLS.md is hand-maintained. After a pack change, regenerate docs/packs.html wi
 
 # jgs-se-knowledge-packs — Pack Index
 
-71 packs (+7 signposts, +1 orchestrator) in this release. Each pack is an Agent Skill installed as `/<slug>`.
+71 packs (+8 signposts, +1 orchestrator) in this release. Each pack is an Agent Skill installed as `/<slug>`.
 
 | Pack | Source licence | Description |
 |------|----------------|-------------|
@@ -88,4 +88,5 @@ SKILLS.md is hand-maintained. After a pack change, regenerate docs/packs.html wi
 | [`avionics-signpost`](packs/avionics-signpost/SKILL.md) | MIT (signpost) | **Signpost, not a pack** — Avionics development assurance standards (DO-178C/ED-12C and supplements, DO-254/ED-80, ARP4754B, ARP4761A) with designation, edition, owner, and owner URL only. Zero reproduced content. Open paths point at `faa-8110-49`. |
 | [`rail-signpost`](packs/rail-signpost/SKILL.md) | MIT (signpost) | **Signpost, not a pack**. Railway RAMS and signalling assurance (EN 50126, EN 50128, EN 50129) with designation, edition, owner, and official URL only. Zero reproduced content. Free paths are CSM regulations and ORR guidance. No in-repo pack. |
 | [`space-signpost`](packs/space-signpost/SKILL.md) | MIT (signpost) | **Signpost, not a pack**. ECSS space standards (E, M, Q, U) with designation, edition, owner, and catalogue URL only. Zero reproduced content. Free paths are existing NASA packs. Several needs have no in-repo pack. |
+| [`maritime-signpost`](packs/maritime-signpost/SKILL.md) | MIT (signpost) | **Signpost, not a pack**. SOLAS, ISM, ISPS, COLREGS, and class rules with designation, edition, owner, and official URL only. Zero reproduced content. Free paths are USCG and eCFR Title 46, UK MCA notices, and class portals. No in-repo pack. |
 | [`functional-safety-signpost`](packs/functional-safety-signpost/SKILL.md) | MIT (signpost) | **Signpost, not a pack** — functional safety standards landscape (IEC 61508, ISO 26262, ISO/SAE 21434, UL 4600, SAE J3016, ASPICE) with designation, edition, owner, and catalogue URL only. Zero reproduced content. Open paths point at `mil-std-882` and `nhtsa-vehicle`, which are not equivalents. |
