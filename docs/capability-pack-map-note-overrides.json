@@ -3562,6 +3562,46 @@
       "pack": "med-device-eu",
       "chapter": "cheatsheet.md",
       "note": "Which chapter answers the qualification question, which template to open, and which regime a question belongs to"
+    },
+    {
+      "pack": "jsp-376",
+      "chapter": "ch01-acquisition-safety-policy.md",
+      "note": "JSP 376 policy frame: ALARP, tolerability, exemptions, and the six acquisition safety concepts"
+    },
+    {
+      "pack": "jsp-376",
+      "chapter": "ch02-roles-and-safety-in-the-programme.md",
+      "note": "SRO and User safety accountabilities, the programme envelope, and the unpublished Chapter 4 gap"
+    },
+    {
+      "pack": "jsp-376",
+      "chapter": "ch03-safety-management-and-requirements.md",
+      "note": "Safety Management Plan, safety KUR, and URD and SRD safety requirements across the lifecycle"
+    },
+    {
+      "pack": "jsp-376",
+      "chapter": "ch04-test-evaluation-and-safety-case.md",
+      "note": "ITEAP, certification strategy, and safety case ownership from Pre-Concept to handover"
+    },
+    {
+      "pack": "jsp-376",
+      "chapter": "ch05-supervision-assurance-approvals.md",
+      "note": "Three lines of defence, the Safety Assurance Model, and safety inside the five-case business case"
+    },
+    {
+      "pack": "jsp-376",
+      "chapter": "ch06-early-lifecycle-phases.md",
+      "note": "Pre-Concept, Concept, and Assessment safety artefacts and SOC, OBC, and FBC evidence"
+    },
+    {
+      "pack": "jsp-376",
+      "chapter": "ch07-demonstration-and-manufacture.md",
+      "note": "Demonstration evidence, Manufacture handover, and Duty Holder appointment before in-service"
+    },
+    {
+      "pack": "jsp-376",
+      "chapter": "ch08-in-service-and-disposal.md",
+      "note": "In-service safety case reviews, the two-year review ceiling, and disposal and termination"
     }
   ]
 }

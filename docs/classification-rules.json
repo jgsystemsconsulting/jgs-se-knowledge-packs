@@ -4328,6 +4328,54 @@
       "chapter": "cheatsheet.md",
       "cluster": "Standards, Tailoring & Process Models",
       "is_support": true
+    },
+    {
+      "pack": "jsp-376",
+      "chapter": "ch01-acquisition-safety-policy.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-376",
+      "chapter": "ch02-roles-and-safety-in-the-programme.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-376",
+      "chapter": "ch03-safety-management-and-requirements.md",
+      "cluster": "Requirements Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-376",
+      "chapter": "ch04-test-evaluation-and-safety-case.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-376",
+      "chapter": "ch05-supervision-assurance-approvals.md",
+      "cluster": "Assurance & System Assurance",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-376",
+      "chapter": "ch06-early-lifecycle-phases.md",
+      "cluster": "Supplier, Procurement & Acquisition",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-376",
+      "chapter": "ch07-demonstration-and-manufacture.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-376",
+      "chapter": "ch08-in-service-and-disposal.md",
+      "cluster": "Operations, Maintenance & Disposal",
+      "is_support": false
     }
   ]
 }
