@@ -291,7 +291,7 @@ def check_rules(
                 f"live {len(live_names)}",
             )
 
-    expected_signposts = ["omg-signpost", "se-standards-signpost", "automotive-signpost", "functional-safety-signpost", "avionics-signpost", "rail-signpost"]
+    expected_signposts = ["omg-signpost", "se-standards-signpost", "automotive-signpost", "functional-safety-signpost", "avionics-signpost", "rail-signpost", "space-signpost"]
     if list(signpost_packs) != expected_signposts:
         fail(
             errs,
