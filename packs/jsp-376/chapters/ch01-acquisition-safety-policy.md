@@ -42,7 +42,7 @@ The policy is written for Head Office approvals: Dir DS is the safety advisor to
 
 ## Legislative baseline
 
-UK health and safety legislation requires risks to be assessed and reduced to as low as reasonably practicable (ALARP), with secondary legislation setting prescribed limits for some hazards. The Health and Safety at Work etc Act 1974 is the anchor. Recognised good practice is the usual starting point for showing ALARP: the HSE's phrase is the measures normally expected in similar circumstances.
+UK health and safety legislation requires risks to be assessed and reduced to as low as reasonably practicable (ALARP), with secondary legislation setting prescribed limits for some hazards. The Health and Safety at Work etc Act 1974 is the anchor. Recognised good practice is where an ALARP demonstration usually starts, in the HSE's sense of the measures normally expected in similar circumstances.
 
 Where benefits do not clearly outweigh costs, a cost-benefit comparison is needed, and that comparison must favour safety. Controls are implemented unless the sacrifice, which includes time and operational implications and not only money, is grossly disproportionate to the risk reduction. JSP 507 gives the appraisal direction, and Defence Economics should be contacted before any ALARP cost-benefit analysis.
 
