@@ -1,0 +1,18 @@
+slug: maritime-signpost
+kind: signpost
+title: "Maritime Safety and Class Rules: Signpost (pointers only)"
+publisher: "JG Systems Consulting Ltd."
+license: "MIT"
+license_tier: 2
+commercial_use: true
+notes: >
+  Signpost, not a knowledge pack. Zero instrument text. Rows carry
+  designation, title, edition, owner, status, and an official URL only.
+  SOLAS, ISM, ISPS, and COLREGS as sold by IMO are Excluded sales
+  publications. Free paths are US flag implementation (eCFR Title 46 and
+  USCG circulars), the USCG Navigation Rules PDF for collision rules, UK
+  MCA notices under Open Government Licence v3.0, and class-rule portals
+  (DNV, ABS, Bureau Veritas). Class rules stay society copyright. They
+  are not public domain and not OGL. Lloyd's Register rules URL was not
+  confirmed and is not cited. No in-repo pack covers these instruments.
+  Trademarks named for identification only.
