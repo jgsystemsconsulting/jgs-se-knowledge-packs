@@ -784,6 +784,18 @@ Third-party source attributions (one block per shipped content pack)
            not endorse this pack. ISO 45001 is named and not reproduced. See
            packs/jsp-815/LICENSE.
 
+[pack: jsp-376]
+  Source : JSP 376 Defence Acquisition Safety Policy V1.1 (April 2024).
+           Ministry of Defence, Crown copyright.
+  Author : Ministry of Defence
+  Licence: Open Government Licence v3.0
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : attribution required. Contains public sector information licensed
+           under the Open Government Licence v3.0. The Ministry of Defence does
+           not endorse this pack. Def Stan 00-056 and the other standards the
+           source cites are named and not reproduced. See
+           packs/jsp-376/LICENSE.
+
 [pack: nrc-nuclear]
   Source : RG 1.168 Rev 2 (July 2013, ML13073A210); RG 1.169 Rev 1 (July 2013,
            ML12355A642); RG 1.170 Rev 1 (July 2013, ML13003A216); RG 1.171 Rev 1
