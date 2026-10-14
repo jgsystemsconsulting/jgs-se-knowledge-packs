@@ -111,6 +111,7 @@ Output goes in the reply unless the user names a file. A deliverable with no mat
 | GPS & GNSS interfaces | GPS, GNSS, NAVSTAR, space segment interface, ranging signal | `is-gps-200n`, `faa-std-025` |
 | Medical device software | FDA, QMSR, 510(k), device software, SaMD, eSTAR, MDR, IVDR, MHRA, UKCA, MDCG | `fda-med-device`, `med-device-eu` |
 | Avionics software assurance | DO-178C, DO-254, 8110.49, airborne software, AEH, conformity | `faa-8110-49`, `avionics-signpost`, `easa-rules` |
+| Railway RAMS & signalling assurance | EN 50126, EN 50128, EN 50129, railway RAMS, CSM, signalling assurance, RSSB | `rail-signpost` |
 | Defence safety management | JSP 815, JSP 376, acquisition safety, defence safety, SMS, safety case, assurance | `jsp-815`, `jsp-376` |
 | Nuclear software assurance | NRC, regulatory guide, NUREG, digital safety systems, software assurance, BTP 7-14 | `nrc-nuclear` |
 
