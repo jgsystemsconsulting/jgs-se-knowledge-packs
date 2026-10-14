@@ -1,0 +1,15 @@
+slug: space-signpost
+kind: signpost
+title: "ECSS Space Standards: Signpost (pointers only)"
+publisher: "JG Systems Consulting Ltd."
+license: "MIT"
+license_tier: 2
+commercial_use: true
+notes: >
+  Signpost, not a knowledge pack. Zero standards-body text. Rows carry
+  designation, title, edition, owner, status, and an official URL only.
+  ECSS documents are Excluded: free after registration on ecss.nl, ESA
+  copyright, no redistribution grant (ECSS-P-00C clause 5.8). Free process
+  paths are existing NASA packs in this catalogue, named by slug, and are
+  not ECSS clause substitutes. Several needs have no in-repo pack.
+  Trademarks named for identification only.
