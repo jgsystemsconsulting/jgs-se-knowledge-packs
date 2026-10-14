@@ -17,6 +17,7 @@ All notable changes to this project are documented here. Format follows
 - `dodaf` (1 index row): the JCIDS row now routes to ch04 and ch11 only; ch02 carries a data-group mapping table, not JCIDS substance.
 
 ### Changed
+- `dod-te-guidebook` watchlist row: hint now names test-evaluation.osd.mil and the T&E Enterprise Guidebook, per Ruling R1. Publisher string unchanged. No pack edit.
 
 - `nasa-se-handbook`: five chapter files renamed to their full source-section names (no mid-word cuts) with all references updated and the capability map regenerated; six thin chapters (ch02, ch05, ch08, ch09, ch10, ch15) deepened to reference depth (65+ lines each) from the pack's own sources.
 
