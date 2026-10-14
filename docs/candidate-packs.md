@@ -20,7 +20,7 @@ Build in this order:
 | 5 | `med-device-eu` | full | MDCG guidance is free to reuse with attribution; MHRA is OGL |
 | 6 | `nhtsa-vehicle` plus `automotive-signpost` | full + signpost | NHTSA material is public domain; the signpost maps ISO 26262 / ISO-SAE 21434 to open paths |
 | 7 | `nrc-nuclear`, `easa-rules` | full | partially built 2026-10-12 (nrc-nuclear done, easa-rules pending). NRC guides are public domain; EASA Easy Access Rules are free downloads |
-| 8 | `rail-signpost` (built 2026-10-14), `space-signpost`, `maritime-signpost` | signpost | Cheap to build, each takes a day, and together they close the sector map |
+| 8 | `rail-signpost` (built 2026-10-14), `space-signpost` (built 2026-10-14), `maritime-signpost` | signpost | Cheap to build, each takes a day, and together they close the sector map |
 
 The signposts first among these cost almost nothing: a signpost pack is one SKILL.md and one PACK.yaml with no reproduced source content, so items 2 and the signpost half of 6 and 8 are the fastest visible progress. The full packs follow the existing pack spec with no new tooling.
 
@@ -82,7 +82,7 @@ Each is one working day or less: SKILL.md with tables mapping the paywalled stan
 - `avionics-signpost` (built 2026-10-12): DO-178C, DO-254, ARP4754B, ARP4761A. Free paths: FAA Order 8110.49 (`faa-8110-49`, built 2026-10-12), existing `faa-*` packs, EASA AMC texts, named, not packed.
 - `automotive-signpost`: ISO 26262, ASPICE, SAE J3016, UNECE R155/R156 (signpost-only; © UNECE, no redistribution grant, verified 2026-09-25). Open path: `nhtsa-vehicle` (US Government guidance, not a UNECE equivalent).
 - `rail-signpost` (built 2026-10-14): EN 50126/50128/50129. Free paths: CSM 402/2013 (as amended by 2015/1136) and ORR guidance. RSSB summaries only. EN 50128 and EN 50129 have no free full text.
-- `space-signpost`: ECSS family. Free paths: the existing NASA packs cover most ECSS-equivalent ground; the signpost names the ECSS document for each need and links to the ECSS catalogue.
+- `space-signpost` (built 2026-10-14): ECSS family. ECSS is free after registration and excluded from packaging. Free paths: the existing NASA packs. Structures, mechanisms, communications, ground operations, space environment, radiation methods, and PA/QA management have no in-repo pack.
 - `maritime-signpost`: SOLAS, class rules. Free path: USCG material.
 
 ### Not now, with reasons

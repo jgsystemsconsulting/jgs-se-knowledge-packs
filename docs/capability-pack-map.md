@@ -9,7 +9,7 @@ Rules of construction:
 - `glossary.md` / `patterns.md` / `cheatsheet.md` may appear as support-file rows; this bullet is descriptive
   only and defers to `support_policy`. `is_support` assignment rows are the membership source of truth
   (do not derive omission of multi-cluster pack support files from this rule).
-- The signpost packs contain no chapters and are not mapped: `omg-signpost`, `se-standards-signpost`, `automotive-signpost`, `functional-safety-signpost`, `avionics-signpost`, `rail-signpost`.
+- The signpost packs contain no chapters and are not mapped: `omg-signpost`, `se-standards-signpost`, `automotive-signpost`, `functional-safety-signpost`, `avionics-signpost`, `rail-signpost`, `space-signpost`.
 - A standard's own process definitions go to cluster 30; performing the capability goes to the capability cluster.
 - Machine-readable version: `docs/capability-pack-map.json`.
 - Machine-readable classification rules (MAP-21-01): `docs/classification-rules.json`.
