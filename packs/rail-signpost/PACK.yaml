@@ -1,0 +1,15 @@
+slug: rail-signpost
+kind: signpost
+title: "Railway RAMS and Signalling Assurance Standards: Signpost (pointers only)"
+publisher: "JG Systems Consulting Ltd."
+license: "MIT"
+license_tier: 2
+commercial_use: true
+notes: >
+  Signpost, not a knowledge pack. Zero standards-body text. Rows carry
+  designation, title, edition, owner, status, and an official URL only.
+  EN 50126, EN 50128, EN 50129, EN 50159, and the verified IEC duals are
+  Excluded paywalled standards with no redistribution grant. Free paths
+  are CSM regulations on legislation.gov.uk and ORR guidance. No in-repo
+  pack covers these standards. RSSB catalogue summaries are public;
+  full RIS/RGN PDFs are not. Trademarks named for identification only.
