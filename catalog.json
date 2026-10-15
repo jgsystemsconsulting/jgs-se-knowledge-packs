@@ -710,6 +710,83 @@
       "commercial_use": true,
       "chapters": 6,
       "status": "live"
+    },
+    {
+      "slug": "fda-med-device",
+      "title": "FDA Medical Device Software Reference (QMSR and device software guidance)",
+      "publisher": "FDA (CDRH/CBER)",
+      "source_version": "QMSR final rule 89 FR 7496 (2024-01709, published 2024-02-02, effective 2026-02-02) amending 21 CFR 820; Content of Premarket Submissions for Device Software Functions (June 2023, FDA-2021-D-0775); General Principles of Software Validation (January 2002, FDA-1997-D-0029); Computer Software Assurance for Production and Quality Management System Software (February 2026, FDA-2022-D-0795); Cybersecurity in Medical Devices: Quality Management System Considerations and Content of Premarket Submissions (February 2026, FDA-2021-D-1158); Clinical Decision Support Software (January 2026, FDA-2017-D-6569); eSTAR program page (content current 2026-09-21)",
+      "license": "Public Domain (US Government work, 17 U.S.C. § 105)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 12,
+      "status": "live"
+    },
+    {
+      "slug": "faa-8110-49",
+      "title": "FAA Airborne Software and AEH Approval Guidance",
+      "publisher": "Federal Aviation Administration",
+      "source_version": "FAA Order 8110.49A, Software Approval Guidelines (effective 2018-03-29, cancels 8110.49 Change 2 dated 2017-04-10); AC 20-115D, Airborne Software Development Assurance Using EUROCAE ED-12() and RTCA DO-178() (issued 2017-07-21); AC 20-152A, Development Assurance for Airborne Electronic Hardware (issued 2022-10-07); AC 00-69, Best Practices for Airborne Software Development Assurance Using EUROCAE ED-12() and RTCA DO-178() (issued 2017-07-21)",
+      "license": "Public Domain (US Government work, 17 U.S.C. § 105)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 13,
+      "status": "live"
+    },
+    {
+      "slug": "jsp-815",
+      "title": "JSP 815: Defence Safety Management System (Framework and Direction and Guidance)",
+      "publisher": "Ministry of Defence",
+      "source_version": "JSP 815 Defence Safety Management System V1.3 (Framework, Elements 1-12, Annexes A-G, published 2026-09-01); Annex H Audit Manual V1.2 (published 2026-09-01)",
+      "license": "Open Government Licence v3.0",
+      "license_tier": 2,
+      "commercial_use": true,
+      "chapters": 10,
+      "status": "live"
+    },
+    {
+      "slug": "nrc-nuclear",
+      "title": "NRC Digital Safety-System Software Assurance",
+      "publisher": "U.S. Nuclear Regulatory Commission",
+      "source_version": "RG 1.168 Rev 2, Verification, Validation, Reviews, and Audits for Digital Computer Software Used in Safety Systems of Nuclear Power Plants (July 2013, ML13073A210); RG 1.169 Rev 1, Configuration Management Plans for Digital Computer Software Used in Safety Systems of Nuclear Power Plants (July 2013, ML12355A642); RG 1.170 Rev 1, Software Test Documentation for Digital Computer Software Used in Safety Systems of Nuclear Power Plants (July 2013, ML13003A216); RG 1.171 Rev 1, Software Unit Testing for Digital Computer Software Used in Safety Systems of Nuclear Power Plants (July 2013, ML13004A375); RG 1.172 Rev 1, Software Requirements Specifications for Digital Computer Software Used in Safety Systems of Nuclear Power Plants (July 2013, ML13007A173); RG 1.173 Rev 1, Developing Software Life Cycle Processes for Digital Computer Software Used in Safety Systems of Nuclear Power Plants (July 2013, ML13009A190); NUREG-0800 BTP 7-14 Rev 6, Guidance on Software Reviews for Digital Computer-Based Instrumentation and Control Systems (August 2016, ML16019A308)",
+      "license": "Public Domain (US Government work, 17 U.S.C. § 105)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 8,
+      "status": "live"
+    },
+    {
+      "slug": "easa-rules",
+      "title": "EASA AMC 20-115D and AMC 20-152A (airborne software and AEH development assurance)",
+      "publisher": "European Union Aviation Safety Agency; reconstructed by JG Systems Consulting Ltd",
+      "source_version": "S1 AMC 20-115D (ED Decision 2017/020/R, AMC-20 Amendment 14; consolidated in Amendment 23); S2 AMC 20-152A (ED Decision 2020/010/R, AMC-20 Amendment 19; consolidated in Amendment 23); S3 EAR AMC-20 Amendment 23 (June 2023) as retrieval carrier; S5/S6 decision anchors. Pinned 2026-09-26.",
+      "license": "Per-document: EASA site reproduction-with-acknowledgement grant, qualified by ED Decision all-rights-reserved footers; reconstructed notes with attribution; official PDFs not redistributed; commercial use pending per-document determination",
+      "license_tier": 2,
+      "commercial_use": false,
+      "chapters": 7,
+      "status": "live"
+    },
+    {
+      "slug": "med-device-eu",
+      "title": "EU and UK Medical Device Software Reference (MDCG guidance and MHRA software guidance)",
+      "publisher": "European Commission (MDCG) and UK MHRA",
+      "source_version": "MDCG 2019-11 rev.1 (June 2025); MDCG 2020-6 (April 2020); MDCG 2020-13 (July 2020); MDCG 2020-7 (April 2020); MDCG 2020-8 (April 2020); MHRA Medical devices: software applications (2023-07-01) with its stand-alone software guidance. Captured 2026-10-13.",
+      "license": "Per-document: European Commission reuse policy (Decision 2011/833/EU, CC BY 4.0, attribution and indication of changes) for the MDCG documents; Open Government Licence v3.0 for the MHRA guidance; reconstructed notes with attribution; official PDFs not redistributed",
+      "license_tier": 2,
+      "commercial_use": false,
+      "chapters": 8,
+      "status": "live"
+    },
+    {
+      "slug": "jsp-376",
+      "title": "JSP 376: Defence Acquisition Safety Policy",
+      "publisher": "Ministry of Defence",
+      "source_version": "JSP 376 Defence Acquisition Safety Policy V1.1 (April 2024)",
+      "license": "Open Government Licence v3.0",
+      "license_tier": 2,
+      "commercial_use": true,
+      "chapters": 8,
+      "status": "live"
     }
   ],
   "planned": [

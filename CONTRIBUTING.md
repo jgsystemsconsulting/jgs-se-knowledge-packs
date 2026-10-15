@@ -27,6 +27,10 @@ and confirm:
 
 If a source is merely "free to download," that is not enough. Free ≠ redistributable.
 
+Source freshness is checked monthly against the revision each live pack was built
+from; see [docs/SOURCE-FRESHNESS.md](docs/SOURCE-FRESHNESS.md). A rebuild stays a
+maintainer decision, made from that report.
+
 ## Build the pack
 
 ```bash
@@ -38,7 +42,11 @@ python tooling/build_pack.py --slug <slug> --title "..." --publisher "..." \
 #    - extract text (jgs-reference-skill), map chapter offsets, generate reference-depth
 #      chapters + glossary/patterns/cheatsheet, then the SKILL.md index.
 # 3. Fill the TODOs in packs/<slug>/PACK.yaml and packs/<slug>/LICENSE.
-# 4. Add a catalog row and rebuild catalog.json (see tooling/ or hand-edit).
+# 4. Registration depends on kind. A live catalog pack: add a catalog row,
+#    rebuild catalog.json (see tooling/ or hand-edit), and add a watchlist
+#    entry in docs/source-watchlist.json (see docs/SOURCE-FRESHNESS.md).
+#    A signpost or an orchestrator: do not add a catalog row and do not add
+#    a watchlist entry.
 # 5. Add the slug to the /se map (packs/se/SKILL.md Topics row + agency row;
 #    Licences row when not public domain).
 
@@ -59,8 +67,7 @@ python tooling/validate_pack.py packs/<slug>
 
 - One pack per PR.
 - PR description: source, version, licence, tier, and a line confirming it is not Excluded.
-- CI runs `validate_pack.py` on every pack and blocks invalid licence tiers and broken
-  chapter links. Tier judgement (1/2/3) is reviewed by a maintainer.
+- CI does not run `validate_pack.py`. It runs inline data-invariant checks including leak sentinels, link policy, frontmatter, catalog, version, index count, chapter overlap, and map and classification invariants, and never executes repository code. Before the PR, run step 6 above (`python tooling/validate_pack.py packs/<slug>`). Tier judgement (1/2/3) is reviewed by a maintainer.
 
 ## Reporting a licensing concern
 

@@ -57,6 +57,10 @@ standard requires for this repo and exits non-zero on any failure:
   17. Tracked sources/ emptiness ([sources-untracked]): git ls-files -z scoped
      to sources/ must return no path. Local only, because CI does not execute
      repository code.
+  18. Source watch freshness ([source-watch]): tooling/check_source_watch.py
+      validate must pass, so every watchlist entry has a last_checked within
+      STALE_DAYS. Local only; CI does not execute repository code and this
+      check is not mirrored into validate.yml.
 
 stdlib only. This is a LOCAL/trusted gate and may run repo code; the CI workflow
 (.github/workflows/validate.yml) inlines its own checks and never executes repo code.
@@ -958,7 +962,7 @@ def main() -> int:
     # class of ephemeral SDD/planning briefs (spec text quotes banned source URLs).
     SKIP_DIRS = {".git", "sources", ".build", ".playwright-mcp", "__pycache__",
                  ".worktrees", ".ruff_cache", ".pytest_cache", ".venv", "venv", ".idea", ".vscode",
-                 ".planning", ".superpowers", "superpowers"}
+                 ".planning", ".superpowers", "superpowers", ".zcode"}
     text_files = [p for p in ROOT.rglob("*")
                   if p.is_file() and p.suffix in {".md", ".py", ".json", ".yaml", ".yml", ".txt", ".sh", ".ps1"}
                   and not (SKIP_DIRS & set(p.parts))]
@@ -1302,6 +1306,19 @@ def main() -> int:
                 )
     except Exception as e:
         fail(errs, f"[map-replay] generate_capability_map failed to run: {e}")
+
+    # 5h. source watch freshness: every watchlist entry checked within STALE_DAYS.
+    # Local only. Wired after calibration filled every last_checked (D-06).
+    try:
+        import check_source_watch  # type: ignore
+        rc = check_source_watch.main([])
+        if rc != 0:
+            fail(
+                errs,
+                "[source-watch] check_source_watch.py failed (see output above)",
+            )
+    except Exception as e:
+        fail(errs, f"[source-watch] check_source_watch failed to run: {e}")
 
     # 7. authored-file headers (root + docs + tooling + installers; NOT packs/)
     authored = [ROOT / "README.md", ROOT / "SECURITY.md", ROOT / "CODE_OF_CONDUCT.md",

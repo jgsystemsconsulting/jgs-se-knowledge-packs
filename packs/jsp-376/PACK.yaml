@@ -1,0 +1,24 @@
+slug: jsp-376
+title: "JSP 376: Defence Acquisition Safety Policy"
+publisher: "Ministry of Defence"
+source_version: "JSP 376 Defence Acquisition Safety Policy V1.1 (April 2024)"
+license: "Open Government Licence v3.0"
+license_tier: 2
+commercial_use: true
+share_alike: false
+attribution_required: true
+build:
+  method: "Synthesized from the JSP 376 V1.1 PDF pinned on 2026-10-14. Not adapted from a sibling prototype. There is no sibling prototype."
+  source_pages: 60
+  chapters: 8
+  built_on: "2026-10-14"
+notes: >
+  Contains public sector information licensed under the Open Government
+  Licence v3.0. Source: JSP 376 Defence Acquisition Safety Policy V1.1
+  (April 2024). Ministry of Defence, Crown copyright. Reconstructed
+  reference notes, not reproductions. No MOD endorsement implied.
+  Def Stan 00-056 and any other standard the source cites by number are
+  named and not quoted. JSP 655, JSP 507, JSP 815, and the other related
+  JSPs listed in the preface are named and not reproduced. Source links
+  and the full licence text are in packs/jsp-376/LICENSE.
+change_indication: "reconstructed as synthesized reference notes"

@@ -1,0 +1,133 @@
+faa-8110-49 pack: content licence
+=================================
+
+This pack adapts the sibling prototype build and re-vets, below, the four
+documents of the 2026-10-12 FAA source pin, rows S1 to S4 as in the sibling
+build. Their landing-page URLs are held in the sibling build record dated
+2026-09-25 and are not reproduced here; the repository link policy bans
+source-material hosts (see ../../docs/LICENSING.md).
+
+Source licence: Public Domain (US Government work, 17 U.S.C. § 105)  (tier 1; see
+../../docs/SOURCE-VETTING.md). No source-material download link is published.
+
+All four sources are works of the United States Government prepared by FAA
+staff of the Aircraft Certification Service (AIR), and are NOT subject to
+copyright protection in the United States (17 U.S.C. § 105). They are in the
+public domain: anyone may reproduce, transform, and redistribute them for any
+purpose, including commercially, without permission and without any attribution
+or share-alike obligation.
+
+Attribution to the FAA is provided as a courtesy (see the repository NOTICE),
+not as a legal obligation. The FAA does not endorse this pack or its authors.
+
+Each source below carries a vetting block: exact title, publisher office,
+pinned date, status, cancellation, licence basis, what the pack reconstructs
+from it, and the chapters that use it. Items marked "confirmed from PDF" were
+checked against the local source-text captures on 2026-09-25.
+
+Reconstruction: all pack content is synthesized reference notes in the authors'
+own words. The documents themselves are not republished here; long verbatim
+passages are never reproduced.
+
+NOTE: This file governs the CONTENT of this pack. The repository tooling is
+licensed separately under MIT (see ../../LICENSE).
+
+
+THE FOUR SOURCES
+=================
+
+S1  FAA Order 8110.49A, Software Approval Guidelines
+    Publisher: US DOT Federal Aviation Administration, Aircraft Certification
+    Service (AIR)   National Policy   Issued: effective 2018-03-29
+    Status: Active   Signed: Dr. Michael C. Romanowski, Director, Policy &
+    Innovation Division, Aircraft Certification Service (confirmed from PDF)
+    Cancellation: cancels and supersedes FAA Order 8110.49 Chg 2, Software
+    Approval Guidelines, dated April 10, 2017 (confirmed from PDF, Ch 1 para 4).
+    Chapters 5 to 16 of Chg 2 were deleted in the change to 8110.49A because
+    their topics duplicate AC 20-115D and AC 00-69 material (or were removed);
+    this pack reconstructs what remains.
+    Basis: US Government work, 17 U.S.C. § 105
+    Reconstructs: the FAA software review process (certification liaison, desk
+    and on-site reviews, review planning agreements, review objectives), the
+    level-of-involvement determination (criteria and the three Appendix A
+    worksheets), and the software conformity inspection process (software part
+    and installation conformity, ASE and ASI tasks, FAA Form 8120-10).
+    Used in: ch01, ch02, ch03, ch04
+
+S2  AC 20-115D, Airborne Software Development Assurance Using EUROCAE ED-12( )
+    and RTCA DO-178( )
+    Publisher: US DOT Federal Aviation Administration   Advisory Circular
+    Issued: 2017-07-21   Initiated by: AIR-134   Status: Active
+    Cancellation: cancels AC 20-115C, Airborne Software Assurance, dated
+    July 19, 2013 (confirmed from PDF, para 3).
+    Basis: US Government work, 17 U.S.C. § 105
+    Reconstructs: which RTCA/EUROCAE documents the FAA recognizes for airborne
+    software (ED-12C/DO-178C plus the DO-330 to DO-333 supplement set), the
+    criteria for continuing to use ED-12B/DO-178B processes for new
+    development, expected life cycle data submittal, tool qualification under
+    DO-330, supplement use, field-loadable and user-modifiable software, and
+    the legacy software modification flow chart. The recognized RTCA/EUROCAE
+    documents are copyrighted; this pack restates only what the AC itself says.
+    Used in: ch01, ch05, ch06
+
+S3  AC 20-152A, Development Assurance for Airborne Electronic Hardware
+    Publisher: US DOT Federal Aviation Administration   Advisory Circular
+    Issued: 2022-10-07   Initiated by: AIR-622   Status: Active
+    Cancellation: cancels AC 20-152, RTCA, Inc., Document RTCA/DO-254, Design
+    Assurance Guidance for Airborne Electronic Hardware, dated June 30, 2005
+    (confirmed from PDF).
+    Basis: US Government work, 17 U.S.C. § 105
+    Reconstructs: when ED-80/DO-254 applies, the simple versus complex custom
+    device classification and its assurance consequences, verification topics
+    (robustness, the HDL code coverage method), tool assessment and
+    qualification, previously developed hardware, commercial off-the-shelf
+    (COTS) intellectual property, COTS devices, and circuit board assemblies
+    (CBA). Single event effects (SEE) susceptibility is outside the AC and
+    outside this pack. The recognized ED-80/DO-254 documents are copyrighted;
+    this pack restates only what the AC itself says.
+    Used in: ch01, ch07, ch08, ch09, ch10
+
+S4  AC 00-69, Best Practices for Airborne Software Development Assurance Using
+    EUROCAE ED-12( ) and RTCA DO-178( )
+    Publisher: US DOT Federal Aviation Administration, Aircraft Certification
+    Service (AIR)   Advisory Circular
+    Issued: 2017-07-21   Initiated by: AIR-134   Status: Active
+    Cancellation: none. No prior AC 00-69 is cancelled. Change field blank.
+    Basis: US Government work, 17 U.S.C. § 105
+    Reconstructs: the change impact analysis best-practice contents (what a CIA
+    identifies and which change classes it addresses), the clarification that
+    data coupling and control coupling are distinct and both required, and the
+    design-level error-handling practices (foreseeable error sources, mitigation
+    in requirements, runtime protection at levels A and B). The AC states it is
+    best practices, not guidance, and complementary to ED-12C/DO-178C and to
+    AC 20-115D. It is not an acceptable means of compliance.
+    Used in: ch01, ch06 (cross-link), ch11, ch12, ch13
+
+
+EXCLUDED MATERIAL (cited by name only; no text reproduced)
+=========================================================
+
+The following standards are copyrighted and are NOT licensed to this pack. The
+FAA documents recognize them; the pack names them and restates the FAA's own
+recognition and clarification text only. It reproduces no standard text, table,
+objective, or clause wording from any of them.
+
+-   RTCA DO-178C, "Software Considerations in Airborne Systems and Equipment
+    Certification" (2011-12-13), and its supplements DO-330 (Software Tool
+    Qualification Considerations), DO-331 (Model-Based Development and
+    Verification), DO-332 (Object-Oriented Technology and Related Techniques),
+    and DO-333 (Formal Methods).
+-   EUROCAE ED-12C, the European equivalent of DO-178C, and its supplements
+    ED-215 to ED-218.
+-   RTCA DO-254, "Design Assurance Guidance for Airborne Electronic Hardware"
+    (2000-04-19), and its EUROCAE equivalent ED-80 (April 2000).
+-   SAE ARP4754B, "Guidelines for Development of Civil Aircraft and Systems",
+    and SAE ARP4761A, "Guidelines for Conducting the Safety Assessment Process
+    on Civil Aircraft, Systems, and Equipment".
+-   RTCA DO-248C / EUROCAE ED-94C FAQ #67, and RTCA DO-333 / EUROCAE ED-216.
+    AC 00-69 names both. This pack names them and does not quote them.
+
+Buy these from RTCA, EUROCAE, or SAE as applicable. Their designations,
+titles, and editions are identified in this pack for reference only; see the
+avionics-signpost pack for the full pointer table. The exclusions and the
+cleared status of S1 to S4 are recorded in ../../docs/SOURCE-VETTING.md.

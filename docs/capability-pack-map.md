@@ -9,7 +9,7 @@ Rules of construction:
 - `glossary.md` / `patterns.md` / `cheatsheet.md` may appear as support-file rows; this bullet is descriptive
   only and defers to `support_policy`. `is_support` assignment rows are the membership source of truth
   (do not derive omission of multi-cluster pack support files from this rule).
-- The two signpost packs (`omg-signpost`, `se-standards-signpost`) contain no chapters and are not mapped.
+- The signpost packs contain no chapters and are not mapped: `omg-signpost`, `se-standards-signpost`, `automotive-signpost`, `functional-safety-signpost`, `avionics-signpost`, `rail-signpost`, `space-signpost`, `maritime-signpost`.
 - A standard's own process definitions go to cluster 30; performing the capability goes to the capability cluster.
 - Machine-readable version: `docs/capability-pack-map.json`.
 - Machine-readable classification rules (MAP-21-01): `docs/classification-rules.json`.
@@ -25,38 +25,38 @@ Rules of construction:
 | Cluster | Entries |
 |---|---|
 | 1. Systems Thinking & Fundamentals | 25 |
-| 2. Requirements Engineering | 19 |
+| 2. Requirements Engineering | 22 |
 | 3. Requirements Traceability & Allocation | 3 |
 | 4. Architecture & Design | 20 |
 | 5. Interface Management & ICIDs | 9 |
 | 6. Integration | 4 |
-| 7. Verification | 11 |
+| 7. Verification | 21 |
 | 8. Validation | 7 |
 | 9. Test & Evaluation | 17 |
 | 10. Modeling, MBSE & SysML | 20 |
 | 11. Digital Engineering & Digital Twins | 25 |
-| 12. Configuration Management & Baselines | 16 |
+| 12. Configuration Management & Baselines | 20 |
 | 13. Data & Information Management | 7 |
 | 14. Risk Management | 27 |
 | 15. Opportunity/Benefit Management | 8 |
 | 16. Decision Analysis & Trade Studies | 5 |
 | 17. Technical Planning & Work Breakdown | 13 |
-| 18. Measurement & Technical Assessment | 36 |
-| 19. Quality Assurance & Process Compliance | 3 |
-| 20. Safety, Reliability & Survivability | 92 |
-| 21. Cybersecurity & Security Engineering | 70 |
+| 18. Measurement & Technical Assessment | 37 |
+| 19. Quality Assurance & Process Compliance | 7 |
+| 20. Safety, Reliability & Survivability | 95 |
+| 21. Cybersecurity & Security Engineering | 73 |
 | 22. Human Systems Integration / Human Factors | 26 |
 | 23. Logistics, Supportability & Sustainment | 12 |
-| 24. Operations, Maintenance & Disposal | 13 |
-| 25. Training & Documentation Delivery | 12 |
+| 24. Operations, Maintenance & Disposal | 15 |
+| 25. Training & Documentation Delivery | 13 |
 | 26. Project/Program Management | 67 |
-| 27. Supplier, Procurement & Acquisition | 7 |
+| 27. Supplier, Procurement & Acquisition | 11 |
 | 28. Stakeholder Engagement & Needs | 3 |
-| 29. Governance, Reviews, Gates & Control Points | 21 |
-| 30. Standards, Tailoring & Process Models | 37 |
+| 29. Governance, Reviews, Gates & Control Points | 26 |
+| 30. Standards, Tailoring & Process Models | 60 |
 | 31. Specialty Engineering | 7 |
-| 32. Assurance & System Assurance | 8 |
-| **Total** | **650** |
+| 32. Assurance & System Assurance | 15 |
+| **Total** | **720** |
 
 ## 1. Systems Thinking & Fundamentals
 
@@ -111,6 +111,9 @@ Rules of construction:
 | requirements-writing | cheatsheet.md (support file) | Cheatsheet / quick reference |
 | requirements-writing | glossary.md (support file) | Glossary for the pack |
 | requirements-writing | patterns.md (support file) | Patterns/practice heuristics |
+| fda-med-device | ch02-premarket-software-documentation.md | Content of Premarket Submissions for Device Software Functions, June 2023 guidance notes |
+| nrc-nuclear | ch03-software-requirements-specifications.md | Software requirements specification notes from RG 1.172 Rev 1 |
+| jsp-376 | ch03-safety-management-and-requirements.md | Safety Management Plan, safety KUR, and URD and SRD safety requirements across the lifecycle |
 
 ## 3. Requirements Traceability & Allocation
 
@@ -183,6 +186,16 @@ Rules of construction:
 | faa-ams-vv | glossary.md (support file) | Glossary for the pack |
 | faa-ams-vv | patterns.md (support file) | Patterns/practice heuristics |
 | nasa-se-handbook | ch23-5-3-product-verification.md | Product verification process |
+| fda-med-device | ch03-software-validation.md | General Principles of Software Validation, January 2002, taught as the 2002 guidance not as CSA |
+| fda-med-device | ch04-computer-software-assurance.md | Computer Software Assurance final guidance, February 2026, docket FDA-2022-D-0795 |
+| faa-8110-49 | ch04-software-conformity-inspection.md | Software conformity inspection notes from Order 8110.49A |
+| faa-8110-49 | ch08-aeh-verification-tools-reuse.md | AEH verification, tools, and reuse notes from AC 20-152A |
+| faa-8110-49 | ch12-data-and-control-coupling-practices.md | Data and control coupling practices from FAA airborne software guidance |
+| nrc-nuclear | ch05-verification-validation-reviews-audits.md | Verification, validation, review, and audit notes from RG 1.168 Rev 2 |
+| nrc-nuclear | ch06-test-documentation-and-unit-testing.md | Test documentation and unit testing notes from RG 1.170 Rev 1 and RG 1.171 Rev 1 |
+| med-device-eu | ch04-clinical-evidence-legacy-devices.md | What MDCG 2020-6 counts as sufficient clinical evidence for a legacy device |
+| med-device-eu | ch05-clinical-evaluation-assessment-report.md | MDCG 2020-13 template as a map of what a clinical evaluation assessment report contains |
+| jsp-376 | ch07-demonstration-and-manufacture.md | Demonstration evidence, Manufacture handover, and Duty Holder appointment before in-service |
 
 ## 8. Validation
 
@@ -293,6 +306,10 @@ Rules of construction:
 | nasa-de-acquisition | ch02-nasa-de-acquisition-drds-and-configuration-data-management.md | DRDs, configuration and data mgmt (also data mgmt) |
 | nasa-se-expanded | ch06-nasa-se-expanded-crosscutting-cm-data-assessment-decision.md | Crosscutting CM, data, assessment, decision (also measurement) |
 | nasa-se-handbook | ch31-6-5-configuration-management.md | Configuration management process |
+| fda-med-device | ch10-software-changes-510k.md | Software change decisions for 510(k) submissions under FDA device-software guidance |
+| faa-8110-49 | ch06-legacy-software-fls-ums.md | Field-loadable and user-modifiable software notes from Order 8110.49A |
+| faa-8110-49 | ch11-software-change-impact-analysis.md | Software change impact analysis notes from Order 8110.49A |
+| nrc-nuclear | ch04-software-configuration-management-plans.md | Software configuration management plan notes from RG 1.169 Rev 1 |
 
 ## 13. Data & Information Management
 
@@ -419,6 +436,7 @@ Rules of construction:
 | nist-stat-handbook | cheatsheet.md (support file) | Cheatsheet / quick reference |
 | nist-stat-handbook | glossary.md (support file) | Glossary for the pack |
 | nist-stat-handbook | patterns.md (support file) | Patterns/practice heuristics |
+| jsp-815 | ch09-performance-incidents-communication.md | Performance, incident, and communication notes from JSP 815 |
 
 ## 19. Quality Assurance & Process Compliance
 
@@ -427,6 +445,10 @@ Rules of construction:
 | gao-agile | ch09-gao-agile-assessment-reference-auditor-questions-frameworks.md | Auditor assessment questions (also program mgmt) |
 | mil-hdbk-516 | ch02-systems-engineering-criteria.md | SE airworthiness criteria: design criteria control, tech data, CM, mfg quality (also CM) |
 | nist-stat-handbook | ch06-nist-stat-handbook-process-monitoring-and-control.md | SPC monitoring and control (quality control) |
+| fda-med-device | ch05-qmsr-quality-management.md | QMSR amendments to 21 CFR 820, effective 2026-02-02, ISO 13485 named and not quoted |
+| med-device-eu | ch06-pmcf-plan.md | What an MDCG 2020-7 PMCF plan commits to |
+| med-device-eu | ch07-pmcf-evaluation-report.md | How an MDCG 2020-8 PMCF evaluation report closes the plan |
+| med-device-eu | ch08-mhra-uk-device-obligations.md | UKCA-era obligations the MHRA guidance states for device software |
 
 ## 20. Safety, Reliability & Survivability
 
@@ -524,6 +546,9 @@ Rules of construction:
 | nhtsa-vehicle | ch04-nhtsa-fmvss-occupant.md | FMVSS occupant protection selections: 201, 208, 209, 210, 214, 226 |
 | nhtsa-vehicle | ch05-nhtsa-fmvss-brakes-lighting.md | FMVSS brake, stability, lighting, and driver-present selections |
 | nhtsa-vehicle | ch06-nhtsa-fmvss-fuel-ev.md | FMVSS fuel system integrity and EV electrical selections |
+| faa-8110-49 | ch13-design-level-error-handling.md | Design-level error handling notes from FAA airborne software guidance |
+| jsp-815 | ch05-risk-assessment-and-safety-cases.md | Risk assessment and safety-case notes from JSP 815 |
+| jsp-376 | ch04-test-evaluation-and-safety-case.md | ITEAP, certification strategy, and safety case ownership from Pre-Concept to handover |
 
 ## 21. Cybersecurity & Security Engineering
 
@@ -599,6 +624,9 @@ Rules of construction:
 | nist-sse | glossary.md (support file) | Glossary for the pack |
 | nist-sse | patterns.md (support file) | Patterns/practice heuristics |
 | nhtsa-vehicle | ch02-nhtsa-cyber-practices.md | Synthesized notes from the NHTSA 2022 vehicle cybersecurity guidance |
+| fda-med-device | ch06-cybersecurity-qms.md | Cybersecurity in Medical Devices QMS considerations, February 2026 final, one document with premarket content |
+| fda-med-device | ch07-cybersecurity-premarket.md | Premarket cybersecurity submission content from the February 2026 cybersecurity guidance |
+| fda-med-device | ch09-premarket-cyber-documentation.md | Premarket cyber documentation expectations from the February 2026 cybersecurity guidance |
 
 ## 22. Human Systems Integration / Human Factors
 
@@ -665,6 +693,8 @@ Rules of construction:
 | nasa-std-8719-14 | ch06-reentry-surviving-debris.md | Reentry surviving-debris casualty risk and controlled-reentry keep-out |
 | nasa-std-8719-14 | ch07-special-classes-odar-eomp.md | Special-class debris limits plus ODAR/EOMP report governance (also Governance) |
 | sebok | ch18-sebok-system-maintenance.md | System maintenance (also sustainment) |
+| jsp-815 | ch08-equipment-and-infrastructure.md | Equipment and infrastructure safety notes from JSP 815 |
+| jsp-376 | ch08-in-service-and-disposal.md | In-service safety case reviews, the two-year review ceiling, and disposal and termination |
 
 ## 25. Training & Documentation Delivery
 
@@ -682,6 +712,7 @@ Rules of construction:
 | mil-std-40051 | cheatsheet.md (support file) | Cheatsheet / quick reference |
 | mil-std-40051 | glossary.md (support file) | Glossary for the pack |
 | mil-std-40051 | patterns.md (support file) | Patterns/practice heuristics |
+| jsp-815 | ch07-competence-and-delegation.md | Competence and delegation notes from JSP 815 |
 
 ## 26. Project/Program Management
 
@@ -766,6 +797,10 @@ Rules of construction:
 | nasa-de-acquisition | ch03-nasa-de-acquisition-requirements-exchange-and-contract-language.md | Requirements exchange and DE contract language |
 | nasa-de-acquisition | ch04-nasa-de-acquisition-data-acquisition-contract-language.md | Data acquisition contract language |
 | nasa-npr-7123 | ch04-contracted-projects.md | Requirements flow to contracted projects |
+| faa-8110-49 | ch09-aeh-cots-ip.md | AEH COTS intellectual-property notes from AC 20-152A |
+| faa-8110-49 | ch10-cots-devices-and-cbas.md | COTS device and CBAS notes from the FAA airborne hardware guidance |
+| jsp-815 | ch06-supervision-contracting-control.md | Supervision, contracting, and control notes from JSP 815 |
+| jsp-376 | ch06-early-lifecycle-phases.md | Pre-Concept, Concept, and Assessment safety artefacts and SOC, OBC, and FBC evidence |
 
 ## 28. Stakeholder Engagement & Needs
 
@@ -800,6 +835,11 @@ Rules of construction:
 | nasa-npr-7123 | ch09-review-entrance-success-criteria.md | Review entrance/success criteria |
 | nist-ai-rmf | ch04-govern-function.md | Govern function |
 | nist-csf | ch02-govern-gv.md | Govern function (cyber governance) |
+| faa-8110-49 | ch02-software-review-process.md | FAA software review process under Order 8110.49A, certification-staff notes |
+| faa-8110-49 | ch03-level-of-faa-involvement.md | Level of FAA involvement decisions under Order 8110.49A |
+| jsp-815 | ch03-leadership-and-organisation.md | Defence safety leadership and organisation notes from JSP 815 |
+| nrc-nuclear | ch07-btp-7-14-staff-software-review.md | BTP 7-14 Rev 6 staff software review notes for implementation and design outputs |
+| jsp-376 | ch02-roles-and-safety-in-the-programme.md | SRO and User safety accountabilities, the programme envelope, and the unpublished Chapter 4 gap |
 
 ## 30. Standards, Tailoring & Process Models
 
@@ -842,6 +882,29 @@ Rules of construction:
 | sebok | ch27-sebok-enabling-teams.md | Enabling teams |
 | sebok | ch28-sebok-enabling-individuals.md | Enabling individuals (competency) |
 | nhtsa-vehicle | ch01-nhtsa-vehicle-introduction.md | Scope statement for the NHTSA vehicle pack: three sources, pinned date, refusals |
+| fda-med-device | ch01-regulatory-landscape.md | FDA device-software regulatory landscape and the QMSR incorporation of ISO 13485 by reference, standard not quoted |
+| fda-med-device | ch08-software-function-scope.md | Which device software functions the premarket documentation guidance covers |
+| fda-med-device | ch11-clinical-decision-support.md | Clinical Decision Support Software final guidance, January 2026, docket FDA-2017-D-6569 |
+| fda-med-device | ch12-submissions-estar.md | eSTAR program synthesis, program page content current 2026-09-21, page not copied |
+| faa-8110-49 | ch01-airborne-approval-map.md | FAA airborne approval map from Order 8110.49A and the three ACs; standards named, not quoted |
+| faa-8110-49 | ch05-do-178c-recognition-and-transition.md | AC 20-115D recognition of ED-12C and DO-178C, standard named and not quoted |
+| jsp-815 | ch01-defence-safety-jsp-map.md | JSP 815 map of the Defence SMS Framework and Direction and Guidance; ISO 45001 named, not quoted |
+| jsp-815 | ch02-sms-structure-and-assurance-stages.md | Defence SMS structure and assurance stages from JSP 815 |
+| jsp-815 | ch04-legislation-and-exemptions.md | Legislation and exemption notes from JSP 815; statute named, not reproduced as a substitute |
+| nrc-nuclear | ch01-nrc-software-assurance-framework.md | NRC software-assurance framework for digital safety systems; seven-document map |
+| nrc-nuclear | ch02-software-life-cycle-processes.md | Software life cycle process notes from RG 1.173 Rev 1 and BTP 7-14 planning review |
+| nrc-nuclear | ch08-endorsed-standards-and-adjacent-guidance.md | Endorsed IEEE, IEC, and IAEA standards named by designation and edition, not reproduced |
+| easa-rules | ch01-moc-map.md | Which AMC answers which question, with the ED Decision anchors and the AltMoC rule |
+| easa-rules | ch02-amc-20-115d-scope.md | AMC 20-115D purpose, applicability, and its replacement of AMC 20-115C |
+| easa-rules | ch05-amc-20-152a-scope.md | AMC 20-152A purpose, applicability, and DAL A-C coverage with the DAL D note |
+| easa-rules | glossary.md (support file) | Key terms (AEH, AltMoC, CBA, COTS, DAL, ETSO, GM) with chapter references |
+| easa-rules | cheatsheet.md (support file) | Decision rules for which AMC governs, which DAL row applies, and where the FAA twin sits |
+| med-device-eu | ch01-eu-uk-device-software-orientation.md | Which MDCG or MHRA document answers which device-software question, and how this pack differs from fda-med-device |
+| med-device-eu | ch02-samd-qualification-classification.md | MDCG 2019-11 rev.1 qualification decision and the software classification rules, including the rev.1 changes |
+| med-device-eu | ch03-mhra-software-qualification.md | MHRA qualification boundary for apps and stand-alone software, and where it diverges from the MDCG reading |
+| med-device-eu | glossary.md (support file) | SaMD, legacy device, PMCF, PMS, clinical evaluation, CEAR, MDR, IVDR, UKCA, MDCG, each pointing at the chapter that teaches it |
+| med-device-eu | cheatsheet.md (support file) | Which chapter answers the qualification question, which template to open, and which regime a question belongs to |
+| jsp-376 | ch01-acquisition-safety-policy.md | JSP 376 policy frame: ALARP, tolerability, exemptions, and the six acquisition safety concepts |
 
 ## 31. Specialty Engineering
 
@@ -867,3 +930,10 @@ Rules of construction:
 | nasa-system-safety | ch06-risc-development.md | Risk-informed safety case development |
 | nasa-system-safety | ch07-risc-evaluation.md | Safety case evaluation |
 | nist-ai-rmf | ch03-trustworthiness-characteristics.md | Trustworthiness characteristics of AI |
+| faa-8110-49 | ch07-aeh-custom-devices.md | AEH custom-device assurance notes from AC 20-152A, DO-254 named and not quoted |
+| jsp-815 | ch10-assurance-and-audit.md | Assurance and audit notes from JSP 815 Annex H V1.2 |
+| easa-rules | ch03-software-assurance-115d.md | Software life cycle assurance as AMC 20-115D frames it, plus process reuse and transition |
+| easa-rules | ch04-transition-tools-gm.md | Tool qualification pointer and GM1 to GM3 clarification material for AMC 20-115D |
+| easa-rules | ch06-aeh-objectives.md | AEH objectives AMC 20-152A adds for custom devices, COTS devices, and circuit board assemblies |
+| easa-rules | ch07-joint-sw-aeh-workflow.md | Joint software and hardware certification workflow and the PSAC/PHAC-style planning interfaces |
+| jsp-376 | ch05-supervision-assurance-approvals.md | Three lines of defence, the Safety Assurance Model, and safety inside the five-case business case |

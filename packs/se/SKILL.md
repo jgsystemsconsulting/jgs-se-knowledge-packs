@@ -109,6 +109,13 @@ Output goes in the reply unless the user names a file. A deliverable with no mat
 | SE standards landscape lookup | ISO/IEC/IEEE standards, INCOSE handbook, ECSS, SAE, where to get a standard | `se-standards-signpost`, `sebok` |
 | Vehicle safety & automotive | vehicle safety, automotive, FMVSS, ADS, automated driving, vehicle cybersecurity | `nhtsa-vehicle`, `automotive-signpost`, `functional-safety-signpost` |
 | GPS & GNSS interfaces | GPS, GNSS, NAVSTAR, space segment interface, ranging signal | `is-gps-200n`, `faa-std-025` |
+| Medical device software | FDA, QMSR, 510(k), device software, SaMD, eSTAR, MDR, IVDR, MHRA, UKCA, MDCG | `fda-med-device`, `med-device-eu` |
+| Avionics software assurance | DO-178C, DO-254, 8110.49, airborne software, AEH, conformity | `faa-8110-49`, `avionics-signpost`, `easa-rules` |
+| Railway RAMS & signalling assurance | EN 50126, EN 50128, EN 50129, railway RAMS, CSM, signalling assurance, RSSB | `rail-signpost` |
+| Space standards (ECSS) | ECSS, space standards, E-ST-10, E-ST-40, Q-ST-30, space environment, product assurance | `space-signpost` |
+| Maritime safety and class rules | SOLAS, ISM, ISPS, COLREGS, USCG, class rules, MCA | `maritime-signpost` |
+| Defence safety management | JSP 815, JSP 376, acquisition safety, defence safety, SMS, safety case, assurance | `jsp-815`, `jsp-376` |
+| Nuclear software assurance | NRC, regulatory guide, NUREG, digital safety systems, software assurance, BTP 7-14 | `nrc-nuclear` |
 
 ### Agency contexts
 | Agency | Keywords | Packs |
@@ -123,6 +130,10 @@ Output goes in the reply unless the user names a file. A deliverable with no mat
 | OMB | OMB, circular A-94, federal benefit-cost | `federal-bca` |
 | EU | EU, European Union, AI Act, regulation | `eu-ai-act` |
 | NHTSA / USDOT | NHTSA, USDOT, FMVSS, vehicle safety standard, automated driving systems | `nhtsa-vehicle` |
+| FDA | FDA, CDRH, QMSR, 21 CFR 820, 510(k) | `fda-med-device` |
+| NRC | NRC, regulatory guide, NUREG, BTP 7-14 | `nrc-nuclear` |
+| EASA | EASA, AMC 20-115D, AMC 20-152A, Easy Access Rules | `easa-rules` |
+| EU / MHRA | MDCG, MDR, IVDR, MHRA, UKCA, SaMD | `med-device-eu` |
 
 ### Deliverables
 | Deliverable | Keywords | Draft | Review | Verify |
@@ -143,6 +154,10 @@ Output goes in the reply unless the user names a file. A deliverable with no mat
 | `requirements-writing` | Original guidance (CC BY 4.0); cited methods not reproduced |
 | `digital-systems-engineering` | CC BY 4.0 |
 | `eu-ai-act` | EU Official Journal — reproduction authorised with source acknowledgement (Decision 2011/833/EU) |
+| `jsp-815` | Open Government Licence v3.0 |
+| `jsp-376` | Open Government Licence v3.0 |
+| `easa-rules` | Per-document: EASA site reproduction-with-acknowledgement grant, qualified by ED Decision all-rights-reserved footers; reconstructed notes with attribution; official PDFs not redistributed; commercial use pending per-document determination |
+| `med-device-eu` | Per-document: European Commission reuse policy (Decision 2011/833/EU, CC BY 4.0, attribution and indication of changes) for the MDCG documents; Open Government Licence v3.0 for the MHRA guidance; reconstructed notes with attribution; official PDFs not redistributed |
 <!-- ROUTING-MAP:END -->
 
 ## Host modes

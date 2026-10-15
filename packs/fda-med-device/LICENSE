@@ -1,0 +1,154 @@
+fda-med-device pack: content licence
+====================================
+
+This pack adapts the sibling prototype build and re-vets, below, the seven
+documents of the 2026-10-12 FDA source pin, rows S1 to S4 and S6 to S8. Row
+numbers follow the sibling build's scheme so chapter citations resolve: sibling
+rows S4a (FDA QMSR overview page) and S5 (the rule text as codified at 21 CFR
+Part 820) are merged into S4, the rule they restate, and sibling rows S11 and
+S12 (the eSTAR 510(k) and De Novo template guidances) are program sub-issues
+named under S8. Three sibling rows sit outside the pin and carry no row here:
+the Off-The-Shelf Software guidance (2023), the 510(k) Software Change guidance
+(2017), and the MDDS guidance (2022); chapters that teach them cite the guidance
+by name and are marked as synthesis. Landing-page URLs are held in the sibling
+build spec dated 2026-09-24 and are not reproduced here; the repository link
+policy bans source-material hosts (see ../../docs/LICENSING.md).
+
+Source licence: Public Domain (US Government work, 17 U.S.C. § 105)  (tier 1;
+see ../../docs/SOURCE-VETTING.md). No source-material download link is
+published.
+
+The guidance documents and the final rule are works of the United States
+Government prepared by FDA staff, and are NOT subject to copyright protection in
+the United States (17 U.S.C. § 105). They are in the public domain: anyone may
+reproduce, transform, and redistribute them for any purpose, including
+commercially, without permission. Material published on fda.gov, including the
+eSTAR program page (S8), is covered by the FDA Website Policies statement,
+"Linking to or Copying Information":
+
+    "Unless otherwise noted, the contents of the FDA website (www.fda.gov) — both
+     text and graphics — are not copyrighted. They are in the public domain and
+     may be republished, reprinted and otherwise used freely by anyone."
+
+Federal regulations and Federal Register rule text are US Government works under
+the same statute.
+
+Attribution to FDA is provided as a courtesy (see the repository NOTICE), not as
+a legal obligation. FDA does not endorse this pack or its authors.
+
+Each source below carries a vetting block: exact title, pinned date, docket or
+FR document where known, licence basis, what the pack reconstructs from it, and
+the chapters that use it. Items marked "confirmed from PDF" were checked against
+the local source-text captures on 2026-09-24; where a docket is printed only on
+the FDA landing page and not in the PDF, the landing-page value is pinned.
+
+Reconstruction: all pack content is synthesized reference notes in the authors'
+own words. Quotations are limited to short passages (two-sentence cap per quote,
+enforced by the pack gates). The documents themselves are not republished here.
+
+NOTE: This file governs the CONTENT of this pack. The repository tooling is
+licensed separately under MIT (see ../../LICENSE).
+
+
+THE PINNED SOURCES (2026-10-12 FDA SOURCE PIN)
+==============================================
+
+S1  Content of Premarket Submissions for Device Software Functions
+    Publisher: FDA (CDRH)   Issued: 2023-06-14   Status: Final   Docket: FDA-2021-D-0775
+    Basis: US Government work, 17 U.S.C. § 105
+    Supersedes: "Guidance for the Content of Premarket Submissions for Software
+    Contained in Medical Devices" (May 2005), per its cover page.
+    Reconstructs: the Basic and Enhanced documentation levels, the level-of-concern
+    driver, and the premarket software documentation elements.
+    Used in: ch01, ch02
+
+S2  General Principles of Software Validation
+    Publisher: FDA (CDRH, CBER)   Issued: 2002-01-11 (Version 2.0)   Status: Final
+    Docket: FDA-1997-D-0029 (landing page)
+    Basis: US Government work, 17 U.S.C. § 105
+    Superseded in part: Section 6, "Validation of Automated Process Equipment and
+    Quality System Software," is superseded by S3 (confirmed from the S3 PDF text,
+    2026-09-24); the remaining sections stay in force and are used here.
+    Reconstructs: validation principles, lifecycle software validation activities,
+    validation of changes, independence, and record expectations.
+    Used in: ch01, ch03, ch04
+
+S3  Computer Software Assurance for Production and Quality Management System Software
+    Publisher: FDA (CDRH, CBER)   Issued: 2026-02-03   Status: Final   Docket: FDA-2022-D-0795
+    Basis: US Government work, 17 U.S.C. § 105
+    Supersedes: "Computer Software Assurance for Production and Quality System
+    Software," issued 2025-09-24 (confirmed from PDF). Supplements S2 except that
+    it supersedes Section 6 of S2, "Validation of Automated Process Equipment and
+    Quality System Software" (confirmed from PDF, 2026-09-24).
+    Reconstructs: risk-based assurance for production and QMS software, intended-use
+    determination, assurance-activity selection, and record content.
+    Used in: ch01, ch04
+
+S4  Medical Devices; Quality System Regulation Amendments (final rule)
+    Publisher: FDA (HHS)   Published: 2024-02-02   Effective: 2026-02-02   Status: Final rule
+    Citation: 89 FR 7496 (start page confirmed from the rule text header: Vol. 89,
+    No. 23, Friday, February 2, 2024; the rule runs to p. 7523)
+    FR Doc. 2024-01709   Docket: FDA-2021-N-0507   RIN: 0910-AH99
+    Basis: US Government work, 17 U.S.C. § 105
+    Merged rows: sibling rows S4a (FDA QMSR overview page) and S5 (the rule text
+    as codified at 21 CFR Part 820, eCFR text sourced from 89 FR 7523) restate
+    this rule and its codified text; chapters citing them cite S4.
+    Reconstructs: what the QMSR change did to 21 CFR part 820, the incorporation by
+    reference of ISO 13485:2016, FDA-specific additions retained outside ISO 13485,
+    and the transition timeline. Summarised as obligations in FDA's words; no ISO
+    text is reproduced.
+    Used in: ch01, ch05
+
+S6  Cybersecurity in Medical Devices: Quality Management System Considerations
+    and Content of Premarket Submissions
+    Publisher: FDA (CDRH, CBER)   Issued: 2026-02-03   Status: Final   Docket: FDA-2021-D-1158
+    Basis: US Government work, 17 U.S.C. § 105
+    Supersedes: "Cybersecurity in Medical Devices: Quality System Considerations
+    and Content of Premarket Submissions," issued 2025-06-27 (confirmed from PDF).
+    Reconstructs: the secure product development framework, threat modelling,
+    cybersecurity risk management, security architecture views, SBOM content and
+    placement, cybersecurity labelling, and postmarket vulnerability management.
+    Used in: ch01, ch06, ch07, ch09
+
+S7  Clinical Decision Support Software
+    Publisher: FDA (CDRH, CBER)   Issued: 2026-01-29   Status: Final
+    Docket: FDA-2017-D-6569 (recorded from the PDF cover page)
+    Basis: US Government work, 17 U.S.C. § 105
+    Supersedes: "Clinical Decision Support Software," issued 2026-01-06 (per its
+    cover page).
+    Reconstructs: the four statutory criteria for non-device CDS as the 2026
+    guidance reads them, and the boundary cases and worked examples.
+    Used in: ch01, ch11
+
+S8  eSTAR program page
+    Publisher: FDA (CDRH)   Web page   Content current: 2026-09-21
+    Basis: US Government work, 17 U.S.C. § 105 (FDA Website Policies
+    public-domain statement, quoted above)
+    Program sub-issues: the Electronic Submission Template for Medical Device
+    510(k) Submissions (issued 2023-10-02) and the Electronic Submission Template
+    for Medical Device De Novo Requests (issued 2024-08-23), sibling rows S11 and
+    S12; the chapter names them for structure detail and reproduces neither them
+    nor the page.
+    Reconstructs: nothing verbatim; ch12 synthesizes the eSTAR program framing.
+    Used in: ch01, ch12
+
+
+EXCLUDED MATERIAL (cited by name only; no text reproduced)
+=========================================================
+
+The following standards are copyrighted and are NOT licensed to this pack. The
+pack names them and describes FDA's own obligations only; it reproduces no
+standard text, table, or clause wording. ISO 13485 text is not reproduced, and
+IEC 62304 is named and not quoted.
+
+-   ISO 13485:2016, "Medical devices: Quality management systems. Requirements
+    for regulatory purposes." Incorporated by reference into 21 CFR 820 by S4; the
+    incorporation changes the regulatory status of the standard, not its
+    copyright.
+-   ISO 9000:2015, "Quality management systems: Fundamentals and vocabulary"
+    (clause 3 vocabulary is incorporated by reference alongside ISO 13485:2016).
+-   ISO 14971, "Medical devices: Application of risk management to medical devices."
+-   IEC 62304, "Medical device software: Software life cycle processes."
+
+These exclusions and the cleared status of the pinned sources above are recorded
+in ../../docs/SOURCE-VETTING.md.

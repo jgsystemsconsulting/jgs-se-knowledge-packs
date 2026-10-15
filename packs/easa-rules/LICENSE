@@ -1,0 +1,229 @@
+easa-rules pack: content licence
+================================
+
+1. ATTRIBUTION STATEMENT
+------------------------
+
+This pack is derived from material of the European Union Aviation Safety
+Agency (EASA): AMC 20-115D, Airborne Software Development Assurance Using
+EUROCAE ED-12 and RTCA DO-178, created by ED Decision 2017/020/R, and
+AMC 20-152A, Development Assurance for Airborne Electronic Hardware, created
+by ED Decision 2020/010/R, both read as consolidated in AMC-20 Amendment 23
+(ED Decision 2022/001/R, June 2023 Easy Access Rules compilation). What ships
+here is a set of reconstructed reference notes built from those sources; it is
+not an official EASA text, EASA did not take part in making it, and nothing in
+it should be read as an endorsement by EASA.
+
+2. SOURCE IDENTIFICATION
+------------------------
+
+Copyright holder for every source below: European Union Aviation Safety
+Agency (EASA).
+
+-   S1  AMC 20-115D, Airborne Software Development Assurance Using EUROCAE
+        ED-12 and RTCA DO-178. Created by ED Decision 2017/020/R of
+        19 October 2017 (AMC-20 Amendment 14). Consolidated basis: AMC-20
+        Amendment 23 (June 2023). Section slice EAR pp. 416-430, including
+        GM1 to GM3.
+-   S2  AMC 20-152A, Development Assurance for Airborne Electronic Hardware.
+        Created by ED Decision 2020/010/R of 17 July 2020 (AMC-20 Amendment
+        19). Consolidated basis: AMC-20 Amendment 23 (June 2023). Section
+        slice EAR pp. 497-517.
+-   S3  Easy Access Rules for Acceptable Means of Compliance for Airworthiness
+        of Products, Parts and Appliances (AMC-20), Amendment 23, published
+        June 2023. Retrieval carrier only: the compilation supplied the page
+        images the S1 and S2 slices were cut from; it is not ingested whole.
+-   S5/S6 (decision anchors, taken together)  ED Decision 2017/020/R of
+        19 October 2017, the instrument creating AMC 20-115D, and ED Decision
+        2020/010/R of 17 July 2020, the instrument creating AMC 20-152A. Cited
+        in this pack for the decision numbers and dates only.
+
+Note on the 2017 instrument: the footer of the ED Decision 2017/020/R PDF uses
+the agency's older name, European Aviation Safety Agency (without "Union");
+the copyright holder is the same agency throughout.
+
+3. SOURCE LINKS
+---------------
+
+Document-library pages (preferred identifiers; file download ids live in the
+build manifest, not here):
+
+-   S1 and S5: https://www.easa.europa.eu/en/document-library/agency-decisions/ed-decision-2017020r
+-   S2 and S6: https://www.easa.europa.eu/en/document-library/agency-decisions/ed-decision-2020010r
+-   S3: https://www.easa.europa.eu/en/document-library/easy-access-rules/easy-access-rules-acceptable-means-compliance-airworthiness
+
+4. LICENCE BASIS
+----------------
+
+The EASA copyright page (https://www.easa.europa.eu/en/copyright-disclaimer)
+states that reproduction is authorised, provided the source is acknowledged,
+unless otherwise stated. The ED Decision 2017/020/R and 2020/010/R PDFs carry
+"All rights reserved" footers and present themselves as proprietary EASA
+publications. The Easy Access Rules AMC-20 compilation (Amendment 23) is
+marked as not an official publication. Each source keeps its own basis, and
+commercial use stays pending a per-document determination.
+
+5. NATURE OF THIS PACK
+----------------------
+
+Everything under packs/easa-rules/ is a reconstructed reference note: the
+source sections are restructured, paraphrased, and summarised in this pack's
+own organisation and words, with short defined terms only. Direct quotation is
+capped at two sentences per item and is used sparingly. Objective tables and
+lists are never pasted in from any source, including by optical character
+recognition; tables in the chapters are original summaries, and any column
+that would point at paywalled standard text says so instead.
+
+6. NON-ENDORSEMENT
+------------------
+
+EASA does not endorse this pack. The European Union does not endorse this pack.
+
+7. EAR DISCLAIMER
+-----------------
+
+The Easy Access Rules compilation that served as the retrieval carrier for S1
+and S2 (S3 above) is published with a disclaimer stating that it is not an
+official publication and that EASA accepts no liability for its contents; that
+disclaimer carries over to any use of the carrier, and the official text of
+AMC 20-115D and AMC 20-152A remains the annexes to ED Decision 2017/020/R and
+ED Decision 2020/010/R as amended and consolidated.
+
+8. EXCLUDED MATERIAL
+--------------------
+
+The following are named in this pack for identification only; none of their
+text is reproduced, and none is licensed to this pack:
+
+-   RTCA DO-178C and EUROCAE ED-12C, and the supplement set: RTCA DO-330,
+    DO-331, DO-332, DO-333 and EUROCAE ED-215 to ED-218.
+-   RTCA DO-254 and EUROCAE ED-80.
+-   EASA logos, crests, and other official emblems.
+-   The full Easy Access Rules AMC-20 PDF (S3 carrier): only the two section
+    slices were read; the compilation is not redistributed.
+-   The full Amendment 23 annex as a standalone redistribution.
+-   The Part-21 Easy Access Rules volume (outside this pack's scope).
+-   AMC 20-193 (multi-core processors), AMC 20-189 (open problem reports), and AMC 20-170 (guidance on AI assurance):
+    named as pointers only, not covered by this release.
+-   S7 (the wider AMC-20 material beyond the two sections): out of this
+    release.
+
+9. SCOPE OF THIS FILE
+---------------------
+
+This licence file governs the content of packs/easa-rules/: SKILL.md,
+chapters/, glossary.md, and cheatsheet.md. The repository tooling, installers,
+and CI are licensed separately under the repository MIT licence and are not
+covered by this file.
+
+10. PER-SOURCE RECORD
+---------------------
+
+S1
+Title: AMC 20-115D, Airborne Software Development Assurance Using EUROCAE
+        ED-12 and RTCA DO-178
+Version: ED Decision 2017/020/R (AMC-20 Amendment 14), read as consolidated
+        in AMC-20 Amendment 23 (June 2023)
+Pages: section slice, page pins listed: EAR pp. 416-430; GM1 pin at p. 428,
+        GM2 and GM3 pin at p. 429
+URL: https://www.easa.europa.eu/en/document-library/agency-decisions/ed-decision-2017020r
+Licence: per-document (see section 4); reproduction with acknowledgement
+        unless otherwise stated, qualified by the decision PDF's all-rights-
+        reserved footer; commercial use pending per-document determination
+Attribution: Source: European Union Aviation Safety Agency, AMC 20-115D,
+        https://www.easa.europa.eu/en/document-library/agency-decisions/ed-decision-2017020r.
+        Licence basis: EASA copyright page authorises reproduction with
+        acknowledgement unless otherwise stated; ED Decision PDFs reserve all
+        rights; this pack ships reconstructed notes, not the document.
+        Commercial use pending per-document determination.
+        Changes: reconstructed as reference notes; restructuring and
+        paraphrase are the changes. Not an official EASA text. EASA does not
+        endorse this pack.
+Used in: ch01, ch02, ch03, ch04, ch07
+
+S2
+Title: AMC 20-152A, Development Assurance for Airborne Electronic Hardware
+Version: ED Decision 2020/010/R (AMC-20 Amendment 19), read as consolidated
+        in AMC-20 Amendment 23 (June 2023)
+Pages: section slice, page pins listed: EAR pp. 497-517. Appendices A-C
+        pin: the Amendment 23 carrier carries no discrete appendix sections
+        (verified at source capture); the section's Appendix lines are in-body
+        references to ED-80/DO-254 Appendices A and B, and they stay inside the
+        slice
+URL: https://www.easa.europa.eu/en/document-library/agency-decisions/ed-decision-2020010r
+Licence: per-document (see section 4); reproduction with acknowledgement
+        unless otherwise stated, qualified by the decision PDF's all-rights-
+        reserved footer; commercial use pending per-document determination
+Attribution: Source: European Union Aviation Safety Agency, AMC 20-152A,
+        https://www.easa.europa.eu/en/document-library/agency-decisions/ed-decision-2020010r.
+        Licence basis: EASA copyright page authorises reproduction with
+        acknowledgement unless otherwise stated; ED Decision PDFs reserve all
+        rights; this pack ships reconstructed notes, not the document.
+        Commercial use pending per-document determination.
+        Changes: reconstructed as reference notes; restructuring and
+        paraphrase are the changes. Not an official EASA text. EASA does not
+        endorse this pack.
+Used in: ch01, ch05, ch06, ch07
+
+S3
+Title: Easy Access Rules for Acceptable Means of Compliance for
+        Airworthiness of Products, Parts and Appliances (AMC-20)
+Version: Amendment 23, published June 2023
+Pages: carrier, not ingested whole (605 pp); recorded start pages:
+        AMC 20-115D starts p. 416, AMC 20-152A starts p. 497
+URL: https://www.easa.europa.eu/en/document-library/easy-access-rules/easy-access-rules-acceptable-means-compliance-airworthiness
+Licence: per-document (see section 4 and the EAR disclaimer in section 7);
+        marked not an official publication; commercial use pending
+        per-document determination
+Attribution: Source: European Union Aviation Safety Agency, Easy Access
+        Rules for Acceptable Means of Compliance for Airworthiness of Products,
+        Parts and Appliances (AMC-20),
+        https://www.easa.europa.eu/en/document-library/easy-access-rules/easy-access-rules-acceptable-means-compliance-airworthiness.
+        Licence basis: EASA copyright page authorises reproduction with
+        acknowledgement unless otherwise stated; ED Decision PDFs reserve all
+        rights; this pack ships reconstructed notes, not the document.
+        Commercial use pending per-document determination.
+        Changes: reconstructed as reference notes; restructuring and
+        paraphrase are the changes. Not an official EASA text. EASA does not
+        endorse this pack.
+Used in: carrier for S1 and S2; no chapter body
+
+S5
+Title: ED Decision 2017/020/R
+Version: of 19 October 2017 (creates AMC 20-115D; AMC-20 Amendment 14)
+Pages: anchor, not chapter body (2 pp)
+URL: https://www.easa.europa.eu/en/document-library/agency-decisions/ed-decision-2017020r
+Licence: per-document (see section 4); decision PDF footer reserves all
+        rights; cited here for the decision number and date only; commercial
+        use pending per-document determination
+Attribution: Source: European Union Aviation Safety Agency, ED Decision
+        2017/020/R,
+        https://www.easa.europa.eu/en/document-library/agency-decisions/ed-decision-2017020r.
+        Licence basis: EASA copyright page authorises reproduction with
+        acknowledgement unless otherwise stated; ED Decision PDFs reserve all
+        rights; this pack ships reconstructed notes, not the document.
+        Commercial use pending per-document determination.
+        Changes: reconstructed as reference notes; restructuring and
+        paraphrase are the changes. Not an official EASA text. EASA does not
+        endorse this pack.
+Used in: ch01 (cited)
+
+S6
+Title: ED Decision 2020/010/R
+Version: of 17 July 2020 (creates AMC 20-152A; AMC-20 Amendment 19)
+Pages: anchor, not chapter body (3 pp)
+URL: https://www.easa.europa.eu/en/document-library/agency-decisions/ed-decision-2020010r
+Licence: per-document (see section 4); decision PDF footer reserves all
+        rights; cited here for the decision number and date only; commercial
+        use pending per-document determination
+Attribution: Source: European Union Aviation Safety Agency, ED Decision
+        2020/010/R,
+        https://www.easa.europa.eu/en/document-library/agency-decisions/ed-decision-2020010r.
+        Licence basis: EASA copyright page authorises reproduction with
+        acknowledgement unless otherwise stated; ED Decision PDFs reserve all
+        rights; this pack ships reconstructed notes, not the document.
+        Commercial use pending per-document determination.
+        Changes: reconstructed as reference notes; restructuring and
+        paraphrase are the changes. Not an official EASA text. EASA does not
+        endorse this pack.
+Used in: ch01 (cited)

@@ -7,8 +7,8 @@ SPDX-License-Identifier: MIT
 
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT%20(tooling)-blue" alt="License: MIT (tooling)">
-  <img src="https://img.shields.io/badge/version-1.22.0-green" alt="Version 1.22.0">
-  <img src="https://img.shields.io/badge/packs-64-blueviolet" alt="64 packs">
+  <img src="https://img.shields.io/badge/version-1.22.1-green" alt="Version 1.22.1">
+  <img src="https://img.shields.io/badge/packs-71-blueviolet" alt="71 packs">
   <img src="https://img.shields.io/badge/tested%20with-Claude%20Code-8A2BE2" alt="Tested with Claude Code">
   <img src="https://img.shields.io/badge/scope-systems%20engineering-orange" alt="Scope: systems engineering">
   <a href="https://skills.sh/jgsystemsconsulting/jgs-se-knowledge-packs"><img src="https://skills.sh/b/jgsystemsconsulting/jgs-se-knowledge-packs" alt="skills.sh installs"></a>
@@ -60,7 +60,7 @@ and install the catalogue for you.
 ```text
 You are installing jgs-se-knowledge-packs, an open catalogue (MIT tooling) of
 systems-engineering knowledge-pack skills by JG Systems Consulting Ltd.
-Repository: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs (version 1.22.0).
+Repository: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs (version 1.22.1).
 Do this in order:
 1. Read README.md, docs/skill-usage.md, and CHANGELOG.md so you understand what you are
    installing. There are NO external prerequisites: packs are plain Markdown skills.
@@ -201,7 +201,7 @@ owner, whether it can be packaged, and where to get it. `automotive-signpost` po
 automotive standards landscape (ISO 26262, ASPICE, SAE J3016, UNECE R155/R156) and
 `functional-safety-signpost` points to the functional safety landscape (IEC 61508, ISO 26262,
 ISO/SAE 21434, UL 4600, SAE J3016, ASPICE); both are citation-only, and the open path for
-both is `nhtsa-vehicle`. They exist because most SE standards
+both is `nhtsa-vehicle`. `avionics-signpost` points at the avionics development assurance standards (DO-178C, DO-254, ARP4754B, ARP4761A) with `faa-8110-49` as the open path. `rail-signpost` points at EN 50126, EN 50128, and EN 50129, with CSM regulations and ORR guidance as the free paths and no in-repo pack. `space-signpost` points at ECSS documents with catalogue links, free paths are existing NASA packs, and several needs have no in-repo pack. `maritime-signpost` points at SOLAS, ISM, ISPS, COLREGS, and class rules; free paths are USCG material (including the Navigation Rules PDF and eCFR Title 46), UK MCA notices, and class portals; no in-repo pack covers these instruments. They exist because most SE standards
 are paywalled or all-rights-reserved (see [docs/SOURCE-VETTING.md](docs/SOURCE-VETTING.md)).
 
 **Orchestrator** (not a pack, zero source content): `se` is an explicit `/se <question>` entry
@@ -255,4 +255,4 @@ questions, see [labs.jgsystemsconsulting.com/licensing.html](https://labs.jgsyst
 
 ## Version
 
-See [CHANGELOG.md](CHANGELOG.md). Current: 1.22.0.
+See [CHANGELOG.md](CHANGELOG.md). Current: 1.22.1.

@@ -1,19 +1,23 @@
 {
   "schema_version": 1,
   "map_version": "1.22.0",
-  "generated_on": "2026-10-08",
+  "generated_on": "2026-10-13",
   "rules_of_construction": [
     "Every chapter in every pack under packs/<slug>/chapters/ is assigned to exactly one capability cluster (best fit).",
     "Cross-cutting chapters carry a remark noting the strong secondary fit.",
     "glossary.md / patterns.md / cheatsheet.md may appear as support-file rows; this bullet is descriptive only and defers to support_policy. is_support assignment rows are the membership source of truth (do not derive omission of multi-cluster pack support files from this rule).",
-    "The four signpost packs (omg-signpost, se-standards-signpost, automotive-signpost, functional-safety-signpost) contain no chapters and are not mapped.",
+    "The eight signpost packs (omg-signpost, se-standards-signpost, automotive-signpost, functional-safety-signpost, avionics-signpost, rail-signpost, space-signpost, maritime-signpost) contain no chapters and are not mapped.",
     "A standard's own process definitions go to cluster 30 (Standards, Tailoring & Process Models); performing the capability goes to the capability cluster."
   ],
   "signpost_packs": [
     "omg-signpost",
     "se-standards-signpost",
     "automotive-signpost",
-    "functional-safety-signpost"
+    "functional-safety-signpost",
+    "avionics-signpost",
+    "rail-signpost",
+    "space-signpost",
+    "maritime-signpost"
   ],
   "support_filenames": [
     "glossary.md",
@@ -3954,6 +3958,426 @@
       "pack": "nhtsa-vehicle",
       "chapter": "ch06-nhtsa-fmvss-fuel-ev.md",
       "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch01-regulatory-landscape.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch02-premarket-software-documentation.md",
+      "cluster": "Requirements Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch03-software-validation.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch04-computer-software-assurance.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch05-qmsr-quality-management.md",
+      "cluster": "Quality Assurance & Process Compliance",
+      "is_support": false
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch06-cybersecurity-qms.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch07-cybersecurity-premarket.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch08-software-function-scope.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch09-premarket-cyber-documentation.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch10-software-changes-510k.md",
+      "cluster": "Configuration Management & Baselines",
+      "is_support": false
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch11-clinical-decision-support.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "fda-med-device",
+      "chapter": "ch12-submissions-estar.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "faa-8110-49",
+      "chapter": "ch01-airborne-approval-map.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "faa-8110-49",
+      "chapter": "ch02-software-review-process.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": false
+    },
+    {
+      "pack": "faa-8110-49",
+      "chapter": "ch03-level-of-faa-involvement.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": false
+    },
+    {
+      "pack": "faa-8110-49",
+      "chapter": "ch04-software-conformity-inspection.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "faa-8110-49",
+      "chapter": "ch05-do-178c-recognition-and-transition.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "faa-8110-49",
+      "chapter": "ch06-legacy-software-fls-ums.md",
+      "cluster": "Configuration Management & Baselines",
+      "is_support": false
+    },
+    {
+      "pack": "faa-8110-49",
+      "chapter": "ch07-aeh-custom-devices.md",
+      "cluster": "Assurance & System Assurance",
+      "is_support": false
+    },
+    {
+      "pack": "faa-8110-49",
+      "chapter": "ch08-aeh-verification-tools-reuse.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "faa-8110-49",
+      "chapter": "ch09-aeh-cots-ip.md",
+      "cluster": "Supplier, Procurement & Acquisition",
+      "is_support": false
+    },
+    {
+      "pack": "faa-8110-49",
+      "chapter": "ch10-cots-devices-and-cbas.md",
+      "cluster": "Supplier, Procurement & Acquisition",
+      "is_support": false
+    },
+    {
+      "pack": "faa-8110-49",
+      "chapter": "ch11-software-change-impact-analysis.md",
+      "cluster": "Configuration Management & Baselines",
+      "is_support": false
+    },
+    {
+      "pack": "faa-8110-49",
+      "chapter": "ch12-data-and-control-coupling-practices.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "faa-8110-49",
+      "chapter": "ch13-design-level-error-handling.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-815",
+      "chapter": "ch01-defence-safety-jsp-map.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-815",
+      "chapter": "ch02-sms-structure-and-assurance-stages.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-815",
+      "chapter": "ch03-leadership-and-organisation.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-815",
+      "chapter": "ch04-legislation-and-exemptions.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-815",
+      "chapter": "ch05-risk-assessment-and-safety-cases.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-815",
+      "chapter": "ch06-supervision-contracting-control.md",
+      "cluster": "Supplier, Procurement & Acquisition",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-815",
+      "chapter": "ch07-competence-and-delegation.md",
+      "cluster": "Training & Documentation Delivery",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-815",
+      "chapter": "ch08-equipment-and-infrastructure.md",
+      "cluster": "Operations, Maintenance & Disposal",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-815",
+      "chapter": "ch09-performance-incidents-communication.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-815",
+      "chapter": "ch10-assurance-and-audit.md",
+      "cluster": "Assurance & System Assurance",
+      "is_support": false
+    },
+    {
+      "pack": "nrc-nuclear",
+      "chapter": "ch01-nrc-software-assurance-framework.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "nrc-nuclear",
+      "chapter": "ch02-software-life-cycle-processes.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "nrc-nuclear",
+      "chapter": "ch03-software-requirements-specifications.md",
+      "cluster": "Requirements Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "nrc-nuclear",
+      "chapter": "ch04-software-configuration-management-plans.md",
+      "cluster": "Configuration Management & Baselines",
+      "is_support": false
+    },
+    {
+      "pack": "nrc-nuclear",
+      "chapter": "ch05-verification-validation-reviews-audits.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "nrc-nuclear",
+      "chapter": "ch06-test-documentation-and-unit-testing.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "nrc-nuclear",
+      "chapter": "ch07-btp-7-14-staff-software-review.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": false
+    },
+    {
+      "pack": "nrc-nuclear",
+      "chapter": "ch08-endorsed-standards-and-adjacent-guidance.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "easa-rules",
+      "chapter": "ch01-moc-map.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "easa-rules",
+      "chapter": "ch02-amc-20-115d-scope.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "easa-rules",
+      "chapter": "ch03-software-assurance-115d.md",
+      "cluster": "Assurance & System Assurance",
+      "is_support": false
+    },
+    {
+      "pack": "easa-rules",
+      "chapter": "ch04-transition-tools-gm.md",
+      "cluster": "Assurance & System Assurance",
+      "is_support": false
+    },
+    {
+      "pack": "easa-rules",
+      "chapter": "ch05-amc-20-152a-scope.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "easa-rules",
+      "chapter": "ch06-aeh-objectives.md",
+      "cluster": "Assurance & System Assurance",
+      "is_support": false
+    },
+    {
+      "pack": "easa-rules",
+      "chapter": "ch07-joint-sw-aeh-workflow.md",
+      "cluster": "Assurance & System Assurance",
+      "is_support": false
+    },
+    {
+      "pack": "easa-rules",
+      "chapter": "glossary.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": true
+    },
+    {
+      "pack": "easa-rules",
+      "chapter": "cheatsheet.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": true
+    },
+    {
+      "pack": "med-device-eu",
+      "chapter": "ch01-eu-uk-device-software-orientation.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "med-device-eu",
+      "chapter": "ch02-samd-qualification-classification.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "med-device-eu",
+      "chapter": "ch03-mhra-software-qualification.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "med-device-eu",
+      "chapter": "ch04-clinical-evidence-legacy-devices.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "med-device-eu",
+      "chapter": "ch05-clinical-evaluation-assessment-report.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "med-device-eu",
+      "chapter": "ch06-pmcf-plan.md",
+      "cluster": "Quality Assurance & Process Compliance",
+      "is_support": false
+    },
+    {
+      "pack": "med-device-eu",
+      "chapter": "ch07-pmcf-evaluation-report.md",
+      "cluster": "Quality Assurance & Process Compliance",
+      "is_support": false
+    },
+    {
+      "pack": "med-device-eu",
+      "chapter": "ch08-mhra-uk-device-obligations.md",
+      "cluster": "Quality Assurance & Process Compliance",
+      "is_support": false
+    },
+    {
+      "pack": "med-device-eu",
+      "chapter": "glossary.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": true
+    },
+    {
+      "pack": "med-device-eu",
+      "chapter": "cheatsheet.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": true
+    },
+    {
+      "pack": "jsp-376",
+      "chapter": "ch01-acquisition-safety-policy.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-376",
+      "chapter": "ch02-roles-and-safety-in-the-programme.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-376",
+      "chapter": "ch03-safety-management-and-requirements.md",
+      "cluster": "Requirements Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-376",
+      "chapter": "ch04-test-evaluation-and-safety-case.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-376",
+      "chapter": "ch05-supervision-assurance-approvals.md",
+      "cluster": "Assurance & System Assurance",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-376",
+      "chapter": "ch06-early-lifecycle-phases.md",
+      "cluster": "Supplier, Procurement & Acquisition",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-376",
+      "chapter": "ch07-demonstration-and-manufacture.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-376",
+      "chapter": "ch08-in-service-and-disposal.md",
+      "cluster": "Operations, Maintenance & Disposal",
       "is_support": false
     }
   ]
