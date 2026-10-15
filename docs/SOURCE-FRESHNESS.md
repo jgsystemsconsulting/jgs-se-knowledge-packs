@@ -5,7 +5,7 @@ SPDX-License-Identifier: MIT
 
 # Source Freshness
 
-The catalogue's 64 live packs were each built from one upstream document. Those
+The catalogue's 71 live packs were each built from one upstream document. Those
 documents get revised, and a pack does not notice on its own. This watch checks,
 monthly, whether the revision a pack was built from is still the revision the
 publisher offers.
@@ -48,10 +48,11 @@ revision is confirmed, record it:
 python tooling/check_source_watch.py --record <slug> "<revision>" <YYYY-MM-DD>
 ```
 
-There is no accept-stale option. An entry left with an empty `last_checked` keeps
-the release gate's source-watch check failing once that check is wired (the wiring
-lands after the first calibration run, not in the release that adds the watch),
-which is the point: a tag cut over an unwatched catalogue should be blocked locally.
+There is no accept-stale option. An entry left with an empty `last_checked` fails
+the release gate's source-watch check (check 18 in `tooling/check_release.py`,
+listed at line 60, called at lines 1313-1321). The check is local only and is not
+mirrored into CI. That is the point: a tag cut over an unwatched catalogue should
+be blocked locally.
 
 `python tooling/check_source_watch.py` validates the watchlist and reports. It
 never writes and it never fetches anything.

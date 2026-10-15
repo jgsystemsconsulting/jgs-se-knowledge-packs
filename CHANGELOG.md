@@ -20,6 +20,7 @@ All notable changes to this project are documented here. Format follows
 - `dod-te-guidebook` watchlist row: hint now names test-evaluation.osd.mil and the T&E Enterprise Guidebook, per Ruling R1. Publisher string unchanged. No pack edit.
 
 - `nasa-se-handbook`: five chapter files renamed to their full source-section names (no mid-word cuts) with all references updated and the capability map regenerated; six thin chapters (ch02, ch05, ch08, ch09, ch10, ch15) deepened to reference depth (65+ lines each) from the pack's own sources.
+- Inventory prose: SOURCE-FRESHNESS.md now says 71 live packs and describes check 18 as wired. candidate-packs.md now says 80 packs (71 content + 8 signpost + 1 orchestrator) and marks med-device-eu, nhtsa-vehicle, automotive-signpost, easa-rules, and functional-safety-signpost as built. PACK-SPEC.md was already current and was not edited.
 
 ### Added
 

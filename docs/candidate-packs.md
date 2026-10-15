@@ -14,19 +14,19 @@ Build in this order:
 | # | Pack | Kind | Why first |
 |---|------|------|-----------|
 | 1 | `fda-med-device` | full | built 2026-10-12. FDA guidance is public domain, high volume, zero competition, large audience |
-| 2 | `functional-safety-signpost` | signpost | ISO 26262 / IEC 61508 are the most-demanded paywalled standards; the repo already ships their free public cousins |
+| 2 | `functional-safety-signpost` | signpost | built 2026-09-27. ISO 26262 / IEC 61508 are the most-demanded paywalled standards; the repo already ships their free public cousins |
 | 3 | `avionics-signpost` plus `faa-8110-49` | signpost + full | built 2026-10-12. DO-178C demand is proven; FAA Order 8110.49 is its free public-domain counterpart and fits the existing faa family |
 | 4 | `uk-defence` family (JSP series first) | full | partially built 2026-10-14 (jsp-815 and jsp-376 done, other JSPs and DEF-STANs pending). OGL-licensed, no open competitor, and UK sourcing matches the consultancy's identity |
-| 5 | `med-device-eu` | full | MDCG guidance is free to reuse with attribution; MHRA is OGL |
-| 6 | `nhtsa-vehicle` plus `automotive-signpost` | full + signpost | NHTSA material is public domain; the signpost maps ISO 26262 / ISO-SAE 21434 to open paths |
-| 7 | `nrc-nuclear`, `easa-rules` | full | partially built 2026-10-12 (nrc-nuclear done, easa-rules pending). NRC guides are public domain; EASA Easy Access Rules are free downloads |
+| 5 | `med-device-eu` | full | built 2026-10-13. MDCG guidance is free to reuse with attribution; MHRA is OGL |
+| 6 | `nhtsa-vehicle` plus `automotive-signpost` | full + signpost | built 2026-09-27 (nhtsa-vehicle and automotive-signpost). NHTSA material is public domain; the signpost maps ISO 26262 / ISO-SAE 21434 to open paths |
+| 7 | `nrc-nuclear`, `easa-rules` | full | built 2026-10-13 (nrc-nuclear 2026-10-12, easa-rules 2026-10-13). NRC guides are public domain; EASA Easy Access Rules are free downloads |
 | 8 | `rail-signpost` (built 2026-10-14), `space-signpost` (built 2026-10-14), `maritime-signpost` (built 2026-10-14) | signpost | Cheap to build, each takes a day, and together they close the sector map |
 
-The signposts first among these cost almost nothing: a signpost pack is one SKILL.md and one PACK.yaml with no reproduced source content, so items 2 and the signpost half of 6 and 8 are the fastest visible progress. The full packs follow the existing pack spec with no new tooling.
+A signpost pack is one SKILL.md and one PACK.yaml with no reproduced source content, which is why items 2, 6, and 8 were cheap to land. They are built. The remaining full-pack work on this list is the unfinished part of the uk-defence family. Full packs follow the existing pack spec with no new tooling.
 
 ## Where the catalogue stands
 
-The catalogue holds 66 packs. Its sourcing is concentrated in six US federal publishers (NASA, DoD, FAA, NIST, GAO, DOE) plus SEBoK and OMG, organised as full reconstructed packs, two signpost packs (`se-standards-signpost`, `omg-signpost`), and one `/se` orchestrator. Three expansion axes follow from that profile:
+The catalogue holds 80 packs: 71 full reconstructed content packs, eight signpost packs (`automotive-signpost`, `avionics-signpost`, `functional-safety-signpost`, `maritime-signpost`, `omg-signpost`, `rail-signpost`, `se-standards-signpost`, `space-signpost`), and one `/se` orchestrator. Its sourcing is concentrated in six US federal publishers (NASA, DoD, FAA, NIST, GAO, DOE) plus SEBoK and OMG. Three expansion axes follow from that profile:
 
 - New sectors the current sources cannot reach: medical devices, automotive, rail, nuclear, maritime, telecom, civil infrastructure.
 - New geographies: UK and European sources complement the US federal core, and OGL / EU-reuse material slots into licence tier 2 under the existing vetting rules.
@@ -65,12 +65,12 @@ Full packs follow docs/PACK-SPEC.md: SKILL.md, PACK.yaml, LICENSE, and chapters 
 ### Full packs
 
 - `fda-med-device` (tier 1). Built 2026-10-12. Sources: FDA guidance documents on device software, the Quality Management System Regulation (21 CFR 820 as amended by the QMSR), premarket submission guidance, and cybersecurity guidance. All US government works. This is the strongest single opportunity: high publication volume, clear chapter boundaries, an audience that already asks agents about IEC 62304, and no open competitor.
-- `med-device-eu` (tier 2/3, vet per doc). Sources: MDCG endorsed guidance (free, EU reuse with attribution), MHRA guidance (OGL v3). Chapter candidates: clinical evaluation, post-market surveillance, software as a medical device.
+- `med-device-eu` (built 2026-10-13) (tier 2/3, vet per doc). Sources: MDCG endorsed guidance (free, EU reuse with attribution), MHRA guidance (OGL v3). Chapter candidates: clinical evaluation, post-market surveillance, software as a medical device.
 - `uk-defence-*` (tier 2/3, vet per doc). Built 2026-10-14 (jsp-815 and jsp-376). Sources: JSP publications on gov.uk (OGL v3) for safety, assurance, and requirements practice; selected DEF-STANs from UK Defence Standardization, which downloads free but carries per-document licence terms. Note SOURCE-VETTING.md already lists Def Stan 00-051 as unvetted, which is the right caution: each document gets its own licence statement before packaging. Start with one JSP pack and expand the family.
 - `faa-8110-49` (tier 1). Built 2026-10-12. FAA Order 8110.49, software certification guidance for DO-178C usage. Public domain, sits naturally beside the existing faa family, and gives the avionics audience a real pack to land on from the signpost.
-- `nhtsa-vehicle` (tier 1). Sources: FMVSS selections, NHTSA Cybersecurity Best Practices for the Safety of Modern Vehicles (final 2022), automated-vehicles guidance. Public domain. Gives automotive engineers open primary content despite the ISO paywall.
+- `nhtsa-vehicle` (built 2026-09-27) (tier 1). Sources: FMVSS selections, NHTSA Cybersecurity Best Practices for the Safety of Modern Vehicles (final 2022), automated-vehicles guidance. Public domain. Gives automotive engineers open primary content despite the ISO paywall.
 - `nrc-nuclear` (tier 1). Built 2026-10-12. Sources: NRC regulatory guides and selected NUREGs (digital systems, software assurance: NUREG-0800 chapters, RG 1.168 and siblings). Public domain, and a sibling to `nasa-system-safety` and the DOE packs already in the catalogue.
-- `easa-rules` (tier 2/3, vet per doc). Sources: EASA Easy Access Rules volumes and certification specs. Free downloads; reuse terms need per-document confirmation. Start with one volume relevant to software and systems (for example the rules covering 1309 safety objectives) rather than the whole library.
+- `easa-rules` (built 2026-10-13) (tier 2/3, vet per doc). Sources: EASA Easy Access Rules volumes and certification specs. Free downloads; reuse terms need per-document confirmation. Start with one volume relevant to software and systems (for example the rules covering 1309 safety objectives) rather than the whole library.
 - `fhwa-its-se` (tier 1). FHWA/USDOT systems-engineering guidance for intelligent transportation systems. Public domain, extends the catalogue into civil infrastructure with genuinely SE-shaped content rather than construction codes.
 - `telecom-3gpp` (tier 2, later). 3GPP and ETSI publish freely, but the audience (network engineering) overlaps systems-engineering agents less than the other sectors. Hold until earlier packs land; a signpost is the cheaper first step.
 
@@ -78,9 +78,9 @@ Full packs follow docs/PACK-SPEC.md: SKILL.md, PACK.yaml, LICENSE, and chapters 
 
 Each is one working day or less: SKILL.md with tables mapping the paywalled standard to its free public analogue in this catalogue, plus official catalogue URLs.
 
-- `functional-safety-signpost`: IEC 61508, ISO 26262, ISO-SAE 21434. Free paths: MIL-STD-882 (`mil-std-882`), NHTSA cybersecurity guidance (proposed `nhtsa-vehicle`), FDA software guidance (`fda-med-device`, built 2026-10-12).
+- `functional-safety-signpost` (built 2026-09-27): IEC 61508, ISO 26262, ISO-SAE 21434. Free paths: MIL-STD-882 (`mil-std-882`), NHTSA cybersecurity guidance (`nhtsa-vehicle` (built 2026-09-27)), FDA software guidance (`fda-med-device`, built 2026-10-12).
 - `avionics-signpost` (built 2026-10-12): DO-178C, DO-254, ARP4754B, ARP4761A. Free paths: FAA Order 8110.49 (`faa-8110-49`, built 2026-10-12), existing `faa-*` packs, EASA AMC texts, named, not packed.
-- `automotive-signpost`: ISO 26262, ASPICE, SAE J3016, UNECE R155/R156 (signpost-only; © UNECE, no redistribution grant, verified 2026-09-25). Open path: `nhtsa-vehicle` (US Government guidance, not a UNECE equivalent).
+- `automotive-signpost` (built 2026-09-27): ISO 26262, ASPICE, SAE J3016, UNECE R155/R156 (signpost-only; © UNECE, no redistribution grant, verified 2026-09-25). Open path: `nhtsa-vehicle` (built 2026-09-27) (US Government guidance, not a UNECE equivalent).
 - `rail-signpost` (built 2026-10-14): EN 50126/50128/50129. Free paths: CSM 402/2013 (as amended by 2015/1136) and ORR guidance. RSSB summaries only. EN 50128 and EN 50129 have no free full text.
 - `space-signpost` (built 2026-10-14): ECSS family. ECSS is free after registration and excluded from packaging. Free paths: the existing NASA packs. Structures, mechanisms, communications, ground operations, space environment, radiation methods, and PA/QA management have no in-repo pack.
 - `maritime-signpost` (built 2026-10-14): SOLAS, ISM, ISPS, and COLREGS are IMO sales publications. Free paths are USCG material (eCFR Title 46 and the Navigation Rules PDF), UK MCA notices under OGL v3.0, and class portals (DNV, ABS, Bureau Veritas). Class rules stay copyrighted. Lloyd's Register was not confirmed.
