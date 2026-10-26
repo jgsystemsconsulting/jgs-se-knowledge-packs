@@ -96,7 +96,12 @@ def render(rows: list[dict], ver: str) -> str:
         desc = html.escape(r["desc"])
         desc = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", desc)
         desc = re.sub(r"`([^`]+)`", r"<code>\1</code>", desc)
-        href = f"{REPO}/blob/main/{r['path']}"
+        # Link to the local landing page when gen_pack_pages.py has emitted one;
+        # otherwise fall back to the SKILL.md blob on GitHub.
+        if (ROOT / "docs" / "packs" / r["slug"] / "index.html").exists():
+            href = f"packs/{r['slug']}/"
+        else:
+            href = f"{REPO}/blob/main/{r['path']}"
         # data-text powers the client-side filter (slug + licence + description, lowercased)
         data = html.escape(f"{r['slug']} {r['licence']} {plain}".lower(), quote=True)
         cells.append(
