@@ -9,7 +9,7 @@ All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning follows
 [Semantic Versioning](https://semver.org/).
 
-## [Unreleased]
+## [1.22.1]: 2026-10-11
 
 ### Fixed
 
@@ -36,10 +36,6 @@ All notable changes to this project are documented here. Format follows
 - `easa-rules` (7 ch): synthesized reference notes from AMC 20-115D (ED Decision 2017/020/R, AMC-20 Amendment 14) and AMC 20-152A (ED Decision 2020/010/R, AMC-20 Amendment 19), read as consolidated in AMC-20 Amendment 23 (ED Decision 2022/001/R, June 2023 EAR), pin re-verified 2026-10-13. Tier 2, per-document EASA grant qualified by the ED all-rights-reserved footers, attribution required, commercial use not granted. DO-178C, DO-254, ED-12C, and ED-80 named and not reproduced.
 - `med-device-eu` (8 ch): synthesized reference notes from MDCG 2019-11 rev.1 (June 2025), MDCG 2020-6 (April 2020), MDCG 2020-13 (July 2020), MDCG 2020-7 (April 2020), MDCG 2020-8 (April 2020), and the MHRA software-applications guidance (2023-07-01) with its stand-alone software PDF. Tier 2, per-document: European Commission reuse policy (Decision 2011/833/EU, CC BY 4.0) for the MDCG documents and Open Government Licence v3.0 for the MHRA guidance; attribution required; commercial use not granted. MDCG guidance is not legally binding. MHRA guidance is UK-specific. IEC 62304, ISO 13485, ISO 14971, and the MDR and IVDR regulation texts are named and not reproduced. Catalogue counts move from 69 content packs to 70 and from 75 skills to 76. Signposts stay at 5.
 - `jsp-376` (8 ch): synthesized reference notes from JSP 376 Defence Acquisition Safety Policy V1.1 (April 2024). Tier 2, Open Government Licence v3.0, attribution required. Def Stan 00-056 and the other standards the source cites are named and not reproduced. JSP 655, JSP 507, and JSP 815 are named and not reproduced. Chapter 4 (Non-Standard Acquisition) is unpublished in V1.1 and is not in this pack. Catalogue counts move from 70 content packs to 71 and from 76 skills to 77. Signposts stay at 5.
-
-## [1.22.1]: 2026-10-11
-
-### Added
 
 - Source freshness watch: `docs/source-watchlist.json` (URL-free, one entry per live catalog pack), `tooling/check_source_watch.py` (validate and record modes, stdlib only), and check 18 of the local release gate (docstring entry and `.zcode` scan skip ship in 1.22.1; the check call itself wires up after the first calibration run). Reports land in `.zcode/source-watch/`. The watch never edits pack content; a rebuild stays a maintainer decision. See `docs/SOURCE-FRESHNESS.md`.
 

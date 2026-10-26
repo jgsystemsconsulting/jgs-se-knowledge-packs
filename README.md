@@ -188,6 +188,13 @@ always-loaded `SKILL.md` index inlined into one file. Full detail and the per-ag
 | `nasa-std-8719-14` | NASA-STD-8719.14C: Process for Limiting Orbital Debris (Approved 2021-11-05) | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
 | `is-gps-200n` | IS-GPS-200N: NAVSTAR GPS Space Segment / Navigation User Segment Interfaces | Public domain (US gov) | 🟢 1 | ✅ live (6 chapters) |
 | `nhtsa-vehicle` | NHTSA Vehicle Safety: Cybersecurity Best Practices, ADS 2.0, and FMVSS Selections | Public domain (US gov) | 🟢 1 | ✅ live (6 chapters) |
+| `easa-rules` | EASA AMC 20-115D & AMC 20-152A (consolidated in AMC-20 Amendment 23) | Per-document EASA grant (attribution) | 🟡 2 | ✅ live (7 chapters) |
+| `faa-8110-49` | FAA Order 8110.49A + ACs 20-115D, 20-152A, 00-69 | Public domain (US gov) | 🟢 1 | ✅ live (13 chapters) |
+| `fda-med-device` | FDA device software guidance + QMSR final rule (89 FR 7496) | Public domain (US gov) | 🟢 1 | ✅ live (12 chapters) |
+| `jsp-376` | JSP 376 Defence Acquisition Safety Policy V1.1 | OGL v3.0 (UK MoD) | 🟡 2 | ✅ live (8 chapters) |
+| `jsp-815` | JSP 815 Defence Safety Management System V1.3 | OGL v3.0 (UK MoD) | 🟡 2 | ✅ live (10 chapters) |
+| `med-device-eu` | MDCG guidance (European Commission) + MHRA software guidance (UK) | CC BY 4.0 (EC) + OGL v3.0 (MHRA) | 🟡 2 | ✅ live (8 chapters) |
+| `nrc-nuclear` | NRC Regulatory Guides 1.168–1.173 + NUREG-0800 BTP 7-14 | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `mit-ocw-se` | MIT OCW Fundamentals of Systems Engineering | CC BY-NC-SA | 🟡 2 | 🔜 planned |
 
 `doe-o-413-3` (formerly `doe-413-3b`; old slug kept as a catalog alias) tracks the current DOE O 413.3 series edition (O 413.3C, which cancels O 413.3B Chg 7).
