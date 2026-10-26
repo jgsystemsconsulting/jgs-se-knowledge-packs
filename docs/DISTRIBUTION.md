@@ -24,5 +24,6 @@ lives in the maintainer-only `.zcode/` tree and is deliberately not published.
 | r/claudecode and r/AI_Agents posts | planned | Value-first post with disclosure, install one-liner, one demo. Draft pending; user posts. |
 | agentskills Discord and spec-repo Show-and-tell | planned | Showcase post pending. |
 | LinkedIn via jgs-announce | planned | Post pack pending at the next release. |
+| Per-pack landing pages (SEO) | in progress | tooling/gen_pack_pages.py emits docs/packs/<slug>/index.html keyed to each source document's name; pilot 12 live 2026-10-26 (jgsystemsconsulting.github.io/jgs-se-knowledge-packs/packs/<slug>/). Batch of the remaining ~68 lands after owner review of the pilot. |
 | Show HN | deferred | Needs a one-command install story and a fully hand-written post. Revisit after the skills.sh coverage question closes. |
 | npm package | deliberate N-A | Distribution runs through `install.py` and the skills CLI; no package planned (2026-09-24). |

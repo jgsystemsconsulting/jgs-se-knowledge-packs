@@ -149,7 +149,7 @@ def render(pack: dict, cat: dict, ver: str) -> str:
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark">
-<title>{title}: an installable skill for AI coding agents | JGS SE Knowledge Packs</title>
+<title>{title} as an installable skill for AI coding agents | JGS SE Knowledge Packs</title>
 <meta name="description" content="Install the {name} as an on-demand Agent Skill: {meta_desc}">
 <link rel="canonical" href="{PAGES}/packs/{slug}/">
 <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
