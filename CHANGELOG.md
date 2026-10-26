@@ -9,6 +9,17 @@ All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning follows
 [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Changed
+
+- `.claude-plugin/plugin.json` now declares all 80 skill paths in the `skills` field
+  (the Claude Code plugin-manifest convention). The skills.sh crawler honours declared
+  manifest paths, so directory-page coverage should reach the full catalogue at its next
+  crawl. Installs were never affected; a local emulation of the crawler's discovery
+  (vercel-labs/skills `getPluginSkillPaths` plus a depth-1 walk of the declared parent
+  dirs) finds all 80 skills.
+
 ## [1.22.1]: 2026-10-11
 
 ### Fixed
