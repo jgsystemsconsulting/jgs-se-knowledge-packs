@@ -16,9 +16,11 @@ lives in the maintainer-only `.zcode/` tree and is deliberately not published.
 | Agensi (agensi.io) | deliberate N-A | Paid marketplace (creators keep 70%, 30% fee, dashboard submit, creator vetting; assessed 2026-10-03). Selling conflicts with non-commercial pack licences (CC BY-NC-SA and other source-licensed content) and the free-distribution model; no free listing path. Revisit only if a paid tier is ever wanted, with a per-pack licence screen. |
 | Anthropic community plugin marketplace | planned | Submit at platform.claude.com/plugins/submit. The repo already carries `.claude-plugin/marketplace.json` and `plugin.json`, so the plugin-shaped intake fits. Submission awaits an account login: user action. |
 | ClawHub | deliberate N-A | OpenClaw-only audience, not a target for this catalogue (2026-09-24). |
-| ComposioHQ/awesome-claude-skills | deferred | Gate: real use, docs, tested. Repo at 6 stars on 2026-09-24. Revisit at 25+ stars or at first documented external use. |
-| VoltAgent/awesome-agent-skills | deferred | Gate: existing usage. Same revisit trigger as above. |
-| hesreallyhim/awesome-claude-code | deferred | Gate: 14+ days of activity or 100 stars; issue form only, one recommendation at a time. |
+| ComposioHQ/awesome-claude-skills | deliberate N-A | Star gate (25+) fired at 26 stars, but the list hosts skills inside its own tree (fork, add a SKILL.md folder), which conflicts with catalogue distribution from this repo. Revisit only if it accepts external links (2026-10-26). |
+| VoltAgent/awesome-agent-skills | submitted | PR 1272 opened 2026-10-26 under jgsystemsconsulting, Specialized Domains entry. Outcome pending maintainer review. |
+| hesreallyhim/awesome-claude-code | in progress | Age/activity gate cleared (repo live since 2026-06-19). Issue-form content prepared 2026-10-26, package in `.zcode/distribution/human-submissions.md`; the form is human-filed by the list's rule, submission pending. |
+| travisvn/awesome-claude-skills | in progress | PR line and title prepared 2026-10-26, package in `.zcode/distribution/human-submissions.md`; the list closes AI-submitted PRs, so the PR is human-filed. Star gate met (26). List last pushed 2026-04; expect slow review. |
+| ccplugins/awesome-claude-code-plugins | deliberate N-A | Owner has disabled opening pull requests and issues (verified logged-in 2026-10-26: banner "An owner of this repository has disabled the ability to open pull requests"; no Issues tab). No contribution path exists. The prepared External Marketplaces row stays on the fork branch `add-jgs-se-marketplace` of jgsystemsconsulting/awesome-claude-code-plugins, harmless. |
 | r/claudecode and r/AI_Agents posts | planned | Value-first post with disclosure, install one-liner, one demo. Draft pending; user posts. |
 | agentskills Discord and spec-repo Show-and-tell | planned | Showcase post pending. |
 | LinkedIn via jgs-announce | planned | Post pack pending at the next release. |
