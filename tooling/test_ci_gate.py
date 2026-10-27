@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # Copyright (c) 2026 JG Systems Consulting Ltd. — MIT License (see LICENSE).
 # SPDX-License-Identifier: MIT
-"""Assert-based probe for the nine inline CI gates in .github/workflows/validate.yml.
+"""Assert-based probe for the ten inline CI gates in .github/workflows/validate.yml.
 
 Run:  python tooling/test_ci_gate.py
 Exits 0 when regex literal parity, heredoc extraction, negative demos, and
@@ -14,7 +14,7 @@ the gates as local functions if extraction matched zero heredocs, but zero
 extraction already fails this probe loudly, so the fallback is effectively
 unreachable and no mirror lives in this file.
 
-Regex parity pins (P4 pin-plus-parity, extended to the nine pinned steps):
+Regex parity pins (P4 pin-plus-parity, extended to the ten pinned steps):
   - three version regexes, the SKILLS link regex, and the signpost regex must
     appear verbatim in both tooling/check_release.py and validate.yml
   - MAP_VERSION_RE / GENERATED_ON_RE must appear verbatim in validate.yml and
@@ -32,6 +32,14 @@ Regex parity pins (P4 pin-plus-parity, extended to the nine pinned steps):
   - the [orphan-chapter] / [chapter-depth] / [topic-index] tags and the
     MIN_CHAPTER_LINES = 30 floor must appear verbatim in both
     tooling/check_pack_quality.py and validate.yml (PACK_QUALITY_PAIR)
+  - REQUIRED_PACK_FIELDS tuple text and VALID_TIERS set text must appear
+    verbatim in tooling/validate_pack.py and in the Pack licence and signpost
+    shape heredoc. Kind regexes stay in RELEASE_PAIR and must also appear in
+    that heredoc; the link-policy heredoc needs only the signpost regex
+    (orchestrator stays out of it). Tags [pack-licence] and [signpost-shape],
+    and the allowlist names SKILL.md and PACK.yaml, must appear in the new
+    heredoc. Counter-gate-only literals (tags and allowlist names) are checked
+    against the workflow only; no local twin owns the allowlist.
 """
 from __future__ import annotations
 
@@ -60,6 +68,7 @@ PINNED_STEPS = [
     "Catalog live-set parity",
     "Routing map coverage",
     "Pack content quality",
+    "Pack licence and signpost shape",
 ]
 
 # Literals that must appear verbatim in check_release.py AND validate.yml.
@@ -147,6 +156,22 @@ PACK_QUALITY_PAIR = [
     ("chapter-depth tag", "[chapter-depth]"),
     ("topic-index tag", "[topic-index]"),
     ("chapter depth floor", "MIN_CHAPTER_LINES = 30"),
+]
+
+# Literals that must appear verbatim in tooling/validate_pack.py AND in the
+# Pack licence and signpost shape heredoc. Counter-gate-only literals
+# (tags and allowlist names) are checked against the workflow only; no local
+# twin owns the allowlist.
+LICENCE_SHAPE_PAIR = [
+    ("required pack fields",
+     'REQUIRED_PACK_FIELDS = ("slug", "title", "publisher", "license", "license_tier", "commercial_use")'),
+    ("valid tiers", 'VALID_TIERS = {"1", "2", "3"}'),
+    ("signpost kind", r"^kind:\s*signpost\s*$"),
+    ("orchestrator kind", r"^kind:\s*orchestrator\s*$"),
+    ("pack-licence tag", "[pack-licence]"),
+    ("signpost-shape tag", "[signpost-shape]"),
+    ("allowlist skill", '"SKILL.md"'),
+    ("allowlist pack", '"PACK.yaml"'),
 ]
 
 # Literals pinned per local twin (map/classification envelope).
@@ -388,6 +413,41 @@ def main() -> int:
             f"sync them: {name} missing from validate.yml"
         )
 
+    validate_pack_text = (ROOT / "tooling" / "validate_pack.py").read_text(encoding="utf-8")
+    for name, literal in LICENCE_SHAPE_PAIR:
+        if name in ("pack-licence tag", "signpost-shape tag",
+                    "allowlist skill", "allowlist pack"):
+            continue  # workflow-only: no local twin owns the allowlist or tags
+        assert literal in validate_pack_text, (
+            "literal drifted between validate_pack.py and validate.yml; sync them: "
+            f"{name} missing from validate_pack.py"
+        )
+        assert literal in workflow_text, (
+            "literal drifted between validate_pack.py and validate.yml; sync them: "
+            f"{name} missing from validate.yml"
+        )
+
+    def step_window(text, step_name):
+        marker = f"- name: {step_name}\n"
+        start = text.find(marker)
+        assert start != -1, f"missing step {step_name}"
+        nxt = text.find("\n      - name: ", start + len(marker))
+        return text[start:] if nxt == -1 else text[start:nxt]
+
+    link_window = step_window(workflow_text, "Link policy check (no source-material URLs)")
+    quality_window = step_window(workflow_text, "Pack content quality")
+    for literal in (r"^kind:\s*signpost\s*$", '"SKILL.md"', '"PACK.yaml"'):
+        assert literal in link_window, (
+            f"link-policy heredoc dropped shape literal {literal!r}"
+        )
+    for literal in (r"^kind:\s*signpost\s*$", r"^kind:\s*orchestrator\s*$"):
+        assert literal in quality_window, (
+            f"pack-quality heredoc dropped kind literal {literal!r}"
+        )
+    assert "signpost|orchestrator" not in quality_window, (
+        "pack-quality still uses combined kind alternation"
+    )
+
     # 2. extraction of the shipped heredocs by pinned step name
     bodies: dict[str, str] = {}
     for step in PINNED_STEPS:
@@ -398,7 +458,7 @@ def main() -> int:
             "text, so fix the step name or the heredoc markers"
         )
         bodies[step] = body
-    assert len(bodies) == len(PINNED_STEPS), "expected exactly nine pinned heredocs"
+    assert len(bodies) == len(PINNED_STEPS), "expected exactly ten pinned heredocs"
 
     with tempfile.TemporaryDirectory() as td:
         tmp = Path(td)
@@ -725,6 +785,174 @@ def main() -> int:
             "packs/alpha/SKILL.md": "---\nname: alpha\nKind: Signpost\n---\n# alpha\n",
             "packs/alpha/chapters/ch01-stub.md": "line\n" * 5,
         }, "Pack content quality", "quality-mixed-case-skip-ok")
+
+        # pack-licence: a content pack missing LICENSE
+        demo({
+            "packs/alpha/SKILL.md": "---\nname: alpha\n---\nbody\n",
+            "packs/alpha/PACK.yaml": (
+                "slug: alpha\ntitle: Alpha\npublisher: JGS\n"
+                "license: MIT\nlicense_tier: \"1\"\ncommercial_use: \"yes\"\n"
+            ),
+        }, "Pack licence and signpost shape",
+            "[pack-licence] alpha: missing LICENSE", "licence-missing")
+        # pack-licence: tier 4 is outside VALID_TIERS {1,2,3}
+        demo({
+            "packs/alpha/SKILL.md": "---\nname: alpha\n---\nbody\n",
+            "packs/alpha/LICENSE": "MIT\n",
+            "packs/alpha/PACK.yaml": (
+                "slug: alpha\ntitle: Alpha\npublisher: JGS\n"
+                "license: MIT\nlicense_tier: 4\ncommercial_use: \"yes\"\n"
+            ),
+        }, "Pack licence and signpost shape",
+            "[pack-licence] alpha: license_tier='4' not in {1,2,3}",
+            "licence-tier-4")
+        # pack-licence: a whitespace-only value counts as missing (the CI
+        # parser drops the blank after quote-strip; local validate_pack.py
+        # has the same four-file blind spot by design)
+        demo({
+            "packs/alpha/SKILL.md": "---\nname: alpha\n---\nbody\n",
+            "packs/alpha/LICENSE": "MIT\n",
+            "packs/alpha/PACK.yaml": (
+                "slug: alpha\ntitle: Alpha\npublisher: \"   \"\n"
+                "license: MIT\nlicense_tier: \"2\"\ncommercial_use: \"yes\"\n"
+            ),
+        }, "Pack licence and signpost shape",
+            "[pack-licence] alpha: PACK.yaml missing required field: publisher",
+            "licence-blank-publisher")
+        # pack-licence positive: a quoted tier is legal — the parser strips
+        # quotes, so the tree passes; LICENSE non-empty and all six fields
+        demo_ok({
+            "packs/alpha/SKILL.md": "---\nname: alpha\n---\nbody\n",
+            "packs/alpha/LICENSE": "MIT\n",
+            "packs/alpha/PACK.yaml": (
+                "slug: alpha\ntitle: Alpha\npublisher: JGS\n"
+                "license: MIT\nlicense_tier: \"1\"\ncommercial_use: \"yes\"\n"
+            ),
+        }, "Pack licence and signpost shape", "licence-quoted-tier-ok")
+        # pack-licence: a whitespace-only LICENSE fails with the same gist
+        # as a missing file
+        demo({
+            "packs/alpha/SKILL.md": "---\nname: alpha\n---\nbody\n",
+            "packs/alpha/LICENSE": " \n\t\n",
+            "packs/alpha/PACK.yaml": (
+                "slug: alpha\ntitle: Alpha\npublisher: JGS\n"
+                "license: MIT\nlicense_tier: \"3\"\ncommercial_use: \"yes\"\n"
+            ),
+        }, "Pack licence and signpost shape",
+            "[pack-licence] alpha: missing LICENSE", "licence-whitespace")
+        # signpost-shape: a signpost with a chapters/ directory fails; the
+        # heredoc reports the top-level name, not the nested file
+        demo({
+            "packs/alpha/SKILL.md": "---\nname: alpha\nkind: signpost\n---\nbody\n",
+            "packs/alpha/PACK.yaml": "slug: alpha\n",
+            "packs/alpha/chapters/ch01-x.md": "x\n",
+        }, "Pack licence and signpost shape",
+            "[signpost-shape] alpha: extra path chapters", "signpost-chapters")
+        # signpost positive: a signpost carrying only SKILL.md and PACK.yaml
+        # may cite source-material URLs and skips the licence checks
+        demo_ok({
+            "packs/alpha/SKILL.md": (
+                "---\nname: alpha\nkind: signpost\n---\n"
+                "https://www.omg.org/spec/SysML\n"
+            ),
+            "packs/alpha/PACK.yaml": "slug: alpha\n",
+        }, "Pack licence and signpost shape", "signpost-clean-ok")
+        # signpost positive: kind detection is case-insensitive, and a
+        # capital-K Kind: Signpost pack still passes without a LICENSE
+        demo_ok({
+            "packs/alpha/SKILL.md": (
+                "---\nname: alpha\nKind: Signpost\n---\n"
+                "https://www.omg.org/spec/SysML\n"
+            ),
+            "packs/alpha/PACK.yaml": "slug: alpha\n",
+        }, "Pack licence and signpost shape", "signpost-capital-k-ok")
+        # signpost-shape: an extra LICENSE file breaks the two-file rule
+        demo({
+            "packs/alpha/SKILL.md": (
+                "---\nname: alpha\nkind: signpost\n---\nbody\n"
+            ),
+            "packs/alpha/PACK.yaml": "slug: alpha\n",
+            "packs/alpha/LICENSE": "MIT\n",
+        }, "Pack licence and signpost shape",
+            "[signpost-shape] alpha: extra path LICENSE", "signpost-license-extra")
+        # pack-licence: a pack directory with no SKILL.md fails closed
+        demo({
+            "packs/alpha/PACK.yaml": "slug: alpha\n",
+        }, "Pack licence and signpost shape",
+            "[pack-licence] alpha: missing SKILL.md", "licence-no-skill")
+        # pack-licence positive: an orchestrator pack skips both checks —
+        # no LICENSE and no six fields, still passes
+        demo_ok({
+            "packs/se/SKILL.md": "---\nname: se\nkind: orchestrator\n---\nroutes\n",
+            "packs/se/PACK.yaml": "slug: se\n",
+        }, "Pack licence and signpost shape", "orch-skip-ok")
+        # pack-licence: both kind lines in one file fail closed
+        demo({
+            "packs/alpha/SKILL.md": (
+                "---\nname: alpha\nkind: signpost\nkind: orchestrator\n---\nbody\n"
+            ),
+            "packs/alpha/PACK.yaml": "slug: alpha\n",
+        }, "Pack licence and signpost shape",
+            "[pack-licence] alpha: both kind regexes matched",
+            "licence-both-kinds")
+        # pack-licence: PACK.yaml slug must match the folder name
+        demo({
+            "packs/alpha/SKILL.md": "---\nname: alpha\n---\nbody\n",
+            "packs/alpha/LICENSE": "MIT\n",
+            "packs/alpha/PACK.yaml": (
+                "slug: beta\ntitle: Alpha\npublisher: JGS\n"
+                "license: MIT\nlicense_tier: \"1\"\ncommercial_use: \"yes\"\n"
+            ),
+        }, "Pack licence and signpost shape",
+            "[pack-licence] alpha: PACK.yaml slug 'beta' != folder name",
+            "licence-slug-mismatch")
+
+        # link-policy: a signpost that fails the shape rule loses its URL
+        # exemption, so its omg.org citation is flagged. Host file tokens are
+        # copied from the live TRUSTED_HOSTS frozenset in validate.yml
+        # (verified 2026-10-27); parity runs before any scan.
+        lp_src = extract_heredoc(workflow_text,
+                                 "Link policy check (no source-material URLs)")
+        assert lp_src is not None, "link-policy heredoc missing"
+        lp_dirty = tmp / "link-dirty-signpost"
+        write_tree(lp_dirty, {
+            "packs/alpha/SKILL.md": (
+                "---\nname: alpha\nkind: signpost\n---\n"
+                "https://www.omg.org/spec/SysML\n"
+            ),
+            "packs/alpha/PACK.yaml": "slug: alpha\n",
+            "packs/alpha/chapters/ch01-x.md": "x\n",
+            "tooling/link-policy-hosts.txt": (
+                "cisa.gov\ndau.edu\ndla.mil\ndod.mil\ndodcio\nenergy.gov\n"
+                "eur-lex\neuropa.eu\neveryspec.com\ngovinfo.gov\nnasa.gov\n"
+                "nato.int\nnde-ed.org\nnist.gov\nntrs\nocw.mit\nomg.org\n"
+                "sebokwiki\n"
+            ),
+        })
+        rc_lp, out_lp = run_gate(lp_src, lp_dirty)
+        assert rc_lp != 0, f"link-dirty-signpost: expected failure\n{out_lp}"
+        assert "source-material URL" in out_lp, (
+            f"link-dirty-signpost: URL hit\n{out_lp}"
+        )
+
+        # link-policy positive: a shape-clean signpost keeps its exemption
+        # and the same citation URL passes
+        lp_clean = tmp / "link-clean-signpost"
+        write_tree(lp_clean, {
+            "packs/alpha/SKILL.md": (
+                "---\nname: alpha\nkind: signpost\n---\n"
+                "https://www.omg.org/spec/SysML\n"
+            ),
+            "packs/alpha/PACK.yaml": "slug: alpha\n",
+            "tooling/link-policy-hosts.txt": (
+                "cisa.gov\ndau.edu\ndla.mil\ndod.mil\ndodcio\nenergy.gov\n"
+                "eur-lex\neuropa.eu\neveryspec.com\ngovinfo.gov\nnasa.gov\n"
+                "nato.int\nnde-ed.org\nnist.gov\nntrs\nocw.mit\nomg.org\n"
+                "sebokwiki\n"
+            ),
+        })
+        rc_ok, out_ok = run_gate(lp_src, lp_clean)
+        assert rc_ok == 0, f"link-clean-signpost: expected exit 0\n{out_ok}"
 
     # 3. positive runs against the real repo tree: what CI sees on a clean tree
     for step in PINNED_STEPS:
