@@ -32,7 +32,7 @@ Accepting a supplier's component stack as assured by its vendor popularity is re
 
 ## Key Takeaways
 
-- Write the confidence requirement, the third-party argument duty, the provenance documentation duty, and the through-life access and IP terms into the contract, because after award the leverage mostly disappears.
+- Write the confidence requirement, the third-party argument duty, the provenance documentation duty, and the through-life access and IP terms into the contract, because after award the bargaining power mostly disappears.
 - Onboard new-to-Defence suppliers into the Defence context deliberately: security, policy, standards and operational reality.
 - This pack names JSP 887 and the ASR statement and does not reproduce them; the surrounding acquisition-safety machinery lives in the jsp-376 pack.
 
