@@ -105,6 +105,8 @@ HTML_ASSET_PAIR = [
     ("meta twitter:image:src", '"twitter:image:src"'),
     ("brand-tokens BEGIN marker", '"/* BRAND-TOKENS:BEGIN"'),
     ("brand-tokens END marker", '"/* BRAND-TOKENS:END"'),
+    ("discovery docs glob", 'list(docs.glob("*.html"))'),
+    ("discovery packs glob", 'list(docs.glob("packs/*/index.html"))'),
 ]
 
 # Literals that must appear verbatim in check_release.py AND validate.yml
@@ -577,6 +579,17 @@ def main() -> int:
         demo_ok({"docs/index.html": HTML_CLEAN_PAGE,
                  "docs/packs.html": "<style>\n" + BRAND_SLICE + "</style>\n"},
                 "HTML self-containment", "html-clean-ok")
+        # html-assets: a leak under docs/packs/<slug>/index.html must fail.
+        # Top-level pages copy html-clean-ok so the brand-token block passes
+        # and the failure is the pack-page asset, not [brand-tokens].
+        demo({
+            "docs/index.html": HTML_CLEAN_PAGE,
+            "docs/packs.html": "<style>\n" + BRAND_SLICE + "</style>\n",
+            "docs/packs/alpha/index.html":
+                '<img src="https://cdn.example/pack.png">\n',
+        }, "HTML self-containment",
+            "[html-assets] external asset in docs/packs/alpha/index.html",
+            "html-pack-page-external")
         # brand-tokens: a hand-edited hex in the packs.html copy fails
         demo({"docs/index.html": HTML_CLEAN_PAGE,
               "docs/packs.html": "<style>:root{--ink:#0b0b0c;--paper:#f4f2ec}</style>\n"},
