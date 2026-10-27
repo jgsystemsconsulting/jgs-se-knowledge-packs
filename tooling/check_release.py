@@ -27,11 +27,13 @@ standard requires for this repo and exits non-zero on any failure:
      (MAP-21-01; local/trusted).
  11. Capability-map generator replay via generate_capability_map.main() --check
      (MAP-21-05; local/trusted; uses on-disk map generated_on).
-  12. HTML self-containment ([html-assets]): every docs/*.html page is scanned
-     for external http(s) asset references; hosts must be exactly
-     FIRST_PARTY_HOSTS (github.com, jgsystemsconsulting.github.io) with empty
-     userinfo; data: URIs and relative paths are allowed; protocol-relative
-     URLs fail; zero pages fails closed.
+  12. HTML self-containment ([html-assets]): every docs/*.html page and
+     every docs/packs/*/index.html page is scanned for external http(s)
+     asset references. Hosts must be an exact FIRST_PARTY_HOSTS match
+     (github.com, jgsystemsconsulting.github.io) with empty userinfo.
+     data: URIs and relative paths are allowed. Protocol-relative URLs
+     fail. An empty page set fails closed. The set is two globs, not
+     rglob, so docs/superpowers/ stays out.
      Plus brand-token parity ([brand-tokens], P13): the exclusive BRAND-TOKENS
      slice extracted from docs/index.html must appear verbatim in
      docs/packs.html.
@@ -1096,12 +1098,16 @@ def main() -> int:
         except Exception as e:
             fail(errs, f"[rr-b-30] cannot verify packs.html generation: {e}")
 
-    # 12. html-assets (P12): every docs/*.html page is self-contained. External
-    #     http(s) assets must sit on an exact FIRST_PARTY_HOSTS host with empty
-    #     userinfo; data: URIs and relative paths are allowed; protocol-relative
-    #     //host/x fails; zero pages fails closed. docs-level glob only (not
-    #     rglob) so docs/superpowers/ planning files stay out of scope.
-    html_pages = sorted((ROOT / "docs").glob("*.html"))
+    # 12. html-assets (P46): docs/*.html plus docs/packs/*/index.html.
+    #     Two globs, not rglob, so docs/superpowers/ stays out. External
+    #     http(s) assets must sit on an exact FIRST_PARTY_HOSTS host with
+    #     empty userinfo. data: URIs and relative paths are allowed.
+    #     Protocol-relative //host/x fails. An empty union fails closed.
+    docs = ROOT / "docs"
+    html_pages = sorted(
+        list(docs.glob("*.html"))
+        + list(docs.glob("packs/*/index.html"))
+    )
     if not html_pages:
         fail(errs, "[html-assets] no docs/*.html found")
     for page in html_pages:

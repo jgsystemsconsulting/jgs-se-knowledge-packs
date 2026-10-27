@@ -166,7 +166,9 @@ jobs:
           # byte-identical to the local gate's; tooling/test_ci_gate.py asserts
           # that parity and executes this shipped heredoc. Self-host convention:
           # images under docs/assets/, fonts under docs/fonts/, relative
-          # references only. Fail closed: zero docs/*.html also fails.
+          # references only. Page set is docs/*.html plus docs/packs/*/index.html
+          # (two globs, not rglob, so docs/superpowers/ stays out). Fail closed:
+          # an empty page set also fails.
           import re, sys, pathlib
           from urllib.parse import urlsplit
 
@@ -257,7 +259,11 @@ jobs:
 
               return found
 
-          pages = sorted(pathlib.Path("docs").glob("*.html"))
+          docs = pathlib.Path("docs")
+          pages = sorted(
+              list(docs.glob("*.html"))
+              + list(docs.glob("packs/*/index.html"))
+          )
           if not pages:
               print("::error::[html-assets] no docs/*.html found")
               sys.exit(1)
@@ -303,7 +309,7 @@ jobs:
               print(f"::error::[brand-tokens] cannot read page: {e}")
               fails += 1
           if not fails:
-              print("[html-assets] all docs/*.html pages self-contained")
+              print("[html-assets] all docs/*.html and docs/packs/*/index.html pages self-contained")
           sys.exit(1 if fails else 0)
           PY
 
