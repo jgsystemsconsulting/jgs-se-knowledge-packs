@@ -1101,7 +1101,7 @@ jobs:
                   fails += 1
                   continue
               if kind == "both":
-                  print(f"::error file={pack}::[pack-licence] {slug}: regexes matched")
+                  print(f"::error file={pack}::[pack-licence] {slug}: both regexes matched")
                   fails += 1
                   continue
               if kind == "signpost":
