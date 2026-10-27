@@ -42,15 +42,56 @@ python tooling/build_pack.py --slug <slug> --title "..." --publisher "..." \
 #    - extract text (jgs-reference-skill), map chapter offsets, generate reference-depth
 #      chapters + glossary/patterns/cheatsheet, then the SKILL.md index.
 # 3. Fill the TODOs in packs/<slug>/PACK.yaml and packs/<slug>/LICENSE.
-# 4. Registration depends on kind. A live catalog pack: add a catalog row,
-#    rebuild catalog.json (see tooling/ or hand-edit), and add a watchlist
-#    entry in docs/source-watchlist.json (see docs/SOURCE-FRESHNESS.md).
-#    A signpost or an orchestrator: do not add a catalog row and do not add
-#    a watchlist entry.
-# 5. Add the slug to the /se map (packs/se/SKILL.md Topics row + agency row;
-#    Licences row when not public domain).
+# 4. Register a live catalog pack (any kind other than signpost or
+#    orchestrator). Hand-edit each surface. No writer exists for
+#    catalog.json or SKILLS.md. Gates fail a bad row.
+#    - catalog.json: add one object to "packs" with the same keys as an
+#      existing row (slug, title, publisher, source_version, license,
+#      license_tier, commercial_use, chapters, status). status is "live".
+#    - SKILLS.md: add one table row. The file is hand-maintained.
+#      Then: python tooling/gen_packs_page.py
+#      (rewrites docs/packs.html; no SKILLS writer).
+#    - packs/se/SKILL.md: add the slug to a Topics row and an Agency
+#      contexts row. Add a Licences row only when the licence is not
+#      public domain.
+#    - docs/source-watchlist.json: hand-edit a new object. Copy an
+#      existing object's keys (slug, publisher, document, version,
+#      last_checked, hint). One entry per live catalog pack.
+#      python tooling/check_source_watch.py --record updates an existing
+#      slug only (version and last_checked). It refuses a slug that is
+#      not already in the file. After the hand-edit, refresh with:
+#      python tooling/check_source_watch.py --record SLUG VERSION DATE
+#      DATE is YYYY-MM-DD. An empty last_checked fails the local gate.
+#    - Capability map, inputs first: hand-edit
+#      docs/classification-rules.json (one assignment per chapter:
+#      pack, chapter, cluster, is_support). Hand-edit
+#      docs/capability-pack-map-note-overrides.json only when a chapter
+#      needs a note (pack, chapter, note). Do not hand-edit
+#      docs/capability-pack-map.json. The generator owns that file and
+#      docs/capability-pack-map.md. Then:
+#      python tooling/generate_capability_map.py --generated-on YYYY-MM-DD --sync-md
+#      --generated-on is required (no wall-clock default). --sync-md
+#      rewrites the human summary tables. Commit the generated JSON and
+#      MD together.
+#    - Per-pack page and sitemap:
+#      python tooling/gen_pack_pages.py --only <slugs>
+#      --only takes slugs comma-separated. It limits which pack pages this
+#      run rewrites. Omit it and the
+#      run rewrites every pack page. docs/sitemap.xml is always rewritten.
+#    - Plugin skill lists: add the pack path to the "skills" array in
+#      both .claude-plugin/plugin.json (entry ./packs/<slug>) and
+#      .cursor-plugin/plugin.json (entry ./packs/<slug>/SKILL.md).
+#      marketplace.json has no skills array.
+#    A signpost or an orchestrator: do not add a catalog row and do not
+#    add a watchlist entry. Do not run gen_pack_pages.py for that slug
+#    (it refuses a slug that is not in catalog.json, and docs/packs/ has
+#    no page for these members). Still add the SKILLS.md row (then
+#    gen_packs_page.py), the packs/se/SKILL.md rows, and the plugin
+#    skills entries when that member is published. Skip the capability
+#    map unless the member has chapters. The eight signpost packs have
+#    none (classification-rules.json signpost_packs).
 
-# 6. Validate:
+# 5. Validate:
 python tooling/validate_pack.py packs/<slug>
 ```
 
@@ -67,7 +108,17 @@ python tooling/validate_pack.py packs/<slug>
 
 - One pack per PR.
 - PR description: source, version, licence, tier, and a line confirming it is not Excluded.
-- CI does not run `validate_pack.py`. It runs inline data-invariant checks including leak sentinels, link policy, frontmatter, catalog, version, index count, chapter overlap, and map and classification invariants, and never executes repository code. Before the PR, run step 6 above (`python tooling/validate_pack.py packs/<slug>`). CI runs the mechanical licence subset and the signpost shape check inline and still does not execute `validate_pack.py`. Tier judgement (1/2/3) is reviewed by a maintainer.
+- CI does not run `validate_pack.py`. It runs inline data-invariant checks including leak sentinels, link policy, frontmatter, catalog, version, index count, chapter overlap, and map and classification invariants, and never executes repository code. Before the PR, run `python tooling/validate_pack.py packs/<slug>`. CI runs the mechanical licence subset and the signpost shape check inline and still does not execute `validate_pack.py`. Tier judgement (1/2/3) is reviewed by a maintainer.
+
+## Before you tag
+
+Run `python tooling/check_release.py` on the exact commit you tag. PASS is required. The PASS line reads `RELEASE CHECK: PASS (v<version> @ <short-sha>)` and the sha must match the commit you tag; a `@ no-git` receipt never satisfies it.
+
+CI green is necessary but not sufficient.
+
+Local-only classes: full pack validation, source-watch freshness, generator replay (capability map and packs.html), and tracked-sources emptiness. The check-by-check list stays in the header of [.github/workflows/validate.yml](.github/workflows/validate.yml) and in the docstring of `tooling/check_release.py`. Do not treat this section as that list.
+
+Do not cut the tag or a GitHub Release on CI green alone.
 
 ## Reporting a licensing concern
 
