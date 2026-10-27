@@ -54,18 +54,19 @@ features:
       MIL-HDBK-338B, MIL-HDBK-516C, MIL-STD-40051, MIL-STD-881F, DAFMAN 63-119,
       DOT&E T&E, IS-GPS-200N. NIST (9): AI RMF, SSDF, CSF 2.0, SP 800-160 SSE,
       SP 800-37 RMF, Cyber-Physical Systems, NIST/SEMATECH statistics, SP 800-171 CUI,
-      SP 800-61 incident response. FAA (7): RMA Handbook, Systems Engineering Manual,
+      SP 800-61 incident response. FAA (8): RMA Handbook, Systems Engineering Manual,
       System Safety, Human Factors Design Std, AMS V&V, Requirements Engineering
-      Management, STD-025 interface documentation. GAO (4): Technology Readiness,
+      Management, STD-025 interface documentation, airborne software and AEH
+      approval guidance (Order 8110.49A and ACs 20-115D, 20-152A, 00-69). GAO (4): Technology Readiness,
       Cost Estimating, Schedule Assessment, Agile Assessment guides. DOE (2):
       Systems Engineering Methodology (SEM3), capital-asset project management
       (O 413.3). CISA / DHS (1): Cross-Sector Cybersecurity Performance Goals 2.0.
       OMB / cross-federal (1): Federal benefit-cost analysis (OMB Circular A-94).
       NHTSA / USDOT (1): FMVSS selections, vehicle cybersecurity best practices,
-      ADS vision. EU / academic / JGS (4): EU AI Act 2024/1689, Digital Systems
+      ADS vision. EU / academic / JGS (6): EU AI Act 2024/1689, EASA AMC 20-115D and
+      AMC 20-152A, MDCG and MHRA device software guidance, Digital Systems
       Engineering (arXiv), EARS requirements-writing, SEBoK.
       FDA (1): device software guidance and the QMSR.
-      FAA airborne software and AEH approval (1): Order 8110.49A and ACs 20-115D, 20-152A, 00-69.
       UK MOD (2): JSP 815 Defence Safety Management System; JSP 376 Defence Acquisition Safety Policy.
       NRC (1): digital safety-system software assurance guidance.
   - title: Standards signposts
