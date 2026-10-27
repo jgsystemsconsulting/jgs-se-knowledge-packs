@@ -54,7 +54,8 @@ jobs:
   content-integrity:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      # actions/checkout v4, SHA-pinned 2026-10-27. Re-pin during T-20-SC supply-chain review.
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
 
       - name: Content integrity check (leak sentinels)
         run: |
