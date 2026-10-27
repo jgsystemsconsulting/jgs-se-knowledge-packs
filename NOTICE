@@ -796,6 +796,19 @@ Third-party source attributions (one block per shipped content pack)
            source cites are named and not reproduced. See
            packs/jsp-376/LICENSE.
 
+[pack: jsp-936]
+
+  Source : JSP 936 Dependable Artificial Intelligence (AI) in Defence, Part 1:
+           Directive, V1.1 (November 2024). Ministry of Defence, Crown copyright.
+  Author : Ministry of Defence
+  Licence: Open Government Licence v3.0
+  Changes: reconstructed as synthesized reference notes (not a reproduction)
+  Terms  : attribution required. Contains public sector information licensed
+           under the Open Government Licence v3.0. The Ministry of Defence does
+           not endorse this pack. Other JSPs and third-party standards the
+           directive cites are named and not reproduced. Part 2 is not in this
+           pack. See packs/jsp-936/LICENSE.
+
 [pack: nrc-nuclear]
   Source : RG 1.168 Rev 2 (July 2013, ML13073A210); RG 1.169 Rev 1 (July 2013,
            ML12355A642); RG 1.170 Rev 1 (July 2013, ML13003A216); RG 1.171 Rev 1

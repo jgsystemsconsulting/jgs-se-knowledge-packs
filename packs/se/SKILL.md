@@ -104,7 +104,7 @@ Output goes in the reply unless the user names a file. A deliverable with no mat
 | Acquisition & suppliers | acquisition, procurement, supplier, contract, sourced approval | `doe-o-413-3`, `nasa-de-acquisition`, `dod-mosa`, `mrl-deskbook`, `nasa-npr-7123` |
 | Governance, reviews & gates | reviews, gates, KDPs, milestones, certification, test readiness certification | `dafman-63-119`, `eu-ai-act`, `doe-o-413-3`, `nasa-npr-7123`, `dau-se-guidebook` |
 | SE standards & process models | SE standards, ISO 15288, tailoring, lifecycle models, NPR requirements | `sebok`, `nasa-npr-7150`, `nasa-npr-7123`, `dau-se-guidebook`, `nasa-se-handbook` |
-| AI & cyber-physical systems | AI, AI risk management, autonomous systems, cyber-physical, CPS, EU AI Act | `nist-ai-rmf`, `nist-cps`, `eu-ai-act` |
+| AI & cyber-physical systems | AI, AI risk management, autonomous systems, cyber-physical, CPS, EU AI Act | `nist-ai-rmf`, `nist-cps`, `eu-ai-act`, `jsp-936` |
 | Modelling language specifications | SysML spec, UML, UAF, BPMN, OMG specifications | `omg-signpost`, `nasa-systems-modeling` |
 | SE standards landscape lookup | ISO/IEC/IEEE standards, INCOSE handbook, ECSS, SAE, where to get a standard | `se-standards-signpost`, `sebok` |
 | Vehicle safety & automotive | vehicle safety, automotive, FMVSS, ADS, automated driving, vehicle cybersecurity | `nhtsa-vehicle`, `automotive-signpost`, `functional-safety-signpost` |
@@ -114,7 +114,7 @@ Output goes in the reply unless the user names a file. A deliverable with no mat
 | Railway RAMS & signalling assurance | EN 50126, EN 50128, EN 50129, railway RAMS, CSM, signalling assurance, RSSB | `rail-signpost` |
 | Space standards (ECSS) | ECSS, space standards, E-ST-10, E-ST-40, Q-ST-30, space environment, product assurance | `space-signpost` |
 | Maritime safety and class rules | SOLAS, ISM, ISPS, COLREGS, USCG, class rules, MCA | `maritime-signpost` |
-| Defence safety management | JSP 815, JSP 376, acquisition safety, defence safety, SMS, safety case, assurance | `jsp-815`, `jsp-376` |
+| Defence safety management | JSP 815, JSP 376, acquisition safety, defence safety, SMS, safety case, assurance, dependable AI, AI assurance | `jsp-815`, `jsp-376`, `jsp-936` |
 | Nuclear software assurance | NRC, regulatory guide, NUREG, digital safety systems, software assurance, BTP 7-14 | `nrc-nuclear` |
 
 ### Agency contexts
@@ -156,6 +156,7 @@ Output goes in the reply unless the user names a file. A deliverable with no mat
 | `eu-ai-act` | EU Official Journal — reproduction authorised with source acknowledgement (Decision 2011/833/EU) |
 | `jsp-815` | Open Government Licence v3.0 |
 | `jsp-376` | Open Government Licence v3.0 |
+| `jsp-936` | Open Government Licence v3.0 |
 | `easa-rules` | Per-document: EASA site reproduction-with-acknowledgement grant, qualified by ED Decision all-rights-reserved footers; reconstructed notes with attribution; official PDFs not redistributed; commercial use pending per-document determination |
 | `med-device-eu` | Per-document: European Commission reuse policy (Decision 2011/833/EU, CC BY 4.0, attribution and indication of changes) for the MDCG documents; Open Government Licence v3.0 for the MHRA guidance; reconstructed notes with attribution; official PDFs not redistributed |
 <!-- ROUTING-MAP:END -->

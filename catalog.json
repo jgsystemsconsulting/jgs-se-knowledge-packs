@@ -787,6 +787,17 @@
       "commercial_use": true,
       "chapters": 8,
       "status": "live"
+    },
+    {
+      "slug": "jsp-936",
+      "title": "JSP 936: Dependable Artificial Intelligence (AI) in Defence, Part 1: Directive",
+      "publisher": "Ministry of Defence",
+      "source_version": "JSP 936 Dependable Artificial Intelligence (AI) in Defence, Part 1: Directive, V1.1 (November 2024)",
+      "license": "Open Government Licence v3.0",
+      "license_tier": 2,
+      "commercial_use": true,
+      "chapters": 8,
+      "status": "live"
     }
   ],
   "planned": [

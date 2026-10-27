@@ -11,6 +11,11 @@ All notable changes to this project are documented here. Format follows
 
 ## [Unreleased]
 
+### Added
+
+- `jsp-936` content pack from JSP 936 Part 1 Directive V1.1, reconstructed
+  notes, registered on the catalogue surfaces.
+
 ### Changed
 
 - `.claude-plugin/plugin.json` now declares all 80 skill paths in the `skills` field

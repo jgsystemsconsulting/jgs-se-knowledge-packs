@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "map_version": "1.22.0",
-  "generated_on": "2026-10-13",
+  "generated_on": "2026-10-27",
   "clusters": [
     {
       "name": "Systems Thinking & Fundamentals",
@@ -130,6 +130,11 @@
           "pack": "sebok",
           "chapter": "ch36-sebok-emerging-knowledge.md",
           "note": "Emerging SE knowledge"
+        },
+        {
+          "pack": "jsp-936",
+          "chapter": "ch02-ai-in-defence-systems.md",
+          "note": "How AI including RAS and digital systems is framed inside Defence systems from JSP 936 Part 1"
         }
       ]
     },
@@ -2060,6 +2065,11 @@
           "pack": "jsp-376",
           "chapter": "ch04-test-evaluation-and-safety-case.md",
           "note": "ITEAP, certification strategy, and safety case ownership from Pre-Concept to handover"
+        },
+        {
+          "pack": "jsp-936",
+          "chapter": "ch06-quality-safety-security.md",
+          "note": "Quality, safety, and security expectations for AI systems from JSP 936 Part 1"
         }
       ]
     },
@@ -2565,6 +2575,11 @@
           "pack": "nasa-se-handbook",
           "chapter": "ch05-2-6-human-systems-integration-hsi-in-the-se-process.md",
           "note": "HSI overview in SE processes"
+        },
+        {
+          "pack": "jsp-936",
+          "chapter": "ch04-human-ai-teams.md",
+          "note": "Human and AI teaming expectations across roles and human control from JSP 936 Part 1"
         }
       ]
     },
@@ -3180,6 +3195,11 @@
           "pack": "jsp-376",
           "chapter": "ch06-early-lifecycle-phases.md",
           "note": "Pre-Concept, Concept, and Assessment safety artefacts and SOC, OBC, and FBC evidence"
+        },
+        {
+          "pack": "jsp-936",
+          "chapter": "ch07-suppliers.md",
+          "note": "Supplier and procurement direction for acquiring AI systems from JSP 936 Part 1"
         }
       ]
     },
@@ -3335,6 +3355,11 @@
           "pack": "jsp-376",
           "chapter": "ch02-roles-and-safety-in-the-programme.md",
           "note": "SRO and User safety accountabilities, the programme envelope, and the unpublished Chapter 4 gap"
+        },
+        {
+          "pack": "jsp-936",
+          "chapter": "ch03-legal-ethics-governance.md",
+          "note": "Legal, ethics, and governance direction for AI-enabled capability from JSP 936 Part 1"
         }
       ]
     },
@@ -3640,6 +3665,16 @@
           "pack": "jsp-376",
           "chapter": "ch01-acquisition-safety-policy.md",
           "note": "JSP 376 policy frame: ALARP, tolerability, exemptions, and the six acquisition safety concepts"
+        },
+        {
+          "pack": "jsp-936",
+          "chapter": "ch01-introduction.md",
+          "note": "Policy, scope, applicability, and tailoring direction for dependable AI from JSP 936 Part 1"
+        },
+        {
+          "pack": "jsp-936",
+          "chapter": "ch05-ai-lifecycles.md",
+          "note": "Lifecycle direction for developing, deploying, and retiring AI systems from JSP 936 Part 1"
         }
       ]
     },
@@ -3760,6 +3795,11 @@
           "pack": "jsp-376",
           "chapter": "ch05-supervision-assurance-approvals.md",
           "note": "Three lines of defence, the Safety Assurance Model, and safety inside the five-case business case"
+        },
+        {
+          "pack": "jsp-936",
+          "chapter": "ch08-ai-assurance.md",
+          "note": "Assurance expectations and evidence for dependable AI claims from JSP 936 Part 1"
         }
       ]
     }
