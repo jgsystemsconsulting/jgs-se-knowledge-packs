@@ -498,7 +498,64 @@ def main() -> int:
         v4 = dict(v3)
         v4["docs/index.html"] = ('{"softwareVersion": "1.2.3"} REV <b>1.2.3</b> '
                                  '<span class="label">Rev</span><b>1.2.3</b>\n')
+        # v4 gains catalog + sitemap + matching pack page so site-version-ok passes [sitemap]
+        v4 = dict(v4)
+        v4["catalog.json"] = json.dumps({"packs": [{"slug": "alpha", "status": "live"}]})
+        v4["docs/sitemap.xml"] = (
+            '<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+            '  <url><loc>https://example.test/</loc></url>\n'
+            '  <url><loc>https://example.test/packs.html</loc></url>\n'
+            '  <url><loc>https://example.test/packs/alpha/</loc></url>\n'
+            '</urlset>\n'
+        )
+        v4["docs/packs/alpha/index.html"] = (
+            "REV <b>1.2.3</b> "
+            '<span class="label">Rev</span><b>1.2.3</b>\n'
+        )
         demo_ok(v4, "Version single-source", "site-version-ok")
+
+        # pack-rev: one pack page whose masthead disagrees
+        v5 = dict(v4)
+        v5["docs/packs/alpha/index.html"] = (
+            "REV <b>9.9.9</b> "
+            '<span class="label">Rev</span><b>1.2.3</b>\n'
+        )
+        v5["catalog.json"] = json.dumps({"packs": [{"slug": "alpha"}]})
+        v5["docs/sitemap.xml"] = (
+            '<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+            "  <url><loc>https://example.test/</loc></url>\n"
+            "  <url><loc>https://example.test/packs.html</loc></url>\n"
+            "  <url><loc>https://example.test/packs/alpha/</loc></url>\n"
+            "</urlset>\n"
+        )
+        demo(v5, "Version single-source", "[pack-rev]", "pack-rev-drift")
+
+        # sitemap: live catalog has beta, sitemap and pages only have alpha
+        v6 = dict(v5)
+        v6["catalog.json"] = json.dumps(
+            {"packs":[{"slug":"alpha"},{"slug":"beta","status":"live"}]}
+        )
+        demo(v6, "Version single-source", "[sitemap]", "sitemap-truncated")
+
+        # sitemap: status other than live is not in the live set, so a
+        # sitemap that lists it fails pack-locs != live catalog
+        v7 = dict(v5)
+        v7["catalog.json"] = json.dumps(
+            {"packs": [{"slug": "alpha", "status": "retired"}]}
+        )
+        demo(v7, "Version single-source", "[sitemap]", "sitemap-nonlive")
+
+        # positive: one live slug, matching page, matching sitemap, matching REV
+        v8 = dict(v4)
+        v8["docs/packs/alpha/index.html"] = (
+            "REV <b>1.2.3</b> "
+            '<span class="label">Rev</span><b>1.2.3</b>\n'
+        )
+        v8["catalog.json"] = json.dumps({"packs": [{"slug": "alpha"}]})
+        v8["docs/sitemap.xml"] = v5["docs/sitemap.xml"]
+        demo_ok(v8, "Version single-source", "sitemap-pack-rev-ok")
 
         # index: with the signpost marker, the signpost link is NOT counted,
         # so one content link vs two shipped packs fails

@@ -20,6 +20,7 @@
 #   HTML self-containment                      twins check_release 12 [html-assets] (literal twin (hosts + regex pins)) plus [brand-tokens] (P13)
 #   Landing catalogue counts                    twins check_release 13 [catalogue-count]
 #   Catalog live-set parity                     twins check_release 14 [catalog-live-set]
+# Sitemap and pack-page REV twin check_release 19 [sitemap] [pack-rev] (inside Version single-source; no new step)
 #   Routing map coverage                        twins check_release 15 [routing-map]
 #   Pack content quality                       pure-data subset of check_release 16 [pack-quality] (orphan chapters, depth floor, topic-index resolution)
 #   Pack licence and signpost shape            pure-data subset of validate_pack licence checks plus signpost citation-only allowlist
@@ -1175,7 +1176,8 @@ jobs:
           # Twins tooling/check_release.py checks 4 + 4a. The three version
           # regex literals below are byte-identical to the local gate's;
           # tooling/test_ci_gate.py asserts that parity and fails on drift.
-          import json, os, re, sys
+          import json, os, pathlib, re, sys
+          import xml.etree.ElementTree as ET
           versions = {}
           try:
               with open(".claude-plugin/plugin.json", encoding="utf-8") as fh:
@@ -1210,6 +1212,115 @@ jobs:
               if got != expected:
                   print(f"::error file=docs/index.html::[site-version] {name} '{got}' != RELEASE-INFO '{expected}'")
                   fails += 1
+          # [sitemap] + [pack-rev]: twin of check_release.py check 19.
+          # Inline stdlib only. This step does not import repository code.
+          SITEMAP_NS = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
+          catalog_path = "catalog.json"
+          sitemap_path = "docs/sitemap.xml"
+          if not os.path.isfile(sitemap_path):
+              print("::error file=docs/sitemap.xml::[sitemap] missing docs/sitemap.xml")
+              fails += 1
+          if not os.path.isfile(catalog_path):
+              print("::error file=catalog.json::[sitemap] missing catalog.json")
+              fails += 1
+          else:
+              try:
+                  catalog = json.load(open(catalog_path, encoding="utf-8"))
+              except Exception as e:
+                  print(f"::error file=catalog.json::[sitemap] cannot read/parse catalog.json: {e}")
+                  fails += 1
+                  catalog = None
+              if not isinstance(catalog, dict):
+                  if catalog is not None:
+                      print("::error file=catalog.json::[sitemap] catalog.json root must be an object")
+                      fails += 1
+              else:
+                  packs_list = catalog.get("packs")
+                  live = set()
+                  if not isinstance(packs_list, list):
+                      print("::error file=catalog.json::[sitemap] catalog.json packs must be a list")
+                      fails += 1
+                  else:
+                      for entry in packs_list:
+                          if not isinstance(entry, dict):
+                              continue
+                          slug = entry.get("slug")
+                          if not isinstance(slug, str) or not slug.strip():
+                              continue
+                          status = entry.get("status")
+                          if status is None or status == "live":
+                              live.add(slug.strip())
+                      page_slugs = {p.parent.name for p in pathlib.Path("docs/packs").glob("*/index.html")}
+                      locs = []
+                      if os.path.isfile(sitemap_path):
+                          try:
+                              tree = ET.parse(sitemap_path)
+                              for el in tree.iter(SITEMAP_NS + "loc"):
+                                  if el.text and el.text.strip():
+                                      locs.append(el.text.strip())
+                          except Exception as e:
+                              print(f"::error file=docs/sitemap.xml::[sitemap] cannot parse docs/sitemap.xml: {e}")
+                              fails += 1
+                              locs = None
+                      if locs is not None and not locs:
+                          print("::error file=docs/sitemap.xml::[sitemap] docs/sitemap.xml yielded no loc")
+                          fails += 1
+                      elif locs:
+                          packish = [loc for loc in locs if "/packs/" in loc]
+                          if not packish:
+                              print("::error file=docs/sitemap.xml::[sitemap] no pack loc to derive origin from")
+                              fails += 1
+                              packish = None
+                          if packish:
+                              origin = packish[0].split("/packs/")[0].rstrip("/")
+                              fixed = {origin + "/", origin + "/packs.html"}
+                              prefix = origin + "/packs/"
+                              pack_slugs = set()
+                              other = []
+                              for loc in locs:
+                                  if loc in fixed:
+                                      continue
+                                  if loc.startswith(prefix) and loc.endswith("/"):
+                                      slug = loc[len(prefix):-1]
+                                      if slug and "/" not in slug:
+                                          pack_slugs.add(slug)
+                                      else:
+                                          other.append(loc)
+                                  else:
+                                      other.append(loc)
+                              missing_fixed = sorted(fixed - set(locs))
+                              if missing_fixed:
+                                  print(f"::error file=docs/sitemap.xml::[sitemap] missing fixed loc(s): {missing_fixed}")
+                                  fails += 1
+                              if other:
+                                  print(f"::error file=docs/sitemap.xml::[sitemap] loc neither fixed nor pack loc: {other}")
+                                  fails += 1
+                              if pack_slugs != live:
+                                  print(f"::error file=docs/sitemap.xml::[sitemap] pack locs != live catalog")
+                                  fails += 1
+                              if pack_slugs != page_slugs:
+                                  print(f"::error file=docs/sitemap.xml::[sitemap] pack locs != page slugs")
+                                  fails += 1
+          # [pack-rev]: every pack page, both loci, against RELEASE-INFO.
+          # Missing docs/packs is a pass here so the older site-version demos,
+          # which have no pack tree, stay green. An empty docs/packs fails closed.
+          packs_dir = pathlib.Path("docs/packs")
+          pages = sorted(packs_dir.glob("*/index.html")) if packs_dir.is_dir() else []
+          if packs_dir.is_dir() and not pages:
+              print("::error::[pack-rev] no docs/packs/*/index.html")
+              fails += 1
+          for page in pages:
+              text = page.read_text(encoding="utf-8", errors="ignore")
+              rel = page.as_posix()
+              for name, pat in (
+                  ("masthead REV", r"REV <b>(\d+\.\d+\.\d+)</b>"),
+                  ("footer Rev", r'<span class="label">Rev</span><b>(\d+\.\d+\.\d+)</b>'),
+              ):
+                  hit = re.search(pat, text)
+                  got = hit.group(1) if hit else ""
+                  if got != expected:
+                      print(f"::error file={rel}::[pack-rev] {rel} {name} '{got}' != RELEASE-INFO '{expected}'")
+                      fails += 1
           distinct = {v for v in versions.values() if v}
           if len(distinct) > 1 or "" in versions.values():
               print(f"::error::[version] disagreement / missing: {versions}")
