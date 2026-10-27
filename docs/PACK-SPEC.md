@@ -81,14 +81,20 @@ attribution, per the no-source-link policy in [LICENSING.md](LICENSING.md).
 
 ## Installing a pack (end user)
 
+Clone the repo and run the root installer from the repo root. The default copies every pack into `~/.claude/skills/jgs-se-knowledge-packs/<slug>/` (`<slug>` is the pack directory name under `packs/`, for example `sebok`). The installer honours `$CLAUDE_CONFIG_DIR`. `install.sh` and `install.ps1` are wrappers around the same script and pass every argument through.
+
 ```bash
-# Claude Code: clone the whole repo, symlink/copy the pack into your skills dir:
 git clone https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs.git
-cp -r jgs-se-knowledge-packs/packs/sebok ~/.claude/skills/sebok
-# then in a session:  /sebok <topic>
+cd jgs-se-knowledge-packs
+python install.py --dry-run          # preview pack list and target, copy nothing
+python install.py                    # Claude Code default, namespaced
+python install.py --flat             # drop the vendor namespace
+python install.py --list-agents      # supported agents and their targets
+python install.py --agent openclaw   # one non-default agent
+python install.py --agent all        # all user-global agents at once
 ```
 
-(A future `tooling/install.py <slug>` will automate per-pack install across hosts.)
+Native agents get the pack folder. Transform agents get the `SKILL.md` index inlined into one file. Install procedure and the agent matrix live in the [README](../README.md) install sections and in [docs/other-agents.md](other-agents.md).
 
 ## Validation
 
