@@ -118,9 +118,25 @@ jobs:
           HOSTS = re.compile(r"https?://[^\s)\"']*("
                              + "|".join(re.escape(t) for t in sorted(TRUSTED_HOSTS)) + ")")
           root = pathlib.Path(".")
+          # Exempt only shape-clean signposts: kind regex AND top-level names
+          # exactly {SKILL.md, PACK.yaml}, both regular files. Same shape rule
+          # the Pack licence and signpost shape step enforces, re-derived here
+          # so a shape-broken tree loses its URL exemption in the same run.
+          SIGNPOST_RE = re.compile(r"^kind:\s*signpost\s*$", re.I | re.M)
+          ALLOWED = {"SKILL.md", "PACK.yaml"}
+
+          def signpost_shape_ok(pack):
+              names = {c.name for c in pack.iterdir()}
+              return (
+                  names == ALLOWED
+                  and (pack / "SKILL.md").is_file()
+                  and (pack / "PACK.yaml").is_file()
+              )
+
           signpost_dirs = {
               p.parent for p in root.glob("packs/*/SKILL.md")
-              if re.search(r"^kind:\s*signpost\s*$", p.read_text(encoding="utf-8", errors="ignore"), re.I | re.M)
+              if SIGNPOST_RE.search(p.read_text(encoding="utf-8", errors="ignore"))
+              and signpost_shape_ok(p.parent)
           }
           fails = 0
           for p in root.rglob("*"):
