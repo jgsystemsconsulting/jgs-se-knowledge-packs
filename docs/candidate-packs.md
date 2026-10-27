@@ -26,7 +26,7 @@ A signpost pack is one SKILL.md and one PACK.yaml with no reproduced source cont
 
 ## Where the catalogue stands
 
-The catalogue holds 80 packs: 71 full reconstructed content packs, eight signpost packs (`automotive-signpost`, `avionics-signpost`, `functional-safety-signpost`, `maritime-signpost`, `omg-signpost`, `rail-signpost`, `se-standards-signpost`, `space-signpost`), and one `/se` orchestrator. Its sourcing is concentrated in six US federal publishers (NASA, DoD, FAA, NIST, GAO, DOE) plus SEBoK and OMG. Three expansion axes follow from that profile:
+The catalogue holds 81 packs: 72 full reconstructed content packs, eight signpost packs (`automotive-signpost`, `avionics-signpost`, `functional-safety-signpost`, `maritime-signpost`, `omg-signpost`, `rail-signpost`, `se-standards-signpost`, `space-signpost`), and one `/se` orchestrator. Its sourcing is concentrated in six US federal publishers (NASA, DoD, FAA, NIST, GAO, DOE) plus SEBoK and OMG. Three expansion axes follow from that profile:
 
 - New sectors the current sources cannot reach: medical devices, automotive, rail, nuclear, maritime, telecom, civil infrastructure.
 - New geographies: UK and European sources complement the US federal core, and OGL / EU-reuse material slots into licence tier 2 under the existing vetting rules.
