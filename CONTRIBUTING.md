@@ -71,7 +71,9 @@ python tooling/build_pack.py --slug <slug> --title "..." --publisher "..." \
 #      docs/capability-pack-map.md. Then:
 #      python tooling/generate_capability_map.py --generated-on YYYY-MM-DD --sync-md
 #      --generated-on is required (no wall-clock default). --sync-md
-#      rewrites the human summary tables. Commit the generated JSON and
+#      rewrites the human summary tables. Then check:
+#      python tooling/check_capability_map.py
+#      It must exit 0. Commit the generated JSON and
 #      MD together.
 #    - Per-pack page and sitemap:
 #      python tooling/gen_pack_pages.py --only <slugs>
