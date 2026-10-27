@@ -1040,6 +1040,107 @@ jobs:
           sys.exit(1 if fails else 0)
           PY
 
+      - name: Pack licence and signpost shape
+        run: |
+          python3 - <<'PY'
+          # Pure-data twin of tooling/validate_pack.py licence + shape rules;
+          # kind regexes and the field/tier literals mirror it exactly. One
+          # CI-only parse difference: a field that is blank after quote-strip
+          # is dropped, so an empty quoted value counts as missing downstream.
+          # Signpost packs are shape-checked only (no LICENSE, no provenance);
+          # the orchestrator pack (packs/se) skips both gates.
+          import re, sys, pathlib
+
+          REQUIRED_PACK_FIELDS = ("slug", "title", "publisher", "license", "license_tier", "commercial_use")
+          VALID_TIERS = {"1", "2", "3"}
+          SIGNPOST_RE = re.compile(r"^kind:\s*signpost\s*$", re.I | re.M)
+          ORCH_RE = re.compile(r"^kind:\s*orchestrator\s*$", re.I | re.M)
+          ALLOWED = {"SKILL.md", "PACK.yaml"}
+
+          def parse_simple_yaml(text):
+              out = {}
+              for line in text.splitlines():
+                  if not line or line[0] in " \t#":
+                      continue
+                  m = re.match(r"^([A-Za-z_][\w-]*):\s*(.*)$", line)
+                  if not m:
+                      continue
+                  key, val = m.group(1), m.group(2).strip()
+                  if val in (">", "|", ""):
+                      continue
+                  v = val.strip().strip('"').strip("'")
+                  if not v.strip():
+                      continue
+                  out[key] = v
+              return out
+
+          def classify(skill):
+              if not skill.is_file():
+                  return "missing", None
+              body = skill.read_text(encoding="utf-8", errors="ignore")
+              sig = bool(SIGNPOST_RE.search(body))
+              orch = bool(ORCH_RE.search(body))
+              if sig and orch:
+                  return "both", body
+              if sig:
+                  return "signpost", body
+              if orch:
+                  return "orchestrator", body
+              return "content", body
+
+          fails = 0
+          root = pathlib.Path("packs")
+          for pack in sorted(p for p in root.iterdir() if p.is_dir()):
+              slug = pack.name
+              kind, _body = classify(pack / "SKILL.md")
+
+              if kind == "missing":
+                  print(f"::error file={pack}::[pack-licence] {slug}: missing SKILL.md")
+                  fails += 1
+                  continue
+              if kind == "both":
+                  print(f"::error file={pack / 'SKILL.md'}::[pack-licence] {slug}: SKILL.md matches both signpost and orchestrator kind")
+                  fails += 1
+                  continue
+              if kind == "signpost":
+                  present = sorted(c.name for c in pack.iterdir())
+                  missing = sorted(ALLOWED - set(present))
+                  extra = sorted(c.name for c in pack.iterdir() if c.name not in ALLOWED)
+                  bad_type = sorted(c.name for c in pack.iterdir() if c.name in ALLOWED and not c.is_file())
+                  if extra or missing or bad_type:
+                      name = extra[0] if extra else (missing[0] if missing else bad_type[0])
+                      print(f"::error file={pack / name}::[signpost-shape] {slug}: signpost packs contain exactly SKILL.md and PACK.yaml")
+                      fails += 1
+                  continue
+              if kind == "orchestrator":
+                  continue
+
+              lic = pack / "LICENSE"
+              if not lic.is_file() or not lic.read_text(encoding="utf-8", errors="ignore").strip():
+                  print(f"::error file={lic}::[pack-licence] {slug}: missing LICENSE")
+                  fails += 1
+              ypath = pack / "PACK.yaml"
+              if not ypath.is_file():
+                  print(f"::error file={pack}::[pack-licence] {slug}: missing PACK.yaml")
+                  fails += 1
+                  continue
+              meta = parse_simple_yaml(ypath.read_text(encoding="utf-8", errors="ignore"))
+              for field in REQUIRED_PACK_FIELDS:
+                  if not meta.get(field):
+                      print(f"::error file={ypath}::[pack-licence] {slug}: PACK.yaml missing required field: {field}")
+                      fails += 1
+              tier = meta.get("license_tier", "")
+              if tier and tier not in VALID_TIERS:
+                  print(f"::error file={ypath}::[pack-licence] {slug}: license_tier={tier!r} not in {{1,2,3}}")
+                  fails += 1
+              if meta.get("slug") and meta["slug"] != slug:
+                  print(f"::error file={ypath}::[pack-licence] {slug}: PACK.yaml slug {meta['slug']!r} != folder name")
+                  fails += 1
+          if not fails:
+              print("[pack-licence] content packs and signpost shape OK")
+          sys.exit(1 if fails else 0)
+          PY
+
       - name: Version single-source
         run: |
           python3 - <<'PY'
