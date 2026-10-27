@@ -46,7 +46,7 @@ standard requires for this repo and exits non-zero on any failure:
      packs/*/SKILL.md (signposts and orchestrators excluded) must equal
      catalog.json packs[].slug where status is live or absent; signpost and
      orchestrator slugs must not appear in catalog.packs. planned[] is free.
-     updated is review-only after the b-03 bump.
+     updated bumps when the live pack set changes (row added, removed, or status change); it is not a release stamp and is not gated here.
   15. Routing map coverage ([routing-map], /se): exactly one kind: orchestrator
      member; ROUTING-MAP markers and four subheadings; pack-cell slug resolution
      and Topics coverage of every content slug; licence parity for non-Public-Domain

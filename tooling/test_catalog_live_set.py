@@ -133,7 +133,7 @@ def main() -> int:
 
     # real tree
     catalog = json.loads((ROOT / "catalog.json").read_text(encoding="utf-8"))
-    assert catalog.get("updated") == "2026-08-27", catalog.get("updated")
+    assert catalog.get("updated") == "2026-10-14", catalog.get("updated")
     real = check_release.check_catalog_live_set(ROOT / "packs", catalog)
     assert real == [], real
 
