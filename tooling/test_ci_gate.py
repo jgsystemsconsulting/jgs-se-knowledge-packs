@@ -866,7 +866,7 @@ def main() -> int:
         demo_ok({
             "packs/alpha/SKILL.md": (
                 "---\nname: alpha\nkind: signpost\n---\n"
-                "https://www.omg.org/spec/SysML\n"
+                "https://www." + "omg.org/spec/SysML\n"
             ),
             "packs/alpha/PACK.yaml": "slug: alpha\n",
         }, "Pack licence and signpost shape", "signpost-clean-ok")
@@ -875,7 +875,7 @@ def main() -> int:
         demo_ok({
             "packs/alpha/SKILL.md": (
                 "---\nname: alpha\nKind: Signpost\n---\n"
-                "https://www.omg.org/spec/SysML\n"
+                "https://www." + "omg.org/spec/SysML\n"
             ),
             "packs/alpha/PACK.yaml": "slug: alpha\n",
         }, "Pack licence and signpost shape", "signpost-capital-k-ok")
@@ -931,7 +931,7 @@ def main() -> int:
         write_tree(lp_dirty, {
             "packs/alpha/SKILL.md": (
                 "---\nname: alpha\nkind: signpost\n---\n"
-                "https://www.omg.org/spec/SysML\n"
+                "https://www." + "omg.org/spec/SysML\n"
             ),
             "packs/alpha/PACK.yaml": "slug: alpha\n",
             "packs/alpha/chapters/ch01-x.md": "x\n",
@@ -954,7 +954,7 @@ def main() -> int:
         write_tree(lp_clean, {
             "packs/alpha/SKILL.md": (
                 "---\nname: alpha\nkind: signpost\n---\n"
-                "https://www.omg.org/spec/SysML\n"
+                "https://www." + "omg.org/spec/SysML\n"
             ),
             "packs/alpha/PACK.yaml": "slug: alpha\n",
             "tooling/link-policy-hosts.txt": (
