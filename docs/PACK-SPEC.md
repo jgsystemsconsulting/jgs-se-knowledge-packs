@@ -110,4 +110,8 @@ runs locally via `tooling/check_release.py` (check 5) and is deliberately kept
 out of CI to avoid parser fork drift; CI runs inline data-invariant heredocs
 instead (see the `.github/workflows/validate.yml` header), including a
 pack-quality subset (orphan chapter files, 30-line chapter floor, Topic Index
-resolution) twinned with `tooling/check_pack_quality.py` (check 16).
+resolution) twinned with `tooling/check_pack_quality.py` (check 16). CI checks
+content-pack `LICENSE` presence, the six mandatory `PACK.yaml` fields, and
+`license_tier` in {1, 2, 3}, and a `kind: signpost` tree must contain only
+`SKILL.md` and `PACK.yaml`. Full structural validation remains
+`python tooling/validate_pack.py`.

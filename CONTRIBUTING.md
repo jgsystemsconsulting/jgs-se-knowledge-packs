@@ -67,7 +67,7 @@ python tooling/validate_pack.py packs/<slug>
 
 - One pack per PR.
 - PR description: source, version, licence, tier, and a line confirming it is not Excluded.
-- CI does not run `validate_pack.py`. It runs inline data-invariant checks including leak sentinels, link policy, frontmatter, catalog, version, index count, chapter overlap, and map and classification invariants, and never executes repository code. Before the PR, run step 6 above (`python tooling/validate_pack.py packs/<slug>`). Tier judgement (1/2/3) is reviewed by a maintainer.
+- CI does not run `validate_pack.py`. It runs inline data-invariant checks including leak sentinels, link policy, frontmatter, catalog, version, index count, chapter overlap, and map and classification invariants, and never executes repository code. Before the PR, run step 6 above (`python tooling/validate_pack.py packs/<slug>`). CI runs the mechanical licence subset and the signpost shape check inline and still does not execute `validate_pack.py`. Tier judgement (1/2/3) is reviewed by a maintainer.
 
 ## Reporting a licensing concern
 

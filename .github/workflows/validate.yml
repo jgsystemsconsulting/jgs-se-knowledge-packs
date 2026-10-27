@@ -22,9 +22,12 @@
 #   Catalog live-set parity                     twins check_release 14 [catalog-live-set]
 #   Routing map coverage                        twins check_release 15 [routing-map]
 #   Pack content quality                       pure-data subset of check_release 16 [pack-quality] (orphan chapters, depth floor, topic-index resolution)
+#   Pack licence and signpost shape            pure-data subset of validate_pack licence checks plus signpost citation-only allowlist
 #
-# CI does not cover, and why: full validate_pack (non-trivial parser; a fork
-# invites permanent drift), RR-B-30 packs.html regeneration equality (needs the
+# CI does not cover, and why: full validate_pack beyond the mechanical licence
+# subset and the signpost shape check (frontmatter, chapter links, name match,
+# and the all-packs CLI stay local; a fork of the rest invites permanent drift),
+# RR-B-30 packs.html regeneration equality (needs the
 # generator), full map threshold and note logic, full classification semantics
 # beyond set coverage, generate_capability_map --check replay (definitionally
 # generator execution), website YAML feature titles claiming "N packs"
