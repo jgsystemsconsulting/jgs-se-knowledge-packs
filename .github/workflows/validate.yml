@@ -1044,9 +1044,11 @@ jobs:
         run: |
           python3 - <<'PY'
           # Pure-data twin of tooling/validate_pack.py licence + shape rules;
-          # kind regexes and the field/tier literals mirror it exactly. One
-          # CI-only parse difference: a field that is blank after quote-strip
-          # is dropped, so an empty quoted value counts as missing downstream.
+          # citation-only, not repository code. Column-0 scalar scan matches
+          # its parse_simple_yaml; the two kind regex literals match
+          # tooling/check_release.py, flags re.I | re.M, full SKILL.md text.
+          # CI-only parse difference: a field blank after quote-strip is
+          # dropped, so an empty quoted value counts as missing downstream.
           # Signpost packs are shape-checked only (no LICENSE, no provenance);
           # the orchestrator pack (packs/se) skips both gates.
           import re, sys, pathlib
@@ -1099,7 +1101,7 @@ jobs:
                   fails += 1
                   continue
               if kind == "both":
-                  print(f"::error file={pack / 'SKILL.md'}::[pack-licence] {slug}: SKILL.md matches both signpost and orchestrator kind")
+                  print(f"::error file={pack}::[pack-licence] {slug}: regexes matched")
                   fails += 1
                   continue
               if kind == "signpost":
@@ -1108,8 +1110,8 @@ jobs:
                   extra = sorted(c.name for c in pack.iterdir() if c.name not in ALLOWED)
                   bad_type = sorted(c.name for c in pack.iterdir() if c.name in ALLOWED and not c.is_file())
                   if extra or missing or bad_type:
-                      name = extra[0] if extra else (missing[0] if missing else bad_type[0])
-                      print(f"::error file={pack / name}::[signpost-shape] {slug}: signpost packs contain exactly SKILL.md and PACK.yaml")
+                      fact = extra[0] if extra else (missing[0] if missing else bad_type[0])
+                      print(f"::error file={pack}::[signpost-shape] {slug}: extra path {fact}")
                       fails += 1
                   continue
               if kind == "orchestrator":
