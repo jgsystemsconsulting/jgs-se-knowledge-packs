@@ -3,11 +3,11 @@ date: 2026-10-28
 project: jgs-se-knowledge-packs
 mode: light
 rounds: 1
-input_digest: de55ef14804318932f28783a8d83c20fac816cf82ea2cd8ab90b63682f7021ca
+input_digest: b7386b93df62320afe6f2e039b9237fd6a90caa663f23d774cd3cfa1b43cb002
 open_objections: []
 ---
 
-# Packages: jgs-se-knowledge-packs, 2026-10-28 (light re-run, groom)
+# Packages: jgs-se-knowledge-packs, 2026-10-28 (light re-run, groom; re-run #2 post-1.23.0 same day)
 
 Re-run after the four 2026-10-27 scoped cuts all reached done. Wave: value 3, risk 1, cohesion 0. Merge unioned to four packages, no conflicts; triage zero_critical true. Order below is execution order.
 
@@ -46,15 +46,13 @@ Re-run after the four 2026-10-27 scoped cuts all reached done. Wave: value 3, ri
 
 ## P60 - cursor-plugin-ssot-gates
 
-- **id**: P60; **name**: cursor-plugin-ssot-gates; **size**: M; **status**: proposed; **corroboration**: 1 (risk); **deps**: none; **promoted_ids**: []
-- **problem**: `.cursor-plugin/plugin.json` is a live install surface outside both version single-source and CI: its `version` is 1.22.0 while RELEASE-INFO, CHANGELOG, and `.claude-plugin/plugin.json` carry 1.22.1; `tooling/check_release.py:L1167` and the validate.yml version-SSOT heredoc read only the claude manifest; check 6b (Cursor skills list, `check_release.py:L1363-1365`) runs local-only. A tag or marketplace publish can ship a stale Cursor version and uncaught skill-list drift under green CI.
-- **evidence**: .cursor-plugin/plugin.json:L5 (`"version": "1.22.0"`); .claude-plugin/plugin.json:L4 (`"version": "1.22.1"`); RELEASE-INFO.txt:L3 (`Version: 1.22.1`); tooling/check_release.py:L1167; .github/workflows/validate.yml:L1183-1187; tooling/check_release.py:L1363-1365.
-- **in_scope**: bump `.cursor-plugin/plugin.json` to 1.22.1; extend the version SSOT (check_release.py, validate.yml heredoc, test_ci_gate parity pin) to cover the cursor manifest; mirror check 6b into the CI pure-data twin with a parity pin; document the pre-tag local-check path in the release runbook.
-- **out_scope**: full validate_pack-in-CI (b-38); CI twin rewrite (b-37); gen_packs_page probe (b-40); visual suite (b-18); commercial_use:false policy changes; product version bump.
-- **why_now**: Cursor is a live install surface; the stale version ships under green CI until the SSOT extends.
-- **triage notes**: PASS, size M. All four loci verified by triage against current bytes.
+- **id**: P60; **name**: cursor-plugin-ssot-gates; **size**: L; **status**: proposed; **corroboration**: 3 (value, risk, cohesion); **deps**: none; **promoted_ids**: []
+- **problem**: `.cursor-plugin/plugin.json` is a live install surface outside both version single-source and CI. After the 1.23.0 ship it carries version 1.22.0 while RELEASE-INFO, README, and `.claude-plugin/plugin.json` carry 1.23.0, so the gap is one release old and widens every release. `tooling/check_release.py:L1167` and the validate.yml version-SSOT heredoc read only the claude manifest; `tooling/test_ci_gate.py:L232-233` VERSION_BASE pins only claude; check 6b (Cursor skills list, `check_release.py:L1363-1365`) runs local-only. The 1.23.0 changelog section explicitly notes the gap and names P60.
+- **evidence**: .cursor-plugin/plugin.json:L5 (`"version": "1.22.0"`); .claude-plugin/plugin.json:L4 (`"version": "1.23.0"`); RELEASE-INFO.txt:L3; CHANGELOG.md 1.23.0 Noted bullet; tooling/check_release.py:L1167,L1363-1365; .github/workflows/validate.yml:L1183-1184; tooling/test_ci_gate.py:L232-233.
+- **in_scope**: bump `.cursor-plugin/plugin.json` to 1.23.0; extend the version SSOT (check_release.py, validate.yml heredoc, test_ci_gate VERSION_BASE parity pin) to the cursor manifest; mirror check 6b into the CI pure-data twin with a parity pin; reconcile the cursor skills array against live packs under 6b's commercial_use:false exclusion; document the pre-tag local-check path. Version and skills-list work lands as one package (cohesion lens: one data flow across the two manifests).
+- **out_scope**: full validate_pack-in-CI (b-38); CI twin rewrite (b-37); gen_packs_page probe (b-40); standing-drift (b-33); sitemap lastmod freshness (create-release-1); visual suite (b-18); marketplace skills-path schema rewrites; product version bump.
+- **why_now**: every further release or marketplace publish widens silent Cursor drift under a version SSOT that cannot see the cursor manifest; belongs before the next pack registration.
+- **triage notes**: PASS, size L (grown from M: SSOT extension touches three gate files plus the 6b mirror and skills reconciliation; still one /superpowers-process full run). Re-run #2 upgrade: corroboration 1 to 3 (value+risk+cohesion all proposed the same work); scope refreshed post-1.23.0.
 - **first_prompt**: `/superpowers-process full extend version and skill-list SSOT gates to the cursor plugin manifest`
 
-## Execution order
 
-P57 → P58 → P59 → P60 (no deps; triage order). Each is one `/superpowers-process full` run.
