@@ -352,9 +352,9 @@ Rules of construction:
 | nasa-risk | ch05-continuous-risk-management.md | Continuous risk management, from Version 2.0 November 2024. |
 | nasa-risk | ch06-organizational-integration.md | Organizational and managerial aspects of objectives-driven risk management, from Version 2.0 November 2024. |
 | nasa-risk | ch07-application-examples.md | Application examples of RIDM and CRM execution, from Version 2.0 November 2024. |
-| nasa-risk | cheatsheet.md (support file) | Cheatsheet for pack |
-| nasa-risk | glossary.md (support file) | Glossary for pack |
-| nasa-risk | patterns.md (support file) | Patterns for pack |
+| nasa-risk | cheatsheet.md (support file) | Cheatsheet pack |
+| nasa-risk | glossary.md (support file) | Glossary pack |
+| nasa-risk | patterns.md (support file) | Patterns pack |
 
 ## 15. Opportunity/Benefit Management
 

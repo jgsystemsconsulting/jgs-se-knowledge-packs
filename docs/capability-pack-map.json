@@ -1199,17 +1199,17 @@
         {
           "pack": "nasa-risk",
           "chapter": "cheatsheet.md (support file)",
-          "note": "Cheatsheet for pack"
+          "note": "Cheatsheet pack"
         },
         {
           "pack": "nasa-risk",
           "chapter": "glossary.md (support file)",
-          "note": "Glossary for pack"
+          "note": "Glossary pack"
         },
         {
           "pack": "nasa-risk",
           "chapter": "patterns.md (support file)",
-          "note": "Patterns for pack"
+          "note": "Patterns pack"
         }
       ]
     },

@@ -3696,17 +3696,17 @@
     {
       "pack": "nasa-risk",
       "chapter": "cheatsheet.md",
-      "note": "Cheatsheet for pack"
+      "note": "Cheatsheet pack"
     },
     {
       "pack": "nasa-risk",
       "chapter": "glossary.md",
-      "note": "Glossary for pack"
+      "note": "Glossary pack"
     },
     {
       "pack": "nasa-risk",
       "chapter": "patterns.md",
-      "note": "Patterns for pack"
+      "note": "Patterns pack"
     }
   ]
 }
