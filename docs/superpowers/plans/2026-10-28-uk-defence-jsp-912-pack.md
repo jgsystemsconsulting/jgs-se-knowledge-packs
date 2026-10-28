@@ -82,7 +82,7 @@ Page-level pin from the spec, not re-verified by this plan. Task 1 re-vets it:
 - Part 2 PDF: https://assets.publishing.service.gov.uk/media/6634dcae1834d96a0aa6d0da/JSP_912_Part_2_V3.0.pdf
 - OGL deed: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
 - Publisher: Ministry of Defence. Published 3 February 2014. Page last updated 3 May 2024. Update note names Parts 1 and 2.
-- Spec fetch on 2026-10-28: both PDFs HTTP 200, `%PDF-1.7`. Part 1: 360,991 bytes, 16 pages, running footer `JSP 912 Pt 1 (V3.0 Mar 24)`. Part 2: 1,326,830 bytes, 65 pages, running footer `JSP 912 Pt 2 (V3.0 Mar 24)`. Cover line "Version 3.0 Oct 2021" on Part 1 is stale and is not the pin. Page footer states Open Government Licence v3.0 except where otherwise stated, and Crown copyright. No withdrawn notice. No login wall. "Reproduced" appears only as ordinary prose, not as a licence restriction.
+- Spec fetch on 2026-10-28: both PDFs HTTP 200, `%PDF-1.7`. Part 1: 360,991 bytes, 16 pages, running footer `JSP 912 Pt 1 (V3.0 Mar 24)`. Part 2: 1,326,830 bytes, 65 pages, running footer `JSP 912 Pt 2 (V3.0 Mar 24)`. Cover line "Version 3.0 Oct 2021" on Part 1 is stale and is not the pin. Page footer states Open Government Licence v3.0 except where otherwise stated, and Crown copyright. No withdrawn notice (grep the page HTML for `Withdrawn`: zero hits required). No login wall. "Reproduced" appears only as ordinary prose, not as a licence restriction.
 - Task 1 records the execution-time byte sizes and page counts. The spec numbers are a check, not a lock, except the V3.0 Mar 2024 footer sentence, which is a stop condition.
 
 Provisional chapter map, discarded wherever either contents list disagrees:
@@ -224,7 +224,7 @@ Rules:
 - Do not exceed 10 files. Do not go under 6. If the body cannot be covered in 6 to 10 chapters without inventing a theme, stop and report both contents lists. Do not write an 11th chapter.
 - Six named roles in Part 1 section 3 stay six. Do not invent a seventh role. Those roles land in the roles chapter and in the cheatsheet, not in six separate chapters.
 
-Basenames must match `^ch[0-9]{2}-[a-z0-9-]+\.md$`. Save the frozen list in the executor notes. Tasks 2, 3, and 4 will read it. Call the file count `CHAPTER_COUNT`.
+Basenames must match `^ch[0-9]{2}-[a-z0-9-]+\.md$`. Save the frozen list to `.superpowers/sdd/2026-10-28-uk-defence-jsp-912-pack/executor-notes.md` (create the directory). Tasks 2, 3, and 4 read that file. Call the file count `CHAPTER_COUNT`.
 
 - [ ] **Step 3: Write `packs/jsp-912/PACK.yaml`**
 
@@ -602,7 +602,7 @@ partially built VET_DATE (jsp-815, jsp-376, jsp-936, and jsp-912 done, other JSP
 
 `VET_DATE` is the date from Task 1, not the token. Keep the row number `4` and the family name `` `uk-defence` family (JSP series first) ``.
 
-Unranked-remainder sentence (line 26). Current text names JSP 912 inside `the unranked remainder of the uk-defence family (JSP 912, JSP 940, and the DEF-STANs)`. Drop JSP 912 from that parenthesis. Keep JSP 940 and the DEF-STANs. Do not mark JSP 940 built.
+Unranked-remainder sentence (line 26). The live line reads `the unranked remainder of the uk-defence family (JSP 912, JSP 940, DEF-STANs) and telecom-3gpp need a new ranking pass.` (note: no "and the" before DEF-STANs; re-grep at execution). Anchor by substring `unranked remainder of the uk-defence family (JSP 912, JSP 940, DEF-STANs)` and replace with `unranked remainder of the uk-defence family (JSP 940, DEF-STANs)` — delete `JSP 912, ` only. Keep JSP 940 and the DEF-STANs. Do not mark JSP 940 built.
 
 Catalogue-count sentence (line 30). Current: `The catalogue holds 82 packs: 73 full reconstructed content packs`. Replacement: `The catalogue holds 83 packs: 74 full reconstructed content packs`. Leave the eight signpost names and the `/se` orchestrator clause as they are.
 
