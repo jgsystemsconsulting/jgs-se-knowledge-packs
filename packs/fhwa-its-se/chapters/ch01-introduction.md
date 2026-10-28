@@ -22,7 +22,7 @@ Navigation follows the project story: chapter 2 defines terms, principles, life 
 
 ## Mental Models
 
-- Learning tool over rulebook: the introduction states the document will not make anyone a systems engineering expert, and it points to the comprehensive external resources it flags along the way.
+- Learning tool over rulebook: the introduction states the document will not make anyone a systems engineering expert, and it points to the wide set of external resources it flags along the way.
 - Icons as a reading filter: a reader can chase only warnings, only tailoring notes, or only regulation references, depending on the question at hand.
 - Federal-aid context from the start: the regulation and its FTA counterpart are treated as standing constraints on ITS projects funded from the Highway Trust Fund, with the document as preparation rather than substitute.
 
