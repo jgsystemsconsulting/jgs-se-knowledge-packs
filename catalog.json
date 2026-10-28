@@ -171,13 +171,13 @@
     },
     {
       "slug": "nasa-risk",
-      "title": "NASA Risk Management Handbook (NASA/SP-2011-3422)",
+      "title": "NASA Risk Management Handbook, Version 2.0 (NASA/SP-20240014019, NASA/SP-20240014326)",
       "publisher": "NASA",
-      "source_version": "v1.0 (November 2011)",
+      "source_version": "Version 2.0 (November 2024)",
       "license": "Public Domain (US Government work)",
       "license_tier": 1,
       "commercial_use": true,
-      "chapters": 10,
+      "chapters": 7,
       "status": "live"
     },
     {

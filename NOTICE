@@ -72,7 +72,8 @@ Third-party source attributions (one block per shipped content pack)
            obligation; NASA does not endorse this pack. See packs/nasa-npr-7123/LICENSE.
 
 [pack: nasa-risk]
-  Source : NASA Risk Management Handbook (NASA/SP-2011-3422)
+  Source : NASA Risk Management Handbook, Version 2.0 (November 2024)
+           Part 1 NASA/SP-20240014019, Part 2 NASA/SP-20240014326
   Author : NASA
   Licence: Public Domain -- US Government work (17 U.S.C. 105)
   Changes: reconstructed as synthesized reference notes (not a reproduction)

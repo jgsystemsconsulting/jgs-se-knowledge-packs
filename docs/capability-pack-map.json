@@ -1142,71 +1142,6 @@
           "note": "M&S risk assessment and decision-maker reporting (also measurement)"
         },
         {
-          "pack": "nasa-risk",
-          "chapter": "ch01-introduction-and-rm-overview.md",
-          "note": "RIDM/CRM risk framework overview"
-        },
-        {
-          "pack": "nasa-risk",
-          "chapter": "ch02-ridm-crm-integration.md",
-          "note": "RIDM and CRM integration"
-        },
-        {
-          "pack": "nasa-risk",
-          "chapter": "ch03-ridm-part1-identification-of-alternatives.md",
-          "note": "Identifying decision alternatives (also decision analysis)"
-        },
-        {
-          "pack": "nasa-risk",
-          "chapter": "ch04-ridm-part2-risk-analysis-of-alternatives.md",
-          "note": "Risk analysis of alternatives"
-        },
-        {
-          "pack": "nasa-risk",
-          "chapter": "ch05-ridm-part3-risk-informed-selection.md",
-          "note": "Risk-informed selection"
-        },
-        {
-          "pack": "nasa-risk",
-          "chapter": "ch06-crm-initialisation-and-planning.md",
-          "note": "CRM initialization and planning"
-        },
-        {
-          "pack": "nasa-risk",
-          "chapter": "ch07-crm-identify-and-analyze.md",
-          "note": "CRM identify and analyze"
-        },
-        {
-          "pack": "nasa-risk",
-          "chapter": "ch08-crm-plan-step.md",
-          "note": "CRM plan step"
-        },
-        {
-          "pack": "nasa-risk",
-          "chapter": "ch09-crm-track-control-communicate.md",
-          "note": "CRM track/control/communicate"
-        },
-        {
-          "pack": "nasa-risk",
-          "chapter": "ch10-enterprise-risks-and-appendices.md",
-          "note": "Enterprise risks and appendices"
-        },
-        {
-          "pack": "nasa-risk",
-          "chapter": "cheatsheet.md (support file)",
-          "note": "Cheatsheet / quick reference"
-        },
-        {
-          "pack": "nasa-risk",
-          "chapter": "glossary.md (support file)",
-          "note": "Glossary for the pack"
-        },
-        {
-          "pack": "nasa-risk",
-          "chapter": "patterns.md (support file)",
-          "note": "Patterns/practice heuristics"
-        },
-        {
           "pack": "nasa-se-handbook",
           "chapter": "ch30-6-4-technical-risk-management.md",
           "note": "Technical risk management process"
@@ -1225,6 +1160,56 @@
           "pack": "nist-ai-rmf",
           "chapter": "ch07-manage-function.md",
           "note": "Manage function: risk treatment"
+        },
+        {
+          "pack": "nasa-risk",
+          "chapter": "ch01-introduction-and-scope.md",
+          "note": "Introduction and scope of the handbook, from Version 2.0 November 2024."
+        },
+        {
+          "pack": "nasa-risk",
+          "chapter": "ch02-objectives-driven-framework.md",
+          "note": "Foundations and key elements of the objectives-driven risk management framework, from Version 2.0 November 2024."
+        },
+        {
+          "pack": "nasa-risk",
+          "chapter": "ch03-risk-models-and-posture.md",
+          "note": "Risk models, analysis, and decision concepts including risk posture, from Version 2.0 November 2024."
+        },
+        {
+          "pack": "nasa-risk",
+          "chapter": "ch04-risk-informed-decision-making.md",
+          "note": "Risk-informed decision making, from Version 2.0 November 2024."
+        },
+        {
+          "pack": "nasa-risk",
+          "chapter": "ch05-continuous-risk-management.md",
+          "note": "Continuous risk management, from Version 2.0 November 2024."
+        },
+        {
+          "pack": "nasa-risk",
+          "chapter": "ch06-organizational-integration.md",
+          "note": "Organizational and managerial aspects of objectives-driven risk management, from Version 2.0 November 2024."
+        },
+        {
+          "pack": "nasa-risk",
+          "chapter": "ch07-application-examples.md",
+          "note": "Application examples of RIDM and CRM execution, from Version 2.0 November 2024."
+        },
+        {
+          "pack": "nasa-risk",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet for pack"
+        },
+        {
+          "pack": "nasa-risk",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for pack"
+        },
+        {
+          "pack": "nasa-risk",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns for pack"
         }
       ]
     },

@@ -15,6 +15,10 @@ All notable changes to this project are documented here. Format follows
 
 - `jsp-912` content pack from JSP 912 Parts 1 and 2, V3.0 (March 2024), reconstructed notes, registered on the catalogue surfaces.
 
+### Changed
+
+- `nasa-risk` rebuilt from NASA Risk Management Handbook, Version 2.0 (November 2024): Part 1 NASA/SP-20240014019 and Part 2 NASA/SP-20240014326. The November 2011 pin NASA/SP-2011-3422 is retired.
+
 ## [1.23.0]: 2026-10-28
 
 ### Added

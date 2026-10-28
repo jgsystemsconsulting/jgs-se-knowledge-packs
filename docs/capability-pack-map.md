@@ -37,7 +37,7 @@ Rules of construction:
 | 11. Digital Engineering & Digital Twins | 25 |
 | 12. Configuration Management & Baselines | 20 |
 | 13. Data & Information Management | 7 |
-| 14. Risk Management | 27 |
+| 14. Risk Management | 24 |
 | 15. Opportunity/Benefit Management | 8 |
 | 16. Decision Analysis & Trade Studies | 5 |
 | 17. Technical Planning & Work Breakdown | 13 |
@@ -56,7 +56,7 @@ Rules of construction:
 | 30. Standards, Tailoring & Process Models | 68 |
 | 31. Specialty Engineering | 7 |
 | 32. Assurance & System Assurance | 16 |
-| **Total** | **744** |
+| **Total** | **741** |
 
 ## 1. Systems Thinking & Fundamentals
 
@@ -341,23 +341,20 @@ Rules of construction:
 | dod-vva-rpg | ch10-risk-and-vva.md | Risk drives VV&A depth and accreditation acceptance framing (also modeling) |
 | doe-o-413-3 | ch05-risk-safety-and-exceptions.md | Risk-informed management, safety/security interfaces, and exception paths |
 | nasa-ms-7009 | ch06-ms-risk-and-decision-reporting.md | M&S risk assessment and decision-maker reporting (also measurement) |
-| nasa-risk | ch01-introduction-and-rm-overview.md | RIDM/CRM risk framework overview |
-| nasa-risk | ch02-ridm-crm-integration.md | RIDM and CRM integration |
-| nasa-risk | ch03-ridm-part1-identification-of-alternatives.md | Identifying decision alternatives (also decision analysis) |
-| nasa-risk | ch04-ridm-part2-risk-analysis-of-alternatives.md | Risk analysis of alternatives |
-| nasa-risk | ch05-ridm-part3-risk-informed-selection.md | Risk-informed selection |
-| nasa-risk | ch06-crm-initialisation-and-planning.md | CRM initialization and planning |
-| nasa-risk | ch07-crm-identify-and-analyze.md | CRM identify and analyze |
-| nasa-risk | ch08-crm-plan-step.md | CRM plan step |
-| nasa-risk | ch09-crm-track-control-communicate.md | CRM track/control/communicate |
-| nasa-risk | ch10-enterprise-risks-and-appendices.md | Enterprise risks and appendices |
-| nasa-risk | cheatsheet.md (support file) | Cheatsheet / quick reference |
-| nasa-risk | glossary.md (support file) | Glossary for the pack |
-| nasa-risk | patterns.md (support file) | Patterns/practice heuristics |
 | nasa-se-handbook | ch30-6-4-technical-risk-management.md | Technical risk management process |
 | nist-ai-rmf | ch01-framing-ai-risk.md | Framing AI risk |
 | nist-ai-rmf | ch05-map-function.md | Map function: risk context |
 | nist-ai-rmf | ch07-manage-function.md | Manage function: risk treatment |
+| nasa-risk | ch01-introduction-and-scope.md | Introduction and scope of the handbook, from Version 2.0 November 2024. |
+| nasa-risk | ch02-objectives-driven-framework.md | Foundations and key elements of the objectives-driven risk management framework, from Version 2.0 November 2024. |
+| nasa-risk | ch03-risk-models-and-posture.md | Risk models, analysis, and decision concepts including risk posture, from Version 2.0 November 2024. |
+| nasa-risk | ch04-risk-informed-decision-making.md | Risk-informed decision making, from Version 2.0 November 2024. |
+| nasa-risk | ch05-continuous-risk-management.md | Continuous risk management, from Version 2.0 November 2024. |
+| nasa-risk | ch06-organizational-integration.md | Organizational and managerial aspects of objectives-driven risk management, from Version 2.0 November 2024. |
+| nasa-risk | ch07-application-examples.md | Application examples of RIDM and CRM execution, from Version 2.0 November 2024. |
+| nasa-risk | cheatsheet.md (support file) | Cheatsheet for pack |
+| nasa-risk | glossary.md (support file) | Glossary for pack |
+| nasa-risk | patterns.md (support file) | Patterns for pack |
 
 ## 15. Opportunity/Benefit Management
 

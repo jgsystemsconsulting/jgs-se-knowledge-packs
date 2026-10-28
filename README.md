@@ -128,7 +128,7 @@ always-loaded `SKILL.md` index inlined into one file. Full detail and the per-ag
 | `nasa-se-handbook` | NASA Systems Engineering Handbook | Public domain (US gov) | 🟢 1 | ✅ live (34 chapters) |
 | `nasa-se-expanded` | Expanded Guidance for NASA SE (SP-2016-6105-SUPPL Vol 1) | Public domain (US gov) | 🟢 1 | ✅ live (6 chapters) |
 | `nasa-npr-7123` | NASA NPR 7123.1D: SE Processes & Requirements | Public domain (US gov) | 🟢 1 | ✅ live (9 chapters) |
-| `nasa-risk` | NASA Risk Management Handbook | Public domain (US gov) | 🟢 1 | ✅ live (10 chapters) |
+| `nasa-risk` | NASA Risk Management Handbook | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
 | `nasa-system-safety` | NASA System Safety Handbook v2 | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
 | `nasa-pra` | NASA PRA Procedures Guide 2nd ed (NASA/SP-2011-3421) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `nasa-hsi` | NASA Human Systems Integration Guide | Public domain (US gov) | 🟢 1 | ✅ live (9 chapters) |
