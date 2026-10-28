@@ -26,7 +26,7 @@ honest zero; merge reused both prior ids; triage zero_critical). No conflicts.
 
 ## P42 - fhwa-its-se-pack
 
-- **id**: P42; **name**: fhwa-its-se-pack; **size**: L; **status**: ready; **corroboration**: 2 (value, risk); **deps**: none; **promoted_ids**: [b-32]
+- **id**: P42; **name**: fhwa-its-se-pack; **size**: L; **status**: done (2026-10-28; EXECUTED + IVL logs in docs/superpowers/plans/); **corroboration**: 2 (value, risk); **deps**: none; **promoted_ids**: [b-32]
 - **problem**: fhwa-its-se is the sole remaining named Proposed full pack that is tier 1 public domain, sector Civil infrastructure scored FULL, and still has no packs/ folder and no numbered build-order rank (backlog b-32, promoted into this package). Risk bite: building without a pinned primary FHWA/USDOT ITS SE source set invites construction-code or non-SE dumps; leaving b-32 unresolved keeps intake contradictory (FULL sector vs unranked candidate).
 - **evidence**: docs/candidate-packs.md:L74 (fhwa-its-se tier 1 candidate), L51 (Civil infrastructure FULL row), L31 (unreached sectors list); docs/superpowers/backlog.md b-32 row (promoted into P42); packs/fhwa* absent (glob verified empty).
 - **in_scope**: select and pin one FHWA/USDOT ITS systems-engineering primary source set; record the tier-1 public-domain licence statement in PACK.yaml/LICENSE; resolve the b-32 ranking inside the build (numbered build-order row and/or candidate-packs built mark); build packs/fhwa-its-se per PACK-SPEC; full registration (catalog.json, source-watchlist, SKILLS.md, /se routing, capability map/classification, NOTICE, landing pages/plugin paths as required); gates green on touched surfaces.
