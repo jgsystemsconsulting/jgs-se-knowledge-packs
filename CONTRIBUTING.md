@@ -116,7 +116,7 @@ python tooling/validate_pack.py packs/<slug>
 
 Run `python tooling/check_release.py` on the exact commit you tag. PASS is required. The PASS line reads `RELEASE CHECK: PASS (v<version> @ <short-sha>)` and the sha must match the commit you tag; a `@ no-git` receipt never satisfies it.
 
-CI green is necessary but not sufficient.
+CI green is necessary but not sufficient. `.cursor-plugin/plugin.json` version is in that single-source with the claude manifest, `RELEASE-INFO.txt`, and `CHANGELOG.md`, and CI also checks the Cursor skills array against packs whose `PACK.yaml` does not contain `commercial_use: false`.
 
 Local-only classes: full pack validation, source-watch freshness, generator replay (capability map and packs.html), and tracked-sources emptiness. The check-by-check list stays in the header of [.github/workflows/validate.yml](.github/workflows/validate.yml) and in the docstring of `tooling/check_release.py`. Do not treat this section as that list.
 
