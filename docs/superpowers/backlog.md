@@ -138,7 +138,7 @@ Created 2026-09-14 by package-loop round 1 (input digest 460acaa9c226881a5467b37
 
 | b-40 | gen_packs_page.py and gen_pack_pages.py are live paired generators drifting without a sync note, shared helper, or golden-file check (advisory a-04) | site-gates triage (cohesion kill routing), 2026-10-27 | needs-info | .zcode/pkg-site-gates-bundle.md:L2708; tooling/gen_pack_pages.py vs gen_packs_page.py |
 
-| b-41 | uk-defence JSP tail (912/940/945/816/375/520) unranked in the numbered build order beyond jsp-936; maintainer ranking pending | growth triage (value kill routing), 2026-10-27 | needs-info | docs/candidate-packs.md:L19,L69; b-35 covers the Def Stan verify side |
+| b-41 | uk-defence JSP tail (912/940/945/816/375/520) unranked in the numbered build order beyond jsp-936; maintainer ranking pending | growth triage (value kill routing), 2026-10-27 | promoted | P57 (2026-10-28 packages doc): JSP 912 already ranked by research doc L79; 940/945/816/375/520 remain needs-info with b-35 covering the DEF-STAN verify side |
 
 | b-42 | mit-ocw-se pack build (planned catalog row, CC BY-NC-SA non-commercial) awaits maintainer ranking | growth triage (value kill routing), 2026-10-27 | needs-info | catalog.json planned[]; README planned-pack note; b-32 precedent |
 
@@ -147,3 +147,6 @@ Created 2026-09-14 by package-loop round 1 (input digest 460acaa9c226881a5467b37
 | b-44 | check_release leak/link single-read refactor deferred until the I/O cost actually bites (ex-P47; carries reverted b-14) | doc-truth triage (value+risk dual kill), 2026-10-27 | needs-info | tooling/check_release.py:L966-996; docs/superpowers/packages/2026-10-27-jgs-se-knowledge-packs-doc-truth-packages.md P47 |
 
 | b-45 | X3 rider: side-B stale-token assertion on check 4a (fail on "FAA (7)") runs inside P43 only if the human picks side B; drops entirely on side A | doc-truth triage, 2026-10-27 | needs-info | docs/superpowers/packages/2026-10-27-jgs-se-knowledge-packs-doc-truth-packages.md open_objections X3 |
+| b-46 | CONTRIBUTING.md pack-authoring TODO (fill PACK.yaml/LICENSE guidance) is scaffold-only, not an open defect; revisit only if a pack-author onboarding pass opens | package-loop triage round 1 (risk+value dual kill), 2026-10-28 | needs-info | CONTRIBUTING.md:L44 |
+| b-47 | Seven 2026-09-14 plans lack EXECUTED twins (align-website-yaml-versions, ci-link-policy-parity, ci-local-gate-coverage-gap, close-phase21-ship-surface, map-tooling-residual-harden, phase21-planning-ledger-close, validate-pack-signpost-parity); historical phase21 artifacts, mark done or dropped with evidence at next ledger-hygiene pass | package-loop triage round 1 (kill routing), 2026-10-28 | needs-info | docs/superpowers/plans/2026-09-14-*.md; RELEASE CHECK PASS v1.22.1 @ 9b3b81d supersedes their ship claims |
+| b-48 | Umbrella row for a-02..a-20 advisories from the 2026-10-26 findings review: all graded below the package bar; re-grade only if a future review re-opens one by id | package-loop triage round 1 (kill routing), 2026-10-28 | needs-info | docs/superpowers/reviews/2026-10-26-jgs-se-knowledge-packs-findings.md a-02..a-20 |
