@@ -11,7 +11,7 @@ description: "Knowledge pack synthesized from JSP 912 Human Factors Integration 
 
 Use this skill for questions about how UK Defence mandates and runs Human Factors Integration: what HFI is and how it differs from Human Factors Engineering, how it sits inside systems engineering and the Defence Lines of Development, the six HFI process stages (HFI-1.0 through HFI-6.0), tailoring, and the six MOD staff roles that carry it. It is a policy-and-process pack; it does not cover the Defence safety management system (use `jsp-815`), acquisition safety policy (use `jsp-376`), or dependable-AI direction (use `jsp-936`).
 
-**Source:** Contains public sector information licensed under Open Government Licence v3.0. JSP 912 Human Factors Integration in Defence Systems, Part 1 Directive and Part 2 Guidance, V3.0 (March 2024), Ministry of Defence, Crown copyright. Reconstructed reference notes, not reproductions; licence text and source link in [LICENSE](LICENSE).
+**Source:** Contains public sector information licensed under the Open Government Licence v3.0. JSP 912 Human Factors Integration in Defence Systems, Part 1 Directive and Part 2 Guidance, V3.0 (March 2024), Ministry of Defence, Crown copyright. Reconstructed reference notes, not reproductions; licence text and source link in [LICENSE](LICENSE).
 
 ## How to Use This Skill
 
