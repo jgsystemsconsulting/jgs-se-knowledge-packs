@@ -13,6 +13,7 @@ All notable changes to this project are documented here. Format follows
 
 ### Added
 
+- `fhwa-its-se` content pack from Systems Engineering for ITS, fourth generation (December 2022), reconstructed notes, registered on the catalogue surfaces.
 - `jsp-936` content pack from JSP 936 Part 1 Directive V1.1, reconstructed
   notes, registered on the catalogue surfaces.
 

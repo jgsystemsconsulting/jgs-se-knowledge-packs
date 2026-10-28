@@ -21,12 +21,13 @@ Build in this order:
 | 6 | `nhtsa-vehicle` plus `automotive-signpost` | full + signpost | built 2026-09-27 (nhtsa-vehicle and automotive-signpost). NHTSA material is public domain; the signpost maps ISO 26262 / ISO-SAE 21434 to open paths |
 | 7 | `nrc-nuclear`, `easa-rules` | full | built 2026-10-13 (nrc-nuclear 2026-10-12, easa-rules 2026-10-13). NRC guides are public domain; EASA Easy Access Rules are free downloads |
 | 8 | `rail-signpost` (built 2026-10-14), `space-signpost` (built 2026-10-14), `maritime-signpost` (built 2026-10-14) | signpost | Cheap to build, each takes a day, and together they close the sector map |
+| 9 | `fhwa-its-se` | full | built 2026-10-28. Tier-1 civil infrastructure, pinned to Systems Engineering for ITS, fourth generation (December 2022) |
 
 A signpost pack is one SKILL.md and one PACK.yaml with no reproduced source content, which is why items 2, 6, and 8 were cheap to land. They are built. The remaining full-pack work on this list is the unfinished part of the uk-defence family. Full packs follow the existing pack spec with no new tooling.
 
 ## Where the catalogue stands
 
-The catalogue holds 81 packs: 72 full reconstructed content packs, eight signpost packs (`automotive-signpost`, `avionics-signpost`, `functional-safety-signpost`, `maritime-signpost`, `omg-signpost`, `rail-signpost`, `se-standards-signpost`, `space-signpost`), and one `/se` orchestrator. Its sourcing is concentrated in six US federal publishers (NASA, DoD, FAA, NIST, GAO, DOE) plus SEBoK and OMG. Three expansion axes follow from that profile:
+The catalogue holds 82 packs: 73 full reconstructed content packs, eight signpost packs (`automotive-signpost`, `avionics-signpost`, `functional-safety-signpost`, `maritime-signpost`, `omg-signpost`, `rail-signpost`, `se-standards-signpost`, `space-signpost`), and one `/se` orchestrator. Its sourcing is concentrated in six US federal publishers (NASA, DoD, FAA, NIST, GAO, DOE) plus SEBoK and OMG. Three expansion axes follow from that profile:
 
 - New sectors the current sources cannot reach: medical devices, automotive, rail, nuclear, maritime, telecom, civil infrastructure.
 - New geographies: UK and European sources complement the US federal core, and OGL / EU-reuse material slots into licence tier 2 under the existing vetting rules.
@@ -71,7 +72,7 @@ Full packs follow docs/PACK-SPEC.md: SKILL.md, PACK.yaml, LICENSE, and chapters 
 - `nhtsa-vehicle` (built 2026-09-27) (tier 1). Sources: FMVSS selections, NHTSA Cybersecurity Best Practices for the Safety of Modern Vehicles (final 2022), automated-vehicles guidance. Public domain. Gives automotive engineers open primary content despite the ISO paywall.
 - `nrc-nuclear` (tier 1). Built 2026-10-12. Sources: NRC regulatory guides and selected NUREGs (digital systems, software assurance: NUREG-0800 chapters, RG 1.168 and siblings). Public domain, and a sibling to `nasa-system-safety` and the DOE packs already in the catalogue.
 - `easa-rules` (built 2026-10-13) (tier 2/3, vet per doc). Sources: EASA Easy Access Rules volumes and certification specs. Free downloads; reuse terms need per-document confirmation. Start with one volume relevant to software and systems (for example the rules covering 1309 safety objectives) rather than the whole library.
-- `fhwa-its-se` (tier 1). FHWA/USDOT systems-engineering guidance for intelligent transportation systems. Public domain, extends the catalogue into civil infrastructure with genuinely SE-shaped content rather than construction codes.
+- `fhwa-its-se` (built 2026-10-28) (tier 1). FHWA/USDOT systems-engineering guidance for intelligent transportation systems. Public domain, extends the catalogue into civil infrastructure with genuinely SE-shaped content rather than construction codes.
 - `telecom-3gpp` (tier 2, later). 3GPP and ETSI publish freely, but the audience (network engineering) overlaps systems-engineering agents less than the other sectors. Hold until earlier packs land; a signpost is the cheaper first step.
 
 ### Signpost packs

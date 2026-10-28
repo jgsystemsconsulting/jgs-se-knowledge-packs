@@ -6,7 +6,7 @@ SKILLS.md is hand-maintained. After a pack change, regenerate docs/packs.html wi
 
 # jgs-se-knowledge-packs — Pack Index
 
-72 packs (+8 signposts, +1 orchestrator) in this release. Each pack is an Agent Skill installed as `/<slug>`.
+73 packs (+8 signposts, +1 orchestrator) in this release. Each pack is an Agent Skill installed as `/<slug>`.
 
 | Pack | Source licence | Description |
 |------|----------------|-------------|
@@ -78,6 +78,7 @@ SKILLS.md is hand-maintained. After a pack change, regenerate docs/packs.html wi
 | [`jsp-815`](packs/jsp-815/SKILL.md) | Open Government Licence v3.0 | Synthesized reference notes from JSP 815 Defence Safety Management System V1.3 (Framework, Elements 1-12, Annexes A-F) and Annex H V1.2; ISO 45001 named, not reproduced. |
 | [`jsp-376`](packs/jsp-376/SKILL.md) | Open Government Licence v3.0 | Synthesized reference notes from JSP 376 Defence Acquisition Safety Policy V1.1 (April 2024); acquisition safety requirements, artefacts, and lifecycle application; builds on JSP 815, which is not reproduced; Chapter 4 unpublished in this issue. |
 | [`jsp-936`](packs/jsp-936/SKILL.md) | Open Government Licence v3.0 | Synthesized reference notes from JSP 936 Dependable Artificial Intelligence (AI) in Defence, Part 1: Directive, V1.1 (November 2024); dependable-AI direction for Defence; JSP 815 and JSP 376 named, not reproduced; Part 2 not in this pack. |
+| [`fhwa-its-se`](packs/fhwa-its-se/SKILL.md) | Public Domain (US Government work, 17 U.S.C.ɡ 105) | Synthesized reference notes from Systems Engineering for ITS, fourth generation (December 2022); ITS project SE for transportation agencies; INCOSE, ISO/IEC/IEEE 15288, NTCIP, IEEE, and SAE named, not reproduced. |
 | [`omg-signpost`](packs/omg-signpost/SKILL.md) | MIT (signpost) | **Signpost, not a pack** — points to the official OMG specs (UML, SysML, BPMN, UAF…) at omg.org with zero reproduced content. OMG specs can't be packaged (licence forbids it), so this cites where to get them. |
 | [`se-standards-signpost`](packs/se-standards-signpost/SKILL.md) | MIT (signpost) | **Signpost, not a pack** — the full SE standards landscape (ISO/IEC/IEEE 15288/24748/29148/42010, INCOSE SE Handbook & Vision 2035, SAE/EIA, ECSS, NATO AAP-48, CMMI, NIST SP 800-160…) with each standard's owner, redistributability status, and where to get it. Zero reproduced content; most are paywalled/all-rights-reserved and point to the owner, the open ones point to the real pack. |
 | [`se`](packs/se/SKILL.md) | MIT (orchestrator) | **Orchestrator, not a pack**: type `/se <question>` and it routes your systems-engineering question through a curated topic, agency, and deliverable map to the right pack(s), reads them, and answers with pack and chapter citations. Explicit invocation only; zero source content. |

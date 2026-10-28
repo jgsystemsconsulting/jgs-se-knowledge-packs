@@ -798,6 +798,17 @@
       "commercial_use": true,
       "chapters": 8,
       "status": "live"
+    },
+    {
+      "slug": "fhwa-its-se",
+      "title": "Systems Engineering for ITS",
+      "publisher": "Federal Highway Administration",
+      "source_version": "Systems Engineering for ITS, fourth generation (December 2022)",
+      "license": "Public Domain (US Government work, 17 U.S.C. § 105)",
+      "license_tier": 1,
+      "commercial_use": true,
+      "chapters": 7,
+      "status": "live"
     }
   ],
   "planned": [
