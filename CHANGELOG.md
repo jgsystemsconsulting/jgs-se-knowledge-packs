@@ -11,20 +11,25 @@ All notable changes to this project are documented here. Format follows
 
 ## [Unreleased]
 
+## [1.23.0]: 2026-10-28
+
 ### Added
 
 - `fhwa-its-se` content pack from Systems Engineering for ITS, fourth generation (December 2022), reconstructed notes, registered on the catalogue surfaces.
-- `jsp-936` content pack from JSP 936 Part 1 Directive V1.1, reconstructed
-  notes, registered on the catalogue surfaces.
+- `jsp-936` content pack from JSP 936 Part 1 Directive V1.1, reconstructed notes, registered on the catalogue surfaces.
 
 ### Changed
 
-- `.claude-plugin/plugin.json` now declares all 80 skill paths in the `skills` field
-  (the Claude Code plugin-manifest convention). The skills.sh crawler honours declared
-  manifest paths, so directory-page coverage should reach the full catalogue at its next
-  crawl. Installs were never affected; a local emulation of the crawler's discovery
-  (vercel-labs/skills `getPluginSkillPaths` plus a depth-1 walk of the declared parent
-  dirs) finds all 80 skills.
+- `.claude-plugin/plugin.json` declares all 82 skill paths. 73 content packs, 8 signposts, 1 orchestrator. The 80 figure was true on 2026-10-26 and went stale when `jsp-936` and `fhwa-its-se` registered.
+- Per-pack landing pages now cover the full live catalogue, `docs/packs/<slug>/index.html` for all 73 content packs, with `docs/sitemap.xml` generated from `catalog.json` rather than from the run list. A title-suffix collision is fixed for pack titles that already end in a colon phrase.
+- CI trust gates added since 1.22.1: pack licence and signpost shape, html-assets over `docs/*.html` and pack landing pages, sitemap and pack-page REV on the release gate, and `actions/checkout` pinned to the v4 commit SHA. The CONTRIBUTING registration checklist and pre-tag section were expanded to match.
+- Doc-truth fixes: PACK-SPEC install path points at the root installer, the website YAML family inventory matches the live catalogue, and shipped META keys and PACK-BACKLOG pointers are dropped from the build orchestrator.
+
+### Noted, not a change
+
+- `.cursor-plugin/plugin.json` stays at version 1.22.0 and lists 79 skills. Its version is outside the single-source by design. Closing that gap is P60.
+
+Catalogue line: 73 content packs, 8 signposts, 1 orchestrator, 82 skills.
 
 ## [1.22.1]: 2026-10-11
 
