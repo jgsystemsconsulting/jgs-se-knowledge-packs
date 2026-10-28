@@ -712,7 +712,7 @@ Replace the summary cell so it says 12 findings remain, not 13. Replace the evid
 Summary cell, substance required:
 
 ```text
-12 drift findings stand recorded as watchlist bookkeeping after the faa-ams-vv rebuild left this list: pack content is behind the publisher's observed revisions and no rebuild has been decided for the remaining rows
+12 drift findings stand recorded as watchlist bookkeeping after the V&V guidelines rebuild left this list: pack content is behind the publisher's observed revisions and no rebuild has been decided for the remaining rows
 ```
 
 Evidence cell, substance required:
@@ -799,8 +799,8 @@ Per-task brief: `.superpowers/sdd/2026-10-28-rebuild-faa-ams-vv-v4/task-4-brief.
 - [ ] **Step 1: 2017-pin grep and the manual README / SKILLS.md check**
 
 ```bash
-rg -n "April 2017" packs/faa-ams-vv catalog.json NOTICE
-rg -n "Version 3.0" packs/faa-ams-vv catalog.json NOTICE
+rg -n "April 2017" packs/faa-ams-vv
+rg -n "Version 3.0" packs/faa-ams-vv
 rg -n "faa-ams-vv" docs/superpowers/backlog.md
 ```
 
@@ -882,7 +882,7 @@ All must pass before the cut is done. Commands are gates, not suggestions.
 7. `python tooling/generate_capability_map.py --generated-on <VET_DATE> --sync-md` regenerates without a notes-length refusal. Re-run the capability-map check after generation.
 8. `python tooling/check_source_watch.py` exits 0. `faa-ams-vv` `version` equals catalog `source_version`. No other slug's `version` changed. CAUTION: no gate compares watch `version` to catalog `source_version`. The three-surface byte-match in Task 3 Step 8 is the check. Record only after the catalog row carries the new `source_version`.
 9. `python tooling/check_release.py` exits 0, or its only new findings are outside this pack and get named, not fixed here.
-10. `rg -n "April 2017" packs/faa-ams-vv catalog.json NOTICE` returns nothing. `rg -n "Version 3.0" packs/faa-ams-vv catalog.json NOTICE` returns nothing. Separately confirm `README.md` no longer says `v3.0` or `(7 chapters)` for faa-ams-vv and the `SKILLS.md` row shows Version 4.0. No sentinel test covers README or SKILLS.md. Verify by eye and record the result in the run notes.
+10. `rg -n "April 2017" packs/faa-ams-vv` returns nothing. `rg -n "Version 3.0" packs/faa-ams-vv` returns nothing. Separately confirm `README.md` no longer says `v3.0` or `(7 chapters)` for faa-ams-vv and the `SKILLS.md` row shows Version 4.0. No sentinel test covers README or SKILLS.md. Verify by eye and record the result in the run notes.
 11. `rg -n "faa-ams-vv" docs/superpowers/backlog.md` returns no hit on the `source-watch-calibrate-and-wire-2` row. Hits on other rows are out of scope.
 12. Chapter-file count is between 3 and 6. `build.chapters` equals that count. Catalog `chapters` equals that count.
 13. No URL string in `PACK.yaml` or `catalog.json`. `git ls-files sources/` is empty.
