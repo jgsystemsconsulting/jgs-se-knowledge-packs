@@ -71,7 +71,7 @@ standard requires for this repo and exits non-zero on any failure:
 
 stdlib only. This is a LOCAL/trusted gate and may run repo code; the CI workflow
 (.github/workflows/validate.yml) inlines its own checks and never executes repo code.
-CI-covered: version, index, overlap, map/rules data invariants, html-assets,
+CI-covered: version (including .cursor-plugin/plugin.json), index, cursor skills, overlap, map/rules data invariants, html-assets,
 catalogue-count, catalog-live-set, routing-map, pack-quality (data subset),
 sitemap, pack-rev. Local-only required before tag: pack validation,
 packs.html freshness, full map/rules checks, replay.
@@ -1167,6 +1167,10 @@ def main() -> int:
         versions["plugin.json"] = json.loads((ROOT / ".claude-plugin/plugin.json").read_text(encoding="utf-8")).get("version", "")
     except Exception as e:
         fail(errs, f"[version] cannot read plugin.json: {e}")
+    try:
+        versions["cursor-plugin.json"] = json.loads((ROOT / ".cursor-plugin/plugin.json").read_text(encoding="utf-8")).get("version", "")
+    except Exception as e:
+        fail(errs, f"[version] cannot read cursor-plugin.json: {e}")
     cl = (ROOT / "CHANGELOG.md").read_text(encoding="utf-8") if (ROOT / "CHANGELOG.md").is_file() else ""
     m = re.search(r"^##\s*\[(\d+\.\d+\.\d+)\]", cl, re.M)
     versions["CHANGELOG.md"] = m.group(1) if m else ""

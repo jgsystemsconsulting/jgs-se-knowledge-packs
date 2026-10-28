@@ -15,6 +15,7 @@
 # tagging; CI green is not release-ready):
 #   Version single-source                      twins check_release 4 + 4a version part (pack-count claim check is local-only)
 #   SKILLS index count                         twins check_release 6 (complete port)
+#   Cursor skills eligible set                 twins check_release 6b (fail-closed on missing file; local silent-pass stays)
 #   Chapter basename overlap                   twins check_release 8, shared tooling/overlap-whitelist.txt
 #   Map and classification data invariants     pure-data subset of check_release 9 + 10
 #   HTML self-containment                      twins check_release 12 [html-assets] (literal twin (hosts + regex pins)) plus [brand-tokens] (P13)
@@ -1185,6 +1186,12 @@ jobs:
           except Exception as e:
               print(f"::error::[version] cannot read plugin.json: {e}")
               versions["plugin.json"] = ""
+          try:
+              with open(".cursor-plugin/plugin.json", encoding="utf-8") as fh:
+                  versions["cursor-plugin.json"] = json.load(fh).get("version", "")
+          except Exception as e:
+              print(f"::error::[version] cannot read cursor-plugin.json: {e}")
+              versions["cursor-plugin.json"] = ""
           cl = open("CHANGELOG.md", encoding="utf-8").read() if os.path.isfile("CHANGELOG.md") else ""
           m = re.search(r"^##\s*\[(\d+\.\d+\.\d+)\]", cl, re.M)
           versions["CHANGELOG.md"] = m.group(1) if m else ""
@@ -1349,6 +1356,63 @@ jobs:
               print(f"::error::[index] SKILLS.md lists {entry_count} packs but {len(packs)} are shipped")
               sys.exit(1)
           print(f"[index] SKILLS.md entries match shipped packs ({entry_count})")
+          PY
+
+      - name: Cursor skills eligible set
+        run: |
+          python3 - <<'PY'
+          # Twins tooling/check_release.py check 6b. Stdlib only. Does not import
+          # repository code (b-38). Differs from the local gate in one place:
+          # a missing .cursor-plugin/plugin.json fails closed here. Local check
+          # 6b silent-passes a missing file. Do not copy that skip into CI.
+          import json, re, sys, pathlib
+          root = pathlib.Path(".")
+          cursor_path = root / ".cursor-plugin" / "plugin.json"
+          if not cursor_path.is_file():
+              print("::error::[cursor] missing .cursor-plugin/plugin.json")
+              sys.exit(1)
+          try:
+              cursor = json.loads(cursor_path.read_text(encoding="utf-8"))
+          except Exception as e:
+              print(f"::error::[cursor] cannot read .cursor-plugin/plugin.json: {e}")
+              sys.exit(1)
+          skills_list = cursor.get("skills") if isinstance(cursor, dict) else None
+          if not isinstance(skills_list, list):
+              print("::error::[cursor] .cursor-plugin/plugin.json missing skills array")
+              sys.exit(1)
+          all_skill_dirs = sorted(p.parent for p in root.glob("packs/*/SKILL.md"))
+          nc_packs = {
+              p.name for p in all_skill_dirs
+              if (p / "PACK.yaml").is_file()
+              and "commercial_use: false" in (p / "PACK.yaml").read_text(
+                  encoding="utf-8", errors="ignore"
+              )
+          }
+          pack_slugs = {p.name for p in all_skill_dirs} - nc_packs
+          cursor_slugs = set()
+          for s in skills_list:
+              if not isinstance(s, str):
+                  continue
+              m = re.search(r"packs[/\\]([^/\\]+)[/\\]", s)
+              if m:
+                  cursor_slugs.add(m.group(1))
+          missing = sorted(pack_slugs - cursor_slugs)
+          extra = sorted(cursor_slugs - pack_slugs)
+          if len(cursor_slugs) != len(pack_slugs) or missing or extra:
+              detail = []
+              if missing:
+                  detail.append("missing=" + str(missing))
+              if extra:
+                  detail.append("extra=" + str(extra))
+              msg = (
+                  f"[cursor] manifest skills count {len(cursor_slugs)} "
+                  f"!= eligible packs {len(pack_slugs)}"
+              )
+              if detail:
+                  msg += " (" + "; ".join(detail) + ")"
+              print("::error::" + msg)
+              sys.exit(1)
+          print(f"[cursor] manifest skills match eligible packs ({len(cursor_slugs)})")
           PY
 
       - name: Chapter basename overlap
