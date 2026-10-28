@@ -3,9 +3,9 @@ name: jsp-912
 description: "Knowledge pack synthesized from JSP 912 Human Factors Integration in Defence Systems, Part 1 Directive and Part 2 Guidance, V3.0 (March 2024, Ministry of Defence, Open Government Licence v3.0): Human Factors Integration in Defence acquisition. SCOPE LIMITS: both parts in one pack; MOD policy, not statute; not Defence SMS (use jsp-815) and not acquisition-safety policy (use jsp-376); not dependable-AI direction (use jsp-936); JSP 375, JSP 536, JSP 815, JSP 822, and DEF-STANs named, not quoted; reconstructed reference notes, not MOD guidance, and no official status."
 ---
 
-# JSP 912: Human Factors Integration in Defence Systems, Parts 1 and 2
+# JSP 912: Human Factors Integration in Defence Systems (Parts 1 and 2)
 
-## When use
+## When to use
 
 **Prerequisites:** none required; plain Markdown. Familiarity with defence acquisition lifecycles (CADMID, business cases) helps; `glossary.md` defines MOD-specific terms.
 
@@ -13,12 +13,12 @@ Use this skill for questions about how UK Defence mandates and runs Human Factor
 
 **Source:** Contains public sector information licensed under Open Government Licence v3.0. JSP 912 Human Factors Integration in Defence Systems, Part 1 Directive and Part 2 Guidance, V3.0 (March 2024), Ministry of Defence, Crown copyright. Reconstructed reference notes, not reproductions; licence text and source link in [LICENSE](LICENSE).
 
-## How Use Skill
+## How to Use This Skill
 
 - **Without arguments**: read Core Frameworks & Mental Models below.
-- **With topic**: use Topic Index and follow the arrow to the chapter.
-- **With role or stage-gate question**: use Chapter Index and read the matching chapter.
-- **For term** use `glossary.md`; **for stage gate or role** use `cheatsheet.md`.
+- **With a topic**: use the Topic Index and follow the arrow to a chapter.
+- **With a role or stage-gate question**: use the Chapter Index and read the matching chapter.
+- **For a term** use `glossary.md`; **for a stage gate or role** use `cheatsheet.md`.
 
 ## Core Frameworks & Mental Models
 
@@ -90,5 +90,5 @@ Project Team Leader holds prime responsibility; the HFI Focus splits into HFIF(C
 - **Not the Defence SMS:** safety management system obligations live in JSP 815; use the `jsp-815` pack. Not reproduced here.
 - **Not acquisition-safety policy:** use `jsp-376` for that. Not reproduced here.
 - **Not dependable-AI direction:** use `jsp-936` for that. Not reproduced here.
-- **Other publications named, not quoted:** JSP 375, JSP 536, JSP 815, JSP 822, Def Stan 00-251, Def Stan 23-009, Def Stan 00-600, ISO/IEC 15288, HuFIMS and other standards are named for navigation only; consult each directly for its requirements.
+- **Other publications named, not quoted:** JSP 375, JSP 536, JSP 815, JSP 822, Def Stan 00-251, Def Stan 23-009, Def Stan 00-600, ISO/IEC 15288 and other standards are named for navigation only; consult each directly for its requirements.
 - **Not official MOD guidance:** reconstructed reference notes with no official status and no MOD endorsement. Source identification and licence only in [LICENSE](LICENSE).

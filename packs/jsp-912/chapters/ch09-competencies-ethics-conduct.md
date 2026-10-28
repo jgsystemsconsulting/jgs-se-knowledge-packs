@@ -4,9 +4,9 @@ Sources: JSP 912 Part 1 V3.0, printed body p. 9 (HFI Resource Competencies), and
 
 ## Core Idea
 
-Every member of MOD staff undertaking HFI activities shall be a Suitably Qualified and Experienced Person, defined through reference to the Human Factors Integration Functional Competence Framework. The same rule binds industry: all HFI activities carried out by a Solution Provider shall be carried out by SQEP, namely professional Ergonomists or Human Factors Engineers, and/or persons with considerable experience of undertaking HFI in a Defence context. Part 1 section 4 states the directive version and Part 2 section 6 restates it as guidance, with the same named roles and thresholds; where the two parts phrase a threshold slightly differently, this chapter follows the wording of the part indicated in the Sources line above.
+Every member of MOD staff who undertakes HFI activities must be a Suitably Qualified and Experienced Person, defined by reference to the Human Factors Integration Functional Competence Framework. The same rule binds industry: a Solution Provider is to have all of its HFI activities carried out by SQEP, meaning professional Ergonomists or Human Factors Engineers, and/or people with considerable experience of HFI work in a Defence context. Part 1 section 4 states the directive version and Part 2 section 6 restates it as guidance, with the same named roles and thresholds; where the two parts phrase a threshold slightly differently, this chapter follows the wording of the part indicated in the Sources line above.
 
-The competence ladder matters as much as the rule. The framework distinguishes an Awareness level, meaning a holistic understanding of the purpose and aim of the HFI process, sufficient to provide appropriate input, participation and review, from a Practitioner level, meaning sufficient knowledge of good practice and demonstrated experience to work on tasks with only minimal supervision while maintaining knowledge of current developments.
+The competence ladder matters as much as the rule. The framework separates an Awareness level, meaning a rounded understanding of what the HFI process exists to do and why, enough to contribute appropriate input and take part in reviews, from a Practitioner level, meaning enough knowledge of good practice plus demonstrated experience to work on tasks with little more than light supervision while keeping knowledge current.
 
 ## Frameworks Introduced
 
@@ -15,7 +15,7 @@ The competence ladder matters as much as the rule. The framework distinguishes a
 
 ## Key Concepts
 
-HFI processes conducted across the CADMID or systems engineering lifecycles might involve research trials, experiments, tests, surveys or other forms of assessment with human participants. In such cases the research activities shall comply with JSP 536, the MOD policy for research involving human participants; Part 2 adds that Annex 1A of JSP 536 provides a checklist to help teams determine whether their protocol needs submission for Scientific and Ethics Review. JSP 536 is named here, not reproduced; use its own publication for its requirements.
+HFI processes conducted across the CADMID or systems engineering lifecycles might involve research trials, experiments, tests, surveys or other forms of assessment with human participants. Where they do, JSP 536 applies: it is the MOD policy covering research that involves human participants, and the activities must comply with it. Part 2 adds that JSP 536's Annex 1A supplies a checklist teams can use to decide whether a protocol has to go forward for Scientific and Ethics Review. JSP 536 is named here, not reproduced; use its own publication for its requirements.
 
 Beyond the JSP, HFI research activities may need to conform to the British Psychological Society's Code of Human Research Ethics and the CIEHF's Code of Professional Conduct. In such cases, the involvement of SQEP is essential. The chapter's division of labour is therefore two-layered: competence rules decide who may plan and run HFI work, and ethics rules decide how any work involving human participants is reviewed and conducted.
 

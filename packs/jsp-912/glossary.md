@@ -16,25 +16,24 @@ Terms the source defines or characterises, alphabetical. Acronyms are folded in 
 - Early Human Factors Analysis (EHFA): the risk analysis that underpins later HFI investment; mandatory for all programmes at some level of detail. Used in ch04, ch05.
 - End Users: all-encompassing term for all users of a capability regardless of Service, rank or role: operators, maintainers, trainers, support personnel. Used in ch01.
 - Equipment Component: the infrastructure, equipment, hardware, software, information and materiel needed to deliver the capability. Used in ch01.
-- Full Business Case (FBC): the investment decision point and final approval before contract award. Used in ch04, ch05.
 - Front Line Command (FLC): the capability-side community that owns user requirements; also the source of in-service feedback. Used in ch02, ch05, ch08.
+- Full Business Case (FBC): the investment decision point and final approval before contract award. Used in ch04, ch05.
 - GEAR: Guide to Engineering Activities and Reviews; the engineering-side assurance framework the HFI Plan must satisfy. Used in ch02, ch04, ch05, ch07.
-- Human Factors (HF): the scientific study of human capabilities, limitations, characteristics and behaviour; the knowledge base HFE draws on. Used in ch01.
-- Human Factors Engineering (HFE): application of HF knowledge across design, development, assessment, fielding, in-service support and disposal; one of the five HFI domains. Used in ch01, ch03, ch06, ch07.
-- Human Factors Integration (HFI): the systematic management process for identifying, tracking and resolving people-related considerations, balancing technological and human aspects of capability. Used in ch01, ch03.
 - HFIF(Cap): HFI Focus in the Front Line Command / Capability community; manages HFI in Pre-Concept and Concept. Used in ch02, ch05, ch09.
 - HFIF(PT): HFI Focus in the DE&S Project or Delivery Team; day-to-day HFI management and tailoring. Used in ch02, ch05, ch07, ch08, ch09.
 - HFPR: Human Factors Process Requirement; process requirements invoked by the contract's Statement of Requirement. Used in ch04, ch05.
 - HFSR: Human Factors System Requirement; people-related technical requirements in the SRD, derived from HFURs. Used in ch02, ch05.
 - HFUR: Human Factors User Requirement; candidate generic requirements in the URD, sourced from Def Stan 00-251. Used in ch05.
-- Human Component of Capability: MOD service personnel and civilian support staff with their organisations and structures, treated as a first-class acquisition object. Used in ch01, ch02, ch05, ch07.
 - Human-Centred Design: approach that accommodates human needs in designing technological systems, involving End Users in design and evaluation; also called User-Centred Design. Used in ch01, ch04, ch07.
-- HuFIMS: Human Factors Integration Management System; MOD source of process leaflets, product descriptions, technical guides and checklists. Used in ch01, ch05, ch06, ch07.
+- Human Component of Capability: MOD service personnel and civilian support staff with their organisations and structures, treated as a first-class acquisition object. Used in ch01, ch02, ch05, ch07.
+- Human Factors (HF): the scientific study of human capabilities, limitations, characteristics and behaviour; the knowledge base HFE draws on. Used in ch01.
+- Human Factors Engineering (HFE): application of HF knowledge across design, development, assessment, fielding, in-service support and disposal; one of the five HFI domains. Used in ch01, ch03, ch06, ch07.
+- Human Factors Integration (HFI): the systematic management process for identifying, tracking and resolving people-related considerations, balancing technological and human aspects of capability. Used in ch01, ch03.
 - ITEA: Integrated Test, Evaluation and Acceptance; the plan governing test and acceptance in HFI-5.0. Used in ch07, ch08.
 - Learning from Experience (LfE): through-life organisational learning from ongoing and completed projects; the route in-service feedback reaches future acquisitions. Used in ch03, ch08.
 - Non-Development Item (NDI): an already-developed item meeting the requirements; reduced HFI process. Used in ch04.
-- Outline Business Case (OBC): the decision point setting the performance, cost and time envelope for the assessment stage. Used in ch04, ch05.
 - Off-The-Shelf (OTS): commercial items procured without development; risk-focused HFI on introduction and modification. Used in ch04.
+- Outline Business Case (OBC): the decision point setting the performance, cost and time envelope for the assessment stage. Used in ch04, ch05.
 - People-Related Consideration: any consideration about people's involvement in or interaction with a system, positive or negative; categorised as RAIDO. Used in ch01, ch07.
 - Project Team (PT): the body developing the SRD, devising equipment solutions, and managing procurement and in-service support; Delivery Team (DT) is a synonym. Used in ch02.
 - RAIDO: Risks, Assumptions, Issues, Dependencies and Opportunities; the categorisation of HFI considerations, tracked in the HFI RAIDO Register. Used in ch04, ch05, ch07, ch08.
@@ -49,8 +48,8 @@ Terms the source defines or characterises, alphabetical. Acronyms are folded in 
 - SRL: System Readiness Level; nine maturity steps assessed across nine SE drivers including HFI. Used in ch03.
 - SSE: Support Solutions Envelope; the support-side assurance framework, whose Core Development Area 2 covers HFI. Used in ch02, ch04, ch07.
 - System: a combination of interacting elements, including people, organised to achieve stated purposes. Used in ch01.
-- Target Audience Description (TAD): detailed description of the people who will operate, support, sustain and maintain the Solution, with selection criteria, career paths and training requirements. Used in ch05.
 - Tailoring: the process of identifying the range and depth of HFI activities for a project, agreed with the HFI Policy team. Used in ch02, ch04.
+- Target Audience Description (TAD): detailed description of the people who will operate, support, sustain and maintain the Solution, with selection criteria, career paths and training requirements. Used in ch05.
 - Trading: a requirements-management process where satisfaction of one requirement is modified against another. Used in ch05, ch07.
 - URD: User Requirements Document; the capability-level requirements that carry the HFURs and drive all later requirements. Used in ch02, ch05.
 - User: people who operate, maintain and support the required capability. Used in ch01, ch08.
