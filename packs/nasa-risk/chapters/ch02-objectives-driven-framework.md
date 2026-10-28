@@ -1,0 +1,49 @@
+Sources: NASA Risk Management Handbook, Version 2.0, Part 1, printed pp. 9-43 (Chapter 2, Objectives-Driven Risk Management Framework Foundations and Key Elements).
+
+# Objectives-driven framework: foundations and key elements
+
+## Core Idea
+
+NASA's framework is Objectives-Driven Risk Management (ODRM): risk is the potential for shortfalls against explicitly established objectives, so risk management only works when the objectives that define success are clear, communicated, and stable enough to anchor decisions. The framework rests on four informing principles: a cross-organizational and integrated perspective on risk, the application of risk leadership, rigor in decision processes and supporting analyses, and integration of risk management execution and communication across organizational boundaries and life-cycle stages.
+
+NPR 8000.4 (April 2022 version) and its parent directives NPD 1000.0, NPD 1000.5, and NPD 8700.1 supply the policy basis; the handbook turns them into practice. These policies are named, not quoted here.
+
+## Frameworks Introduced
+
+- Objectives hierarchy and flow-down. NASA's Strategic Plan sets strategic goals and objectives; directorates, Centers, programs, projects, and mission support organizations receive allocated sub-objectives. Each unit's received objectives are its top-level objectives, and each unit's success is contingent on subordinate and cooperating entities. NPR 7120.5's programmatic requirements hierarchy illustrates the same flow from Agency strategy down to system requirements.
+- Three activity domains. Enterprise (strategic, cross-agency), Program/Project (mission objectives plus technology R&D objectives), and Institutional (objectives from enterprise support needs and from program/project support needs). Enterprise risks, institutional risks, and program/project risks are simply risks to the objectives allocated at those levels; mission risks are a kind of project risk.
+- Activity-domain risk sub-types. Enterprise: strategic, operations, compliance, acquisition, fraud, reputational. Program/Project: safety, technical, security, cost, schedule. Institutional: staffing, training, maintenance, supply chain, facility safety and availability. NPR 8000.4's mission execution domains, safety, mission success (technical), physical security, cybersecurity, cost, schedule, give the second categorization axis. Caveat: bucketing is not literal; a single risk may be technical in cause and cost/schedule in consequence, and many risks cut across all three domains.
+- Aggregate versus individual risk. Aggregate risk is the cumulative risk to an objective accounting for all significant contributors (for example, total probability of loss of mission as the union of all loss scenarios); an individual risk scenario is one specific scenario that alone or in combination can compromise objectives. This distinction, developed fully in ch03, replaces the historical item-by-item focus.
+- RIDM-CRM coordination modes. Activity-Planning RIDM runs pre-execution, identifying top-level performance risks for each candidate alternative so selection can weigh risk and benefit; its risk profile becomes CRM's initial input. Activity-Execution CRM manages individual, aggregate, and unknown/underappreciated risks during implementation, plus opportunity management. When the CRM Plan step shows that keeping risk acceptable needs changed objectives or requirements, Activity-Rebaseline RIDM re-runs the Analysis of Alternatives to risk-inform re-baselining, only with accountable managers' approval; a major opportunity (for example, a newly mature technology) can trigger the same re-baseline path. For acquisition, even a turn-key purchase keeps RIDM with the Acquirer for provider selection, and the Acquirer may require Provider processes that map to CRM steps feeding Acquirer key decision points.
+
+## Key Concepts
+
+- Performance measures. Each top-level objective gets one or more performance measures as the metric of fulfillment; the full quantitative risk expression is the probability that performance, measured this way, falls deficient against the target values. Choosing representative measures takes work when the objective does not make them self-evident (guidance in ch04 and ch05).
+- Risk posture and risk tolerance levels. Posture is the attitudinal framework expressing how the organization values potential gains versus losses; leaders state it qualitatively, and it becomes operational through Risk Tolerance Levels (RTLs), thresholds of acceptable shortfall probability per objective. The full RTL set is the operational definition of the posture.
+- Risk leadership implementation steps: define and communicate objectives (fundamental and means); define and communicate the risk posture; translate posture directives into objective-specific tolerance criteria (with iteration between levels); empower decision makers within assigned limits while monitoring for consistency, not second-guessing; maintain proactive vertical and horizontal risk communication with prioritization protocols.
+- Desired outcomes of risk leadership: balance risk against benefits and opportunities, reduce process burden, and balance assessment rigor against decision velocity. Decision robustness is the standard: a decision based on sufficient evidence and uncertainty characterization that it best reflects decision-maker preferences and is insensitive to credible modeling perturbations and foreseeable new information. Risk aversion and ambiguity aversion (the Ellsberg effect) are countered by making decision makers own their posture explicitly rather than default to caution.
+- Graded approach. Rigor is pursued commensurately with what is at stake, formalized in the RMP (ch06). Simplified qualitative approaches cost less and set up easier but carry more subjective bias, more assessment error, less depth, and more model uncertainty; rigorous quantitative approaches buy objectivity, realism, and granularity at higher cost. High stakes, complexity, uncertainty in key inputs, many attributes, and diverse stakeholders are the drivers that justify formal RIDM and low risk tolerance.
+- Qualitative versus quantitative, corrected. The real difference is not precision but objectivity: unanchored qualitative scales inherit the assessors' perspective (one unit's "high" cost is another's "insignificant"), while quantitative scales defined with explicit uncertainty ranges are context-independent even when inputs are soft. Pick the approach whose output resolution can actually distinguish the alternatives being decided.
+- Life-cycle reviews. NPR 7120.5 life-cycle reviews (SRR, SDR/MDR, PDR, CDR, SIR, ORR, PIR) with an independent Standing Review Board assess, among six criteria, the adequacy of the risk management approach. Success criteria are baselined at SRR, shift emphasis from RIDM adequacy early to CRM adequacy late, and the evidence to substantiate them is specified before the phase runs to prevent backfitting.
+
+## Mental Models
+
+- Objectives and risk postures flow down together; risks and their handling feedback flow back up and sideways along the same pathways. A root entity sits in a web of superordinate, parallel, and subordinate entities, allocating downward and reporting upward and laterally.
+- Cross-cutting risk (generally applicable across efforts, levels, or organizations) is the reason integration is a principle and not a nicety: no single unit sees the whole risk. The Risk Management Tiger Team report and the follow-on policy statement elevated this, creating the Agency Risk Management Officer role with risk-integrator functions, and NPR 8000.4 requires coordination of risk identification, assessment, decision, and communication at all management levels.
+- Risk acceptance decisions need explicit criteria in the RMP, including elevation protocols for when a decision moves up a level.
+- Opportunity is the specular image of risk: an existing objective met more effectively or a new one becoming feasible. Strategic opportunities re-aim objectives; tactical ones (a partnership on an R&D task, say) lower execution risk or add collateral benefits. Every opportunity has a window; proactive identification and agile assessment are organizational obligations, and investment in research is investment in creating opportunity.
+
+## Anti-patterns
+
+Excessive rigor is a named failure mode, not just its absence: rigor beyond what the decision needs reads as process burden and gets bypassed. Overly simplified "binning" analyses are the mirror failure, unable to resolve choices that matter. Rating risks on a standard 5x5 matrix detached from objective-specific tolerances is explicitly rejected (ch03 develops the replacement).
+
+## Key Takeaways
+
+- Risk management is anchored to objectives; without stated objectives there is nothing for risk to be a risk to, and the first act of risk leadership is stating objectives, values, and priorities.
+- Risk posture becomes real only when translated into per-objective tolerance criteria, and leaders remain accountable for consistency between declared posture and actual decisions.
+- RIDM and CRM are two modes of one integrated system with defined transitions: planning RIDM seeds CRM; CRM can summon rebaseline RIDM.
+- Integration across life cycle, organization, and discipline boundaries is a framework principle, with the RMP as its documented roadmap.
+
+## Connects To
+
+Risk concepts, aggregations, tolerance mathematics, U/U risk, and security tailoring: ch03. The RIDM process steps: ch04. CRM steps and opportunity management in execution: ch05. RMP content and organizational protocols: ch06. Worked illustrations of process selection and objective flow-down: ch07. Quantitative PRA techniques (fault trees, event trees, Bayesian updating) stay in the nasa-pra pack (NASA/SP-2011-3421).

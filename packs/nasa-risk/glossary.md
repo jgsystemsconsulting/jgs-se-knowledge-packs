@@ -1,123 +1,67 @@
-# NASA Risk Mgmt Handbook Glossary
+# NASA Risk Mgmt Handbook Glossary (Version 2.0)
 
-**Accept** — A risk disposition type indicating that no risk management action is needed because all performance risks are currently within tolerable levels; must be explicitly documented with assumptions. (Ch 8)
+Alphabetical. Entries absorb the Version 2.0 definitions chapter and the acronym list; the chapter tag says where the pack uses the term. Marked terms are defined terms of NPR 8000.4C or the handbook and are kept close to their source wording.
 
-**Aleatory Uncertainty** — Stochastic (non-deterministic) variability; irreducible; described by a probability density function. From Latin *alea* (game of chance). (Ch 4)
-
-**Asset** — The primary element of an organisational unit portfolio affected by an individual risk; enables ownership assignment; categorised using the asset taxonomy. (Ch 7)
-
-**Asset Taxonomy** — A tree structure classifying organisational portfolio elements (analogous to a WBS) used to categorise the ASSET component of individual risk statements. (Ch 6)
-
-**Burn-Down Schedule** — A project-specific risk tolerance profile specifying the tolerable level of performance risk for each performance requirement at each programme milestone. (Ch 6)
-
-**Close** — A risk disposition type removing an individual risk from active management because its risk drivers no longer exist, have become insignificant, or the departure has occurred. (Ch 8)
-
-**Condition** — The fact-based, currently true situation causing concern; the evidential basis of an individual risk statement; objectively verifiable. (Ch 7)
-
-**Confidence Level** — The complement of the uncertainty level (a 90% confidence level equals 10% uncertainty); used in performance margin statements. (Ch 6)
-
-**Configuration Control** — Version management of alternative definitions and risk analysis frameworks to ensure all parties work from a common, consistent data set. (Ch 4)
-
-**Consequence** — The foreseeable negative impact on the ability to meet performance requirements if the departure occurs; written without regard to potential mitigations. (Ch 7)
-
-**Consequence Taxonomy** — Classification tree derived from the requirements tree; maps individual risk consequences to performance requirements. (Ch 6)
-
-**Continuous Risk Management (CRM)** — The process for managing risks during implementation of a selected alternative, comprising Identify, Analyse, Plan, Track, Control, and Communicate and Document steps. (Ch 1)
-
-**Contending Alternative** — A decision or risk response alternative that survives deliberation downselection as worthy of serious consideration by the decision-maker. (Ch 5)
-
-**Decision Robustness** — The property of a selected alternative remaining best under credible modelling perturbations and realistically foreseeable new information. (Ch 5)
-
-**Defence-in-Depth** — Creating multiple independent and redundant layers of mitigation so that no single layer is exclusively relied upon. (Ch 7)
-
-**Deliberation** — A structured process for communication and collective consideration of risk information and stakeholder values to support decision making. (Ch 5)
-
-**Departure** — A possible future change from the baseline project plan, made credible or more likely by the Condition; the source of uncertainty in an individual risk. (Ch 7)
-
-**Departure Prevention** — A mitigation category that reduces the likelihood of the departure event occurring. (Ch 8)
-
-**Dominated Alternative** — An alternative that is inferior to another with respect to every performance measure; may be eliminated from contending alternatives. (Ch 5)
-
-**Elevate** — A risk disposition type transferring management of a performance risk to the next higher organisational level when the current unit cannot return risk to tolerable levels. (Ch 8)
-
-**Enterprise Risk** — Risk pertaining to the operation of NASA as an agency/corporation, categorised across acquisition, strategic, financial, operational, and hazard domains. (Ch 10)
-
-**Epistemic Uncertainty** — Uncertainty arising from imperfect knowledge; in principle reducible through research or additional information. From Greek *episteme* (knowledge). (Ch 4)
-
-**Graded Analysis** — Calibrating the completeness and effort of risk analysis to the stakes and complexity of the risk issue; more complete analysis where importance is higher. (Ch 4)
-
-**Graded Approach Analyse Step** — The in-depth CRM analysis track identifying risk drivers through sensitivity analysis of the integrated performance risk model. (Ch 7)
-
-**Imposed Constraint** — A hard limit on the allowable values of a performance measure; failure to meet it means the top-level objective is not achieved. (Ch 3)
-
-**Individual Risk** — A specific risk issue consisting of a structured risk statement (Condition–Departure–Asset–Consequence) and a narrative description; the atomic unit of CRM risk management. (Ch 7)
-
-**Institutional Risk** — Risk to infrastructure, IT, resources, personnel, assets, processes, occupational safety, environmental management, or security affecting mission execution capability. (Ch 10)
-
-**Joint Confidence Level (JCL)** — NASA's policy of budgeting cost and schedule reserves at a joint 70% confidence level; a concrete application of risk-normalised performance commitments. (Ch 10)
-
-**Mitigate** — A risk disposition type specifying positive action to reduce performance risk, either by departure prevention or consequence reduction. (Ch 8)
-
-**Model Rigor** — The level of detail included in a risk analysis model; increases with design maturity and life-cycle phase. Distinct from graded analysis (completeness). (Ch 4)
-
-**Objectives Hierarchy** — A tree decomposing a top-level objective through Safety, Technical, Cost, and Schedule mission execution domains into quantifiable performance objectives. (Ch 3)
-
-**Organisational Unit Portfolio (OUP)** — The set of assets (analogous to a WBS) within an organisational unit's responsibility; the source of ASSET categorisation in risk statements. (Ch 7)
-
-**Performance Commitment** — A performance measure value set at a defined percentile of the alternative's probability distribution, representing what an alternative can achieve at a stated risk tolerance. (Ch 5)
-
-**Performance Margin** — The distance from the current achieved value of a performance measure to a decision boundary (requirement or derived threshold). (Ch 6)
-
-**Performance Measure** — A metric used to quantify the extent to which a performance objective is fulfilled; the same across all decision alternatives. (Ch 3)
-
-**Performance Objective** — An objective whose fulfillment is directly quantified by a performance measure; derived via an objectives hierarchy. (Ch 3)
-
-**Performance Parameter** — Any value needed to execute risk models; alternative-specific (unlike performance measures); the origin of risk through uncertainty propagation. (Ch 4)
-
-**Performance Requirement** — The agreed value of a performance measure an organisational unit must achieve; established by systems engineering after RIDM; the basis for CRM. (Ch 2)
-
-**Performance Risk** — The probability that a performance requirement will not be met, given current conditions and risk drivers. (Ch 6)
-
-**Probabilistic Risk Assessment (PRA)** — A systematic methodology for quantifying the likelihood and consequences of undesired events using fault trees, event trees, and uncertainty distributions. (Ch 4)
-
-**Quick Look Analyse Step** — The rapid CRM analysis track that ranks individual risks by near-term criticality (urgency) and strategic criticality (importance to aggregate risk model). (Ch 7)
-
-**Research** — A risk disposition type specifying active investigation to reduce uncertainty about a risk driver; includes a research plan with schedule and conditional contingency plans. (Ch 8)
-
-**Risk** — The potential for performance shortfalls with respect to achieving explicitly stated performance requirements; characterised as a triplet of (scenario, likelihood, consequence). (Ch 1)
-
-**Risk Analysis Framework** — An alternative-specific network tracing performance parameters through domain models to quantify performance measure probability distributions. (Ch 4)
-
-**Risk Burn-Down Schedule** — See Burn-Down Schedule. (Ch 6)
-
-**Risk Disposition Type** — One of six categories (Accept, Mitigate, Watch, Research, Elevate, Close) to which risk response options are assigned per NPR 8000.4A. (Ch 8)
-
-**Risk Driver** — A specific uncertain element (parameter, pivotal event, or departure) whose optimistic value would cause performance risk to cross a tolerability threshold; identified through sensitivity analysis. (Ch 7)
-
-**Risk-Informed Decision Making (RIDM)** — A process using diverse performance measures within a deliberative process to inform decision making; not purely model-based ("risk-based"). (Ch 1)
-
-**Risk-Informed Selection Report (RISR)** — The formal document capturing the selected RIDM alternative, performance commitments, risk list, decision rationale, and robustness assessment. (Ch 5)
-
-**Risk Management Plan (RMP)** — The document specifying how each CRM step will be executed, including risk tolerances, elevation protocols, communication schedules, and coordination provisions. (Ch 6)
-
-**Risk Response Alternative** — A combination of risk response options that collectively addresses the current risk posture; the unit of analysis in the CRM Plan step. (Ch 8)
-
-**Risk Response Option** — An individual response pertaining to one disposition type; the building block from which risk response alternatives are constructed. (Ch 8)
-
-**Risk Scenario Diagram (RSD)** — A flowchart from a unique initial condition through pivotal events to performance-requirement-referenced end states; an instantiation of an Event Sequence Diagram. (Ch 7)
-
-**Risk Taxonomy** — A tree-structured classification system for risk elements (condition/departure, asset, consequence) enabling identification of cross-cutting risks and coordinated responses. (Ch 6)
-
-**Risk Tolerance** — The probability of failing to meet a performance commitment that a decision-maker accepts for a given performance measure; set before deliberation. (Ch 5)
-
-**Scenario** — A sequence of credible events specifying how a system evolves from its current state to an undesirable future state; the core construct of both RIDM and CRM risk analysis. (Ch 1)
-
-**Sensitivity Study** — Analysis of how variation in model outputs can be apportioned to different sources of variation in model inputs; used to identify risk drivers and guide additional analytical investment. (Ch 4)
-
-**Stakeholder** — An individual or organisation materially affected by the outcome of a decision or deliverable; includes both internal (NASA HQ, Centres) and external parties. (Ch 3)
-
-**Technical Basis for Deliberation (TBfD)** — The primary RIDM document consolidating scenario descriptions, performance measure pdfs, imposed-constraint risks, and sensitivity studies for all alternatives; produced in Step 4, used in Step 6. (Ch 4)
-
-**Tolerability Zone** — One of three performance risk regions — Tolerable, Marginal, or Intolerable — defined by the burn-down schedule at each project milestone. (Ch 6)
-
-**Watch** — A risk disposition type specifying scheduled monitoring of observables related to a risk driver, with pre-established criteria and optional contingency plans; no baseline plan modification. (Ch 8)
+- **Acquirer** — NASA organization that tasks another organization, inside or outside NASA, to deliver a product or service (ch04, ch05, ch06).
+- **Aggregate Risk (AR)** — defined term: cumulative risk to a goal, objective, or performance measure accounting for all significant contributors; for example, total probability of loss of mission as the union of all loss scenarios (ch01, ch02, ch03, ch05).
+- **Aleatory Uncertainty** — randomness inherent in the activity; irreducible by more study (ch03, ch04).
+- **AoA (Analysis of Alternatives)** — the comparative risk-informed evaluation at the heart of RIDM Part 2 (ch02, ch04, ch07).
+- **ARTL (Aggregate Risk Tolerance Level)** — RTL set for aggregate risk to an objective; parent of the IRTLs (ch03).
+- **ASARP (As Safe As Reasonably Practicable)** — defined term: employing the safest practicable means of achieving technical objectives within programmatic constraints; independent of any levied safety tolerances (ch03).
+- **CCDF (Complementary Cumulative Distribution Function)** — exceedance-probability display; fits measures whose goodness decreases with value, such as cost, schedule, and P(LOC) (ch03, ch07).
+- **CDF (Cumulative Distribution Function)** — non-exceedance display; fits measures whose goodness increases with value (ch03, ch07).
+- **CCIRS (Cumulative-Consequence Individual Risk Scenario)** — scenario that cannot alone fail an objective but can in numbers; cost-margin eroders are the type case (ch03).
+- **CDR (Critical Design Review)** — life-cycle review often named in burn-down schedules as the point where early risk must have fallen within posture (ch05).
+- **Condition** — fact-based current situation causing concern; grounds a risk statement in evidence (ch05, ch07).
+- **Consequence** — single-phrase undesired state of the Asset, written without regard to anticipated mitigations (ch05).
+- **Continuous Risk Management (CRM)** — defined term: systematic, iterative process that identifies, analyzes, plans for, tracks, controls, communicates, and documents risks during implementation of designs, plans, and processes (ch01, ch02, ch04, ch05).
+- **CORCP (Cross-Organizational Risk Communication Protocol)** — agreed trigger conditions, timeliness, and points of contact for cross-cutting-risk communication (ch06).
+- **CORHP (Cross-Organizational Risk Handling Protocol)** — agreed handling-coordinator criteria and decision elevation criteria for cross-cutting risks (ch06).
+- **Cross-Cutting Risk** — defined term: risk generally applicable to multiple mission execution efforts, with attributes and impacts across organizational levels or organizations (ch01, ch02, ch06, ch07).
+- **Cybersecurity / Cybersecurity Risk** — defined terms: protection of computers, communications, and information for availability, integrity, authentication, confidentiality, and nonrepudiation; risk splits into asset risk (threats to cyber-assets) and compliance risk (ch01, ch03, ch05, ch06).
+- **Departure** — possible future change from the baseline plan, made credible by the Condition; the initial source of risk in a statement (ch03, ch05).
+- **Departure Prevention** — mitigation class that cuts the likelihood of the departure event (ch05).
+- **Consequence Reduction** — mitigation class that cuts the severity of what the departure produces (ch05).
+- **Decision Robustness** — defined term: character of a decision backed by sufficient evidence and uncertainty characterization that it best reflects decision-maker preferences and is insensitive to credible modeling perturbations and foreseeable new information (ch02, ch04).
+- **Epistemic Uncertainty** — knowledge gaps about likelihoods and performance; reducible by test and analysis (ch03, ch04, ch05).
+- **Graded Approach** — defined term: applying risk management at a level of detail and rigor that adds value without unnecessary expenditure; rigor commensurate with stakes and complexity (ch01, ch02, ch04, ch05, ch07).
+- **HCIRS (High-Consequence Individual Risk Scenario)** — scenario that by itself can fail an objective; loss-of-crew type risks (ch03).
+- **Imposed Constraint** — defined term: limit set by a higher authority on allowable values of an associated performance measure; feasibility bound for every alternative (ch04, ch07).
+- **Individual Risk Scenario (IRS)** — defined term: event sequence, or combination of sequences, unique and defining in how it produces consequences impacting one or more objectives; characterized as scenario, likelihood, consequence (ch02, ch03, ch05, ch07).
+- **IRTL (Individual Risk Scenario Risk Tolerance Level)** — per-scenario tolerance heuristically derived as ARTL divided by the estimated number N of significant contributors (ch03, ch05, ch07).
+- **KDP (Key Decision Point)** — formal decision gate; RMPs define risk-acceptance criteria and evidence per KDP (ch02, ch04, ch06).
+- **KPM (Key Performance Measure)** — the reduced measure subset an AoA actually evaluates (ch07).
+- **Leading Indicator** — measurable factor correlated with U/U risk magnitude, with watch and respond values (ch03, ch05, ch07).
+- **LCR (Life-Cycle Review)** — phase review (SRR, SDR/MDR, PDR, CDR, SIR, ORR, PIR) judging, among other criteria, adequacy of the risk management approach (ch02, ch06).
+- **Mission Objective** — defined term: explicitly established, stated desired outcome or product of a mission (ch03).
+- **Mission Success** — defined term: outcome in which all mission technical objectives are met, wholly or partially (ch03).
+- **ODRM (Objectives-Driven Risk Management)** — defined term: approach explicitly focused on keeping an activity's risk profile within its established risk posture (ch01, ch02, ch06, ch07).
+- **Opportunity** — defined term: possibility of an existing objective being met more effectively, or a new objective becoming feasible (ch02, ch05, ch07).
+- **Organizational Unit** — defined term: program, project, Center, Mission Directorate, or Mission Support Office responsible for an activity (ch03, ch06).
+- **Performance Measure (PM)** — defined term: metric for the extent to which a system, process, or activity fulfills its objectives (ch02, ch03, ch04, ch05).
+- **Performance Marker (PMK)** — threshold on a measure; PMK-R (requirement) and PMK-G (goal) in the default two-marker scheme (ch03, ch04, ch05, ch07).
+- **Performance Parameter** — defined term: quantifiable variable needed to execute the models that quantify the measures; uncertainty here is the origin of risk (ch04, ch07).
+- **Performance Requirement** — defined term: agreed value a Provider's product must achieve to satisfy the Acquirer (ch03, ch07).
+- **Physical Security** — defined term: securing infrastructure and protecting material, functional, control, information, and human assets from physical interference (ch01, ch03, ch06).
+- **Program / Project Objective** — defined terms: stated desired outcomes of a program or project, typically in safety, technical, cost, and schedule categories (ch02, ch03).
+- **Provider** — defined term: NASA or contractor organization tasked by an Acquirer to produce a product or service (ch04, ch06).
+- **P(LOC) / P(LOM)** — probabilities of loss of crew and loss of mission; standard safety performance measures (ch03, ch04, ch07).
+- **Risk** — defined term: potential for shortfalls against explicitly established and stated objectives; operationally a set of scenario-likelihood-consequence triplets (ch01, ch02, ch03).
+- **Risk Attitude** — defined term: general inclination of a stakeholder or decision-maker to accept risk in pursuit of objectives (ch04).
+- **Risk Driver** — defined term: significant source of risk to one or more objectives or mandated requirements; found by sensitivity analysis, targeted by mitigation (ch05, ch07).
+- **RSD (Risk Scenario Diagram)** — event-sequence diagram from departure event through pivotal events to end states stated as performance (ch03, ch05, ch07).
+- **RIDM (Risk-Informed Decision Making)** — defined term: deliberative process using diverse performance measures, including model-based risk metrics, to inform selection among alternatives (ch01, ch02, ch04, ch07).
+- **RISR (Risk-Informed Selection Report)** — documented decision rationale from RIDM Step 6 (ch04, ch07).
+- **Risk Leadership (RL)** — defined term (per NPD 1000.0C): leadership culture that communicates a clear, balanced understanding of risk and benefit, sets standards, and pursues decision velocity within a proper risk posture (ch01, ch02, ch06).
+- **Risk Management (RM)** — defined term: coordinated flow of activities, integrated with all other management activities, combining RIDM and CRM to identify, evaluate, and address risk (ch01, ch02).
+- **Risk Posture** — defined term: qualitative or quantitative definition of acceptable risk to an activity's top-level objectives (ch02, ch03, ch04, ch07).
+- **Risk Profile** — defined term: ensemble of assessed risks to an activity's top-level objectives (ch03, ch06).
+- **Risk Tolerance** — defined term: limit of acceptable likelihood of falling short of a stated objective (ch02, ch03).
+- **RTL (Risk Tolerance Level)** — quantitative tolerance limit, defined against a performance requirement marker (ch03, ch05, ch07).
+- **RMP (Risk Management Plan)** — the documented roadmap: posture, markers, tolerances, elevation protocols, processes, and cross-organizational agreements (ch02, ch05, ch06).
+- **RPT (Risk-Normalized Performance Target)** — target set at the same percentile of each alternative's measure distribution, equalizing failure probability for comparison (ch04).
+- **Safety** — defined term: condition providing sufficient assurance that mishaps will not result from an activity or that their consequences will be mitigated; NPR 8000.4C uses it broadly for human, environmental, and asset safety (ch03).
+- **Safety / Technical Risk** — defined terms: likelihoods that declared mission safety or technical objectives will not be achieved (ch02, ch03).
+- **TBfD (Technical Basis for Deliberation)** — the document that risk-informs RIDM deliberation: alternatives, methods, results (ch04, ch07).
+- **Trade Tree / Trade Matrix** — equivalent representations of the alternative combinations; pruning instrument of RIDM Step 2 (ch04, ch07).
+- **U/U Risk (Unknown and/or Underappreciated Risk)** — defined term: risk that may elude explicit operational characterization as specific scenarios; handled by leading indicators and implied scenarios (ch01, ch03, ch05, ch07).
