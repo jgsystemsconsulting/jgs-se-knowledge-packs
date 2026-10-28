@@ -810,10 +810,20 @@ surfaces = [
     'docs/superpowers/backlog.md',
     'README.md',
     'CHANGELOG.md',
+]
+# jsp-936 precedent: docs/index.html, docs/assets/still-catalogue.svg, and
+# docs/products/website/01-jgs-se-knowledge-packs.yaml carry human-form text
+# ("JSP 912 Human Factors Integration in Defence Systems, Parts 1 and 2"),
+# not the slug. Their 74/8 counts are asserted by check_release's own
+# catalogue-count gate; exclude them from the slug-assert loop.
+count_surfaces = [
     'docs/index.html',
     'docs/assets/still-catalogue.svg',
     'docs/products/website/01-jgs-se-knowledge-packs.yaml',
 ]
+for s in count_surfaces:
+    text = pathlib.Path(s).read_text(encoding='utf-8')
+    assert '74' in text, s
 for s in surfaces:
     text = pathlib.Path(s).read_text(encoding='utf-8')
     assert 'jsp-912' in text, s

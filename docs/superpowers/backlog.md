@@ -138,7 +138,7 @@ Created 2026-09-14 by package-loop round 1 (input digest 460acaa9c226881a5467b37
 
 | b-40 | gen_packs_page.py and gen_pack_pages.py are live paired generators drifting without a sync note, shared helper, or golden-file check (advisory a-04) | site-gates triage (cohesion kill routing), 2026-10-27 | needs-info | .zcode/pkg-site-gates-bundle.md:L2708; tooling/gen_pack_pages.py vs gen_packs_page.py |
 
-| b-41 | uk-defence JSP tail (912/940/945/816/375/520) unranked in the numbered build order beyond jsp-936; maintainer ranking pending | growth triage (value kill routing), 2026-10-27 | promoted | P57 (2026-10-28 packages doc): JSP 912 already ranked by research doc L79; 940/945/816/375/520 remain needs-info with b-35 covering the DEF-STAN verify side |
+| b-41 | uk-defence JSP tail (912/940/945/816/375/520) unranked in the numbered build order beyond jsp-936; maintainer ranking pending | growth triage (value kill routing), 2026-10-27 | promoted | P57 (2026-10-28 packages doc): JSP 912 already ranked by research doc L79; 940/945/816/375/520 remain needs-info with b-35 covering the DEF-STAN verify side. Execution 2026-10-28: jsp-912 shipped. JSP 940, JSP 945, JSP 816, JSP 375, and JSP 520 remain needs-info and not built. |
 
 | b-42 | mit-ocw-se pack build (planned catalog row, CC BY-NC-SA non-commercial) awaits maintainer ranking | growth triage (value kill routing), 2026-10-27 | needs-info | catalog.json planned[]; README planned-pack note; b-32 precedent |
 
