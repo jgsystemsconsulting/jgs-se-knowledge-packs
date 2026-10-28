@@ -35,7 +35,7 @@ Re-run after the four 2026-10-27 scoped cuts all reached done. Wave: value 3, ri
 
 ## P59 - rebuild-faa-ams-vv-v4
 
-- **id**: P59; **name**: rebuild-faa-ams-vv-v4; **size**: M; **status**: ready; **corroboration**: 1 (value); **deps**: none; **promoted_ids**: []
+- **id**: P59; **name**: rebuild-faa-ams-vv-v4; **size**: M; **status**: done (2026-10-28; EXECUTED + IVL in docs/superpowers/plans/); **corroboration**: 1 (value); **deps**: none; **promoted_ids**: []
 - **problem**: packs/faa-ams-vv ships AMS Lifecycle V&V Guidelines v3.0 (April 2017); the FAA published 4.0 (January 2023), recorded by source-watch. README positions the catalogue as trusted-current; this live FAA pack is a major version behind.
 - **evidence**: packs/faa-ams-vv/PACK.yaml:L1-4 (Version 3.0 April 2017); .zcode/source-watch/2026-10-12.md:L25 (4.0 2023 observed); README.md:L17-20.
 - **in_scope**: pin FAA AMS Lifecycle V&V Guidelines 4.0 as primary source (tier-1 public domain); rebuild packs/faa-ams-vv to 4.0 with full PACK-SPEC surfaces; update catalog/watchlist/version-bearing rows; close the faa-ams-vv drift row.
