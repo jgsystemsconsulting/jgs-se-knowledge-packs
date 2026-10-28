@@ -255,6 +255,11 @@
           "pack": "fhwa-its-se",
           "chapter": "ch06-systems-engineering-documentation.md",
           "note": "Supplies purpose, tailoring guidance, checklists, and templates for each systems engineering document, from Systems Engineering for ITS, December 2022."
+        },
+        {
+          "pack": "jsp-912",
+          "chapter": "ch05-user-need-and-system-requirements.md",
+          "note": "Covers defining user needs and deriving HFI system requirements through processes HFI-1.0 and HFI-2.0, from JSP 912, March 2024."
         }
       ]
     },
@@ -565,6 +570,11 @@
           "pack": "jsp-376",
           "chapter": "ch07-demonstration-and-manufacture.md",
           "note": "Demonstration evidence, Manufacture handover, and Duty Holder appointment before in-service"
+        },
+        {
+          "pack": "jsp-912",
+          "chapter": "ch08-test-acceptance-in-service-feedback.md",
+          "note": "Addresses test and acceptance of HFI requirements and in-service feedback through processes HFI-5.0 and HFI-6.0, from JSP 912, March 2024."
         }
       ]
     },
@@ -2585,6 +2595,21 @@
           "pack": "jsp-936",
           "chapter": "ch04-human-ai-teams.md",
           "note": "Human and AI teaming expectations across roles and human control from JSP 936 Part 1"
+        },
+        {
+          "pack": "jsp-912",
+          "chapter": "ch01-what-is-hfi-and-why-defence-mandates-it.md",
+          "note": "Explains what Human Factors Integration is and why Defence policy mandates it across acquisition and through-life management, from JSP 912, March 2024."
+        },
+        {
+          "pack": "jsp-912",
+          "chapter": "ch03-hfi-and-systems-engineering.md",
+          "note": "Positions HFI within the systems engineering life cycle and links it to DLODs and System Readiness Levels, from JSP 912, March 2024."
+        },
+        {
+          "pack": "jsp-912",
+          "chapter": "ch07-detailed-system-design-hfi-4-0.md",
+          "note": "Applies human factors data to detailed system design through process HFI-4.0, from JSP 912, March 2024."
         }
       ]
     },
@@ -3205,6 +3230,11 @@
           "pack": "jsp-936",
           "chapter": "ch07-suppliers.md",
           "note": "Supplier and procurement direction for acquiring AI systems from JSP 936 Part 1"
+        },
+        {
+          "pack": "jsp-912",
+          "chapter": "ch06-assess-tenders-hfi-3-0.md",
+          "note": "Guides assessment of contractor tenders for human factors capability through process HFI-3.0, from JSP 912, March 2024."
         }
       ]
     },
@@ -3370,6 +3400,16 @@
           "pack": "fhwa-its-se",
           "chapter": "ch04-managing-se-projects.md",
           "note": "Shows agencies how to size systems engineering effort to project risk and choose procurement and staffing approaches, from Systems Engineering for ITS, December 2022."
+        },
+        {
+          "pack": "jsp-912",
+          "chapter": "ch02-roles-and-responsibilities.md",
+          "note": "Sets out the HFI roles and responsibilities for programme teams, HFI practitioners, and senior stakeholders, from JSP 912, March 2024."
+        },
+        {
+          "pack": "jsp-912",
+          "chapter": "ch09-competencies-ethics-conduct.md",
+          "note": "Defines HFI practitioner competencies and the standards for research ethics and professional conduct, from JSP 912, March 2024."
         }
       ]
     },
@@ -3710,6 +3750,11 @@
           "pack": "fhwa-its-se",
           "chapter": "ch07-glossary-and-acronyms.md",
           "note": "Defines the terms and acronyms used across the guide, from Systems Engineering for ITS, December 2022."
+        },
+        {
+          "pack": "jsp-912",
+          "chapter": "ch04-hfi-process-goals-activities-tailoring.md",
+          "note": "Describes the HFI process goals and activities and how to tailor them to project scale and novelty, from JSP 912, March 2024."
         }
       ]
     },

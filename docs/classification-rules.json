@@ -4469,6 +4469,60 @@
       "chapter": "ch07-glossary-and-acronyms.md",
       "cluster": "Standards, Tailoring & Process Models",
       "is_support": false
+    },
+    {
+      "pack": "jsp-912",
+      "chapter": "ch01-what-is-hfi-and-why-defence-mandates-it.md",
+      "cluster": "Human Systems Integration / Human Factors",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-912",
+      "chapter": "ch02-roles-and-responsibilities.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-912",
+      "chapter": "ch03-hfi-and-systems-engineering.md",
+      "cluster": "Human Systems Integration / Human Factors",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-912",
+      "chapter": "ch04-hfi-process-goals-activities-tailoring.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-912",
+      "chapter": "ch05-user-need-and-system-requirements.md",
+      "cluster": "Requirements Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-912",
+      "chapter": "ch06-assess-tenders-hfi-3-0.md",
+      "cluster": "Supplier, Procurement & Acquisition",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-912",
+      "chapter": "ch07-detailed-system-design-hfi-4-0.md",
+      "cluster": "Human Systems Integration / Human Factors",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-912",
+      "chapter": "ch08-test-acceptance-in-service-feedback.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-912",
+      "chapter": "ch09-competencies-ethics-conduct.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": false
     }
   ]
 }
