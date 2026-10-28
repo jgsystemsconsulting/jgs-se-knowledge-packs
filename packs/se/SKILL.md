@@ -108,7 +108,7 @@ Output goes in the reply unless the user names a file. A deliverable with no mat
 | Modelling language specifications | SysML spec, UML, UAF, BPMN, OMG specifications | `omg-signpost`, `nasa-systems-modeling` |
 | SE standards landscape lookup | ISO/IEC/IEEE standards, INCOSE handbook, ECSS, SAE, where to get a standard | `se-standards-signpost`, `sebok` |
 | Vehicle safety & automotive | vehicle safety, automotive, FMVSS, ADS, automated driving, vehicle cybersecurity | `nhtsa-vehicle`, `automotive-signpost`, `functional-safety-signpost` |
-| Civil infrastructure & ITS | intelligent transportation, ITS, systems engineering analysis, 23!CF 940, ConOps | `fhwa-its-se` |
+| Civil infrastructure & ITS | intelligent transportation, ITS, systems engineering analysis, 23 CFR 940, ConOps | `fhwa-its-se` |
 | GPS & GNSS interfaces | GPS, GNSS, NAVSTAR, space segment interface, ranging signal | `is-gps-200n`, `faa-std-025` |
 | Medical device software | FDA, QMSR, 510(k), device software, SaMD, eSTAR, MDR, IVDR, MHRA, UKCA, MDCG | `fda-med-device`, `med-device-eu` |
 | Avionics software assurance | DO-178C, DO-254, 8110.49, airborne software, AEH, conformity | `faa-8110-49`, `avionics-signpost`, `easa-rules` |

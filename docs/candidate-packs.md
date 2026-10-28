@@ -23,7 +23,7 @@ Build in this order:
 | 8 | `rail-signpost` (built 2026-10-14), `space-signpost` (built 2026-10-14), `maritime-signpost` (built 2026-10-14) | signpost | Cheap to build, each takes a day, and together they close the sector map |
 | 9 | `fhwa-its-se` | full | built 2026-10-28. Tier-1 civil infrastructure, pinned to Systems Engineering for ITS, fourth generation (December 2022) |
 
-A signpost pack is one SKILL.md and one PACK.yaml with no reproduced source content, which is why items 2, 6, and 8 were cheap to land. They are built. The remaining full-pack work on this list is the unfinished part of the uk-defence family. Full packs follow the existing pack spec with no new tooling.
+A signpost pack is one SKILL.md and one PACK.yaml with no reproduced source content, which is why items 2, 6, and 8 were cheap to land. They are built. The ranked full-pack builds from the 2026-10-14 research gate are complete (rows 1, 3, 5-9 above, and the ranked UK defence JSPs in row 4). The unranked remainder of the uk-defence family (JSP 912, JSP 940, DEF-STANs) and telecom-3gpp need a new ranking pass. Full packs follow the existing pack spec with no new tooling.
 
 ## Where the catalogue stands
 
