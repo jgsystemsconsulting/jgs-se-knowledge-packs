@@ -24,7 +24,7 @@ Re-run after the four 2026-10-27 scoped cuts all reached done. Wave: value 3, ri
 
 ## P58 - rebuild-nasa-risk-handbook-v2
 
-- **id**: P58; **name**: rebuild-nasa-risk-handbook-v2; **size**: M; **status**: ready; **corroboration**: 1 (value); **deps**: none; **promoted_ids**: []
+- **id**: P58; **name**: rebuild-nasa-risk-handbook-v2; **size**: M; **status**: done (2026-10-28; EXECUTED + IVL in docs/superpowers/plans/); **corroboration**: 1 (value); **deps**: none; **promoted_ids**: []
 - **problem**: packs/nasa-risk pins v1.0 (November 2011); source-watch recorded the publisher's V2.0 (Nov 2024, SP-20240014019/14326) superseding it, and SOURCE-FRESHNESS.md leaves the rebuild as a maintainer decision. The pack is now two major versions behind on a high-traffic NASA SE reference.
 - **evidence**: packs/nasa-risk/PACK.yaml:L1-4 (v1.0 November 2011); .zcode/source-watch/2026-10-12.md:L15-16 (V2.0 finding on the nasa-risk row); docs/superpowers/backlog.md:L101 (source-watch-calibrate-and-wire-2 open: 14 drift rows, rebuilds undecided); docs/SOURCE-FRESHNESS.md:L35-40.
 - **in_scope**: confirm the V2.0 primary pin (SP-20240014019/14326; tier-1 public domain); rebuild packs/nasa-risk chapters + SKILL.md + PACK.yaml + LICENSE to V2.0; refresh every version-bearing registration surface (catalog row, watchlist `--record`, NOTICE if wording changes); close or shrink this slug's drift row on source-watch-calibrate-and-wire-2.
