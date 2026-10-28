@@ -46,7 +46,7 @@ Identify (validated risk and opportunity statements, taxonomies, leading indicat
 
 | # | Section | Key content |
 |---|---------|-------------|
-| [ch01](chapters/ch01-introduction-and-scope.md) | Introduction and scope | Purpose, policy alignment (NPR 8000.4, NPD 1000.0), what is new in Version 2.0, utilization roadmap |
+| [ch01](chapters/ch01-introduction-and-scope.md) | Introduction and scope | Purpose, policy alignment (NPR 8000.4, NPD 1000.0), what is new in Version 2.0, roles and reading roadmaps |
 | [ch02](chapters/ch02-objectives-driven-framework.md) | Objectives-driven framework | Objectives flow-down, risk types, opportunity, risk leadership steps, posture and RTLs, graded approach, RIDM-CRM integration modes, life-cycle reviews |
 | [ch03](chapters/ch03-risk-models-and-posture.md) | Risk models, analysis, and decision concepts | Aggregate risk, triplets, RSDs, U/U risk and leading indicators, hostile-agent scenarios, PMKs, RTLs and coloring, IRTL heuristic, anchored matrices |
 | [ch04](chapters/ch04-risk-informed-decision-making.md) | Risk-Informed Decision Making | Six steps, objectives hierarchy, trade trees, integrated analysis, TBfD, deliberation and RPTs, RISR, activity classes and tailoring |
