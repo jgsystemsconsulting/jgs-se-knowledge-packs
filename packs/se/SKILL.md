@@ -115,7 +115,7 @@ Output goes in the reply unless the user names a file. A deliverable with no mat
 | Railway RAMS & signalling assurance | EN 50126, EN 50128, EN 50129, railway RAMS, CSM, signalling assurance, RSSB | `rail-signpost` |
 | Space standards (ECSS) | ECSS, space standards, E-ST-10, E-ST-40, Q-ST-30, space environment, product assurance | `space-signpost` |
 | Maritime safety and class rules | SOLAS, ISM, ISPS, COLREGS, USCG, class rules, MCA | `maritime-signpost` |
-| Defence safety management | JSP 815, JSP 376, acquisition safety, defence safety, SMS, safety case, assurance, dependable AI, AI assurance | `jsp-815`, `jsp-376`, `jsp-936` |
+| Defence safety management | JSP 815, JSP 376, JSP 912, acquisition safety, defence safety, SMS, safety case, assurance, dependable AI, AI assurance, human factors, HFI, human component | `jsp-815`, `jsp-376`, `jsp-936`, `jsp-912` |
 | Nuclear software assurance | NRC, regulatory guide, NUREG, digital safety systems, software assurance, BTP 7-14 | `nrc-nuclear` |
 
 ### Agency contexts
@@ -159,6 +159,7 @@ Output goes in the reply unless the user names a file. A deliverable with no mat
 | `jsp-815` | Open Government Licence v3.0 |
 | `jsp-376` | Open Government Licence v3.0 |
 | `jsp-936` | Open Government Licence v3.0 |
+| `jsp-912` | Open Government Licence v3.0 |
 | `easa-rules` | Per-document: EASA site reproduction-with-acknowledgement grant, qualified by ED Decision all-rights-reserved footers; reconstructed notes with attribution; official PDFs not redistributed; commercial use pending per-document determination |
 | `med-device-eu` | Per-document: European Commission reuse policy (Decision 2011/833/EU, CC BY 4.0, attribution and indication of changes) for the MDCG documents; Open Government Licence v3.0 for the MHRA guidance; reconstructed notes with attribution; official PDFs not redistributed |
 <!-- ROUTING-MAP:END -->

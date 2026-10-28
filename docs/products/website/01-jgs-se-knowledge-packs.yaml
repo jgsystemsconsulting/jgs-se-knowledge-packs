@@ -44,7 +44,7 @@ features:
       Each pack is an always-loaded SKILL.md index plus on-demand chapters, a glossary,
       patterns, and a cheatsheet, so a large body of knowledge never fills the context
       window; the agent loads only the chapter your question routes to.
-  - title: 73 packs across the SE catalogue
+  - title: 74 packs across the SE catalogue
     detail: >
       NASA (16): SE Handbook and Expanded Guidance, NPR 7123 / 7150, risk, system
       safety, fault management, HSI, PRA, R&M, schedule, cost estimating, digital
@@ -67,7 +67,7 @@ features:
       AMC 20-152A, MDCG and MHRA device software guidance, Digital Systems
       Engineering (arXiv), EARS requirements-writing, SEBoK.
       FDA (1): device software guidance and the QMSR.
-      UK MOD (3): JSP 815 Defence Safety Management System; JSP 376 Defence Acquisition Safety Policy; JSP 936 Dependable Artificial Intelligence (AI) in Defence, Part 1: Directive.
+      UK MOD (4): JSP 815 Defence Safety Management System; JSP 376 Defence Acquisition Safety Policy; JSP 936 Dependable Artificial Intelligence (AI) in Defence, Part 1: Directive; JSP 912 Human Factors Integration in Defence Systems, Parts 1 and 2.
       NRC (1): digital safety-system software assurance guidance.
   - title: Standards signposts
     detail: >

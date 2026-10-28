@@ -800,6 +800,17 @@
       "status": "live"
     },
     {
+      "slug": "jsp-912",
+      "title": "JSP 912: Human Factors Integration in Defence Systems (Parts 1 and 2)",
+      "publisher": "Ministry of Defence",
+      "source_version": "JSP 912 Human Factors Integration in Defence Systems, Part 1 Directive and Part 2 Guidance, V3.0 (March 2024)",
+      "license": "Open Government Licence v3.0",
+      "license_tier": 2,
+      "commercial_use": true,
+      "chapters": 9,
+      "status": "live"
+    },
+    {
       "slug": "fhwa-its-se",
       "title": "Systems Engineering for ITS",
       "publisher": "Federal Highway Administration",

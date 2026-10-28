@@ -809,6 +809,20 @@ Third-party source attributions (one block per shipped content pack)
            directive cites are named and not reproduced. Part 2 is not in this
            pack. See packs/jsp-936/LICENSE.
 
+[pack: jsp-912]
+
+  Source : JSP 912 Human Factors Integration in Defence Systems, Part 1
+           Directive and Part 2 Guidance, V3.0 (March 2024). Ministry of
+           Defence, Crown copyright.
+  Author : Ministry of Defence
+  Licence: Open Government Licence v3.0
+  Changes: reconstructed synthesized reference notes (not a reproduction)
+  Terms  : attribution required. Contains public sector information licensed
+           under the Open Government Licence v3.0. The Ministry of Defence does
+           not endorse this pack. Other JSPs and third-party standards the
+           two parts cite are named and not reproduced. Both parts are in
+           this pack. See packs/jsp-912/LICENSE.
+
 [pack: fhwa-its-se]
 
   Source : Systems Engineering for ITS, fourth generation (December 2022).

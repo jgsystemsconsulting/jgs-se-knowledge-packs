@@ -11,6 +11,10 @@ All notable changes to this project are documented here. Format follows
 
 ## [Unreleased]
 
+### Added
+
+- `jsp-912` content pack from JSP 912 Parts 1 and 2, V3.0 (March 2024), reconstructed notes, registered on the catalogue surfaces.
+
 ## [1.23.0]: 2026-10-28
 
 ### Added
