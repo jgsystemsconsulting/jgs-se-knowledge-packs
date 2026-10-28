@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "map_version": "1.22.0",
-  "generated_on": "2026-10-27",
+  "generated_on": "2026-10-28",
   "notes": [
     {
       "pack": "dau-se-guidebook",
@@ -3642,6 +3642,41 @@
       "pack": "jsp-936",
       "chapter": "ch08-ai-assurance.md",
       "note": "Assurance expectations and evidence for dependable AI claims from JSP 936 Part 1"
+    },
+    {
+      "pack": "fhwa-its-se",
+      "chapter": "ch01-introduction.md",
+      "note": "Orientation to the FHWA systems engineering guide for ITS, its purpose, audience, and navigation, from Systems Engineering for ITS, December 2022."
+    },
+    {
+      "pack": "fhwa-its-se",
+      "chapter": "ch02-what-is-systems-engineering.md",
+      "note": "Defines systems engineering and grounds it in transportation operations, from Systems Engineering for ITS, December 2022."
+    },
+    {
+      "pack": "fhwa-its-se",
+      "chapter": "ch03-the-systems-engineering-process.md",
+      "note": "Walks the Vee from regional planning to retirement with decision gates, tailoring guidance, and cross-cutting supports, from Systems Engineering for ITS, December 2022."
+    },
+    {
+      "pack": "fhwa-its-se",
+      "chapter": "ch04-managing-se-projects.md",
+      "note": "Shows agencies how to size systems engineering effort to project risk and choose procurement and staffing approaches, from Systems Engineering for ITS, December 2022."
+    },
+    {
+      "pack": "fhwa-its-se",
+      "chapter": "ch05-systems-engineering-resources.md",
+      "note": "Curates ITS publications, systems engineering references, training providers, and US DOT tools, from Systems Engineering for ITS, December 2022."
+    },
+    {
+      "pack": "fhwa-its-se",
+      "chapter": "ch06-systems-engineering-documentation.md",
+      "note": "Supplies purpose, tailoring guidance, checklists, and templates for each systems engineering document, from Systems Engineering for ITS, December 2022."
+    },
+    {
+      "pack": "fhwa-its-se",
+      "chapter": "ch07-glossary-and-acronyms.md",
+      "note": "Defines the terms and acronyms used across the guide, from Systems Engineering for ITS, December 2022."
     }
   ]
 }

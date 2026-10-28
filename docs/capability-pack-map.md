@@ -25,7 +25,7 @@ Rules of construction:
 | Cluster | Entries |
 |---|---|
 | 1. Systems Thinking & Fundamentals | 26 |
-| 2. Requirements Engineering | 22 |
+| 2. Requirements Engineering | 23 |
 | 3. Requirements Traceability & Allocation | 3 |
 | 4. Architecture & Design | 20 |
 | 5. Interface Management & ICIDs | 9 |
@@ -52,11 +52,11 @@ Rules of construction:
 | 26. Project/Program Management | 67 |
 | 27. Supplier, Procurement & Acquisition | 12 |
 | 28. Stakeholder Engagement & Needs | 3 |
-| 29. Governance, Reviews, Gates & Control Points | 27 |
-| 30. Standards, Tailoring & Process Models | 62 |
+| 29. Governance, Reviews, Gates & Control Points | 28 |
+| 30. Standards, Tailoring & Process Models | 67 |
 | 31. Specialty Engineering | 7 |
 | 32. Assurance & System Assurance | 16 |
-| **Total** | **728** |
+| **Total** | **735** |
 
 ## 1. Systems Thinking & Fundamentals
 
@@ -115,6 +115,7 @@ Rules of construction:
 | fda-med-device | ch02-premarket-software-documentation.md | Content of Premarket Submissions for Device Software Functions, June 2023 guidance notes |
 | nrc-nuclear | ch03-software-requirements-specifications.md | Software requirements specification notes from RG 1.172 Rev 1 |
 | jsp-376 | ch03-safety-management-and-requirements.md | Safety Management Plan, safety KUR, and URD and SRD safety requirements across the lifecycle |
+| fhwa-its-se | ch06-systems-engineering-documentation.md | Supplies purpose, tailoring guidance, checklists, and templates for each systems engineering document, from Systems Engineering for ITS, December 2022. |
 
 ## 3. Requirements Traceability & Allocation
 
@@ -845,6 +846,7 @@ Rules of construction:
 | nrc-nuclear | ch07-btp-7-14-staff-software-review.md | BTP 7-14 Rev 6 staff software review notes for implementation and design outputs |
 | jsp-376 | ch02-roles-and-safety-in-the-programme.md | SRO and User safety accountabilities, the programme envelope, and the unpublished Chapter 4 gap |
 | jsp-936 | ch03-legal-ethics-governance.md | Legal, ethics, and governance direction for AI-enabled capability from JSP 936 Part 1 |
+| fhwa-its-se | ch04-managing-se-projects.md | Shows agencies how to size systems engineering effort to project risk and choose procurement and staffing approaches, from Systems Engineering for ITS, December 2022. |
 
 ## 30. Standards, Tailoring & Process Models
 
@@ -912,6 +914,11 @@ Rules of construction:
 | jsp-376 | ch01-acquisition-safety-policy.md | JSP 376 policy frame: ALARP, tolerability, exemptions, and the six acquisition safety concepts |
 | jsp-936 | ch01-introduction.md | Policy, scope, applicability, and tailoring direction for dependable AI from JSP 936 Part 1 |
 | jsp-936 | ch05-ai-lifecycles.md | Lifecycle direction for developing, deploying, and retiring AI systems from JSP 936 Part 1 |
+| fhwa-its-se | ch01-introduction.md | Orientation to the FHWA systems engineering guide for ITS, its purpose, audience, and navigation, from Systems Engineering for ITS, December 2022. |
+| fhwa-its-se | ch02-what-is-systems-engineering.md | Defines systems engineering and grounds it in transportation operations, from Systems Engineering for ITS, December 2022. |
+| fhwa-its-se | ch03-the-systems-engineering-process.md | Walks the Vee from regional planning to retirement with decision gates, tailoring guidance, and cross-cutting supports, from Systems Engineering for ITS, December 2022. |
+| fhwa-its-se | ch05-systems-engineering-resources.md | Curates ITS publications, systems engineering references, training providers, and US DOT tools, from Systems Engineering for ITS, December 2022. |
+| fhwa-its-se | ch07-glossary-and-acronyms.md | Defines the terms and acronyms used across the guide, from Systems Engineering for ITS, December 2022. |
 
 ## 31. Specialty Engineering
 
