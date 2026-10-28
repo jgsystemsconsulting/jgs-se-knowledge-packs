@@ -13,7 +13,7 @@ Re-run after the four 2026-10-27 scoped cuts all reached done. Wave: value 3, ri
 
 ## P57 - uk-defence-jsp-912-pack
 
-- **id**: P57; **name**: uk-defence-jsp-912-pack; **size**: L; **status**: ready; **corroboration**: 1 (value); **deps**: none; **promoted_ids**: [b-41]
+- **id**: P57; **name**: uk-defence-jsp-912-pack; **size**: L; **status**: done (2026-10-28; EXECUTED + IVL in docs/superpowers/plans/); **corroboration**: 1 (value); **deps**: none; **promoted_ids**: [b-41]
 - **problem**: UK defence growth path open after jsp-815/376/936. The 2026-10-14 research gate ranked JSP 912 (Human Factors Integration in defence systems, Parts 1+2, V3.0 Mar 2024, OGL v3, two free gov.uk PDFs ~16pp + ~65pp) next after 936, but candidate-packs row 4 still shows the family partially built and the 2026-10-28 remaining-work sentence lumps 912 into the "unranked remainder".
 - **evidence**: docs/candidate-packs.md:L19 (row 4 partially built), :L26 (unranked-remainder sentence names JSP 912); docs/superpowers/research/2026-10-14-uk-defence-next-jsp-pack-research.md:L79 (rank order), :L17 (912 source row: OGL v3, page footer licence, two free PDFs).
 - **in_scope**: pin and vet JSP 912 Parts 1+2 on gov.uk (OGL v3); build packs/jsp-912 per docs/PACK-SPEC.md (multi-part precedent: jsp-815; decide one-pack-two-parts per the research note "fits one pack if both parts in scope"); full D6 registration identical to jsp-936/fhwa-its-se (counts 73→74, 82→83, map 735→735+N, `updated` frozen, no Licences-row change needed since OGL row already carries the family cell pattern); candidate-packs row 4 update + drop JSP 912 from the unranked-remainder sentence in the same run.
