@@ -706,7 +706,7 @@ Replace the evidence cell. Drop `nasa-risk` from the parenthetical and from the 
 Evidence cell, substance required:
 
 ```text
-docs/source-watchlist.json version fields on the remaining drift rows (nasa-pra, sebok, nasa-se-handbook, nist-ssdf, nist-stat-handbook, dod-rio, nasa-schedule, dodaf, federal-bca, faa-ams-vv, mrl-deskbook); 13 findings remain after nasa-risk left this list on VET_DATE; nasa-pra watch version still carries the handbook Version 2.0 string and that string does not describe NASA/SP-2011-3421, so it is not a rebuild candidate for the nasa-risk cut; .zcode/source-watch/2026-10-12.md drift findings + addendum item 6
+docs/source-watchlist.json version fields on the remaining drift rows (nasa-pra, sebok, nasa-se-handbook, nist-ssdf, nist-stat-handbook, dod-rio, nasa-schedule, dodaf, federal-bca, faa-ams-vv, mrl-deskbook); 13 findings remain after the RM-handbook rebuild left this list on VET_DATE; nasa-pra watch version still carries the handbook Version 2.0 string and that string does not describe NASA/SP-2011-3421, so it is not a rebuild candidate for this cut; .zcode/source-watch/2026-10-12.md drift findings + addendum item 6
 ```
 
 `VET_DATE` is the Task 1 date, not the token. Also drop `nasa-risk` from the summary cell's implication that 14 findings still stand: the summary should say 13 findings remain, not 14. Do not close the row.
