@@ -1,0 +1,65 @@
+fhwa-its-se pack: content licence
+=================================
+
+Source licence: Public Domain (US Government work, 17 U.S.C. § 105)  (tier 1; see
+../../docs/SOURCE-VETTING.md). No source-material download link is published.
+
+The source is a work of the United States Government, prepared by the Federal
+Highway Administration (FHWA) of the U.S. Department of Transportation, and is
+NOT subject to copyright protection in the United States (17 U.S.C. § 105). It
+is in the public domain: anyone may reproduce, transform, and redistribute it
+for any purpose, including commercially, without permission and without any
+attribution or share-alike obligation. No attribution duty exists; attribution
+to FHWA is provided as a courtesy (see the repository NOTICE), not as a legal
+obligation. FHWA does not endorse this pack or its authors.
+
+SOURCE IDENTIFICATION
+=====================
+
+The pin was verified on 2026-10-28 against the live PDF: 5801248 bytes,
+223 pages, the December 2022 fourth-generation sentence present, no report
+number in the file, and no contractor copyright reservation.
+
+Systems Engineering for ITS, fourth generation, published December 2022.
+Publisher: Federal Highway Administration, U.S. Department of Transportation,
+Office of Operations (Systems Engineering for ITS resource). The document
+combines and updates the FHWA Systems Engineering Guidebook (SEGB) and Systems
+Engineering Handbook (SEHB) publications. The file carries no report number;
+none is invented here. Source identified by title, publisher, and edition
+only.
+
+Reconstruction: all pack content is synthesized reference notes in the authors'
+own words, drawn from the pinned document. The document itself is not
+republished here; long verbatim passages are never reproduced, and no PDF
+figures or page images are embedded.
+
+NAMED-NOT-QUOTED MATERIAL
+=========================
+
+The following standards and bodies are identified by name in the source and in
+this pack for reference only. They are copyrighted by their owners and are NOT
+licensed to this pack. The pack restates only what the FHWA document itself
+says about them. It reproduces no clause text, table, objective, or figure from
+any of them:
+
+-   INCOSE Systems Engineering Handbook, 4th Edition (International Council on
+    Systems Engineering).
+-   ISO/IEC/IEEE 15288:2015, System life cycle processes, and ISO/IEC/IEEE
+    29148:2018, Requirements engineering.
+-   NTCIP standards (National Transportation Communications for ITS Protocol)
+    and SAE publications, named in the source's acronym list.
+-   IEEE standards named in the source, including IEEE 1012-1998 (Independent
+    Verification and Validation) and IEEE Std 1233 (System Requirements
+    Specifications), and ANSI/AIAA-G-043-1992.
+-   Any other third-party standard or publication named in the source.
+
+Buy these from their publishers as applicable; see the se-standards-signpost
+pack for the pointer table.
+
+SCOPE OF THIS FILE
+==================
+
+This file governs the CONTENT of this pack. The repository tooling and
+scaffolding are licensed separately under the repository MIT licence (see
+../../LICENSE); the pack content itself follows the source's public-domain
+terms above.

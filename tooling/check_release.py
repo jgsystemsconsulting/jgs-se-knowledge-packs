@@ -27,11 +27,13 @@ standard requires for this repo and exits non-zero on any failure:
      (MAP-21-01; local/trusted).
  11. Capability-map generator replay via generate_capability_map.main() --check
      (MAP-21-05; local/trusted; uses on-disk map generated_on).
-  12. HTML self-containment ([html-assets]): every docs/*.html page is scanned
-     for external http(s) asset references; hosts must be exactly
-     FIRST_PARTY_HOSTS (github.com, jgsystemsconsulting.github.io) with empty
-     userinfo; data: URIs and relative paths are allowed; protocol-relative
-     URLs fail; zero pages fails closed.
+  12. HTML self-containment ([html-assets]): every docs/*.html page and
+     every docs/packs/*/index.html page is scanned for external http(s)
+     asset references. Hosts must be an exact FIRST_PARTY_HOSTS match
+     (github.com, jgsystemsconsulting.github.io) with empty userinfo.
+     data: URIs and relative paths are allowed. Protocol-relative URLs
+     fail. An empty page set fails closed. The set is two globs, not
+     rglob, so docs/superpowers/ stays out.
      Plus brand-token parity ([brand-tokens], P13): the exclusive BRAND-TOKENS
      slice extracted from docs/index.html must appear verbatim in
      docs/packs.html.
@@ -44,7 +46,7 @@ standard requires for this repo and exits non-zero on any failure:
      packs/*/SKILL.md (signposts and orchestrators excluded) must equal
      catalog.json packs[].slug where status is live or absent; signpost and
      orchestrator slugs must not appear in catalog.packs. planned[] is free.
-     updated is review-only after the b-03 bump.
+     updated bumps when the live pack set changes (row added, removed, or status change); it is not a release stamp and is not gated here.
   15. Routing map coverage ([routing-map], /se): exactly one kind: orchestrator
      member; ROUTING-MAP markers and four subheadings; pack-cell slug resolution
      and Topics coverage of every content slug; licence parity for non-Public-Domain
@@ -61,11 +63,17 @@ standard requires for this repo and exits non-zero on any failure:
       validate must pass, so every watchlist entry has a last_checked within
       STALE_DAYS. Local only; CI does not execute repository code and this
       check is not mirrored into validate.yml.
+ 19. Sitemap and pack-page REV ([sitemap], [pack-rev]): sitemap pack locs equal
+     the live catalog slug set (status absent or live, same rule as check 14)
+     and equal the docs/packs/*/index.html slug set; both fixed locs present;
+     no other loc. Every pack page masthead REV and footer Rev equal
+     RELEASE-INFO.txt Version. Empty pack-page set fails closed.
 
 stdlib only. This is a LOCAL/trusted gate and may run repo code; the CI workflow
 (.github/workflows/validate.yml) inlines its own checks and never executes repo code.
 CI-covered: version, index, overlap, map/rules data invariants, html-assets,
-catalogue-count, catalog-live-set, routing-map, pack-quality (data subset). Local-only required before tag: pack validation,
+catalogue-count, catalog-live-set, routing-map, pack-quality (data subset),
+sitemap, pack-rev. Local-only required before tag: pack validation,
 packs.html freshness, full map/rules checks, replay.
 
 Pre-tag rule: run this gate at the exact commit being tagged and require a PASS
@@ -627,6 +635,161 @@ def check_catalog_live_set(
     return errs
 
 
+SITEMAP_TAG = "[sitemap]"
+PACK_REV_TAG = "[pack-rev]"
+SITEMAP_NS = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
+PACK_REV_MASTHEAD_RE = re.compile(r"REV <b>(\d+\.\d+\.\d+)</b>")
+PACK_REV_FOOTER_RE = re.compile(
+    r'<span class="label">Rev</span><b>(\d+\.\d+\.\d+)</b>'
+)
+RELEASE_VERSION_RE = re.compile(r"Version:\s*([0-9]+\.[0-9]+\.[0-9]+)")
+
+
+def _live_slugs_from_catalog(catalog: dict) -> tuple[set[str], str | None]:
+    """Return (live slug set, error). Live means status absent or 'live'."""
+    packs_list = catalog.get("packs")
+    if not isinstance(packs_list, list):
+        return set(), f"{CATALOG_JSON_PATH} packs must be a list"
+    live: set[str] = set()
+    for entry in packs_list:
+        if not isinstance(entry, dict):
+            continue
+        slug = entry.get("slug")
+        if not isinstance(slug, str) or not slug.strip():
+            continue
+        status = entry.get("status")
+        if status is None or status == "live":
+            live.add(slug.strip())
+    return live, None
+
+
+def check_sitemap(root: Path) -> list[str]:
+    """Pack locs, page slugs, and live catalog slugs must be one set.
+
+    Fixed locs are `{pages}/` and `{pages}/packs.html` where pages is the
+    origin shared by every pack loc. A loc that is neither fixed nor a pack
+    loc fails. Missing sitemap, missing catalog, or unparseable catalog fails
+    closed (empty catalog is not a pass).
+    """
+    tag = SITEMAP_TAG
+    errs: list[str] = []
+    sitemap_path = root / "docs" / "sitemap.xml"
+    catalog_path = root / CATALOG_JSON_PATH
+    if not sitemap_path.is_file():
+        errs.append(f"{tag} missing docs/sitemap.xml")
+    if not catalog_path.is_file():
+        errs.append(f"{tag} missing {CATALOG_JSON_PATH}")
+        return errs
+    try:
+        catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as e:
+        errs.append(f"{tag} cannot read/parse {CATALOG_JSON_PATH}: {e}")
+        return errs
+    if not isinstance(catalog, dict):
+        errs.append(f"{tag} {CATALOG_JSON_PATH} root must be an object")
+        return errs
+    live, live_err = _live_slugs_from_catalog(catalog)
+    if live_err:
+        errs.append(f"{tag} {live_err}")
+        return errs
+
+    page_slugs = {p.parent.name for p in (root / "docs" / "packs").glob("*/index.html")}
+
+    if not sitemap_path.is_file():
+        return errs
+    try:
+        import xml.etree.ElementTree as ET
+        tree = ET.parse(sitemap_path)
+    except (OSError, ET.ParseError) as e:
+        errs.append(f"{tag} cannot parse docs/sitemap.xml: {e}")
+        return errs
+    locs = []
+    for el in tree.iter(SITEMAP_NS + "loc"):
+        if el.text and el.text.strip():
+            locs.append(el.text.strip())
+    if not locs:
+        errs.append(f"{tag} docs/sitemap.xml yielded no loc")
+        return errs
+
+    # Fixed locs are {origin}/ and {origin}/packs.html. Derive origin from a
+    # pack loc (the one that contains /packs/), not from locs[0]. The site-root
+    # loc has no /packs/ segment, so splitting it would keep the whole URL.
+    packish = [loc for loc in locs if "/packs/" in loc]
+    if not packish:
+        errs.append(f"{tag} no pack loc to derive origin from")
+        return errs
+    origin = packish[0].split("/packs/")[0].rstrip("/")
+    fixed = {origin + "/", origin + "/packs.html"}
+    pack_slugs: set[str] = set()
+    other: list[str] = []
+    prefix = origin + "/packs/"
+    for loc in locs:
+        if loc in fixed:
+            continue
+        if loc.startswith(prefix) and loc.endswith("/") and loc.count("/") >= 1:
+            slug = loc[len(prefix):-1]
+            if "/" in slug or not slug:
+                other.append(loc)
+            else:
+                pack_slugs.add(slug)
+        else:
+            other.append(loc)
+    missing_fixed = sorted(fixed - set(locs))
+    if missing_fixed:
+        errs.append(f"{tag} missing fixed loc(s): {missing_fixed}")
+    if other:
+        errs.append(f"{tag} loc neither fixed nor pack loc: {other}")
+    if pack_slugs != live:
+        errs.append(
+            f"{tag} pack locs != live catalog "
+            f"(locs {len(pack_slugs)} vs live {len(live)}): "
+            f"only locs {sorted(pack_slugs - live)}; "
+            f"only live {sorted(live - pack_slugs)}"
+        )
+    if pack_slugs != page_slugs:
+        errs.append(
+            f"{tag} pack locs != page slugs "
+            f"(locs {len(pack_slugs)} vs pages {len(page_slugs)}): "
+            f"only locs {sorted(pack_slugs - page_slugs)}; "
+            f"only pages {sorted(page_slugs - pack_slugs)}"
+        )
+    return errs
+
+
+def check_pack_rev(root: Path) -> list[str]:
+    """Every pack page masthead REV and footer Rev must equal RELEASE-INFO."""
+    tag = PACK_REV_TAG
+    errs: list[str] = []
+    ri_path = root / "RELEASE-INFO.txt"
+    if not ri_path.is_file():
+        return [f"{tag} missing RELEASE-INFO.txt"]
+    m = RELEASE_VERSION_RE.search(ri_path.read_text(encoding="utf-8"))
+    if not m:
+        return [f"{tag} RELEASE-INFO.txt has no Version line"]
+    expected = m.group(1)
+    packs_dir = root / "docs" / "packs"
+    # No docs/packs directory: nothing to check. An empty directory fails closed.
+    if not packs_dir.is_dir():
+        return []
+    pages = sorted(packs_dir.glob("*/index.html"))
+    if not pages:
+        return [f"{tag} no docs/packs/*/index.html"]
+    for page in pages:
+        text = page.read_text(encoding="utf-8", errors="ignore")
+        rel = page.relative_to(root).as_posix()
+        for name, pat in (
+            ("masthead REV", PACK_REV_MASTHEAD_RE),
+            ("footer Rev", PACK_REV_FOOTER_RE),
+        ):
+            hit = pat.search(text)
+            got = hit.group(1) if hit else ""
+            if got != expected:
+                errs.append(
+                    f"{tag} {rel} {name} '{got}' != RELEASE-INFO '{expected}'"
+                )
+    return errs
+
+
 # P17 routing-map: /se orchestrator map coverage. Literals pinned in validate.yml
 # (test_ci_gate ROUTING_MAP_PAIR; twin lands in Task 6).
 ROUTING_MAP_TAG = "[routing-map]"
@@ -1096,12 +1259,16 @@ def main() -> int:
         except Exception as e:
             fail(errs, f"[rr-b-30] cannot verify packs.html generation: {e}")
 
-    # 12. html-assets (P12): every docs/*.html page is self-contained. External
-    #     http(s) assets must sit on an exact FIRST_PARTY_HOSTS host with empty
-    #     userinfo; data: URIs and relative paths are allowed; protocol-relative
-    #     //host/x fails; zero pages fails closed. docs-level glob only (not
-    #     rglob) so docs/superpowers/ planning files stay out of scope.
-    html_pages = sorted((ROOT / "docs").glob("*.html"))
+    # 12. html-assets (P46): docs/*.html plus docs/packs/*/index.html.
+    #     Two globs, not rglob, so docs/superpowers/ stays out. External
+    #     http(s) assets must sit on an exact FIRST_PARTY_HOSTS host with
+    #     empty userinfo. data: URIs and relative paths are allowed.
+    #     Protocol-relative //host/x fails. An empty union fails closed.
+    docs = ROOT / "docs"
+    html_pages = sorted(
+        list(docs.glob("*.html"))
+        + list(docs.glob("packs/*/index.html"))
+    )
     if not html_pages:
         fail(errs, "[html-assets] no docs/*.html found")
     for page in html_pages:
@@ -1319,6 +1486,12 @@ def main() -> int:
             )
     except Exception as e:
         fail(errs, f"[source-watch] check_source_watch failed to run: {e}")
+
+    # 19. sitemap pack locs and pack-page REV ([sitemap], [pack-rev])
+    for msg in check_sitemap(ROOT):
+        fail(errs, msg)
+    for msg in check_pack_rev(ROOT):
+        fail(errs, msg)
 
     # 7. authored-file headers (root + docs + tooling + installers; NOT packs/)
     authored = [ROOT / "README.md", ROOT / "SECURITY.md", ROOT / "CODE_OF_CONDUCT.md",

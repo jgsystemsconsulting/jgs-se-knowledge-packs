@@ -5,7 +5,8 @@
 
 Run:  python tooling/test_html_assets.py
 Exits 0 when the scan flags every fixture class from the P12 spec, allows the
-first-party/data/relative classes, and the real docs/*.html pages scan clean.
+first-party/data/relative classes, and the real pages (docs/*.html plus
+docs/packs/*/index.html) scan clean.
 Any failed assert raises and exits nonzero.
 
 Self-host convention (P12): images under docs/assets/, fonts under docs/fonts/,
@@ -129,12 +130,34 @@ def main() -> int:
     # protocol-relative always fails
     assert scan('<script src="//cdn.example/x.js"></script>') == ["//cdn.example/x.js"]
 
-    # (4) the real pages must scan clean (P12 acceptance: zero findings)
-    pages = sorted((ROOT / "docs").glob("*.html"))
+    # (4) real pages: top-level docs/*.html plus docs/packs/*/index.html.
+    # docs/superpowers/ is structurally out (the glob never matches it).
+    docs = ROOT / "docs"
+    pages = sorted(
+        list(docs.glob("*.html"))
+        + list(docs.glob("packs/*/index.html"))
+    )
     assert pages, "no docs/*.html found under docs/"
+    assert any(p.name == "index.html" and p.parent == docs for p in pages)
+    assert any(p.name == "packs.html" and p.parent == docs for p in pages)
+    pack_pages = [p for p in pages if p.parent.parent == docs / "packs"]
+    assert pack_pages, "no docs/packs/*/index.html in the page set"
+    assert all(p.name == "index.html" for p in pack_pages)
+    planted = docs / "superpowers" / "foo.html"
+    planted.parent.mkdir(parents=True, exist_ok=True)
+    planted.write_text("<!doctype html>\n", encoding="utf-8")
+    try:
+        again = sorted(
+            list(docs.glob("*.html"))
+            + list(docs.glob("packs/*/index.html"))
+        )
+        assert planted not in again, f"{planted} entered the page set"
+    finally:
+        planted.unlink()
     for page in pages:
         leaks = scan(page.read_text(encoding="utf-8", errors="ignore"))
-        assert leaks == [], f"{page.name}: unexpected external asset(s): {leaks}"
+        rel = page.relative_to(ROOT).as_posix()
+        assert leaks == [], f"{rel}: unexpected external asset(s): {leaks}"
 
     print(f"html-assets tests: OK ({len(pages)} real page(s) clean)")
     return 0

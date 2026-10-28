@@ -568,6 +568,22 @@
       "version": "JSP 376 Defence Acquisition Safety Policy V1.1 (April 2024)",
       "last_checked": "2026-10-14",
       "hint": ""
+    },
+    {
+      "slug": "jsp-936",
+      "publisher": "Ministry of Defence",
+      "document": "JSP 936 Dependable Artificial Intelligence (AI) in Defence, Part 1: Directive, V1.1 (November 2024)",
+      "version": "JSP 936 Dependable Artificial Intelligence (AI) in Defence, Part 1: Directive, V1.1 (November 2024)",
+      "last_checked": "2026-10-27",
+      "hint": ""
+    },
+    {
+      "slug": "fhwa-its-se",
+      "publisher": "Federal Highway Administration",
+      "document": "Systems Engineering for ITS, fourth generation (December 2022)",
+      "version": "Systems Engineering for ITS, fourth generation (December 2022)",
+      "last_checked": "2026-10-28",
+      "hint": ""
     }
   ]
 }

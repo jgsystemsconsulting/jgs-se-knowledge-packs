@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "map_version": "1.22.0",
-  "generated_on": "2026-10-13",
+  "generated_on": "2026-10-28",
   "rules_of_construction": [
     "Every chapter in every pack under packs/<slug>/chapters/ is assigned to exactly one capability cluster (best fit).",
     "Cross-cutting chapters carry a remark noting the strong secondary fit.",
@@ -4378,6 +4378,96 @@
       "pack": "jsp-376",
       "chapter": "ch08-in-service-and-disposal.md",
       "cluster": "Operations, Maintenance & Disposal",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-936",
+      "chapter": "ch01-introduction.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-936",
+      "chapter": "ch02-ai-in-defence-systems.md",
+      "cluster": "Systems Thinking & Fundamentals",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-936",
+      "chapter": "ch03-legal-ethics-governance.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-936",
+      "chapter": "ch04-human-ai-teams.md",
+      "cluster": "Human Systems Integration / Human Factors",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-936",
+      "chapter": "ch05-ai-lifecycles.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-936",
+      "chapter": "ch06-quality-safety-security.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-936",
+      "chapter": "ch07-suppliers.md",
+      "cluster": "Supplier, Procurement & Acquisition",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-936",
+      "chapter": "ch08-ai-assurance.md",
+      "cluster": "Assurance & System Assurance",
+      "is_support": false
+    },
+    {
+      "pack": "fhwa-its-se",
+      "chapter": "ch01-introduction.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "fhwa-its-se",
+      "chapter": "ch02-what-is-systems-engineering.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "fhwa-its-se",
+      "chapter": "ch03-the-systems-engineering-process.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "fhwa-its-se",
+      "chapter": "ch04-managing-se-projects.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": false
+    },
+    {
+      "pack": "fhwa-its-se",
+      "chapter": "ch05-systems-engineering-resources.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "fhwa-its-se",
+      "chapter": "ch06-systems-engineering-documentation.md",
+      "cluster": "Requirements Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "fhwa-its-se",
+      "chapter": "ch07-glossary-and-acronyms.md",
+      "cluster": "Standards, Tailoring & Process Models",
       "is_support": false
     }
   ]

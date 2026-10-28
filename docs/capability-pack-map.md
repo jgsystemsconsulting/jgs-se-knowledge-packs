@@ -24,8 +24,8 @@ Rules of construction:
 
 | Cluster | Entries |
 |---|---|
-| 1. Systems Thinking & Fundamentals | 25 |
-| 2. Requirements Engineering | 22 |
+| 1. Systems Thinking & Fundamentals | 26 |
+| 2. Requirements Engineering | 23 |
 | 3. Requirements Traceability & Allocation | 3 |
 | 4. Architecture & Design | 20 |
 | 5. Interface Management & ICIDs | 9 |
@@ -43,20 +43,20 @@ Rules of construction:
 | 17. Technical Planning & Work Breakdown | 13 |
 | 18. Measurement & Technical Assessment | 37 |
 | 19. Quality Assurance & Process Compliance | 7 |
-| 20. Safety, Reliability & Survivability | 95 |
+| 20. Safety, Reliability & Survivability | 96 |
 | 21. Cybersecurity & Security Engineering | 73 |
-| 22. Human Systems Integration / Human Factors | 26 |
+| 22. Human Systems Integration / Human Factors | 27 |
 | 23. Logistics, Supportability & Sustainment | 12 |
 | 24. Operations, Maintenance & Disposal | 15 |
 | 25. Training & Documentation Delivery | 13 |
 | 26. Project/Program Management | 67 |
-| 27. Supplier, Procurement & Acquisition | 11 |
+| 27. Supplier, Procurement & Acquisition | 12 |
 | 28. Stakeholder Engagement & Needs | 3 |
-| 29. Governance, Reviews, Gates & Control Points | 26 |
-| 30. Standards, Tailoring & Process Models | 60 |
+| 29. Governance, Reviews, Gates & Control Points | 28 |
+| 30. Standards, Tailoring & Process Models | 67 |
 | 31. Specialty Engineering | 7 |
-| 32. Assurance & System Assurance | 15 |
-| **Total** | **720** |
+| 32. Assurance & System Assurance | 16 |
+| **Total** | **735** |
 
 ## 1. Systems Thinking & Fundamentals
 
@@ -87,6 +87,7 @@ Rules of construction:
 | sebok | ch32-sebok-se-software-engineering.md | SE and software engineering relationship |
 | sebok | ch35-sebok-implementation-examples.md | Implementation examples |
 | sebok | ch36-sebok-emerging-knowledge.md | Emerging SE knowledge |
+| jsp-936 | ch02-ai-in-defence-systems.md | How AI including RAS and digital systems is framed inside Defence systems from JSP 936 Part 1 |
 
 ## 2. Requirements Engineering
 
@@ -114,6 +115,7 @@ Rules of construction:
 | fda-med-device | ch02-premarket-software-documentation.md | Content of Premarket Submissions for Device Software Functions, June 2023 guidance notes |
 | nrc-nuclear | ch03-software-requirements-specifications.md | Software requirements specification notes from RG 1.172 Rev 1 |
 | jsp-376 | ch03-safety-management-and-requirements.md | Safety Management Plan, safety KUR, and URD and SRD safety requirements across the lifecycle |
+| fhwa-its-se | ch06-systems-engineering-documentation.md | Supplies purpose, tailoring guidance, checklists, and templates for each systems engineering document, from Systems Engineering for ITS, December 2022. |
 
 ## 3. Requirements Traceability & Allocation
 
@@ -549,6 +551,7 @@ Rules of construction:
 | faa-8110-49 | ch13-design-level-error-handling.md | Design-level error handling notes from FAA airborne software guidance |
 | jsp-815 | ch05-risk-assessment-and-safety-cases.md | Risk assessment and safety-case notes from JSP 815 |
 | jsp-376 | ch04-test-evaluation-and-safety-case.md | ITEAP, certification strategy, and safety case ownership from Pre-Concept to handover |
+| jsp-936 | ch06-quality-safety-security.md | Quality, safety, and security expectations for AI systems from JSP 936 Part 1 |
 
 ## 21. Cybersecurity & Security Engineering
 
@@ -658,6 +661,7 @@ Rules of construction:
 | nasa-hsi | glossary.md (support file) | Glossary for the pack |
 | nasa-hsi | patterns.md (support file) | Patterns/practice heuristics |
 | nasa-se-handbook | ch05-2-6-human-systems-integration-hsi-in-the-se-process.md | HSI overview in SE processes |
+| jsp-936 | ch04-human-ai-teams.md | Human and AI teaming expectations across roles and human control from JSP 936 Part 1 |
 
 ## 23. Logistics, Supportability & Sustainment
 
@@ -801,6 +805,7 @@ Rules of construction:
 | faa-8110-49 | ch10-cots-devices-and-cbas.md | COTS device and CBAS notes from the FAA airborne hardware guidance |
 | jsp-815 | ch06-supervision-contracting-control.md | Supervision, contracting, and control notes from JSP 815 |
 | jsp-376 | ch06-early-lifecycle-phases.md | Pre-Concept, Concept, and Assessment safety artefacts and SOC, OBC, and FBC evidence |
+| jsp-936 | ch07-suppliers.md | Supplier and procurement direction for acquiring AI systems from JSP 936 Part 1 |
 
 ## 28. Stakeholder Engagement & Needs
 
@@ -840,6 +845,8 @@ Rules of construction:
 | jsp-815 | ch03-leadership-and-organisation.md | Defence safety leadership and organisation notes from JSP 815 |
 | nrc-nuclear | ch07-btp-7-14-staff-software-review.md | BTP 7-14 Rev 6 staff software review notes for implementation and design outputs |
 | jsp-376 | ch02-roles-and-safety-in-the-programme.md | SRO and User safety accountabilities, the programme envelope, and the unpublished Chapter 4 gap |
+| jsp-936 | ch03-legal-ethics-governance.md | Legal, ethics, and governance direction for AI-enabled capability from JSP 936 Part 1 |
+| fhwa-its-se | ch04-managing-se-projects.md | Shows agencies how to size systems engineering effort to project risk and choose procurement and staffing approaches, from Systems Engineering for ITS, December 2022. |
 
 ## 30. Standards, Tailoring & Process Models
 
@@ -905,6 +912,13 @@ Rules of construction:
 | med-device-eu | glossary.md (support file) | SaMD, legacy device, PMCF, PMS, clinical evaluation, CEAR, MDR, IVDR, UKCA, MDCG, each pointing at the chapter that teaches it |
 | med-device-eu | cheatsheet.md (support file) | Which chapter answers the qualification question, which template to open, and which regime a question belongs to |
 | jsp-376 | ch01-acquisition-safety-policy.md | JSP 376 policy frame: ALARP, tolerability, exemptions, and the six acquisition safety concepts |
+| jsp-936 | ch01-introduction.md | Policy, scope, applicability, and tailoring direction for dependable AI from JSP 936 Part 1 |
+| jsp-936 | ch05-ai-lifecycles.md | Lifecycle direction for developing, deploying, and retiring AI systems from JSP 936 Part 1 |
+| fhwa-its-se | ch01-introduction.md | Orientation to the FHWA systems engineering guide for ITS, its purpose, audience, and navigation, from Systems Engineering for ITS, December 2022. |
+| fhwa-its-se | ch02-what-is-systems-engineering.md | Defines systems engineering and grounds it in transportation operations, from Systems Engineering for ITS, December 2022. |
+| fhwa-its-se | ch03-the-systems-engineering-process.md | Walks the Vee from regional planning to retirement with decision gates, tailoring guidance, and cross-cutting supports, from Systems Engineering for ITS, December 2022. |
+| fhwa-its-se | ch05-systems-engineering-resources.md | Curates ITS publications, systems engineering references, training providers, and US DOT tools, from Systems Engineering for ITS, December 2022. |
+| fhwa-its-se | ch07-glossary-and-acronyms.md | Defines the terms and acronyms used across the guide, from Systems Engineering for ITS, December 2022. |
 
 ## 31. Specialty Engineering
 
@@ -937,3 +951,4 @@ Rules of construction:
 | easa-rules | ch06-aeh-objectives.md | AEH objectives AMC 20-152A adds for custom devices, COTS devices, and circuit board assemblies |
 | easa-rules | ch07-joint-sw-aeh-workflow.md | Joint software and hardware certification workflow and the PSAC/PHAC-style planning interfaces |
 | jsp-376 | ch05-supervision-assurance-approvals.md | Three lines of defence, the Safety Assurance Model, and safety inside the five-case business case |
+| jsp-936 | ch08-ai-assurance.md | Assurance expectations and evidence for dependable AI claims from JSP 936 Part 1 |

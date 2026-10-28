@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MIT
  *
  * build_all_packs.workflow.js: the one-go build orchestrator. No separate build-plan doc is maintained in this repo.
- * Builds every backlog pack whose source is staged under sources/<slug>/, through a
+ * Builds an unshipped (parked) pack whose source is staged under sources/<slug>/, through a
  * gated pipeline (vet -> extract -> outline -> scaffold -> chapters -> verify), then
  * registers the passers once. Fail-closed: a pack that fails vet/overlap/validate is
  * NOT registered. Does NOT git commit or push — packs land in the working tree for review.
@@ -12,18 +12,18 @@
  *   packsDir (optional): repo root. Default is the parent of this script's directory.
  *   refSkillDir (required): checkout of the sibling jgs-reference-skill repo. No default.
  *     The run throws if it is missing or empty.
- *   slugs (optional): slug list. Omit to build every key in META.
+ *   slugs (optional): slug list. META defaults to empty, so omitting slugs builds nothing; pass slugs to opt into PARKED rows.
  *   skipRegister (optional): truthy skips the Register phase.
  *   Workflow({ scriptPath: ".../tooling/build_all_packs.workflow.js",
  *              args: { refSkillDir: ".../jgs-reference-skill",
- *                      slugs: ["nasa-systems-modeling"] } })
+ *                      slugs: ["nasa-swehb"] } })
  */
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 export const meta = {
   name: 'build-all-packs',
-  description: 'Build every staged backlog pack end-to-end (vet→extract→outline→scaffold→chapters→verify) and register the passers.',
+  description: 'Build an unshipped staged pack end-to-end (vet→extract→outline→scaffold→chapters→verify) and register passers.',
   phases: [
     { title: 'Build', detail: 'per-pack: prepare → fan-out chapter synthesis → verify (fail-closed)' },
     { title: 'Register', detail: 'update SKILLS/catalog/NOTICE/README/CHANGELOG for passed packs; run release gates' },
@@ -37,45 +37,18 @@ if (!REF) {
 }
 const PD = 'Public Domain (US Government work)'
 
-// slug -> source identity + the one critical build caveat (full row is in docs/PACK-BACKLOG.md)
-const META = {
-  'nasa-systems-modeling': { title: 'NASA Systems Modeling Handbook (NASA-HDBK-1009A Rev A)', pub: 'NASA', lic: PD, tier: '1', caveat: 'Tool-agnostic SysML tied to NPR 7123.1; current Rev A (2025).' },
-  'faa-sem': { title: 'FAA Systems Engineering Manual v1.0.1', pub: 'FAA', lic: PD, tier: '1', caveat: 'Civil-agency SE process companion to NASA/DAU.' },
-  'gao-cost': { title: 'GAO Cost Estimating and Assessment Guide (GAO-20-195G)', pub: 'GAO', lic: PD, tier: '1', caveat: 'Redraw embedded third-party figures; do not reproduce them.' },
-  'nasa-ceh': { title: 'NASA Cost Estimating Handbook v4.0', pub: 'NASA', lic: PD, tier: '1', caveat: 'Pairs with nasa-risk.' },
-  'gao-schedule': { title: 'GAO Schedule Assessment Guide (GAO-16-89G)', pub: 'GAO', lic: PD, tier: '1', caveat: 'Redraw embedded third-party figures.' },
-  'nasa-schedule': { title: 'NASA Schedule Management Handbook (2024 ed)', pub: 'NASA', lic: PD, tier: '1', caveat: 'Use the 2024 edition, not the 2010 SP-2010-3403.' },
-  'dod-te-guidebook': { title: 'DoD Test & Evaluation Enterprise Guidebook (Aug 2022)', pub: 'OUSD R&E', lic: PD + '; Distribution A', tier: '1', caveat: 'Headline open T&E source.' },
-  'faa-ams-vv': { title: 'FAA AMS Lifecycle V&V Guidelines v3.0', pub: 'FAA', lic: PD, tier: '1', caveat: 'Paraphrase the quoted CMMI v1.2 (SEI) blocks — never verbatim.' },
-  'nasa-de-acquisition': { title: 'NASA Digital Engineering Acquisition Framework Handbook (NASA-HDBK-1004)', pub: 'NASA', lic: PD, tier: '1', caveat: 'Pairs with NASA-HDBK-1009A.' },
-  'dod-digital-engineering': { title: 'DoD Digital Engineering Strategy (2018)', pub: 'OUSD R&E', lic: PD + '; Distribution A', tier: '1', caveat: 'Build around the 2018 Strategy; exclude CAC-gated DEBoK.' },
-  'nasa-se-expanded': { title: 'Expanded Guidance for NASA Systems Engineering (NASA/SP-2016-6105-SUPPL Vols 1-2)', pub: 'NASA', lic: PD, tier: '1', caveat: 'Build as added DEPTH vs nasa-se-handbook; run a redundancy check.' },
-  'nasa-rm-standard': { title: 'NASA Reliability and Maintainability Standard (NASA-STD-8729.1A)', pub: 'NASA', lic: PD, tier: '1', caveat: 'Objectives-driven R&M framework.' },
-  'faa-rma': { title: 'FAA Reliability, Maintainability, and Availability Handbook (FAA-HDBK-006D)', pub: 'FAA', lic: PD, tier: '1', caveat: 'Use 006D (2020), not 006B.' },
-  'nasa-pra': { title: 'Probabilistic Risk Assessment Procedures Guide 2nd ed (NASA/SP-2011-3421)', pub: 'NASA', lic: PD, tier: '1', caveat: 'Deepens nasa-risk with quantitative methods.' },
-  'dod-rio': { title: 'DoD Risk, Issue, and Opportunity Management Guide (Sep 2023 +Ch2.2)', pub: 'OUSD R&E', lic: PD + '; Distribution A', tier: '1', caveat: 'DoD-side complement to nasa-risk/dau-se-guidebook.' },
+// Buildable unshipped rows only. Shipped packs not listed here.
+// Parked rows are selectable only via args.slugs.
+const META = {}
+
+const PARKED = {
   'nasa-swehb': { title: 'NASA Software Engineering and Assurance Handbook (NASA-HDBK-2203 Ver D)', pub: 'NASA', lic: PD, tier: '1', caveat: 'EXCLUDE IEEE/ISO-reprinted blocks verbatim (precedent: nist-sse).' },
-  'gao-agile': { title: 'GAO Agile Assessment Guide (GAO-24-105506)', pub: 'GAO', lic: PD, tier: '1', caveat: 'Exclude embedded copyrighted images.' },
-  'dod-mosa': { title: 'MOSA Implementation Guidebook (Feb 2025)', pub: 'OUSD R&E', lic: PD + '; Distribution A', tier: '1', caveat: 'Current authority replacing the 2013 OSA guidebook.' },
-  'nist-cps': { title: 'NIST Framework for Cyber-Physical Systems Vols 1-3 (SP 1500-201/202/203)', pub: 'NIST', lic: PD, tier: '1', caveat: 'Bundle as one pack; drop the 2 permission-licensed 3rd-party figures (Beecham/ETSI).' },
-  'mil-hdbk-61': { title: 'MIL-HDBK-61B Configuration Management (Change 1, 2025)', pub: 'DoD', lic: PD + '; Distribution A', tier: '1', caveat: 'Use current 61B, not 2001 61A(SE).' },
-  'mrl-deskbook': { title: 'Manufacturing Readiness Level (MRL) Deskbook (v2025)', pub: 'OSD ManTech', lic: PD + '; Distribution A', tier: '1', caveat: 'Deepens gao-tra (MRL 1-10).' },
-  'nasa-fault-management': { title: 'NASA Fault Management Handbook (NASA-HDBK-1002 Draft 2)', pub: 'NASA', lic: PD, tier: '1', caveat: 'DRAFT — flag draft status prominently in SKILL.md + PACK.yaml notes.' },
-  'dod-mq-bok': { title: 'DoD Manufacturing and Quality Body of Knowledge (Jul 2025)', pub: 'OUSD R&E', lic: PD + '; Distribution A', tier: '1', caveat: 'Large (~1,658 pp) — chunk by lifecycle phase.' },
-  'faa-hf-std': { title: 'FAA Human Factors Design Standard (HF-STD-001B)', pub: 'FAA', lic: PD, tier: '1', caveat: 'HSI beyond NASA; complements nasa-hsi.' },
-  'faa-req-handbook': { title: 'Requirements Engineering Management Handbook (DOT/FAA/AR-08/32)', pub: 'DOT/FAA', lic: PD, tier: '1', caveat: 'Embedded/real-time slant; complements requirements-writing.' },
-  'nist-stat-handbook': { title: 'NIST/SEMATECH e-Handbook of Statistical Methods (NIST HB 151)', pub: 'NIST', lic: PD, tier: '1', caveat: 'HTML/web-native per-chapter — different ingestion; watch per-block 3rd-party figures.' },
-  'sd-22-dmsms': { title: 'SD-22 DMSMS Guidebook (Apr 2024)', pub: 'DSPO', lic: PD + '; Distribution A', tier: '1', caveat: 'Sustainment/obsolescence.' },
   'grcse': { title: 'Graduate Reference Curriculum for Systems Engineering (GRCSE v1.1)', pub: 'BKCASE / Trustees of the Stevens Institute of Technology', lic: 'CC BY-NC-SA 3.0', tier: '2', caveat: 'Stevens prose ONLY (3rd-party tables are CC BY-NC-ND, exclude); mirror packs/sebok/LICENSE.' },
   'dau-glossary': { title: 'DAU Glossary of Defense Acquisition Acronyms and Terms', pub: 'Defense Acquisition University', lic: PD, tier: '1', caveat: 'Lookup companion to dau-se-guidebook.' },
-  'digital-systems-engineering': { title: 'Towards Digital Engineering: The Advent of Digital Systems Engineering (arXiv:2002.11672)', pub: 'arXiv (Old Dominion University)', lic: 'CC BY 4.0', tier: '2', caveat: 'arXiv PDF ONLY (not the paywalled journal version); ~28 pp — thin.' },
-  'nist-800-37': { title: 'NIST SP 800-37 Rev 2 (Risk Management Framework)', pub: 'NIST', lic: PD, tier: '1', caveat: 'RMF/security-engineering edge of SE.' },
-  'faa-system-safety': { title: 'FAA System Safety Handbook', pub: 'FAA', lic: PD, tier: '1', caveat: 'Use the FAA original; reprint commentary is not PD.' },
-  'nasa-npr-7150': { title: 'NASA NPR 7150.2D — NASA Software Engineering Requirements', pub: 'NASA', lic: PD, tier: '1', caveat: 'NASA Procedural Requirement (NODIS), rendered from the NODIS HTML; software-engineering requirements complementing the software-for-systems area.' },
 }
 
-// Batch to build this run. Set to a slug list, or Object.keys(META) for "all staged".
-// (args.slugs is honoured when the runner passes it; pinned here for reliable batching.)
+// SLUGS defaults to Object.keys(META) — empty here, so omitting args.slugs builds nothing.
+// PARKED rows build only when named in args.slugs.
 const SLUGS = (args && Array.isArray(args.slugs) && args.slugs.length) ? args.slugs : Object.keys(META)
 
 const PREP_SCHEMA = {
@@ -106,10 +79,10 @@ const GEN_SCHEMA = {
 }
 
 const prepPrompt = (slug) => {
-  const m = META[slug]
+  const m = META[slug] || PARKED[slug]
   return `Build knowledge pack "${slug}" for the repo at ${PACKS}, PREPARE stage. Use the Bash tool (git-bash, python3) and Read/Write.
 Source: "${m.title}" by ${m.pub}; licence "${m.lic}" (tier ${m.tier}). Caveat: ${m.caveat}
-Also read the pack's row in ${PACKS}/docs/PACK-BACKLOG.md and the rubric in ${PACKS}/docs/PACK-SPEC.md.
+Also read rubric in ${PACKS}/docs/PACK-SPEC.md.
 
 Steps:
 1. ls ${PACKS}/sources/${slug}/ — if it has NO source file, STOP and return {slug, ok:false, reason:"no source staged"}.
@@ -123,7 +96,7 @@ Return {slug, ok:true, source_pages, full_text_path:"${PACKS}/sources/${slug}/.b
 }
 
 const chapterPrompt = (slug, ftPath, ch) => {
-  const m = META[slug]
+  const m = META[slug] || PARKED[slug]
   return `Write ONE reference-depth chapter for pack "${slug}" (repo ${PACKS}).
 Read lines ${ch.start_line}-${ch.end_line} of ${ftPath} (sed -n '${ch.start_line},${ch.end_line}p' or Read offset/limit). Synthesize chapter "${ch.title}".
 Structure: # Chapter — title; ## Core Idea; ## Frameworks Introduced (exact source names, when/how); ## Key Concepts; ## Mental Models; ## Anti-patterns (only if the source names them); ## Key Takeaways; ## Connects To.
@@ -132,7 +105,7 @@ Write the file to ${PACKS}/packs/${slug}/chapters/${ch.file}. Return {file:"${ch
 }
 
 const finalizePrompt = (slug, prep) => {
-  const m = META[slug]
+  const m = META[slug] || PARKED[slug]
   return `FINALIZE pack "${slug}" in ${PACKS}/packs/${slug}/ (chapters already written). Use Bash/Read/Write.
 1. Write glossary.md, patterns.md, cheatsheet.md (per ${PACKS}/docs/PACK-SPEC.md).
 2. Write SKILL.md: frontmatter name:${slug} + a description stating coverage AND scope limits; body order = How to Use; Core Frameworks & Mental Models (~2000 tok); Chapter Index (table linking EVERY chapters/chNN-*.md); Topic Index (alphabetical term→chapter); Supporting Files; Scope & Limits (what the source is thin on; ${m.caveat.includes('DRAFT') ? 'STATE the draft status' : 'source version'}).

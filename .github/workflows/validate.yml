@@ -20,11 +20,15 @@
 #   HTML self-containment                      twins check_release 12 [html-assets] (literal twin (hosts + regex pins)) plus [brand-tokens] (P13)
 #   Landing catalogue counts                    twins check_release 13 [catalogue-count]
 #   Catalog live-set parity                     twins check_release 14 [catalog-live-set]
+# Sitemap and pack-page REV twin check_release 19 [sitemap] [pack-rev] (inside Version single-source; no new step)
 #   Routing map coverage                        twins check_release 15 [routing-map]
 #   Pack content quality                       pure-data subset of check_release 16 [pack-quality] (orphan chapters, depth floor, topic-index resolution)
+#   Pack licence and signpost shape            pure-data subset of validate_pack licence checks plus signpost citation-only allowlist
 #
-# CI does not cover, and why: full validate_pack (non-trivial parser; a fork
-# invites permanent drift), RR-B-30 packs.html regeneration equality (needs the
+# CI does not cover, and why: full validate_pack beyond the mechanical licence
+# subset and the signpost shape check (frontmatter, chapter links, name match,
+# and the all-packs CLI stay local; a fork of the rest invites permanent drift),
+# RR-B-30 packs.html regeneration equality (needs the
 # generator), full map threshold and note logic, full classification semantics
 # beyond set coverage, generate_capability_map --check replay (definitionally
 # generator execution), website YAML feature titles claiming "N packs"
@@ -51,7 +55,8 @@ jobs:
   content-integrity:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      # actions/checkout v4, SHA-pinned 2026-10-27. Re-pin during T-20-SC supply-chain review.
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
 
       - name: Content integrity check (leak sentinels)
         run: |
@@ -118,9 +123,25 @@ jobs:
           HOSTS = re.compile(r"https?://[^\s)\"']*("
                              + "|".join(re.escape(t) for t in sorted(TRUSTED_HOSTS)) + ")")
           root = pathlib.Path(".")
+          # Exempt only shape-clean signposts: kind regex AND top-level names
+          # exactly {SKILL.md, PACK.yaml}, both regular files. Same shape rule
+          # the Pack licence and signpost shape step enforces, re-derived here
+          # so a shape-broken tree loses its URL exemption in the same run.
+          SIGNPOST_RE = re.compile(r"^kind:\s*signpost\s*$", re.I | re.M)
+          ALLOWED = {"SKILL.md", "PACK.yaml"}
+
+          def signpost_shape_ok(pack):
+              names = {c.name for c in pack.iterdir()}
+              return (
+                  names == ALLOWED
+                  and (pack / "SKILL.md").is_file()
+                  and (pack / "PACK.yaml").is_file()
+              )
+
           signpost_dirs = {
               p.parent for p in root.glob("packs/*/SKILL.md")
-              if re.search(r"^kind:\s*signpost\s*$", p.read_text(encoding="utf-8", errors="ignore"), re.I | re.M)
+              if SIGNPOST_RE.search(p.read_text(encoding="utf-8", errors="ignore"))
+              and signpost_shape_ok(p.parent)
           }
           fails = 0
           for p in root.rglob("*"):
@@ -146,7 +167,9 @@ jobs:
           # byte-identical to the local gate's; tooling/test_ci_gate.py asserts
           # that parity and executes this shipped heredoc. Self-host convention:
           # images under docs/assets/, fonts under docs/fonts/, relative
-          # references only. Fail closed: zero docs/*.html also fails.
+          # references only. Page set is docs/*.html plus docs/packs/*/index.html
+          # (two globs, not rglob, so docs/superpowers/ stays out). Fail closed:
+          # an empty page set also fails.
           import re, sys, pathlib
           from urllib.parse import urlsplit
 
@@ -237,7 +260,11 @@ jobs:
 
               return found
 
-          pages = sorted(pathlib.Path("docs").glob("*.html"))
+          docs = pathlib.Path("docs")
+          pages = sorted(
+              list(docs.glob("*.html"))
+              + list(docs.glob("packs/*/index.html"))
+          )
           if not pages:
               print("::error::[html-assets] no docs/*.html found")
               sys.exit(1)
@@ -283,7 +310,7 @@ jobs:
               print(f"::error::[brand-tokens] cannot read page: {e}")
               fails += 1
           if not fails:
-              print("[html-assets] all docs/*.html pages self-contained")
+              print("[html-assets] all docs/*.html and docs/packs/*/index.html pages self-contained")
           sys.exit(1 if fails else 0)
           PY
 
@@ -1008,7 +1035,7 @@ jobs:
           for skill_path in sorted(pathlib.Path("packs").glob("*/SKILL.md")):
               pack = skill_path.parent
               body = skill_path.read_text(encoding="utf-8", errors="ignore")
-              if re.search(r"^kind:\s*(signpost|orchestrator)\s*$", body, re.I | re.M):
+              if re.search(r"^kind:\s*signpost\s*$", body, re.I | re.M) or re.search(r"^kind:\s*orchestrator\s*$", body, re.I | re.M):
                   continue
               chapters = sorted((pack / "chapters").glob("ch[0-9][0-9]-*.md"))
               for p in chapters:
@@ -1040,13 +1067,117 @@ jobs:
           sys.exit(1 if fails else 0)
           PY
 
+      - name: Pack licence and signpost shape
+        run: |
+          python3 - <<'PY'
+          # Pure-data twin of tooling/validate_pack.py licence + shape rules;
+          # citation-only, not repository code. Column-0 scalar scan matches
+          # its parse_simple_yaml; the two kind regex literals match
+          # tooling/check_release.py, flags re.I | re.M, full SKILL.md text.
+          # CI-only parse difference: a field blank after quote-strip is
+          # dropped, so an empty quoted value counts as missing downstream.
+          # Signpost packs are shape-checked only (no LICENSE, no provenance);
+          # the orchestrator pack (packs/se) skips both gates.
+          import re, sys, pathlib
+
+          REQUIRED_PACK_FIELDS = ("slug", "title", "publisher", "license", "license_tier", "commercial_use")
+          VALID_TIERS = {"1", "2", "3"}
+          SIGNPOST_RE = re.compile(r"^kind:\s*signpost\s*$", re.I | re.M)
+          ORCH_RE = re.compile(r"^kind:\s*orchestrator\s*$", re.I | re.M)
+          ALLOWED = {"SKILL.md", "PACK.yaml"}
+
+          def parse_simple_yaml(text):
+              out = {}
+              for line in text.splitlines():
+                  if not line or line[0] in " \t#":
+                      continue
+                  m = re.match(r"^([A-Za-z_][\w-]*):\s*(.*)$", line)
+                  if not m:
+                      continue
+                  key, val = m.group(1), m.group(2).strip()
+                  if val in (">", "|", ""):
+                      continue
+                  v = val.strip().strip('"').strip("'")
+                  if not v.strip():
+                      continue
+                  out[key] = v
+              return out
+
+          def classify(skill):
+              if not skill.is_file():
+                  return "missing", None
+              body = skill.read_text(encoding="utf-8", errors="ignore")
+              sig = bool(SIGNPOST_RE.search(body))
+              orch = bool(ORCH_RE.search(body))
+              if sig and orch:
+                  return "both", body
+              if sig:
+                  return "signpost", body
+              if orch:
+                  return "orchestrator", body
+              return "content", body
+
+          fails = 0
+          root = pathlib.Path("packs")
+          for pack in sorted(p for p in root.iterdir() if p.is_dir()):
+              slug = pack.name
+              kind, _body = classify(pack / "SKILL.md")
+
+              if kind == "missing":
+                  print(f"::error file={pack}::[pack-licence] {slug}: missing SKILL.md")
+                  fails += 1
+                  continue
+              if kind == "both":
+                  print(f"::error file={pack}::[pack-licence] {slug}: both kind regexes matched")
+                  fails += 1
+                  continue
+              if kind == "signpost":
+                  present = sorted(c.name for c in pack.iterdir())
+                  missing = sorted(ALLOWED - set(present))
+                  extra = sorted(c.name for c in pack.iterdir() if c.name not in ALLOWED)
+                  bad_type = sorted(c.name for c in pack.iterdir() if c.name in ALLOWED and not c.is_file())
+                  if extra or missing or bad_type:
+                      fact = extra[0] if extra else (missing[0] if missing else bad_type[0])
+                      print(f"::error file={pack}::[signpost-shape] {slug}: extra path {fact}")
+                      fails += 1
+                  continue
+              if kind == "orchestrator":
+                  continue
+
+              lic = pack / "LICENSE"
+              if not lic.is_file() or not lic.read_text(encoding="utf-8", errors="ignore").strip():
+                  print(f"::error file={lic}::[pack-licence] {slug}: missing LICENSE")
+                  fails += 1
+              ypath = pack / "PACK.yaml"
+              if not ypath.is_file():
+                  print(f"::error file={pack}::[pack-licence] {slug}: missing PACK.yaml")
+                  fails += 1
+                  continue
+              meta = parse_simple_yaml(ypath.read_text(encoding="utf-8", errors="ignore"))
+              for field in REQUIRED_PACK_FIELDS:
+                  if not meta.get(field):
+                      print(f"::error file={ypath}::[pack-licence] {slug}: PACK.yaml missing required field: {field}")
+                      fails += 1
+              tier = meta.get("license_tier", "")
+              if tier and tier not in VALID_TIERS:
+                  print(f"::error file={ypath}::[pack-licence] {slug}: license_tier={tier!r} not in {{1,2,3}}")
+                  fails += 1
+              if meta.get("slug") and meta["slug"] != slug:
+                  print(f"::error file={ypath}::[pack-licence] {slug}: PACK.yaml slug {meta['slug']!r} != folder name")
+                  fails += 1
+          if not fails:
+              print("[pack-licence] content packs and signpost shape OK")
+          sys.exit(1 if fails else 0)
+          PY
+
       - name: Version single-source
         run: |
           python3 - <<'PY'
           # Twins tooling/check_release.py checks 4 + 4a. The three version
           # regex literals below are byte-identical to the local gate's;
           # tooling/test_ci_gate.py asserts that parity and fails on drift.
-          import json, os, re, sys
+          import json, os, pathlib, re, sys
+          import xml.etree.ElementTree as ET
           versions = {}
           try:
               with open(".claude-plugin/plugin.json", encoding="utf-8") as fh:
@@ -1081,6 +1212,115 @@ jobs:
               if got != expected:
                   print(f"::error file=docs/index.html::[site-version] {name} '{got}' != RELEASE-INFO '{expected}'")
                   fails += 1
+          # [sitemap] + [pack-rev]: twin of check_release.py check 19.
+          # Inline stdlib only. This step does not import repository code.
+          SITEMAP_NS = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
+          catalog_path = "catalog.json"
+          sitemap_path = "docs/sitemap.xml"
+          if not os.path.isfile(sitemap_path):
+              print("::error file=docs/sitemap.xml::[sitemap] missing docs/sitemap.xml")
+              fails += 1
+          if not os.path.isfile(catalog_path):
+              print("::error file=catalog.json::[sitemap] missing catalog.json")
+              fails += 1
+          else:
+              try:
+                  catalog = json.load(open(catalog_path, encoding="utf-8"))
+              except Exception as e:
+                  print(f"::error file=catalog.json::[sitemap] cannot read/parse catalog.json: {e}")
+                  fails += 1
+                  catalog = None
+              if not isinstance(catalog, dict):
+                  if catalog is not None:
+                      print("::error file=catalog.json::[sitemap] catalog.json root must be an object")
+                      fails += 1
+              else:
+                  packs_list = catalog.get("packs")
+                  live = set()
+                  if not isinstance(packs_list, list):
+                      print("::error file=catalog.json::[sitemap] catalog.json packs must be a list")
+                      fails += 1
+                  else:
+                      for entry in packs_list:
+                          if not isinstance(entry, dict):
+                              continue
+                          slug = entry.get("slug")
+                          if not isinstance(slug, str) or not slug.strip():
+                              continue
+                          status = entry.get("status")
+                          if status is None or status == "live":
+                              live.add(slug.strip())
+                      page_slugs = {p.parent.name for p in pathlib.Path("docs/packs").glob("*/index.html")}
+                      locs = []
+                      if os.path.isfile(sitemap_path):
+                          try:
+                              tree = ET.parse(sitemap_path)
+                              for el in tree.iter(SITEMAP_NS + "loc"):
+                                  if el.text and el.text.strip():
+                                      locs.append(el.text.strip())
+                          except Exception as e:
+                              print(f"::error file=docs/sitemap.xml::[sitemap] cannot parse docs/sitemap.xml: {e}")
+                              fails += 1
+                              locs = None
+                      if locs is not None and not locs:
+                          print("::error file=docs/sitemap.xml::[sitemap] docs/sitemap.xml yielded no loc")
+                          fails += 1
+                      elif locs:
+                          packish = [loc for loc in locs if "/packs/" in loc]
+                          if not packish:
+                              print("::error file=docs/sitemap.xml::[sitemap] no pack loc to derive origin from")
+                              fails += 1
+                              packish = None
+                          if packish:
+                              origin = packish[0].split("/packs/")[0].rstrip("/")
+                              fixed = {origin + "/", origin + "/packs.html"}
+                              prefix = origin + "/packs/"
+                              pack_slugs = set()
+                              other = []
+                              for loc in locs:
+                                  if loc in fixed:
+                                      continue
+                                  if loc.startswith(prefix) and loc.endswith("/"):
+                                      slug = loc[len(prefix):-1]
+                                      if slug and "/" not in slug:
+                                          pack_slugs.add(slug)
+                                      else:
+                                          other.append(loc)
+                                  else:
+                                      other.append(loc)
+                              missing_fixed = sorted(fixed - set(locs))
+                              if missing_fixed:
+                                  print(f"::error file=docs/sitemap.xml::[sitemap] missing fixed loc(s): {missing_fixed}")
+                                  fails += 1
+                              if other:
+                                  print(f"::error file=docs/sitemap.xml::[sitemap] loc neither fixed nor pack loc: {other}")
+                                  fails += 1
+                              if pack_slugs != live:
+                                  print(f"::error file=docs/sitemap.xml::[sitemap] pack locs != live catalog")
+                                  fails += 1
+                              if pack_slugs != page_slugs:
+                                  print(f"::error file=docs/sitemap.xml::[sitemap] pack locs != page slugs")
+                                  fails += 1
+          # [pack-rev]: every pack page, both loci, against RELEASE-INFO.
+          # Missing docs/packs is a pass here so the older site-version demos,
+          # which have no pack tree, stay green. An empty docs/packs fails closed.
+          packs_dir = pathlib.Path("docs/packs")
+          pages = sorted(packs_dir.glob("*/index.html")) if packs_dir.is_dir() else []
+          if packs_dir.is_dir() and not pages:
+              print("::error::[pack-rev] no docs/packs/*/index.html")
+              fails += 1
+          for page in pages:
+              text = page.read_text(encoding="utf-8", errors="ignore")
+              rel = page.as_posix()
+              for name, pat in (
+                  ("masthead REV", r"REV <b>(\d+\.\d+\.\d+)</b>"),
+                  ("footer Rev", r'<span class="label">Rev</span><b>(\d+\.\d+\.\d+)</b>'),
+              ):
+                  hit = re.search(pat, text)
+                  got = hit.group(1) if hit else ""
+                  if got != expected:
+                      print(f"::error file={rel}::[pack-rev] {rel} {name} '{got}' != RELEASE-INFO '{expected}'")
+                      fails += 1
           distinct = {v for v in versions.values() if v}
           if len(distinct) > 1 or "" in versions.values():
               print(f"::error::[version] disagreement / missing: {versions}")
