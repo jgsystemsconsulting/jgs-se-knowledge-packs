@@ -477,46 +477,6 @@
           "note": "DT&E: critical technical parameters, KPPs, and development-risk evidence"
         },
         {
-          "pack": "faa-ams-vv",
-          "chapter": "ch01-faa-ams-vv-introduction-and-vv-philosophy.md",
-          "note": "V&V philosophy overview"
-        },
-        {
-          "pack": "faa-ams-vv",
-          "chapter": "ch02-faa-ams-vv-implementation-guidance.md",
-          "note": "V&V implementation guidance"
-        },
-        {
-          "pack": "faa-ams-vv",
-          "chapter": "ch03-faa-ams-vv-approach-and-early-lifecycle.md",
-          "note": "V&V approach through early lifecycle"
-        },
-        {
-          "pack": "faa-ams-vv",
-          "chapter": "ch05-faa-ams-vv-solution-implementation.md",
-          "note": "Verification during solution implementation"
-        },
-        {
-          "pack": "faa-ams-vv",
-          "chapter": "ch07-faa-ams-vv-acronyms-checklists-definitions.md",
-          "note": "V&V checklists and definitions"
-        },
-        {
-          "pack": "faa-ams-vv",
-          "chapter": "cheatsheet.md (support file)",
-          "note": "Cheatsheet / quick reference"
-        },
-        {
-          "pack": "faa-ams-vv",
-          "chapter": "glossary.md (support file)",
-          "note": "Glossary for the pack"
-        },
-        {
-          "pack": "faa-ams-vv",
-          "chapter": "patterns.md (support file)",
-          "note": "Patterns/practice heuristics"
-        },
-        {
           "pack": "nasa-se-handbook",
           "chapter": "ch23-5-3-product-verification.md",
           "note": "Product verification process"
@@ -575,6 +535,36 @@
           "pack": "jsp-912",
           "chapter": "ch08-test-acceptance-in-service-feedback.md",
           "note": "Addresses test and acceptance of HFI requirements and in-service feedback through processes HFI-5.0 and HFI-6.0, from JSP 912, March 2024."
+        },
+        {
+          "pack": "faa-ams-vv",
+          "chapter": "ch01-introduction-and-vv-philosophy.md",
+          "note": "V&V scope, terms, and philosophy, with the V-Model and shift-left, from Version 4.0 January 2023."
+        },
+        {
+          "pack": "faa-ams-vv",
+          "chapter": "ch02-implementation-guidance.md",
+          "note": "V&V planning, performing, reporting, and decision support from Version 4.0 January 2023."
+        },
+        {
+          "pack": "faa-ams-vv",
+          "chapter": "ch03-service-analysis-and-strategic-planning.md",
+          "note": "V&V in Service Analysis and Strategic Planning with Table 1, from Version 4.0 January 2023."
+        },
+        {
+          "pack": "faa-ams-vv",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary for pack"
+        },
+        {
+          "pack": "faa-ams-vv",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "faa-ams-vv",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
         }
       ]
     },
@@ -602,19 +592,14 @@
           "note": "OT&E: operational effectiveness, suitability, and survivability under realistic conditions"
         },
         {
-          "pack": "faa-ams-vv",
-          "chapter": "ch04-faa-ams-vv-investment-analysis.md",
-          "note": "Validation during investment analysis"
-        },
-        {
-          "pack": "faa-ams-vv",
-          "chapter": "ch06-faa-ams-vv-in-service-management.md",
-          "note": "In-service validation and V&V mgmt (also ops)"
-        },
-        {
           "pack": "nasa-se-handbook",
           "chapter": "ch24-5-4-product-validation.md",
           "note": "Product validation process"
+        },
+        {
+          "pack": "faa-ams-vv",
+          "chapter": "ch04-lifecycle-after-sasp.md",
+          "note": "V&V in CRD, Investment Analysis, Solution Implementation, and In-Service Management with Tables 2 through 6, from Version 4.0 January 2023."
         }
       ]
     },

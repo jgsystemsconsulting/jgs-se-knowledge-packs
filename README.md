@@ -161,7 +161,7 @@ always-loaded `SKILL.md` index inlined into one file. Full detail and the per-ag
 | `nasa-ceh` | NASA Cost Estimating Handbook v4.0 | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
 | `nasa-systems-modeling` | NASA Systems Modeling Handbook (NASA-HDBK-1009A Rev A) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `dod-te-guidebook` | DoD Test & Evaluation Enterprise Guidebook (OUSD R&E, Aug 2022) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
-| `faa-ams-vv` | FAA AMS Lifecycle V&V Guidelines v3.0 | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
+| `faa-ams-vv` | FAA AMS Lifecycle Verification and Validation Guidelines, Version 4.0 | Public domain (US gov) | 🟢 1 | ✅ live (4 chapters) |
 | `gao-agile` | GAO Agile Assessment Guide (GAO-24-105506) | Public domain (US gov) | 🟢 1 | ✅ live (9 chapters) |
 | `mil-hdbk-61` | MIL-HDBK-61B: DoD Configuration Management (Change 1, 2025) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `mrl-deskbook` | DoD Manufacturing Readiness Level (MRL) Deskbook (Version 2022) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |

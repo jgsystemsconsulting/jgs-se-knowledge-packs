@@ -30,8 +30,8 @@ Rules of construction:
 | 4. Architecture & Design | 20 |
 | 5. Interface Management & ICIDs | 9 |
 | 6. Integration | 4 |
-| 7. Verification | 22 |
-| 8. Validation | 7 |
+| 7. Verification | 20 |
+| 8. Validation | 6 |
 | 9. Test & Evaluation | 17 |
 | 10. Modeling, MBSE & SysML | 20 |
 | 11. Digital Engineering & Digital Twins | 25 |
@@ -56,7 +56,7 @@ Rules of construction:
 | 30. Standards, Tailoring & Process Models | 68 |
 | 31. Specialty Engineering | 7 |
 | 32. Assurance & System Assurance | 16 |
-| **Total** | **741** |
+| **Total** | **738** |
 
 ## 1. Systems Thinking & Fundamentals
 
@@ -180,14 +180,6 @@ Rules of construction:
 |---|---|---|
 | dod-vva-rpg | ch05-vv-agent-role-new-simulations.md | V&V agent plans/performs verification and validation for intended use (also validation) |
 | dote-te-guidebook | ch02-developmental-te.md | DT&E: critical technical parameters, KPPs, and development-risk evidence |
-| faa-ams-vv | ch01-faa-ams-vv-introduction-and-vv-philosophy.md | V&V philosophy overview |
-| faa-ams-vv | ch02-faa-ams-vv-implementation-guidance.md | V&V implementation guidance |
-| faa-ams-vv | ch03-faa-ams-vv-approach-and-early-lifecycle.md | V&V approach through early lifecycle |
-| faa-ams-vv | ch05-faa-ams-vv-solution-implementation.md | Verification during solution implementation |
-| faa-ams-vv | ch07-faa-ams-vv-acronyms-checklists-definitions.md | V&V checklists and definitions |
-| faa-ams-vv | cheatsheet.md (support file) | Cheatsheet / quick reference |
-| faa-ams-vv | glossary.md (support file) | Glossary for the pack |
-| faa-ams-vv | patterns.md (support file) | Patterns/practice heuristics |
 | nasa-se-handbook | ch23-5-3-product-verification.md | Product verification process |
 | fda-med-device | ch03-software-validation.md | General Principles of Software Validation, January 2002, taught as the 2002 guidance not as CSA |
 | fda-med-device | ch04-computer-software-assurance.md | Computer Software Assurance final guidance, February 2026, docket FDA-2022-D-0795 |
@@ -200,6 +192,12 @@ Rules of construction:
 | med-device-eu | ch05-clinical-evaluation-assessment-report.md | MDCG 2020-13 template as a map of what a clinical evaluation assessment report contains |
 | jsp-376 | ch07-demonstration-and-manufacture.md | Demonstration evidence, Manufacture handover, and Duty Holder appointment before in-service |
 | jsp-912 | ch08-test-acceptance-in-service-feedback.md | Addresses test and acceptance of HFI requirements and in-service feedback through processes HFI-5.0 and HFI-6.0, from JSP 912, March 2024. |
+| faa-ams-vv | ch01-introduction-and-vv-philosophy.md | V&V scope, terms, and philosophy, with the V-Model and shift-left, from Version 4.0 January 2023. |
+| faa-ams-vv | ch02-implementation-guidance.md | V&V planning, performing, reporting, and decision support from Version 4.0 January 2023. |
+| faa-ams-vv | ch03-service-analysis-and-strategic-planning.md | V&V in Service Analysis and Strategic Planning with Table 1, from Version 4.0 January 2023. |
+| faa-ams-vv | glossary.md (support file) | Glossary for pack |
+| faa-ams-vv | cheatsheet.md (support file) | Cheatsheet / quick reference |
+| faa-ams-vv | patterns.md (support file) | Patterns/practice heuristics |
 
 ## 8. Validation
 
@@ -209,9 +207,8 @@ Rules of construction:
 | dod-vva-rpg | ch12-developing-the-referent.md | Validation-referent identify/select/specify/approve for intended use |
 | dod-vva-rpg | ch13-conceptual-model-development-and-validation.md | Simulation conceptual-model development and validation before implementation |
 | dote-te-guidebook | ch03-operational-te.md | OT&E: operational effectiveness, suitability, and survivability under realistic conditions |
-| faa-ams-vv | ch04-faa-ams-vv-investment-analysis.md | Validation during investment analysis |
-| faa-ams-vv | ch06-faa-ams-vv-in-service-management.md | In-service validation and V&V mgmt (also ops) |
 | nasa-se-handbook | ch24-5-4-product-validation.md | Product validation process |
+| faa-ams-vv | ch04-lifecycle-after-sasp.md | V&V in CRD, Investment Analysis, Solution Implementation, and In-Service Management with Tables 2 through 6, from Version 4.0 January 2023. |
 
 ## 9. Test & Evaluation
 

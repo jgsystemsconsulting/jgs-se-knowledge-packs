@@ -427,19 +427,19 @@ Third-party source attributions (one block per shipped content pack)
            not endorse this pack. See packs/dod-te-guidebook/LICENSE.
 
 [pack: faa-ams-vv]
-  Source : FAA AMS Lifecycle V&V Guidelines (Verification and Validation), Version 3.0 (April 2017)
+  Source : FAA AMS Lifecycle Verification and Validation Guidelines, Version 4.0 (January 2023)
   Author : US Federal Aviation Administration (FAA)
   Licence: Public Domain -- US Government work (17 U.S.C. 105)
   Changes: reconstructed as synthesized reference notes (not a reproduction)
   Terms  : public domain, no copyright. CAVEAT: the source guideline draws its core
-           verification/validation DEFINITIONS from CMMI for Development v1.2 (Carnegie
-           Mellon SEI) -- a separately copyrighted model -- which this pack PARAPHRASES
-           throughout and never reproduces verbatim; CMMI text should be cited to SEI, not
-           copied. The source's V&V phase tables (Tables 1-6) are policy snapshots as of
-           April 2017 and may be superseded by current FAA phase guidance; treat reproduced
-           table content as illustrative, not live authority. Attribution to the FAA is
-           courtesy, not obligation; the FAA does not endorse this pack.
-           See packs/faa-ams-vv/LICENSE.
+           verification/validation definitions from CMMI for Development v1.2 (Carnegie
+           Mellon SEI, August 2006), a separately copyrighted model, which this pack
+           paraphrases and never reproduces verbatim. CMMI text should be cited to SEI,
+           not copied. The source's V&V phase tables (Tables 1-6) are policy snapshots as of
+           January 2023 and may be superseded by current FAA phase guidance; treat table
+           content as illustrative, not live authority. The PDF does not print a supersession
+           sentence. Attribution to the FAA is courtesy, not obligation; the FAA does not
+           endorse this pack. See packs/faa-ams-vv/LICENSE.
 
 [pack: gao-agile]
   Source : GAO Agile Assessment Guide: Best Practices for Adoption and Implementation

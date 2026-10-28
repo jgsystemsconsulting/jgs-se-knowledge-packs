@@ -18,6 +18,7 @@ All notable changes to this project are documented here. Format follows
 ### Changed
 
 - `nasa-risk` rebuilt from NASA Risk Management Handbook, Version 2.0 (November 2024): Part 1 NASA/SP-20240014019 and Part 2 NASA/SP-20240014326. The November 2011 pin NASA/SP-2011-3422 is retired.
+- `faa-ams-vv` rebuilt from FAA AMS Lifecycle Verification and Validation Guidelines, Version 4.0 (January 2023). The April 2017 pin Version 3.0 is retired. SASP is its own chapter. CMMI v1.2 definitions stay paraphrased.
 
 ## [1.23.0]: 2026-10-28
 

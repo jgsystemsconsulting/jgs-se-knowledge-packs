@@ -553,54 +553,6 @@
       "is_support": false
     },
     {
-      "pack": "faa-ams-vv",
-      "chapter": "ch01-faa-ams-vv-introduction-and-vv-philosophy.md",
-      "cluster": "Verification",
-      "is_support": false
-    },
-    {
-      "pack": "faa-ams-vv",
-      "chapter": "ch02-faa-ams-vv-implementation-guidance.md",
-      "cluster": "Verification",
-      "is_support": false
-    },
-    {
-      "pack": "faa-ams-vv",
-      "chapter": "ch03-faa-ams-vv-approach-and-early-lifecycle.md",
-      "cluster": "Verification",
-      "is_support": false
-    },
-    {
-      "pack": "faa-ams-vv",
-      "chapter": "ch05-faa-ams-vv-solution-implementation.md",
-      "cluster": "Verification",
-      "is_support": false
-    },
-    {
-      "pack": "faa-ams-vv",
-      "chapter": "ch07-faa-ams-vv-acronyms-checklists-definitions.md",
-      "cluster": "Verification",
-      "is_support": false
-    },
-    {
-      "pack": "faa-ams-vv",
-      "chapter": "cheatsheet.md",
-      "cluster": "Verification",
-      "is_support": true
-    },
-    {
-      "pack": "faa-ams-vv",
-      "chapter": "glossary.md",
-      "cluster": "Verification",
-      "is_support": true
-    },
-    {
-      "pack": "faa-ams-vv",
-      "chapter": "patterns.md",
-      "cluster": "Verification",
-      "is_support": true
-    },
-    {
       "pack": "nasa-se-handbook",
       "chapter": "ch23-5-3-product-verification.md",
       "cluster": "Verification",
@@ -627,18 +579,6 @@
     {
       "pack": "dote-te-guidebook",
       "chapter": "ch03-operational-te.md",
-      "cluster": "Validation",
-      "is_support": false
-    },
-    {
-      "pack": "faa-ams-vv",
-      "chapter": "ch04-faa-ams-vv-investment-analysis.md",
-      "cluster": "Validation",
-      "is_support": false
-    },
-    {
-      "pack": "faa-ams-vv",
-      "chapter": "ch06-faa-ams-vv-in-service-management.md",
       "cluster": "Validation",
       "is_support": false
     },
@@ -4504,6 +4444,48 @@
       "pack": "nasa-risk",
       "chapter": "patterns.md",
       "cluster": "Risk Management",
+      "is_support": true
+    },
+    {
+      "pack": "faa-ams-vv",
+      "chapter": "ch01-introduction-and-vv-philosophy.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "faa-ams-vv",
+      "chapter": "ch02-implementation-guidance.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "faa-ams-vv",
+      "chapter": "ch03-service-analysis-and-strategic-planning.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "faa-ams-vv",
+      "chapter": "ch04-lifecycle-after-sasp.md",
+      "cluster": "Validation",
+      "is_support": false
+    },
+    {
+      "pack": "faa-ams-vv",
+      "chapter": "glossary.md",
+      "cluster": "Verification",
+      "is_support": true
+    },
+    {
+      "pack": "faa-ams-vv",
+      "chapter": "cheatsheet.md",
+      "cluster": "Verification",
+      "is_support": true
+    },
+    {
+      "pack": "faa-ams-vv",
+      "chapter": "patterns.md",
+      "cluster": "Verification",
       "is_support": true
     }
   ]
