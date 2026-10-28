@@ -62,7 +62,7 @@ Key terms from the FAA AMS Lifecycle Verification and Validation Guidelines, Ver
 
 **Independent Evaluation Review (IER)** — the Investment Planning and Analysis review that satisfies the documentation and reporting requirements for the Business Case's V&V. (`ch03`, `ch04`)
 
-**Independent Operational Assessment (IOA)** — for designated products, an independent determination of operational readiness led by the program manager and an Independent Safety Assessment Team, supporting deployment decisions such as the ISD. (`ch02`, `ch04`)
+**Independent Operational Assessment (IOA)** — for designated products, an independent determination of operational readiness led by a program manager from the Independent Safety Assessment Team, supporting deployment decisions such as the ISD. (`ch02`, `ch04`)
 
 **Independent stakeholder / reviewer** — a stakeholder or reviewer not directly involved in developing the work product, component, or product under review; named in Tables 1 through 6, and required for every V&V activity. (`ch02`, `ch03`, `ch04`)
 

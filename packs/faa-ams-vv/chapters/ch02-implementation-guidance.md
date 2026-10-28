@@ -40,7 +40,7 @@ V&V is performed by independent stakeholders or reviewers, identified in Tables 
 
 - **Development Test (DT)** serves verification objectives: the item under test meets its specified technical and performance requirements, and, for final products, is fully integrated, stable, and has no adverse effect on the rest of the NAS. DT is conducted by the developer and witnessed by the FAA.
 - **Operational Test (OT)** serves validation objectives: major components and the final product are operationally effective and suitable for NAS use, and the NAS infrastructure is ready to accept the product. OT is run by the OT Test Director and an OT test team of Air Traffic, Technical Operations, and second-level maintenance personnel; other FAA organizations and external entities (airlines, cargo carriers, military, private industry) may join as required.
-- **Independent Operational Assessment (IOA)**, for designated products, is led by the program manager and an Independent Safety Assessment Team and gives decision-makers an independent determination of operational readiness supporting deployment decisions such as the In-Service Decision.
+- **Independent Operational Assessment (IOA)**, for designated products, is led by a program manager from the Independent Safety Assessment Team and gives decision-makers an independent determination of operational readiness supporting deployment decisions such as the In-Service Decision.
 
 Product and component verification methods add analyses, testing, demonstrations, simulations, and accreditation to the work-product set. Product and component validation methods are similar to the work-product validation set, with user evaluation questionnaires replacing general user surveys.
 

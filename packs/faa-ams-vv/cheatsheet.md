@@ -91,7 +91,7 @@ Common rule: a checklist row is complete only when the acceptance assessment, th
 |---|---|---|
 | **Development Test (DT)** | Verification | Developer, witnessed by FAA (`ch02`, `ch04`) |
 | **Operational Test (OT)** | Validation | OT Test Director + OT test team (Air Traffic, Technical Operations, second-level maintenance; external entities as required) (`ch02`, `ch04`) |
-| **Independent Operational Assessment (IOA)** | Independent operational-readiness determination | PM and Independent Safety Assessment Team, for designated products (`ch02`, `ch04`) |
+| **Independent Operational Assessment (IOA)** | Independent operational-readiness determination | a PM from the Independent Safety Assessment Team, for designated products (`ch02`, `ch04`) |
 
 Concentrated in Solution Implementation and In-Service Management. PDR gates the allocated baseline; CDR gates the product baseline; ISD is the operational-readiness gate. (`ch04`)
 

@@ -6,7 +6,7 @@ Sources: FAA AMS Lifecycle Verification and Validation Guidelines, Version 4.0 (
 
 ## Core Idea
 
-The AMS lifecycle has five phases: Service Analysis & Strategic Planning (SASP), Concept and Requirements Definition (CRD), Investment Analysis (IA), Solution Implementation (SI), and In-Service Management (ISM). Alongside them, Research Service Analysis (RSA) is a separate activity that precedes or runs during the early phases. RSA matures and validates new concepts and technologies with potential for NAS investment and deployment, and may feed SASP, CRD, IA, and early SI. The independent stakeholders and reviewers responsible for V&V of RSA activities are the same as for SASP, CRD, IA, and early SI.
+The AMS lifecycle has five phases: Service Analysis & Strategic Planning (SASP), Concept and Requirements Definition (CRD), Investment Analysis (IA), Solution Implementation (SI), and In-Service Management (ISM). Alongside them, Research for Service Analysis (RSA) is a separate activity that precedes or runs during the early phases. RSA matures and validates new concepts and technologies with potential for NAS investment and deployment, and may feed SASP, CRD, IA, and early SI. The independent stakeholders and reviewers responsible for V&V of RSA activities are the same as for SASP, CRD, IA, and early SI.
 
 The V&V process uses common tools and techniques across the lifecycle, and each phase's outputs are the basis for the next phase. What changes by phase is which items get V&V'd and which independent stakeholders and reviewers do it. All critical work products, components, and products, including those used as V&V criteria themselves, are subject to systematic V&V by various program disciplines in every phase.
 
@@ -38,7 +38,7 @@ Figure 5 renders the ARM, a static visualization that distills the (often undocu
 
 ## V&V in Service Analysis & Strategic Planning (Section 3.1)
 
-SASP determines the capabilities that must be in place now and in the future to meet agency goals and customer service needs. Results are captured as as-is and to-be states in the Enterprise Architecture plus the roadmaps between them. The responsible Line of Business folds the results into business plans, and service organizations describe them in operating plans. Together the activities produce the information used to decide which service shortfalls or improvement ideas are approved into agency strategic planning documents.
+SASP determines the capabilities that must be in place now and in the future to meet agency goals and customer service needs. Results are captured as the as-is and to-be states in the Enterprise Architecture plus the roadmaps between them. The responsible Line of Business folds the results into business plans, and service organizations describe them in operating plans. Together the activities produce the information used to decide which service shortfalls or improvement ideas are approved into agency strategic planning documents.
 
 The primary focus of V&V during SASP is to verify and validate three work products: the Preliminary Shortfall Analysis, the Concept and Requirements Definition Plan, and the ISS Risk Factors Assessment.
 
