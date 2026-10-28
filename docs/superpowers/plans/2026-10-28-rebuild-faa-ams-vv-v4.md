@@ -804,7 +804,7 @@ rg -n "Version 3.0" packs/faa-ams-vv
 rg -n "faa-ams-vv" docs/superpowers/backlog.md
 ```
 
-Expected: the first command prints nothing. The second command prints nothing. The third command prints no hit on the `source-watch-calibrate-and-wire-2` row. Hits on other backlog rows are out of scope. Leave them.
+Expected: the the first two commands print nothing (the pack itself is fully off the V3 pin; pre-existing `Version 3.0` hits elsewhere in catalog.json or NOTICE, such as dod-mq-bok July 2025, are out of scope). The third command prints no hit on the `source-watch-calibrate-and-wire-2` row. Hits on other backlog rows are out of scope. Leave them.
 
 No sentinel test covers README or SKILLS.md. Read them and record the result in the run notes.
 
