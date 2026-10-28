@@ -1,136 +1,102 @@
-# FAA AMS Lifecycle V&V Guidelines — Cheatsheet
+# FAA AMS Lifecycle V&V Guidelines: Cheatsheet
 
-Decision rules, selection tables, and tells from the FAA AMS Lifecycle V&V Guidelines,
-Version 3.0 (April 2017). Synthesized reference — paraphrased, not source text.
+Decision rules, gate maps, and checklist mechanics from the FAA AMS Lifecycle Verification
+and Validation Guidelines, Version 4.0 (January 2023). Synthesized reference: paraphrased,
+not source text.
 
 ## Quick Decision Rules
 
 **"Verify or validate?"**
-- *Verification* = built right — does it conform to its template / specification / standard / policy?
-- *Validation* = right thing — does it satisfy the operational need, the user, and the mission once in its environment?
-Run both, separately, on every artifact. A pass on one is not a pass on the other.
+- *Verification* = built right: does it conform to a template, specification, standard, or policy?
+- *Validation* = right thing: does it satisfy the operational need, user, and mission in the intended environment?
+Run both, separately, on the item. A pass on one is not a pass on the other. (`ch01`)
 
 **"Which tier am I in?"**
-- *Work product* — anything that represents, defines, or directs the product (plans, designs, specs, requirements, models, prototypes, contracts).
-- *Product component* — a lower-level element integrated upward.
-- *Product* — the delivered system/service/facility/operational change.
-V&V flows up: work products first, components before integration, product before operational acceptance.
+- *Work product*: anything that represents, defines, or directs the product (plans, designs, specs, models, prototypes, contracts).
+- *Product component*: a lower-level element integrated upward, possibly in multiple levels.
+- *Product*: the delivered system, service, enterprise capability, facility, or operational change.
+V&V flows up the hierarchy: work products first, components before integration, product before operational acceptance. (`ch01`)
 
-**"Which method do I use?"** — pick the catalog by tier × question:
+**"Which method do I use?"** Pick the catalog by tier x question:
 
 | | Verification (built right) | Validation (right thing) |
 |---|---|---|
-| **Work product** | Inspection, Peer Review, Audit, Checklist | + Discussions w/ users, User Survey, Functional Presentation, Walk-through/dry run, Analysis, Testing, Demonstration, Modeling, Storyboarding |
-| **Product / component** | Inspection, Peer Review, Audit, Analysis, Checklist, Testing, Demonstration, Simulation, **Accreditation** | Discussions w/ users, User Evaluation Questionnaire, Functional Presentation, Inspection, Peer Review, Audit, Analysis, Checklist, Testing, Demonstration, Simulation |
+| **Work product** | Inspections, peer reviews, audits, checklists | Discussions with users, user surveys, functional presentations, walk-throughs/dry runs, analyses, testing, demonstrations, modeling, storyboarding |
+| **Product / component** | Inspections, peer reviews, audits, analyses, checklists, testing, demonstrations, simulations, accreditation | Discussions with users, user evaluation questionnaires, functional presentations, inspections, peer reviews, audits, analyses, checklists, testing, demonstrations, simulations |
 
-(Validation catalogs are user-facing and broader; product-tier verification adds analysis, testing, simulation, and accreditation. Definitions: Appendix C.)
-
-**"Is this V&V complete?"**
-Every checklist row needs *method used* + *artifact* (an objective, authenticated record). Passing rows with empty evidence columns = incomplete by definition.
+Validation catalogs are broader and user-facing; product-tier verification adds analyses, testing, simulations, and accreditation. Method definitions live in `glossary.md`. (`ch02`)
 
 **"Can I trust this criterion?"**
-Only if it was itself V&V'd. Criteria are work products, not axioms. Foundational documents (NAS ConOps, NAS Requirements Document, EA, NSIP, NARP, NextGen Implementation Plan) get V&V'd against FAA Strategic Initiatives *before* downstream use.
+Only after the critical technical documents (NAS ConOps, NAS Requirements Document, NAS Segment Implementation Plan, National Air Research Plan, NextGen Implementation Plan, Enterprise Architecture) have themselves been V&V'd against FAA Strategic Initiatives plus each document's applicable standards. (`ch02`)
+
+**"Are prerequisites clean?"**
+While performing V&V, reviewers must stay cognizant of the validity of V&V performed (or missed) on prerequisite work products, components, and products. If earlier V&V is inconsistent, conflicts, or was skipped: document and resolve before proceeding. (`ch02`)
 
 **"Is the program ready for the gate?"**
-Only when the minimum work products for that decision point have cleared V&V per the phase table — and (in early lifecycle) both the Appendix B track and the Business Case / IER track have reported.
+Only when the minimum work products for the decision point have cleared V&V per the phase table, and V&V events were planned as entrance criteria, scheduled well in advance, applied consistently, and the results actually support the decision point's objectives. (`ch02`, `ch03`, `ch04`)
 
-**"A change is fielded — what V&V?"**
-Both halves: verify the change against new/revised requirements + policy; validate that the requirement/concept driving it still serves the mission (Post-Implementation Review, Operational Analysis).
+**"A change is fielded. What V&V?"**
+Both halves: verify the change against new or modified requirements and governing policy, and validate that the requirement or operational concept driving it is itself valid and still serves the mission. Table 6 names ISM DT and OT (IOA if applicable) as the major V&V activities. (`ch04`)
 
 ---
 
-## AMS Lifecycle Phases & Their V&V Emphasis
+## Plan / Perform / Report / Decide Pipeline
 
-| Phase | Decides | Primary V&V emphasis | Chapter |
+- **Plan** (`ch02` §2.1): V&V planning is required for all acquisition programs and is embedded in phase and program planning documents (CRD plan, IA plans, ISPD, TEMP, PMP, SEMP, QA Plan), each carrying the nine planning elements that apply.
+- **Perform** (`ch02` §2.2): independent stakeholders and reviewers, named in Tables 1-6, run matched methods, checking prerequisite V&V first. Work products get document-grade methods; products and components get T&E.
+- **Report** (`ch02` §2.3): documentation is controlled and archived; minimum content: Introduction, Purpose, Criteria, V&V Approach, Participants, Results, Recommendations. Reporting feeds performance measurement against technical performance criteria.
+- **Decide** (`ch02` §2.4): results are entrance criteria at decision points, aiding the Joint Resources Council, the Acquisition Executive Board, and in-service decision authorities. Surface technical and non-technical risk before the gate, not after.
+
+## AMS Lifecycle Phase Map
+
+| Phase | V&V focus (paraphrased) | Minimum set (table) | Chapter |
 |---|---|---|---|
-| **Service Analysis & Strategic Planning (SASP)** | What capability the agency needs (EA as-is/to-be + roadmaps) | Validate Preliminary Shortfall Analysis, CRD Plan, ISS Risk Factors Assessment | Ch 3 |
-| **Concept & Requirements Definition (CRD)** | Need → preliminary requirements + solution ConOps | Validate preliminary requirements, concept of use, EA products, shortfall analysis, initial IA plan, Preliminary ISS | Ch 3 |
-| **Investment Analysis — Initial** | Which alternative? | Validate alternatives → recommend to IDA | Ch 4 |
-| **Investment Analysis — Final** | Is the baseline ready to commit? | Validate program baseline (final PRD/BC/ISPD, APB, PMP, initial TEMP, SIR, ISR checklist) | Ch 4 |
-| **Solution Implementation (SI)** | Build/buy/test/field the solution | DT (verify) + OT/IOA (validate); PDR/CDR; safety & security gates | Ch 5 |
-| **In-Service Management (ISM)** | Sustain & change the fielded system | Verify change vs. requirements; validate purpose still served; ISM DT/OT/IOA | Ch 6 |
+| **Service Analysis & Strategic Planning (SASP)** | Capabilities needed now and later (EA as-is/to-be + roadmaps) | Preliminary Shortfall Analysis, CRD Plan, ISS Risk Factors Assessment (Table 1) | `ch03` |
+| **Concept & Requirements Definition (CRD)** | Needs into preliminary requirements + solution ConOps; shortlist alternatives (EA's own alternative included) | Preliminary PRD, concept of use, EA products/amendments, shortfall analysis, initial IA plan, Preliminary ISS Assessment (Table 2) | `ch04` |
+| **Investment Analysis (Initial / Final)** | Which alternative, then baseline ready to commit | Initial: initial PRD/ISPD/BC, preliminary TEMP, EA updates. Final: final PRD/BC/ISPD, APB, PMP, initial TEMP, tailored ISR checklist, SIR (Tables 3-4) | `ch04` |
+| **Solution Implementation (SI)** | Build/buy/test/field; Contract Award through ISD | Products and components via DT/OT/IOA; test artifacts themselves V&V'd; PDR/CDR baselines; safety and security gates (Table 5) | `ch04` |
+| **In-Service Management (ISM)** | Sustain and change the fielded system | Verify change vs. requirements and policy; validate purpose; EA updates, NCPs, implemented changes, System Support Directives, ISPD updates (Table 6) | `ch04` |
 
-*Research for Systems Analysis (RSA)* is a non-phase activity feeding SASP/CRD/IA/early SI, sharing their reviewers. Figure 3 shows *emphasis* only — Tables 1–6 define the required minimum set.
+*Research for Service Analysis (RSA)* is a non-phase activity feeding SASP, CRD, IA, and early SI, sharing reviewers (`ch03`).
 
----
+## Decision Points and Gates
 
-## Decision Points → Gates (with acronyms)
-
-| Gate | Acronym | Sits at end of / within |
+| Gate | Acronym | Sits at end / within |
 |---|---|---|
-| Concept & Requirements Definition Readiness Decision | CRDRD | end of SASP |
-| Investment Analysis Readiness Decision | IARD | end of CRD |
-| Initial Investment Decision | IID | Initial IA |
-| Final Investment Decision | FID | Final IA |
-| Contract Award / Product Demonstration / Production / In-Service Decision | — / — / — / ISD | Solution Implementation |
-| Decision to Implement a Change / Decision to Deploy a Change | — | In-Service Management |
+| Concept & Requirements Definition Readiness Decision | CRDRD | SASP (`ch03`) |
+| Investment Analysis Readiness Decision | IARD | CRD (`ch04`) |
+| Initial Investment Decision | IID | Initial IA (`ch04`) |
+| Final Investment Decision | FID | Final IA (`ch04`) |
+| Contract Award / Product Demonstration / Product Acceptance-CAI / Production Decision / In-Service Decision | CA / PD / CAI / Prod / ISD | SI (`ch04`) |
+| Decision to Implement / Deploy an Improvement or Change | — | ISM (`ch04`) |
 
----
+## Nine Planning Elements (paraphrased)
 
-## The Nine V&V Planning Elements (§2.1)
+1. Verification methods · 2. Validation methods · 3. Items to V&V · 4. Processes, standards, and criteria (SEM, Concept Development and Validation Guidelines, T&E Handbook) · 5. Tracking measures and reports · 6. Roles and responsibilities · 7. Independent stakeholders/reviewers identified · 8. Tools, models, prototypes, labs, simulators · 9. Required training. (`ch02`)
 
-Fold these (as they apply) into ISPD, TEMP, PMP, SEMP, QA Plan, and phase plans:
-1. Verification methods · 2. Validation methods · 3. Items to be V&V'd · 4. Processes/standards/criteria · 5. Tracking measures & reports · 6. Roles & responsibilities · 7. Identification of independent reviewers · 8. Tools/models/prototypes/labs/simulators needed · 9. Required training.
+## Four Appendix B Checklist Documents
 
-## V&V Report — Minimum Content (§2.3)
+| Document | Acronym | Checklist mechanics |
+|---|---|---|
+| Program Requirements Document | PRD (final: FPRD) | Each checklist names key elements that must be verified or validated; per key element, record methods used and artifacts produced (`ch03`, `ch04`) |
+| Acquisition Program Baseline | APB | Same mechanics; performance, cost, schedule baselines for a program segment (`ch03`, `ch04`) |
+| Implementation Strategy & Planning Document | ISPD | Same mechanics; overall implementation strategy and planning (`ch03`, `ch04`) |
+| Program Management Plan | PMP | Same mechanics; how the service team executes the ISPD strategy (`ch03`, `ch04`) |
 
-Introduction · Purpose · Criteria · V&V Approach · Participants · Results · Recommendations. Reports must be controlled, archived, and feed performance measurement.
-
----
-
-## The Four Appendix B Checklist Documents
-
-| Document | Acronym | V&V via | Through-line |
-|---|---|---|---|
-| Program Requirements Document | PRD (→ fPRD) | Appendix B checklist | Requirement-quality bar; CPRs identified |
-| Acquisition Program Baseline | APB | Appendix B checklist | CPRs consistent with PRD, each with its value |
-| Implementation Strategy & Planning Document | ISPD | Appendix B checklist | Program controls track CPRs |
-| Program Management Plan | PMP | Appendix B checklist | WBS validated by all engineering domains |
-
-(Business Case is V&V'd separately — Investment Planning & Analysis → IER, *not* an Appendix B checklist.)
-Common skeleton: **template conformance → content → stakeholder validation**.
-
----
-
-## Requirement-Quality Bar (PRD checklist)
-
-Each requirement: clearly stated · unambiguous · complete · necessary & traceable · verifiable/measurable/testable · solution-independent. For the **fPRD**: also achievable against current/emerging technology. Complete against: EA, Solution ConOps, Functional Analysis Report, EA Shortfall Analysis, Investment Analysis Assessments (fPRD), and applicable specs (e.g., NAS-RD-2010, NAS-RD-2025).
-
----
-
-## Method Codes (Appendix B legend)
-
-`I`=Inspection · `P`=Peer Review · `A`=Audit · `C`=Checklist · `D`=Discussion · `U`=User Survey · `F`=Functional Presentation · `W`=Walk-through/dry run · `An`=Analysis · `T`=Testing · `Dem`=Demonstration · `M`=Modeling
-
-**Method tells (Appendix C):**
-- *Analysis* — compare design vs. known principles/data/practice.
-- *Inspection* — visual observation / mechanical measurement / doc examination.
-- *Demonstration* — qualitative, during a dynamic test; **software functional requirements usually validated this way** (behavior observed through a secondary medium).
-- *Testing* — operate under specified conditions, record, evaluate.
-- *Audit* — independent compliance examination (incl. data security/integrity).
-- *Peer review* — unbiased SMEs independent of the work product's development/approval.
-- *Accreditation* — formal certification a test capability is acceptable for a specific application.
-
----
+Common rule: a checklist row is complete only when the acceptance assessment, the method used, and the artifact produced are all recorded. The Business Case is deliberately outside the set: Investment Planning & Analysis verifies and validates it under the AFI Business Case Evaluation and Assessment Guideline, and the Independent Evaluation Review (IER) satisfies documentation and reporting requirements (`ch03`).
 
 ## T&E Triad (product/component V&V)
 
 | Activity | Serves | Run by |
 |---|---|---|
-| **Development Test (DT)** | Verification | Developer (FAA witnessing) |
-| **Operational Test (OT)** | Validation | ANG-E OT Test Director + team (Air Traffic, Tech Ops, 2nd-level maintenance) |
-| **Independent Operational Assessment (IOA)** | Independent operational-readiness read | PM from Independent Safety Assessment Team (designated products) |
+| **Development Test (DT)** | Verification | Developer, witnessed by FAA (`ch02`, `ch04`) |
+| **Operational Test (OT)** | Validation | OT Test Director + OT test team (Air Traffic, Technical Operations, second-level maintenance; external entities as required) (`ch02`, `ch04`) |
+| **Independent Operational Assessment (IOA)** | Independent operational-readiness determination | a PM from the Independent Safety Assessment Team, for designated products (`ch02`, `ch04`) |
 
-Concentrated in Solution Implementation and In-Service Management. PDR → allocated baseline; CDR → product baseline.
+Concentrated in Solution Implementation and In-Service Management. PDR gates the allocated baseline; CDR gates the product baseline; ISD is the operational-readiness gate. (`ch04`)
 
----
+## Snapshot Discipline
 
-## Tells & Smells (anti-patterns)
-
-- **Treating "process was followed" as proof.** That's QA, not V&V. QA checks process adherence; V&V checks requirements/mission/risk. Don't conflate them.
-- **Reading Figure 3 as the required V&V set.** It shows emphasis only — the minimum set lives in Tables 1–6.
-- **Trusting the published tables as current authority.** Tables 1–6 are policy *as of publication (April 2017)*; current detailed phase guidance and templates supersede them.
-- **Skipping front-end paperwork V&V "to save time."** Early planning/requirements documents seed every downstream verification — under-validating them propagates the wrong product forward undetected.
-- **Empty evidence columns.** A passing checklist with no named artifacts is incomplete by the source's own definition.
-- **Verifying a change but not re-validating its purpose (ISM).** Conformance to spec ≠ still serving the mission. Both passes mandatory.
-- **Quoting CMMI verbatim.** The verification/validation definitions trace to CMMI v1.2 (SEI) — a copyrighted model. Paraphrase and cite; never copy.
+- Tables 1 through 6 are January 2023 policy snapshots. Each table's own footnote says detailed phase guidelines and templates exist and should be reviewed for current guidance. Treat criteria, offices, and form numbers as illustrative, not live authority. (`ch03`, `ch04`)
+- Figure 4 shows primary emphasis only; the tables carry the required minimum (`ch03`). The ARM is a relationship diagram, not a process flow (`ch03`).
+- The verification/validation definitions trace to CMMI for Development, Version 1.2 (SEI, August 2006). Paraphrase and cite; never copy. (`ch01`)

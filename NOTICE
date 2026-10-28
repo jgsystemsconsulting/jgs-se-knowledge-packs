@@ -72,7 +72,8 @@ Third-party source attributions (one block per shipped content pack)
            obligation; NASA does not endorse this pack. See packs/nasa-npr-7123/LICENSE.
 
 [pack: nasa-risk]
-  Source : NASA Risk Management Handbook (NASA/SP-2011-3422)
+  Source : NASA Risk Management Handbook, Version 2.0 (November 2024)
+           Part 1 NASA/SP-20240014019, Part 2 NASA/SP-20240014326
   Author : NASA
   Licence: Public Domain -- US Government work (17 U.S.C. 105)
   Changes: reconstructed as synthesized reference notes (not a reproduction)
@@ -426,19 +427,19 @@ Third-party source attributions (one block per shipped content pack)
            not endorse this pack. See packs/dod-te-guidebook/LICENSE.
 
 [pack: faa-ams-vv]
-  Source : FAA AMS Lifecycle V&V Guidelines (Verification and Validation), Version 3.0 (April 2017)
+  Source : FAA AMS Lifecycle Verification and Validation Guidelines, Version 4.0 (January 2023)
   Author : US Federal Aviation Administration (FAA)
   Licence: Public Domain -- US Government work (17 U.S.C. 105)
   Changes: reconstructed as synthesized reference notes (not a reproduction)
   Terms  : public domain, no copyright. CAVEAT: the source guideline draws its core
-           verification/validation DEFINITIONS from CMMI for Development v1.2 (Carnegie
-           Mellon SEI) -- a separately copyrighted model -- which this pack PARAPHRASES
-           throughout and never reproduces verbatim; CMMI text should be cited to SEI, not
-           copied. The source's V&V phase tables (Tables 1-6) are policy snapshots as of
-           April 2017 and may be superseded by current FAA phase guidance; treat reproduced
-           table content as illustrative, not live authority. Attribution to the FAA is
-           courtesy, not obligation; the FAA does not endorse this pack.
-           See packs/faa-ams-vv/LICENSE.
+           verification/validation definitions from CMMI for Development v1.2 (Carnegie
+           Mellon SEI, August 2006), a separately copyrighted model, which this pack
+           paraphrases and never reproduces verbatim. CMMI text should be cited to SEI,
+           not copied. The source's V&V phase tables (Tables 1-6) are policy snapshots as of
+           January 2023 and may be superseded by current FAA phase guidance; treat table
+           content as illustrative, not live authority. The PDF does not print a supersession
+           sentence. Attribution to the FAA is courtesy, not obligation; the FAA does not
+           endorse this pack. See packs/faa-ams-vv/LICENSE.
 
 [pack: gao-agile]
   Source : GAO Agile Assessment Guide: Best Practices for Adoption and Implementation
@@ -808,6 +809,20 @@ Third-party source attributions (one block per shipped content pack)
            not endorse this pack. Other JSPs and third-party standards the
            directive cites are named and not reproduced. Part 2 is not in this
            pack. See packs/jsp-936/LICENSE.
+
+[pack: jsp-912]
+
+  Source : JSP 912 Human Factors Integration in Defence Systems, Part 1
+           Directive and Part 2 Guidance, V3.0 (March 2024). Ministry of
+           Defence, Crown copyright.
+  Author : Ministry of Defence
+  Licence: Open Government Licence v3.0
+  Changes: reconstructed synthesized reference notes (not a reproduction)
+  Terms  : attribution required. Contains public sector information licensed
+           under the Open Government Licence v3.0. The Ministry of Defence does
+           not endorse this pack. Other JSPs and third-party standards the
+           two parts cite are named and not reproduced. Both parts are in
+           this pack. See packs/jsp-912/LICENSE.
 
 [pack: fhwa-its-se]
 

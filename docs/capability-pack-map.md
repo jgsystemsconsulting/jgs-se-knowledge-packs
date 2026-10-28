@@ -25,19 +25,19 @@ Rules of construction:
 | Cluster | Entries |
 |---|---|
 | 1. Systems Thinking & Fundamentals | 26 |
-| 2. Requirements Engineering | 23 |
+| 2. Requirements Engineering | 24 |
 | 3. Requirements Traceability & Allocation | 3 |
 | 4. Architecture & Design | 20 |
 | 5. Interface Management & ICIDs | 9 |
 | 6. Integration | 4 |
-| 7. Verification | 21 |
-| 8. Validation | 7 |
+| 7. Verification | 20 |
+| 8. Validation | 6 |
 | 9. Test & Evaluation | 17 |
 | 10. Modeling, MBSE & SysML | 20 |
 | 11. Digital Engineering & Digital Twins | 25 |
 | 12. Configuration Management & Baselines | 20 |
 | 13. Data & Information Management | 7 |
-| 14. Risk Management | 27 |
+| 14. Risk Management | 24 |
 | 15. Opportunity/Benefit Management | 8 |
 | 16. Decision Analysis & Trade Studies | 5 |
 | 17. Technical Planning & Work Breakdown | 13 |
@@ -45,18 +45,18 @@ Rules of construction:
 | 19. Quality Assurance & Process Compliance | 7 |
 | 20. Safety, Reliability & Survivability | 96 |
 | 21. Cybersecurity & Security Engineering | 73 |
-| 22. Human Systems Integration / Human Factors | 27 |
+| 22. Human Systems Integration / Human Factors | 30 |
 | 23. Logistics, Supportability & Sustainment | 12 |
 | 24. Operations, Maintenance & Disposal | 15 |
 | 25. Training & Documentation Delivery | 13 |
 | 26. Project/Program Management | 67 |
-| 27. Supplier, Procurement & Acquisition | 12 |
+| 27. Supplier, Procurement & Acquisition | 13 |
 | 28. Stakeholder Engagement & Needs | 3 |
-| 29. Governance, Reviews, Gates & Control Points | 28 |
-| 30. Standards, Tailoring & Process Models | 67 |
+| 29. Governance, Reviews, Gates & Control Points | 30 |
+| 30. Standards, Tailoring & Process Models | 68 |
 | 31. Specialty Engineering | 7 |
 | 32. Assurance & System Assurance | 16 |
-| **Total** | **735** |
+| **Total** | **738** |
 
 ## 1. Systems Thinking & Fundamentals
 
@@ -116,6 +116,7 @@ Rules of construction:
 | nrc-nuclear | ch03-software-requirements-specifications.md | Software requirements specification notes from RG 1.172 Rev 1 |
 | jsp-376 | ch03-safety-management-and-requirements.md | Safety Management Plan, safety KUR, and URD and SRD safety requirements across the lifecycle |
 | fhwa-its-se | ch06-systems-engineering-documentation.md | Supplies purpose, tailoring guidance, checklists, and templates for each systems engineering document, from Systems Engineering for ITS, December 2022. |
+| jsp-912 | ch05-user-need-and-system-requirements.md | Covers defining user needs and deriving HFI system requirements through processes HFI-1.0 and HFI-2.0, from JSP 912, March 2024. |
 
 ## 3. Requirements Traceability & Allocation
 
@@ -179,14 +180,6 @@ Rules of construction:
 |---|---|---|
 | dod-vva-rpg | ch05-vv-agent-role-new-simulations.md | V&V agent plans/performs verification and validation for intended use (also validation) |
 | dote-te-guidebook | ch02-developmental-te.md | DT&E: critical technical parameters, KPPs, and development-risk evidence |
-| faa-ams-vv | ch01-faa-ams-vv-introduction-and-vv-philosophy.md | V&V philosophy overview |
-| faa-ams-vv | ch02-faa-ams-vv-implementation-guidance.md | V&V implementation guidance |
-| faa-ams-vv | ch03-faa-ams-vv-approach-and-early-lifecycle.md | V&V approach through early lifecycle |
-| faa-ams-vv | ch05-faa-ams-vv-solution-implementation.md | Verification during solution implementation |
-| faa-ams-vv | ch07-faa-ams-vv-acronyms-checklists-definitions.md | V&V checklists and definitions |
-| faa-ams-vv | cheatsheet.md (support file) | Cheatsheet / quick reference |
-| faa-ams-vv | glossary.md (support file) | Glossary for the pack |
-| faa-ams-vv | patterns.md (support file) | Patterns/practice heuristics |
 | nasa-se-handbook | ch23-5-3-product-verification.md | Product verification process |
 | fda-med-device | ch03-software-validation.md | General Principles of Software Validation, January 2002, taught as the 2002 guidance not as CSA |
 | fda-med-device | ch04-computer-software-assurance.md | Computer Software Assurance final guidance, February 2026, docket FDA-2022-D-0795 |
@@ -198,6 +191,13 @@ Rules of construction:
 | med-device-eu | ch04-clinical-evidence-legacy-devices.md | What MDCG 2020-6 counts as sufficient clinical evidence for a legacy device |
 | med-device-eu | ch05-clinical-evaluation-assessment-report.md | MDCG 2020-13 template as a map of what a clinical evaluation assessment report contains |
 | jsp-376 | ch07-demonstration-and-manufacture.md | Demonstration evidence, Manufacture handover, and Duty Holder appointment before in-service |
+| jsp-912 | ch08-test-acceptance-in-service-feedback.md | Addresses test and acceptance of HFI requirements and in-service feedback through processes HFI-5.0 and HFI-6.0, from JSP 912, March 2024. |
+| faa-ams-vv | ch01-introduction-and-vv-philosophy.md | V&V scope, terms, and philosophy, with the V-Model and shift-left, from Version 4.0 January 2023. |
+| faa-ams-vv | ch02-implementation-guidance.md | V&V planning, performing, reporting, and decision support from Version 4.0 January 2023. |
+| faa-ams-vv | ch03-service-analysis-and-strategic-planning.md | V&V in Service Analysis and Strategic Planning with Table 1, from Version 4.0 January 2023. |
+| faa-ams-vv | glossary.md (support file) | Glossary for pack |
+| faa-ams-vv | cheatsheet.md (support file) | Cheatsheet / quick reference |
+| faa-ams-vv | patterns.md (support file) | Patterns/practice heuristics |
 
 ## 8. Validation
 
@@ -207,9 +207,8 @@ Rules of construction:
 | dod-vva-rpg | ch12-developing-the-referent.md | Validation-referent identify/select/specify/approve for intended use |
 | dod-vva-rpg | ch13-conceptual-model-development-and-validation.md | Simulation conceptual-model development and validation before implementation |
 | dote-te-guidebook | ch03-operational-te.md | OT&E: operational effectiveness, suitability, and survivability under realistic conditions |
-| faa-ams-vv | ch04-faa-ams-vv-investment-analysis.md | Validation during investment analysis |
-| faa-ams-vv | ch06-faa-ams-vv-in-service-management.md | In-service validation and V&V mgmt (also ops) |
 | nasa-se-handbook | ch24-5-4-product-validation.md | Product validation process |
+| faa-ams-vv | ch04-lifecycle-after-sasp.md | V&V in CRD, Investment Analysis, Solution Implementation, and In-Service Management with Tables 2 through 6, from Version 4.0 January 2023. |
 
 ## 9. Test & Evaluation
 
@@ -339,23 +338,20 @@ Rules of construction:
 | dod-vva-rpg | ch10-risk-and-vva.md | Risk drives VV&A depth and accreditation acceptance framing (also modeling) |
 | doe-o-413-3 | ch05-risk-safety-and-exceptions.md | Risk-informed management, safety/security interfaces, and exception paths |
 | nasa-ms-7009 | ch06-ms-risk-and-decision-reporting.md | M&S risk assessment and decision-maker reporting (also measurement) |
-| nasa-risk | ch01-introduction-and-rm-overview.md | RIDM/CRM risk framework overview |
-| nasa-risk | ch02-ridm-crm-integration.md | RIDM and CRM integration |
-| nasa-risk | ch03-ridm-part1-identification-of-alternatives.md | Identifying decision alternatives (also decision analysis) |
-| nasa-risk | ch04-ridm-part2-risk-analysis-of-alternatives.md | Risk analysis of alternatives |
-| nasa-risk | ch05-ridm-part3-risk-informed-selection.md | Risk-informed selection |
-| nasa-risk | ch06-crm-initialisation-and-planning.md | CRM initialization and planning |
-| nasa-risk | ch07-crm-identify-and-analyze.md | CRM identify and analyze |
-| nasa-risk | ch08-crm-plan-step.md | CRM plan step |
-| nasa-risk | ch09-crm-track-control-communicate.md | CRM track/control/communicate |
-| nasa-risk | ch10-enterprise-risks-and-appendices.md | Enterprise risks and appendices |
-| nasa-risk | cheatsheet.md (support file) | Cheatsheet / quick reference |
-| nasa-risk | glossary.md (support file) | Glossary for the pack |
-| nasa-risk | patterns.md (support file) | Patterns/practice heuristics |
 | nasa-se-handbook | ch30-6-4-technical-risk-management.md | Technical risk management process |
 | nist-ai-rmf | ch01-framing-ai-risk.md | Framing AI risk |
 | nist-ai-rmf | ch05-map-function.md | Map function: risk context |
 | nist-ai-rmf | ch07-manage-function.md | Manage function: risk treatment |
+| nasa-risk | ch01-introduction-and-scope.md | Introduction and scope of the handbook, from Version 2.0 November 2024. |
+| nasa-risk | ch02-objectives-driven-framework.md | Foundations and key elements of the objectives-driven risk management framework, from Version 2.0 November 2024. |
+| nasa-risk | ch03-risk-models-and-posture.md | Risk models, analysis, and decision concepts including risk posture, from Version 2.0 November 2024. |
+| nasa-risk | ch04-risk-informed-decision-making.md | Risk-informed decision making, from Version 2.0 November 2024. |
+| nasa-risk | ch05-continuous-risk-management.md | Continuous risk management, from Version 2.0 November 2024. |
+| nasa-risk | ch06-organizational-integration.md | Organizational and managerial aspects of objectives-driven risk management, from Version 2.0 November 2024. |
+| nasa-risk | ch07-application-examples.md | Application examples of RIDM and CRM execution, from Version 2.0 November 2024. |
+| nasa-risk | cheatsheet.md (support file) | Cheatsheet pack |
+| nasa-risk | glossary.md (support file) | Glossary pack |
+| nasa-risk | patterns.md (support file) | Patterns pack |
 
 ## 15. Opportunity/Benefit Management
 
@@ -662,6 +658,9 @@ Rules of construction:
 | nasa-hsi | patterns.md (support file) | Patterns/practice heuristics |
 | nasa-se-handbook | ch05-2-6-human-systems-integration-hsi-in-the-se-process.md | HSI overview in SE processes |
 | jsp-936 | ch04-human-ai-teams.md | Human and AI teaming expectations across roles and human control from JSP 936 Part 1 |
+| jsp-912 | ch01-what-is-hfi-and-why-defence-mandates-it.md | Explains what Human Factors Integration is and why Defence policy mandates it across acquisition and through-life management, from JSP 912, March 2024. |
+| jsp-912 | ch03-hfi-and-systems-engineering.md | Positions HFI within the systems engineering life cycle and links it to DLODs and System Readiness Levels, from JSP 912, March 2024. |
+| jsp-912 | ch07-detailed-system-design-hfi-4-0.md | Applies human factors data to detailed system design through process HFI-4.0, from JSP 912, March 2024. |
 
 ## 23. Logistics, Supportability & Sustainment
 
@@ -806,6 +805,7 @@ Rules of construction:
 | jsp-815 | ch06-supervision-contracting-control.md | Supervision, contracting, and control notes from JSP 815 |
 | jsp-376 | ch06-early-lifecycle-phases.md | Pre-Concept, Concept, and Assessment safety artefacts and SOC, OBC, and FBC evidence |
 | jsp-936 | ch07-suppliers.md | Supplier and procurement direction for acquiring AI systems from JSP 936 Part 1 |
+| jsp-912 | ch06-assess-tenders-hfi-3-0.md | Guides assessment of contractor tenders for human factors capability through process HFI-3.0, from JSP 912, March 2024. |
 
 ## 28. Stakeholder Engagement & Needs
 
@@ -847,6 +847,8 @@ Rules of construction:
 | jsp-376 | ch02-roles-and-safety-in-the-programme.md | SRO and User safety accountabilities, the programme envelope, and the unpublished Chapter 4 gap |
 | jsp-936 | ch03-legal-ethics-governance.md | Legal, ethics, and governance direction for AI-enabled capability from JSP 936 Part 1 |
 | fhwa-its-se | ch04-managing-se-projects.md | Shows agencies how to size systems engineering effort to project risk and choose procurement and staffing approaches, from Systems Engineering for ITS, December 2022. |
+| jsp-912 | ch02-roles-and-responsibilities.md | Sets out the HFI roles and responsibilities for programme teams, HFI practitioners, and senior stakeholders, from JSP 912, March 2024. |
+| jsp-912 | ch09-competencies-ethics-conduct.md | Defines HFI practitioner competencies and the standards for research ethics and professional conduct, from JSP 912, March 2024. |
 
 ## 30. Standards, Tailoring & Process Models
 
@@ -919,6 +921,7 @@ Rules of construction:
 | fhwa-its-se | ch03-the-systems-engineering-process.md | Walks the Vee from regional planning to retirement with decision gates, tailoring guidance, and cross-cutting supports, from Systems Engineering for ITS, December 2022. |
 | fhwa-its-se | ch05-systems-engineering-resources.md | Curates ITS publications, systems engineering references, training providers, and US DOT tools, from Systems Engineering for ITS, December 2022. |
 | fhwa-its-se | ch07-glossary-and-acronyms.md | Defines the terms and acronyms used across the guide, from Systems Engineering for ITS, December 2022. |
+| jsp-912 | ch04-hfi-process-goals-activities-tailoring.md | Describes the HFI process goals and activities and how to tailor them to project scale and novelty, from JSP 912, March 2024. |
 
 ## 31. Specialty Engineering
 

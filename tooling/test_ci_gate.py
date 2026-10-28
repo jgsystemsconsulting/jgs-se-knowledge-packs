@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # Copyright (c) 2026 JG Systems Consulting Ltd. — MIT License (see LICENSE).
 # SPDX-License-Identifier: MIT
-"""Assert-based probe for the ten inline CI gates in .github/workflows/validate.yml.
+"""Assert-based probe for the eleven inline CI gates in .github/workflows/validate.yml.
 
 Run:  python tooling/test_ci_gate.py
 Exits 0 when regex literal parity, heredoc extraction, negative demos, and
@@ -14,7 +14,7 @@ the gates as local functions if extraction matched zero heredocs, but zero
 extraction already fails this probe loudly, so the fallback is effectively
 unreachable and no mirror lives in this file.
 
-Regex parity pins (P4 pin-plus-parity, extended to the ten pinned steps):
+Regex parity pins (P4 pin-plus-parity, extended to the eleven pinned steps):
   - three version regexes, the SKILLS link regex, and the signpost regex must
     appear verbatim in both tooling/check_release.py and validate.yml
   - MAP_VERSION_RE / GENERATED_ON_RE must appear verbatim in validate.yml and
@@ -61,6 +61,7 @@ QUALITY_TWIN = ROOT / "tooling" / "check_pack_quality.py"
 PINNED_STEPS = [
     "Version single-source",
     "SKILLS index count",
+    "Cursor skills eligible set",
     "Chapter basename overlap",
     "Map and classification data invariants",
     "HTML self-containment",
@@ -231,6 +232,7 @@ def write_tree(root: Path, files: dict[str, str]) -> None:
 
 VERSION_BASE = {
     ".claude-plugin/plugin.json": '{"version": "1.2.3"}\n',
+    ".cursor-plugin/plugin.json": '{"version": "1.2.3"}\n',
     "CHANGELOG.md": "# Changelog\n\n## [Unreleased]\n\n## [1.2.3]: 2026-01-01\n",
     "RELEASE-INFO.txt": "Version:    1.2.4\n",
     "docs/products/website/01-jgs-se-knowledge-packs.yaml": 'version: "1.2.3"\n',
@@ -460,7 +462,7 @@ def main() -> int:
             "text, so fix the step name or the heredoc markers"
         )
         bodies[step] = body
-    assert len(bodies) == len(PINNED_STEPS), "expected exactly ten pinned heredocs"
+    assert len(bodies) == len(PINNED_STEPS), "expected exactly eleven pinned heredocs"
 
     with tempfile.TemporaryDirectory() as td:
         tmp = Path(td)
@@ -481,6 +483,10 @@ def main() -> int:
         # version: plugin.json vs RELEASE-INFO disagreement
         demo(VERSION_BASE, "Version single-source",
              "[version] disagreement / missing", "version-disagreement")
+        v_cur = dict(VERSION_BASE)
+        v_cur["RELEASE-INFO.txt"] = "Version:    1.2.3\n"
+        v_cur[".cursor-plugin/plugin.json"] = '{"version": "9.9.9"}\n'
+        demo(v_cur, "Version single-source", "[version]", "version-cursor-disagreement")
         # version: missing website YAML version line
         v2 = dict(VERSION_BASE)
         v2["RELEASE-INFO.txt"] = "Version:    1.2.3\n"
@@ -578,6 +584,16 @@ def main() -> int:
         demo(index_tree(SKILLS_CONTENT_ONLY, SIGNPOST_UNMARKED), "SKILLS index count",
              "[index] SKILLS.md lists 2 packs but 3 are shipped",
              "index-signpost-unmarked")
+
+        demo({
+            "packs/alpha/SKILL.md": "---\nname: alpha\n---\nbody\n",
+            "packs/alpha/PACK.yaml": "commercial_use: true\n",
+            "packs/beta/SKILL.md": "---\nname: beta\n---\nbody\n",
+            "packs/beta/PACK.yaml": "commercial_use: false\n",
+            ".cursor-plugin/plugin.json": json.dumps(
+                {"skills": ["./packs/beta/SKILL.md"]}
+            ) + "\n",
+        }, "Cursor skills eligible set", "[cursor]", "cursor-skills-mismatch")
 
         # overlap: an un-whitelisted shared basename fails with both packs
         demo(overlap_tree(True), "Chapter basename overlap",

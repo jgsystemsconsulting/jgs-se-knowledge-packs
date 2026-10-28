@@ -11,6 +11,19 @@ All notable changes to this project are documented here. Format follows
 
 ## [Unreleased]
 
+## [1.24.0]: 2026-10-28
+
+### Added
+
+- `jsp-912` content pack from JSP 912 Human Factors Integration in Defence Systems, Parts 1 and 2, V3.0 (March 2024), reconstructed notes, registered on the catalogue surfaces. The catalogue now carries 74 content packs, 8 signposts, and 1 orchestrator: 83 skills.
+
+### Changed
+
+- `nasa-risk` rebuilt from NASA Risk Management Handbook, Version 2.0 (November 2024): Part 1 NASA/SP-20240014019 and Part 2 NASA/SP-20240014326. The November 2011 pin NASA/SP-2011-3422 is retired.
+- `faa-ams-vv` rebuilt from FAA AMS Lifecycle Verification and Validation Guidelines, Version 4.0 (January 2023). The April 2017 pin Version 3.0 is retired; the CMMI v1.2 definitions stay paraphrased.
+- `.cursor-plugin/plugin.json` joins the release single-source: its version is 1.24.0 alongside the claude manifest, and a new CI step checks its skills array against the commercially redistributable packs.
+- Site and SEO copy states the current catalogue totals (74 packs, 83 skills) in the meta descriptions and structured data.
+
 ## [1.23.0]: 2026-10-28
 
 ### Added

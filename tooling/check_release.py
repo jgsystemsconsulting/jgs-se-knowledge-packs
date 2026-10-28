@@ -12,8 +12,11 @@ standard requires for this repo and exits non-zero on any failure:
   3. No source-material links published (link policy — see docs/LICENSING.md).
      Banned hosts load from tooling/link-policy-hosts.txt at runtime; the list
      is data, not a literal in this file.
-  4. Version single-source agreement: plugin.json == CHANGELOG top ==
-     RELEASE-INFO.txt == the two website product YAMLs under docs/products/website.
+  4. Version single-source agreement: plugin.json == cursor-plugin.json ==
+     CHANGELOG top == RELEASE-INFO.txt == the two website product YAMLs
+     under docs/products/website. The CI twin covers the cursor manifest too;
+     its skills-set check fails closed on a missing manifest while the local
+     check 6b skips that case.
      Plus [site-version]: docs/index.html softwareVersion, masthead REV, and footer Rev equal RELEASE-INFO.txt.
      Plus [pack-count]: an "N packs" claim in either website YAML must equal the
      live content-pack count from inventory_pack_slugs (signposts and orchestrators
@@ -71,7 +74,7 @@ standard requires for this repo and exits non-zero on any failure:
 
 stdlib only. This is a LOCAL/trusted gate and may run repo code; the CI workflow
 (.github/workflows/validate.yml) inlines its own checks and never executes repo code.
-CI-covered: version, index, overlap, map/rules data invariants, html-assets,
+CI-covered: version (including .cursor-plugin/plugin.json), index, cursor skills, overlap, map/rules data invariants, html-assets,
 catalogue-count, catalog-live-set, routing-map, pack-quality (data subset),
 sitemap, pack-rev. Local-only required before tag: pack validation,
 packs.html freshness, full map/rules checks, replay.
@@ -1167,6 +1170,10 @@ def main() -> int:
         versions["plugin.json"] = json.loads((ROOT / ".claude-plugin/plugin.json").read_text(encoding="utf-8")).get("version", "")
     except Exception as e:
         fail(errs, f"[version] cannot read plugin.json: {e}")
+    try:
+        versions["cursor-plugin.json"] = json.loads((ROOT / ".cursor-plugin/plugin.json").read_text(encoding="utf-8")).get("version", "")
+    except Exception as e:
+        fail(errs, f"[version] cannot read cursor-plugin.json: {e}")
     cl = (ROOT / "CHANGELOG.md").read_text(encoding="utf-8") if (ROOT / "CHANGELOG.md").is_file() else ""
     m = re.search(r"^##\s*\[(\d+\.\d+\.\d+)\]", cl, re.M)
     versions["CHANGELOG.md"] = m.group(1) if m else ""

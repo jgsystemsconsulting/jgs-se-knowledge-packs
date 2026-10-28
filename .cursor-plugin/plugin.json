@@ -2,7 +2,7 @@
   "name": "jgs-se-knowledge-packs",
   "displayName": "JGS SE Knowledge Packs",
   "description": "Licence-vetted systems-engineering knowledge-pack skills reconstructed from genuinely open, commercially-redistributable sources (NASA, NIST, DoD, GAO, FAA, EU AI Act). Ask a topic; the agent reads the right chapter and answers from reference notes, not a hazy recollection.",
-  "version": "1.22.0",
+  "version": "1.24.0",
   "author": {
     "name": "JG Systems Consulting Ltd."
   },
@@ -66,6 +66,7 @@
     "./packs/jsp-815/SKILL.md",
     "./packs/jsp-376/SKILL.md",
     "./packs/jsp-936/SKILL.md",
+    "./packs/jsp-912/SKILL.md",
     "./packs/fhwa-its-se/SKILL.md",
     "./packs/mil-hdbk-338/SKILL.md",
     "./packs/mil-hdbk-516/SKILL.md",

@@ -124,9 +124,9 @@
     {
       "slug": "nasa-risk",
       "publisher": "NASA",
-      "document": "v1.0 (November 2011)",
-      "version": "Version 2.0 (NASA/SP-20240014019 Part 1; NASA/SP-20240014326 Part 2; November 2024)",
-      "last_checked": "2026-10-12",
+      "document": "NASA Risk Management Handbook",
+      "version": "Version 2.0 (November 2024)",
+      "last_checked": "2026-10-28",
       "hint": ""
     },
     {
@@ -308,9 +308,9 @@
     {
       "slug": "faa-ams-vv",
       "publisher": "FAA",
-      "document": "Version 3.0 (April 2017)",
+      "document": "AMS Lifecycle Verification and Validation Guidelines",
       "version": "Version 4.0 (January 2023)",
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-28",
       "hint": ""
     },
     {
@@ -575,6 +575,14 @@
       "document": "JSP 936 Dependable Artificial Intelligence (AI) in Defence, Part 1: Directive, V1.1 (November 2024)",
       "version": "JSP 936 Dependable Artificial Intelligence (AI) in Defence, Part 1: Directive, V1.1 (November 2024)",
       "last_checked": "2026-10-27",
+      "hint": ""
+    },
+    {
+      "slug": "jsp-912",
+      "publisher": "Ministry of Defence",
+      "document": "JSP 912 Human Factors Integration in Defence Systems, Part 1 Directive and Part 2 Guidance, V3.0 (March 2024)",
+      "version": "JSP 912 Human Factors Integration in Defence Systems, Part 1 Directive and Part 2 Guidance, V3.0 (March 2024)",
+      "last_checked": "2026-10-28",
       "hint": ""
     },
     {

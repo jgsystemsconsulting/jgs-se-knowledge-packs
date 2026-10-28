@@ -11,21 +11,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark">
-<title>FAA AMS Lifecycle V&amp;V Guidelines (Verification and Validation), Version 3.0, April 2017 as an installable skill for AI coding agents | JGS SE Knowledge Packs</title>
-<meta name="description" content="Install the faa-ams-vv as an on-demand Agent Skill: Knowledge base from the FAA AMS Lifecycle V&amp;V Guidelines (verification and validation), Version 3.0, dated April 2017. Use for applying verification and...">
+<title>FAA AMS Lifecycle Verification and Validation Guidelines, Version 4.0 as an installable skill for AI coding agents | JGS SE Knowledge Packs</title>
+<meta name="description" content="Install the faa-ams-vv as an on-demand Agent Skill: Knowledge pack synthesized from FAA AMS Lifecycle Verification and Validation Guidelines, Version 4.0 (January 2023): verify-vs-validate, the three tiers,...">
 <link rel="canonical" href="https://jgsystemsconsulting.github.io/jgs-se-knowledge-packs/packs/faa-ams-vv/">
 <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
 <link rel="stylesheet" href="../../site.css">
 <meta property="og:type" content="article">
-<meta property="og:title" content="FAA AMS Lifecycle V&amp;V Guidelines (Verification and Validation), Version 3.0, April 2017, installable as an AI agent skill">
-<meta property="og:description" content="Knowledge base from the FAA AMS Lifecycle V&amp;V Guidelines (verification and validation), Version 3.0, dated April 2017. Use for applying verification and...">
+<meta property="og:title" content="FAA AMS Lifecycle Verification and Validation Guidelines, Version 4.0, installable as an AI agent skill">
+<meta property="og:description" content="Knowledge pack synthesized from FAA AMS Lifecycle Verification and Validation Guidelines, Version 4.0 (January 2023): verify-vs-validate, the three tiers,...">
 <meta property="og:url" content="https://jgsystemsconsulting.github.io/jgs-se-knowledge-packs/packs/faa-ams-vv/">
 <meta property="og:image" content="https://jgsystemsconsulting.github.io/jgs-se-knowledge-packs/assets/og-default.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="FAA AMS Lifecycle V&amp;V Guidelines (Verification and Validation), Version 3.0, April 2017, installable as an AI agent skill">
-<meta name="twitter:description" content="Knowledge base from the FAA AMS Lifecycle V&amp;V Guidelines (verification and validation), Version 3.0, dated April 2017. Use for applying verification and...">
+<meta name="twitter:title" content="FAA AMS Lifecycle Verification and Validation Guidelines, Version 4.0, installable as an AI agent skill">
+<meta name="twitter:description" content="Knowledge pack synthesized from FAA AMS Lifecycle Verification and Validation Guidelines, Version 4.0 (January 2023): verify-vs-validate, the three tiers,...">
 <meta name="twitter:image" content="https://jgsystemsconsulting.github.io/jgs-se-knowledge-packs/assets/og-default.png">
 <style>
 :root{
@@ -85,13 +85,13 @@ td.t{color:var(--text)}
   <span>CLASSIFICATION: <b>PUBLIC</b></span>
   <span>LICENCE: <b>MIT</b></span>
   <span>DOC-ID: <b>JGS-SE-KP/PACK</b></span>
-  <span>REV <b>1.23.0</b></span>
+  <span>REV <b>1.24.0</b></span>
 </div></header>
 
 <header class="hd"><div class="wrap">
   <span class="label">JG Systems Consulting Ltd. · Knowledge pack · /faa-ams-vv</span>
-  <h1>FAA AMS Lifecycle V&amp;V Guidelines (Verification and Validation), Version 3.0, April 2017</h1>
-  <p>Knowledge base from the FAA AMS Lifecycle V&amp;V Guidelines (verification and validation), Version 3.0, dated April 2017. Use for applying verification and validation across the FAA Acquisition Management System (AMS) lifecycle: the verify-vs-validate distinction (built right vs. right thing), the work-product/component/product tiers, the nine V&amp;V planning elements, the four method catalogs (Appendix C), decision-point-gated V&amp;V (SASP, CRD, Investment Analysis, Solution Implementation, In-Service Management), the Appendix B document checklists (PRD/APB/ISPD/PMP), and the DT/OT/IOA test triad. Scope limits: this is an FAA acquisition-V&amp;V doctrine, NOT a general SE process model, requirements-engineering manual, or test-design textbook. It borrows its core V&amp;V definitions from CMMI v1.2 (SEI, paraphrased) and presumes the surrounding AMS lifecycle (see the FAA SEM pack); its phase tables are policy snapshots as of April 2017 and it is thin on detailed test methods, tool specifics, and anything outside FAA acquisition governance.</p>
+  <h1>FAA AMS Lifecycle Verification and Validation Guidelines, Version 4.0</h1>
+  <p>Knowledge pack synthesized from FAA AMS Lifecycle Verification and Validation Guidelines, Version 4.0 (January 2023): verify-vs-validate, the three tiers, decision-point-gated V&amp;V across the AMS lifecycle, and shift-left. SCOPE LIMITS: single-source (the January 2023 guidelines); FAA acquisition V&amp;V doctrine, not a general SE process model, not a requirements manual, and not a test-design textbook; CMMI for Development v1.2 named and paraphrased, never copied; surrounding AMS lifecycle is faa-sem; phase tables are January 2023 snapshots, not live authority; reconstructed reference notes, not FAA guidance, and no FAA endorsement.</p>
   <div class="backnav">
     <a href="../../packs.html">&larr; All packs</a>
     <a href="../../index.html">Overview</a>
@@ -105,7 +105,7 @@ td.t{color:var(--text)}
     <div class="mcell"><span class="label">Licence</span><b>Public Domain (US Government work)</b></div>
     <div class="mcell"><span class="label">Tier</span><b>1</b></div>
     <div class="mcell"><span class="label">Commercial use</span><b>Permitted</b></div>
-    <div class="mcell"><span class="label">Chapters</span><b>7</b></div>
+    <div class="mcell"><span class="label">Chapters</span><b>4</b></div>
     <div class="mcell"><span class="label">Invoke</span><b>/faa-ams-vv &lt;question&gt;</b></div>
   </div>
 </div></section>
@@ -127,21 +127,18 @@ python install.py</pre>
 
 <section><div class="wrap">
   <span class="label">Document and source version</span>
-  <p style="color:var(--text);max-width:80ch;font-size:0.9rem">Version 3.0 (April 2017)</p>
+  <p style="color:var(--text);max-width:80ch;font-size:0.9rem">Version 4.0 (January 2023)</p>
 </div></section>
 
 <section><div class="wrap">
-  <span class="label">Chapters, 7 on demand</span>
+  <span class="label">Chapters, 4 on demand</span>
   <table style="margin-top:10px">
     <thead><tr><th style="width:6rem">Chapter</th><th>Topic</th></tr></thead>
     <tbody>
-<tr><td class="ch">Ch 01</td><td class="t"><a href="https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/blob/main/packs/faa-ams-vv/chapters/ch01-faa-ams-vv-introduction-and-vv-philosophy.md">Faa ams vv introduction and vv philosophy</a></td></tr>
-<tr><td class="ch">Ch 02</td><td class="t"><a href="https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/blob/main/packs/faa-ams-vv/chapters/ch02-faa-ams-vv-implementation-guidance.md">Faa ams vv implementation guidance</a></td></tr>
-<tr><td class="ch">Ch 03</td><td class="t"><a href="https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/blob/main/packs/faa-ams-vv/chapters/ch03-faa-ams-vv-approach-and-early-lifecycle.md">Faa ams vv approach and early lifecycle</a></td></tr>
-<tr><td class="ch">Ch 04</td><td class="t"><a href="https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/blob/main/packs/faa-ams-vv/chapters/ch04-faa-ams-vv-investment-analysis.md">Faa ams vv investment analysis</a></td></tr>
-<tr><td class="ch">Ch 05</td><td class="t"><a href="https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/blob/main/packs/faa-ams-vv/chapters/ch05-faa-ams-vv-solution-implementation.md">Faa ams vv solution implementation</a></td></tr>
-<tr><td class="ch">Ch 06</td><td class="t"><a href="https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/blob/main/packs/faa-ams-vv/chapters/ch06-faa-ams-vv-in-service-management.md">Faa ams vv in service management</a></td></tr>
-<tr><td class="ch">Ch 07</td><td class="t"><a href="https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/blob/main/packs/faa-ams-vv/chapters/ch07-faa-ams-vv-acronyms-checklists-definitions.md">Faa ams vv acronyms checklists definitions</a></td></tr>
+<tr><td class="ch">Ch 01</td><td class="t"><a href="https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/blob/main/packs/faa-ams-vv/chapters/ch01-introduction-and-vv-philosophy.md">Introduction and vv philosophy</a></td></tr>
+<tr><td class="ch">Ch 02</td><td class="t"><a href="https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/blob/main/packs/faa-ams-vv/chapters/ch02-implementation-guidance.md">Implementation guidance</a></td></tr>
+<tr><td class="ch">Ch 03</td><td class="t"><a href="https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/blob/main/packs/faa-ams-vv/chapters/ch03-service-analysis-and-strategic-planning.md">Service analysis and strategic planning</a></td></tr>
+<tr><td class="ch">Ch 04</td><td class="t"><a href="https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/blob/main/packs/faa-ams-vv/chapters/ch04-lifecycle-after-sasp.md">Lifecycle after sasp</a></td></tr>
     </tbody>
   </table>
 </div></section>
@@ -160,7 +157,7 @@ python install.py</pre>
 <footer><div class="wrap">
   <div class="tblock">
     <div><span class="label">Product</span><b>jgs-se-knowledge-packs</b></div>
-    <div><span class="label">Rev</span><b>1.23.0</b></div>
+    <div><span class="label">Rev</span><b>1.24.0</b></div>
     <div><span class="label">Pack licence</span><b>Public Domain (US Government work)</b></div>
     <div><span class="label">Repository</span><b><a href="https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs">github.com/jgsystemsconsulting</a></b></div>
     <div><span class="label">All packs</span><b><a href="../../packs.html">packs.html</a></b></div>

@@ -1,91 +1,65 @@
-# NASA Risk Mgmt Handbook Cheatsheet
+# NASA Risk Mgmt Handbook Cheatsheet (Version 2.0)
 
 ## When to Use RIDM vs. CRM
 
-| Situation | Process |
-|---|---|
-| Trade study, architecture decision, make-buy, source selection, budget reallocation | RIDM |
-| Requirements-setting or rebaselining | RIDM |
-| Decision involves high stakes, complexity, uncertainty, multiple attributes, or diverse stakeholders | RIDM |
-| Implementation underway; managing to baselined performance requirements | CRM |
-| Technology development with defined cost/schedule constraints | CRM |
-| CRM identifies unmanageable risk or mitigation modifies derived requirements | Re-invoke RIDM |
+- Choice among alternatives with consequence (mission or system design, acquisition strategy, risk-response selection, rebaselining): RIDM.
+- Implementation underway and risks must be found, understood, and controlled continuously: CRM.
+- CRM Plan step finds no acceptable response, or a mitigation would change derived requirements: hand the decision back to RIDM (Activity-Execution or Activity-Rebaseline mode).
 
-## RIDM Six-Step Quick Reference
+## RIDM: three parts, six steps
 
-| Step | Key Output | Pitfall |
-|---|---|---|
-| 1. Understand stakeholder expectations | Objectives hierarchy + performance measures + imposed constraints | Using means objectives instead of fundamental objectives |
-| 2. Compile feasible alternatives | Trade tree, pruned to feasible set | Pruning by intuition before analysis |
-| 3. Set framework and analysis methodologies | Risk analysis framework, configuration-controlled per alternative | Siloed domain analyses without cross-domain coordination |
-| 4. Conduct risk analysis | TBfD (performance measure pdfs, sensitivity studies) | Uniform model rigor regardless of stakes |
-| 5. Develop risk-normalised performance commitments | Performance commitment chart with risk tolerances | Setting risk tolerances after seeing results |
-| 6. Deliberate, select, document | RISR | Basing selection solely on risk analysis results |
+Part 1, Identification of Alternatives. Step 1: capture external and upper-level management expectations, decompose fundamental objectives into a hierarchy, and attach performance measures; imposed constraints mark the feasibility floor. Step 2: compile a conservatively broad initial alternative set, then prune with a trade tree or matrix, keeping only alternatives that respect constraints and are not dominated.
 
-## CRM Six-Step Quick Reference
+Part 2, Analysis of Alternatives. Step 3: set one integrated analytical framework across domains (shared parameters, consistent uncertainty treatment, preserved correlations, configuration control) and choose methods by graded approach, with rigor rising as design definition matures. Step 4: conduct the analysis and develop the Technical Basis for Deliberation: alternatives, methods, distributions, sensitivity studies, credibility assessment per NASA-STD-7009.
 
-| Step | Key Output | Trigger for Next Action |
-|---|---|---|
-| Identify | Individual risk statements (Condition–Departure–Asset–Consequence), validated by 8 questions | Near-term or strategic criticality flagged |
-| Analyze (Quick Look) | Near-term and strategic criticality rankings | Near-term: initiate tactical Plan; Strategic: proceed to Graded |
-| Analyze (Graded) | Risk drivers (parameter + pivotal event + departure level) | Intolerable or marginal performance risk |
-| Plan | Selected risk response alternative, documented in RRP | Implementation begins; tracking requirements defined |
-| Track | Tracking data (implementation status + effectiveness observables) | Deviation from forecasted risk reduction |
-| Control | Updated risk model; corrective actions within alternative scope | Gap unresolvable → re-invoke Plan |
+Part 3, Risk-Informed Alternative Selection. Step 5: deliberate. Declare risk tolerances, form risk-normalized performance targets at a common percentile, condition them sequentially in a declared measure order, and pare the field to contenders; resolve tolerance-versus-constraint conflicts by culling, relaxing, or renegotiating. Step 6: select, accept the selected alternative's risks explicitly, and document the rationale in a Risk-Informed Selection Report or decision memo.
 
-## Individual Risk Statement Template
+Three modes: Activity-Planning (full breadth, pre-execution), Activity-Rebaseline (exception condition; re-trades risk against targets inside the selected alternative only), Activity-Execution (runs inside CRM Plan to select risk-response alternatives).
 
-```
-Given that [CONDITION: current, fact-based situation],
-there is a possibility of [DEPARTURE: future change from baseline]
-adversely impacting [ASSET: affected portfolio element],
-thereby leading to [CONSEQUENCE: inability to meet performance requirement].
-```
+## CRM: five steps plus communicate-and-document
 
-**Eight Validity Questions (all must be YES):**
-1. Adequately communicates Condition → Departure → Asset → Consequence?
-2. Based on documentation or knowledge?
-3. Involves change from baseline without adequate contingency?
-4. Condition factually true and supported by evidence?
-5. Departure credible (possible)?
-6. Impacts a measurable performance requirement?
-7. Consequence written without regard to mitigations?
-8. Actionable (can something be done)?
+Identify: gather scenarios, opportunities, and leading indicators from the RIDM risk list, taxonomy-facilitated brainstorming, implementation conditions, elevations, and external change; write each as a validated statement (given a fact-based Condition, a possible Departure affecting an Asset, producing a Consequence for stated Objectives) plus a narrative; categorize in the taxonomy to expose cross-cutting entries.
 
-## Six Risk Disposition Types
+Analyze: build the RSD, then quantify (probabilistic path: event likelihoods, end-state performance for every measure, epistemic uncertainty in a Monte Carlo shell, classification against IRTLs, integration into the risk model, aggregate classification against RTLs, risk drivers by sensitivity) or estimate (heuristic path: history and judgment mapped onto conservative matrices anchored to tolerances); display with spider charts.
 
-| Disposition | Applies To | Key Rule |
-|---|---|---|
-| Accept | Entire performance risk posture | Document assumptions; not passive — revisit as conditions change |
-| Mitigate | Risk drivers | Departure prevention OR consequence reduction; may trigger rebaselining |
-| Watch | Risk drivers | Monitoring plan with pre-established criteria; no baseline change |
-| Research | Risk drivers | Reduces epistemic uncertainty; includes research schedule |
-| Elevate | Risk management decision | Last resort after exhausting other options; combine with Watch |
-| Close | Individual risks | Drivers no longer exist or insignificant; bookkeeping, not risk reduction |
+Plan: assign one of six dispositions (Accept, Mitigate, Watch, Research, Elevate, Close) per scenario, combine options into response alternatives, analyze residual risk against tolerances, and invoke Activity-Execution RIDM only when the choice is genuinely consequential; rebaseline only on decision-authority approval.
 
-## Performance Commitment Ordering Heuristics
-- Order performance measures from **lowest to highest risk tolerance** to minimise conditioning effects.
-- **Positively correlated** measures (directions of goodness aligned): lagging commitments will be set at higher performance than marginal pdfs suggest.
-- **Negatively correlated** measures: lagging commitments will be set at lower performance.
-- Run sensitivity excursions across reasonable risk tolerance ranges to test decision robustness.
+Track: monitor implementation and effectiveness observables for Mitigate, Watch, and Research responses; actual-versus-forecast risk reduction and risk cost for mitigations.
 
-## Graded Analysis Decision Rules
+Control: evaluate tracking data, correct within the selected alternative, execute pre-established contingencies, and reinitiate Plan when a response cannot reach its objective.
 
-| Condition | Action |
-|---|---|
-| Bounding analysis clearly resolves the decision | Stop; no detailed analysis needed |
-| Initiating event probability is vanishingly small | Do not model all downstream scenarios |
-| Strategic criticality is low | Use point estimates; simple/two-pathway RSD |
-| Strategic criticality is high | Full probabilistic analysis; moderately detailed RSD; derive parameter uncertainty distributions |
-| No individual risk driver found | Try pairwise combinations; then higher-order if needed |
+Communicate and Document: run across all five steps; negotiated protocols in the RMP, standard aids (statements, burn-down profiles, taxonomies, RSDs, tracking charts), a relational risk database holding dispositions, rationales, and evidence.
 
-## Tells & Smells (Warning Signs)
+## Risk Statement Formats
 
-- **Using imposed constraints as performance measures**: Constraints set feasibility bounds; they are not the same as optimisation objectives — mixing them produces incoherent commitment values.
-- **Risk statements that include mitigations in the consequence**: Understates exposure; the whole point of the Plan step is to decide whether mitigation is needed.
-- **Elevating before trying other options**: Elevation transfers the problem without solving it; it should come after a documented demonstration that no feasible combination of other dispositions works.
-- **Burn-down schedule that never triggers yellow or red**: If performance risk never exceeds Tolerable, the tolerability thresholds may be set too conservatively, providing false assurance.
-- **TBfD produced after deliberation begins**: The TBfD is the input to deliberation, not a record of it; producing it after the fact turns risk-informed decision making into risk-rationalised decision making.
-- **RISR missing robustness assessment**: Without a documented assessment of decision robustness, there is no basis for confidence that the selected alternative will remain the right choice as conditions evolve.
-- **Risk taxonomies never updated**: Accumulation of risks in "Other" nodes signals that the taxonomy no longer covers the actual risk landscape; update the structure, not just the items.
-- **Assuming parameter-based RIDM models are sufficient for CRM**: Parameter-based models (mass rollup, cost analogy) do not capture project-specific scenarios; CRM requires scenario-based modelling to identify targeted mitigations.
+Defined scenario: "Given that [Condition], there is a possibility of [Departure] affecting [Asset], which can result in [Consequence], adversely affecting [Affected Objective(s)]." Note whether the risk is actionable.
+
+Implied scenario: "Given that [Leading Indicator] correlates significantly with U/U risks in this context and that [Condition] has pushed it past its watch value, there is a potential for [Departure] to push it past its respond value, affecting [Affected Objective]."
+
+Validation gate, seven questions: measurable objective impact; coherent condition-to-consequence chain; documented basis; baseline change without adequate contingency; factual condition; credible departure; consequence written without regard to mitigations. Any "no" or "unknown" invalidates the statement.
+
+## The Six Dispositions
+
+- Accept: no action needed now; aggregate risk within tolerances; document assumptions; never combines into alternatives.
+- Mitigate: positive action on risk drivers, by departure prevention or consequence reduction; may require rebaselining of derived requirements.
+- Watch: monitoring plan over driver observables, with thresholds and contingent deferred decisions.
+- Research: plan to reduce epistemic uncertainty blocking robust decisions, on a schedule that feeds the risk model.
+- Elevate: transfer the decision upward when no combination of the others works; never an opening move; pair with Watch; propose the alternatives you cannot implement yourself.
+- Close: remove from active management when drivers are gone, insignificant, or the event has occurred and become a tracked problem.
+
+## Classification and Tolerance Rules
+
+- Two markers per measure by default: requirement (PMK-R) and goal (PMK-G), each with its tolerance (RTL-R, RTL-G). Green: both satisfied. Yellow: requirement satisfied, goal not. Red: requirement violated.
+- Individual tolerances: IRTL equals the aggregate RTL divided by the estimated number of significant contributors (experience: about ten or fewer); re-derive as N evolves.
+- Aggregate coloring uses the aggregate tolerances and includes the U/U margin; a scenario can be Red while the aggregate stays Yellow when N is much larger than the scenarios found so far.
+- Heuristic matrices are deliberately conservative: one Red path makes the scenario Red; multiple Yellows default to Red absent a defensible cumulative argument; multiple Greens default to Yellow.
+
+## Warning Signs
+
+- Risk statements that embed their own mitigations, or conditions without factual evidence.
+- Minimize Risk listed as a standalone objective instead of an attribute of every objective.
+- Selection on distribution means while hard constraints exist; constraint-violation probability is the number that matters.
+- Execution-stage requirements that quietly diverge from the planning-stage markers the selection compared.
+- Cost and schedule reserves consumed by mitigation impacts without rebaselining the reserves: underappreciated risk surfacing.
+- Elevate proposed before Mitigate, Watch, and Research combinations were analyzed and shown inadequate.
+- Interfacing RMPs written independently, with contradictory elevation or communication criteria.

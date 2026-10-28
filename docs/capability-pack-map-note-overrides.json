@@ -414,46 +414,6 @@
       "note": "DT&E: critical technical parameters, KPPs, and development-risk evidence"
     },
     {
-      "pack": "faa-ams-vv",
-      "chapter": "ch01-faa-ams-vv-introduction-and-vv-philosophy.md",
-      "note": "V&V philosophy overview"
-    },
-    {
-      "pack": "faa-ams-vv",
-      "chapter": "ch02-faa-ams-vv-implementation-guidance.md",
-      "note": "V&V implementation guidance"
-    },
-    {
-      "pack": "faa-ams-vv",
-      "chapter": "ch03-faa-ams-vv-approach-and-early-lifecycle.md",
-      "note": "V&V approach through early lifecycle"
-    },
-    {
-      "pack": "faa-ams-vv",
-      "chapter": "ch05-faa-ams-vv-solution-implementation.md",
-      "note": "Verification during solution implementation"
-    },
-    {
-      "pack": "faa-ams-vv",
-      "chapter": "ch07-faa-ams-vv-acronyms-checklists-definitions.md",
-      "note": "V&V checklists and definitions"
-    },
-    {
-      "pack": "faa-ams-vv",
-      "chapter": "cheatsheet.md",
-      "note": "Cheatsheet / quick reference"
-    },
-    {
-      "pack": "faa-ams-vv",
-      "chapter": "glossary.md",
-      "note": "Glossary for the pack"
-    },
-    {
-      "pack": "faa-ams-vv",
-      "chapter": "patterns.md",
-      "note": "Patterns/practice heuristics"
-    },
-    {
       "pack": "nasa-se-handbook",
       "chapter": "ch23-5-3-product-verification.md",
       "note": "Product verification process"
@@ -477,16 +437,6 @@
       "pack": "dote-te-guidebook",
       "chapter": "ch03-operational-te.md",
       "note": "OT&E: operational effectiveness, suitability, and survivability under realistic conditions"
-    },
-    {
-      "pack": "faa-ams-vv",
-      "chapter": "ch04-faa-ams-vv-investment-analysis.md",
-      "note": "Validation during investment analysis"
-    },
-    {
-      "pack": "faa-ams-vv",
-      "chapter": "ch06-faa-ams-vv-in-service-management.md",
-      "note": "In-service validation and V&V mgmt (also ops)"
     },
     {
       "pack": "nasa-se-handbook",
@@ -967,71 +917,6 @@
       "pack": "nasa-ms-7009",
       "chapter": "ch06-ms-risk-and-decision-reporting.md",
       "note": "M&S risk assessment and decision-maker reporting (also measurement)"
-    },
-    {
-      "pack": "nasa-risk",
-      "chapter": "ch01-introduction-and-rm-overview.md",
-      "note": "RIDM/CRM risk framework overview"
-    },
-    {
-      "pack": "nasa-risk",
-      "chapter": "ch02-ridm-crm-integration.md",
-      "note": "RIDM and CRM integration"
-    },
-    {
-      "pack": "nasa-risk",
-      "chapter": "ch03-ridm-part1-identification-of-alternatives.md",
-      "note": "Identifying decision alternatives (also decision analysis)"
-    },
-    {
-      "pack": "nasa-risk",
-      "chapter": "ch04-ridm-part2-risk-analysis-of-alternatives.md",
-      "note": "Risk analysis of alternatives"
-    },
-    {
-      "pack": "nasa-risk",
-      "chapter": "ch05-ridm-part3-risk-informed-selection.md",
-      "note": "Risk-informed selection"
-    },
-    {
-      "pack": "nasa-risk",
-      "chapter": "ch06-crm-initialisation-and-planning.md",
-      "note": "CRM initialization and planning"
-    },
-    {
-      "pack": "nasa-risk",
-      "chapter": "ch07-crm-identify-and-analyze.md",
-      "note": "CRM identify and analyze"
-    },
-    {
-      "pack": "nasa-risk",
-      "chapter": "ch08-crm-plan-step.md",
-      "note": "CRM plan step"
-    },
-    {
-      "pack": "nasa-risk",
-      "chapter": "ch09-crm-track-control-communicate.md",
-      "note": "CRM track/control/communicate"
-    },
-    {
-      "pack": "nasa-risk",
-      "chapter": "ch10-enterprise-risks-and-appendices.md",
-      "note": "Enterprise risks and appendices"
-    },
-    {
-      "pack": "nasa-risk",
-      "chapter": "cheatsheet.md",
-      "note": "Cheatsheet / quick reference"
-    },
-    {
-      "pack": "nasa-risk",
-      "chapter": "glossary.md",
-      "note": "Glossary for the pack"
-    },
-    {
-      "pack": "nasa-risk",
-      "chapter": "patterns.md",
-      "note": "Patterns/practice heuristics"
     },
     {
       "pack": "nasa-se-handbook",
@@ -3677,6 +3562,136 @@
       "pack": "fhwa-its-se",
       "chapter": "ch07-glossary-and-acronyms.md",
       "note": "Defines the terms and acronyms used across the guide, from Systems Engineering for ITS, December 2022."
+    },
+    {
+      "pack": "jsp-912",
+      "chapter": "ch01-what-is-hfi-and-why-defence-mandates-it.md",
+      "note": "Explains what Human Factors Integration is and why Defence policy mandates it across acquisition and through-life management, from JSP 912, March 2024."
+    },
+    {
+      "pack": "jsp-912",
+      "chapter": "ch02-roles-and-responsibilities.md",
+      "note": "Sets out the HFI roles and responsibilities for programme teams, HFI practitioners, and senior stakeholders, from JSP 912, March 2024."
+    },
+    {
+      "pack": "jsp-912",
+      "chapter": "ch03-hfi-and-systems-engineering.md",
+      "note": "Positions HFI within the systems engineering life cycle and links it to DLODs and System Readiness Levels, from JSP 912, March 2024."
+    },
+    {
+      "pack": "jsp-912",
+      "chapter": "ch04-hfi-process-goals-activities-tailoring.md",
+      "note": "Describes the HFI process goals and activities and how to tailor them to project scale and novelty, from JSP 912, March 2024."
+    },
+    {
+      "pack": "jsp-912",
+      "chapter": "ch05-user-need-and-system-requirements.md",
+      "note": "Covers defining user needs and deriving HFI system requirements through processes HFI-1.0 and HFI-2.0, from JSP 912, March 2024."
+    },
+    {
+      "pack": "jsp-912",
+      "chapter": "ch06-assess-tenders-hfi-3-0.md",
+      "note": "Guides assessment of contractor tenders for human factors capability through process HFI-3.0, from JSP 912, March 2024."
+    },
+    {
+      "pack": "jsp-912",
+      "chapter": "ch07-detailed-system-design-hfi-4-0.md",
+      "note": "Applies human factors data to detailed system design through process HFI-4.0, from JSP 912, March 2024."
+    },
+    {
+      "pack": "jsp-912",
+      "chapter": "ch08-test-acceptance-in-service-feedback.md",
+      "note": "Addresses test and acceptance of HFI requirements and in-service feedback through processes HFI-5.0 and HFI-6.0, from JSP 912, March 2024."
+    },
+    {
+      "pack": "jsp-912",
+      "chapter": "ch09-competencies-ethics-conduct.md",
+      "note": "Defines HFI practitioner competencies and the standards for research ethics and professional conduct, from JSP 912, March 2024."
+    },
+    {
+      "pack": "nasa-risk",
+      "chapter": "ch01-introduction-and-scope.md",
+      "note": "Introduction and scope of the handbook, from Version 2.0 November 2024."
+    },
+    {
+      "pack": "nasa-risk",
+      "chapter": "ch02-objectives-driven-framework.md",
+      "note": "Foundations and key elements of the objectives-driven risk management framework, from Version 2.0 November 2024."
+    },
+    {
+      "pack": "nasa-risk",
+      "chapter": "ch03-risk-models-and-posture.md",
+      "note": "Risk models, analysis, and decision concepts including risk posture, from Version 2.0 November 2024."
+    },
+    {
+      "pack": "nasa-risk",
+      "chapter": "ch04-risk-informed-decision-making.md",
+      "note": "Risk-informed decision making, from Version 2.0 November 2024."
+    },
+    {
+      "pack": "nasa-risk",
+      "chapter": "ch05-continuous-risk-management.md",
+      "note": "Continuous risk management, from Version 2.0 November 2024."
+    },
+    {
+      "pack": "nasa-risk",
+      "chapter": "ch06-organizational-integration.md",
+      "note": "Organizational and managerial aspects of objectives-driven risk management, from Version 2.0 November 2024."
+    },
+    {
+      "pack": "nasa-risk",
+      "chapter": "ch07-application-examples.md",
+      "note": "Application examples of RIDM and CRM execution, from Version 2.0 November 2024."
+    },
+    {
+      "pack": "nasa-risk",
+      "chapter": "cheatsheet.md",
+      "note": "Cheatsheet pack"
+    },
+    {
+      "pack": "nasa-risk",
+      "chapter": "glossary.md",
+      "note": "Glossary pack"
+    },
+    {
+      "pack": "nasa-risk",
+      "chapter": "patterns.md",
+      "note": "Patterns pack"
+    },
+    {
+      "pack": "faa-ams-vv",
+      "chapter": "ch01-introduction-and-vv-philosophy.md",
+      "note": "V&V scope, terms, and philosophy, with the V-Model and shift-left, from Version 4.0 January 2023."
+    },
+    {
+      "pack": "faa-ams-vv",
+      "chapter": "ch02-implementation-guidance.md",
+      "note": "V&V planning, performing, reporting, and decision support from Version 4.0 January 2023."
+    },
+    {
+      "pack": "faa-ams-vv",
+      "chapter": "ch03-service-analysis-and-strategic-planning.md",
+      "note": "V&V in Service Analysis and Strategic Planning with Table 1, from Version 4.0 January 2023."
+    },
+    {
+      "pack": "faa-ams-vv",
+      "chapter": "ch04-lifecycle-after-sasp.md",
+      "note": "V&V in CRD, Investment Analysis, Solution Implementation, and In-Service Management with Tables 2 through 6, from Version 4.0 January 2023."
+    },
+    {
+      "pack": "faa-ams-vv",
+      "chapter": "glossary.md",
+      "note": "Glossary for pack"
+    },
+    {
+      "pack": "faa-ams-vv",
+      "chapter": "cheatsheet.md",
+      "note": "Cheatsheet / quick reference"
+    },
+    {
+      "pack": "faa-ams-vv",
+      "chapter": "patterns.md",
+      "note": "Patterns/practice heuristics"
     }
   ]
 }

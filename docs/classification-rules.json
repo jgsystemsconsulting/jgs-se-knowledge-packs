@@ -553,54 +553,6 @@
       "is_support": false
     },
     {
-      "pack": "faa-ams-vv",
-      "chapter": "ch01-faa-ams-vv-introduction-and-vv-philosophy.md",
-      "cluster": "Verification",
-      "is_support": false
-    },
-    {
-      "pack": "faa-ams-vv",
-      "chapter": "ch02-faa-ams-vv-implementation-guidance.md",
-      "cluster": "Verification",
-      "is_support": false
-    },
-    {
-      "pack": "faa-ams-vv",
-      "chapter": "ch03-faa-ams-vv-approach-and-early-lifecycle.md",
-      "cluster": "Verification",
-      "is_support": false
-    },
-    {
-      "pack": "faa-ams-vv",
-      "chapter": "ch05-faa-ams-vv-solution-implementation.md",
-      "cluster": "Verification",
-      "is_support": false
-    },
-    {
-      "pack": "faa-ams-vv",
-      "chapter": "ch07-faa-ams-vv-acronyms-checklists-definitions.md",
-      "cluster": "Verification",
-      "is_support": false
-    },
-    {
-      "pack": "faa-ams-vv",
-      "chapter": "cheatsheet.md",
-      "cluster": "Verification",
-      "is_support": true
-    },
-    {
-      "pack": "faa-ams-vv",
-      "chapter": "glossary.md",
-      "cluster": "Verification",
-      "is_support": true
-    },
-    {
-      "pack": "faa-ams-vv",
-      "chapter": "patterns.md",
-      "cluster": "Verification",
-      "is_support": true
-    },
-    {
       "pack": "nasa-se-handbook",
       "chapter": "ch23-5-3-product-verification.md",
       "cluster": "Verification",
@@ -627,18 +579,6 @@
     {
       "pack": "dote-te-guidebook",
       "chapter": "ch03-operational-te.md",
-      "cluster": "Validation",
-      "is_support": false
-    },
-    {
-      "pack": "faa-ams-vv",
-      "chapter": "ch04-faa-ams-vv-investment-analysis.md",
-      "cluster": "Validation",
-      "is_support": false
-    },
-    {
-      "pack": "faa-ams-vv",
-      "chapter": "ch06-faa-ams-vv-in-service-management.md",
       "cluster": "Validation",
       "is_support": false
     },
@@ -1217,84 +1157,6 @@
       "chapter": "ch06-ms-risk-and-decision-reporting.md",
       "cluster": "Risk Management",
       "is_support": false
-    },
-    {
-      "pack": "nasa-risk",
-      "chapter": "ch01-introduction-and-rm-overview.md",
-      "cluster": "Risk Management",
-      "is_support": false
-    },
-    {
-      "pack": "nasa-risk",
-      "chapter": "ch02-ridm-crm-integration.md",
-      "cluster": "Risk Management",
-      "is_support": false
-    },
-    {
-      "pack": "nasa-risk",
-      "chapter": "ch03-ridm-part1-identification-of-alternatives.md",
-      "cluster": "Risk Management",
-      "is_support": false
-    },
-    {
-      "pack": "nasa-risk",
-      "chapter": "ch04-ridm-part2-risk-analysis-of-alternatives.md",
-      "cluster": "Risk Management",
-      "is_support": false
-    },
-    {
-      "pack": "nasa-risk",
-      "chapter": "ch05-ridm-part3-risk-informed-selection.md",
-      "cluster": "Risk Management",
-      "is_support": false
-    },
-    {
-      "pack": "nasa-risk",
-      "chapter": "ch06-crm-initialisation-and-planning.md",
-      "cluster": "Risk Management",
-      "is_support": false
-    },
-    {
-      "pack": "nasa-risk",
-      "chapter": "ch07-crm-identify-and-analyze.md",
-      "cluster": "Risk Management",
-      "is_support": false
-    },
-    {
-      "pack": "nasa-risk",
-      "chapter": "ch08-crm-plan-step.md",
-      "cluster": "Risk Management",
-      "is_support": false
-    },
-    {
-      "pack": "nasa-risk",
-      "chapter": "ch09-crm-track-control-communicate.md",
-      "cluster": "Risk Management",
-      "is_support": false
-    },
-    {
-      "pack": "nasa-risk",
-      "chapter": "ch10-enterprise-risks-and-appendices.md",
-      "cluster": "Risk Management",
-      "is_support": false
-    },
-    {
-      "pack": "nasa-risk",
-      "chapter": "cheatsheet.md",
-      "cluster": "Risk Management",
-      "is_support": true
-    },
-    {
-      "pack": "nasa-risk",
-      "chapter": "glossary.md",
-      "cluster": "Risk Management",
-      "is_support": true
-    },
-    {
-      "pack": "nasa-risk",
-      "chapter": "patterns.md",
-      "cluster": "Risk Management",
-      "is_support": true
     },
     {
       "pack": "nasa-se-handbook",
@@ -4469,6 +4331,162 @@
       "chapter": "ch07-glossary-and-acronyms.md",
       "cluster": "Standards, Tailoring & Process Models",
       "is_support": false
+    },
+    {
+      "pack": "jsp-912",
+      "chapter": "ch01-what-is-hfi-and-why-defence-mandates-it.md",
+      "cluster": "Human Systems Integration / Human Factors",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-912",
+      "chapter": "ch02-roles-and-responsibilities.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-912",
+      "chapter": "ch03-hfi-and-systems-engineering.md",
+      "cluster": "Human Systems Integration / Human Factors",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-912",
+      "chapter": "ch04-hfi-process-goals-activities-tailoring.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-912",
+      "chapter": "ch05-user-need-and-system-requirements.md",
+      "cluster": "Requirements Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-912",
+      "chapter": "ch06-assess-tenders-hfi-3-0.md",
+      "cluster": "Supplier, Procurement & Acquisition",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-912",
+      "chapter": "ch07-detailed-system-design-hfi-4-0.md",
+      "cluster": "Human Systems Integration / Human Factors",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-912",
+      "chapter": "ch08-test-acceptance-in-service-feedback.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "jsp-912",
+      "chapter": "ch09-competencies-ethics-conduct.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-risk",
+      "chapter": "ch01-introduction-and-scope.md",
+      "cluster": "Risk Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-risk",
+      "chapter": "ch02-objectives-driven-framework.md",
+      "cluster": "Risk Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-risk",
+      "chapter": "ch03-risk-models-and-posture.md",
+      "cluster": "Risk Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-risk",
+      "chapter": "ch04-risk-informed-decision-making.md",
+      "cluster": "Risk Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-risk",
+      "chapter": "ch05-continuous-risk-management.md",
+      "cluster": "Risk Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-risk",
+      "chapter": "ch06-organizational-integration.md",
+      "cluster": "Risk Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-risk",
+      "chapter": "ch07-application-examples.md",
+      "cluster": "Risk Management",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-risk",
+      "chapter": "cheatsheet.md",
+      "cluster": "Risk Management",
+      "is_support": true
+    },
+    {
+      "pack": "nasa-risk",
+      "chapter": "glossary.md",
+      "cluster": "Risk Management",
+      "is_support": true
+    },
+    {
+      "pack": "nasa-risk",
+      "chapter": "patterns.md",
+      "cluster": "Risk Management",
+      "is_support": true
+    },
+    {
+      "pack": "faa-ams-vv",
+      "chapter": "ch01-introduction-and-vv-philosophy.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "faa-ams-vv",
+      "chapter": "ch02-implementation-guidance.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "faa-ams-vv",
+      "chapter": "ch03-service-analysis-and-strategic-planning.md",
+      "cluster": "Verification",
+      "is_support": false
+    },
+    {
+      "pack": "faa-ams-vv",
+      "chapter": "ch04-lifecycle-after-sasp.md",
+      "cluster": "Validation",
+      "is_support": false
+    },
+    {
+      "pack": "faa-ams-vv",
+      "chapter": "glossary.md",
+      "cluster": "Verification",
+      "is_support": true
+    },
+    {
+      "pack": "faa-ams-vv",
+      "chapter": "cheatsheet.md",
+      "cluster": "Verification",
+      "is_support": true
+    },
+    {
+      "pack": "faa-ams-vv",
+      "chapter": "patterns.md",
+      "cluster": "Verification",
+      "is_support": true
     }
   ]
 }

@@ -7,8 +7,8 @@ SPDX-License-Identifier: MIT
 
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT%20(tooling)-blue" alt="License: MIT (tooling)">
-  <img src="https://img.shields.io/badge/version-1.23.0-green" alt="Version 1.23.0">
-  <img src="https://img.shields.io/badge/packs-73-blueviolet" alt="73 packs">
+  <img src="https://img.shields.io/badge/version-1.24.0-green" alt="Version 1.24.0">
+  <img src="https://img.shields.io/badge/packs-74-blueviolet" alt="74 packs">
   <img src="https://img.shields.io/badge/tested%20with-Claude%20Code-8A2BE2" alt="Tested with Claude Code">
   <img src="https://img.shields.io/badge/scope-systems%20engineering-orange" alt="Scope: systems engineering">
   <a href="https://skills.sh/jgsystemsconsulting/jgs-se-knowledge-packs"><img src="https://skills.sh/b/jgsystemsconsulting/jgs-se-knowledge-packs" alt="skills.sh installs"></a>
@@ -60,7 +60,7 @@ and install the catalogue for you.
 ```text
 You are installing jgs-se-knowledge-packs, an open catalogue (MIT tooling) of
 systems-engineering knowledge-pack skills by JG Systems Consulting Ltd.
-Repository: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs (version 1.23.0).
+Repository: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs (version 1.24.0).
 Do this in order:
 1. Read README.md, docs/skill-usage.md, and CHANGELOG.md so you understand what you are
    installing. There are NO external prerequisites: packs are plain Markdown skills.
@@ -128,7 +128,7 @@ always-loaded `SKILL.md` index inlined into one file. Full detail and the per-ag
 | `nasa-se-handbook` | NASA Systems Engineering Handbook | Public domain (US gov) | 🟢 1 | ✅ live (34 chapters) |
 | `nasa-se-expanded` | Expanded Guidance for NASA SE (SP-2016-6105-SUPPL Vol 1) | Public domain (US gov) | 🟢 1 | ✅ live (6 chapters) |
 | `nasa-npr-7123` | NASA NPR 7123.1D: SE Processes & Requirements | Public domain (US gov) | 🟢 1 | ✅ live (9 chapters) |
-| `nasa-risk` | NASA Risk Management Handbook | Public domain (US gov) | 🟢 1 | ✅ live (10 chapters) |
+| `nasa-risk` | NASA Risk Management Handbook | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
 | `nasa-system-safety` | NASA System Safety Handbook v2 | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
 | `nasa-pra` | NASA PRA Procedures Guide 2nd ed (NASA/SP-2011-3421) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `nasa-hsi` | NASA Human Systems Integration Guide | Public domain (US gov) | 🟢 1 | ✅ live (9 chapters) |
@@ -161,7 +161,7 @@ always-loaded `SKILL.md` index inlined into one file. Full detail and the per-ag
 | `nasa-ceh` | NASA Cost Estimating Handbook v4.0 | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
 | `nasa-systems-modeling` | NASA Systems Modeling Handbook (NASA-HDBK-1009A Rev A) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `dod-te-guidebook` | DoD Test & Evaluation Enterprise Guidebook (OUSD R&E, Aug 2022) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
-| `faa-ams-vv` | FAA AMS Lifecycle V&V Guidelines v3.0 | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
+| `faa-ams-vv` | FAA AMS Lifecycle Verification and Validation Guidelines, Version 4.0 | Public domain (US gov) | 🟢 1 | ✅ live (4 chapters) |
 | `gao-agile` | GAO Agile Assessment Guide (GAO-24-105506) | Public domain (US gov) | 🟢 1 | ✅ live (9 chapters) |
 | `mil-hdbk-61` | MIL-HDBK-61B: DoD Configuration Management (Change 1, 2025) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `mrl-deskbook` | DoD Manufacturing Readiness Level (MRL) Deskbook (Version 2022) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
@@ -193,6 +193,7 @@ always-loaded `SKILL.md` index inlined into one file. Full detail and the per-ag
 | `fda-med-device` | FDA device software guidance + QMSR final rule (89 FR 7496) | Public domain (US gov) | 🟢 1 | ✅ live (12 chapters) |
 | `jsp-376` | JSP 376 Defence Acquisition Safety Policy V1.1 | OGL v3.0 (UK MoD) | 🟡 2 | ✅ live (8 chapters) |
 | `jsp-936` | JSP 936 Dependable Artificial Intelligence (AI) in Defence, Part 1: Directive, V1.1 | OGL v3.0 (UK MoD) | 🟡 2 | ✅ live (8 chapters) |
+| `jsp-912` | JSP 912 Human Factors Integration in Defence Systems, Parts 1 and 2, V3.0 (March 2024) | OGL v3.0 (UK MoD) | 🟡 2 | ✅ live (9 chapters) |
 | `fhwa-its-se` | Systems Engineering for ITS, fourth generation (December 2022), FHWA | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
 | `jsp-815` | JSP 815 Defence Safety Management System V1.3 | OGL v3.0 (UK MoD) | 🟡 2 | ✅ live (10 chapters) |
 | `med-device-eu` | MDCG guidance (European Commission) + MHRA software guidance (UK) | CC BY 4.0 (EC) + OGL v3.0 (MHRA) | 🟡 2 | ✅ live (8 chapters) |
@@ -264,4 +265,4 @@ questions, see [labs.jgsystemsconsulting.com/licensing.html](https://labs.jgsyst
 
 ## Version
 
-See [CHANGELOG.md](CHANGELOG.md). Current: 1.23.0.
+See [CHANGELOG.md](CHANGELOG.md). Current: 1.24.0.
