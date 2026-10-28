@@ -1,71 +1,60 @@
 ---
 name: faa-ams-vv
-description: "Knowledge base from the FAA AMS Lifecycle V&V Guidelines (verification and validation), Version 3.0, dated April 2017. Use for applying verification and validation across the FAA Acquisition Management System (AMS) lifecycle: the verify-vs-validate distinction (built right vs. right thing), the work-product/component/product tiers, the nine V&V planning elements, the four method catalogs (Appendix C), decision-point-gated V&V (SASP, CRD, Investment Analysis, Solution Implementation, In-Service Management), the Appendix B document checklists (PRD/APB/ISPD/PMP), and the DT/OT/IOA test triad. Scope limits: this is an FAA acquisition-V&V doctrine, NOT a general SE process model, requirements-engineering manual, or test-design textbook. It borrows its core V&V definitions from CMMI v1.2 (SEI, paraphrased) and presumes the surrounding AMS lifecycle (see the FAA SEM pack); its phase tables are policy snapshots as of April 2017 and it is thin on detailed test methods, tool specifics, and anything outside FAA acquisition governance."
+description: "Knowledge pack synthesized from the FAA AMS Lifecycle Verification and Validation Guidelines, Version 4.0 (January 2023): verify-vs-validate, three tiers, decision-point-gated V&V across AMS lifecycle, and shift-left. SCOPE LIMITS: single-source (the January 2023 guidelines); FAA acquisition V&V doctrine, not general SE process model, not requirements manual, and not test-design textbook; CMMI Development v1.2 named and paraphrased, never copied; surrounding AMS lifecycle faa-sem; phase tables January 2023 snapshots, not live authority; reconstructed reference notes, not FAA guidance, and no FAA endorsement."
 ---
 
-<!-- argument-hint: [verify vs validate, work product / component / product, V&V method, AMS phase (SASP/CRD/IA/SI/ISM), decision point/gate, planning element, Appendix B checklist (PRD/APB/ISPD/PMP), DT/OT/IOA, chapter number] -->
+<!-- argument-hint: [verify vs validate, work product / component / product, V&V method, AMS phase (SASP/CRD/IA/SI/ISM), decision point/gate, planning element, Appendix B checklist (PRD/APB/ISPD/PMP), DT/OT/IOA, shift-left] -->
 
-# FAA AMS Lifecycle V&V Guidelines (Verification and Validation) — Version 3.0, April 2017
-**Source**: Federal Aviation Administration (FAA) — US Government work, public domain | **Chapters**: 7
+# FAA AMS Lifecycle Verification and Validation Guidelines, Version 4.0
+
+**Source:** Federal Aviation Administration, *AMS Lifecycle Verification and Validation Guidelines*, Version 4.0 (January 2023). US Government work, public domain under 17 U.S.C. 105. No download link is published; source identification and licence terms: [LICENSE](LICENSE). Vetted 2026-10-28.
 
 ## When to use
-Use this skill when you need to apply verification and validation across the FAA Acquisition Management System (AMS) lifecycle, as defined in the FAA AMS Lifecycle V&V Guidelines Version 3.0 (April 2017). This pack covers the verify-vs-validate distinction (built right vs. right thing), the work-product/component/product tiers, the nine V&V planning elements, the four method catalogs (Appendix C), decision-point-gated V&V across AMS phases (SASP, CRD, Investment Analysis, Solution Implementation, In-Service Management), the Appendix B document checklists (PRD/APB/ISPD/PMP), and the DT/OT/IOA test triad. Pair it with the FAA SEM pack for the surrounding AMS lifecycle context.
+
+Use this skill when the question is verification and validation across the FAA Acquisition Management System (AMS) lifecycle: whether to verify or validate, which tier an artifact sits at, which methods apply, what the minimum V&V set is at each decision point, how the DT/OT/IOA triad divides test labor, or how shift-left changes early-lifecycle checking. It does not cover the surrounding AMS lifecycle mechanics (phases, gates as process, program office roles); that context stays in the `faa-sem` pack. It is also not a requirements-writing manual, a general SE process model, or a test-design textbook.
 
 **Prerequisites:** none, plain Markdown; no MCP server, API key, or licence tier needed at runtime.
 
-## How to Use This Skill
+## How to use this skill
 
-- **Without arguments** — load the Core Frameworks below for the verify-vs-validate split, the three V&V tiers, the four method catalogs, and how V&V gates each AMS decision point.
-- **With a topic** — ask about verifying vs. validating, choosing a V&V method, the nine planning elements, the Appendix B checklists, the DT/OT/IOA triad, or what gets V&V'd in a given phase.
-- **With a phase** — ask for SASP/CRD (`ch03`), Investment Analysis (`ch04`), Solution Implementation (`ch05`), or In-Service Management (`ch06`).
-- **With a chapter** — request `ch01`–`ch07` directly (index below).
-
-Supporting files: `glossary.md` (terms + acronyms), `patterns.md` (11 how-to techniques), `cheatsheet.md` (decision rules, phase/gate/method tables, tells & smells).
-
-**Prerequisites:** none — plain Markdown; no MCP server, API key, or licence tier needed at runtime. Pairs with the FAA SEM pack, which defines the surrounding AMS lifecycle this V&V doctrine overlays.
+- **No arguments**: start at Core Frameworks below for the guideline's spine.
+- **A topic or method question**: look it up in the Topic Index, then open the chapter.
+- **A lifecycle or phase question**: use the Chapter Index; SASP is `ch03`, everything after SASP is `ch04`.
+- **A term, decision rule, or move**: `glossary.md` for terms and acronyms, `cheatsheet.md` for decision rules and gate tables, `patterns.md` for shift-left and independence moves.
 
 ## Core Frameworks & Mental Models
 
-### Verification vs. Validation — the two questions
+### Verification vs. validation: two questions
 
-The spine of the entire guideline. **Verification** confirms the thing was *built right* — that selected work products meet the requirements specified for them (templates, standards, specifications, policy). It is inherently incremental, running from initial requirements through every change to the finished end product. **Validation** confirms the *right thing was built* — that the finished product, a component, or a selected work product will deliver its intended purpose and satisfy user needs once in its operating environment. Both definitions are drawn from, and here paraphrased from, **CMMI for Development v1.2 (SEI, 2006)**; the guideline cites CMMI and notes GAO relies on it for quality audits. The relative *emphasis* of the two shifts with program maturity: validation-heavy while needs and concepts are still forming, verification-heavy as design and product harden. It is a sliding balance, not a fixed split.
+The spine of the whole guideline. **Verification** confirms the thing is *built right*: selected work products meet their specified requirements, incrementally from initial requirements through every change to the completed product. **Validation** confirms the *right thing* was built: the product, or an end product component, will fulfill its intended purpose and user needs in its intended environment. Both definitions are consistent with CMMI for Development v1.2 (Carnegie Mellon Software Engineering Institute, August 2006), named in the guideline's page 3 footnote; that footnote also draws the QA line: V&V targets requirements, user and mission needs, and risk, while QA targets whether established processes were followed. CMMI is third-party copyrighted; this pack paraphrases it and never quotes it.
 
-A worked example crystallizes it: a system specification is *verified* against the standards/templates that govern its content and format, and *validated* against the needs captured in the higher-level requirements document. Verification looks **down** at the spec; validation looks **up** at the need.
+### Three tiers: work product, product component, product
 
-### The three V&V tiers (and the upward flow)
+V&V attaches to a hierarchy. A **work product** represents, defines, or directs the final product (designs, specs, plans, models, prototypes, contracts). A **product component** is a lower-level element integrated upward, possibly in multiple levels. The **product** is the delivered system, service, capability, facility, or operational change. V&V flows up the tiers, repeats when an item is modified, and is performed by both government and contractor organizations on both parties' work.
 
-V&V applies to a deliberate hierarchy: **work product → product component → product**.
-- **Work product** — anything that represents, defines, or directs the product (designs, specs, plans, requirements, models, prototypes, contracts).
-- **Product component** — a lower-level element integrated upward (possibly nested).
-- **Product** — the delivered system, service, facility, or operational change.
+### The EA as source criterion and feedback loop
 
-V&V flows up the hierarchy: work products first, components before integration, the product before operational acceptance. Any item may undergo V&V more than once if modified. Both **government and contractor** organizations are required to perform V&V, on both parties' work. **V&V ≠ QA**: V&V targets requirements/mission/risk; QA targets whether the established *processes* were followed.
+The Enterprise Architecture defines the operational and technical framework for all FAA capital assets and is a major V&V source criterion, itself subject to V&V. It grounds the criteria for critical work products (needs, requirements, concepts of use, strategies) and is updated and refined from what V&V learns. A closed loop.
 
-### The four method catalogs (Appendix C)
+### V-Model implementation and shift-left
 
-Cross "verification vs. validation" with "work product vs. product/component" to get four method lists:
-- **Work-product verification** — checklists, audits, peer reviews, inspections.
-- **Work-product validation** — broader and user-facing: surveys and discussions with users, functional presentations, dry-run walk-throughs, storyboarding and modeling, demonstrations and testing, plus the verification set (analyses, audits, peer reviews, inspections, checklists).
-- **Product/component verification** — analyses, audits, peer reviews, inspections, checklists, simulations, testing, demonstrations, and **accreditation**.
-- **Product/component validation** — user-evaluation questionnaires and discussions with users, functional presentations, simulations and testing, demonstrations, analyses, audits, peer reviews, inspections, and checklists.
+Section 1.3 renders the lifecycle as a V: the left side vets strategic-planning work products (ConOps, requirements, specifications, design) with loopback arrows for V&V against criteria in previous work products; the right side tests and evaluates the integrated result; the middle cross-references the two. Section 1.3.2 adds Agile acquisition (small batches, fast learning cycles, fluid work products) and Shift-Left (find defects early by V&V'ing work products as soon as possible, testers engaged from the concepts phase onward), captioned in Figure 3 as shift-left V&V with evolving NAS capabilities.
 
-Validation catalogs are user-facing and broader; product-tier catalogs add analysis, simulation, and (for verification) accreditation. Definitions live in Appendix C (Ch 7).
+### Plan, perform, report, decide
 
-### Plan → Perform → Report → Decide
-
-V&V is a four-stage pipeline, not an end-of-line test. **Plan**: V&V planning is mandatory for every AMS program and embedded in the program's documents (ISPD, TEMP, PMP, SEMP, QA Plan, phase plans), each carrying the relevant subset of the **nine planning elements** (methods × 2, items to V&V, processes/standards/criteria, tracking/reports, roles, independent reviewers, tools/labs, training). **Perform**: independent reviewers (not the item's developers) run the matched methods, confirming prerequisite V&V was done and still holds. **Report**: a controlled, archived report covering Introduction, Purpose, Criteria, Approach, Participants, Results, Recommendations. **Decide**: results become *entrance criteria* for AMS decision points. A gap in any earlier stage starves the decision.
+V&V is a four-stage pipeline, not an end-of-line test. **Plan**: required for all acquisition programs, embedded in the program's own planning documents, each carrying the nine planning elements that apply (methods, items, criteria, measures, roles, independent reviewers, tools and labs, training). **Perform**: independent stakeholders and reviewers run tier-matched methods, checking prerequisite V&V first. **Report**: controlled, archived records with fixed minimum content (Introduction, Purpose, Criteria, Approach, Participants, Results, Recommendations). **Decide**: results serve as entrance criteria at the gates, aiding the Joint Resources Council, the Acquisition Executive Board, and in-service decision authorities.
 
 ### Decision-point-gated, table-driven V&V across the AMS lifecycle
 
-The guideline organizes V&V by the **AMS lifecycle** (SASP → CRD → Investment Analysis → Solution Implementation → In-Service Management), not a generic V-model — with the non-phase activity **RSA** feeding the front end. For each phase, a table (Tables 1–6) anchors on decision points and fixes four columns: the **decision point**, the **minimum work products** to V&V there, the **criteria** (validation criteria = substantive upstream content; verification criteria = templates/policy), and the **responsible stakeholder**. To plan V&V for any artifact, find its row — criteria and owner are pre-bound. Critically, the *criteria are themselves V&V'd* (yardsticks are earned, not assumed), and the tables are **policy snapshots as of April 2017** — current phase guidance supersedes them. Figure 3 shows emphasis only; the tables define the required minimum.
+The guideline organizes V&V by AMS phase (SASP, CRD, Investment Analysis, Solution Implementation, In-Service Management) plus the non-phase RSA activity. Each phase has a table (Tables 1 through 6) fixing, per decision point, the minimum work products subject to V&V, the criteria (validation = substantive upstream content; verification = templates and policy), and the responsible stakeholders. Figure 4 shows emphasis only; the tables define the required minimum, and every table is a January 2023 policy snapshot whose own footnote points to current phase guidance.
 
-### Foundations, chaining, and front-loaded safety/security
+### Method catalogs and the T&E triad
 
-Foundational documents (NAS ConOps, NAS Requirements Document, NSIP, NARP, NextGen Implementation Plan, **Enterprise Architecture**) are V&V'd against FAA Strategic Initiatives *before* downstream use. V&V is a **chain**: each verified-and-validated artifact becomes the baseline for the next, and a maturing product's earlier V&V results feed in as validation criteria for its later version — so under-validating early work products propagates the wrong product forward. **Information security** enters at the very first phase (ISS assessments validated against **FIPS-199**, verified against **ISGSA**) and **safety** (FAA SMS, Safety Risk Management documentation) joins as a gated obligation toward the In-Service Decision. The **EA** is both a source criterion and a recipient of V&V feedback — a closed loop.
+Cross the verify/validate axis with the tier axis and you get four method catalogs, from work-product verification (inspections, peer reviews, audits, checklists) to product-tier validation (user evaluations, testing, demonstrations, simulations). Product and component V&V is primarily Test and Evaluation: **Development Test (DT)** verifies (developer-run, FAA-witnessed), **Operational Test (OT)** validates (OT Test Director and team with Air Traffic, Technical Operations, second-level maintenance), and the **Independent Operational Assessment (IOA)** gives decision-makers an independent operational-readiness determination for designated products.
 
-### The product-V&V engine: DT / OT / IOA
+### Five primary management documents and the checklist machinery
 
-Product and component V&V lives mainly in **Test and Evaluation**, concentrated in Solution Implementation and In-Service Management: **Development Test (DT)** serves verification (developer-run, FAA witnessing); **Operational Test (OT)** serves validation (ANG-E OT Test Director and team); **Independent Operational Assessment (IOA)** gives an independent operational-readiness read for designated products. **PDR** verifies against the allocated baseline, **CDR** against the product baseline. The surrounding test plans/procedures/reports are themselves V&V'd first — bad test artifacts mean a decision built on bad data.
+The APB, PRD, Business Case, ISPD, and PMP are the five primary management documents, all V&V'd. Appendix B supplies checklists for four of them (PRD, APB, ISPD, PMP): each names the key elements to verify or validate, with methods and artifacts recorded per element. The Business Case runs separately under Investment Planning & Analysis, closed by the Independent Evaluation Review. The AMS Rational Model (Figure 5) is the relationship map for tracing any acquisition document to its parents and dependents.
 
 ---
 
@@ -73,88 +62,54 @@ Product and component V&V lives mainly in **Test and Evaluation**, concentrated 
 
 | # | Section | Key content |
 |---|---------|-------------|
-| [ch01](chapters/ch01-faa-ams-vv-introduction-and-vv-philosophy.md) | Introduction: Terms, Definitions, Philosophy | Verify vs. validate (paraphrased from CMMI v1.2), the work-product/component/product hierarchy, who performs V&V, V&V vs. QA, the EA as source criterion + feedback loop, V&V as a decision-and-risk instrument |
-| [ch02](chapters/ch02-faa-ams-vv-implementation-guidance.md) | Implementation Guidance: Plan/Perform/Report/Decide | The nine planning elements, document-embedded planning, independence, the validity chain, the four method catalogs, T&E (DT/OT/IOA), report minimum content, decision support |
-| [ch03](chapters/ch03-faa-ams-vv-approach-and-early-lifecycle.md) | Approach + Early Lifecycle (SASP, CRD, RSA) | The five AMS phases, RSA as a non-phase activity, the five early management documents (APB/PRD/BC/ISPD/PMP), Appendix B checklists, the IER track, Tables 1–2, front-loaded security (FIPS-199/ISGSA) |
-| [ch04](chapters/ch04-faa-ams-vv-investment-analysis.md) | Investment Analysis (Initial & Final) | Two-stage gating (which alternative? / is the baseline ready?), per-product validation vs. verification criteria, prior V&V results as forward criteria, per-product stakeholder accountability, Tables 3–4 |
-| [ch05](chapters/ch05-faa-ams-vv-solution-implementation.md) | Solution Implementation | The IBR baseline revalidation, the SI gate spine (Contract Award → ISD), DT/OT/IOA, PDR/CDR baseline staircase, safety (SMS) and security (System Security Authorization/POA&M) gates, Table 5 |
-| [ch06](chapters/ch06-faa-ams-vv-in-service-management.md) | In-Service Management | "Prove the change, re-prove the purpose," the implement/deploy gates, configuration management (FAA Form 1800-2, Orders 1800.66 & 1320.58A), ISM DT/OT/IOA, EA-change control authority, Table 6 |
-| [ch07](chapters/ch07-faa-ams-vv-acronyms-checklists-definitions.md) | Reference: Acronyms, Checklists, Definitions | Appendix A acronyms, Appendix B four document checklists (PRD/APB/ISPD/PMP), method codes + artifact definition, Appendix C method definitions, CPRs as cross-document through-line, requirement-quality bar |
+| [ch01](chapters/ch01-introduction-and-vv-philosophy.md) | Introduction and the V&V Philosophy | Scope, verify-vs-validate (paraphrased CMMI v1.2 footnote), work-product/component/product tiers, V&V vs. QA, government and contractor obligations, EA source criterion + feedback loop, V-Model, Agile acquisition and Shift-Left |
+| [ch02](chapters/ch02-implementation-guidance.md) | V&V Implementation Guidance | Nine planning elements, independence and the prerequisite check, critical technical documents, work-product vs. product method catalogs, DT/OT/IOA triad, report minimum content, decision-support practices |
+| [ch03](chapters/ch03-service-analysis-and-strategic-planning.md) | V&V in the AMS Lifecycle: SASP | Five phases plus RSA, Figure 4 vs. Tables 1-6, five primary management documents, Appendix B checklists, Business Case and IER track, AMS Rational Model, SASP focus and Table 1 (CRDRD) rows |
+| [ch04](chapters/ch04-lifecycle-after-sasp.md) | V&V After SASP: CRD, IA, SI, ISM | CRD and Table 2 (IARD), Initial and Final IA with Tables 3-4 (IID, FID), SI with Table 5 (Contract Award through ISD: IBR, DT/OT/IOA, PDR/CDR, SMS safety, security authorization, ISR checklist), ISM with Table 6 (NCPs, FAA Form 1800-2, Order 1800.66, implemented changes) |
 
 ## Topic Index
 
-- **Accreditation (method)** → ch02, ch07
-- **Acquisition Management System (AMS) lifecycle** → ch01, ch03
-- **Acquisition Program Baseline (APB)** → ch03, ch04, ch07
-- **Analysis (verification method)** → ch07
-- **Appendix B checklists (PRD/APB/ISPD/PMP)** → ch03, ch07
-- **Artifact (evidence record)** → ch07
-- **Audit (method)** → ch02, ch07
-- **Business Case + IER track** → ch03, ch04
-- **Concept & Requirements Definition (CRD)** → ch03
-- **Concept of Operations / Concept of Use** → ch03, ch05
-- **Configuration management (Form 1800-2, Order 1800.66)** → ch06
-- **Critical Design Review (CDR)** → ch05
-- **Critical Operational Issue (COI)** → ch05
-- **Critical Performance Requirement (CPR)** → ch07
-- **Critical technical documents** → ch02
-- **CMMI v1.2 (paraphrased source of definitions)** → ch01, ch03, ch07
-- **Decision points / gates (CRDRD, IARD, IID, FID, ISD)** → ch02, ch03, ch04, ch05, ch07
-- **Demonstration (method)** → ch02, ch07
-- **Development Test (DT)** → ch02, ch05, ch06
-- **Enterprise Architecture (EA)** → ch01, ch03, ch04, ch06
-- **EA Control Board** → ch03, ch04, ch06
-- **FIPS-199 (security categorization)** → ch03
-- **Independence of reviewers** → ch02
-- **Independent Evaluation Review (IER)** → ch03
-- **Independent Operational Assessment (IOA)** → ch02, ch05, ch06
-- **Information Security Guidance for System Acquisition (ISGSA)** → ch03, ch04
-- **Information System Security (ISS) assessment** → ch03, ch04
-- **In-Service Decision (ISD)** → ch05, ch07
-- **In-Service Management (ISM)** → ch06
-- **Integrated Baseline Review (IBR)** → ch05
-- **Inspection (method)** → ch02, ch07
-- **Investment Analysis (Initial & Final)** → ch04
-- **Method catalogs (four)** → ch02, ch07
-- **Modeling / Simulation / Storyboarding (methods)** → ch07
-- **NAS Change Proposal (NCP)** → ch06
-- **Nine V&V planning elements** → ch02
-- **Operational Test (OT)** → ch02, ch05, ch06
-- **Peer review (method)** → ch02, ch07
-- **Plan / Perform / Report / Decide pipeline** → ch02
-- **Plan of Actions and Milestones (POA&M)** → ch05
-- **Preliminary Design Review (PDR)** → ch05
-- **Product / component / work product (the three tiers)** → ch01, ch02
-- **Program Management Plan (PMP)** → ch03, ch04, ch07
-- **Program Requirements Document (PRD / fPRD)** → ch03, ch04, ch07
-- **Quality Assurance (QA) vs. V&V** → ch01
-- **Requirement-quality bar** → ch07
-- **Research for Systems Analysis (RSA)** → ch03
-- **Safety Management System (SMS) / safety V&V** → ch05
-- **Screening Information Request (SIR)** → ch04
-- **Service Analysis & Strategic Planning (SASP)** → ch03
-- **Solution Implementation (SI)** → ch05
-- **System Security Authorization** → ch05
-- **Tables 1–6 (phase V&V specifications)** → ch03, ch04, ch05, ch06
-- **Test and Evaluation Master Plan (TEMP)** → ch02, ch04, ch05
-- **Testing (method)** → ch02, ch07
-- **Validation (right thing built)** → ch01, ch02
-- **Validity chain / prerequisite V&V** → ch02, ch04
-- **Verification (built right)** → ch01, ch02
-- **V&V report minimum content** → ch02
-- **Walk-through / dry run (method)** → ch07
+- **Verification (built right) vs. Validation (right thing)** → `ch01`, `ch02`
+- **Three tiers: work product / product component / product** → `ch01`
+- **V&V vs. QA (process conformance vs. requirements and risk)** → `ch01`
+- **CMMI for Development v1.2 (SEI, August 2006; named and paraphrased)** → `ch01`
+- **Enterprise Architecture (EA) as V&V source criterion and feedback loop** → `ch01`, `ch03`, `ch04`
+- **V-Model implementation (left side planning, right side T&E, loopback criteria)** → `ch01`
+- **Agile acquisition / Shift-Left principles in V&V** → `ch01`
+- **Nine V&V planning elements** → `ch02`
+- **Independent stakeholders and reviewers (independence rule)** → `ch02`
+- **Critical technical documents verified before downstream use** → `ch02`
+- **Method catalogs (four: work-product vs. product-tier x verify vs. validate)** → `ch02`
+- **Test and Evaluation: Development Test (DT), Operational Test (OT), Independent Operational Assessment (IOA)** → `ch02`, `ch04`
+- **V&V report minimum content** → `ch02`
+- **V&V decision support and entrance criteria** → `ch02`
+- **AMS lifecycle phases (SASP, CRD, IA, SI, ISM) and RSA** → `ch03`, `ch04`
+- **Service Analysis & Strategic Planning (SASP) and the CRDRD (Table 1)** → `ch03`
+- **Five primary management documents (APB, PRD, Business Case, ISPD, PMP)** → `ch03`, `ch04`
+- **Appendix B checklists (PRD, APB, ISPD, PMP) and the IER track for the Business Case** → `ch03`
+- **AMS Rational Model (ARM)** → `ch03`
+- **Concept and Requirements Definition (CRD) and the IARD (Table 2)** → `ch04`
+- **Investment Analysis: Initial (IID, Table 3) and Final (FID, Table 4)** → `ch04`
+- **Integrated Baseline Review (IBR) and Solution Implementation gates (Table 5)** → `ch04`
+- **Preliminary Design Review (PDR) and Critical Design Review (CDR) baselines** → `ch04`
+- **Safety V&V (Safety Risk Management document, FAA SMS) and security authorization (POA&M)** → `ch04`
+- **In-Service Review (ISR) checklist** → `ch03`, `ch04`
+- **In-Service Management changes: NCPs, FAA Form 1800-2, Order 1800.66, ISM DT/OT (Table 6)** → `ch04`
+- **Tables 1 through 6 (phase V&V specifications, January 2023 snapshots)** → `ch03`, `ch04`
+- **FIPS-199 and ISGSA (front-loaded information security)** → `ch03`, `ch04`
 
 ## Supporting Files
 
-- **`glossary.md`** — alphabetical terms and acronyms (ACAT through V&V) with chapter refs.
-- **`patterns.md`** — 11 reusable patterns (When / How / Trade-offs): split verify/validate, embed planning, gate on decision points, find-your-row, V&V the foundations & criteria, chain forward, match method to tier, demand method+artifact, two governance tracks, front-load safety/security, prove-the-change-and-re-prove-the-purpose.
-- **`cheatsheet.md`** — decision rules, the four-catalog method matrix, phase/gate tables, the nine planning elements, the four checklist documents, requirement-quality bar, method codes & tells, the DT/OT/IOA triad, and anti-pattern tells & smells.
+- **`glossary.md`**: alphabetical terms and acronyms (ACAT through V&V) with chapter references; Appendix C method definitions paraphrased; CMMI-traced terms marked.
+- **`cheatsheet.md`**: decision rules, the plan/perform/report/decide pipeline, phase and gate tables, nine planning elements, the four checklist documents, the T&E triad, and snapshot discipline.
+- **`patterns.md`**: reusable moves with When/How/Trade-offs: split verify/validate, embed planning, gate on decision points, find-your-row, verify foundations and criteria, chain V&V forward, match method tier, structural independence, shift-left, front-load security and safety, prove the change and re-prove the purpose.
 
 ## Scope & Limits
 
-- **Source version**: the FAA AMS Lifecycle V&V Guidelines (verification and validation), **Version 3.0, dated April 2017**. A living document; the FAA states it is updated as better practices emerge, so check FAST for a current version.
-- **This is FAA acquisition-V&V doctrine, not general SE.** It assumes the surrounding **AMS lifecycle** and the FAA Acquisition Management Policy as scaffolding — it does not define them (see the FAA SEM pack). It is *not* a general systems-engineering process model, a requirements-engineering manual, or a test-design textbook.
-- **Definitions are paraphrased, not canonical.** The core verification/validation definitions trace to **CMMI for Development v1.2 (SEI)** — a copyrighted model the guideline cites; this pack paraphrases and never quotes it. For the authoritative process-area treatment, go to CMMI directly.
-- **Tables 1–6 are policy snapshots as of April 2017.** The source repeatedly cautions that detailed, *current* phase guidelines and templates exist and take precedence over the published tables. Treat the table contents (criteria, stakeholders, owning offices, form/order numbers) as illustrative of the model, not as live authority.
-- **Thin on**: detailed test-method design and statistics; specific tools, labs, and simulators (named only as planning elements); cost and schedule estimating; and anything outside FAA acquisition governance. Office names and org structures (e.g., ANG-E, ATO) reflect the 2017 FAA organization and may have changed.
-- **No source link published** (per the repo's no-source-link policy); the source is identified textually by title, publisher (FAA), and version.
+- **Source version**: FAA AMS Lifecycle Verification and Validation Guidelines, **Version 4.0 (January 2023)**, vetted **2026-10-28** (2,700,181 bytes, 63 pages). This pack reflects Version 4.0 only.
+- **Single-source**: everything here is synthesized from the January 2023 guidelines; no other FAA order, policy, or handbook is incorporated.
+- **CMMI**: the verify/validate definitions are consistent with CMMI for Development v1.2 (SEI, August 2006), named on the guideline's page 3 footnote. This pack paraphrases the concepts and reproduces no verbatim CMMI text; cite SEI for CMMI wording.
+- **Phase tables are January 2023 snapshots.** Tables 1 through 6 carry the guideline's own footnote: detailed phase guidelines and templates exist and should be reviewed for current guidance. Treat table content as illustrative, not live authority.
+- **Surrounding AMS lifecycle**: phase mechanics, gate process, and program office roles live in the `faa-sem` pack; this pack covers V&V doctrine only.
+- **Not official FAA guidance** and not affiliated with the FAA; reconstructed reference notes, and the FAA does not endorse this pack or its authors. The PDF prints no supersession sentence; none is quoted here.
+- **No download link is published** for the source, per the repository's no-source-link policy; the source is identified textually by title, publisher, and version.

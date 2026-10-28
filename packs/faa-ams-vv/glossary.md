@@ -1,141 +1,147 @@
 # FAA AMS Lifecycle V&V Guidelines — Glossary
 
-Key terms from the FAA AMS Lifecycle V&V Guidelines (verification and validation),
-Version 3.0, dated April 2017 — alphabetical, with chapter references. Definitions are paraphrased synthesis,
-not verbatim source text. The verification-method definitions (Appendix C) originate in the
-FAA guideline; the core verification/validation concepts trace to CMMI for Development v1.2
-(SEI), which the guideline cites and which this pack paraphrases.
+Key terms from the FAA AMS Lifecycle Verification and Validation Guidelines, Version 4.0 (January 2023), alphabetical, with chapter references. Definitions are synthesized and paraphrased, never verbatim source text. The core verification and validation concepts trace to CMMI for Development, Version 1.2 (Carnegie Mellon Software Engineering Institute, August 2006); the guideline names that model in a page 3 footnote, and this pack paraphrases it. Method definitions from Appendix C are paraphrased from the guideline's own glossary.
 
-**Accreditation** — the formal sign-off certifying a given test capability as acceptable for one specific use; one of the product/component verification methods. (Ch 2, Ch 7)
+**Accreditation** — formal certification that a given test capability is acceptable for a specific application; appears only in the product/component verification method set. (`ch02`, `ch04`)
 
-**Acquisition Management System (AMS)** — the FAA's policy framework defining the acquisition lifecycle, decision points, and stakeholder roles that all V&V in this pack wraps around. (Ch 1, Ch 3)
+**Acquisition Categories (ACAT)** — the FAA tiers of acquisition program; category drives which work products are required and therefore which get V&V'd. (`ch02`)
 
-**Acquisition Program Baseline (APB)** — the document that fixes the performance, cost, and schedule baselines for an investment program segment; produced at Final Investment Analysis; one of the four Appendix B checklist documents. (Ch 3, Ch 4, Ch 7)
+**Acquisition Management System (AMS)** — the FAA's policy framework of lifecycle phases, decision points, and stakeholder roles that this entire guideline wraps around. (`ch01`, `ch03`)
 
-**Analysis (verification method)** — comparing a hardware/software design against known scientific and technical principles, data, or established practice to confirm it will meet the requirement. (Ch 7)
+**Acquisition Program Baseline (APB)** — establishes the performance, cost, and schedule baselines for an investment program segment; one of the five primary management documents, one of the four Appendix B checklist documents, and a V&V target at Final Investment Analysis. (`ch03`, `ch04`)
 
-**Artifact** — an objective, authenticated record evidencing a V&V action or its outcome (for example: a report, a traceability matrix, a validation table, meeting minutes, survey results, an email, or the completed checklist itself); the second mandatory column on every Appendix B checklist row. (Ch 7)
+**Air Traffic Organization (ATO)** — FAA organization whose Office of Safety and Technical Training joins the stakeholder list for safety and security V&V at the In-Service Decision and ISM changes. (`ch04`)
 
-**Audit** — an independent examination of a work product (or of system records and activities) to assess compliance with specifications, standards, or policy and to test the adequacy of data-security/integrity procedures. (Ch 2, Ch 7)
+**Analysis (method)** — comparing a hardware or software design against known scientific and technical principles, technical data, or established practice to confirm the design will meet specified functional or performance requirements. (`ch02`, `ch04`)
 
-**Business Case (BC)** — the document capturing business-case-analysis results that supplies the quantitative basis for an investment decision; V&V'd separately by Investment Planning & Analysis and closed out by the IER (not the Appendix B checklists). (Ch 3, Ch 4)
+**AMS Rational Model (ARM)** — static visualization of AMS work product relationships (the guideline also calls it the AMS Relational Model); a contextual relationship diagram, not a process flow, letting a user trace any acquisition document back to parent documents or forward to dependents. Interactive version lives on FAST. (`ch03`)
 
-**Checklist (method)** — a structured list of items to be verified, checked, or inspected; both a verification method and the Appendix B instrument. (Ch 7)
+**Audit (method)** — independent examination of a work product, or of system records and activities, against specifications, standards, or policy; also used to test the adequacy of data security and data integrity procedures. (`ch02`, `ch04`)
 
-**Concept and Requirements Definition (CRD)** — the AMS phase that turns priority operational needs (resident in the EA) into *preliminary* requirements and a solution ConOps, quantifies the shortfall, and identifies promising alternatives. (Ch 3)
+**Business Case (BC)** — summarizes the business case analysis and supplies the analytical and quantitative basis for investment decisions; fifth primary management document, V&V'd by Investment Planning & Analysis and closed by the IER, deliberately outside the Appendix B checklist set. (`ch03`, `ch04`)
 
-**Concept and Requirements Definition Readiness Decision (CRDRD)** — the gate at the end of SASP that admits a program into CRD. (Ch 3, Ch 7)
+**Checklist (method)** — a list of items to be verified, checked, or inspected; also the Appendix B instrument for the PRD, APB, ISPD, and PMP. (`ch02`, `ch03`, `ch04`)
 
-**Concept of Operations (ConOps) / Concept of Use** — the operational description of how a capability will be used; a primary validation criterion across phases. (Ch 3, Ch 5)
+**Concept and Requirements Definition (CRD)** — AMS phase translating priority needs in the EA into preliminary requirements and a solution ConOps, quantifying the shortfall, and identifying candidate alternatives (one must be the EA's). (`ch03`, `ch04`)
 
-**Contractor Acceptance and Inspection (CAI)** — a Solution Implementation acceptance gate where DT/OT/IOA results are V&V'd. (Ch 5, Ch 7)
+**Concept and Requirements Definition Readiness Decision (CRDRD)** — the SASP exit gate; Table 1's decision point. (`ch03`)
 
-**Critical Design Review (CDR)** — a technical milestone that doubles as a structured V&V event against the *product* baseline. (Ch 5)
+**Contractor Acceptance and Inspection (CAI)** — Solution Implementation acceptance point where the system/service is V&V'd (major activities: DT, OT, IOA) ahead of production and in-service decisions. (`ch04`)
 
-**Critical Operational Issue (COI)** — an operational question carried in the Final PRD that the system must answer; a validation reference at acceptance. (Ch 5)
+**Critical Design Review (CDR)** — technical milestone at which structured V&V of the product baseline is a named opportunity. (`ch04`)
 
-**Critical Performance Requirement (CPR)** — a key, value-bearing requirement that is a deliberate consistency through-line across the PRD, APB, and ISPD checklists. (Ch 7)
+**Critical Operational Issue (COI)** — operational issue carried in the final PRD; part of the validation criteria for the fielded system at SI acceptance and ISM changes. (`ch04`)
 
-**Critical Technical Documents** — foundational documents (NAS ConOps, NAS Requirements Document, NAS Segment Implementation Plan, National Aviation Research Plan, NextGen Implementation Plan, Enterprise Architecture) that must be V&V'd before downstream use. (Ch 2)
+**Critical Performance Requirement (CPR)** — value-bearing requirement identified in the PRD and carried into the APB; part of validation criteria at SI and ISM. (`ch04`)
 
-**Demonstration** — qualitative (not quantitative) confirmation of a requirement during a dynamic test; software functional requirements are typically validated this way because behavior is observed through a secondary medium. (Ch 2, Ch 7)
+**CMMI for Development, Version 1.2** — Capability Maturity Model Integration for Development (Carnegie Mellon Software Engineering Institute, August 2006), named on the guideline's page 3 footnote as the model its V&V definitions are consistent with; also cited as the basis for GAO quality audits. Third-party copyrighted: this pack paraphrases its concepts and reproduces no verbatim CMMI text (paraphrased). (`ch01`)
 
-**Development Test (DT)** — developer-run testing (FAA witnessing) that serves *verification* of products and components. (Ch 2, Ch 5, Ch 6)
+**Demonstration (method)** — qualitative, rather than quantitative, confirmation of a requirement during a dynamic test; functional requirements are typically demonstrated because the behavior must be observed through some secondary medium. (`ch02`, `ch04`)
 
-**Enterprise Architecture (EA)** — the operational/technical framework covering every FAA capital asset (as-is/to-be states plus transition roadmaps); both a major V&V *source criterion* and a recipient of V&V feedback; itself V&V'd by the EA Control Board. (Ch 1, Ch 3, Ch 4, Ch 6)
+**Development Test (DT)** — developer-conducted, FAA-witnessed testing serving verification objectives: specified technical and performance requirements met, and for final products, full integration, stability, and no adverse effect on the rest of the NAS. (`ch02`, `ch04`)
 
-**Enterprise Architecture Control Board (NAS and Mission Support)** — the governance body accountable for verifying/validating EA products and amendments (with ANG Engineering Services). (Ch 3, Ch 4, Ch 6)
+**Discussions with users (method)** — structured conversations with users used to validate work products and products against intended use. (`ch02`, `ch04`)
 
-**FIPS-199** — the federal standard whose Security Categorization Table is the *validation* criterion for ISS (Information System Security) assessments from SASP onward. (Ch 3)
+**Enterprise Architecture (EA)** — defines the operational and technical framework for all FAA capital assets: current and target architectures plus the transition strategy; a major V&V source criterion, itself verified and validated, and updated from V&V results. (`ch01`, `ch03`, `ch04`)
 
-**Final Investment Analysis** — the IA stage that develops detailed plans and final requirements for the selected option and produces the program baseline; V&V validates the baseline's soundness. (Ch 4)
+**FAA Acquisition System Toolset (FAST)** — the FAA acquisition system where the latest guideline version and the interactive ARM are published; this pack publishes no download link. (`ch01`, `ch03`)
 
-**Functional Presentation** — a presentation showing the hierarchical arrangement of functions and interfaces as a complete behavioral/performance view; a validation method. (Ch 7)
+**Final Investment Analysis** — IA stage developing detailed plans and final requirements for the selected option; produces the program baseline work products (final PRD, final BC, final ISPD, APB, PMP, initial TEMP, tailored ISR checklist, SIR). (`ch04`)
 
-**Independent Evaluation Review (IER)** — the artifact (owned by Investment Planning & Analysis) that satisfies the documentation/reporting requirements for Business Case V&V. (Ch 3)
+**FIPS-199** — federal standard whose Security Categorization Table is the validation criterion for ISS security assessments from SASP through CRD. (`ch03`, `ch04`)
 
-**Independent Operational Assessment (IOA)** — an independent read on operational readiness for designated products, led by a PM from the Independent Safety Assessment Team; serves validation at acceptance. (Ch 2, Ch 5, Ch 6)
+**Functional presentation (method)** — a presentation illustrating the hierarchical arrangement of functions and interfaces, giving a complete performance and behavioral view of the system. (`ch02`, `ch04`)
 
-**Independent reviewer / stakeholder** — a performer not directly involved in developing the item under V&V; independence is structural and definitional, not advisory. (Ch 2)
+**Independent Evaluation Review (IER)** — the Investment Planning and Analysis review that satisfies the documentation and reporting requirements for the Business Case's V&V. (`ch03`, `ch04`)
 
-**Information Security Guidance for System Acquisition (ISGSA)** — the *verification* reference for ISS assessments across phases. (Ch 3, Ch 4)
+**Independent Operational Assessment (IOA)** — for designated products, an independent determination of operational readiness led by a program manager from the Independent Safety Assessment Team, supporting deployment decisions such as the ISD. (`ch02`, `ch04`)
 
-**Initial Investment Analysis** — the IA stage that evaluates alternatives and recommends realistic options to the IDA; V&V validates that the right alternative is selected. (Ch 4)
+**Independent stakeholder / reviewer** — the V&V performer who is not directly involved in developing the work product, component, or product being reviewed; identified per phase in Tables 1 through 6, and named as a required planning element. (`ch02`, `ch03`, `ch04`)
 
-**Information System Security (ISS) assessment** — the security artifact (Risk Factors / Preliminary / Initial / Final) V&V'd against FIPS-199 (validation) and ISGSA (verification) from the first phase onward. (Ch 3, Ch 4)
+**Initial Investment Analysis** — IA stage evaluating alternatives and handing the IDA realistic options; outputs the initial PRD, initial ISPD, initial BC, preliminary TEMP, and the plan for Final IA. (`ch04`)
 
-**In-Service Decision (ISD)** — the Solution Implementation gate that transitions a fielded solution into sustainment. (Ch 5, Ch 7)
+**Information Security Guidance for System Acquisition (ISGSA)** — the verification criterion for ISS security assessments from SASP onward. (`ch03`, `ch04`)
 
-**In-Service Management (ISM)** — the lifecycle phase covering operation, maintenance, security, and sustainment of fielded assets; V&V shifts to "prove the change, re-prove the purpose." (Ch 6)
+**Information System Security (ISS) assessment** — the family of security artifacts (Risk Factors, Preliminary, Initial) that are validated against FIPS-199 and verified against ISGSA, entering at the very first phase. (`ch03`, `ch04`)
 
-**In-Service Review (ISR) Checklist** — the instrument whose completed entries (issues, action plans, remarks) are validated against the checklist questions at the close of Solution Implementation. (Ch 4, Ch 5)
+**In-Service Decision (ISD)** — the Solution Implementation gate into sustainment; supported by completed ISR checklist, security authorization, and safety V&V. (`ch04`)
 
-**Inspection** — a verification method using visual observation, mechanical measurement, or technical examination of supporting documentation. (Ch 2, Ch 7)
+**In-Service Management (ISM)** — AMS phase operating, maintaining, securing, and sustaining fielded capability, and governing every change to it. (`ch04`)
 
-**Integrated Baseline Review (IBR)** — the process that revalidates post-award plans and baselines so they can serve as the program's management construct. (Ch 5)
+**In-Service Review (ISR) checklist** — Final IA produces a tailored ISR checklist; the completed checklist is itself assessed at the ISD, issues tracked question by question. (`ch03`, `ch04`)
 
-**Investment Analysis (IA)** — the AMS phase deciding *what* to build and committing resources; runs in Initial and Final stages; tailorable but governed by the Acquisition Executive / IDA. (Ch 4)
+**Implementation Strategy and Planning Document (ISPD)** — defines overall implementation strategy and planning for the investment; primary management document, Appendix B checklist document, produced in initial and final versions, and updated again in ISM. (`ch03`, `ch04`)
 
-**Investment Analysis Readiness Decision (IARD)** — the gate at the end of CRD that admits a program into Investment Analysis. (Ch 3, Ch 7)
+**Inspection (method)** — verification by visual observation, mechanical measurement, or technical examination of engineering-support documentation, confirming compliance with specification requirements. (`ch02`, `ch04`)
 
-**Investment Analysis Team** — the constant responsible party for IA V&V, defined to include the specialists named in AMS Policy §2.5.1. (Ch 4)
+**Integrated Baseline Review (IBR)** — the FAA process around contract award by which SI revalidates plans and baselines so they can serve as the management construct for implementation. (`ch04`)
 
-**Investment Decision Authority (IDA)** — the authority that approves IA tailoring and to whom alternatives are recommended. (Ch 4)
+**Investment Analysis (IA)** — AMS phase deciding what to build and committing resources; flexible and tailorable, with tailoring approved by the Acquisition Executive or IDA and recorded in the plan and record of decision. (`ch03`, `ch04`)
 
-**Modeling** — constructing programs that represent the effects of a postulated environment to investigate a problem; a validation/verification method. (Ch 7)
+**Investment Analysis Readiness Decision (IARD)** — the CRD exit gate into Investment Analysis; Table 2's decision point. (`ch04`)
 
-**NAS Change Proposal (NCP)** — the change-control instrument (Case File, FAA Form 1800-2) for modifications to a fielded NAS baseline during ISM. (Ch 6)
+**Investment Analysis Team** — the recurring IA stakeholder, defined by AMS Policy Section 2.5.1 as including all specialists; joined per table row by ANG Engineering Services, the Office of Investment Planning and Analysis, the Office of Budget and Programs, and the ANG-E Test Standards Board. (`ch04`)
 
-**National Airspace System (NAS)** — the FAA's operational system-of-systems that AMS investments deliver into and sustain. (Ch 2, Ch 3, Ch 6)
+**Investment Decision Authority (IDA)** — the authority who receives IA options and approves IA tailoring. (`ch04`)
 
-**Operational Test (OT)** — testing run by the ANG-E OT Test Director and team (with Air Traffic, Tech Ops, and second-level maintenance) that serves *validation*. (Ch 2, Ch 5, Ch 6)
+**Modeling (method)** — constructing programs that model the effects of a postulated environment, to investigate a problem's dimensions or the effects of algorithmic processes. (`ch02`)
 
-**Peer review** — a structured, methodical examination of a completed draft by unbiased SMEs independent of the work product's development and approval. (Ch 2, Ch 7)
+**NAS Change Proposal (NCP)** — the change-control instrument for modifications to the fielded NAS baseline; verified against the NAS Integrated Systems Engineering Framework, FAA Form 1800-2 (Case File / NCP form), and FAA Order 1800.66 configuration management policy. (`ch04`)
 
-**Plan of Actions and Milestones (POA&M)** — the instrument validating System Security Authorization at the security gate of Solution Implementation. (Ch 5)
+**NARP** — the National Aviation Research Plan (the body text also renders it "National Air Research Plan"); validation criterion for shortfall analyses where applicable. (`ch02`, `ch03`)
 
-**Preliminary Design Review (PDR)** — a technical milestone that doubles as a structured V&V event against the *allocated* baseline. (Ch 5)
+**National Airspace System (NAS)** — the FAA's operational system-of-systems that AMS investments deliver into and sustain. (`ch01`, `ch02`, `ch04`)
 
-**Product** — a deliverable end item (system, service, facility, or operational change) destined for a customer/end user; the top of the V&V hierarchy. (Ch 1, Ch 2)
+**NAS Segment Implementation Plan (NSIP)** — segment-level implementation plan; a critical technical document and recurring validation criterion. (`ch02`, `ch03`, `ch04`)
 
-**Product component** — a lower-level part/element/module integrated upward to form the product. (Ch 1, Ch 2)
+**Operational Test (OT)** — validation-side testing run by the OT Test Director and OT test team with Air Traffic, Technical Operations, and second-level maintenance personnel; other FAA organizations and external entities may participate as required. (`ch02`, `ch04`)
 
-**Program Management Plan (PMP)** — the document describing how the service team will run the program to execute the ISPD strategy; one of the four Appendix B checklist documents. (Ch 3, Ch 4, Ch 7)
+**Peer review (method)** — structured, methodical examination of a completed draft for quality improvement, conducted by unbiased subject matter experts independent of the item's development and approval (paraphrased from Appendix C). (`ch02`, `ch04`)
 
-**Program Requirements Document (PRD)** — the document setting the operational framework and performance requirements; the spine nearly every other product validates against; one of the four Appendix B checklist documents (initial → final/fPRD). (Ch 3, Ch 4, Ch 7)
+**Preliminary Design Review (PDR)** — technical milestone at which structured V&V of the allocated baseline is a named opportunity. (`ch04`)
 
-**Quality Assurance (QA)** — a complementary but separate process: QA confirms the established *processes* were followed; V&V confirms requirements are met and the mission is served. (Ch 1)
+**Plan of Actions and Milestones (POA&M)** — the instrument via which System Security Authorization is validated at the ISD. (`ch04`)
 
-**Research for Systems Analysis (RSA)** — a non-phase activity that matures/validates concepts and technologies for the NAS and shares the same independent reviewers as SASP/CRD/IA/early SI. (Ch 3)
+**Program Management Plan (PMP)** — defines how the service team will manage the investment program to execute the ISPD's strategy; primary management document and Appendix B checklist document. (`ch03`, `ch04`)
 
-**Safety Management System (SMS)** — the FAA regime used to verify/validate that safety obligations (via the Safety Risk Management Document / System Safety Assessment Report) are met at acceptance and the In-Service Decision. (Ch 5)
+**Program Requirements Document (PRD)** — defines the operational framework and performance requirements the program must achieve; primary management document, Appendix B checklist document, produced in preliminary, initial, and final (FPRD) versions, and the recurring validation spine for later artifacts. (`ch03`, `ch04`)
 
-**Screening Information Request (SIR)** — the contract-facing solicitation artifact V&V'd (with the Contracting Officer) at Final Investment Analysis. (Ch 4)
+**Quality Assurance (QA)** — the complementary process with a different purpose: QA confirms established processes are followed; V&V confirms requirements are met, user/mission needs are served, and risk is managed (paraphrased, CMMI-traced footnote content). (`ch01`)
 
-**Service Analysis & Strategic Planning (SASP)** — the AMS phase that decides what capability the agency needs, captured as the EA's as-is/to-be states and roadmaps. (Ch 3)
+**Research for Service Analysis (RSA)** — non-phase activity that precedes or runs during the early phases, maturing and validating new concepts and technologies for NAS investment; shares its V&V reviewers with SASP, CRD, IA, and early SI. (`ch03`)
 
-**Simulation** — a model that behaves like the system when given controlled inputs; a product/component method. (Ch 7)
+**Safety Management System (SMS)** — the FAA safety regime; the FAA SMS is the verification criterion for safety documentation (Safety Risk Management document or System Safety Assessment Report) at Solution Implementation. (`ch04`)
 
-**Solution Implementation (SI)** — the AMS phase that builds, buys, tests, and fields the chosen solution to satisfy user requirements and realize Business Case benefits. (Ch 5)
+**Screening Information Request (SIR)** — the contract-facing solicitation artifact produced at Final IA (Statement of Work, Contract Data Requirements List / Data Item Descriptions, System Specification), V&V'd with the Contracting Officer. (`ch04`)
 
-**Storyboarding** — a sequenced graphic arrangement used to visualize a concept; a work-product validation method. (Ch 7)
+**Service Analysis & Strategic Planning (SASP)** — AMS phase determining what capabilities must be in place now and in the future, captured as EA as-is/to-be states and roadmaps. (`ch03`)
 
-**Subject Matter Expert (SME)** — the qualified, independent expert who conducts peer reviews and other V&V. (Ch 2, Ch 7)
+**Simulation (method)** — a model that behaves or operates like a given system under controlled inputs. (`ch02`, `ch04`)
 
-**System Security Authorization** — the security artifact validated via POA&M and verified against the Security Authorization Handbook and AMS Policy. (Ch 5)
+**Solution Implementation (SI)** — AMS phase building, buying, testing, and fielding the selected solution, from Contract Award to the In-Service Decision and deployment at all sites. (`ch04`)
 
-**Test and Evaluation (T&E)** — the discipline (DT/OT/IOA) where product/component V&V mainly lives, concentrated in Solution Implementation and In-Service Management. (Ch 2, Ch 5)
+**Storyboarding (method)** — a graphic arrangement of illustrations or images displayed in sequence to visualize a story or concept; work-product validation method. (`ch02`)
 
-**Test and Evaluation Master Plan (TEMP)** — the governing T&E plan (preliminary → initial → final), V&V'd against the Test and Evaluation Handbook and TEMP template. (Ch 2, Ch 4, Ch 5)
+**Subject Matter Expert (SME)** — the practitioners the V&V Practice Toolkit offers advice for, and the unbiased performers of peer reviews. (`ch01`, `ch02`)
 
-**Testing** — operating a system/component under specified conditions, recording results, and evaluating an aspect of the system. (Ch 2, Ch 7)
+**System Security Authorization** — the security artifact validated via the POA&M and verified against the Security Authorization Handbook and AMS policy at the In-Service Decision. (`ch04`)
 
-**User Survey** — gathering information from individuals via questionnaire, telephone, mail, in person, or web; a validation method. (Ch 7)
+**Test and Evaluation (T&E)** — the discipline through which product and component V&V is primarily accomplished (DT, OT, IOA), concentrated in Solution Implementation and In-Service Management. (`ch02`, `ch04`)
 
-**Validation** — confirming the right thing was built: that a product/component (or selected work product) will deliver its intended purpose and meet user needs in its operating environment. (Ch 1, Ch 2)
+**Test and Evaluation Master Plan (TEMP)** — the governing T&E plan, produced in preliminary, initial, and final versions, each V&V'd against the Test and Evaluation Handbook, the TEMP template, and AMS policy, with the ANG-E Test Standards Board on the stakeholder list. (`ch02`, `ch04`)
 
-**Verification** — confirming the thing was built right: that selected work products meet the requirements specified for them; inherently incremental across the lifecycle. (Ch 1, Ch 2)
+**Testing (method)** — operating a system or component under specified conditions, observing or recording the results, and evaluating some aspect of it. (`ch02`, `ch04`)
 
-**Walk-through / dry run** — a rehearsal of a process or procedure before the real execution to mitigate a possible failure; a work-product validation method. (Ch 7)
+**User survey / user evaluation questionnaire (method)** — gathering information from individuals (printed questionnaire, telephone, mail, in person, or web) to validate against user needs. (`ch02`, `ch04`)
 
-**Work product** — anything that represents, defines, or directs the final product (designs, specifications, plans, models, prototypes, contracts); the base of the V&V hierarchy. (Ch 1, Ch 2)
+**Validation** — confirming the right thing is built: a product or end product component will fulfill its intended purpose and user needs in its intended environment; applied to the product, its components, and selected work products, chosen as the best predictors of success (paraphrased; CMMI-traced, `ch01`). (`ch01`, `ch02`, `ch03`, `ch04`)
+
+**Verification** — confirming the thing is built right: selected work products meet their specified requirements, incrementally from initial requirements through every change to the completed product (paraphrased; CMMI-traced, `ch01`). (`ch01`, `ch02`, `ch03`, `ch04`)
+
+**V-Model** — the guideline's Figure 3: left side vets strategic-planning work products, right side tests and evaluates the integrated result, loopback arrows V&V against criteria in previous work products; captioned as shift-left V&V with evolving NAS capabilities. (`ch01`)
+
+**Walk-through / dry run (method)** — rehearsing a process or procedure before the real performance, deliberately mitigating the effects of a possible failure; work-product validation method. (`ch02`)
+
+**Work product** — anything that represents, defines, or directs the final product: documents, processes, procedures, designs, descriptions, specifications, simulations, models, prototypes, contracts. (`ch01`, `ch02`)
+
+**Verification and Validation (V&V)** — the disciplined, lifecycle-wide assessment of products, product components, and work products so a quality product is built and it satisfies operational requirements and service needs. (`ch01` through `ch04`)
