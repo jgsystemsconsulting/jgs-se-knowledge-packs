@@ -5,10 +5,13 @@ SPDX-License-Identifier: MIT
 
 # Source Freshness
 
-The catalogue's 71 live packs were each built from one upstream document. Those
-documents get revised, and a pack does not notice on its own. This watch checks,
-monthly, whether the revision a pack was built from is still the revision the
-publisher offers.
+The catalogue's 74 live content packs were each built from one upstream document.
+A content pack may pin more than one PDF when the publisher ships the document
+in parts (see the build rules in [PACK-SPEC.md](PACK-SPEC.md)). The watchlist
+stays one entry per live catalog pack, not one entry per PDF. Those documents
+get revised, and a pack does not notice on its own. This watch checks, monthly,
+whether the revision a pack was built from is still the revision the publisher
+offers.
 
 ## What it checks
 

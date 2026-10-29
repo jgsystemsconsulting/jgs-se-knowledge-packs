@@ -38,9 +38,9 @@ maintainer decision, made from that report.
 python tooling/build_pack.py --slug <slug> --title "..." --publisher "..." \
     --version "..." --url "..." --license "..." --tier <1|2|3> --commercial-use <true|false>
 
-# 2. Generate content per docs/PACK-SPEC.md:
-#    - extract text (jgs-reference-skill), map chapter offsets, generate reference-depth
-#      chapters + glossary/patterns/cheatsheet, then the SKILL.md index.
+# 2. Follow the build rules in docs/PACK-SPEC.md (multi-PDF pin, contents list
+#    wins, verify what you wrote), then write reference-depth chapters plus
+#    glossary/patterns/cheatsheet and the SKILL.md index.
 # 3. Fill the TODOs in packs/<slug>/PACK.yaml and packs/<slug>/LICENSE.
 # 4. Register a live catalog pack (any kind other than signpost or
 #    orchestrator). Hand-edit each surface. No writer exists for

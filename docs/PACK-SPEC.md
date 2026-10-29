@@ -51,6 +51,16 @@ Introduced`, `Key Concepts`, `Mental Models`, `Anti-patterns` (if any), `Key Tak
 source does not contain.** Synthesize compactly; never copy long verbatim passages
 (both a quality rule and a licence-safety rule).
 
+## Build rules
+
+Established by the 2026-10-28 cuts `docs/superpowers/specs/2026-10-28-rebuild-nasa-risk-handbook-v2.md`, `docs/superpowers/specs/2026-10-28-rebuild-faa-ams-vv-v4.md`, and `docs/superpowers/specs/2026-10-28-uk-defence-jsp-912-pack.md`.
+
+**Multi-PDF / part pin.** A source that ships as more than one PDF or part is still one pack when the publisher treats the parts as one document. Pin every part. Record each part's identifier, byte size, and page count in `PACK.yaml` `notes`. `source_version` names every part. Do not drop a part to shrink the pack. Do not split parts into two slugs. Chapter titles name the part they draw from. Worked examples: `packs/nasa-risk` (handbook plus examples volume), `packs/jsp-912` (Part 1 Directive and Part 2 Guidance). A single-PDF source stays one pack; do not invent a second pack for appendices. Worked example: `packs/faa-ams-vv`.
+
+**Contents list wins.** Freeze chapter titles from the source's own contents list (every pinned PDF). A provisional map, a prior pack's grouping, or a TOC that disagrees with the contents list loses. If a heading is absent from every pinned contents list, do not write that chapter. Definitions, acronym lists, and appendices do not become chapters unless the contents list gives them body that the pack is reconstructing. Worked examples: `packs/faa-ams-vv` (contents list, not the 3.0 grouping), `packs/nasa-risk`, `packs/jsp-912`.
+
+**Verify what you wrote.** After chapter and support prose is written, read it back against the extract before registration. Repair function words, articles, and section marks that a transport or generation pass stripped. `validate_pack.py`, `check_release.py`, and CI stay green on stripped prose. The read-back is the check. Worked examples of the miss: the faa-ams-vv V4 rebuild (repaired before close) and `packs/jsp-912/LICENSE` (advisory a-29, still awkward, terms intact).
+
 ## `PACK.yaml` schema
 
 ```yaml
@@ -64,7 +74,7 @@ commercial_use: false             # false if NC; true if PD or non-NC
 share_alike: true                 # true if SA: pack content inherits the licence
 attribution_required: true
 build:
-  method: "jgs-reference-skill extraction + offset-mapped parallel chapter generation"
+  method: "synthesized reference notes from the pinned source, chapter freeze from the contents list"
   source_pages: 1465
   chapters: 41
   built_on: "2026-06-19"
@@ -106,7 +116,7 @@ Member kinds (`kind:` in SKILL.md frontmatter):
 
 | Kind | Members | Requires | Skips |
 |---|---|---|---|
-| content pack (default) | the 71 catalogue packs | Full layout above: `LICENSE` reproducing the source's terms and `chapters/` with at least one chapter | Nothing |
+| content pack (default) | the 74 catalogue packs | Full layout above: `LICENSE` reproducing the source's terms and `chapters/` with at least one chapter | Nothing |
 | `signpost` | `packs/omg-signpost`, `packs/se-standards-signpost`, `packs/automotive-signpost`, `packs/functional-safety-signpost`, `packs/avionics-signpost`, `packs/rail-signpost`, `packs/space-signpost`, `packs/maritime-signpost` | `SKILL.md` + `PACK.yaml`, all remaining checks | The `LICENSE` and `chapters/` checks (citation-only, zero reproduced content) |
 | `orchestrator` | `packs/se` | `SKILL.md` + `PACK.yaml`, all remaining checks | The `LICENSE` and `chapters/` checks (routes to packs, no source content). Its `SKILL.md` body carries the whole routing map and ships in every transform prompt, so it is reviewed against a 24,000-byte ceiling (a review criterion, not a gate). |
 
