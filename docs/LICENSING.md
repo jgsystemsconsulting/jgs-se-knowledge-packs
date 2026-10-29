@@ -39,7 +39,7 @@ Works of the US Government are **not subject to copyright** in the United States
 transform, and redistribute them for any purpose. We add an attribution courtesy line in
 `NOTICE`, but no permission is needed and none is implied to be withheld.
 
-### Tier 2: Open licence (e.g. SEBoK, OMG SysML, MIT OpenCourseWare)
+### Tier 2: Open licence (e.g. SEBoK, MIT OpenCourseWare, Open Government Licence)
 
 These carry licences that **expressly grant the right to redistribute and to create
 derivative works**:
@@ -50,11 +50,11 @@ derivative works**:
   the **Adapt** right. We satisfy every condition: **BY** (we attribute the creator),
   **NC** (packs are non-commercial), **SA** (pack content is released under the same
   licence; see each pack `LICENSE`).
-- **OMG Specification Licence** (SysML): grants a royalty-free, worldwide right to copy,
-  modify, and distribute modified versions, provided the copyright notice is reproduced,
-  modifications are noted, and the trademarked spec name is not applied to the modified
-  work. Our packs comply with all three.
 - **Open Government Licence v3.0** (JSP 815): grants a worldwide, royalty-free, perpetual, non-exclusive right to copy, publish, distribute, transmit, adapt, and exploit the information commercially, on condition of attribution, and grants no right to imply official status or endorsement.
+
+OMG formal specifications (SysML and the rest) are not Tier 2; they sit on the
+**Excluded** list. [SOURCE-VETTING.md](SOURCE-VETTING.md) is the licence authority,
+and the `omg-signpost` pack is the only catalogue form (citation-only).
 
 In every Tier-2 case, reconstitution is **the licensed use, not a grey area**.
 
