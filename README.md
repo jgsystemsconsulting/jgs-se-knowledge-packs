@@ -45,6 +45,9 @@ it different from "point a tool at a PDF":
 
 Packs follow the open [Agent Skills](https://github.com/agentskills/agentskills) `SKILL.md`
 standard, so they load in Claude Code, GitHub Copilot CLI, and Amp without modification.
+The catalogue is also listed in [VoltAgent/awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills)
+(PR [#1272](https://github.com/VoltAgent/awesome-agent-skills/pull/1272)), a curated collection
+of 1,000+ community agent skills.
 
 ## Prerequisites
 
