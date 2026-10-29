@@ -106,6 +106,8 @@ def check_pack(pack_dir: Path) -> list[str]:
     # --- PACK.yaml mandatory fields + tier ---
     if pack_yaml.is_file():
         meta = parse_simple_yaml(pack_yaml.read_text(encoding="utf-8"))
+        # commercial_use here is non-empty only. Cursor eligibility (exactly "true")
+        # lives in check_release.py check 6b and the CI twin, not here.
         for field in REQUIRED_PACK_FIELDS:
             if not meta.get(field):
                 errors.append(f"PACK.yaml missing required field: {field}")

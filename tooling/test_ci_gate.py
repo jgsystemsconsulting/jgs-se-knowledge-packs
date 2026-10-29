@@ -72,6 +72,26 @@ PINNED_STEPS = [
     "Pack licence and signpost shape",
 ]
 
+COMMERCIAL_USE_HELPER = r'''
+# Commercial-eligibility helper both Cursor eligible-set twins must carry.
+# The per-line pin in test_ci_gate.py requires this exact code content in both files.
+def parse_commercial_use(text):
+    """Top-level commercial_use scalar is exactly lowercase true. Last key wins."""
+    val = None
+    for line in text.splitlines():
+        if not line or line[0] in " \t#":
+            continue
+        m = re.match(r"^([A-Za-z_][\w-]*):\s*(.*)$", line)
+        if not m or m.group(1) != "commercial_use":
+            continue
+        raw = m.group(2).strip()
+        if raw in (">", "|", ""):
+            val = None
+            continue
+        val = raw.strip().strip('"').strip("'")
+    return val == "true"
+'''
+
 # Literals that must appear verbatim in check_release.py AND validate.yml.
 RELEASE_PAIR = [
     ("changelog version", r"^##\s*\[(\d+\.\d+\.\d+)\]"),
@@ -339,6 +359,24 @@ def main() -> int:
     release_text = RELEASE_TWIN.read_text(encoding="utf-8")
     quality_twin_text = QUALITY_TWIN.read_text(encoding="utf-8")
 
+    # 1a. commercial-eligibility helper pin: per-line, indentation-insensitive
+    helper_lines = [line.strip() for line in COMMERCIAL_USE_HELPER.splitlines() if line.strip()]
+    release_lines = {line.strip() for line in release_text.splitlines()}
+    workflow_lines = {line.strip() for line in workflow_text.splitlines()}
+    for hl in helper_lines:
+        assert hl in release_lines, (
+            f"parse_commercial_use helper line drifted or missing in tooling/check_release.py: {hl}"
+        )
+        assert hl in workflow_lines, (
+            f"parse_commercial_use helper line drifted or missing in .github/workflows/validate.yml: {hl}"
+        )
+    assert '"commercial_use: false" in' not in release_text, (
+        "check_release.py still uses the substring commercial gate; use parse_commercial_use"
+    )
+    assert '"commercial_use: false" in' not in workflow_text, (
+        "validate.yml still uses the substring commercial gate; use parse_commercial_use"
+    )
+
     # 1. literal parity: the drift control comes first, it is the cheapest check
     for name, literal in RELEASE_PAIR:
         assert literal in release_text, (
@@ -594,6 +632,40 @@ def main() -> int:
                 {"skills": ["./packs/beta/SKILL.md"]}
             ) + "\n",
         }, "Cursor skills eligible set", "[cursor]", "cursor-skills-mismatch")
+
+        demo({
+            "packs/alpha/SKILL.md": "---\nname: alpha\n---\nbody\n",
+            "packs/alpha/PACK.yaml": 'commercial_use: "false"\n',
+            ".cursor-plugin/plugin.json": json.dumps(
+                {"skills": ["./packs/alpha/SKILL.md"]}
+            ) + "\n",
+        }, "Cursor skills eligible set", "[cursor]", "cursor-quoted-false")
+
+        demo({
+            "packs/alpha/SKILL.md": "---\nname: alpha\n---\nbody\n",
+            "packs/alpha/PACK.yaml": "commercial_use:    false\n",
+            ".cursor-plugin/plugin.json": json.dumps(
+                {"skills": ["./packs/alpha/SKILL.md"]}
+            ) + "\n",
+        }, "Cursor skills eligible set", "[cursor]", "cursor-spaced-false")
+
+        demo({
+            "packs/alpha/SKILL.md": "---\nname: alpha\n---\nbody\n",
+            "packs/alpha/PACK.yaml": "slug: alpha\n",
+            ".cursor-plugin/plugin.json": json.dumps(
+                {"skills": ["./packs/alpha/SKILL.md"]}
+            ) + "\n",
+        }, "Cursor skills eligible set", "[cursor]", "cursor-missing-field")
+
+        demo_ok({
+            "packs/alpha/SKILL.md": "---\nname: alpha\n---\nbody\n",
+            "packs/alpha/PACK.yaml": "commercial_use: true\n",
+            "packs/beta/SKILL.md": "---\nname: beta\n---\nbody\n",
+            "packs/beta/PACK.yaml": "commercial_use: false\n",
+            ".cursor-plugin/plugin.json": json.dumps(
+                {"skills": ["./packs/alpha/SKILL.md"]}
+            ) + "\n",
+        }, "Cursor skills eligible set", "cursor-eligible-ok")
 
         # overlap: an un-whitelisted shared basename fails with both packs
         demo(overlap_tree(True), "Chapter basename overlap",

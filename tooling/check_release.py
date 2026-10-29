@@ -1106,6 +1106,25 @@ def check_sources_untracked(root: Path) -> list[str]:
     ]
 
 
+# Commercial-eligibility helper both Cursor eligible-set twins must carry.
+# The per-line pin in test_ci_gate.py requires this exact code content in both files.
+def parse_commercial_use(text):
+    """Top-level commercial_use scalar is exactly lowercase true. Last key wins."""
+    val = None
+    for line in text.splitlines():
+        if not line or line[0] in " \t#":
+            continue
+        m = re.match(r"^([A-Za-z_][\w-]*):\s*(.*)$", line)
+        if not m or m.group(1) != "commercial_use":
+            continue
+        raw = m.group(2).strip()
+        if raw in (">", "|", ""):
+            val = None
+            continue
+        val = raw.strip().strip('"').strip("'")
+    return val == "true"
+
+
 def fail(errs: list[str], msg: str) -> None:
     errs.append(msg)
 
@@ -1380,14 +1399,16 @@ def main() -> int:
                 all_skill_dirs = sorted(
                     p.parent for p in (ROOT / "packs").glob("*/SKILL.md")
                 )
-                nc_packs = {
-                    p.name for p in all_skill_dirs
-                    if (p / "PACK.yaml").is_file()
-                    and "commercial_use: false" in (p / "PACK.yaml").read_text(
-                        encoding="utf-8", errors="ignore"
+                pack_slugs = set()
+                for p in all_skill_dirs:
+                    pack_yaml = p / "PACK.yaml"
+                    text = (
+                        pack_yaml.read_text(encoding="utf-8", errors="ignore")
+                        if pack_yaml.is_file()
+                        else ""
                     )
-                }
-                pack_slugs = {p.name for p in all_skill_dirs} - nc_packs
+                    if parse_commercial_use(text):
+                        pack_slugs.add(p.name)
                 cursor_slugs = set()
                 for s in skills_list:
                     if not isinstance(s, str):
