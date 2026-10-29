@@ -11,6 +11,15 @@ All notable changes to this project are documented here. Format follows
 
 ## [Unreleased]
 
+## [1.24.1]: 2026-10-29
+
+### Fixed
+
+- `docs/LICENSING.md` no longer teaches OMG SysML as a packable open licence. The Tier-2 section now states the SOURCE-VETTING.md exclusion (informational-use-only grant, two independent licence reads) and names `omg-signpost` as the only catalogue form for OMG specifications.
+- Author and operator docs restored to post-1.24.0 truth: inventory sentences state 74 content packs and 83 skills across `SOURCE-FRESHNESS.md`, `PACK-SPEC.md`, `DISTRIBUTION.md`, and `CONTRIBUTING.md`; `PACK-SPEC.md` gains a Build rules section (multi-PDF part pin, contents list wins over the TOC, verify-what-you-wrote transport check) citing the nasa-risk, faa-ams-vv, and jsp-912 rebuilds as worked examples; the CONTRIBUTING build step points there instead of the retired extract-plus-offset-map procedure.
+- The Cursor eligible-set gate (`check_release.py` check 6b and its CI twin) classifies commercial eligibility by parsing the `PACK.yaml` `commercial_use` scalar (exactly lowercase `true`, fail closed on missing or unparseable values) instead of a raw substring match, so quoted, spaced, commented, or missing values can no longer slip a pack into the allowlist. The eligible set on the shipped catalogue is unchanged (80 eligible, 3 excluded).
+
+
 ## [1.24.0]: 2026-10-28
 
 ### Added
