@@ -11,6 +11,10 @@ All notable changes to this project are documented here. Format follows
 
 ## [Unreleased]
 
+### Fixed
+
+- `docs/index.html` hero title-card alt text states the current catalogue total (74 packs), replacing a stale 71 that predated the jsp-936 and fhwa-its-se registrations. The GitHub repository About description was corrected the same way (74 packs + 8 signposts + the `/se` orchestrator, 83 skills); repo tooling cannot reach the About field, so it was updated through the GitHub API.
+
 ## [1.24.1]: 2026-10-29
 
 ### Fixed
