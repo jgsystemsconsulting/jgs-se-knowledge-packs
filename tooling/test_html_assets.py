@@ -15,6 +15,8 @@ paths they reference.
 """
 from __future__ import annotations
 
+import html
+import re
 import sys
 from pathlib import Path
 
@@ -158,6 +160,49 @@ def main() -> int:
         leaks = scan(page.read_text(encoding="utf-8", errors="ignore"))
         rel = page.relative_to(ROOT).as_posix()
         assert leaks == [], f"{rel}: unexpected external asset(s): {leaks}"
+
+    def readme_fence_body(text: str) -> str:
+        heading = text.index("## Install with your AI agent")
+        open_at = text.index("```text\n", heading)
+        body_start = open_at + len("```text\n")
+        close_nl = text.index("\n```", body_start)
+        between = text[body_start:close_nl + 1]
+        assert between.endswith("\n"), "fence body missing the one trailing newline"
+        return between[:-1]
+
+    index_path = docs / "index.html"
+    index = index_path.read_text(encoding="utf-8")
+    opens = [m.start() for m in re.finditer(r"<script\b", index, re.I)]
+    assert len(opens) == 2, f"docs/index.html script opens: {len(opens)}"
+    first_tag = index[opens[0]:index.find(">", opens[0]) + 1]
+    assert 'type="application/ld+json"' in first_tag, first_tag
+    assert '"softwareVersion"' in index[opens[0]:opens[1]]
+    second_tag = index[opens[1]:index.find(">", opens[1]) + 1]
+    assert "src" not in second_tag.lower(), second_tag
+    assert "<script src" not in index.lower()
+    second_body = index[opens[1]:index.find("</script>", opens[1])]
+    assert "navigator.clipboard.writeText" in second_body, "writeText"
+    assert "execCommand" in second_body, "execCommand"
+    assert "url(" not in second_body, "url( in script"
+    assert "setTimeout" not in second_body, "timer"
+    assert "ClipboardItem" not in second_body, "ClipboardItem"
+    assert "permissions" not in second_body, "permissions"
+    assert "https://github.com" not in second_body, "prompt url in script"
+    assert index.count('id="install-copy"') == 1, "install-copy"
+    assert 'class="btn btn-copy"' in index, "btn-copy"
+    assert ">Copy install prompt</button>" in index, "button label"
+    assert "<summary>Install AI agent</summary>" in index, "summary"
+    details_at = index.index("<details")
+    details_tag = index[details_at:index.index(">", details_at) + 1]
+    assert details_tag == '<details class="install-fallback">', details_tag
+    pre_open = '<pre id="install-prompt">'
+    pre_start = index.index(pre_open) + len(pre_open)
+    pre_end = index.index("</pre>", pre_start)
+    pre_inner = index[pre_start:pre_end]
+    fence_body = readme_fence_body((ROOT / "README.md").read_text(encoding="utf-8"))
+    assert pre_inner == html.escape(fence_body, quote=True)
+    assert html.unescape(pre_inner) == fence_body
+    assert "source&#x27;s" in pre_inner
 
     print(f"html-assets tests: OK ({len(pages)} real page(s) clean)")
     return 0

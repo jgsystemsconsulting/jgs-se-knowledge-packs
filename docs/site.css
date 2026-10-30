@@ -37,6 +37,13 @@ h1,h2,h3{color:var(--text-hi);font-family:var(--mono);font-weight:700;letter-spa
 .btn-primary:hover{background:#fff;}
 .btn-ghost{background:transparent;color:var(--text-hi);}
 .btn-ghost:hover{border-color:var(--paper);}
+button.btn{cursor:pointer;border-radius:0;}
+.btn-copy{background:transparent;color:var(--text-hi);}
+.btn-copy:hover{border-color:var(--paper);}
+.install-fallback{flex-basis:100%;}
+.install-fallback summary{cursor:pointer;}
+.install-fallback pre{margin-top:14px;font:400 .875rem/1.7 var(--mono);color:var(--text);white-space:pre-wrap;overflow:auto;}
+.copy-status{align-self:center;font:700 .75rem/1 var(--mono);color:var(--text-hi);}
 section{padding:var(--pad-section) 0;border-bottom:1px solid var(--line);}
 .shead{margin-bottom:2rem;}
 .shead .label{display:block;margin-bottom:.6rem;}

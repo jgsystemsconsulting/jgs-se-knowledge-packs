@@ -101,6 +101,60 @@ code{font-family:var(--mono)}
     <div class="cta">
       <a class="btn btn-primary" href="https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs">View the repository <span aria-hidden="true">&rarr;</span></a>
       <a class="btn btn-ghost" href="packs.html">Browse the catalogue <span aria-hidden="true">&rarr;</span></a>
+<button type="button" class="btn btn-copy" id="install-copy">Copy install prompt</button>
+<span class="copy-status" aria-live="polite"></span>
+<details class="install-fallback">
+  <summary>Install AI agent</summary>
+  <pre id="install-prompt">You are installing jgs-se-knowledge-packs, an open catalogue (MIT tooling) of
+systems-engineering knowledge-pack skills by JG Systems Consulting Ltd.
+Repository: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs (version 1.24.1).
+Do this in order:
+1. Read README.md, docs/skill-usage.md, and CHANGELOG.md so you understand what you are
+   installing. There are NO external prerequisites: packs are plain Markdown skills.
+2. Run `python install.py --dry-run` and show me the pack list and target
+   (~/.claude/skills/jgs-se-knowledge-packs/). If it looks right, run `python install.py`.
+3. Verify: list the installed packs under the target and confirm the count matches SKILLS.md.
+4. Tell me to restart Claude Code, then try `/sebok systems of systems` or ask
+   `/se what are the EARS requirement patterns?`.
+5. Pack CONTENT is under each source&#x27;s own licence (see NOTICE); keep attribution intact.</pre>
+</details>
+<script>
+(function () {
+  var btn = document.getElementById("install-copy");
+  var pre = document.getElementById("install-prompt");
+  var live = document.querySelector(".copy-status");
+  if (!btn || !pre || !live) return;
+  function report(ok) {
+    live.textContent = ok ? "Copied" : "Copy failed. Select the text below.";
+    if (!ok) {
+      var box = pre.closest("details");
+      if (box) box.open = true;
+    }
+  }
+  function legacy(text) {
+    var ta = document.createElement("textarea");
+    ta.value = text;
+    ta.setAttribute("readonly", "");
+    ta.style.position = "fixed";
+    ta.style.left = "-9999px";
+    document.body.appendChild(ta);
+    ta.select();
+    var ok = false;
+    try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+    document.body.removeChild(ta);
+    return ok;
+  }
+  btn.addEventListener("click", function () {
+    var text = pre.textContent;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () { report(true); }, function () { report(legacy(text)); });
+    } else {
+      report(legacy(text));
+    }
+  });
+})();
+</script>
+
     </div>
   </div>
   <figure class="hero-media">
