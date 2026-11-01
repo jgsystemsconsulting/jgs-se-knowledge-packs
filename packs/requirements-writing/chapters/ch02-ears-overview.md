@@ -24,7 +24,7 @@ Most requirement ambiguity comes from unconstrained natural language; EARS remov
 
 ## Key Takeaways
 1. EARS is a *method* (a set of sentence templates), not a tool or a standard — you can adopt it for free, in your own words, today.
-2. The value is structural: by mandating a named system and an explicit trigger, EARS eliminates the two most common sources of ambiguity.
+2. The value is structural: naming the system and, where applicable, its trigger can reduce ambiguity; the wording and underlying need still require review.
 3. It is deliberately small — a few patterns learnable in an afternoon — which is why teams actually adopt it.
 4. Credit the method to Mavin et al. (2009); the patterns themselves are a technique anyone may apply.
 
