@@ -51,6 +51,8 @@ import textwrap
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import check_release # noqa: E402
 WORKFLOW = ROOT / ".github" / "workflows" / "validate.yml"
 RELEASE_TWIN = ROOT / "tooling" / "check_release.py"
 MAP_TWIN = ROOT / "tooling" / "check_capability_map.py"
@@ -667,6 +669,14 @@ def main() -> int:
             ) + "\n",
         }, "Cursor skills eligible set", "cursor-eligible-ok")
 
+        demo_ok({
+            "packs/alpha/SKILL.md": "---\nname: alpha\n---\nbody\n",
+            "packs/alpha/PACK.yaml": 'commercial_use: "true"\n',
+            ".cursor-plugin/plugin.json": json.dumps(
+                {"skills": ["./packs/alpha/SKILL.md"]}
+            ) + "\n",
+        }, "Cursor skills eligible set", "cursor-quoted-true")
+
         # overlap: an un-whitelisted shared basename fails with both packs
         demo(overlap_tree(True), "Chapter basename overlap",
              "[overlap] ch09-shared.md: alpha, beta", "overlap-collision")
@@ -1119,6 +1129,7 @@ def main() -> int:
             f"positive run against the real tree failed for '{step}':\n{out}"
         )
 
+    assert check_release.parse_commercial_use('commercial_use: "true"\n') is True
     print("ci-gate probe: OK (parity, extraction, negative demos, positive runs)")
     return 0
 
