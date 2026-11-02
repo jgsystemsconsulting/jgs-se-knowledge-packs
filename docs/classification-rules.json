@@ -2617,72 +2617,6 @@
       "is_support": false
     },
     {
-      "pack": "sd-22-dmsms",
-      "chapter": "ch01-sd-22-dmsms-introduction-fundamentals.md",
-      "cluster": "Logistics, Supportability & Sustainment",
-      "is_support": false
-    },
-    {
-      "pack": "sd-22-dmsms",
-      "chapter": "ch02-sd-22-dmsms-policy-lifecycle-guidance.md",
-      "cluster": "Logistics, Supportability & Sustainment",
-      "is_support": false
-    },
-    {
-      "pack": "sd-22-dmsms",
-      "chapter": "ch03-sd-22-dmsms-prepare-program-infrastructure.md",
-      "cluster": "Logistics, Supportability & Sustainment",
-      "is_support": false
-    },
-    {
-      "pack": "sd-22-dmsms",
-      "chapter": "ch04-sd-22-dmsms-identify-monitoring-surveillance.md",
-      "cluster": "Logistics, Supportability & Sustainment",
-      "is_support": false
-    },
-    {
-      "pack": "sd-22-dmsms",
-      "chapter": "ch05-sd-22-dmsms-assess-resolution-need-timing-level.md",
-      "cluster": "Logistics, Supportability & Sustainment",
-      "is_support": false
-    },
-    {
-      "pack": "sd-22-dmsms",
-      "chapter": "ch06-sd-22-dmsms-analyze-resolution-determination.md",
-      "cluster": "Logistics, Supportability & Sustainment",
-      "is_support": false
-    },
-    {
-      "pack": "sd-22-dmsms",
-      "chapter": "ch07-sd-22-dmsms-implement-resolutions.md",
-      "cluster": "Logistics, Supportability & Sustainment",
-      "is_support": false
-    },
-    {
-      "pack": "sd-22-dmsms",
-      "chapter": "ch08-sd-22-dmsms-obsolescence-relationship.md",
-      "cluster": "Logistics, Supportability & Sustainment",
-      "is_support": false
-    },
-    {
-      "pack": "sd-22-dmsms",
-      "chapter": "cheatsheet.md",
-      "cluster": "Logistics, Supportability & Sustainment",
-      "is_support": true
-    },
-    {
-      "pack": "sd-22-dmsms",
-      "chapter": "glossary.md",
-      "cluster": "Logistics, Supportability & Sustainment",
-      "is_support": true
-    },
-    {
-      "pack": "sd-22-dmsms",
-      "chapter": "patterns.md",
-      "cluster": "Logistics, Supportability & Sustainment",
-      "is_support": true
-    },
-    {
       "pack": "doe-sem",
       "chapter": "ch07-maintenance-stage.md",
       "cluster": "Operations, Maintenance & Disposal",
@@ -4492,6 +4426,72 @@
       "pack": "mrl-deskbook",
       "chapter": "patterns.md",
       "cluster": "Measurement & Technical Assessment",
+      "is_support": true
+    },
+    {
+      "pack": "sd-22-dmsms",
+      "chapter": "ch01-sd-22-dmsms-introduction.md",
+      "cluster": "Logistics, Supportability & Sustainment",
+      "is_support": false
+    },
+    {
+      "pack": "sd-22-dmsms",
+      "chapter": "ch02-sd-22-dmsms-policy-and-lifecycle.md",
+      "cluster": "Logistics, Supportability & Sustainment",
+      "is_support": false
+    },
+    {
+      "pack": "sd-22-dmsms",
+      "chapter": "ch03-sd-22-dmsms-prepare.md",
+      "cluster": "Logistics, Supportability & Sustainment",
+      "is_support": false
+    },
+    {
+      "pack": "sd-22-dmsms",
+      "chapter": "ch04-sd-22-dmsms-identify.md",
+      "cluster": "Logistics, Supportability & Sustainment",
+      "is_support": false
+    },
+    {
+      "pack": "sd-22-dmsms",
+      "chapter": "ch05-sd-22-dmsms-assess.md",
+      "cluster": "Logistics, Supportability & Sustainment",
+      "is_support": false
+    },
+    {
+      "pack": "sd-22-dmsms",
+      "chapter": "ch06-sd-22-dmsms-analyze.md",
+      "cluster": "Logistics, Supportability & Sustainment",
+      "is_support": false
+    },
+    {
+      "pack": "sd-22-dmsms",
+      "chapter": "ch07-sd-22-dmsms-implement.md",
+      "cluster": "Logistics, Supportability & Sustainment",
+      "is_support": false
+    },
+    {
+      "pack": "sd-22-dmsms",
+      "chapter": "ch08-sd-22-dmsms-obsolescence-relationship.md",
+      "cluster": "Logistics, Supportability & Sustainment",
+      "is_support": false
+    },
+    {
+      "pack": "sd-22-dmsms",
+      "chapter": "glossary.md",
+      "cluster": "Logistics, Supportability & Sustainment",
+      "is_support": true
+    },
+    {
+      "pack": "sd-22-dmsms",
+      "chapter": "cheatsheet.md",
+      "cluster": "Logistics, Supportability & Sustainment",
+      "is_support": true
+    },
+    {
+      "pack": "sd-22-dmsms",
+      "chapter": "patterns.md",
+      "cluster": "Logistics, Supportability & Sustainment",
       "is_support": true
     }
   ]

@@ -668,16 +668,16 @@ Rules of construction:
 | Pack | Chapter | Why it fits / one-line value |
 |---|---|---|
 | dote-te-guidebook | ch07-suitability-reliability-growth.md | Operational suitability and reliability-growth gates (OTRR/supportability) |
-| sd-22-dmsms | ch01-sd-22-dmsms-introduction-fundamentals.md | DMSMS fundamentals |
-| sd-22-dmsms | ch02-sd-22-dmsms-policy-lifecycle-guidance.md | DMSMS policy and lifecycle guidance |
-| sd-22-dmsms | ch03-sd-22-dmsms-prepare-program-infrastructure.md | Setting up a DMSMS program |
-| sd-22-dmsms | ch04-sd-22-dmsms-identify-monitoring-surveillance.md | Identifying: monitoring and surveillance |
-| sd-22-dmsms | ch05-sd-22-dmsms-assess-resolution-need-timing-level.md | Assessing resolution need, timing, level |
-| sd-22-dmsms | ch06-sd-22-dmsms-analyze-resolution-determination.md | Analyzing resolution options |
-| sd-22-dmsms | ch07-sd-22-dmsms-implement-resolutions.md | Implementing DMSMS resolutions |
-| sd-22-dmsms | ch08-sd-22-dmsms-obsolescence-relationship.md | Obsolescence vs DMSMS relationship |
-| sd-22-dmsms | cheatsheet.md (support file) | Cheatsheet / quick reference |
+| sd-22-dmsms | ch01-sd-22-dmsms-introduction.md | SD-22, 06-JAN-2026 introduction, scope, and five-step overview. |
+| sd-22-dmsms | ch02-sd-22-dmsms-policy-and-lifecycle.md | SD-22, 06-JAN-2026 policy and life-cycle guidance. |
+| sd-22-dmsms | ch03-sd-22-dmsms-prepare.md | SD-22, 06-JAN-2026 Prepare step, DMT, DMP, and FMS communication. |
+| sd-22-dmsms | ch04-sd-22-dmsms-identify.md | SD-22, 06-JAN-2026 Identify step, monitoring, and BOM method. |
+| sd-22-dmsms | ch05-sd-22-dmsms-assess.md | SD-22, 06-JAN-2026 Assess step and health-assessment method. |
+| sd-22-dmsms | ch06-sd-22-dmsms-analyze.md | SD-22, 06-JAN-2026 Analyze step, resolution options, and security-engineering consideration. |
+| sd-22-dmsms | ch07-sd-22-dmsms-implement.md | SD-22, 06-JAN-2026 Implement step, funding method, and folded appendices I, K, and O. |
+| sd-22-dmsms | ch08-sd-22-dmsms-obsolescence-relationship.md | SD-22, 06-JAN-2026 obsolescence and its relationship to DMSMS. |
 | sd-22-dmsms | glossary.md (support file) | Glossary for the pack |
+| sd-22-dmsms | cheatsheet.md (support file) | Cheatsheet / quick reference |
 | sd-22-dmsms | patterns.md (support file) | Patterns/practice heuristics |
 
 ## 24. Operations, Maintenance & Disposal

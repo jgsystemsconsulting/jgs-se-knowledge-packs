@@ -169,7 +169,7 @@ always-loaded `SKILL.md` index inlined into one file. Full detail and the per-ag
 | `mil-hdbk-61` | MIL-HDBK-61B: DoD Configuration Management (Change 1, 2025) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `mrl-deskbook` | DoD Manufacturing Readiness Level (MRL) Deskbook (Version 2025) | Public domain (US gov) | 🟢 1 | ✅ live (9 chapters) |
 | `faa-req-handbook` | FAA Requirements Engineering Management Handbook (DOT/FAA/AR-08/32) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
-| `sd-22-dmsms` | SD-22 DMSMS Guidebook (DSPO, FY24 working draft) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
+| `sd-22-dmsms` | SD-22 DMSMS Guidebook (06-JAN-2026) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `nasa-npr-7150` | NASA NPR 7150.2D: NASA Software Engineering Requirements | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `nist-stat-handbook` | NIST/SEMATECH e-Handbook of Statistical Methods (NIST HB 151) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `faa-rma` | FAA Reliability, Maintainability & Availability Handbook (FAA-HDBK-006D) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |

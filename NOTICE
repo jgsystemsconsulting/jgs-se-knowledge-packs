@@ -503,19 +503,11 @@ See packs/mrl-deskbook/LICENSE.
            pack. See packs/faa-req-handbook/LICENSE.
 
 [pack: sd-22-dmsms]
-  Source : SD-22 Diminishing Manufacturing Sources and Material Shortages (DMSMS) Guidebook,
-           FY24 Working Draft (April 2024)
-  Author : Defense Standardization Program Office (DSPO)
-  Licence: Public Domain -- US Government work (17 U.S.C. 105); Distribution A
-  Changes: reconstructed as synthesized reference notes from a WORKING-DRAFT source (not a reproduction)
-  Terms  : public domain, no copyright (Distribution A, approved for public release; distribution
-           unlimited). DRAFT SOURCE -- this pack synthesizes the FY24 WORKING DRAFT (April 2024);
-           section/figure/table numbers and some guidance may change in the final FY24 release, so
-           the pack names artifacts to keep them locatable across revisions. CAVEAT: the guidebook
-           cites DoD issuances and appropriations statutes only as constraints -- this pack
-           reproduces NONE of that policy/statutory text, nor the source's tables, figures, or
-           appendix worksheets, only synthesized notes that name them. Attribution to DSPO is
-           courtesy, not obligation; the DoD does not endorse this pack. See packs/sd-22-dmsms/LICENSE.
+Source : SD-22, Diminishing Manufacturing Sources and Material Shortages, 06-JAN-2026 (cover dated December 2025).
+Author : Defense Standardization Program Office (DSPO)
+Licence: Public Domain -- US Government work (17 U.S.C. 105); Distribution A
+Changes: reconstructed as synthesized reference notes (not reproduction)
+Terms  : Distribution A. No printed DOPSR case. Cover text layer has no copyright notice. Tables, figures, risk grids, and appendix worksheets are not reproduced. Attribution to DSPO is courtesy, not obligation. DoD does not endorse this pack. See packs/sd-22-dmsms/LICENSE.
 
 [pack: nasa-npr-7150]
   Source : NASA NPR 7150.2D -- NASA Software Engineering Requirements (Effective March 08, 2022)

@@ -2598,53 +2598,53 @@
         },
         {
           "pack": "sd-22-dmsms",
-          "chapter": "ch01-sd-22-dmsms-introduction-fundamentals.md",
-          "note": "DMSMS fundamentals"
+          "chapter": "ch01-sd-22-dmsms-introduction.md",
+          "note": "SD-22, 06-JAN-2026 introduction, scope, and five-step overview."
         },
         {
           "pack": "sd-22-dmsms",
-          "chapter": "ch02-sd-22-dmsms-policy-lifecycle-guidance.md",
-          "note": "DMSMS policy and lifecycle guidance"
+          "chapter": "ch02-sd-22-dmsms-policy-and-lifecycle.md",
+          "note": "SD-22, 06-JAN-2026 policy and life-cycle guidance."
         },
         {
           "pack": "sd-22-dmsms",
-          "chapter": "ch03-sd-22-dmsms-prepare-program-infrastructure.md",
-          "note": "Setting up a DMSMS program"
+          "chapter": "ch03-sd-22-dmsms-prepare.md",
+          "note": "SD-22, 06-JAN-2026 Prepare step, DMT, DMP, and FMS communication."
         },
         {
           "pack": "sd-22-dmsms",
-          "chapter": "ch04-sd-22-dmsms-identify-monitoring-surveillance.md",
-          "note": "Identifying: monitoring and surveillance"
+          "chapter": "ch04-sd-22-dmsms-identify.md",
+          "note": "SD-22, 06-JAN-2026 Identify step, monitoring, and BOM method."
         },
         {
           "pack": "sd-22-dmsms",
-          "chapter": "ch05-sd-22-dmsms-assess-resolution-need-timing-level.md",
-          "note": "Assessing resolution need, timing, level"
+          "chapter": "ch05-sd-22-dmsms-assess.md",
+          "note": "SD-22, 06-JAN-2026 Assess step and health-assessment method."
         },
         {
           "pack": "sd-22-dmsms",
-          "chapter": "ch06-sd-22-dmsms-analyze-resolution-determination.md",
-          "note": "Analyzing resolution options"
+          "chapter": "ch06-sd-22-dmsms-analyze.md",
+          "note": "SD-22, 06-JAN-2026 Analyze step, resolution options, and security-engineering consideration."
         },
         {
           "pack": "sd-22-dmsms",
-          "chapter": "ch07-sd-22-dmsms-implement-resolutions.md",
-          "note": "Implementing DMSMS resolutions"
+          "chapter": "ch07-sd-22-dmsms-implement.md",
+          "note": "SD-22, 06-JAN-2026 Implement step, funding method, and folded appendices I, K, and O."
         },
         {
           "pack": "sd-22-dmsms",
           "chapter": "ch08-sd-22-dmsms-obsolescence-relationship.md",
-          "note": "Obsolescence vs DMSMS relationship"
-        },
-        {
-          "pack": "sd-22-dmsms",
-          "chapter": "cheatsheet.md (support file)",
-          "note": "Cheatsheet / quick reference"
+          "note": "SD-22, 06-JAN-2026 obsolescence and its relationship to DMSMS."
         },
         {
           "pack": "sd-22-dmsms",
           "chapter": "glossary.md (support file)",
           "note": "Glossary for the pack"
+        },
+        {
+          "pack": "sd-22-dmsms",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
         },
         {
           "pack": "sd-22-dmsms",
