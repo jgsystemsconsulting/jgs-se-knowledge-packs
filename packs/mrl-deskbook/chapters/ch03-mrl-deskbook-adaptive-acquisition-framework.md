@@ -30,7 +30,7 @@ Middle Tier programs still need manufacturing risk visibility even on compressed
 
 ### UCA targets
 
-Urgent Capability Acquisition compresses decision space. Even so, manufacturing maturity should be MRL 7 when production-representative evidence is expected before fielding under urgency. Programs that must sustain and expand fielded articles carry an objective of meeting MRL 9 so full-rate quality and rate are not left as afterthoughts. When industrial capacity or process control fall short of MRL 6, decision authorities treat that shortfall as explicit residual risk against the urgent timeline.
+Urgent Capability Acquisition compresses decision space. Preferred solutions should already be near pilot-line ready, adapted from a product already in manufacture, or adapted from a commercial-off-the-shelf item. Per section 3.4 and Figure 3-9: at the Course of Action Decision Point, manufacturing maturity should be MRL 7; at the Development Milestone, maturity should be assessed to MRL 8 with gaps identified; and the objective of meeting MRL 9 applies during production and fielding within the two-year window. Gaps that remain after the Development Milestone must be minimal if MRL 8 is to be reached before Production and Deployment.
 
 ### Pre-acquisition and early MCA notes
 
@@ -56,7 +56,7 @@ The Materiel Development Decision is the mandatory MCA entry. Technology and Man
 - Best-practice pathways for MRL Assessments: MCA, MTA, and UCA.
 - MCA moves from MRL 4 in early solution analysis toward MRL 6 by the end of technology maturation, then toward LRIP and FRP maturity in later phases.
 - MTA Rapid Prototyping leans on early targets; Rapid Fielding leans on pilot-line proof.
-- UCA still needs production-representative and full-rate objectives when fielding and sustainment demand them.
+- UCA targets move from MRL 7 at the Course of Action Decision Point to MRL 8 at Development, with an objective of meeting MRL 9 in production and fielding.
 - DoDI 5000.88 and sibling pathway instructions are named only. Quote none of them.
 
 ## Connects To
