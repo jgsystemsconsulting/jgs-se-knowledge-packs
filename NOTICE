@@ -472,21 +472,22 @@ Third-party source attributions (one block per shipped content pack)
            this pack. See packs/mil-hdbk-61/LICENSE.
 
 [pack: mrl-deskbook]
-  Source : Manufacturing Readiness Level (MRL) Deskbook, Version 2022 (1 October 2022 update)
-  Author : Office of the Secretary of Defense Manufacturing Technology Program (OSD ManTech),
-           with the Joint Service/Industry MRL Working Group
-  Licence: Public Domain -- US Government work (17 U.S.C. 105); Distribution A
-  Changes: reconstructed as synthesized reference notes (not a reproduction)
-  Terms  : public domain, no copyright (Distribution A, approved for public release).
-           ADVISORY STATUS (reproduced from the source): "This document is not a DoD
-           requirement and is offered as a best practice" -- nothing here overrides DoD
-           policy, statute, the FAR, or DFARS. The authoritative MRL Criteria Matrix
-           (Appendix A) and the Excel MRL Users Guide are distributed separately by the MRL
-           Working Group and are NOT reproduced here -- this pack carries the framework and
-           its use, not the cell-by-cell criteria text. This pack reproduces no third-party
-           copyrighted material, only synthesized reference notes. Attribution to OSD ManTech
-           and the Joint Service/Industry MRL Working Group is courtesy, not obligation; the
-           Working Group does not endorse this pack. See packs/mrl-deskbook/LICENSE.
+Source : Manufacturing Readiness Level (MRL) Deskbook, Version 2025, 1 May 2025
+         (Includes Updates to MRL Criteria Matrix Effective 8 July 2025). DOPSR Case # 25-T-1829.
+Author : Office of the Secretary of Defense Manufacturing Technology Program
+         (OSD ManTech), with the Joint Service/Industry MRL Working Group
+Licence: Public Domain -- US Government work (17 U.S.C. 105); Distribution A
+Changes: reconstructed as synthesized reference notes (not a reproduction)
+Terms : Distribution A, approved for public release. DOPSR Case # 25-T-1829.
+The cover does not print a copyright notice. ADVISORY STATUS (reproduced from source):
+"This document is not a DoD requirement and is offered as a best practice."
+Nothing here overrides DoD policy, statute, FAR, or DFARS. Appendix A inside the
+pinned deskbook is the criteria matrix and is not reproduced cell by cell. The Excel
+MRL Users Guide remains a separate workbook and is not reproduced. This pack
+reproduces no third-party copyrighted material, only synthesized reference notes.
+Attribution to OSD ManTech and the Joint Service/Industry MRL Working Group is
+courtesy, not obligation. The Working Group does not endorse this pack.
+See packs/mrl-deskbook/LICENSE.
 
 [pack: faa-req-handbook]
   Source : Requirements Engineering Management Handbook (DOT/FAA/AR-08/32), June 2009

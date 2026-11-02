@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "map_version": "1.22.0",
-  "generated_on": "2026-10-28",
+  "generated_on": "2026-11-02",
   "clusters": [
     {
       "name": "Systems Thinking & Fundamentals",
@@ -1407,51 +1407,6 @@
           "note": "Patterns/practice heuristics"
         },
         {
-          "pack": "mrl-deskbook",
-          "chapter": "ch01-mrl-deskbook-foundations-and-dod-policy.md",
-          "note": "Manufacturing readiness fundamentals"
-        },
-        {
-          "pack": "mrl-deskbook",
-          "chapter": "ch02-mrl-deskbook-scale-threads-and-trl-relationship.md",
-          "note": "MRL scale, threads, TRL relationship"
-        },
-        {
-          "pack": "mrl-deskbook",
-          "chapter": "ch03-mrl-deskbook-adaptive-acquisition-framework.md",
-          "note": "MRL within the AAF (also acquisition)"
-        },
-        {
-          "pack": "mrl-deskbook",
-          "chapter": "ch04-mrl-deskbook-conducting-assessments.md",
-          "note": "Conducting MRL assessments"
-        },
-        {
-          "pack": "mrl-deskbook",
-          "chapter": "ch05-mrl-deskbook-maturation-plans-and-risk.md",
-          "note": "Maturation plans and risk (also risk mgmt)"
-        },
-        {
-          "pack": "mrl-deskbook",
-          "chapter": "ch07-mrl-deskbook-tailoring-and-users-guide.md",
-          "note": "MRL tailoring and use"
-        },
-        {
-          "pack": "mrl-deskbook",
-          "chapter": "cheatsheet.md (support file)",
-          "note": "Cheatsheet / quick reference"
-        },
-        {
-          "pack": "mrl-deskbook",
-          "chapter": "glossary.md (support file)",
-          "note": "Glossary for the pack"
-        },
-        {
-          "pack": "mrl-deskbook",
-          "chapter": "patterns.md (support file)",
-          "note": "Patterns/practice heuristics"
-        },
-        {
           "pack": "nasa-ms-7009",
           "chapter": "ch02-ms-development-evidence-capability.md",
           "note": "M&S development evidence and capability assessment factors"
@@ -1530,6 +1485,56 @@
           "pack": "jsp-815",
           "chapter": "ch09-performance-incidents-communication.md",
           "note": "Performance, incident, and communication notes from JSP 815"
+        },
+        {
+          "pack": "mrl-deskbook",
+          "chapter": "ch01-mrl-deskbook-introduction.md",
+          "note": "Version 2025 introduction, advisory status, and document map."
+        },
+        {
+          "pack": "mrl-deskbook",
+          "chapter": "ch02-mrl-deskbook-scale-threads-and-trl.md",
+          "note": "Version 2025 MRL scale, nine threads, environments, and TRL relationship."
+        },
+        {
+          "pack": "mrl-deskbook",
+          "chapter": "ch03-mrl-deskbook-adaptive-acquisition-framework.md",
+          "note": "Version 2025 MRL targets across MCA, MTA, and UCA pathways."
+        },
+        {
+          "pack": "mrl-deskbook",
+          "chapter": "ch04-mrl-deskbook-conducting-assessments.md",
+          "note": "Version 2025 assessment scope, taxonomy, team, visit, and report."
+        },
+        {
+          "pack": "mrl-deskbook",
+          "chapter": "ch05-mrl-deskbook-maturation-plans-and-risk.md",
+          "note": "Version 2025 Manufacturing Maturation Plans and risk practice."
+        },
+        {
+          "pack": "mrl-deskbook",
+          "chapter": "ch07-mrl-deskbook-users-guide.md",
+          "note": "Version 2025 Users Guide appendix, workbook left external."
+        },
+        {
+          "pack": "mrl-deskbook",
+          "chapter": "ch08-mrl-deskbook-adapting-criteria.md",
+          "note": "Version 2025 criteria adaptation for S and T, sustainment, limited systems, and industry."
+        },
+        {
+          "pack": "mrl-deskbook",
+          "chapter": "glossary.md (support file)",
+          "note": "Glossary pack"
+        },
+        {
+          "pack": "mrl-deskbook",
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
+        },
+        {
+          "pack": "mrl-deskbook",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
         }
       ]
     },
@@ -2107,11 +2112,6 @@
           "note": "Cooperative and adversarial cybersecurity T&E across the lifecycle (also T&E)"
         },
         {
-          "pack": "mrl-deskbook",
-          "chapter": "ch08-mrl-deskbook-ot-cybersecurity.md",
-          "note": "OT cybersecurity in MRL context"
-        },
-        {
           "pack": "nist-800-171",
           "chapter": "ch01-cui-scope-fundamentals-and-structure.md",
           "note": "CUI protection model tailored from SP 800-53B moderate baseline (also standards tailoring)"
@@ -2425,6 +2425,11 @@
           "pack": "fda-med-device",
           "chapter": "ch09-premarket-cyber-documentation.md",
           "note": "Premarket cyber documentation expectations from the February 2026 cybersecurity guidance"
+        },
+        {
+          "pack": "mrl-deskbook",
+          "chapter": "ch09-mrl-deskbook-ot-cybersecurity.md",
+          "note": "Version 2025 operational-technology screening inside MRL assessment."
         }
       ]
     },
@@ -3157,11 +3162,6 @@
           "note": "Agile federal contracting"
         },
         {
-          "pack": "mrl-deskbook",
-          "chapter": "ch06-mrl-deskbook-contract-language.md",
-          "note": "MRL contract language"
-        },
-        {
           "pack": "nasa-de-acquisition",
           "chapter": "ch03-nasa-de-acquisition-requirements-exchange-and-contract-language.md",
           "note": "Requirements exchange and DE contract language"
@@ -3205,6 +3205,11 @@
           "pack": "jsp-912",
           "chapter": "ch06-assess-tenders-hfi-3-0.md",
           "note": "Guides assessment of contractor tenders for human factors capability through process HFI-3.0, from JSP 912, March 2024."
+        },
+        {
+          "pack": "mrl-deskbook",
+          "chapter": "ch06-mrl-deskbook-contract-language.md",
+          "note": "Version 2025 contract language for MRL tasking."
         }
       ]
     },

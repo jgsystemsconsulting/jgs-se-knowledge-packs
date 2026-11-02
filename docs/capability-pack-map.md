@@ -41,7 +41,7 @@ Rules of construction:
 | 15. Opportunity/Benefit Management | 8 |
 | 16. Decision Analysis & Trade Studies | 5 |
 | 17. Technical Planning & Work Breakdown | 13 |
-| 18. Measurement & Technical Assessment | 37 |
+| 18. Measurement & Technical Assessment | 38 |
 | 19. Quality Assurance & Process Compliance | 7 |
 | 20. Safety, Reliability & Survivability | 96 |
 | 21. Cybersecurity & Security Engineering | 73 |
@@ -56,7 +56,7 @@ Rules of construction:
 | 30. Standards, Tailoring & Process Models | 68 |
 | 31. Specialty Engineering | 7 |
 | 32. Assurance & System Assurance | 16 |
-| **Total** | **738** |
+| **Total** | **739** |
 
 ## 1. Systems Thinking & Fundamentals
 
@@ -410,15 +410,6 @@ Rules of construction:
 | gao-tra | cheatsheet.md (support file) | Cheatsheet / quick reference |
 | gao-tra | glossary.md (support file) | Glossary for the pack |
 | gao-tra | patterns.md (support file) | Patterns/practice heuristics |
-| mrl-deskbook | ch01-mrl-deskbook-foundations-and-dod-policy.md | Manufacturing readiness fundamentals |
-| mrl-deskbook | ch02-mrl-deskbook-scale-threads-and-trl-relationship.md | MRL scale, threads, TRL relationship |
-| mrl-deskbook | ch03-mrl-deskbook-adaptive-acquisition-framework.md | MRL within the AAF (also acquisition) |
-| mrl-deskbook | ch04-mrl-deskbook-conducting-assessments.md | Conducting MRL assessments |
-| mrl-deskbook | ch05-mrl-deskbook-maturation-plans-and-risk.md | Maturation plans and risk (also risk mgmt) |
-| mrl-deskbook | ch07-mrl-deskbook-tailoring-and-users-guide.md | MRL tailoring and use |
-| mrl-deskbook | cheatsheet.md (support file) | Cheatsheet / quick reference |
-| mrl-deskbook | glossary.md (support file) | Glossary for the pack |
-| mrl-deskbook | patterns.md (support file) | Patterns/practice heuristics |
 | nasa-ms-7009 | ch02-ms-development-evidence-capability.md | M&S development evidence and capability assessment factors |
 | nasa-ms-7009 | ch04-ms-uncertainty-sensitivity.md | Uncertainty characterization and sensitivity analysis |
 | nasa-ms-7009 | ch05-ms-use-results-assessment.md | M&S use-phase input control and results assessment |
@@ -435,6 +426,16 @@ Rules of construction:
 | nist-stat-handbook | glossary.md (support file) | Glossary for the pack |
 | nist-stat-handbook | patterns.md (support file) | Patterns/practice heuristics |
 | jsp-815 | ch09-performance-incidents-communication.md | Performance, incident, and communication notes from JSP 815 |
+| mrl-deskbook | ch01-mrl-deskbook-introduction.md | Version 2025 introduction, advisory status, and document map. |
+| mrl-deskbook | ch02-mrl-deskbook-scale-threads-and-trl.md | Version 2025 MRL scale, nine threads, environments, and TRL relationship. |
+| mrl-deskbook | ch03-mrl-deskbook-adaptive-acquisition-framework.md | Version 2025 MRL targets across MCA, MTA, and UCA pathways. |
+| mrl-deskbook | ch04-mrl-deskbook-conducting-assessments.md | Version 2025 assessment scope, taxonomy, team, visit, and report. |
+| mrl-deskbook | ch05-mrl-deskbook-maturation-plans-and-risk.md | Version 2025 Manufacturing Maturation Plans and risk practice. |
+| mrl-deskbook | ch07-mrl-deskbook-users-guide.md | Version 2025 Users Guide appendix, workbook left external. |
+| mrl-deskbook | ch08-mrl-deskbook-adapting-criteria.md | Version 2025 criteria adaptation for S and T, sustainment, limited systems, and industry. |
+| mrl-deskbook | glossary.md (support file) | Glossary pack |
+| mrl-deskbook | cheatsheet.md (support file) | Cheatsheet / quick reference |
+| mrl-deskbook | patterns.md (support file) | Patterns/practice heuristics |
 
 ## 19. Quality Assurance & Process Compliance
 
@@ -562,7 +563,6 @@ Rules of construction:
 | cisa-cpg | glossary.md (support file) | Glossary for the pack |
 | cisa-cpg | patterns.md (support file) | Patterns/practice heuristics |
 | dote-te-guidebook | ch05-cybersecurity-te.md | Cooperative and adversarial cybersecurity T&E across the lifecycle (also T&E) |
-| mrl-deskbook | ch08-mrl-deskbook-ot-cybersecurity.md | OT cybersecurity in MRL context |
 | nist-800-171 | ch01-cui-scope-fundamentals-and-structure.md | CUI protection model tailored from SP 800-53B moderate baseline (also standards tailoring) |
 | nist-800-171 | ch02-access-control-and-identification.md | Access control and identification/authentication for CUI |
 | nist-800-171 | ch03-awareness-personnel-physical.md | Awareness/training, personnel security, physical protection |
@@ -626,6 +626,7 @@ Rules of construction:
 | fda-med-device | ch06-cybersecurity-qms.md | Cybersecurity in Medical Devices QMS considerations, February 2026 final, one document with premarket content |
 | fda-med-device | ch07-cybersecurity-premarket.md | Premarket cybersecurity submission content from the February 2026 cybersecurity guidance |
 | fda-med-device | ch09-premarket-cyber-documentation.md | Premarket cyber documentation expectations from the February 2026 cybersecurity guidance |
+| mrl-deskbook | ch09-mrl-deskbook-ot-cybersecurity.md | Version 2025 operational-technology screening inside MRL assessment. |
 
 ## 22. Human Systems Integration / Human Factors
 
@@ -796,7 +797,6 @@ Rules of construction:
 | dod-mosa | ch06-dod-mosa-acquisition-pathways.md | MOSA across AAF acquisition pathways |
 | doe-o-413-3 | ch03-acquisition-planning-and-ipt.md | Acquisition strategy, project execution planning, and IPTs (also planning) |
 | gao-agile | ch06-gao-agile-federal-contracting-process.md | Agile federal contracting |
-| mrl-deskbook | ch06-mrl-deskbook-contract-language.md | MRL contract language |
 | nasa-de-acquisition | ch03-nasa-de-acquisition-requirements-exchange-and-contract-language.md | Requirements exchange and DE contract language |
 | nasa-de-acquisition | ch04-nasa-de-acquisition-data-acquisition-contract-language.md | Data acquisition contract language |
 | nasa-npr-7123 | ch04-contracted-projects.md | Requirements flow to contracted projects |
@@ -806,6 +806,7 @@ Rules of construction:
 | jsp-376 | ch06-early-lifecycle-phases.md | Pre-Concept, Concept, and Assessment safety artefacts and SOC, OBC, and FBC evidence |
 | jsp-936 | ch07-suppliers.md | Supplier and procurement direction for acquiring AI systems from JSP 936 Part 1 |
 | jsp-912 | ch06-assess-tenders-hfi-3-0.md | Guides assessment of contractor tenders for human factors capability through process HFI-3.0, from JSP 912, March 2024. |
+| mrl-deskbook | ch06-mrl-deskbook-contract-language.md | Version 2025 contract language for MRL tasking. |
 
 ## 28. Stakeholder Engagement & Needs
 

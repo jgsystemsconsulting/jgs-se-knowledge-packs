@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "map_version": "1.22.0",
-  "generated_on": "2026-10-28",
+  "generated_on": "2026-11-02",
   "rules_of_construction": [
     "Every chapter in every pack under packs/<slug>/chapters/ is assigned to exactly one capability cluster (best fit).",
     "Cross-cutting chapters carry a remark noting the strong secondary fit.",
@@ -1411,60 +1411,6 @@
       "is_support": true
     },
     {
-      "pack": "mrl-deskbook",
-      "chapter": "ch01-mrl-deskbook-foundations-and-dod-policy.md",
-      "cluster": "Measurement & Technical Assessment",
-      "is_support": false
-    },
-    {
-      "pack": "mrl-deskbook",
-      "chapter": "ch02-mrl-deskbook-scale-threads-and-trl-relationship.md",
-      "cluster": "Measurement & Technical Assessment",
-      "is_support": false
-    },
-    {
-      "pack": "mrl-deskbook",
-      "chapter": "ch03-mrl-deskbook-adaptive-acquisition-framework.md",
-      "cluster": "Measurement & Technical Assessment",
-      "is_support": false
-    },
-    {
-      "pack": "mrl-deskbook",
-      "chapter": "ch04-mrl-deskbook-conducting-assessments.md",
-      "cluster": "Measurement & Technical Assessment",
-      "is_support": false
-    },
-    {
-      "pack": "mrl-deskbook",
-      "chapter": "ch05-mrl-deskbook-maturation-plans-and-risk.md",
-      "cluster": "Measurement & Technical Assessment",
-      "is_support": false
-    },
-    {
-      "pack": "mrl-deskbook",
-      "chapter": "ch07-mrl-deskbook-tailoring-and-users-guide.md",
-      "cluster": "Measurement & Technical Assessment",
-      "is_support": false
-    },
-    {
-      "pack": "mrl-deskbook",
-      "chapter": "cheatsheet.md",
-      "cluster": "Measurement & Technical Assessment",
-      "is_support": true
-    },
-    {
-      "pack": "mrl-deskbook",
-      "chapter": "glossary.md",
-      "cluster": "Measurement & Technical Assessment",
-      "is_support": true
-    },
-    {
-      "pack": "mrl-deskbook",
-      "chapter": "patterns.md",
-      "cluster": "Measurement & Technical Assessment",
-      "is_support": true
-    },
-    {
       "pack": "nasa-ms-7009",
       "chapter": "ch02-ms-development-evidence-capability.md",
       "cluster": "Measurement & Technical Assessment",
@@ -2151,12 +2097,6 @@
     {
       "pack": "dote-te-guidebook",
       "chapter": "ch05-cybersecurity-te.md",
-      "cluster": "Cybersecurity & Security Engineering",
-      "is_support": false
-    },
-    {
-      "pack": "mrl-deskbook",
-      "chapter": "ch08-mrl-deskbook-ot-cybersecurity.md",
       "cluster": "Cybersecurity & Security Engineering",
       "is_support": false
     },
@@ -3309,12 +3249,6 @@
     {
       "pack": "gao-agile",
       "chapter": "ch06-gao-agile-federal-contracting-process.md",
-      "cluster": "Supplier, Procurement & Acquisition",
-      "is_support": false
-    },
-    {
-      "pack": "mrl-deskbook",
-      "chapter": "ch06-mrl-deskbook-contract-language.md",
       "cluster": "Supplier, Procurement & Acquisition",
       "is_support": false
     },
@@ -4486,6 +4420,78 @@
       "pack": "faa-ams-vv",
       "chapter": "patterns.md",
       "cluster": "Verification",
+      "is_support": true
+    },
+    {
+      "pack": "mrl-deskbook",
+      "chapter": "ch01-mrl-deskbook-introduction.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": false
+    },
+    {
+      "pack": "mrl-deskbook",
+      "chapter": "ch02-mrl-deskbook-scale-threads-and-trl.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": false
+    },
+    {
+      "pack": "mrl-deskbook",
+      "chapter": "ch03-mrl-deskbook-adaptive-acquisition-framework.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": false
+    },
+    {
+      "pack": "mrl-deskbook",
+      "chapter": "ch04-mrl-deskbook-conducting-assessments.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": false
+    },
+    {
+      "pack": "mrl-deskbook",
+      "chapter": "ch05-mrl-deskbook-maturation-plans-and-risk.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": false
+    },
+    {
+      "pack": "mrl-deskbook",
+      "chapter": "ch06-mrl-deskbook-contract-language.md",
+      "cluster": "Supplier, Procurement & Acquisition",
+      "is_support": false
+    },
+    {
+      "pack": "mrl-deskbook",
+      "chapter": "ch07-mrl-deskbook-users-guide.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": false
+    },
+    {
+      "pack": "mrl-deskbook",
+      "chapter": "ch08-mrl-deskbook-adapting-criteria.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": false
+    },
+    {
+      "pack": "mrl-deskbook",
+      "chapter": "ch09-mrl-deskbook-ot-cybersecurity.md",
+      "cluster": "Cybersecurity & Security Engineering",
+      "is_support": false
+    },
+    {
+      "pack": "mrl-deskbook",
+      "chapter": "glossary.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": true
+    },
+    {
+      "pack": "mrl-deskbook",
+      "chapter": "cheatsheet.md",
+      "cluster": "Measurement & Technical Assessment",
+      "is_support": true
+    },
+    {
+      "pack": "mrl-deskbook",
+      "chapter": "patterns.md",
+      "cluster": "Measurement & Technical Assessment",
       "is_support": true
     }
   ]

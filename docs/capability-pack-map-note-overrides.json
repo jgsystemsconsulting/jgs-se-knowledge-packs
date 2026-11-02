@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "map_version": "1.22.0",
-  "generated_on": "2026-10-28",
+  "generated_on": "2026-11-02",
   "notes": [
     {
       "pack": "dau-se-guidebook",
@@ -1129,51 +1129,6 @@
       "note": "Patterns/practice heuristics"
     },
     {
-      "pack": "mrl-deskbook",
-      "chapter": "ch01-mrl-deskbook-foundations-and-dod-policy.md",
-      "note": "Manufacturing readiness fundamentals"
-    },
-    {
-      "pack": "mrl-deskbook",
-      "chapter": "ch02-mrl-deskbook-scale-threads-and-trl-relationship.md",
-      "note": "MRL scale, threads, TRL relationship"
-    },
-    {
-      "pack": "mrl-deskbook",
-      "chapter": "ch03-mrl-deskbook-adaptive-acquisition-framework.md",
-      "note": "MRL within the AAF (also acquisition)"
-    },
-    {
-      "pack": "mrl-deskbook",
-      "chapter": "ch04-mrl-deskbook-conducting-assessments.md",
-      "note": "Conducting MRL assessments"
-    },
-    {
-      "pack": "mrl-deskbook",
-      "chapter": "ch05-mrl-deskbook-maturation-plans-and-risk.md",
-      "note": "Maturation plans and risk (also risk mgmt)"
-    },
-    {
-      "pack": "mrl-deskbook",
-      "chapter": "ch07-mrl-deskbook-tailoring-and-users-guide.md",
-      "note": "MRL tailoring and use"
-    },
-    {
-      "pack": "mrl-deskbook",
-      "chapter": "cheatsheet.md",
-      "note": "Cheatsheet / quick reference"
-    },
-    {
-      "pack": "mrl-deskbook",
-      "chapter": "glossary.md",
-      "note": "Glossary for the pack"
-    },
-    {
-      "pack": "mrl-deskbook",
-      "chapter": "patterns.md",
-      "note": "Patterns/practice heuristics"
-    },
-    {
       "pack": "nasa-ms-7009",
       "chapter": "ch02-ms-development-evidence-capability.md",
       "note": "M&S development evidence and capability assessment factors"
@@ -1747,11 +1702,6 @@
       "pack": "dote-te-guidebook",
       "chapter": "ch05-cybersecurity-te.md",
       "note": "Cooperative and adversarial cybersecurity T&E across the lifecycle (also T&E)"
-    },
-    {
-      "pack": "mrl-deskbook",
-      "chapter": "ch08-mrl-deskbook-ot-cybersecurity.md",
-      "note": "OT cybersecurity in MRL context"
     },
     {
       "pack": "nist-800-171",
@@ -2712,11 +2662,6 @@
       "pack": "gao-agile",
       "chapter": "ch06-gao-agile-federal-contracting-process.md",
       "note": "Agile federal contracting"
-    },
-    {
-      "pack": "mrl-deskbook",
-      "chapter": "ch06-mrl-deskbook-contract-language.md",
-      "note": "MRL contract language"
     },
     {
       "pack": "nasa-de-acquisition",
@@ -3690,6 +3635,66 @@
     },
     {
       "pack": "faa-ams-vv",
+      "chapter": "patterns.md",
+      "note": "Patterns/practice heuristics"
+    },
+    {
+      "pack": "mrl-deskbook",
+      "chapter": "ch01-mrl-deskbook-introduction.md",
+      "note": "Version 2025 introduction, advisory status, and document map."
+    },
+    {
+      "pack": "mrl-deskbook",
+      "chapter": "ch02-mrl-deskbook-scale-threads-and-trl.md",
+      "note": "Version 2025 MRL scale, nine threads, environments, and TRL relationship."
+    },
+    {
+      "pack": "mrl-deskbook",
+      "chapter": "ch03-mrl-deskbook-adaptive-acquisition-framework.md",
+      "note": "Version 2025 MRL targets across MCA, MTA, and UCA pathways."
+    },
+    {
+      "pack": "mrl-deskbook",
+      "chapter": "ch04-mrl-deskbook-conducting-assessments.md",
+      "note": "Version 2025 assessment scope, taxonomy, team, visit, and report."
+    },
+    {
+      "pack": "mrl-deskbook",
+      "chapter": "ch05-mrl-deskbook-maturation-plans-and-risk.md",
+      "note": "Version 2025 Manufacturing Maturation Plans and risk practice."
+    },
+    {
+      "pack": "mrl-deskbook",
+      "chapter": "ch06-mrl-deskbook-contract-language.md",
+      "note": "Version 2025 contract language for MRL tasking."
+    },
+    {
+      "pack": "mrl-deskbook",
+      "chapter": "ch07-mrl-deskbook-users-guide.md",
+      "note": "Version 2025 Users Guide appendix, workbook left external."
+    },
+    {
+      "pack": "mrl-deskbook",
+      "chapter": "ch08-mrl-deskbook-adapting-criteria.md",
+      "note": "Version 2025 criteria adaptation for S and T, sustainment, limited systems, and industry."
+    },
+    {
+      "pack": "mrl-deskbook",
+      "chapter": "ch09-mrl-deskbook-ot-cybersecurity.md",
+      "note": "Version 2025 operational-technology screening inside MRL assessment."
+    },
+    {
+      "pack": "mrl-deskbook",
+      "chapter": "glossary.md",
+      "note": "Glossary pack"
+    },
+    {
+      "pack": "mrl-deskbook",
+      "chapter": "cheatsheet.md",
+      "note": "Cheatsheet / quick reference"
+    },
+    {
+      "pack": "mrl-deskbook",
       "chapter": "patterns.md",
       "note": "Patterns/practice heuristics"
     }
