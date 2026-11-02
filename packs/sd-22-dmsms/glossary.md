@@ -1,83 +1,101 @@
-# SD-22 DMSMS Glossary
+# SD-22 DMSMS Glossary (06-JAN-2026)
 
-Key terms from the SD-22 DMSMS Guidebook, alphabetical, with chapter references. Definitions are synthesized in original wording, not reproduced from the source.
+Key terms for SD-22, 06-JAN-2026 (cover dated December 2025). Synthesized from Appendix P (abbreviations) and Appendix R (definitions). Own wording. No long source runs.
 
-**Analyze (step)** — the fourth DMSMS step: enumerate viable resolution options, price each by its cost elements, and pick the best return on investment. (Ch 6)
+## A
 
-**AoA / BCA** — Analysis of Alternatives (lighter, for clear low-cost/low-risk choices) and Business Case Analysis (formal cost/benefit/risk comparison on net present value). (Ch 6)
+**Analyze (step).** Fourth step in the DMSMS management process. Define viable resolutions, cost them, and select the preferred path, often through BCA or AoA.
 
-**ARCI chart** — Accountable / Responsible / Consulted / Informed / Not-Informed assignment of DMT roles to activities; exactly one Accountable per decision per level. (Ch 3)
+**AoA.** Analysis of Alternatives. Lighter comparative study used when stakes and option differences are modest.
 
-**Assess (step)** — the third DMSMS step: weigh a potential issue's cost, schedule, availability, and readiness effect to decide whether, when, and at what level to resolve it. (Ch 5)
+**ASSIST.** DoD document gateway used as the metadata source for this edition (ident 275490). No host name is published in pack files.
 
-**Bill of materials (BOM)** — the list of items on a system; the single most important DMSMS data element. An indentured BOM (showing component-to-assembly-to-system) beats a flat one. (Ch 3, Ch 4)
+**Assess (step).** Third step. Decide whether a resolution is needed, when it should start, and at what assembly level.
 
-**Bona fide need statement** — documented justification to the General Counsel for buying in advance of need, to obtain a 31 U.S.C. 1502(a) exception for a large life-of-need buy. (Ch 7)
+## B
 
-**Cost avoidance** — the avoided reactive-resolution cost minus the actual proactive-resolution cost; zero if proactive and reactive resolutions are the same or the issue was found reactively. (Ch 6)
+**BCA.** Business Case Analysis. Fuller cost, benefit, and risk comparison used when options diverge sharply on life-cycle cost or residual risk.
 
-**Critical materials analysis** — the surveillance method that hunts hazardous, exotic, or supply-constrained materials embedded low in the supply chain; best done centrally and collaboratively. (Ch 4)
+**BOM.** Bill of materials. Flat or indentured list of items in a system or assembly. Appendix J covers how to acquire or build one when the contract did not deliver it.
 
-**DMSMS** — Diminished Manufacturing Sources and Material Shortages: the loss, or coming loss, of the manufacturers and suppliers of the items, materials, or software a system depends on. (Ch 1)
+## C
 
-**DMSMS issue / case** — a specific instance of a source or material loss being managed; a case is tracked from identification through resolution implementation. (Ch 1, Ch 3)
+**Capability levels (DMSMS program).** Four-level framework (Appendix D) marking how proactive and strategic a program's DMSMS management is. Used to set DMP ambition and improvement targets.
 
-**DMSMS Management Plan (DMP)** — the living plan, required by DoDI 4245.15, developed by the DMT and approved by the PM, documenting the program's DMSMS approach. (Ch 3)
+**Critical materials.** Materials whose shortage can create DMSMS even when finished assemblies still look available.
 
-**DMSMS Management Team (DMT)** — the chartered, multidisciplinary team holding lead and oversight for DMSMS management of a system. (Ch 3)
+## D
 
-**Five-step process** — Prepare, Identify, Assess, Analyze, Implement: the spine of the guidebook, wrapped by a continuous Strategize overlay. (Ch 1)
+**DMP.** DMSMS Management Plan. Leadership-approved description of proactive, risk-based processes, team structure, operations, and funding approach.
 
-**First-order obsolescence** — obsolescence driven directly by market forces or regulation affecting the ability to buy, license, or support an item. (Ch 1)
+**DMT.** DMSMS Management Team. Chartered team that oversees DMP execution.
 
-**Functional obsolescence** — an item still available commercially that no longer works because of hardware, software, or requirements changes elsewhere; the heart of lower-order obsolescence. (Ch 1, Ch 8)
+**DMSMS.** Diminishing Manufacturing Sources and Material Shortages. Loss or impending loss of manufacturers or suppliers for items, materials, or software a system needs, such that supply cannot meet demand on the required timeline.
 
-**GIDEP** — the Government-Industry Data Exchange Program: a no-cost source of discontinuance notices and batch parts-list matching (cannot predict obsolescence). (Ch 4)
+**DoD / DoDI / DoDM.** Department of Defense and its instructions and manuals. Named as constraints; not quoted in this pack.
 
-**Health assessment** — a by-year accounting of starting balance, predicted usage, and ending balance per item over a horizon, estimating when an item can no longer meet demand. (Ch 5)
+**DSPO.** Defense Standardization Program Office. Preparing activity publisher for SD-22.
 
-**Identify (step)** — the second DMSMS step: monitoring and surveillance that turns BOMs into a list of immediate, near-term, and forecasted obsolescence issues. (Ch 4)
+## F
 
-**Implement (step)** — the fifth DMSMS step: program and budget the chosen resolution, integrate it with modification funding, and execute it through the change process. (Ch 7)
+**First-order obsolescence.** Obsolescence driven directly by market, regulatory, or supplier decisions that cut buy, license, or support paths.
 
-**Indentured BOM** — a bill of materials showing the component-to-assembly-to-unit-to-system hierarchy; reveals shared assemblies that widen resolution options. (Ch 4)
+**FMS.** Foreign Military Sales. Partner equipment sold by DoD under security-cooperation terms. This edition adds FMS communication and step-level FMS notes.
 
-**Level of resolution** — the assembly level at which a fix is applied (item versus next-higher assembly); decided by five factors and cost arithmetic. (Ch 5, Ch 6)
+## G
 
-**Life-of-need (LON) buy** — a one-time purchase sized to cover demand to end of need (not just end of contract); bounded by statute and demand-data quality. (Ch 3, Ch 7)
+**GIDEP.** Government-Industry Data Exchange Program. Shared channel for product discontinuance and related notices.
 
-**Lower-order obsolescence** — derived, functional obsolescence caused by changes made to resolve a first-order issue, perform an upgrade, or meet a new requirement. (Ch 1)
+## H
 
-**MaSME** — Materials and Structural, Mechanical, and Electrical items: non-electronic components that age more slowly but are still DMSMS-vulnerable. (Ch 1, Ch 3)
+**Health assessment.** Projection of item demand against inventory over time, rolled up the assembly hierarchy, to support timing and level decisions (Appendix L method).
 
-**Obsolescence** — the situation-dependent state of an item being no longer current and superseded by something newer; the looser concept that overlaps but is not identical to DMSMS. (Ch 8)
+## I
 
-**Predictive tool** — software that forecasts item end-of-life; imperfect (tools disagree and miss items), so output must be manually confirmed and more than one used. (Ch 4)
+**Identify (step).** Second step. Monitoring and surveillance that produce immediate, near-term, and forecast DMSMS issues.
 
-**Prepare (step)** — the first DMSMS step: stand up the foundations, the DMT, the DMP, and the operational processes. (Ch 3)
+**ILA.** Independent Logistics Assessment. Review forum with DMSMS-related questions in Appendix C.
 
-**Process capability matrix** — Appendix D's four-level maturity model for the key DMSMS processes; kept aligned with the DMP. (Ch 3)
+**Implement (step).** Fifth step. Fund, field, and close the chosen resolution.
 
-**Product Discontinuance Notice (PDN)** — a supplier notice that an item is ending production; pulled from predictive tools, GIDEP, and DLA, and always validated before action. (Ch 4)
+## L
 
-**Quality Management System (QMS)** — the framework controlling DMSMS processes with a quality plan, compliance metrics, and Lean Six Sigma / DMAIC process analysis. (Ch 3)
+**Life-of-need (LON) buy.** Purchase sized to remaining demand so the program is not forced into repeated bridge buys.
 
-**Resolution category** — one of three escalating option families: existing material (logistics), substitutes (engineering), redesign (engineering). (Ch 6)
+**Lower-order (derived) obsolescence.** Functional obsolescence created by the program's own design or support changes elsewhere in the system.
 
-**Resolution cost element** — one of roughly twenty cost categories summed to build a resolution's total implementation cost. (Ch 6)
+## M
 
-**Risk cube** — the three-axis filter (item criticality, supply-chain vulnerability, time to resolve) deciding which uncategorized items earn proactive monitoring. (Ch 4)
+**MaSME.** Materials and structural, mechanical, and electrical items. In scope alongside electronics and software.
 
-**Strategize** — the continuous sixth activity wrapping the five steps: system-modification planning plus using evaluation results to improve the program. (Ch 1)
+## O
 
-**Supportability** — one of the five obsolescence causes: an item that can no longer be supported (e.g., unsupportable software) is obsolete. (Ch 8)
+**Obsolescence.** Context-dependent state in which an item is out of production, out of mainstream support, or functionally outdated. Not identical to a DMSMS issue (see ch08).
 
-**Sustainment Review (SR)** — the 10 U.S.C. 4323 review every five years after IOC that evaluates DMSMS and parts-management effectiveness. (Ch 2)
+## P
 
-**System Security Engineering (SSE)** — the discipline (anti-tamper, assurance, SCRM, program protection, cybersecurity) that a resolution change must trigger a re-look against. (Ch 6)
+**PDN.** Product Discontinuance Notice. Trigger into Identify and Assess; not an automatic resolution order.
 
-**Technology refreshment** — the planned, periodic replacement of items to keep them accessible, ideally before they go obsolete. (Ch 1, Ch 6)
+**PM / PSM.** Program Manager / Product Support Manager. Leadership roles that charter the DMT and approve the DMP.
 
-**Watch list** — a closed-but-monitored case status (e.g., to confirm the demand assumptions behind a life-of-need buy still hold). (Ch 3)
+**PMR.** Provisioning Master Record. Supply-system record of items bought for organic support.
 
-**Window of opportunity** — the principle that earlier identification widens the time available, yielding more and cheaper resolution options and lower readiness/schedule risk. (Ch 3, Ch 4)
+**Prepare (step).** First step. Foundations, DMT, DMP, operations funding, contracts, workforce, and FMS communication.
+
+## R
+
+**Resolution.** Selected action that restores or preserves supportability for a DMSMS issue (for example LON buy, substitute, redesign, or technology refreshment).
+
+## S
+
+**SETR.** Systems Engineering Technical Review. Review forum with DMSMS questions in Appendix B.
+
+**SR.** Sustainment Review. Sustainment-phase review with DMSMS-related questions in Appendix C.
+
+**System security engineering.** Specialty engineering input considered inside Analyze when assurance or foreign-adversary risk shapes option viability. Not a separate pack chapter.
+
+## Appendix map (non-chapter)
+
+- **Appendix P**  -  abbreviations absorbed here.
+- **Appendix Q**  -  references class; bibliography not dumped.
+- **Appendix R**  -  definitions absorbed here.
