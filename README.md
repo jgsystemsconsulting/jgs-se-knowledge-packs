@@ -38,8 +38,8 @@ chapter citations. It carries no source content and answers only when explicitly
 This is a curated catalogue of those packs for **systems engineers**, built to one rule that makes
 it different from "point a tool at a PDF":
 
-> **Only genuinely open sources go in.** Public-domain (NASA, DoD) and open-licensed (SEBoK, OMG
-> specs, CC content): never paywalled or all-rights-reserved material. Eligibility is enforced,
+> **Only genuinely open sources go in.** Public-domain (NASA, DoD) and open-licensed (SEBoK, CC
+> content): never paywalled or all-rights-reserved material. Eligibility is enforced,
 > not assumed (see [docs/SOURCE-VETTING.md](docs/SOURCE-VETTING.md)), and every pack is
 > redistributable by construction (see [docs/LICENSING.md](docs/LICENSING.md)).
 

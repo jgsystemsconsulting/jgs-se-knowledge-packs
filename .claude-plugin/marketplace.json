@@ -6,7 +6,7 @@
     {
       "name": "jgs-se-knowledge-packs",
       "source": "./",
-      "description": "Installable systems-engineering knowledge packs reconstructed from open sources (SEBoK, NASA, OMG SysML, DoDAF, MIT OCW)."
+      "description": "Installable systems-engineering knowledge packs reconstructed from open sources (SEBoK, NASA, DoDAF, MIT OCW)."
     }
   ]
 }
