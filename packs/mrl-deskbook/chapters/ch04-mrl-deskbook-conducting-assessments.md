@@ -1,61 +1,76 @@
-# Chapter 4: Conducting MRL Assessments
+# Chapter: Conducting MRL Assessments
 
 ## Core Idea
-An MRL Assessment is the structured field procedure for measuring manufacturing maturity and risk, and it earns its value only inside a larger manufacturing risk-management process — not as a stand-alone score. A good assessment compares where the key program elements actually stand against the MRL that is *nominal* for the program's lifecycle stage, characterizes the risk wherever elements fall short of that target, and lays the groundwork for mitigation planning and investment. The Deskbook frames the work as an eight-activity flow that moves from defining what to look at, through team formation and contractor orientation, into on-site examination, and out to a documented report. The result drives concrete actions: maturity goals, action plans with funding estimates, transition decisions, and milestone-readiness judgments.
+
+Section 4 turns the deskbook role pair into a repeatable assessment process. The responsible organization sets scope, forms the team, and owns the report. The assessed organization supports with a self-assessment, site access, and evidence. The product is a structured view of manufacturing maturity and residual risk, not a single pass or fail stamp.
 
 ## Frameworks Introduced
-- **Sample Process Flow for Conducting MRL Assessments (Figure 4-1)** — the Deskbook's reference sequence of assessment activities: determine initial scope; determine taxonomy and schedule; form and orient the team; orient the contractors being assessed; request a contractor self-assessment; set the site-visit agenda; conduct the assessment; prepare the report.
-  - When/how: use it as the backbone for planning any assessment, tailoring depth and team size to the program's size and risk.
-- **The element-filtering questions (Section 4.3 taxonomy)** — a screen of nine risk dimensions (Materials, Cost, Design, Manufacturing Process, Quality, Schedule, Facilities, Supply Chain Management, Industrial Base) applied to every critical technology, immature process, and significant WBS or BOM entry.
-  - When/how: any "yes" answer flags that element as a candidate for assessment; use it to decide *what* gets examined rather than trying to assess everything.
-- **On-site selection criteria** — the test for which locations justify a physical visit: where the largest share of manufacturing cost is incurred, where final assembly and test happen, where the most sensitive tasks run, where the least mature materials or availability issues sit, and where known significant problems (low yields, high cost, immature processes) exist.
-  - When/how: depth and type of assessment follow the element's risk level; reserve scarce on-site effort for the high-risk locations.
-- **The MRL threads and knowledge-based questions** — the criteria-derived lens, applied per component, subsystem, system, and ultimately program level, used to interrogate process maps, work instructions, and factory tours and to assign an MRL.
-  - When/how: the assessment lead uses the threads to structure the review and set targets per thread/sub-thread; the question sets (stored in the DoD MRL website tools) guide the dialog at each element.
-- **The "deep dive"** — a deeper, sub-component-level examination triggered when an element turns out to be more complex than first thought.
-  - When/how: when further scrutiny of a critical component is warranted, the threads are re-applied at the sub-tier, and an MRL is assigned to that lowest examined unit.
-- **DoD Risk, Issue, and Opportunity Management Guide for Defense Acquisition Programs** — the named external method for characterizing risk where a thread target is not met.
-  - When/how: when criteria are missed, the team uses it to assess the likelihood and severity of each unmet thread's risk; available via the USD(R&E) Engineering Resources for Program Offices website.
-- **The MRL Assessment report structure (Section 4.9)** — a ten-element documented output covering the elements assessed and state of the art, responsible companies, team roster, dates and locations, manufacturing processes, the MRL per element, shortfalls against criteria (key factors and driving issues), plans to reach target, risk to cost/schedule/performance, and an appraisal of current mitigation plans.
-  - When/how: produced after site visits, once analysis turns raw observations into a defensible readiness-and-risk picture; the Manufacturing Maturity Plan (MMP) is normally delivered with it.
+
+### Process spine
+
+1. Determine initial assessment scope.
+2. Determine assessment taxonomy and schedule.
+3. Form and orient the assessment team.
+4. Orient the organization being assessed.
+5. Request a self-assessment from the assessed organization.
+6. Set the site-visit agenda.
+7. Conduct the assessment (review self-assessment, gather evidence, complete findings).
+8. Prepare the assessment report.
+
+### Scope by decision point
+
+Scope and target move with life-cycle stage and product type. Examples the deskbook walks:
+
+- Around Milestone A, a program office may not exist yet and primes may not be selected. The lead DoD responsible organization still names who will run the assessment.
+- Around Milestone B, competing primes may still hold system-level preliminary designs. Assessments remain useful when risk warrants them, including when new technology or requirement change reopens design risk.
+- At Critical Design Review, the prime is tied to detailed design.
+- At Milestone C, the prime is tied to the system-level production readiness review.
+- At full-rate production, the prime is tied to production execution.
+
+A low-rate item such as a satellite and a high-rate item such as ammunition share the need for adequate manufacturing maturity evidence. They do not share identical numeric expectations.
+
+### Taxonomy
+
+Taxonomy is the breakdown of what will be assessed: system, subsystem, component, process, supplier tier, or thread slice. Build the taxonomy early so site time and SME skill match the risk picture. Schedule follows taxonomy: self-assessment lead time, site days, outbrief, and report freeze.
+
+### Team and orientation
+
+The team mixes manufacturing subject-matter experts with enough program context to read cost, schedule, and performance impact. Orient the assessed organization on role labels, target MRL, taxonomy, evidence expectations, and the difference between self-assessment and independent judgment. Training materials and criteria tools sit outside this pack; the process still assumes the team can read threads and targets.
+
+### Self-assessment and site visit
+
+Ask the assessed organization to score itself against the target criteria before the visit. The self-assessment is an input, not the final answer. Site agendas cover plant walks, process reviews, supplier topics, quality evidence, workforce and facilities topics, and outbrief time. During the visit, compare claimed maturity to observed evidence. Complete findings while context is fresh.
+
+### Report
+
+The assessment report records scope, taxonomy, target, method, findings by thread or element, residual risks, and the handoff into Manufacturing Maturation Plans where targets are missed. Bottom-line maturity statements belong with supporting evidence, not as bare numbers.
 
 ## Key Concepts
-- **Scope and target track the lifecycle stage.** The MRL target and the breadth of the assessment shift with the phase. The Deskbook's worked progression: manufacturing feasibility in MSA aiming at MRL 4 for Milestone A; MRL 4–5 early in TMRR, reaching MRL 6 by its close; MRL 6 criteria framing EMD source selection (with MRL 7 used as the program moves toward CDR); integration, assembly, installation, and test examined to reach MRL 7 at CDR; MRL 8 as the program approaches a LRIP/Milestone C decision, with attention to actual pilot-line capability and capacity and to anticipated FRP problems.
-- **Different programs need different maturity, but all need *adequate* maturity.** A low-rate item such as a satellite carries different specifics than a high-rate program such as ammunition or radios, yet both must demonstrate enough manufacturing maturity to hit cost, schedule, and performance at the next level.
-- **Taxonomy = what, where, and who.** Determining the taxonomy means breaking the system down by subsystem, item, or component for analysis, deciding which elements (and their test and assembly processes) merit evaluation, choosing which locations get on-site visits, and naming who leads. Normally the government office leads at the primes; the prime leads at its suppliers.
-- **You cannot visit everyone.** Visiting every supplier of every material, component, and assembly is rarely feasible, so the high-risk subset goes on-site and the rest use alternative approaches such as written self-assessments analyzed by the team.
-- **Team composition spans the manufacturing disciplines.** Members should bring experience across manufacturing engineering and the industrial base, quality and supply-chain management, design and systems engineering, and production itself — with technology, product, and process SMEs added to catch issues the generalists would miss.
-- **Independence is a deliberate design choice.** Building in independence (an independent co-chair, independent SMEs, or an independent technical authority reviewing results) adds credibility, surfaces alternative views, brings in SMEs the program would not otherwise reach, and spreads information beyond the program office.
-- **Orientation runs both ways.** Outside team members familiarize themselves with the assessment's purpose, the critical technologies, critical processes, and key contractor roles; the contractors being assessed receive an orientation package (criteria and threads, links to reference material, self-assessment questions, and — for on-site visits — the question set, a draft agenda, the evidence to bring, high-interest shop-floor areas, and resource expectations).
-- **Self-assessment first.** The contractor answers the baseline questions: the current MRL of each key technology, product, and process; the MRL reachable by phase/program end if funding continues as planned, plus the activities and schedule to get there; and, for an advanced technology demonstration, the MRL sufficient to commit to a product-baseline design.
-- **The site visit balances briefings against firsthand observation.** A typical agenda runs from welcome and orientation through team and contractor introductions, an objectives briefing, the contractor's self-assessment overview, shop-floor visits, focused one-on-one or small-group SME discussions, a private team session to record observations, and an out-brief — deliberately trading briefing-room time for shop-floor time.
-- **Assess top-down, then report bottom-up.** Conduct the assessment through a defined hierarchy from system level down to the smallest examined unit, assigning the applicable threads and the needed system-level test and assembly processes at each level; then document a bottom-up picture so component findings roll up for higher-level analysis and decision-making.
-- **The report is a manufacturing-maturity baseline.** Its primary audience is the responsible organization, because it underpins risk management: it either justifies a plan to raise readiness for transition or shows the product is already ready, and it may feed the MDA's view of whether manufacturing risk supports milestone approval.
-- **Engaging DCMA strengthens the read.** For DoD-led assessments, the Defense Contract Management Agency office can supply current and past contractor performance data, and DCMA personnel may be worth including on on-site teams and asked for their perspective during the assessment.
+
+- **Responsible versus assessed.** Cost, schedule, and performance ownership stay with the responsible organization. Evidence production and MMP drafting sit heavily with the assessed organization.
+- **Life-cycle sensitivity.** Early phases emphasize feasibility and concept risk. Later phases emphasize pilot-line and production evidence.
+- **Independence.** Do not rely only on the assessed organization's self-picture. Outside SMEs and Defense Contract Management Agency insight strengthen the read.
+- **SETR and milestone coupling.** Assessment results feed technical reviews and decision reviews so manufacturing risk is visible beside other technical risk.
 
 ## Mental Models
-- **An MRL is not a go/no-go gauge.** Collapsing a whole technology, product, or weapon system to a single MRL usually adds little value, because maturity varies widely component-to-component and process-to-process — some elements are off-the-shelf and high, others carry new design that sits well below a key process's proven capability.
-- **Beware the "weakest link" rollup.** Forcing a system to inherit the MRL of its least-ready element can mislead — it implies more risk than really exists, and the distortion grows for complex subsystems and systems where not every element will, for example, reach MRL 6 by Milestone B. The honest answer is a level-by-level picture, with each MRL identified to expose its specific risks.
-- **The threads are a tripwire, not just a checklist.** Beyond assigning a number, the threads alert the team to areas that need a closer look — e.g., a guidance system reported at MRL 3 against an MRL 4 target signals that component-level detail is needed to explain the shortfall and find the critical steps to mature it.
-- **Filter to focus.** The nine risk questions exist so effort lands on the elements that actually carry technical and manufacturing risk, not on the whole bill of materials.
-- **The assessment is the front half of risk management.** Its purpose is to feed mitigation: where targets are missed, the team defines the actions and a Manufacturing Maturity Plan needed to reach target in time to transition or to support a milestone with manageable risk.
 
-## Anti-patterns
-- **Treating the assessment as a simple "go/no-go" gauge.** The Deskbook is explicit that MRL Assessments are not pass/fail instruments, and that assigning one overall MRL to a technology, product, or whole system often has little value.
-- **Applying a naive "weakest link" rollup.** Letting the lowest-readiness element set the system's MRL is named as frequently misleading, overstating overall risk and becoming even less useful for complex subsystems and systems.
+**Scope before score.** Wrong taxonomy wastes the site visit. Fix the unit of analysis first.
+
+**Self-assessment is hypothesis.** Treat it as the assessed organization's claim set. The visit tests the claim set.
+
+**Report as decision support.** Decision authorities need residual risk, not only a target label. Chapter 5 converts shortfalls into MMPs.
 
 ## Key Takeaways
-1. An MRL Assessment measures manufacturing maturity and risk against the *nominal* MRL for the program's lifecycle stage, and only pays off inside a broader manufacturing risk-management process.
-2. Follow the Figure 4-1 flow — scope, taxonomy/schedule, team, contractor orientation, self-assessment, agenda, conduct, report — scaled to program size and risk.
-3. Use the nine filtering questions to decide *what* to assess, and the on-site criteria to decide *where* to spend scarce visit effort.
-4. Build a multi-disciplinary team and deliberately engineer in independence for credibility and alternative views.
-5. Drive the on-site work with the MRL threads and knowledge-based questions, going to a "deep dive" when complexity demands it and characterizing unmet-target risk with the DoD RIO Management Guide.
-6. Assess top-down through a hierarchy but report bottom-up; resist single-number and weakest-link summaries.
-7. The report (its ten elements plus the MMP) is the manufacturing-maturity baseline that supports transition and milestone decisions.
+
+- Eight-step spine from scope through report.
+- Scope and target flex by milestone and product type while still demanding adequate maturity evidence.
+- Self-assessment precedes, but does not replace, independent review.
+- Site visits test claims against shop-floor and supply-chain evidence.
+- Reports hand incomplete targets to maturation planning.
 
 ## Connects To
-- **`gao-tra` pack (MRL 1–10):** the MRL scale this assessment reports against is the manufacturing counterpart to the TRL scale; this chapter is the *how-to-measure* procedure that deepens gao-tra's treatment of the levels themselves, and the assessment's lifecycle targets (MRL 4 at Milestone A, MRL 6 by end of TMRR, MRL 7 at CDR, MRL 8 approaching LRIP) parallel TRL milestone thresholds.
-- **ch03 (Section 3 / lifecycle expectations):** the source's stage-by-stage MRL targets rest on the key-decision-point guidance defined earlier in the Deskbook.
-- **ch05 / the Manufacturing Maturity Plan (MMP):** the mitigation plan this chapter calls for is detailed in Section 5 and is normally delivered alongside the assessment report.
-- **DoD Risk, Issue, and Opportunity Management Guide:** the external risk method invoked whenever a thread target is missed.
-- **`dau-se-guidebook` / `nist-sse` packs:** the systems-engineering and producibility context in which manufacturing-readiness reviews live alongside design and technical reviews (CDR, PRR).
+
+- `ch01-mrl-deskbook-introduction.md` defines the role pair.
+- `ch02-mrl-deskbook-scale-threads-and-trl.md` supplies threads and environments.
+- `ch05-mrl-deskbook-maturation-plans-and-risk.md` consumes shortfalls.
+- `ch07-mrl-deskbook-users-guide.md` describes the external workbook teams often use during scoring.

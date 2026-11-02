@@ -1,45 +1,48 @@
-mrl-deskbook pack — content licence
+mrl-deskbook pack: content licence
 ====================================
 
-This pack is derived from:
-    Manufacturing Readiness Level (MRL) Deskbook
-    Version 2022 (1 October 2022 update)
-    Prepared by the Office of the Secretary of Defense Manufacturing Technology
-    Program (OSD ManTech), in collaboration with the Joint Service/Industry
-    MRL Working Group.
+This pack derived from:
+Manufacturing Readiness Level (MRL) Deskbook
+Version 2025
+1 May 2025
+(Includes Updates to MRL Criteria Matrix Effective 8 July 2025)
+DOPSR Case # 25-T-1829.
+Prepared by Office of the Secretary of Defense Manufacturing Technology
+Program (OSD ManTech), in collaboration with the Joint Service/Industry
+MRL Working Group.
 
-Source licence: Public Domain (US Government work); Distribution A — Approved for
-public release; distribution unlimited.  (tier 1 — see ../../docs/SOURCE-VETTING.md)
-No source-material download link is published (see ../../docs/LICENSING.md).
+Source licence: Public Domain (US Government work, 17 U.S.C. 105); Distribution A,
+approved public release; distribution unlimited. (tier 1; see ../../docs/SOURCE-VETTING.md)
+No source-material download link published (see ../../docs/LICENSING.md).
 
-This source is a work of the United States Government, prepared by/for the Department
-of Defense, and is therefore NOT subject to copyright protection in the United States
-(17 U.S.C. 105). It is marked Distribution A (approved for public release; distribution
-unlimited) and may be reproduced and distributed without further permission.
+This source work is a United States Government work, prepared by/for the Department
+of Defense, and therefore NOT subject to copyright protection in the United States
+(17 U.S.C. 105). It is marked Distribution A (approved public release; distribution
+unlimited) and may be reproduced and distributed without permission.
+The cover does not print a copyright notice.
 
-ADVISORY-STATUS NOTICE (reproduced from the source). The Deskbook's own front matter
-states:
+ADVISORY-STATUS NOTICE (reproduced from source). The Deskbook's own page 2 states:
 
-    "This document is not a DoD requirement and is offered as a best practice."
+"This document is not a DoD requirement and is offered as a best practice."
 
 Accordingly, this pack is advisory, not a mandate. Nothing in it overrides DoD policy,
-statute, the Federal Acquisition Regulation (FAR), or the Defense Federal Acquisition
-Regulation Supplement (DFARS). The MRL criteria are descriptive (they state what
+statute, Federal Acquisition Regulation (FAR), or Defense Federal Acquisition
+Regulation Supplement (DFARS). MRL criteria are descriptive (they state what
 maturity looks like) and do not, by themselves, task any contractor to perform work.
 
-SEPARATELY DISTRIBUTED ARTIFACTS. The authoritative MRL Criteria Matrix (Appendix A)
-and the Microsoft Excel MRL Users Guide are maintained and distributed separately by
-the MRL Working Group (historically via the DoD MRL website). This pack does NOT
-reproduce their cell-by-cell criteria text; it carries the framework and how to use it.
+MATRIX AND WORKBOOK. Appendix A inside the pinned deskbook is the criteria matrix.
+This pack does not reproduce it cell by cell. The Excel MRL Users Guide remains a
+separate workbook. This pack describes its use and does not reproduce worksheet
+cells.
 
 Caveat: any DoD publication may incorporate third-party copyrighted images or material
-whose separate reproduction could require permission from the copyright holder. This
-pack reproduces no such third-party material — it contains only synthesized, transformed
-reference notes — so the caveat does not apply to this pack's content.
+whose separate reproduction could require permission of the copyright holder. This
+pack reproduces no such third-party material. It contains only synthesized, transformed
+reference notes. That caveat does not apply to this pack's content.
 
 Attribution to OSD ManTech and the Joint Service/Industry MRL Working Group is provided
-as a courtesy (see the repository NOTICE), not a legal obligation. The Working Group
+as a courtesy (see repository NOTICE), not as a legal obligation. The Working Group
 does not endorse this pack or its authors.
 
-NOTE: This file governs the CONTENT of this pack. The repository tooling is licensed
+NOTE: this file governs CONTENT of the pack. Repository tooling is licensed
 separately under MIT (see ../../LICENSE).
