@@ -20,6 +20,8 @@ description: "Knowledge base for NASA-HDBK-1004A, approved 2026-10-26 (NASA Digi
 
 ## When to use
 
+**Prerequisites:** none. Plain Markdown. No MCP server, API key, or licence tier needed at runtime.
+
 Use this skill to plan, tailor, and review how a NASA program or project buys digital data and models across Pre-Phase A through Phase F: selecting DRDs, placing contract language, setting data rights and access, and feeding a Digital Engineering Ecosystem without treating the handbook as a self-executing requirement.
 
 ## How to use
