@@ -187,7 +187,7 @@ always-loaded `SKILL.md` index inlined into one file. Full detail and the per-ag
 | `dafman-63-119` | DAFMAN 63-119: Mission-Oriented Test Readiness Certification (15 Apr 2021) | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
 | `federal-bca` | OMB Circular A-94: Federal Benefit-Cost Analysis Guidelines (2023-11-09) | Public domain (US gov) | 🟢 1 | ✅ live (6 chapters) |
 | `mil-std-881f` | MIL-STD-881F: Work Breakdown Structures for Defense Materiel Items (13 May 2022) | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
-| `mil-std-40051` | MIL-STD-40051-2C: Page-Based Technical Manuals (15 Dec 2015) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
+| `mil-std-40051` | MIL-STD-40051E: Digital Technical Information for Technical Manuals (30 July 2025) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `nasa-std-8719-14` | NASA-STD-8719.14C: Process for Limiting Orbital Debris (Approved 2021-11-05) | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
 | `is-gps-200n` | IS-GPS-200N: NAVSTAR GPS Space Segment / Navigation User Segment Interfaces | Public domain (US gov) | 🟢 1 | ✅ live (6 chapters) |
 | `nhtsa-vehicle` | NHTSA Vehicle Safety: Cybersecurity Best Practices, ADS 2.0, and FMVSS Selections | Public domain (US gov) | 🟢 1 | ✅ live (6 chapters) |

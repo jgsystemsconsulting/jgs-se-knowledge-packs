@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "map_version": "1.22.0",
-  "generated_on": "2026-11-02",
+  "generated_on": "2026-11-03",
   "clusters": [
     {
       "name": "Systems Thinking & Fundamentals",
@@ -2742,49 +2742,49 @@
           "note": "Shared IRD/ICD format, outline, and common content preparation rules"
         },
         {
-          "pack": "mil-std-40051",
-          "chapter": "ch01-scope-tm-family-and-applicability.md",
-          "note": "MIL-STD-40051-2C scope, TM family types, and page-based applicability"
+          "pack": "jsp-815",
+          "chapter": "ch07-competence-and-delegation.md",
+          "note": "Competence and delegation notes from JSP 815"
         },
         {
           "pack": "mil-std-40051",
-          "chapter": "ch02-tm-structure-and-work-packages.md",
-          "note": "TM structure, chapters, and work-package assembly for page-based manuals"
+          "chapter": "ch01-mil-std-40051-scope.md",
+          "note": "MIL-STD-40051E w/Change 1, 30 July 2025 scope for page-based and electronic manuals."
         },
         {
           "pack": "mil-std-40051",
-          "chapter": "ch03-front-matter-and-back-matter.md",
-          "note": "Front/back matter stack: identity, distribution, warnings, navigation"
+          "chapter": "ch02-mil-std-40051-applicable-documents.md",
+          "note": "MIL-STD-40051E w/Change 1, 30 July 2025 applicable-document classes, not a quoted list."
         },
         {
           "pack": "mil-std-40051",
-          "chapter": "ch04-style-format-and-layout-rules.md",
-          "note": "Style, format, and layout rules for interoperable multi-vendor TM output"
+          "chapter": "ch03-mil-std-40051-general-requirements.md",
+          "note": "MIL-STD-40051E w/Change 1, 30 July 2025 general requirements, including IETM functionality."
         },
         {
           "pack": "mil-std-40051",
-          "chapter": "ch05-warnings-cautions-notes-and-hazmat.md",
-          "note": "Warnings/cautions/notes and HAZMAT presentation (also ops & maintenance)"
+          "chapter": "ch04-mil-std-40051-detailed-requirements.md",
+          "note": "MIL-STD-40051E w/Change 1, 30 July 2025 detailed-requirement method. No matrix cells."
         },
         {
           "pack": "mil-std-40051",
-          "chapter": "ch06-change-packages-and-revision-marking.md",
-          "note": "Change packages and revision marking for field TM libraries (also CM)"
+          "chapter": "ch05-mil-std-40051-content-selection.md",
+          "note": "MIL-STD-40051E w/Change 1, 30 July 2025 content-selection method. No cell copy."
         },
         {
           "pack": "mil-std-40051",
-          "chapter": "ch07-content-selection-matrix-and-tailoring.md",
-          "note": "Content selection matrices and TM tailoring (also standards/tailoring)"
+          "chapter": "ch06-mil-std-40051-operator-maintenance-parts.md",
+          "note": "MIL-STD-40051E w/Change 1, 30 July 2025 operator, maintenance, and parts content rules."
         },
         {
           "pack": "mil-std-40051",
-          "chapter": "ch08-plate-exemplars-and-production-patterns.md",
-          "note": "Plate exemplars and production patterns for TM/training shops"
+          "chapter": "ch07-mil-std-40051-special-tm-types.md",
+          "note": "MIL-STD-40051E w/Change 1, 30 July 2025 special technical-manual types."
         },
         {
           "pack": "mil-std-40051",
-          "chapter": "cheatsheet.md (support file)",
-          "note": "Cheatsheet / quick reference"
+          "chapter": "ch08-mil-std-40051-changes-notes.md",
+          "note": "MIL-STD-40051E w/Change 1, 30 July 2025 change packages, revision marking, and notes."
         },
         {
           "pack": "mil-std-40051",
@@ -2793,13 +2793,13 @@
         },
         {
           "pack": "mil-std-40051",
-          "chapter": "patterns.md (support file)",
-          "note": "Patterns/practice heuristics"
+          "chapter": "cheatsheet.md (support file)",
+          "note": "Cheatsheet / quick reference"
         },
         {
-          "pack": "jsp-815",
-          "chapter": "ch07-competence-and-delegation.md",
-          "note": "Competence and delegation notes from JSP 815"
+          "pack": "mil-std-40051",
+          "chapter": "patterns.md (support file)",
+          "note": "Patterns/practice heuristics"
         }
       ]
     },

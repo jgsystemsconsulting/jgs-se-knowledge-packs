@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "map_version": "1.22.0",
-  "generated_on": "2026-11-02",
+  "generated_on": "2026-11-03",
   "rules_of_construction": [
     "Every chapter in every pack under packs/<slug>/chapters/ is assigned to exactly one capability cluster (best fit).",
     "Cross-cutting chapters carry a remark noting the strong secondary fit.",
@@ -2701,72 +2701,6 @@
       "is_support": false
     },
     {
-      "pack": "mil-std-40051",
-      "chapter": "ch01-scope-tm-family-and-applicability.md",
-      "cluster": "Training & Documentation Delivery",
-      "is_support": false
-    },
-    {
-      "pack": "mil-std-40051",
-      "chapter": "ch02-tm-structure-and-work-packages.md",
-      "cluster": "Training & Documentation Delivery",
-      "is_support": false
-    },
-    {
-      "pack": "mil-std-40051",
-      "chapter": "ch03-front-matter-and-back-matter.md",
-      "cluster": "Training & Documentation Delivery",
-      "is_support": false
-    },
-    {
-      "pack": "mil-std-40051",
-      "chapter": "ch04-style-format-and-layout-rules.md",
-      "cluster": "Training & Documentation Delivery",
-      "is_support": false
-    },
-    {
-      "pack": "mil-std-40051",
-      "chapter": "ch05-warnings-cautions-notes-and-hazmat.md",
-      "cluster": "Training & Documentation Delivery",
-      "is_support": false
-    },
-    {
-      "pack": "mil-std-40051",
-      "chapter": "ch06-change-packages-and-revision-marking.md",
-      "cluster": "Training & Documentation Delivery",
-      "is_support": false
-    },
-    {
-      "pack": "mil-std-40051",
-      "chapter": "ch07-content-selection-matrix-and-tailoring.md",
-      "cluster": "Training & Documentation Delivery",
-      "is_support": false
-    },
-    {
-      "pack": "mil-std-40051",
-      "chapter": "ch08-plate-exemplars-and-production-patterns.md",
-      "cluster": "Training & Documentation Delivery",
-      "is_support": false
-    },
-    {
-      "pack": "mil-std-40051",
-      "chapter": "cheatsheet.md",
-      "cluster": "Training & Documentation Delivery",
-      "is_support": true
-    },
-    {
-      "pack": "mil-std-40051",
-      "chapter": "glossary.md",
-      "cluster": "Training & Documentation Delivery",
-      "is_support": true
-    },
-    {
-      "pack": "mil-std-40051",
-      "chapter": "patterns.md",
-      "cluster": "Training & Documentation Delivery",
-      "is_support": true
-    },
-    {
       "pack": "dod-mosa",
       "chapter": "ch03-dod-mosa-program-management-considerations.md",
       "cluster": "Project/Program Management",
@@ -4492,6 +4426,72 @@
       "pack": "sd-22-dmsms",
       "chapter": "patterns.md",
       "cluster": "Logistics, Supportability & Sustainment",
+      "is_support": true
+    },
+    {
+      "pack": "mil-std-40051",
+      "chapter": "ch01-mil-std-40051-scope.md",
+      "cluster": "Training & Documentation Delivery",
+      "is_support": false
+    },
+    {
+      "pack": "mil-std-40051",
+      "chapter": "ch02-mil-std-40051-applicable-documents.md",
+      "cluster": "Training & Documentation Delivery",
+      "is_support": false
+    },
+    {
+      "pack": "mil-std-40051",
+      "chapter": "ch03-mil-std-40051-general-requirements.md",
+      "cluster": "Training & Documentation Delivery",
+      "is_support": false
+    },
+    {
+      "pack": "mil-std-40051",
+      "chapter": "ch04-mil-std-40051-detailed-requirements.md",
+      "cluster": "Training & Documentation Delivery",
+      "is_support": false
+    },
+    {
+      "pack": "mil-std-40051",
+      "chapter": "ch05-mil-std-40051-content-selection.md",
+      "cluster": "Training & Documentation Delivery",
+      "is_support": false
+    },
+    {
+      "pack": "mil-std-40051",
+      "chapter": "ch06-mil-std-40051-operator-maintenance-parts.md",
+      "cluster": "Training & Documentation Delivery",
+      "is_support": false
+    },
+    {
+      "pack": "mil-std-40051",
+      "chapter": "ch07-mil-std-40051-special-tm-types.md",
+      "cluster": "Training & Documentation Delivery",
+      "is_support": false
+    },
+    {
+      "pack": "mil-std-40051",
+      "chapter": "ch08-mil-std-40051-changes-notes.md",
+      "cluster": "Training & Documentation Delivery",
+      "is_support": false
+    },
+    {
+      "pack": "mil-std-40051",
+      "chapter": "glossary.md",
+      "cluster": "Training & Documentation Delivery",
+      "is_support": true
+    },
+    {
+      "pack": "mil-std-40051",
+      "chapter": "cheatsheet.md",
+      "cluster": "Training & Documentation Delivery",
+      "is_support": true
+    },
+    {
+      "pack": "mil-std-40051",
+      "chapter": "patterns.md",
+      "cluster": "Training & Documentation Delivery",
       "is_support": true
     }
   ]

@@ -705,18 +705,18 @@ Rules of construction:
 | Pack | Chapter | Why it fits / one-line value |
 |---|---|---|
 | faa-std-025 | ch02-general-format-and-common-content.md | Shared IRD/ICD format, outline, and common content preparation rules |
-| mil-std-40051 | ch01-scope-tm-family-and-applicability.md | MIL-STD-40051-2C scope, TM family types, and page-based applicability |
-| mil-std-40051 | ch02-tm-structure-and-work-packages.md | TM structure, chapters, and work-package assembly for page-based manuals |
-| mil-std-40051 | ch03-front-matter-and-back-matter.md | Front/back matter stack: identity, distribution, warnings, navigation |
-| mil-std-40051 | ch04-style-format-and-layout-rules.md | Style, format, and layout rules for interoperable multi-vendor TM output |
-| mil-std-40051 | ch05-warnings-cautions-notes-and-hazmat.md | Warnings/cautions/notes and HAZMAT presentation (also ops & maintenance) |
-| mil-std-40051 | ch06-change-packages-and-revision-marking.md | Change packages and revision marking for field TM libraries (also CM) |
-| mil-std-40051 | ch07-content-selection-matrix-and-tailoring.md | Content selection matrices and TM tailoring (also standards/tailoring) |
-| mil-std-40051 | ch08-plate-exemplars-and-production-patterns.md | Plate exemplars and production patterns for TM/training shops |
-| mil-std-40051 | cheatsheet.md (support file) | Cheatsheet / quick reference |
-| mil-std-40051 | glossary.md (support file) | Glossary for the pack |
-| mil-std-40051 | patterns.md (support file) | Patterns/practice heuristics |
 | jsp-815 | ch07-competence-and-delegation.md | Competence and delegation notes from JSP 815 |
+| mil-std-40051 | ch01-mil-std-40051-scope.md | MIL-STD-40051E w/Change 1, 30 July 2025 scope for page-based and electronic manuals. |
+| mil-std-40051 | ch02-mil-std-40051-applicable-documents.md | MIL-STD-40051E w/Change 1, 30 July 2025 applicable-document classes, not a quoted list. |
+| mil-std-40051 | ch03-mil-std-40051-general-requirements.md | MIL-STD-40051E w/Change 1, 30 July 2025 general requirements, including IETM functionality. |
+| mil-std-40051 | ch04-mil-std-40051-detailed-requirements.md | MIL-STD-40051E w/Change 1, 30 July 2025 detailed-requirement method. No matrix cells. |
+| mil-std-40051 | ch05-mil-std-40051-content-selection.md | MIL-STD-40051E w/Change 1, 30 July 2025 content-selection method. No cell copy. |
+| mil-std-40051 | ch06-mil-std-40051-operator-maintenance-parts.md | MIL-STD-40051E w/Change 1, 30 July 2025 operator, maintenance, and parts content rules. |
+| mil-std-40051 | ch07-mil-std-40051-special-tm-types.md | MIL-STD-40051E w/Change 1, 30 July 2025 special technical-manual types. |
+| mil-std-40051 | ch08-mil-std-40051-changes-notes.md | MIL-STD-40051E w/Change 1, 30 July 2025 change packages, revision marking, and notes. |
+| mil-std-40051 | glossary.md (support file) | Glossary for the pack |
+| mil-std-40051 | cheatsheet.md (support file) | Cheatsheet / quick reference |
+| mil-std-40051 | patterns.md (support file) | Patterns/practice heuristics |
 
 ## 26. Project/Program Management
 

@@ -17,6 +17,7 @@ All notable changes to this project are documented here. Format follows
 ### Changed
 - Rebuild `mrl-deskbook` from the Manufacturing Readiness Level (MRL) Deskbook, Version 2025, 1 May 2025, including criteria-matrix updates effective 8 July 2025. October 2022 pin retired. Users Guide, criteria adaptation, and operational-technology cybersecurity are appendices in the 2025 contents list and stay reconstructed chapters.
 - Rebuild `sd-22-dmsms` onto SD-22, 06-JAN-2026 (cover dated December 2025). FY24 working draft (April 2024) pin retired. Working-draft caveat gone.
+- Rebuild `mil-std-40051` onto MIL-STD-40051E w/Change 1, 30 July 2025. The MIL-STD-40051-2C, 15 December 2015 slice pin is retired.
 
 ## [1.24.1]: 2026-10-29
 
