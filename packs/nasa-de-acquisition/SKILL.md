@@ -7,7 +7,7 @@ description: "Knowledge base for NASA-HDBK-1004A, approved 2026-10-26 (NASA Digi
 
 # NASA Digital Engineering Acquisition Framework Handbook (NASA-HDBK-1004A)
 
-**Source**: NASA, Office NASA Chief Engineer (US Government work, public domain) | **Chapters**: 8
+**Source**: NASA, Office of the NASA Chief Engineer (US Government work, public domain) | **Chapters**: 8
 
 ## Version and jurisdiction
 
