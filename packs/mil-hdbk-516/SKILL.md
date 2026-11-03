@@ -1,82 +1,93 @@
 ---
 name: mil-hdbk-516
-description: "Knowledge base from MIL-HDBK-516C (Airworthiness Certification Criteria). Use for DoD air-system airworthiness planning: tailoring a certification basis, systems engineering criteria, and domain clusters for structures, flight technology, propulsion/installation, avionics/electrical/E3/diagnostics, computer systems/software, and crew systems (including applicable UAS control-station elements). Qualitative guidance handbook — not raw contractual requirements. Does not replace service airworthiness authority policy, civil FAA certification rules as authorities, or detailed JSSG/MIL performance specs."
+description: "Knowledge base from MIL-HDBK-516D, 29 May 2026, Airworthiness Certification Criteria. Use for design AW criteria and MoCs across systems engineering, structures, flight technology, propulsion, air vehicle subsystems, crew systems and aerial refueling, avionics electrical and E3, computer systems and software, maintenance, armaments and stores, materials, and aerial delivery. Guidance handbook only. Not a service AW authority, not civil FAA or EASA rules, not detailed performance specs."
 ---
 
 <!-- argument-hint: [airworthiness topic, certification basis, domain criteria, or chapter number] -->
 
-# MIL-HDBK-516C — Airworthiness Certification Criteria
-**Source**: DoD MIL-HDBK-516C (US Government work, public domain; Distribution Statement A) | **Chapters**: 8
+# Airworthiness Certification Criteria (MIL-HDBK-516D)
+
+**Source:** US Government work, public domain (17 U.S.C. 105); Distribution A; no printed DOPSR case. See `LICENSE`. Pin: MIL-HDBK-516D, 29 May 2026. Chapters: 12.
 
 ## When to use
-Use this pack when building or reviewing a DoD air system airworthiness certification basis from MIL-HDBK-516C — tailoring qualitative criteria, assigning methods of compliance, and navigating domain criteria clusters (SE, structures, flight, propulsion, avionics/E3, software, crew systems). Helpful for airworthiness engineers, SE leads, and domain SMEs aligning evidence to criteria.
 
-**Prerequisites:** none — plain Markdown; no MCP server, API key, or licence tier needed at runtime.
+Use when building or reviewing a DoD air system design airworthiness certification basis from MIL-HDBK-516D: tailoring criteria, assigning MoCs, and navigating domain sections including clusters D stands up alone (air vehicle subsystems, aerial refueling, electrical, maintenance, armaments and stores, materials, aerial delivery).
+
+**Prerequisites:** none. Plain Markdown. No MCP server, API key, or licence tier needed at runtime.
 
 ## How to Use This Skill
-- **Without arguments** — load the core frameworks below.
-- **With a topic** — ask about certification basis tailoring, SE criteria, structures, flight, propulsion, avionics/E3, software, or crew systems.
-- **With a chapter** — ask for `ch01` through `ch08`.
 
-Supporting files: `glossary.md`, `patterns.md`, `cheatsheet.md`.
-
-> **Guidance only.** 516C says it is not to be cited as a requirement. Criteria are qualitative; define acceptable in the implementing context.
+- **Without arguments**  -  load the core frameworks below.
+- **With a topic**  -  ask a topic question (for example tailoring, structures MoCs, AR compatibility, CS&S multicore).
+- **With a certification-planning question**  -  ask how to shape a basis, reopeners after modification, or evidence owners by domain.
 
 ## Core Frameworks & Mental Models
 
-### Certification basis via tailoring
-Select a necessary and sufficient subset of 516C criteria for the specific air system; document methods of compliance; maintain under configuration control.
+### Standard plus method of compliance
 
-### Qualitative criteria plus evidence
-Each section states criteria and often lists typical certification source data (analyses, tests, inspections). Closure is a reasoned evidence argument, not a single signature.
+Each criterion pairs a design standard with MoCs (examination, analysis, demonstration, test). Argue the attribute; do not copy handbook tables.
 
-### SE backbone then domains
-Systems engineering criteria (design criteria, tools, materials, manufacturing/quality, tech data, CM) underpin domain sections.
+### Tailored certification basis
 
-### Domain clusters in this pack
-Structures; flight technology; propulsion plus installation; diagnostics/avionics/electrical/E3; computer systems/software; crew systems (including UAS/ROA control-station elements when applicable).
+Select a necessary and sufficient subset for the air system; document applicability; keep under configuration control with manuals and software loads.
 
-### UAS applicability
-Avionics and crew-systems material explicitly contemplates unmanned/remotely operated control segments where they affect airworthiness.
+### Guidance only
+
+The handbook guides AW assessment. It is not cited as a requirement. Component AW authorities issue approvals under their process (including DoDI 5030.61).
+
+### Design attribute focus
+
+Criteria address design of the air system configuration for safe flight within approved usage limits. They are not a full process library and not civil certification rules.
 
 ## Chapter Index
-| # | Section | Key content |
-|---|---------|-------------|
-| [ch01](chapters/ch01-scope-applicability-and-tailoring.md) | Scope, Applicability, Tailoring | Handbook role, certification basis, tailoring rules |
-| [ch02](chapters/ch02-systems-engineering-criteria.md) | Systems Engineering | Design criteria, tools, materials, quality, tech data, CM |
-| [ch03](chapters/ch03-structures-criteria.md) | Structures | Structural airworthiness criteria and evidence patterns |
-| [ch04](chapters/ch04-flight-technology-criteria.md) | Flight Technology | Flying qualities/performance/control evidence thinking |
-| [ch05](chapters/ch05-propulsion-criteria.md) | Propulsion & Installation | Propulsion unit plus air-vehicle installation criteria |
-| [ch06](chapters/ch06-avionics-e3-and-diagnostics.md) | Avionics / Electrical / E3 / Diagnostics | Electronics-heavy airworthiness cluster |
-| [ch07](chapters/ch07-computer-systems-and-software.md) | Computers & Software | Software/computer system airworthiness criteria |
-| [ch08](chapters/ch08-crew-systems-criteria.md) | Crew Systems | HMI, life support, escape, UAS control stations |
+
+| Ch | File | Focus |
+| --- | --- | --- |
+| 01 | [ch01-mil-hdbk-516-scope.md](chapters/ch01-mil-hdbk-516-scope.md) | Scope, publication classes, notes |
+| 02 | [ch02-mil-hdbk-516-systems-engineering.md](chapters/ch02-mil-hdbk-516-systems-engineering.md) | SE, CM, system safety |
+| 03 | [ch03-mil-hdbk-516-structures.md](chapters/ch03-mil-hdbk-516-structures.md) | Structures |
+| 04 | [ch04-mil-hdbk-516-flight-technology.md](chapters/ch04-mil-hdbk-516-flight-technology.md) | Flight technology |
+| 05 | [ch05-mil-hdbk-516-propulsion.md](chapters/ch05-mil-hdbk-516-propulsion.md) | Propulsion |
+| 06 | [ch06-mil-hdbk-516-air-vehicle-subsystems.md](chapters/ch06-mil-hdbk-516-air-vehicle-subsystems.md) | Air vehicle subsystems |
+| 07 | [ch07-mil-hdbk-516-crew-systems-aerial-refueling.md](chapters/ch07-mil-hdbk-516-crew-systems-aerial-refueling.md) | Crew systems and aerial refueling |
+| 08 | [ch08-mil-hdbk-516-avionics-electrical-e3.md](chapters/ch08-mil-hdbk-516-avionics-electrical-e3.md) | Avionics, electrical, E3 |
+| 09 | [ch09-mil-hdbk-516-computer-systems-software.md](chapters/ch09-mil-hdbk-516-computer-systems-software.md) | Computer systems and software |
+| 10 | [ch10-mil-hdbk-516-maintenance.md](chapters/ch10-mil-hdbk-516-maintenance.md) | Maintenance |
+| 11 | [ch11-mil-hdbk-516-armaments-stores.md](chapters/ch11-mil-hdbk-516-armaments-stores.md) | Armaments and stores |
+| 12 | [ch12-mil-hdbk-516-materials-aerial-delivery.md](chapters/ch12-mil-hdbk-516-materials-aerial-delivery.md) | Materials and aerial delivery |
 
 ## Topic Index
-- **Airworthiness authority / implementing office** → ch01
-- **Avionics** → ch06
-- **Certification basis** → ch01
-- **Certification source data lists** → ch02–ch08
-- **Configuration management (airworthiness)** → ch02
-- **Crew station / HMI** → ch08
-- **Diagnostics** → ch06
-- **E3 / EMI/EMC airworthiness** → ch06
-- **Electrical power system** → ch06
-- **Escape / life support / crash survivability** → ch08
-- **Flight technology / flying qualities** → ch04
-- **Materials selection (SE)** → ch02
-- **Methods of compliance** → ch01
-- **Propulsion installation** → ch05
-- **Software airworthiness** → ch07
-- **Structures / damage tolerance framing** → ch03
-- **Tailoring rules** → ch01
-- **UAS/ROA control station** → ch06, ch08
+
+- Scope and tailoring: ch01
+- Systems engineering and system safety: ch02
+- Structures: ch03
+- Flight technology and VCF: ch04
+- Propulsion: ch05
+- Air vehicle subsystems: ch06
+- Crew systems and passenger safety fold: ch07
+- Aerial refueling: ch07
+- Avionics and diagnostics: ch08
+- Electrical system: ch08
+- E3 / EMC: ch08
+- Computer systems and software: ch09
+- Maintenance products and inspections: ch10
+- Armaments and stores: ch11
+- Materials and corrosion / NDI: ch12
+- Aerial delivery and airdrop: ch12
+- Definitions and POCs: glossary.md
 
 ## Supporting Files
-- [glossary.md](glossary.md) — airworthiness terms used in 516C packing
-- [patterns.md](patterns.md) — implementation patterns with When/How/Trade-offs
-- [cheatsheet.md](cheatsheet.md) — decision rules, maps, tells & smells
 
----
+- `glossary.md`  -  definitions, acronyms, subject terms, Appendix A POC reference
+- `cheatsheet.md`  -  quick map and do-not list
+- `patterns.md`  -  When / How / Trade-offs patterns
 
 ## Scope & Limits
-This pack covers **selected** MIL-HDBK-516C (12 Dec 2014) material: scope/tailoring, systems engineering, and major functional-area clusters (structures, flight, propulsion, avionics/electrical/E3/diagnostics, software, crew systems). Extraction metadata reports **527 PDF pages** for the everyspec mirror copy used at build (build-sheet estimate ~320; PDF page objects differ — body text and DIST-A verified; chars/page floor passed). Not every handbook subsection is chaptered (for example armaments, passenger safety, materials-as-own-chapter, air transportability). Does **not** reproduce full criterion text catalogs or third-party FAA/SAE standards. Guidance only. US Government public domain work (Distribution Statement A). No source-material download link is published.
+
+- Guidance only; not a contractual requirements document.
+- Not a substitute for service airworthiness authority policy or decisions.
+- Not civil FAA or EASA certification rules.
+- Not a replacement for detailed JSSG or MIL performance specifications.
+- Pack freezes 12 synthesized chapters from the D contents list; sections 14 and 18 are blank and omitted.
+- Does not reproduce criterion catalogue cells, MoC matrices, or sample compliance evidence.
+- Does not cover program-unique authority procedures beyond the handbook method.

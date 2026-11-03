@@ -1,33 +1,58 @@
-# Cheatsheet — MIL-HDBK-516C
+# Cheatsheet  -  MIL-HDBK-516D
 
-## Decision rules
-1. **Starting airworthiness planning?** Build a tailored certification basis (ch01) before writing isolated domain reports.
-2. **Is 516C a contract section C dump?** No — guidance; tailor and point to specific criteria/methods.
-3. **Engine has a credential already?** Still close installation criteria (ch05).
-4. **UAS program?** Check avionics + crew-systems applicability to the control segment (ch06, ch08).
-5. **Software change?** Re-enter ch07 gates; do not treat as maintenance only.
-6. **Dropped a criterion?** If it is not in the basis with rationale, you did not tailor — you omitted (ch01).
-7. **Structures repair in the field?** Confirm it stays inside the structural basis (ch03).
-8. **E3 fail after avionics add?** Reopen integrated ch06 evidence, not only the new box qual.
+Quick orientation to MIL-HDBK-516D, 29 May 2026. Guidance only. Not a criterion catalogue.
 
-## Domain to chapter
-| Domain | Chapter |
-|--------|---------|
-| Tailoring / certification basis | ch01 |
-| Systems engineering / CM / tech data | ch02 |
-| Structures | ch03 |
-| Flight technology | ch04 |
-| Propulsion + installation | ch05 |
-| Diagnostics / avionics / electrical / E3 | ch06 |
-| Computers and software | ch07 |
-| Crew systems / escape / life support | ch08 |
+## Identity
 
-## Tells and smells
-| Smell | Likely gap |
-|-------|------------|
-| We follow 516C with no basis doc | Missing tailoring (ch01) |
-| Domain reports, no CM linkage | SE criteria weak (ch02) |
-| Engine credential used as aircraft closure | Installation ignored (ch05) |
-| UAS aircraft-only package | Control segment criteria missing |
-| Untracked flight software loads | Software CM/airworthiness gap (ch07) |
-| Cockpit redesign without escape re-test | Crew systems re-verification gap (ch08) |
+- Pin: MIL-HDBK-516D, 29 May 2026
+- Title: Airworthiness Certification Criteria
+- Role: design AW criteria + MoCs for fixed- and rotary-wing, manned and unmanned
+- Status: guidance handbook; do not cite as requirement
+- Authority path: DoW Component AW authority (DoDI 5030.61)
+
+## How a criterion works
+
+1. Read the standard (design attribute).
+2. Select MoCs (examination / analysis / demonstration / test).
+3. Collect evidence against the tailored basis.
+4. Accept residual risk at the proper authority level.
+5. Keep configuration, manuals, and software loads aligned.
+
+## Chapter map
+
+| Ch | Domain |
+| --- | --- |
+| 01 | Scope, publication classes, notes |
+| 02 | Systems engineering, CM, system safety |
+| 03 | Structures |
+| 04 | Flight technology (largest) |
+| 05 | Propulsion |
+| 06 | Air vehicle subsystems |
+| 07 | Crew systems + aerial refueling |
+| 08 | Avionics + electrical + E3 |
+| 09 | Computer systems and software |
+| 10 | Maintenance |
+| 11 | Armaments and stores |
+| 12 | Materials + aerial delivery |
+
+## Blank and folds
+
+- Sections 14 and 18 intentionally blank
+- Definitions → glossary
+- Appendix A POC list → glossary reference
+- Diagnostics → avionics (11)
+- System safety → SE (4)
+- Passenger safety → crew systems (9)
+- Aerial refueling → own section (10)
+
+## Do not
+
+- Cite the handbook as a contractual shall
+- Paste criterion tables or MoC matrices into work products from this pack
+- Quote long passages from cited MIL/JSSG/FAA/SAE sources
+- Skip degraded-state and modification reopeners
+- Treat maintenance manuals as optional paperwork
+
+## Authority limits
+
+Not a service AW authority. Not civil FAA/EASA rules. Not a substitute for detailed performance specifications.

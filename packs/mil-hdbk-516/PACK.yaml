@@ -1,26 +1,17 @@
 slug: mil-hdbk-516
-title: "DoD Airworthiness Certification Criteria (MIL-HDBK-516C)"
+title: "Airworthiness Certification Criteria (MIL-HDBK-516D)"
 publisher: "US Department of Defense"
-source_version: "516C, 12 Dec 2014 (Change 1, 2016)"
-license: "Public Domain (US Government work, 17 U.S.C. § 105; Distribution Statement A — Approved for public release; distribution is unlimited)"
+source_version: "MIL-HDBK-516D, 29 May 2026"
+license: "Public Domain (US Government work, 17 U.S.C. 105); Distribution A, approved for public release"
 license_tier: 1
 commercial_use: true
 share_alike: false
 attribution_required: false
 build:
   method: "synthesized reference notes from the pinned source, chapter freeze from the contents list"
-  source_pages: 527
-  chapters: 8
-  built_on: "2026-08-14"
-notes: >
-  US Government work -- public domain (17 U.S.C. § 105); Distribution Statement A
-  verified in-copy on cover ("Approved for public release; distribution is unlimited").
-  Downloaded from everyspec.com mirror of MIL-HDBK-516C (DLA QuickSearch is authoritative
-  record; direct DLA PDF token-gated). Extract metadata pages=527 (build-sheet ~320;
-  this PDF has 527 page objects — full body sections present, chars/page floor passed,
-  not treated as truncation). Synthesized reference notes from scope/tailoring, systems
-  engineering, and domain clusters (structures, flight, propulsion, avionics/E3/diagnostics,
-  software, crew systems). No long verbatim passages (verified by check_overlap). No
-  source-material link published. Extraction used pdftotext fallback. OCR not required.
-  DoD third-party-quote advisory expected; synthesizes DoD-authored guidance only.
+  source_pages: 817
+  chapters: 12
+  built_on: "2026-11-03"
+  notes: >
+    Vetted 2026-11-03. PDF bytes 5058295. Pages 817. Cover dated 29 May 2026, superseding MIL-HDBK-516C of 12 December 2014. Cover branding reads Department of War Handbook. Dist A taken from the cover distribution statement. No printed DOPSR case. The cover text layer has no copyright notice. The handbook is guidance only and is not cited as a requirement. Foreword consolidations from the prior edition: diagnostics into section 11; system safety into section 4; passenger safety into section 9; aerial refueling as new section 10. Sections 14 and 18 are intentionally blank and carry no chapter. Appendix A folds into glossary.md. Criterion catalogues and compliance matrices are not reproduced cell by cell. Preparing activity 11 AFLCMC-Aircraft Systems.
 change_indication: "reconstructed as synthesized reference notes"
