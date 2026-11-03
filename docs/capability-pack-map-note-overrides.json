@@ -734,26 +734,6 @@
       "note": "MOSA, automation, and digital-engineering enablers for T&E tempo (also T&E)"
     },
     {
-      "pack": "nasa-de-acquisition",
-      "chapter": "ch01-nasa-de-acquisition-framework-rationale-and-dee.md",
-      "note": "DE acquisition rationale and digital engineering ecosystem"
-    },
-    {
-      "pack": "nasa-de-acquisition",
-      "chapter": "ch06-nasa-de-acquisition-collaboration-architecture-interoperability.md",
-      "note": "Collaboration architecture and interoperability"
-    },
-    {
-      "pack": "nasa-de-acquisition",
-      "chapter": "ch07-nasa-de-acquisition-mbe-use-cases.md",
-      "note": "Model-based engineering use cases"
-    },
-    {
-      "pack": "nasa-de-acquisition",
-      "chapter": "ch08-nasa-de-acquisition-mbe-plan-development.md",
-      "note": "MBE plan development"
-    },
-    {
       "pack": "faa-sem",
       "chapter": "ch05-faa-sem-configuration-decision-vv.md",
       "note": "CM, decision analysis, V&V (crosscutting bundle)"
@@ -819,11 +799,6 @@
       "note": "Patterns/practice heuristics"
     },
     {
-      "pack": "nasa-de-acquisition",
-      "chapter": "ch02-nasa-de-acquisition-drds-and-configuration-data-management.md",
-      "note": "DRDs, configuration and data mgmt (also data mgmt)"
-    },
-    {
       "pack": "nasa-se-expanded",
       "chapter": "ch06-nasa-se-expanded-crosscutting-cm-data-assessment-decision.md",
       "note": "Crosscutting CM, data, assessment, decision (also measurement)"
@@ -847,11 +822,6 @@
       "pack": "mil-hdbk-61",
       "chapter": "ch07-mil-hdbk-61-data-management-emerging-technologies.md",
       "note": "CM-linked data management and emerging tech"
-    },
-    {
-      "pack": "nasa-de-acquisition",
-      "chapter": "ch05-nasa-de-acquisition-model-based-data-definition.md",
-      "note": "Model-based data definitions"
     },
     {
       "pack": "nasa-npr-7150",
@@ -2519,16 +2489,6 @@
       "note": "Agile federal contracting"
     },
     {
-      "pack": "nasa-de-acquisition",
-      "chapter": "ch03-nasa-de-acquisition-requirements-exchange-and-contract-language.md",
-      "note": "Requirements exchange and DE contract language"
-    },
-    {
-      "pack": "nasa-de-acquisition",
-      "chapter": "ch04-nasa-de-acquisition-data-acquisition-contract-language.md",
-      "note": "Data acquisition contract language"
-    },
-    {
       "pack": "nasa-npr-7123",
       "chapter": "ch04-contracted-projects.md",
       "note": "Requirements flow to contracted projects"
@@ -3717,6 +3677,46 @@
       "pack": "mil-hdbk-516",
       "chapter": "ch12-mil-hdbk-516-materials-aerial-delivery.md",
       "note": "MIL-HDBK-516D, 29 May 2026 materials and aerial delivery criteria."
+    },
+    {
+      "pack": "nasa-de-acquisition",
+      "chapter": "ch01-nasa-de-acquisition-scope.md",
+      "note": "NASA-HDBK-1004A, approved 2026-10-26 scope and cited-document classes."
+    },
+    {
+      "pack": "nasa-de-acquisition",
+      "chapter": "ch02-nasa-de-acquisition-overview.md",
+      "note": "NASA-HDBK-1004A, approved 2026-10-26 DE acquisition overview."
+    },
+    {
+      "pack": "nasa-de-acquisition",
+      "chapter": "ch03-nasa-de-acquisition-lessons-learned.md",
+      "note": "NASA-HDBK-1004A, approved 2026-10-26 lessons learned."
+    },
+    {
+      "pack": "nasa-de-acquisition",
+      "chapter": "ch04-nasa-de-acquisition-guiding-principles.md",
+      "note": "NASA-HDBK-1004A, approved 2026-10-26 guiding principles."
+    },
+    {
+      "pack": "nasa-de-acquisition",
+      "chapter": "ch05-nasa-de-acquisition-guiding-questions.md",
+      "note": "NASA-HDBK-1004A, approved 2026-10-26 DE data guiding questions."
+    },
+    {
+      "pack": "nasa-de-acquisition",
+      "chapter": "ch06-nasa-de-acquisition-contract-language.md",
+      "note": "NASA-HDBK-1004A, approved 2026-10-26 DE data contract language."
+    },
+    {
+      "pack": "nasa-de-acquisition",
+      "chapter": "ch07-nasa-de-acquisition-rcl-selection-matrix.md",
+      "note": "NASA-HDBK-1004A, approved 2026-10-26 RCL and selection matrix method."
+    },
+    {
+      "pack": "nasa-de-acquisition",
+      "chapter": "ch08-nasa-de-acquisition-drd-templates.md",
+      "note": "NASA-HDBK-1004A, approved 2026-10-26 DRD template library."
     }
   ]
 }

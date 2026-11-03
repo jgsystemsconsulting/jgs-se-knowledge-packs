@@ -314,9 +314,9 @@
     },
     {
       "slug": "nasa-de-acquisition",
-      "title": "NASA Digital Engineering Acquisition Framework Handbook (NASA-HDBK-1004)",
+      "title": "NASA Digital Engineering Acquisition Framework Handbook (NASA-HDBK-1004A)",
       "publisher": "NASA, Office of the NASA Chief Engineer",
-      "source_version": "Baseline (2020-04-01), superseding NASA-HDBK-0008",
+      "source_version": "NASA-HDBK-1004A, approved 2026-10-26",
       "license": "Public Domain (US Government work)",
       "license_tier": 1,
       "commercial_use": true,

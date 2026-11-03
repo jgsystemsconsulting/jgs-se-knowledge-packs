@@ -228,9 +228,9 @@
     {
       "slug": "nasa-de-acquisition",
       "publisher": "NASA, Office of the NASA Chief Engineer",
-      "document": "Baseline (2020-04-01), superseding NASA-HDBK-0008",
-      "version": "A (2026-10-26)",
-      "last_checked": "2026-11-01",
+      "document": "NASA Digital Engineering Acquisition Framework Handbook (NASA-HDBK-1004)",
+      "version": "NASA-HDBK-1004A, approved 2026-10-26",
+      "last_checked": "2026-11-03",
       "hint": ""
     },
     {

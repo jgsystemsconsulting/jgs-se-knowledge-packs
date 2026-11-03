@@ -36,7 +36,7 @@ Rules of construction:
 | 10. Modeling, MBSE & SysML | 20 |
 | 11. Digital Engineering & Digital Twins | 25 |
 | 12. Configuration Management & Baselines | 20 |
-| 13. Data & Information Management | 7 |
+| 13. Data & Information Management | 6 |
 | 14. Risk Management | 24 |
 | 15. Opportunity/Benefit Management | 8 |
 | 16. Decision Analysis & Trade Studies | 5 |
@@ -50,7 +50,7 @@ Rules of construction:
 | 24. Operations, Maintenance & Disposal | 16 |
 | 25. Training & Documentation Delivery | 13 |
 | 26. Project/Program Management | 67 |
-| 27. Supplier, Procurement & Acquisition | 13 |
+| 27. Supplier, Procurement & Acquisition | 14 |
 | 28. Stakeholder Engagement & Needs | 3 |
 | 29. Governance, Reviews, Gates & Control Points | 30 |
 | 30. Standards, Tailoring & Process Models | 68 |
@@ -282,10 +282,10 @@ Rules of construction:
 | dod-digital-engineering | glossary.md (support file) | Glossary for the pack |
 | dod-digital-engineering | patterns.md (support file) | Patterns/practice heuristics |
 | dote-te-guidebook | ch06-mosa-automation-digital-te.md | MOSA, automation, and digital-engineering enablers for T&E tempo (also T&E) |
-| nasa-de-acquisition | ch01-nasa-de-acquisition-framework-rationale-and-dee.md | DE acquisition rationale and digital engineering ecosystem |
-| nasa-de-acquisition | ch06-nasa-de-acquisition-collaboration-architecture-interoperability.md | Collaboration architecture and interoperability |
-| nasa-de-acquisition | ch07-nasa-de-acquisition-mbe-use-cases.md | Model-based engineering use cases |
-| nasa-de-acquisition | ch08-nasa-de-acquisition-mbe-plan-development.md | MBE plan development |
+| nasa-de-acquisition | ch01-nasa-de-acquisition-scope.md | NASA-HDBK-1004A, approved 2026-10-26 scope and cited-document classes. |
+| nasa-de-acquisition | ch02-nasa-de-acquisition-overview.md | NASA-HDBK-1004A, approved 2026-10-26 DE acquisition overview. |
+| nasa-de-acquisition | ch03-nasa-de-acquisition-lessons-learned.md | NASA-HDBK-1004A, approved 2026-10-26 lessons learned. |
+| nasa-de-acquisition | ch04-nasa-de-acquisition-guiding-principles.md | NASA-HDBK-1004A, approved 2026-10-26 guiding principles. |
 
 ## 12. Configuration Management & Baselines
 
@@ -304,13 +304,13 @@ Rules of construction:
 | mil-hdbk-61 | cheatsheet.md (support file) | Cheatsheet / quick reference |
 | mil-hdbk-61 | glossary.md (support file) | Glossary for the pack |
 | mil-hdbk-61 | patterns.md (support file) | Patterns/practice heuristics |
-| nasa-de-acquisition | ch02-nasa-de-acquisition-drds-and-configuration-data-management.md | DRDs, configuration and data mgmt (also data mgmt) |
 | nasa-se-expanded | ch06-nasa-se-expanded-crosscutting-cm-data-assessment-decision.md | Crosscutting CM, data, assessment, decision (also measurement) |
 | nasa-se-handbook | ch31-6-5-configuration-management.md | Configuration management process |
 | fda-med-device | ch10-software-changes-510k.md | Software change decisions for 510(k) submissions under FDA device-software guidance |
 | faa-8110-49 | ch06-legacy-software-fls-ums.md | Field-loadable and user-modifiable software notes from Order 8110.49A |
 | faa-8110-49 | ch11-software-change-impact-analysis.md | Software change impact analysis notes from Order 8110.49A |
 | nrc-nuclear | ch04-software-configuration-management-plans.md | Software configuration management plan notes from RG 1.169 Rev 1 |
+| nasa-de-acquisition | ch08-nasa-de-acquisition-drd-templates.md | NASA-HDBK-1004A, approved 2026-10-26 DRD template library. |
 
 ## 13. Data & Information Management
 
@@ -319,7 +319,6 @@ Rules of construction:
 | dod-vva-rpg | ch09-data-vv-new-simulations.md | Data verification and validation for new simulations (also V&V) |
 | dodaf | ch05-data-information-viewpoint-div.md | Data & Information viewpoint: structural data descriptions |
 | mil-hdbk-61 | ch07-mil-hdbk-61-data-management-emerging-technologies.md | CM-linked data management and emerging tech |
-| nasa-de-acquisition | ch05-nasa-de-acquisition-model-based-data-definition.md | Model-based data definitions |
 | nasa-npr-7150 | ch06-nasa-npr-7150-recommended-software-records.md | Recommended software records/records retention |
 | nasa-se-handbook | ch32-6-6-technical-data-management.md | Technical data management process |
 | nist-cps | ch05-nist-cps-data-interoperability.md | CPS data interoperability |
@@ -801,8 +800,6 @@ Rules of construction:
 | dod-mosa | ch06-dod-mosa-acquisition-pathways.md | MOSA across AAF acquisition pathways |
 | doe-o-413-3 | ch03-acquisition-planning-and-ipt.md | Acquisition strategy, project execution planning, and IPTs (also planning) |
 | gao-agile | ch06-gao-agile-federal-contracting-process.md | Agile federal contracting |
-| nasa-de-acquisition | ch03-nasa-de-acquisition-requirements-exchange-and-contract-language.md | Requirements exchange and DE contract language |
-| nasa-de-acquisition | ch04-nasa-de-acquisition-data-acquisition-contract-language.md | Data acquisition contract language |
 | nasa-npr-7123 | ch04-contracted-projects.md | Requirements flow to contracted projects |
 | faa-8110-49 | ch09-aeh-cots-ip.md | AEH COTS intellectual-property notes from AC 20-152A |
 | faa-8110-49 | ch10-cots-devices-and-cbas.md | COTS device and CBAS notes from the FAA airborne hardware guidance |
@@ -811,6 +808,9 @@ Rules of construction:
 | jsp-936 | ch07-suppliers.md | Supplier and procurement direction for acquiring AI systems from JSP 936 Part 1 |
 | jsp-912 | ch06-assess-tenders-hfi-3-0.md | Guides assessment of contractor tenders for human factors capability through process HFI-3.0, from JSP 912, March 2024. |
 | mrl-deskbook | ch06-mrl-deskbook-contract-language.md | Version 2025 contract language for MRL tasking. |
+| nasa-de-acquisition | ch05-nasa-de-acquisition-guiding-questions.md | NASA-HDBK-1004A, approved 2026-10-26 DE data guiding questions. |
+| nasa-de-acquisition | ch06-nasa-de-acquisition-contract-language.md | NASA-HDBK-1004A, approved 2026-10-26 DE data contract language. |
+| nasa-de-acquisition | ch07-nasa-de-acquisition-rcl-selection-matrix.md | NASA-HDBK-1004A, approved 2026-10-26 RCL and selection matrix method. |
 
 ## 28. Stakeholder Engagement & Needs
 

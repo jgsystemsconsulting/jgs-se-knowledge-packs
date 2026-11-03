@@ -937,30 +937,6 @@
       "is_support": false
     },
     {
-      "pack": "nasa-de-acquisition",
-      "chapter": "ch01-nasa-de-acquisition-framework-rationale-and-dee.md",
-      "cluster": "Digital Engineering & Digital Twins",
-      "is_support": false
-    },
-    {
-      "pack": "nasa-de-acquisition",
-      "chapter": "ch06-nasa-de-acquisition-collaboration-architecture-interoperability.md",
-      "cluster": "Digital Engineering & Digital Twins",
-      "is_support": false
-    },
-    {
-      "pack": "nasa-de-acquisition",
-      "chapter": "ch07-nasa-de-acquisition-mbe-use-cases.md",
-      "cluster": "Digital Engineering & Digital Twins",
-      "is_support": false
-    },
-    {
-      "pack": "nasa-de-acquisition",
-      "chapter": "ch08-nasa-de-acquisition-mbe-plan-development.md",
-      "cluster": "Digital Engineering & Digital Twins",
-      "is_support": false
-    },
-    {
       "pack": "faa-sem",
       "chapter": "ch05-faa-sem-configuration-decision-vv.md",
       "cluster": "Configuration Management & Baselines",
@@ -1039,12 +1015,6 @@
       "is_support": true
     },
     {
-      "pack": "nasa-de-acquisition",
-      "chapter": "ch02-nasa-de-acquisition-drds-and-configuration-data-management.md",
-      "cluster": "Configuration Management & Baselines",
-      "is_support": false
-    },
-    {
       "pack": "nasa-se-expanded",
       "chapter": "ch06-nasa-se-expanded-crosscutting-cm-data-assessment-decision.md",
       "cluster": "Configuration Management & Baselines",
@@ -1071,12 +1041,6 @@
     {
       "pack": "mil-hdbk-61",
       "chapter": "ch07-mil-hdbk-61-data-management-emerging-technologies.md",
-      "cluster": "Data & Information Management",
-      "is_support": false
-    },
-    {
-      "pack": "nasa-de-acquisition",
-      "chapter": "ch05-nasa-de-acquisition-model-based-data-definition.md",
       "cluster": "Data & Information Management",
       "is_support": false
     },
@@ -3079,18 +3043,6 @@
       "is_support": false
     },
     {
-      "pack": "nasa-de-acquisition",
-      "chapter": "ch03-nasa-de-acquisition-requirements-exchange-and-contract-language.md",
-      "cluster": "Supplier, Procurement & Acquisition",
-      "is_support": false
-    },
-    {
-      "pack": "nasa-de-acquisition",
-      "chapter": "ch04-nasa-de-acquisition-data-acquisition-contract-language.md",
-      "cluster": "Supplier, Procurement & Acquisition",
-      "is_support": false
-    },
-    {
       "pack": "nasa-npr-7123",
       "chapter": "ch04-contracted-projects.md",
       "cluster": "Supplier, Procurement & Acquisition",
@@ -4516,6 +4468,54 @@
       "pack": "mil-hdbk-516",
       "chapter": "ch12-mil-hdbk-516-materials-aerial-delivery.md",
       "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-de-acquisition",
+      "chapter": "ch01-nasa-de-acquisition-scope.md",
+      "cluster": "Digital Engineering & Digital Twins",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-de-acquisition",
+      "chapter": "ch02-nasa-de-acquisition-overview.md",
+      "cluster": "Digital Engineering & Digital Twins",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-de-acquisition",
+      "chapter": "ch03-nasa-de-acquisition-lessons-learned.md",
+      "cluster": "Digital Engineering & Digital Twins",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-de-acquisition",
+      "chapter": "ch04-nasa-de-acquisition-guiding-principles.md",
+      "cluster": "Digital Engineering & Digital Twins",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-de-acquisition",
+      "chapter": "ch05-nasa-de-acquisition-guiding-questions.md",
+      "cluster": "Supplier, Procurement & Acquisition",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-de-acquisition",
+      "chapter": "ch06-nasa-de-acquisition-contract-language.md",
+      "cluster": "Supplier, Procurement & Acquisition",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-de-acquisition",
+      "chapter": "ch07-nasa-de-acquisition-rcl-selection-matrix.md",
+      "cluster": "Supplier, Procurement & Acquisition",
+      "is_support": false
+    },
+    {
+      "pack": "nasa-de-acquisition",
+      "chapter": "ch08-nasa-de-acquisition-drd-templates.md",
+      "cluster": "Configuration Management & Baselines",
       "is_support": false
     }
   ]

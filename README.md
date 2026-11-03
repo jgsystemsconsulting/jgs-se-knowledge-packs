@@ -154,7 +154,7 @@ always-loaded `SKILL.md` index inlined into one file. Full detail and the per-ag
 | `nasa-rm-standard` | NASA Reliability & Maintainability Standard (NASA-STD-8729.1A) | Public domain (US gov) | 🟢 1 | ✅ live (6 chapters) |
 | `dod-rio` | DoD Risk, Issue & Opportunity Management Guide (OUSD R&E) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `dod-digital-engineering` | DoD Digital Engineering Strategy (2018, ODASD(SE)) | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
-| `nasa-de-acquisition` | NASA Digital Engineering Acquisition Framework Handbook (NASA-HDBK-1004) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
+| `nasa-de-acquisition` | NASA Digital Engineering Acquisition Framework Handbook (NASA-HDBK-1004A) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `nasa-fault-management` | NASA Fault Management Handbook (NASA-HDBK-1002 Draft 2) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `faa-system-safety` | FAA System Safety Handbook (2000) | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
 | `faa-hf-std` | FAA Human Factors Design Standard (HF-STD-001B) | Public domain (US gov) | 🟢 1 | ✅ live (9 chapters) |

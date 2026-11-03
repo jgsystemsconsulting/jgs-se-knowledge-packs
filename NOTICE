@@ -284,19 +284,15 @@ Third-party source attributions (one block per shipped content pack)
            See packs/dod-digital-engineering/LICENSE.
 
 [pack: nasa-de-acquisition]
-  Source : NASA Digital Engineering Acquisition Framework Handbook (NASA-HDBK-1004),
-           Baseline (2020-04-01), superseding NASA-HDBK-0008
+
+  Source : NASA Digital Engineering Acquisition Framework Handbook (NASA-HDBK-1004A), NASA-HDBK-1004A, approved 2026-10-26
   Author : NASA, Office of the NASA Chief Engineer
-  Licence: Public Domain -- US Government work (17 U.S.C. 105)
+  Licence: Public Domain (US Government work, 17 U.S.C. 105); APPROVED FOR PUBLIC RELEASE--DISTRIBUTION IS UNLIMITED. No printed DOPSR case found.
   Changes: reconstructed as synthesized reference notes (not a reproduction)
-  Terms  : public domain, no copyright. CAVEAT: the Handbook NAMES and invokes many
-           third-party standards (ISO 10303/STEP, ASME Y14, MIL-STD-31000, SAE EIA-649/
-           GEIA-859, ISO/IEC/IEEE 42010, FAR/DFARS clauses) that remain the copyright of
-           their publishers -- this pack reproduces NONE of that text, only synthesized
-           notes that name them. The example DRDs and contract clauses are a starter
-           library to be tailored and Legal/Procurement-reviewed before binding use.
-           Attribution to NASA is courtesy, not obligation; NASA does not endorse this
-           pack. See packs/nasa-de-acquisition/LICENSE.
+  Terms  : public domain, no copyright. Third-party standards named by the
+           handbook stay with their publishers and are named, not reproduced.
+           Attribution to NASA is courtesy, not obligation; NASA does not
+           endorse this pack. See packs/nasa-de-acquisition/LICENSE.
 
 [pack: nasa-fault-management]
   Source : NASA Fault Management Handbook (NASA-HDBK-1002), Draft 2 (April 2, 2012)
