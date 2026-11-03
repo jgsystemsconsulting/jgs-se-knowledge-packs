@@ -1,22 +1,32 @@
-# Glossary — MIL-STD-40051-2C (Page-Based TMs)
+# Glossary: MIL-STD-40051E w/Change 1, 30 July 2025
 
-- **BDAR** — Battle Damage Assessment and Repair manual type. → ch01, ch07
-- **Change package** — Controlled set of changed TM pages/WPs with instructions and revision marking. → ch06
-- **Comprehensibility** — Degree to which the intended user can understand and apply TM information. → ch01, ch04
-- **Content selection matrix** — Planning checklist specifying which TM content/WPs are included. → ch07
-- **Distribution statement** — Cover/title release marking (standard itself is DIST-A; each TM carries its own). → ch03
-- **DMWR / NMWR** — Depot / National Maintenance Work Requirements. → ch01, ch03
-- **ETM (in -2C)** — Treated as synonymous with page-based TM (not IETM). → ch01
-- **Front matter** — Cover, warning summary, title page, TOC, how-to-use/general info preceding body WPs. → ch03
-- **HAZMAT warning** — Hazardous materials warning with prescribed icons/text. → ch05
-- **IETM** — Interactive Electronic Technical Manual (MIL-STD-40051-1 path, out of this pack's -2C slice). → ch01
-- **Initial setup** — Tools, parts, conditions, and references required before a WP task starts. → ch02
-- **Lubrication order (LO)** — Lubrication product type selectable via matrix. → ch07
-- **Page-based TM** — Linear paged technical manual product governed by 40051-2C. → ch01
-- **PMC / PMD / PMI / PMS** — Preventive maintenance checklist/daily/inspection/services products. → ch01, ch07
-- **Revision bar** — Vertical mark indicating technical change location. → ch06
-- **RPSTL** — Repair Parts and Special Tools List. → ch02, ch07
-- **SRU / LRU** — Shop / Line Replaceable Unit levels addressed in maintenance content. → ch01
-- **Training & Documentation** — Cluster framing: TMs as formal training and technical documentation deliverables. → ch01, ch07
-- **Warning / Caution / Note** — Signal words for personnel hazard, equipment damage, and advisory information. → ch05
-- **Work package (WP)** — Modular task/supporting-info unit that composes a page-based TM. → ch02
+Short terms from section 3 and common usage in this edition. Definitions are synthesized. They are not long verbatim runs from the source.
+
+## Core publication terms
+
+- **TM** - Technical Manual. Equipment publication prepared under this standard practice.
+- **IETM** - Interactive Electronic Technical Manual. Electronic output with non-linear navigation and related functionality.
+- **ETM** - Electronic Technical Manual. Electronic delivery that may be primarily linear.
+- **WP** - Work package. Modular unit of narrative or task-oriented information with its own identifier.
+- **RPSTL** - Repair Parts and Special Tools List. Parts-information product family.
+- **DMWR** - Depot Maintenance Work Requirement.
+- **NMWR** - National Maintenance Work Requirement.
+- **BDAR** - Battle Damage Assessment and Repair.
+- **PMC** - Preventive Maintenance Checklist.
+- **LO** - Lubrication Order.
+- **HAZMAT** - Hazardous material presentation in warnings and related safety content.
+- **TB** - Technical Bulletin. Supplementary technical publication.
+- **HR** - Hand receipt. Controlled inventory publication type in this standard.
+- **MATDEV** - Materiel developer. Owns selective application and many "as specified" decisions.
+- **MAC** - Maintenance Allocation Chart.
+- **COEI** - Components of End Item.
+- **BII** - Basic Issue Items.
+- **AAL** - Additional Authorization List.
+- **SRU / LRU** - Shop / Line Replaceable Unit.
+- **PMD / PMS / PMI** - Preventive Maintenance Daily / Services / Phased Maintenance Inspection products.
+
+## Scope notes
+
+- Section 3 definitions fold here because the extract did not show requirement prose that forced a separate chapter.
+- Acronyms and definitions in the source are broader than this short list. Prefer the source when a contract cites a precise term.
+- This glossary does not quote statute text or long standard definitions.

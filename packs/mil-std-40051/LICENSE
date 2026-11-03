@@ -1,23 +1,26 @@
-mil-std-40051 pack — content licence
+mil-std-40051 pack: content licence
 ====================================
 
 This pack is derived from:
-    Preparation of Digital Technical Information for Page-Based Technical Manuals (TMs)
-    MIL-STD-40051-2C, 15 December 2015
-    US Department of Defense (DLA / Army TMSS family; AMSC 9613)
+    Preparation of Digital Technical Information for Technical Manuals
+    MIL-STD-40051E w/Change 1, 30 July 2025
+    US Department of Defense (DLA)
 
-Source licence: Public Domain (US Government work, 17 U.S.C. § 105; Distribution Statement A — Approved for public release; distribution is unlimited)  (tier 1 — see ../../docs/SOURCE-VETTING.md)
+Source licence: Public Domain (US Government work, 17 U.S.C. 105); Distribution A,
+approved for public release. (tier 1; see ../../docs/SOURCE-VETTING.md)
 No source-material download link is published (see ../../docs/LICENSING.md).
 
-This source is a work of the United States Government and is therefore NOT subject to
-copyright protection in the United States (17 U.S.C. § 105). The obtained everyspec mirror
-copy's cover page visually shows: "DISTRIBUTION STATEMENT A. Approved for public release;
-distribution is unlimited." It is in the public domain: anyone may reproduce, transform, and
-redistribute it for any purpose, including commercially, without permission.
+This source is a work of the United States Government and is therefore not subject to
+copyright protection in the United States (17 U.S.C. 105). Distribution A is taken from
+ASSIST metadata for ident 123616. No printed DOPSR case was found. The cover text layer
+has no copyright notice.
 
-Attribution to the US Department of Defense is provided as a courtesy (see the
-repository NOTICE), not a legal obligation. The Department of Defense does not
-endorse this pack or its authors.
+This pack does not reproduce content-selection matrices, plate exemplars, or sample
+pages. Cited standards and statutes are named, not quoted.
+
+Attribution to the US Department of Defense is courtesy, not a legal obligation (see
+the repository NOTICE). The Department of Defense does not endorse this pack or its
+authors.
 
 NOTE: This file governs the CONTENT of this pack. The repository tooling is licensed
 separately under MIT (see ../../LICENSE).

@@ -1,41 +1,45 @@
-# Patterns — MIL-STD-40051-2C (Page-Based TMs)
+# Patterns: MIL-STD-40051E w/Change 1, 30 July 2025
 
-## 1. Matrix-First TM Planning
-- **When:** New TM or major revision kickoff.
-- **How:** Fill content selection matrix with acquiring activity; lock maintenance levels; derive WP list and style/trim before authoring.
-- **Trade-offs:** Planning time vs rewriting wrong-scope books.
+Practice heuristics for authoring and review. When / How / Trade-offs. No matrix cells. No plates.
 
-## 2. Work-Package Module Design
-- **When:** Any procedure-heavy manual.
-- **How:** One task family per WP; mandatory initial setup; numbered steps; end-of-WP closure; stable WP ID.
-- **Trade-offs:** More files/IDs vs reusable training modules and cleaner changes.
+## Pattern: Select before you write
 
-## 3. Dual-Layer Hazard Communication
-- **When:** Residual personnel or HAZMAT risk exists.
-- **How:** Warning summary in front matter + step-adjacent warnings/cautions with correct signal words and icons.
-- **Trade-offs:** Page count vs preventable mishaps and training gaps.
+- **When:** A new TM type or maintenance level is on contract.
+- **How:** Fill Appendix A with the acquiring activity and MATDEV. Open only the content objects the matrix requires. Then author against sections 4 and 5.
+- **Trade-offs:** Up-front matrix time costs schedule early and saves noncompliant drafts later. Skipping the matrix creates silent scope fights.
 
-## 4. Cover/Title Compliance Gate
-- **When:** Before each release candidate.
-- **How:** Check distribution, export, destruction, authentication, TM number, and change dates on cover/title family.
-- **Trade-offs:** Checklist minutes vs unreleasable or mis-marked manuals.
+## Pattern: One content model, two renders
 
-## 5. Change-Package Discipline
-- **When:** Any post-release fix.
-- **How:** Issue change instructions, revision bars on technical deltas, update title-page change history and TOC; renumber per rules.
-- **Trade-offs:** Packaging overhead vs field/training fleet divergence.
+- **When:** The program must ship page-based and interactive outputs.
+- **How:** Author structured WPs once. Apply IETM functionality rules where the output is interactive. Do not maintain two unrelated manuscripts.
+- **Trade-offs:** Structured authoring needs tooling discipline. Dual manuscripts drift and double the change cost.
 
-## 6. Exemplar-Driven Template Library
-- **When:** Standing up a documentation production line.
-- **How:** Map authoring templates to standard plate families (operator WP, DMWR cover, foldout, emergency page).
-- **Trade-offs:** Template engineering vs every writer improvising layout.
+## Pattern: WP as the citation atom
 
-## 7. Level-Filtered Content Sets
-- **When:** Combined vs split operator/maintainer/depot manuals.
-- **How:** Use matrix rows to filter tasks by authorized level; avoid dumping depot steps into operator books.
-- **Trade-offs:** Multiple manuals vs cognitive overload and misuse risk.
+- **When:** Training, field use, or change packages must point at a stable unit.
+- **How:** Give every WP a unique ID and a clear title. Keep sequence numbers coherent inside the module. Prefer WP references over fragile page numbers in cross-references.
+- **Trade-offs:** Good IDs take editorial care. Page-only references break when pagination shifts.
 
-## 8. Training Fleet Effectivity Sync
-- **When:** Fielding a change to operational TMs.
-- **How:** Push the same change package to schools/simulators and units; verify change state in training materials.
-- **Trade-offs:** Distribution logistics vs teaching obsolete procedures.
+## Pattern: Safety in two layers
+
+- **When:** Procedures include hazards.
+- **How:** Maintain the front warning summary and the step-adjacent WARNING/CAUTION/NOTE (and HAZMAT) presentations required by the general spine.
+- **Trade-offs:** Dual layers add volume. Single-layer warnings hide hazards from users who skip the front matter or the step text.
+
+## Pattern: Special types stay special
+
+- **When:** BDAR, destruction, PMC, LO, software, hand receipt, TB, or ammunition products appear.
+- **How:** Load the matching appendix (H-Q). Keep the shared front-matter and WP spine unless the appendix states an override.
+- **Trade-offs:** Type-specific appendices add reading load. Stuffing special content into a generic operator book hides duties reviewers expect to find.
+
+## Pattern: Change with visible effectivity
+
+- **When:** Fielded manuals must move to a new issue.
+- **How:** Use change packages or a revision path with markings, notices, and effective-page/WP lists that match the delivered files.
+- **Trade-offs:** Honest effectivity costs configuration work. Hidden edits create mixed fleets and training mismatch.
+
+## Pattern: Name, do not paste
+
+- **When:** External standards, statutes, or DoDI-class documents are relevant.
+- **How:** Name them. Point authors to the controlling issue in the contract. Do not paste long quotations into pack notes.
+- **Trade-offs:** Naming forces readers to open the real source. Pasting creates license and drift risk.

@@ -1,57 +1,45 @@
-# Cheatsheet — MIL-STD-40051-2C
+# Cheatsheet: MIL-STD-40051E w/Change 1, 30 July 2025
 
-## Identity
-| Item | Value |
-|------|-------|
-| Designation | MIL-STD-40051-2C |
-| Date | 15 December 2015 |
-| Supersedes | MIL-STD-40051-2B (17 Oct 2012) |
-| Slice | Page-based TMs (-2); IETM is -1 |
-| Cover DIST | DISTRIBUTION STATEMENT A — public release, unlimited |
-| AMSC / Area | 9613 / TMSS |
+## Pin
 
-## Signal words
-| Word | Use |
-|------|-----|
-| WARNING | Personnel injury/death hazard |
-| CAUTION | Equipment damage risk |
-| NOTE | Essential advisory, not a hazard signal |
+- Standard: MIL-STD-40051E w/Change 1, 30 July 2025
+- One volume for page-based and electronic manuals (IETM and ETM)
+- Dist A from ASSIST metadata; no printed DOPSR case in the vetted front matter
 
-## Front-matter stack (typical)
-1. Front cover (distro/export/destruction as required)  
-2. Warning summary (when required)  
-3. Title page (dates, supersession)  
-4. TOC  
-5. How to use / general information WPs  
-6. Body chapters/WPs  
-7. Back matter (error reporting, back cover)
+## Quick spine
 
-## WP quick checklist
-- [ ] WP number + title  
-- [ ] Initial setup complete  
-- [ ] Steps numbered; warnings before hazardous actions  
-- [ ] Figures/tables numbered and referenced  
-- [ ] End-of-task/WP statement  
-- [ ] References usable  
+1. Confirm scope and service prefixes (ch01)
+2. Resolve applicable-document classes and issues (ch02)
+3. Apply general structure: modules, WPs, IETM/ETM rules, style, warnings (ch03)
+4. Complete detailed front-matter and control fields (ch04)
+5. Fill Appendix A content selection matrix; do not invent silent deletes (ch05)
+6. Author selected core families B-G (ch06)
+7. Author selected special types H-Q (ch07)
+8. Issue changes/revisions with visible effectivity; cite standard + filled matrix in acquisition (ch08)
 
-## Change quick checklist
-- [ ] Change instructions included  
-- [ ] Revision bars on technical changes  
-- [ ] Title-page change date added  
-- [ ] TOC updated  
-- [ ] WP renumber collisions avoided  
-- [ ] Training fleet same change state  
+## Do / Don't
 
-## Content selection reminder
-Matrix first → tailor explicitly → write only selected WPs → validate against exemplars.
+| Do | Don't |
+| --- | --- |
+| Treat E as one volume for page-based and electronic | Treat the pack as a canceled page-only slice |
+| Record tailoring in the matrix | Drop requirements in the margin |
+| Keep WP IDs stable for field citation | Rely on page image as the master |
+| Name cited standards | Quote long passages from them |
+| Describe matrix method | Copy matrix cells or plates |
 
-## Cluster vocabulary hooks
-- **Training & Documentation** — TM/ETM production, content matrices, comprehensibility, training fleet effectivity  
-- **Ops & Maintenance** — operator/maintainer procedures, PM products, DMWR/NMWR, RPSTL, BDAR  
+## Acquisition pair
 
-## Smells
-- Missing DIST/export on cover when required  
-- Procedures without initial setup  
-- Warnings only in an appendix  
-- Silent PDF replace with no bars/history  
-- Operator book full of depot steps
+- Title, number, and date of this standard
+- Filled-out content selection matrix
+
+## Safety layer (short)
+
+- Warning summary when warnings exist
+- Step-adjacent WARNING / CAUTION / NOTE per general rules
+- HAZMAT icons and headers follow the safety clauses in section 4
+
+## Change layer (short)
+
+- Mark changes so users see what moved
+- Keep list of effective pages/WPs honest for ETM deliveries
+- Revision re-baselines; change updates an issue
