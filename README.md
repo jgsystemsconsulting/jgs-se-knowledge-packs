@@ -144,7 +144,7 @@ always-loaded `SKILL.md` index inlined into one file. Full detail and the per-ag
 | `digital-systems-engineering` | Towards Digital Engineering (ODU, arXiv:2002.11672) | CC BY 4.0 | 🟡 2 | ✅ live (7 chapters) |
 | `mil-std-882` | MIL-STD-882E: DoD System Safety | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `requirements-writing` | Requirements writing: EARS & quality (original guidance) | CC BY 4.0 | 🟡 2 | ✅ live (6 chapters) |
-| `dau-se-guidebook` | DoD Systems Engineering Guidebook (OUSD R&E) | Public domain (US gov) | 🟢 1 | ✅ live (6 chapters) |
+| `dau-se-guidebook` | DoD Systems Engineering Guidebook (September 2026) | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `gao-tra` | GAO Technology Readiness Assessment Guide (GAO-20-48G) | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
 | `dodaf` | DoD Architecture Framework 2.02 Vol II | Public domain (US gov) | 🟢 1 | ✅ live (11 chapters) |
 | `eu-ai-act` | EU Artificial Intelligence Act (Reg 2024/1689) | EU OJ (reproducible) | 🟡 2 | ✅ live (12 chapters) |

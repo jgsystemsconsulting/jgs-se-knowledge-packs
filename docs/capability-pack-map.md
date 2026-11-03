@@ -24,7 +24,7 @@ Rules of construction:
 
 | Cluster | Entries |
 |---|---|
-| 1. Systems Thinking & Fundamentals | 26 |
+| 1. Systems Thinking & Fundamentals | 28 |
 | 2. Requirements Engineering | 24 |
 | 3. Requirements Traceability & Allocation | 3 |
 | 4. Architecture & Design | 20 |
@@ -56,14 +56,12 @@ Rules of construction:
 | 30. Standards, Tailoring & Process Models | 68 |
 | 31. Specialty Engineering | 7 |
 | 32. Assurance & System Assurance | 16 |
-| **Total** | **743** |
+| **Total** | **745** |
 
 ## 1. Systems Thinking & Fundamentals
 
 | Pack | Chapter | Why it fits / one-line value |
 |---|---|---|
-| dau-se-guidebook | ch01-introduction.md | SE orientation across the defense acquisition life cycle |
-| dau-se-guidebook | ch02-system-level-considerations.md | SoS, digital eng, value/sustainability engineering at system level |
 | doe-sem | ch01-sem-purpose-and-context.md | DOE SEM/SDLC purpose, scope, and CMM alignment orientation |
 | faa-sem | ch01-faa-sem-introduction-ams-lifecycle.md | FAA SEM and AMS lifecycle orientation |
 | nasa-se-expanded | ch01-nasa-se-expanded-fundamentals-and-se-engine.md | SE fundamentals and the SE engine |
@@ -88,6 +86,10 @@ Rules of construction:
 | sebok | ch35-sebok-implementation-examples.md | Implementation examples |
 | sebok | ch36-sebok-emerging-knowledge.md | Emerging SE knowledge |
 | jsp-936 | ch02-ai-in-defence-systems.md | How AI including RAS and digital systems is framed inside Defence systems from JSP 936 Part 1 |
+| dau-se-guidebook | ch01-dau-se-guidebook-introduction.md | September 2026 SE Guidebook introduction, purpose, and life-cycle framing. |
+| dau-se-guidebook | ch02-dau-se-guidebook-system-level.md | September 2026 SE Guidebook system-level considerations. |
+| dau-se-guidebook | ch03-dau-se-guidebook-se-modernization.md | September 2026 SE Guidebook SE modernization: digital engineering, MBSE, MOSA, Agile. |
+| dau-se-guidebook | ch04-dau-se-guidebook-engineering-resources.md | September 2026 SE Guidebook engineering resources, enablers, and lessons learned. |
 
 ## 2. Requirements Engineering
 
@@ -130,7 +132,6 @@ Rules of construction:
 
 | Pack | Chapter | Why it fits / one-line value |
 |---|---|---|
-| dau-se-guidebook | ch06-design-considerations.md | Design-solution considerations incl. open systems and resiliency |
 | dod-mosa | ch01-dod-mosa-introduction-and-policy.md | MOSA policy context and intent |
 | dod-mosa | ch02-dod-mosa-pillars-and-benefits.md | MOSA pillars (modularity, key interfaces, standards) |
 | dod-mosa | ch04-dod-mosa-technical-considerations.md | Design rules for modular open architectures |
@@ -150,6 +151,7 @@ Rules of construction:
 | nasa-se-handbook | ch21-5-1-product-implementation.md | Product implementation/fabrication (also make/buy) |
 | sebok | ch17-sebok-system-architecture-realization.md | System architecture and realization |
 | sebok | ch34-sebok-se-quality-attributes.md | Quality attributes / ilities (also reliability) |
+| dau-se-guidebook | ch08-dau-se-guidebook-design-considerations.md | September 2026 SE Guidebook 24 design considerations. |
 
 ## 5. Interface Management & ICIDs
 
@@ -828,7 +830,6 @@ Rules of construction:
 | dafman-63-119 | ch03-continuous-process-and-review-cycle.md | Continuous certification review cycle and template-based exit criteria |
 | dafman-63-119 | ch04-certification-memo-and-gates.md | Certification memorandum, readiness gates, and decertification |
 | dafman-63-119 | ch07-templates-documentation-and-tracking.md | MOTRC template matrix, documentation, and multi-source tracking |
-| dau-se-guidebook | ch03-technical-reviews-and-audits.md | TRRs, PDR/CDR, FCA/PCA and other formal control gates |
 | doe-o-413-3 | ch02-critical-decisions-cd0-cd4.md | CD-0 through CD-4 stage gates and approval authorities |
 | doe-o-413-3 | ch06-reviews-responsibilities-crd.md | External/independent reviews, roles, and contractor requirements (also supplier) |
 | eu-ai-act | ch01-general-provisions.md | Scope, definitions, regulatory structure |
@@ -854,13 +855,12 @@ Rules of construction:
 | fhwa-its-se | ch04-managing-se-projects.md | Shows agencies how to size systems engineering effort to project risk and choose procurement and staffing approaches, from Systems Engineering for ITS, December 2022. |
 | jsp-912 | ch02-roles-and-responsibilities.md | Sets out the HFI roles and responsibilities for programme teams, HFI practitioners, and senior stakeholders, from JSP 912, March 2024. |
 | jsp-912 | ch09-competencies-ethics-conduct.md | Defines HFI practitioner competencies and the standards for research ethics and professional conduct, from JSP 912, March 2024. |
+| dau-se-guidebook | ch05-dau-se-guidebook-technical-reviews-audits.md | September 2026 SE Guidebook technical reviews and audits. |
 
 ## 30. Standards, Tailoring & Process Models
 
 | Pack | Chapter | Why it fits / one-line value |
 |---|---|---|
-| dau-se-guidebook | ch04-technical-management-processes.md | The 8 technical management processes mapped to 15288 |
-| dau-se-guidebook | ch05-technical-processes.md | The 8 technical processes (15288-style process definitions) |
 | dodaf | ch09-standards-viewpoint-stdv.md | Standards viewpoint: applicable standards profiles |
 | doe-sem | ch02-lifecycle-model-and-quality-reviews.md | Eight-stage SEM lifecycle with walkthrough/ISA/stage-exit gates (also governance gates) |
 | faa-std-025 | ch01-scope-and-document-family.md | FAA-STD-025f scope and IRD/ICD document-family definitions |
@@ -927,6 +927,8 @@ Rules of construction:
 | fhwa-its-se | ch07-glossary-and-acronyms.md | Defines the terms and acronyms used across the guide, from Systems Engineering for ITS, December 2022. |
 | jsp-912 | ch04-hfi-process-goals-activities-tailoring.md | Describes the HFI process goals and activities and how to tailor them to project scale and novelty, from JSP 912, March 2024. |
 | mil-hdbk-516 | ch01-mil-hdbk-516-scope.md | MIL-HDBK-516D, 29 May 2026 scope, tailoring, cited-publication classes, and notes. |
+| dau-se-guidebook | ch06-dau-se-guidebook-technical-management.md | September 2026 SE Guidebook technical management processes and the SEP. |
+| dau-se-guidebook | ch07-dau-se-guidebook-technical-processes.md | September 2026 SE Guidebook technical processes. |
 
 ## 31. Specialty Engineering
 

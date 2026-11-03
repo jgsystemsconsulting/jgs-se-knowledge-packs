@@ -4,16 +4,6 @@
   "generated_on": "2026-11-03",
   "notes": [
     {
-      "pack": "dau-se-guidebook",
-      "chapter": "ch01-introduction.md",
-      "note": "SE orientation across the defense acquisition life cycle"
-    },
-    {
-      "pack": "dau-se-guidebook",
-      "chapter": "ch02-system-level-considerations.md",
-      "note": "SoS, digital eng, value/sustainability engineering at system level"
-    },
-    {
       "pack": "doe-sem",
       "chapter": "ch01-sem-purpose-and-context.md",
       "note": "DOE SEM/SDLC purpose, scope, and CMM alignment orientation"
@@ -237,11 +227,6 @@
       "pack": "requirements-writing",
       "chapter": "ch06-verifiability-and-traceability.md",
       "note": "Verifiability and traceability of requirements (also verification)"
-    },
-    {
-      "pack": "dau-se-guidebook",
-      "chapter": "ch06-design-considerations.md",
-      "note": "Design-solution considerations incl. open systems and resiliency"
     },
     {
       "pack": "dod-mosa",
@@ -2529,11 +2514,6 @@
       "note": "MOTRC template matrix, documentation, and multi-source tracking"
     },
     {
-      "pack": "dau-se-guidebook",
-      "chapter": "ch03-technical-reviews-and-audits.md",
-      "note": "TRRs, PDR/CDR, FCA/PCA and other formal control gates"
-    },
-    {
       "pack": "doe-o-413-3",
       "chapter": "ch02-critical-decisions-cd0-cd4.md",
       "note": "CD-0 through CD-4 stage gates and approval authorities"
@@ -2612,16 +2592,6 @@
       "pack": "nist-csf",
       "chapter": "ch02-govern-gv.md",
       "note": "Govern function (cyber governance)"
-    },
-    {
-      "pack": "dau-se-guidebook",
-      "chapter": "ch04-technical-management-processes.md",
-      "note": "The 8 technical management processes mapped to 15288"
-    },
-    {
-      "pack": "dau-se-guidebook",
-      "chapter": "ch05-technical-processes.md",
-      "note": "The 8 technical processes (15288-style process definitions)"
     },
     {
       "pack": "dodaf",
@@ -3717,6 +3687,46 @@
       "pack": "nasa-de-acquisition",
       "chapter": "ch08-nasa-de-acquisition-drd-templates.md",
       "note": "NASA-HDBK-1004A, approved 2026-10-26 DRD template library."
+    },
+    {
+      "pack": "dau-se-guidebook",
+      "chapter": "ch01-dau-se-guidebook-introduction.md",
+      "note": "September 2026 SE Guidebook introduction, purpose, and life-cycle framing."
+    },
+    {
+      "pack": "dau-se-guidebook",
+      "chapter": "ch02-dau-se-guidebook-system-level.md",
+      "note": "September 2026 SE Guidebook system-level considerations."
+    },
+    {
+      "pack": "dau-se-guidebook",
+      "chapter": "ch03-dau-se-guidebook-se-modernization.md",
+      "note": "September 2026 SE Guidebook SE modernization: digital engineering, MBSE, MOSA, Agile."
+    },
+    {
+      "pack": "dau-se-guidebook",
+      "chapter": "ch04-dau-se-guidebook-engineering-resources.md",
+      "note": "September 2026 SE Guidebook engineering resources, enablers, and lessons learned."
+    },
+    {
+      "pack": "dau-se-guidebook",
+      "chapter": "ch05-dau-se-guidebook-technical-reviews-audits.md",
+      "note": "September 2026 SE Guidebook technical reviews and audits."
+    },
+    {
+      "pack": "dau-se-guidebook",
+      "chapter": "ch06-dau-se-guidebook-technical-management.md",
+      "note": "September 2026 SE Guidebook technical management processes and the SEP."
+    },
+    {
+      "pack": "dau-se-guidebook",
+      "chapter": "ch07-dau-se-guidebook-technical-processes.md",
+      "note": "September 2026 SE Guidebook technical processes."
+    },
+    {
+      "pack": "dau-se-guidebook",
+      "chapter": "ch08-dau-se-guidebook-design-considerations.md",
+      "note": "September 2026 SE Guidebook 24 design considerations."
     }
   ]
 }

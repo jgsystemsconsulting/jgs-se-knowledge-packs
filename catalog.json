@@ -94,13 +94,13 @@
     },
     {
       "slug": "dau-se-guidebook",
-      "title": "DoD Systems Engineering Guidebook (OUSD R&E)",
+      "title": "DoD Systems Engineering Guidebook (September 2026)",
       "publisher": "US Department of Defense (Office of the Under Secretary of Defense for Research and Engineering)",
-      "source_version": "February 2022 (DOPSR Case # 22-S-0595)",
+      "source_version": "September 2026 (DOPSR Case # 26-T-2032)",
       "license": "Public Domain (US Government work); Distribution A",
       "license_tier": 1,
       "commercial_use": true,
-      "chapters": 6,
+      "chapters": 8,
       "status": "live"
     },
     {

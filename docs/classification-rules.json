@@ -61,18 +61,6 @@
   ],
   "assignments": [
     {
-      "pack": "dau-se-guidebook",
-      "chapter": "ch01-introduction.md",
-      "cluster": "Systems Thinking & Fundamentals",
-      "is_support": false
-    },
-    {
-      "pack": "dau-se-guidebook",
-      "chapter": "ch02-system-level-considerations.md",
-      "cluster": "Systems Thinking & Fundamentals",
-      "is_support": false
-    },
-    {
       "pack": "doe-sem",
       "chapter": "ch01-sem-purpose-and-context.md",
       "cluster": "Systems Thinking & Fundamentals",
@@ -340,12 +328,6 @@
       "pack": "requirements-writing",
       "chapter": "ch06-verifiability-and-traceability.md",
       "cluster": "Requirements Traceability & Allocation",
-      "is_support": false
-    },
-    {
-      "pack": "dau-se-guidebook",
-      "chapter": "ch06-design-considerations.md",
-      "cluster": "Architecture & Design",
       "is_support": false
     },
     {
@@ -3091,12 +3073,6 @@
       "is_support": false
     },
     {
-      "pack": "dau-se-guidebook",
-      "chapter": "ch03-technical-reviews-and-audits.md",
-      "cluster": "Governance, Reviews, Gates & Control Points",
-      "is_support": false
-    },
-    {
       "pack": "doe-o-413-3",
       "chapter": "ch02-critical-decisions-cd0-cd4.md",
       "cluster": "Governance, Reviews, Gates & Control Points",
@@ -3190,18 +3166,6 @@
       "pack": "nist-csf",
       "chapter": "ch02-govern-gv.md",
       "cluster": "Governance, Reviews, Gates & Control Points",
-      "is_support": false
-    },
-    {
-      "pack": "dau-se-guidebook",
-      "chapter": "ch04-technical-management-processes.md",
-      "cluster": "Standards, Tailoring & Process Models",
-      "is_support": false
-    },
-    {
-      "pack": "dau-se-guidebook",
-      "chapter": "ch05-technical-processes.md",
-      "cluster": "Standards, Tailoring & Process Models",
       "is_support": false
     },
     {
@@ -4516,6 +4480,54 @@
       "pack": "nasa-de-acquisition",
       "chapter": "ch08-nasa-de-acquisition-drd-templates.md",
       "cluster": "Configuration Management & Baselines",
+      "is_support": false
+    },
+    {
+      "pack": "dau-se-guidebook",
+      "chapter": "ch01-dau-se-guidebook-introduction.md",
+      "cluster": "Systems Thinking & Fundamentals",
+      "is_support": false
+    },
+    {
+      "pack": "dau-se-guidebook",
+      "chapter": "ch02-dau-se-guidebook-system-level.md",
+      "cluster": "Systems Thinking & Fundamentals",
+      "is_support": false
+    },
+    {
+      "pack": "dau-se-guidebook",
+      "chapter": "ch03-dau-se-guidebook-se-modernization.md",
+      "cluster": "Systems Thinking & Fundamentals",
+      "is_support": false
+    },
+    {
+      "pack": "dau-se-guidebook",
+      "chapter": "ch04-dau-se-guidebook-engineering-resources.md",
+      "cluster": "Systems Thinking & Fundamentals",
+      "is_support": false
+    },
+    {
+      "pack": "dau-se-guidebook",
+      "chapter": "ch05-dau-se-guidebook-technical-reviews-audits.md",
+      "cluster": "Governance, Reviews, Gates & Control Points",
+      "is_support": false
+    },
+    {
+      "pack": "dau-se-guidebook",
+      "chapter": "ch06-dau-se-guidebook-technical-management.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "dau-se-guidebook",
+      "chapter": "ch07-dau-se-guidebook-technical-processes.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "dau-se-guidebook",
+      "chapter": "ch08-dau-se-guidebook-design-considerations.md",
+      "cluster": "Architecture & Design",
       "is_support": false
     }
   ]

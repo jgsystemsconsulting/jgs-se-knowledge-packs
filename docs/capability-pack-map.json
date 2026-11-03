@@ -7,16 +7,6 @@
       "name": "Systems Thinking & Fundamentals",
       "chapters": [
         {
-          "pack": "dau-se-guidebook",
-          "chapter": "ch01-introduction.md",
-          "note": "SE orientation across the defense acquisition life cycle"
-        },
-        {
-          "pack": "dau-se-guidebook",
-          "chapter": "ch02-system-level-considerations.md",
-          "note": "SoS, digital eng, value/sustainability engineering at system level"
-        },
-        {
           "pack": "doe-sem",
           "chapter": "ch01-sem-purpose-and-context.md",
           "note": "DOE SEM/SDLC purpose, scope, and CMM alignment orientation"
@@ -135,6 +125,26 @@
           "pack": "jsp-936",
           "chapter": "ch02-ai-in-defence-systems.md",
           "note": "How AI including RAS and digital systems is framed inside Defence systems from JSP 936 Part 1"
+        },
+        {
+          "pack": "dau-se-guidebook",
+          "chapter": "ch01-dau-se-guidebook-introduction.md",
+          "note": "September 2026 SE Guidebook introduction, purpose, and life-cycle framing."
+        },
+        {
+          "pack": "dau-se-guidebook",
+          "chapter": "ch02-dau-se-guidebook-system-level.md",
+          "note": "September 2026 SE Guidebook system-level considerations."
+        },
+        {
+          "pack": "dau-se-guidebook",
+          "chapter": "ch03-dau-se-guidebook-se-modernization.md",
+          "note": "September 2026 SE Guidebook SE modernization: digital engineering, MBSE, MOSA, Agile."
+        },
+        {
+          "pack": "dau-se-guidebook",
+          "chapter": "ch04-dau-se-guidebook-engineering-resources.md",
+          "note": "September 2026 SE Guidebook engineering resources, enablers, and lessons learned."
         }
       ]
     },
@@ -287,11 +297,6 @@
       "name": "Architecture & Design",
       "chapters": [
         {
-          "pack": "dau-se-guidebook",
-          "chapter": "ch06-design-considerations.md",
-          "note": "Design-solution considerations incl. open systems and resiliency"
-        },
-        {
           "pack": "dod-mosa",
           "chapter": "ch01-dod-mosa-introduction-and-policy.md",
           "note": "MOSA policy context and intent"
@@ -385,6 +390,11 @@
           "pack": "sebok",
           "chapter": "ch34-sebok-se-quality-attributes.md",
           "note": "Quality attributes / ilities (also reliability)"
+        },
+        {
+          "pack": "dau-se-guidebook",
+          "chapter": "ch08-dau-se-guidebook-design-considerations.md",
+          "note": "September 2026 SE Guidebook 24 design considerations."
         }
       ]
     },
@@ -3277,11 +3287,6 @@
           "note": "MOTRC template matrix, documentation, and multi-source tracking"
         },
         {
-          "pack": "dau-se-guidebook",
-          "chapter": "ch03-technical-reviews-and-audits.md",
-          "note": "TRRs, PDR/CDR, FCA/PCA and other formal control gates"
-        },
-        {
           "pack": "doe-o-413-3",
           "chapter": "ch02-critical-decisions-cd0-cd4.md",
           "note": "CD-0 through CD-4 stage gates and approval authorities"
@@ -3405,22 +3410,17 @@
           "pack": "jsp-912",
           "chapter": "ch09-competencies-ethics-conduct.md",
           "note": "Defines HFI practitioner competencies and the standards for research ethics and professional conduct, from JSP 912, March 2024."
+        },
+        {
+          "pack": "dau-se-guidebook",
+          "chapter": "ch05-dau-se-guidebook-technical-reviews-audits.md",
+          "note": "September 2026 SE Guidebook technical reviews and audits."
         }
       ]
     },
     {
       "name": "Standards, Tailoring & Process Models",
       "chapters": [
-        {
-          "pack": "dau-se-guidebook",
-          "chapter": "ch04-technical-management-processes.md",
-          "note": "The 8 technical management processes mapped to 15288"
-        },
-        {
-          "pack": "dau-se-guidebook",
-          "chapter": "ch05-technical-processes.md",
-          "note": "The 8 technical processes (15288-style process definitions)"
-        },
         {
           "pack": "dodaf",
           "chapter": "ch09-standards-viewpoint-stdv.md",
@@ -3750,6 +3750,16 @@
           "pack": "mil-hdbk-516",
           "chapter": "ch01-mil-hdbk-516-scope.md",
           "note": "MIL-HDBK-516D, 29 May 2026 scope, tailoring, cited-publication classes, and notes."
+        },
+        {
+          "pack": "dau-se-guidebook",
+          "chapter": "ch06-dau-se-guidebook-technical-management.md",
+          "note": "September 2026 SE Guidebook technical management processes and the SEP."
+        },
+        {
+          "pack": "dau-se-guidebook",
+          "chapter": "ch07-dau-se-guidebook-technical-processes.md",
+          "note": "September 2026 SE Guidebook technical processes."
         }
       ]
     },
