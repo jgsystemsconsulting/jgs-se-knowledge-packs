@@ -43,11 +43,11 @@ Rules of construction:
 | 17. Technical Planning & Work Breakdown | 13 |
 | 18. Measurement & Technical Assessment | 38 |
 | 19. Quality Assurance & Process Compliance | 7 |
-| 20. Safety, Reliability & Survivability | 100 |
+| 20. Safety, Reliability & Survivability | 99 |
 | 21. Cybersecurity & Security Engineering | 73 |
 | 22. Human Systems Integration / Human Factors | 30 |
 | 23. Logistics, Supportability & Sustainment | 12 |
-| 24. Operations, Maintenance & Disposal | 15 |
+| 24. Operations, Maintenance & Disposal | 16 |
 | 25. Training & Documentation Delivery | 13 |
 | 26. Project/Program Management | 67 |
 | 27. Supplier, Procurement & Acquisition | 13 |
@@ -550,7 +550,6 @@ Rules of construction:
 | mil-hdbk-516 | ch06-mil-hdbk-516-air-vehicle-subsystems.md | MIL-HDBK-516D, 29 May 2026 air vehicle subsystems criteria. |
 | mil-hdbk-516 | ch08-mil-hdbk-516-avionics-electrical-e3.md | MIL-HDBK-516D, 29 May 2026 avionics, electrical system, and electromagnetic environmental effects criteria. |
 | mil-hdbk-516 | ch09-mil-hdbk-516-computer-systems-software.md | MIL-HDBK-516D, 29 May 2026 computer systems and software criteria. |
-| mil-hdbk-516 | ch10-mil-hdbk-516-maintenance.md | MIL-HDBK-516D, 29 May 2026 maintenance criteria. |
 | mil-hdbk-516 | ch11-mil-hdbk-516-armaments-stores.md | MIL-HDBK-516D, 29 May 2026 armaments and stores integration criteria. |
 | mil-hdbk-516 | ch12-mil-hdbk-516-materials-aerial-delivery.md | MIL-HDBK-516D, 29 May 2026 materials and aerial delivery criteria. |
 
@@ -703,6 +702,7 @@ Rules of construction:
 | sebok | ch18-sebok-system-maintenance.md | System maintenance (also sustainment) |
 | jsp-815 | ch08-equipment-and-infrastructure.md | Equipment and infrastructure safety notes from JSP 815 |
 | jsp-376 | ch08-in-service-and-disposal.md | In-service safety case reviews, the two-year review ceiling, and disposal and termination |
+| mil-hdbk-516 | ch10-mil-hdbk-516-maintenance.md | MIL-HDBK-516D, 29 May 2026 maintenance criteria. |
 
 ## 25. Training & Documentation Delivery
 

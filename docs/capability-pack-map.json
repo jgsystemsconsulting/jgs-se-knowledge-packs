@@ -2068,11 +2068,6 @@
         },
         {
           "pack": "mil-hdbk-516",
-          "chapter": "ch10-mil-hdbk-516-maintenance.md",
-          "note": "MIL-HDBK-516D, 29 May 2026 maintenance criteria."
-        },
-        {
-          "pack": "mil-hdbk-516",
           "chapter": "ch11-mil-hdbk-516-armaments-stores.md",
           "note": "MIL-HDBK-516D, 29 May 2026 armaments and stores integration criteria."
         },
@@ -2750,6 +2745,11 @@
           "pack": "jsp-376",
           "chapter": "ch08-in-service-and-disposal.md",
           "note": "In-service safety case reviews, the two-year review ceiling, and disposal and termination"
+        },
+        {
+          "pack": "mil-hdbk-516",
+          "chapter": "ch10-mil-hdbk-516-maintenance.md",
+          "note": "MIL-HDBK-516D, 29 May 2026 maintenance criteria."
         }
       ]
     },
