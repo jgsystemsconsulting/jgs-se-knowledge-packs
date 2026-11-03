@@ -178,7 +178,7 @@ always-loaded `SKILL.md` index inlined into one file. Full detail and the per-ag
 | `cisa-cpg` | CISA Cross-Sector Cybersecurity Performance Goals 2.0 | Public domain (US gov) | 🟢 1 | ✅ live (5 chapters) |
 | `doe-sem` | DOE Systems Engineering Methodology (SEM) v3 | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
 | `mil-hdbk-338` | MIL-HDBK-338B: Electronic Reliability Design Handbook | Public domain (US gov) | 🟢 1 | ✅ live (9 chapters) |
-| `mil-hdbk-516` | MIL-HDBK-516C: Airworthiness Certification Criteria | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
+| `mil-hdbk-516` | MIL-HDBK-516D: Airworthiness Certification Criteria | Public domain (US gov) | 🟢 1 | ✅ live (12 chapters) |
 | `nasa-ms-7009` | NASA-STD-7009B / NASA-HDBK-7009B: Models and Simulations | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
 | `doe-o-413-3` | DOE O 413.3 series: Capital Asset Project Management (from O 413.3C) | Public domain (US gov) | 🟢 1 | ✅ live (6 chapters) |
 | `dod-vva-rpg` | DoD M&S VV&A Recommended Practices Guide (RPG web edition) | Public domain (US gov) | 🟢 1 | ✅ live (13 chapters) |

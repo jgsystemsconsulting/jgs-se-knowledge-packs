@@ -6,7 +6,7 @@ generate_capability_map.py — rebuild docs/capability-pack-map.json from
 classification-rules.json + capability-pack-map-note-overrides.json (MAP-21-02/03/04).
 
 Cluster assignment and envelope fields are generator output. Notes come only from
-the mandatory (739 - 11 + (8 + 3))-row overrides file (H-01). The 11 is the mil-std-40051 row count removed by this rebuild (8 chapters + 3 support), not an sd-22 note. Support membership comes from
+the mandatory (739 - 8 + 12)-row overrides file (H-01). The 8 is the mil-hdbk-516 row count removed by this rebuild (12 chapters; support files carry no rows). Support membership comes from
 is_support rows, not rules_of_construction (H-03). Does not import sibling
 checkers (H-07). Stdlib only.
 
@@ -192,7 +192,7 @@ def generate_map(rules: dict, overrides: dict, generated_on: str) -> dict:
 
     only_a = sorted(akeys - nkeys)
     only_n = sorted(nkeys - akeys)
-    if only_a or only_n or len(notes) != (739 - 11 + (8 + 3)):
+    if only_a or only_n or len(notes) != (739 - 8 + 12):
         parts = []
         if only_a:
             p, c = only_a[0]
@@ -200,8 +200,8 @@ def generate_map(rules: dict, overrides: dict, generated_on: str) -> dict:
         if only_n:
             p, c = only_n[0]
             parts.append(f"in notes not in assignments: {p}/{c}")
-        if len(notes) != (739 - 11 + (8 + 3)):
-            parts.append(f"notes length must be (739 - 11 + (8 + 3)), got {len(notes)}")
+        if len(notes) != (739 - 8 + 12):
+            parts.append(f"notes length must be (739 - 8 + 12), got {len(notes)}")
         raise ValueError(
             "notes key set must equal assignments key set "
             f"(assignments_only={len(only_a)}, notes_only={len(only_n)}); "

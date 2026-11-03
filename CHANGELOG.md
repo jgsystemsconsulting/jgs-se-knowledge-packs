@@ -15,6 +15,7 @@ All notable changes to this project are documented here. Format follows
 
 - `docs/index.html` hero title-card alt text states the current catalogue total (74 packs), replacing a stale 71 that predated the jsp-936 and fhwa-its-se registrations. The GitHub repository About description was corrected the same way (74 packs + 8 signposts + the `/se` orchestrator, 83 skills); repo tooling cannot reach the About field, so it was updated through the GitHub API.
 ### Changed
+- Rebuild `mil-hdbk-516` onto MIL-HDBK-516D, 29 May 2026. MIL-HDBK-516C (12 December 2014) pin retired.
 - Rebuild `mrl-deskbook` from the Manufacturing Readiness Level (MRL) Deskbook, Version 2025, 1 May 2025, including criteria-matrix updates effective 8 July 2025. October 2022 pin retired. Users Guide, criteria adaptation, and operational-technology cybersecurity are appendices in the 2025 contents list and stay reconstructed chapters.
 - Rebuild `sd-22-dmsms` onto SD-22, 06-JAN-2026 (cover dated December 2025). FY24 working draft (April 2024) pin retired. Working-draft caveat gone.
 - Rebuild `mil-std-40051` onto MIL-STD-40051E w/Change 1, 30 July 2025. The MIL-STD-40051-2C, 15 December 2015 slice pin is retired.

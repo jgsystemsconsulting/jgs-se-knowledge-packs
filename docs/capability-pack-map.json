@@ -1547,11 +1547,6 @@
           "note": "Auditor assessment questions (also program mgmt)"
         },
         {
-          "pack": "mil-hdbk-516",
-          "chapter": "ch02-systems-engineering-criteria.md",
-          "note": "SE airworthiness criteria: design criteria control, tech data, CM, mfg quality (also CM)"
-        },
-        {
           "pack": "nist-stat-handbook",
           "chapter": "ch06-nist-stat-handbook-process-monitoring-and-control.md",
           "note": "SPC monitoring and control (quality control)"
@@ -1575,6 +1570,11 @@
           "pack": "med-device-eu",
           "chapter": "ch08-mhra-uk-device-obligations.md",
           "note": "UKCA-era obligations the MHRA guidance states for device software"
+        },
+        {
+          "pack": "mil-hdbk-516",
+          "chapter": "ch02-mil-hdbk-516-systems-engineering.md",
+          "note": "MIL-HDBK-516D, 29 May 2026 systems engineering criteria."
         }
       ]
     },
@@ -1745,31 +1745,6 @@
           "pack": "mil-hdbk-338",
           "chapter": "patterns.md (support file)",
           "note": "Patterns/practice heuristics"
-        },
-        {
-          "pack": "mil-hdbk-516",
-          "chapter": "ch03-structures-criteria.md",
-          "note": "Airframe structures airworthiness criteria"
-        },
-        {
-          "pack": "mil-hdbk-516",
-          "chapter": "ch04-flight-technology-criteria.md",
-          "note": "Flying qualities, performance, stability/control criteria"
-        },
-        {
-          "pack": "mil-hdbk-516",
-          "chapter": "ch05-propulsion-criteria.md",
-          "note": "Propulsion and installation airworthiness criteria"
-        },
-        {
-          "pack": "mil-hdbk-516",
-          "chapter": "ch06-avionics-e3-and-diagnostics.md",
-          "note": "Diagnostics, avionics, electrical power, and E3 criteria"
-        },
-        {
-          "pack": "mil-hdbk-516",
-          "chapter": "ch07-computer-systems-and-software.md",
-          "note": "Computer systems and software airworthiness criteria (also verification)"
         },
         {
           "pack": "mil-std-882",
@@ -2060,6 +2035,51 @@
           "pack": "jsp-936",
           "chapter": "ch06-quality-safety-security.md",
           "note": "Quality, safety, and security expectations for AI systems from JSP 936 Part 1"
+        },
+        {
+          "pack": "mil-hdbk-516",
+          "chapter": "ch03-mil-hdbk-516-structures.md",
+          "note": "MIL-HDBK-516D, 29 May 2026 structures criteria."
+        },
+        {
+          "pack": "mil-hdbk-516",
+          "chapter": "ch04-mil-hdbk-516-flight-technology.md",
+          "note": "MIL-HDBK-516D, 29 May 2026 flight technology criteria."
+        },
+        {
+          "pack": "mil-hdbk-516",
+          "chapter": "ch05-mil-hdbk-516-propulsion.md",
+          "note": "MIL-HDBK-516D, 29 May 2026 propulsion criteria."
+        },
+        {
+          "pack": "mil-hdbk-516",
+          "chapter": "ch06-mil-hdbk-516-air-vehicle-subsystems.md",
+          "note": "MIL-HDBK-516D, 29 May 2026 air vehicle subsystems criteria."
+        },
+        {
+          "pack": "mil-hdbk-516",
+          "chapter": "ch08-mil-hdbk-516-avionics-electrical-e3.md",
+          "note": "MIL-HDBK-516D, 29 May 2026 avionics, electrical system, and electromagnetic environmental effects criteria."
+        },
+        {
+          "pack": "mil-hdbk-516",
+          "chapter": "ch09-mil-hdbk-516-computer-systems-software.md",
+          "note": "MIL-HDBK-516D, 29 May 2026 computer systems and software criteria."
+        },
+        {
+          "pack": "mil-hdbk-516",
+          "chapter": "ch10-mil-hdbk-516-maintenance.md",
+          "note": "MIL-HDBK-516D, 29 May 2026 maintenance criteria."
+        },
+        {
+          "pack": "mil-hdbk-516",
+          "chapter": "ch11-mil-hdbk-516-armaments-stores.md",
+          "note": "MIL-HDBK-516D, 29 May 2026 armaments and stores integration criteria."
+        },
+        {
+          "pack": "mil-hdbk-516",
+          "chapter": "ch12-mil-hdbk-516-materials-aerial-delivery.md",
+          "note": "MIL-HDBK-516D, 29 May 2026 materials and aerial delivery criteria."
         }
       ]
     },
@@ -2497,11 +2517,6 @@
           "note": "Patterns/practice heuristics"
         },
         {
-          "pack": "mil-hdbk-516",
-          "chapter": "ch08-crew-systems-criteria.md",
-          "note": "Crew systems: pilot-vehicle interface, life support, escape/survival criteria (also airworthiness)"
-        },
-        {
           "pack": "nasa-hsi",
           "chapter": "ch01-introduction-to-hsi.md",
           "note": "HSI introduction and domains"
@@ -2585,6 +2600,11 @@
           "pack": "jsp-912",
           "chapter": "ch07-detailed-system-design-hfi-4-0.md",
           "note": "Applies human factors data to detailed system design through process HFI-4.0, from JSP 912, March 2024."
+        },
+        {
+          "pack": "mil-hdbk-516",
+          "chapter": "ch07-mil-hdbk-516-crew-systems-aerial-refueling.md",
+          "note": "MIL-HDBK-516D, 29 May 2026 crew systems and aerial refueling criteria."
         }
       ]
     },
@@ -3417,11 +3437,6 @@
           "note": "FAA-STD-025f scope and IRD/ICD document-family definitions"
         },
         {
-          "pack": "mil-hdbk-516",
-          "chapter": "ch01-scope-applicability-and-tailoring.md",
-          "note": "Airworthiness certification basis scope, applicability, and tailoring"
-        },
-        {
           "pack": "nasa-ms-7009",
           "chapter": "ch07-hdbk-lifecycle-implementation.md",
           "note": "Handbook life-cycle implementation of M&S credibility requirements"
@@ -3730,6 +3745,11 @@
           "pack": "jsp-912",
           "chapter": "ch04-hfi-process-goals-activities-tailoring.md",
           "note": "Describes the HFI process goals and activities and how to tailor them to project scale and novelty, from JSP 912, March 2024."
+        },
+        {
+          "pack": "mil-hdbk-516",
+          "chapter": "ch01-mil-hdbk-516-scope.md",
+          "note": "MIL-HDBK-516D, 29 May 2026 scope, tailoring, cited-publication classes, and notes."
         }
       ]
     },

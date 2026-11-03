@@ -602,14 +602,16 @@ Terms  : Distribution A. No printed DOPSR case. Cover text layer has no copyrigh
            obligation; DoD does not endorse this pack. See packs/mil-hdbk-338/LICENSE.
 
 [pack: mil-hdbk-516]
-  Source : Airworthiness Certification Criteria (MIL-HDBK-516C), 12 Dec 2014
-           (Change 1, 2016); Distribution Statement A
+
+  Source : Airworthiness Certification Criteria (MIL-HDBK-516D), 29 May 2026;
+           Distribution Statement A
   Author : US Department of Defense
   Licence: Public Domain -- US Government work (17 U.S.C. 105); Distribution
-           Statement A - Approved for public release; distribution is unlimited
-  Changes: reconstructed as synthesized reference notes (not a reproduction)
-  Terms  : public domain, no copyright. Attribution to DoD is courtesy, not
-           obligation; DoD does not endorse this pack. See packs/mil-hdbk-516/LICENSE.
+  Changes: reconstructed as synthesized reference notes (not reproduction)
+  Terms  : US public domain, no copyright. No printed DOPSR case. Criterion
+           catalogues and compliance matrices not reproduced cell by cell.
+           Attribution to DoD is courtesy, not obligation; DoD does not endorse
+           this pack. See packs/mil-hdbk-516/LICENSE.
 
 [pack: nasa-ms-7009]
   Source : NASA-STD-7009B Standard for Models and Simulations (approved 2024-03-05)

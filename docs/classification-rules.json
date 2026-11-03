@@ -1507,12 +1507,6 @@
       "is_support": false
     },
     {
-      "pack": "mil-hdbk-516",
-      "chapter": "ch02-systems-engineering-criteria.md",
-      "cluster": "Quality Assurance & Process Compliance",
-      "is_support": false
-    },
-    {
       "pack": "nist-stat-handbook",
       "chapter": "ch06-nist-stat-handbook-process-monitoring-and-control.md",
       "cluster": "Quality Assurance & Process Compliance",
@@ -1715,36 +1709,6 @@
       "chapter": "patterns.md",
       "cluster": "Safety, Reliability & Survivability",
       "is_support": true
-    },
-    {
-      "pack": "mil-hdbk-516",
-      "chapter": "ch03-structures-criteria.md",
-      "cluster": "Safety, Reliability & Survivability",
-      "is_support": false
-    },
-    {
-      "pack": "mil-hdbk-516",
-      "chapter": "ch04-flight-technology-criteria.md",
-      "cluster": "Safety, Reliability & Survivability",
-      "is_support": false
-    },
-    {
-      "pack": "mil-hdbk-516",
-      "chapter": "ch05-propulsion-criteria.md",
-      "cluster": "Safety, Reliability & Survivability",
-      "is_support": false
-    },
-    {
-      "pack": "mil-hdbk-516",
-      "chapter": "ch06-avionics-e3-and-diagnostics.md",
-      "cluster": "Safety, Reliability & Survivability",
-      "is_support": false
-    },
-    {
-      "pack": "mil-hdbk-516",
-      "chapter": "ch07-computer-systems-and-software.md",
-      "cluster": "Safety, Reliability & Survivability",
-      "is_support": false
     },
     {
       "pack": "mil-std-882",
@@ -2527,12 +2491,6 @@
       "is_support": true
     },
     {
-      "pack": "mil-hdbk-516",
-      "chapter": "ch08-crew-systems-criteria.md",
-      "cluster": "Human Systems Integration / Human Factors",
-      "is_support": false
-    },
-    {
       "pack": "nasa-hsi",
       "chapter": "ch01-introduction-to-hsi.md",
       "cluster": "Human Systems Integration / Human Factors",
@@ -3309,12 +3267,6 @@
     {
       "pack": "faa-std-025",
       "chapter": "ch01-scope-and-document-family.md",
-      "cluster": "Standards, Tailoring & Process Models",
-      "is_support": false
-    },
-    {
-      "pack": "mil-hdbk-516",
-      "chapter": "ch01-scope-applicability-and-tailoring.md",
       "cluster": "Standards, Tailoring & Process Models",
       "is_support": false
     },
@@ -4493,6 +4445,78 @@
       "chapter": "patterns.md",
       "cluster": "Training & Documentation Delivery",
       "is_support": true
+    },
+    {
+      "pack": "mil-hdbk-516",
+      "chapter": "ch01-mil-hdbk-516-scope.md",
+      "cluster": "Standards, Tailoring & Process Models",
+      "is_support": false
+    },
+    {
+      "pack": "mil-hdbk-516",
+      "chapter": "ch02-mil-hdbk-516-systems-engineering.md",
+      "cluster": "Quality Assurance & Process Compliance",
+      "is_support": false
+    },
+    {
+      "pack": "mil-hdbk-516",
+      "chapter": "ch03-mil-hdbk-516-structures.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "mil-hdbk-516",
+      "chapter": "ch04-mil-hdbk-516-flight-technology.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "mil-hdbk-516",
+      "chapter": "ch05-mil-hdbk-516-propulsion.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "mil-hdbk-516",
+      "chapter": "ch06-mil-hdbk-516-air-vehicle-subsystems.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "mil-hdbk-516",
+      "chapter": "ch07-mil-hdbk-516-crew-systems-aerial-refueling.md",
+      "cluster": "Human Systems Integration / Human Factors",
+      "is_support": false
+    },
+    {
+      "pack": "mil-hdbk-516",
+      "chapter": "ch08-mil-hdbk-516-avionics-electrical-e3.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "mil-hdbk-516",
+      "chapter": "ch09-mil-hdbk-516-computer-systems-software.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "mil-hdbk-516",
+      "chapter": "ch10-mil-hdbk-516-maintenance.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "mil-hdbk-516",
+      "chapter": "ch11-mil-hdbk-516-armaments-stores.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
+    },
+    {
+      "pack": "mil-hdbk-516",
+      "chapter": "ch12-mil-hdbk-516-materials-aerial-delivery.md",
+      "cluster": "Safety, Reliability & Survivability",
+      "is_support": false
     }
   ]
 }

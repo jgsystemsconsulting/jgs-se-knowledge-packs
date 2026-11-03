@@ -43,7 +43,7 @@ Rules of construction:
 | 17. Technical Planning & Work Breakdown | 13 |
 | 18. Measurement & Technical Assessment | 38 |
 | 19. Quality Assurance & Process Compliance | 7 |
-| 20. Safety, Reliability & Survivability | 96 |
+| 20. Safety, Reliability & Survivability | 100 |
 | 21. Cybersecurity & Security Engineering | 73 |
 | 22. Human Systems Integration / Human Factors | 30 |
 | 23. Logistics, Supportability & Sustainment | 12 |
@@ -56,7 +56,7 @@ Rules of construction:
 | 30. Standards, Tailoring & Process Models | 68 |
 | 31. Specialty Engineering | 7 |
 | 32. Assurance & System Assurance | 16 |
-| **Total** | **739** |
+| **Total** | **743** |
 
 ## 1. Systems Thinking & Fundamentals
 
@@ -442,12 +442,12 @@ Rules of construction:
 | Pack | Chapter | Why it fits / one-line value |
 |---|---|---|
 | gao-agile | ch09-gao-agile-assessment-reference-auditor-questions-frameworks.md | Auditor assessment questions (also program mgmt) |
-| mil-hdbk-516 | ch02-systems-engineering-criteria.md | SE airworthiness criteria: design criteria control, tech data, CM, mfg quality (also CM) |
 | nist-stat-handbook | ch06-nist-stat-handbook-process-monitoring-and-control.md | SPC monitoring and control (quality control) |
 | fda-med-device | ch05-qmsr-quality-management.md | QMSR amendments to 21 CFR 820, effective 2026-02-02, ISO 13485 named and not quoted |
 | med-device-eu | ch06-pmcf-plan.md | What an MDCG 2020-7 PMCF plan commits to |
 | med-device-eu | ch07-pmcf-evaluation-report.md | How an MDCG 2020-8 PMCF evaluation report closes the plan |
 | med-device-eu | ch08-mhra-uk-device-obligations.md | UKCA-era obligations the MHRA guidance states for device software |
+| mil-hdbk-516 | ch02-mil-hdbk-516-systems-engineering.md | MIL-HDBK-516D, 29 May 2026 systems engineering criteria. |
 
 ## 20. Safety, Reliability & Survivability
 
@@ -486,11 +486,6 @@ Rules of construction:
 | mil-hdbk-338 | cheatsheet.md (support file) | Cheatsheet / quick reference |
 | mil-hdbk-338 | glossary.md (support file) | Glossary for the pack |
 | mil-hdbk-338 | patterns.md (support file) | Patterns/practice heuristics |
-| mil-hdbk-516 | ch03-structures-criteria.md | Airframe structures airworthiness criteria |
-| mil-hdbk-516 | ch04-flight-technology-criteria.md | Flying qualities, performance, stability/control criteria |
-| mil-hdbk-516 | ch05-propulsion-criteria.md | Propulsion and installation airworthiness criteria |
-| mil-hdbk-516 | ch06-avionics-e3-and-diagnostics.md | Diagnostics, avionics, electrical power, and E3 criteria |
-| mil-hdbk-516 | ch07-computer-systems-and-software.md | Computer systems and software airworthiness criteria (also verification) |
 | mil-std-882 | ch01-scope-purpose-definitions.md | System safety scope and definitions |
 | mil-std-882 | ch02-system-safety-process.md | MIL-STD-882 system safety process |
 | mil-std-882 | ch03-risk-assessment.md | Safety risk assessment matrices (also risk mgmt) |
@@ -549,6 +544,15 @@ Rules of construction:
 | jsp-815 | ch05-risk-assessment-and-safety-cases.md | Risk assessment and safety-case notes from JSP 815 |
 | jsp-376 | ch04-test-evaluation-and-safety-case.md | ITEAP, certification strategy, and safety case ownership from Pre-Concept to handover |
 | jsp-936 | ch06-quality-safety-security.md | Quality, safety, and security expectations for AI systems from JSP 936 Part 1 |
+| mil-hdbk-516 | ch03-mil-hdbk-516-structures.md | MIL-HDBK-516D, 29 May 2026 structures criteria. |
+| mil-hdbk-516 | ch04-mil-hdbk-516-flight-technology.md | MIL-HDBK-516D, 29 May 2026 flight technology criteria. |
+| mil-hdbk-516 | ch05-mil-hdbk-516-propulsion.md | MIL-HDBK-516D, 29 May 2026 propulsion criteria. |
+| mil-hdbk-516 | ch06-mil-hdbk-516-air-vehicle-subsystems.md | MIL-HDBK-516D, 29 May 2026 air vehicle subsystems criteria. |
+| mil-hdbk-516 | ch08-mil-hdbk-516-avionics-electrical-e3.md | MIL-HDBK-516D, 29 May 2026 avionics, electrical system, and electromagnetic environmental effects criteria. |
+| mil-hdbk-516 | ch09-mil-hdbk-516-computer-systems-software.md | MIL-HDBK-516D, 29 May 2026 computer systems and software criteria. |
+| mil-hdbk-516 | ch10-mil-hdbk-516-maintenance.md | MIL-HDBK-516D, 29 May 2026 maintenance criteria. |
+| mil-hdbk-516 | ch11-mil-hdbk-516-armaments-stores.md | MIL-HDBK-516D, 29 May 2026 armaments and stores integration criteria. |
+| mil-hdbk-516 | ch12-mil-hdbk-516-materials-aerial-delivery.md | MIL-HDBK-516D, 29 May 2026 materials and aerial delivery criteria. |
 
 ## 21. Cybersecurity & Security Engineering
 
@@ -644,7 +648,6 @@ Rules of construction:
 | faa-hf-std | cheatsheet.md (support file) | Cheatsheet / quick reference |
 | faa-hf-std | glossary.md (support file) | Glossary for the pack |
 | faa-hf-std | patterns.md (support file) | Patterns/practice heuristics |
-| mil-hdbk-516 | ch08-crew-systems-criteria.md | Crew systems: pilot-vehicle interface, life support, escape/survival criteria (also airworthiness) |
 | nasa-hsi | ch01-introduction-to-hsi.md | HSI introduction and domains |
 | nasa-hsi | ch02-implementing-hsi.md | Implementing HSI |
 | nasa-hsi | ch03-hsi-in-the-see-engine.md | HSI inside the SE engine |
@@ -662,6 +665,7 @@ Rules of construction:
 | jsp-912 | ch01-what-is-hfi-and-why-defence-mandates-it.md | Explains what Human Factors Integration is and why Defence policy mandates it across acquisition and through-life management, from JSP 912, March 2024. |
 | jsp-912 | ch03-hfi-and-systems-engineering.md | Positions HFI within the systems engineering life cycle and links it to DLODs and System Readiness Levels, from JSP 912, March 2024. |
 | jsp-912 | ch07-detailed-system-design-hfi-4-0.md | Applies human factors data to detailed system design through process HFI-4.0, from JSP 912, March 2024. |
+| mil-hdbk-516 | ch07-mil-hdbk-516-crew-systems-aerial-refueling.md | MIL-HDBK-516D, 29 May 2026 crew systems and aerial refueling criteria. |
 
 ## 23. Logistics, Supportability & Sustainment
 
@@ -860,7 +864,6 @@ Rules of construction:
 | dodaf | ch09-standards-viewpoint-stdv.md | Standards viewpoint: applicable standards profiles |
 | doe-sem | ch02-lifecycle-model-and-quality-reviews.md | Eight-stage SEM lifecycle with walkthrough/ISA/stage-exit gates (also governance gates) |
 | faa-std-025 | ch01-scope-and-document-family.md | FAA-STD-025f scope and IRD/ICD document-family definitions |
-| mil-hdbk-516 | ch01-scope-applicability-and-tailoring.md | Airworthiness certification basis scope, applicability, and tailoring |
 | nasa-ms-7009 | ch07-hdbk-lifecycle-implementation.md | Handbook life-cycle implementation of M&S credibility requirements |
 | nasa-npr-7123 | ch01-introduction.md | NPR 7123 structure and applicability |
 | nasa-npr-7123 | ch02-institutional-programmatic-requirements.md | Programmatic process requirements |
@@ -923,6 +926,7 @@ Rules of construction:
 | fhwa-its-se | ch05-systems-engineering-resources.md | Curates ITS publications, systems engineering references, training providers, and US DOT tools, from Systems Engineering for ITS, December 2022. |
 | fhwa-its-se | ch07-glossary-and-acronyms.md | Defines the terms and acronyms used across the guide, from Systems Engineering for ITS, December 2022. |
 | jsp-912 | ch04-hfi-process-goals-activities-tailoring.md | Describes the HFI process goals and activities and how to tailor them to project scale and novelty, from JSP 912, March 2024. |
+| mil-hdbk-516 | ch01-mil-hdbk-516-scope.md | MIL-HDBK-516D, 29 May 2026 scope, tailoring, cited-publication classes, and notes. |
 
 ## 31. Specialty Engineering
 

@@ -567,13 +567,13 @@
     },
     {
       "slug": "mil-hdbk-516",
-      "title": "DoD Airworthiness Certification Criteria (MIL-HDBK-516C)",
+      "title": "Airworthiness Certification Criteria (MIL-HDBK-516D)",
       "publisher": "US Department of Defense",
-      "source_version": "516C, 12 Dec 2014 (Change 1, 2016)",
+      "source_version": "MIL-HDBK-516D, 29 May 2026",
       "license": "Public Domain (US Government work)",
       "license_tier": 1,
       "commercial_use": true,
-      "chapters": 8,
+      "chapters": 12,
       "status": "live"
     },
     {
