@@ -1,7 +1,7 @@
 slug: dau-se-guidebook
-title: "DoD Systems Engineering Guidebook (OUSD R&E)"
+title: "DoD Systems Engineering Guidebook (September 2026)"
 publisher: "US Department of Defense (Office of the Under Secretary of Defense for Research and Engineering)"
-source_version: "February 2022 (DOPSR Case # 22-S-0595)"
+source_version: "September 2026 (DOPSR Case # 26-T-2032)"
 license: "Public Domain (US Government work, 17 U.S.C. 105); Distribution A"
 license_tier: 1
 commercial_use: true
@@ -9,14 +9,9 @@ share_alike: false
 attribution_required: false
 build:
   method: "synthesized reference notes from the pinned source, chapter freeze from the contents list"
-  source_pages: 219
-  chapters: 6
-  built_on: "2026-06-22"
+  source_pages: 230
+  chapters: 8
+  built_on: "2026-11-03"
 notes: >
-  US Government work -- public domain (17 U.S.C. 105); Distribution Statement A (approved
-  for public release, distribution unlimited). No copyright; free to reproduce, transform,
-  and redistribute (including commercially). Attribution to the US DoD is provided as a
-  courtesy in NOTICE, not as an obligation; the DoD does not endorse this pack. Content is
-  synthesized/transformed reference notes; no long verbatim passages reproduced. No
-  source-material link published (see docs/LICENSING.md).
+  Vetted 2026-11-03. PDF bytes 6163628. Pages 230. Cover title Systems Engineering Guidebook, dated September 2026. DOPSR Case # 26-T-2032. Dist A taken from the book distribution statement. Cover office line reads Office of the Under Secretary of War for Research and Engineering. Change Record, in our words: SE Modernization added as its own section; SoS content moved to an updated SoS guide; technical management and technical processes merged under one section. Tables, review criteria, and design-consideration checklists are not reproduced cell by cell.
 change_indication: "reconstructed as synthesized reference notes"

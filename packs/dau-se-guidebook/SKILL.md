@@ -1,144 +1,78 @@
 ---
 name: dau-se-guidebook
-description: "Knowledge base from the DoD Systems Engineering Guidebook (OUSD R&E, February 2022). Use for the DoD SE process model — the 16 SE processes (8 technical management + 8 technical) mapped to ISO/IEC/IEEE 15288, the event-driven technical reviews and audits across the Major Capability Acquisition life cycle (ASR, SRR, SFR, PDR, CDR, SVR/FCA, PRR, PCA), the Systems Engineering Plan (SEP), risk/issue/opportunity management, TPMs and leading indicators, system-of-systems and digital engineering, and the 24 design considerations (RAM, system safety, HSI, system security engineering, MOSA, supportability, etc.). Acquisition-program oriented: thin on detailed cost estimating, contracting law, and non-DoD or commercial life cycles."
+description: "Knowledge base from the DoD Systems Engineering Guidebook (September 2026, DOPSR Case # 26-T-2032). Use for the DoD SE process model (16 processes: 8 technical management + 8 technical, mapped by method to ISO/IEC/IEEE 15288), SE Modernization (digital engineering, MBSE, MOSA, Agile), engineering resources and enablers, event-driven technical reviews and audits (ASR/SRR/SFR/PDR/CDR/SVR/FCA/PRR/PCA), the Systems Engineering Plan (SEP), TPMs and leading indicators, and the 24 design considerations. Acquisition-program oriented. Guidance not policy. Not the SoS guide."
 ---
 
-<!-- argument-hint: [SE process name, review/audit (ASR/SRR/SFR/PDR/CDR/SVR/FCA/PRR/PCA), SEP, TPM, risk/issue/opportunity, design consideration, digital engineering, SoS, chapter number] -->
+<!-- argument-hint: [SE process, review/audit, SEP, TPM, design consideration, digital engineering, MOSA, Agile, chapter number] -->
 
-# DoD Systems Engineering Guidebook (OUSD R&E, February 2022)
-**Source**: US Department of Defense (OUSD R&E) — US Government work, public domain; Distribution A | **Chapters**: 6
+# DoD Systems Engineering Guidebook (September 2026)
+
+**Source:** US Government work, public domain (17 U.S.C. 105); Distribution A; September 2026 (DOPSR Case # 26-T-2032). See `LICENSE`.
 
 ## When to use
-Use this skill when you need to apply, explain, or assess the DoD's systems engineering approach for defense acquisition programs: the 16 SE processes and how they map to ISO/IEC/IEEE 15288, the event-driven technical review and audit sequence, the Systems Engineering Plan (SEP), risk/issue/opportunity management, technical performance measurement, system-of-systems and digital-engineering practice, or any of the 24 design considerations (RAM, system safety, HSI, system security engineering, MOSA, etc.). This is the OUSD(R&E) companion to DoDI 5000.88 (*Engineering of Defense Systems*); it is guidance, not policy — programs scale and tailor it.
 
-**Prerequisites:** none — plain Markdown; no MCP server, API key, or licence tier needed at runtime.
+Use this skill for DoW/DoD acquisition SE practice under the September 2026 guidebook: the 16 SE processes, SE Modernization, engineering resources, technical reviews and audits, the SEP, and the 24 design considerations. It is guidance under policy issuances such as DoDI 5000.88 and DoDI 5000.02, not a substitute for those issuances, and not the updated SoS guide.
+
+**Prerequisites:** none. Plain Markdown. No MCP server, API key, or licence tier needed at runtime.
 
 ## How to Use This Skill
-- **Without arguments** — load the core frameworks below for an overview of the SE process model, the review/audit sequence, and the SEP.
-- **With a topic** — ask about a specific process (e.g., "architecture design process", "configuration management"), a review/audit (e.g., "PDR entrance criteria", "SVR/FCA"), the SEP, TPMs/leading indicators, or a design consideration (e.g., "human systems integration", "system security engineering").
-- **With a chapter** — ask for `ch04` (8 technical management processes), `ch05` (8 technical processes), `ch03` (reviews & audits), `ch06` (design considerations).
 
-Supporting files: `glossary.md`, `patterns.md`, `cheatsheet.md`.
+- **Without arguments** - load the process model, modernization spine, review sequence, and design-consideration set below.
+- **With a topic** - ask about a process, a review/audit, the SEP, TPMs, a modernization theme (DE, MBSE, MOSA, Agile), or a design consideration.
+- **With a program-planning question** - ask how to scale SE to an AAF pathway, staff technical leadership, or gate knowledge at PDR/CDR-class events.
 
 ## Core Frameworks & Mental Models
 
-### The DoD SE Process Model — 16 Processes (8 + 8)
+### Sixteen SE processes (8 + 8)
 
-The practice of SE is composed of **16 processes**: eight **technical management** processes and eight **technical** processes. They map to the ISO/IEC/IEEE 15288 SE processes and are applied in an integrated, overlapping, iterative manner along the V-diagram. Programs **scale** the processes to the system's maturity, complexity, size/scope, acquisition pathway, and life-cycle phase.
+Technical management: Technical Planning, Decision Analysis, Technical Assessment, Requirements Management, Risk Management, Configuration Management, Technical Data Management, Interface Management.
 
-**Eight Technical Processes** (top-down design, then bottom-up realization — the V):
-1. **Stakeholder Requirements Definition** — translate operational requirements from stakeholders into top-level technical requirements.
-2. **Requirements Analysis** — decompose into a complete set of system functional and performance requirements.
-3. **Architecture Design** — capture functional requirements and interdependencies in the system architecture (often via system modeling, trade-offs, decision analyses).
-4. **Implementation** — mature and realize the design of the system and system elements; generate the product baseline.
-5. **Integration** — assemble system elements into the system for test.
-6. **Verification** — developmental test: did we build the system right (conformance to requirements)?
-7. **Validation** — operational test: did we build the right system (meets the operational need)?
-8. **Transition** — formally deliver the capability and enabling system elements to the end users for operation and sustainment.
+Technical: Stakeholder Requirements Definition, Requirements Analysis, Architecture Design, Implementation, Integration, Verification, Validation, Transition.
 
-**Eight Technical Management Processes** (run across the whole life cycle, providing insight and control):
-1. **Technical Planning** — plan, organize, and resource the technical effort; outputs feed the SEP, IMP, IMS, WBS.
-2. **Decision Analysis** — apply formal criteria, alternatives, and analysis to significant technical decisions.
-3. **Technical Assessment** — measure technical progress against plans; conduct technical reviews; track TPMs and leading indicators.
-4. **Requirements Management** — maintain bidirectional traceability and control requirement changes.
-5. **Risk Management** — manage risks, issues, and opportunities (RIO) with reporting matrices.
-6. **Configuration Management** — establish and control configuration baselines and changes.
-7. **Technical Data Management** — capture and manage technical data, trade studies, and analyses.
-8. **Interface Management** — define and control internal and external interfaces.
+Applied iteratively along a V-style life cycle. Mapped by method to ISO/IEC/IEEE 15288 process intent. Scaled to pathway, complexity, and risk.
 
-> **Not the NASA 17-process model.** This is the DoD's **8 + 8** model (16 processes) tied to the *Major Capability Acquisition* life cycle and ISO/IEC/IEEE 15288 — distinct from NASA NPR 7123's SE Engine (17 processes). The review names differ too (DoD has ASR, SVR/FCA, PRR, PCA).
+### SE Modernization
 
-### Technical Reviews & Audits (event-driven)
+New top-level section: tools and models, digital engineering, MBSE, mission engineering, software engineering with Agile/DevSecOps, MOSA, and SE in Agile development. Authoritative digital baselines beat document handoffs.
 
-Reviews are **event-driven** (triggered by meeting entrance criteria documented in the SEP, not by calendar). Each provides a knowledge-based control point that reduces risk over time. The Major Capability Acquisition sequence:
+### Reviews and audits
 
-| Review/Audit | Purpose (what maturity it gates) |
-|---|---|
-| **ASR** — Alternative Systems Review | Preferred materiel solution(s) feasible; requirements understood |
-| **SRR** — System Requirements Review | System requirements baselined and traceable to capability needs |
-| **SFR** — System Functional Review | Functional baseline established; design traceable to requirements |
-| **PDR** — Preliminary Design Review | Allocated baseline established; preliminary design meets requirements at acceptable risk |
-| **CDR** — Critical Design Review | Initial product baseline; design mature enough to start fabrication/coding |
-| **SVR/FCA** — System Verification Review / Functional Configuration Audit | System verified against functional baseline ("did we build it right") |
-| **PRR** — Production Readiness Review | System ready to enter production at acceptable risk |
-| **PCA** — Physical Configuration Audit | Product baseline matches the as-built configuration |
+Event-driven sequence: ASR, SRR, SFR, PDR, CDR, SVR/FCA, PRR, PCA. Entrance and exit logic first; criteria tables are not copied cell by cell here.
 
-A review is well-run when entrance criteria are met first, the right products are at the right maturity, action items (RFAs) are dispositioned, and the result informs the next milestone decision.
+### Design considerations
 
-### The Systems Engineering Plan (SEP)
-
-The SEP is the master technical plan: it documents the program's SE approach, technical risks, processes, resources, metrics, SE products, organization, design considerations, and the timing/entrance criteria of technical reviews. Key rules:
-- **Required** for MDAPs and ACAT II/III programs (per DoDI 5000.88) unless waived; recommended best practice for all other development.
-- A **living document** — updated as the approach evolves and (best practice) reapproved before each technical review.
-- Prepared by the Lead Systems Engineer under the PM; approval authority depends on ACAT level (USD(R&E) for ACAT ID).
-- Must be **consistent with** the APB, TEMP, PPP, LCSP, IMP/IMS, WBS, and Risk Management Plan — no redundancy, plain language.
-
-### Risk, Issue, and Opportunity (RIO) Management
-
-The Risk Management process manages three related things, each with its own reporting matrix:
-- **Risk** — a *future* event with negative consequence; scored on a **likelihood × consequence** 5×5 matrix; managed by mitigation (accept / avoid / transfer / control).
-- **Issue** — a risk that **has been realized** (or a present problem); scored on a consequence-based issue matrix; managed by corrective action (a "burn-down").
-- **Opportunity** — a potential *future benefit* (cost/schedule/performance); managed by pursue / reject decisions.
-
-### Technical Performance Measurement
-
-- **TPMs** — quantitative measures tracked against a planned profile to assess whether the design will meet requirements; organized in a TPM hierarchy.
-- **Leading indicators** — forward-looking measures (trends) that signal whether risk-mitigation is on track *before* a threshold is breached; drive early corrective action.
-- TPMs roll up to MOPs/MOEs and feed the Technical Assessment process and reviews.
-
-### System-Level Considerations
-
-- **System of Systems (SoS)** — four types (virtual, collaborative, acknowledged, directed); SE differs from single-system SE in authority, funding, and interface control.
-- **Digital Engineering (DE)** — an authoritative source of truth and models used across the life cycle; changes *how* reviews/analyses are done, not *what* must be done.
-- **MOSA** — Modular Open Systems Approach; required "to the maximum extent practicable" for evolvability and competition.
-- **Mission engineering, software engineering, value engineering, sustainability analysis** — enterprise techniques feeding SE.
-
-### Design Considerations (24)
-
-Section 5 carries 24 cross-cutting design considerations the SE process must balance — among them **Reliability & Maintainability (R&M) engineering**, **System Safety** (incl. software system safety, ESOH, hazard tracking), **Human Systems Integration (HSI)**, **System Security Engineering**, **Manufacturing & Quality** (incl. manufacturing readiness), **Supportability**, **Survivability**, **Interoperability**, **Modular Design**, **Standardization**, **Spectrum Management**, **Corrosion Prevention**, **DMSMS**, **Operational Energy**, **Affordability trade-offs**, **Section 508 accessibility**, **Anti-counterfeiting**, **Critical Safety Items**, and **Demilitarization & Disposal**.
-
----
+Twenty-four items from accessibility through system security engineering. Screen all for relevancy; record drivers in the SEP; trade them as a coupled set.
 
 ## Chapter Index
 
-| # | Section | Key content |
-|---|---------|-------------|
-| [ch01](chapters/ch01-introduction.md) | Introduction | Purpose & definition of SE, the 16-process model, V-diagram, SE policy/guidance (DoDD 5000.01, DoDI 5000.02/5000.88), the SEP, development planning, process scaling |
-| [ch02](chapters/ch02-system-level-considerations.md) | System-Level Considerations | SoS (four types), digital engineering, mission/software/value engineering, MOSA, sustainability, engineering resources & roles, IPTs, certifications, SE role in contracting (RFP technical content) |
-| [ch03](chapters/ch03-technical-reviews-and-audits.md) | Technical Reviews & Audits | Event-driven review philosophy, ASR/SRR/SFR/PDR/CDR/SVR-FCA/PRR/PCA — purpose, products, and entrance/success criteria; the technical review process; baselines (functional/allocated/product) |
-| [ch04](chapters/ch04-technical-management-processes.md) | Technical Management Processes (8) | Technical Planning, Decision Analysis, Technical Assessment (TPMs, leading indicators), Requirements Management, Risk (RIO) Management, Configuration Management, Technical Data Management, Interface Management |
-| [ch05](chapters/ch05-technical-processes.md) | Technical Processes (8) | Stakeholder Requirements Definition, Requirements Analysis, Architecture Design, Implementation, Integration, Verification, Validation, Transition — the V-diagram top-down/bottom-up flow |
-| [ch06](chapters/ch06-design-considerations.md) | Design Considerations (24) | R&M, system safety/ESOH, HSI, system security engineering, manufacturing & quality / manufacturing readiness, supportability, survivability, MOSA/modular design, interoperability, affordability trade-offs, and the rest of the 24 |
+| File | Job |
+|---|---|
+| [ch01-dau-se-guidebook-introduction.md](chapters/ch01-dau-se-guidebook-introduction.md) | Purpose, audience, policy relation, life-cycle framing |
+| [ch02-dau-se-guidebook-system-level.md](chapters/ch02-dau-se-guidebook-system-level.md) | System-level context; SoS move noted |
+| [ch03-dau-se-guidebook-se-modernization.md](chapters/ch03-dau-se-guidebook-se-modernization.md) | DE, MBSE, mission engineering, SWE, MOSA, Agile |
+| [ch04-dau-se-guidebook-engineering-resources.md](chapters/ch04-dau-se-guidebook-engineering-resources.md) | Resources, workforce, lessons, contracting role |
+| [ch05-dau-se-guidebook-technical-reviews-audits.md](chapters/ch05-dau-se-guidebook-technical-reviews-audits.md) | Reviews and audits, entrance/exit logic |
+| [ch06-dau-se-guidebook-technical-management.md](chapters/ch06-dau-se-guidebook-technical-management.md) | Eight technical management processes and SEP |
+| [ch07-dau-se-guidebook-technical-processes.md](chapters/ch07-dau-se-guidebook-technical-processes.md) | Eight technical processes; 15288 mapping method |
+| [ch08-dau-se-guidebook-design-considerations.md](chapters/ch08-dau-se-guidebook-design-considerations.md) | Twenty-four design considerations |
 
 ## Topic Index
 
-- **16-process SE model / ISO 15288 mapping / V-diagram / process scaling** → ch01, ch04, ch05
-- **Systems Engineering Plan (SEP)** → ch01, ch04, cheatsheet
-- **Roles (PM, Systems Engineer, Lead Software Engineer) / IPTs** → ch01, ch02
-- **System of Systems (SoS) / Digital Engineering / mission engineering** → ch02
-- **MOSA / modular design** → ch02, ch06
-- **Contracting / RFP technical content** → ch02
-- **Technical reviews & audits (ASR, SRR, SFR, PDR, CDR, SVR/FCA, PRR, PCA)** → ch03, cheatsheet
-- **Baselines (functional / allocated / product)** → ch03, ch05
-- **Technical management processes** (Technical Planning, Decision Analysis, Technical Assessment, Requirements/Configuration/Technical Data/Interface Management) → ch04
-- **Risk / Issue / Opportunity (RIO) management** → ch04, cheatsheet
-- **TPMs / leading indicators** → ch04, cheatsheet
-- **Technical processes** (Stakeholder Requirements, Requirements Analysis, Architecture Design, Implementation, Integration) → ch05
-- **Verification vs. Validation / Transition** → ch05, cheatsheet
-- **Design considerations — the 24** (R&M, System Safety/ESOH, HSI, System Security Engineering, Manufacturing & Quality/MRLs, supportability, survivability, DMSMS, …) → ch06, cheatsheet
+- Introduction / policy / life cycle: ch01
+- System-level / FoS / SoS framing: ch02
+- Digital engineering / MBSE / MOSA / Agile: ch03
+- Resources / IPT / qualifications / contracting: ch04
+- ASR / SRR / SFR / PDR / CDR / SVR / FCA / PRR / PCA: ch05
+- SEP / TPM / risk / CM / data / interfaces: ch06
+- Requirements / architecture / integration / V&V / transition: ch07
+- Design considerations (24): ch08
 
 ## Supporting Files
 
-- [glossary.md](glossary.md) — key DoD SE terms (processes, reviews, baselines, RIO, TPM, SoS, design considerations), alphabetical, with chapter references
-- [patterns.md](patterns.md) — reusable SE patterns (process scaling, event-driven review gating, SEP maintenance, risk vs. issue triage, MOSA adoption, design-consideration balancing) with When/How/Trade-offs structure
-- [cheatsheet.md](cheatsheet.md) — decision rules, the 16-process table, review/audit sequence, RIO matrices, TPM vs. leading indicator, design-considerations list, tells & smells
-
----
+- `glossary.md`
+- `cheatsheet.md`
+- `patterns.md`
 
 ## Scope & Limits
 
-**Covers**: the DoD SE approach for defense acquisition programs per the OUSD(R&E) Systems Engineering Guidebook (February 2022) — the 16 SE processes (8 technical management + 8 technical) and their ISO/IEC/IEEE 15288 mapping; the event-driven technical review and audit sequence (ASR, SRR, SFR, PDR, CDR, SVR/FCA, PRR, PCA) with products and entrance/success criteria; the Systems Engineering Plan (SEP); risk/issue/opportunity management; technical performance measurement (TPMs, leading indicators); system-of-systems and digital-engineering practice; engineering resources, roles, IPTs, and the SE role in contracting; and the 24 design considerations.
-
-**Does not cover in depth**: detailed cost estimating and JCL analysis (see a cost-estimating source); contracting law and the FAR/DFARS; the Adaptive Acquisition Framework pathways themselves (see the *Engineering of Defense Systems Guidebook* and DoDI 5000.02); test & evaluation planning detail (see the DoD T&E guidance / TEMP); program protection and cybersecurity RMF detail (see the Program Protection Plan and NIST/RMF sources); software development methodology detail; and non-DoD, commercial, or civil-agency life cycles. This is **guidance, not policy** — the binding requirements live in DoDI 5000.88 and related issuances.
-
-**Jurisdiction**: US Government public domain work (Distribution Statement A). Applies to DoD acquisition programs; non-DoD organisations may adopt the framework voluntarily.
+Guidance, not policy. Not a substitute for DoDI 5000.88, DoDI 5000.02, or other cited issuances. Not the updated SoS guide after the Section 2 content move. Does not reproduce review-criteria tables, SEP template cells, 15288 mapping tables, or design-consideration checklists cell by cell. Thin on detailed cost estimating, contracting law, and non-DoD commercial life cycles.
