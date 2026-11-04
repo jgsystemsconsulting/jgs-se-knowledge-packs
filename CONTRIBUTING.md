@@ -29,6 +29,7 @@ If a source is merely "free to download," that is not enough. Free ≠ redistrib
 
 Source freshness is checked monthly against the revision each live pack was built
 from; see [docs/SOURCE-FRESHNESS.md](docs/SOURCE-FRESHNESS.md). A rebuild stays a
+Edition rebuild surface list: [docs/REBUILD-OPERATOR-CHECKLIST.md](docs/REBUILD-OPERATOR-CHECKLIST.md).
 maintainer decision, made from that report.
 
 ## Build the pack

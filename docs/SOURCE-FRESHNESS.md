@@ -62,3 +62,5 @@ be blocked locally.
 
 `python tooling/check_source_watch.py` validates the watchlist and reports. It
 never writes and it never fetches anything.
+
+Edition rebuild surfaces: [REBUILD-OPERATOR-CHECKLIST.md](REBUILD-OPERATOR-CHECKLIST.md).
