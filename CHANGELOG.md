@@ -11,6 +11,21 @@ All notable changes to this project are documented here. Format follows
 
 ## [Unreleased]
 
+## [1.24.3]: 2026-11-04
+
+### Fixed
+
+- Landing page catalogue chip and website product YAML DoD list state MIL-HDBK-516D for the `mil-hdbk-516` pack (public free-text had lagged on MIL-HDBK-516C after the pack rebuild).
+- Cursor marketplace exclusion story in `docs/other-agents.md` keys on `PACK.yaml` `commercial_use: false` and names the current set (`sebok`, `easa-rules`, `med-device-eu`), matching the eligible-set gate.
+
+### Changed
+
+- Scaffold path and README "How a pack is built" retire offset-mapped / chapter-offset vocabulary; `tooling/build_pack.py` stamps the PACK-SPEC canonical build method string.
+- Monthly source-watch cron (automation-efd3e871) derives source count N and wave count W from `docs/source-watchlist.json` at run time; `docs/SOURCE-FRESHNESS.md` records the operator note (pack adds need no prompt recount).
+- Tracked edition-rebuild operator checklist at `docs/REBUILD-OPERATOR-CHECKLIST.md`, linked from CONTRIBUTING and SOURCE-FRESHNESS.
+- Capability-map envelopes (`capability-pack-map.json`, `classification-rules.json`, note-overrides) set `map_version` to the release id; `tooling/check_capability_map.py` fails when `map_version` disagrees with RELEASE-INFO Version.
+- `tooling/generate_capability_map.py` uses a single `NOTES_COUNT` constant for notes-length fail-closed checks (was duplicated `(743 - 6 + 8)` arithmetic).
+
 ## [1.24.2]: 2026-11-03
 
 ### Fixed
