@@ -12,7 +12,7 @@ README ("How a pack is built"). It does the deterministic, mechanical parts:
   2. Creates packs/<slug>/ with chapters/ and a pre-filled PACK.yaml + LICENSE stub.
   3. Prints the next manual steps (extraction + agent generation).
 
-The *content generation* steps (text extraction, chapter-offset mapping, and the
+The *content generation* steps (text extraction, chapter freeze from the contents list, and the
 per-chapter reference-depth synthesis) are performed by an agent following
 docs/PACK-SPEC.md, using the MIT-licensed jgs-reference-skill engine for extraction
 (a fork of book-to-skill):
@@ -52,7 +52,7 @@ commercial_use: {commercial_use}
 share_alike: {share_alike}
 attribution_required: {attribution_required}
 build:
-  method: "jgs-reference-skill extraction + offset-mapped parallel chapter generation"
+  method: "synthesized reference notes from the pinned source, chapter freeze from the contents list"
   source_pages: 0
   chapters: 0
   built_on: "TODO"
@@ -118,7 +118,7 @@ def main(argv: list[str]) -> int:
     print(f"Created packs/{args.slug}/ with PACK.yaml + LICENSE stub and chapters/.")
     print("\nNext (manual / agent-driven — see docs/PACK-SPEC.md):")
     print("  1. Extract source text with jgs-reference-skill.")
-    print("  2. Map structure to chapter offsets.")
+    print("  2. Freeze the chapter list from the contents list.")
     print("  3. Generate chapters/chNN-*.md (reference depth), glossary/patterns/cheatsheet.")
     print("  4. Write SKILL.md (index + core frameworks).")
     print("  5. Fill the TODOs in PACK.yaml + LICENSE.")
