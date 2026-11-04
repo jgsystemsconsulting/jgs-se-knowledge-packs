@@ -11,10 +11,14 @@ All notable changes to this project are documented here. Format follows
 
 ## [Unreleased]
 
+## [1.24.2]: 2026-11-03
+
 ### Fixed
 
 - `docs/index.html` hero title-card alt text states the current catalogue total (74 packs), replacing a stale 71 that predated the jsp-936 and fhwa-its-se registrations. The GitHub repository About description was corrected the same way (74 packs + 8 signposts + the `/se` orchestrator, 83 skills); repo tooling cannot reach the About field, so it was updated through the GitHub API.
+
 ### Changed
+
 - Rebuild `nasa-de-acquisition` onto NASA-HDBK-1004A, approved 2026-10-26 (8 chapters). Baseline 2020 edition pin retired.
 - Rebuild `mil-hdbk-516` onto MIL-HDBK-516D, 29 May 2026. MIL-HDBK-516C (12 December 2014) pin retired.
 - Rebuild `mrl-deskbook` from the Manufacturing Readiness Level (MRL) Deskbook, Version 2025, 1 May 2025, including criteria-matrix updates effective 8 July 2025. October 2022 pin retired. Users Guide, criteria adaptation, and operational-technology cybersecurity are appendices in the 2025 contents list and stay reconstructed chapters.
