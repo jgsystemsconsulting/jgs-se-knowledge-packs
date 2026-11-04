@@ -6,9 +6,11 @@ generate_capability_map.py — rebuild docs/capability-pack-map.json from
 classification-rules.json + capability-pack-map-note-overrides.json (MAP-21-02/03/04).
 
 Cluster assignment and envelope fields are generator output. Notes come only from
-the mandatory (743 - 6 + 8)-row overrides file (H-01). 6 is the dau-se-guidebook row count removed by the September 2026 rebuild (6 chapters; support files carry no rows), and the added term is the new chapter count with no support rows. The leading 743 is the pre-cut evaluated notes length. Support membership comes from
-is_support rows, not rules_of_construction (H-03). Does not import sibling
-checkers (H-07). Stdlib only.
+the mandatory NOTES_COUNT-row overrides file (H-01). NOTES_COUNT is defined once
+below (history: 743 pre-cut evaluated length, minus 6 dau-se-guidebook rows removed
+in the September 2026 rebuild, plus 8 new chapter rows with no support rows).
+Support membership comes from is_support rows, not rules_of_construction (H-03).
+Does not import sibling checkers (H-07). Stdlib only.
 
 Usage:
   python tooling/generate_capability_map.py --generated-on YYYY-MM-DD [--sync-md]
@@ -28,6 +30,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 RULES_PATH = ROOT / "docs" / "classification-rules.json"
 OVERRIDES_PATH = ROOT / "docs" / "capability-pack-map-note-overrides.json"
+# Single source for fail-closed notes-length checks and docstring (H-01).
+# History: 743 pre-cut - 6 dau-se-guidebook + 8 new chapter rows = 745.
+NOTES_COUNT = 743 - 6 + 8
+assert NOTES_COUNT == 745
 MAP_PATH = ROOT / "docs" / "capability-pack-map.json"
 MD_PATH = ROOT / "docs" / "capability-pack-map.md"
 
@@ -192,7 +198,7 @@ def generate_map(rules: dict, overrides: dict, generated_on: str) -> dict:
 
     only_a = sorted(akeys - nkeys)
     only_n = sorted(nkeys - akeys)
-    if only_a or only_n or len(notes) != (743 - 6 + 8):
+    if only_a or only_n or len(notes) != NOTES_COUNT:
         parts = []
         if only_a:
             p, c = only_a[0]
@@ -200,8 +206,8 @@ def generate_map(rules: dict, overrides: dict, generated_on: str) -> dict:
         if only_n:
             p, c = only_n[0]
             parts.append(f"in notes not in assignments: {p}/{c}")
-        if len(notes) != (743 - 6 + 8):
-            parts.append(f"notes length must be (743 - 6 + 8), got {len(notes)}")
+        if len(notes) != NOTES_COUNT:
+            parts.append(f"notes length must be {NOTES_COUNT}, got {len(notes)}")
         raise ValueError(
             "notes key set must equal assignments key set "
             f"(assignments_only={len(only_a)}, notes_only={len(only_n)}); "
