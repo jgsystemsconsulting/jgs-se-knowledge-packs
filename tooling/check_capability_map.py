@@ -80,6 +80,20 @@ def main() -> int:
             f"envelope: map_version must match N.N.N, got {map_version!r}",
         )
 
+    # Parity: map_version should match RELEASE-INFO Version (contract: release that last regen'd the map).
+    rel_path = ROOT / "RELEASE-INFO.txt"
+    if rel_path.is_file() and isinstance(map_version, str) and MAP_VERSION_RE.fullmatch(map_version):
+        rel_ver = None
+        for line in rel_path.read_text(encoding="utf-8").splitlines():
+            if line.startswith("Version:"):
+                rel_ver = line.split(":", 1)[1].strip()
+                break
+        if rel_ver and rel_ver != map_version:
+            fail(
+                errs,
+                f"envelope: map_version {map_version!r} != RELEASE-INFO Version {rel_ver!r}",
+            )
+
     generated_on = data.get("generated_on")
     if not generated_on:
         fail(errs, "envelope: missing or empty generated_on")
