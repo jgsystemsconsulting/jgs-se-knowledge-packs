@@ -28,8 +28,11 @@ identifier counts as no change.
 
 ## Cadence and where the output goes
 
-The run is monthly. Reports land at `.zcode/source-watch/YYYY-MM-DD.md`, which is
-gitignored, and they accumulate. Each report lists drift findings, unknowns, packs
+The run is monthly (ZCode automation-efd3e871, day 1 at 09:00). The automation
+prompt derives source count N and wave count W = ceil(N/8) from
+`docs/source-watchlist.json` at run time; pack adds update the watchlist only and
+do not require a prompt recount. Reports land at `.zcode/source-watch/YYYY-MM-DD.md`,
+which is gitignored, and they accumulate. Each report lists drift findings, unknowns, packs
 whose recorded revision is ahead of what the pack was built from, and three
 report-only glances: live link health, the README version badge against
 `RELEASE-INFO.txt`, and the status of `planned[]` entries.
