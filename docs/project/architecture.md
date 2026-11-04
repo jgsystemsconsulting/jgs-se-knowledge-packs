@@ -41,3 +41,15 @@ status: verified
 source: 2026-11-03-cut-unreleased-drain-release
 
 check_release.py regex semantics stay untouched; the cut relies on the gate's first-numbered-heading behavior as the acceptance authority. The three map JSONs (docs/capability-pack-map.json, docs/classification-rules.json, docs/capability-pack-map-note-overrides.json) keep map_version 1.22.0 and see no envelope change; map_version work and the optional map_version-vs-release parity gate belong to P15 after the X2 separate resolution (2026-11-03 pick).
+
+## AD-8
+status: accepted
+source: 2026-11-04-retire-scaffold-offset-vocab
+
+Scaffold trust anchor stays the single PACK-SPEC canonical method string copied verbatim, never a paraphrase. build_pack.py PACK_YAML_TEMPLATE adopts the docs/PACK-SPEC.md:77 method text character for character so scaffold, spec example, and the P7-normalized live fleet read identically. A paraphrase would drift on the next PACK-SPEC edit; the verbatim copy diffs clean against the canonical line in review.
+
+## AD-9
+status: accepted
+source: 2026-11-04-retire-scaffold-offset-vocab
+
+The three non-template loci (build_pack.py docstring, printed next-step 2, README How a pack is built) adopt contents-list freeze wording and drop the retired token set outright: no offset-mapped, chapter-offset, or chapter offsets string survives in any of them. The jgs-reference-skill URL and extraction credit stay; only the retired mapping step changes name. Smoke verifies with source greps plus a template-string read that imports build_pack without calling main, so no packs/ directory is created.
