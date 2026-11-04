@@ -49,12 +49,16 @@ Cursor (2.5+) can consume the packs **two** ways:
 ### Publishing to the Cursor marketplace
 
 Cursor's marketplace **manually reviews** every plugin and requires it be **open source**. The
-shipped `.cursor-plugin/plugin.json` therefore lists only the **commercially-redistributable**
-packs (public-domain and CC BY sources) and **excludes** non-commercial (NC) content, currently
-`sebok` (CC BY-NC-SA). NC packs stay available via `install.py` and the Claude Code plugin. To
-publish or update, submit the repo at <https://cursor.com/marketplace/publish>; when packs are
-added, re-check each new source's licence before adding its `./packs/<slug>/SKILL.md` line to the
-plugin's `skills` list.
+shipped `.cursor-plugin/plugin.json` lists only packs with `commercial_use: true` in
+`packs/<slug>/PACK.yaml` (eligibility is the boolean flag, not a free-text NC licence name).
+Packs with `commercial_use: false` are omitted from the Cursor marketplace skills list; today
+that set is `sebok` (CC BY-NC-SA), `easa-rules` (EASA reproduction-with-acknowledgement /
+all-rights-reserved PDFs), and `med-device-eu` (Commission/MHRA guidance pack-level non-commercial
+stance). Those packs stay available via `install.py` and the Claude Code plugin. To publish or
+update, submit the repo at <https://cursor.com/marketplace/publish>; when packs are added,
+re-check each new source's `commercial_use` before adding its `./packs/<slug>/SKILL.md` line to
+the plugin's `skills` list.
+
 
 ## Native vs. transform: what differs
 
