@@ -223,6 +223,7 @@ tr.hidden{{display:none}}
     <div><span class="label">Repository</span><b><a href="{REPO}">github.com/jgsystemsconsulting</a></b></div>
     <div><span class="label">Overview</span><b><a href="index.html">index.html</a></b></div>
     <div><span class="label">Catalogue</span><b><a href="{REPO}/blob/main/SKILLS.md">SKILLS.md</a></b></div>
+    <div><span class="label">Capability map</span><b><a href="capability-pack-map.md">capability-pack-map.md</a></b></div>
     <div><span class="label">Usage</span><b><a href="{REPO}/blob/main/docs/skill-usage.md">skill-usage.md</a></b></div>
     <div><span class="label">Owner</span><b>JG Systems Consulting Ltd</b></div>
   </div>
