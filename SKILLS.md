@@ -6,7 +6,7 @@ SKILLS.md is hand-maintained. After a pack change, regenerate docs/packs.html wi
 
 # jgs-se-knowledge-packs — Pack Index
 
-74 packs (+8 signposts, +1 orchestrator) in this release. Each pack is an Agent Skill installed as `/<slug>`.
+70 packs (+8 signposts, +1 orchestrator) in this release. Each pack is an Agent Skill installed as `/<slug>`.
 
 | Pack | Source licence | Description |
 |------|----------------|-------------|
