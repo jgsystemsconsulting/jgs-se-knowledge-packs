@@ -530,14 +530,6 @@
       "hint": ""
     },
     {
-      "slug": "jsp-815",
-      "publisher": "Ministry of Defence",
-      "document": "JSP 815 Defence Safety Management System V1.3 (Framework, Elements 1-12, Annexes A-G, published 2026-09-01); Annex H Audit Manual V1.2 (published 2026-09-01)",
-      "version": "JSP 815 Defence Safety Management System V1.3 (Framework, Elements 1-12, Annexes A-G); Annex H Audit Manual V1.2",
-      "last_checked": "2026-11-01",
-      "hint": ""
-    },
-    {
       "slug": "nrc-nuclear",
       "publisher": "U.S. Nuclear Regulatory Commission",
       "document": "RG 1.168 Rev 2, Verification, Validation, Reviews, and Audits for Digital Computer Software Used in Safety Systems of Nuclear Power Plants (July 2013, ML13073A210); RG 1.169 Rev 1, Configuration Management Plans for Digital Computer Software Used in Safety Systems of Nuclear Power Plants (July 2013, ML12355A642); RG 1.170 Rev 1, Software Test Documentation for Digital Computer Software Used in Safety Systems of Nuclear Power Plants (July 2013, ML13003A216); RG 1.171 Rev 1, Software Unit Testing for Digital Computer Software Used in Safety Systems of Nuclear Power Plants (July 2013, ML13004A375); RG 1.172 Rev 1, Software Requirements Specifications for Digital Computer Software Used in Safety Systems of Nuclear Power Plants (July 2013, ML13007A173); RG 1.173 Rev 1, Developing Software Life Cycle Processes for Digital Computer Software Used in Safety Systems of Nuclear Power Plants (July 2013, ML13009A190); NUREG-0800 BTP 7-14 Rev 6, Guidance on Software Reviews for Digital Computer-Based Instrumentation and Control Systems (August 2016, ML16019A308)",
@@ -558,30 +550,6 @@
       "publisher": "European Commission MDCG and UK MHRA; built by JG Systems Consulting Ltd",
       "document": "MDCG 2019-11 rev.1 (June 2025); MDCG 2020-6 (April 2020); MDCG 2020-13 (July 2020); MDCG 2020-7 (April 2020); MDCG 2020-8 (April 2020); MHRA Medical devices: software applications (2023-07-01) with its stand-alone software guidance. Captured 2026-10-13.",
       "version": "MDCG 2019-11 rev.1 (June 2025); MDCG 2020-6 (April 2020); MDCG 2020-13 (July 2020); MDCG 2020-7 (April 2020); MDCG 2020-8 (April 2020); MHRA Medical devices: software applications (2023-07-01) with its stand-alone software guidance. Captured 2026-10-13.",
-      "last_checked": "2026-11-01",
-      "hint": ""
-    },
-    {
-      "slug": "jsp-376",
-      "publisher": "Ministry of Defence",
-      "document": "JSP 376 Defence Acquisition Safety Policy V1.1 (April 2024)",
-      "version": "JSP 376: Defence Acquisition Safety Policy (version 1.1)",
-      "last_checked": "2026-11-01",
-      "hint": ""
-    },
-    {
-      "slug": "jsp-936",
-      "publisher": "Ministry of Defence",
-      "document": "JSP 936 Dependable Artificial Intelligence (AI) in Defence, Part 1: Directive, V1.1 (November 2024)",
-      "version": "JSP 936 V1.1 Dependable Artificial Intelligence (AI) in Defence, Part 1: Directive (November 2024)",
-      "last_checked": "2026-11-01",
-      "hint": ""
-    },
-    {
-      "slug": "jsp-912",
-      "publisher": "Ministry of Defence",
-      "document": "JSP 912 Human Factors Integration in Defence Systems, Part 1 Directive and Part 2 Guidance, V3.0 (March 2024)",
-      "version": "JSP 912 Human Factors Integration for Defence Systems, Part 1 Directive and Part 2 Guidance, Version 3.0 Mar 2024",
       "last_checked": "2026-11-01",
       "hint": ""
     },

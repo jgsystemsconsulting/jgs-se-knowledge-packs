@@ -8,7 +8,7 @@ SPDX-License-Identifier: MIT
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT%20(tooling)-blue" alt="License: MIT (tooling)">
   <img src="https://img.shields.io/badge/version-1.24.3-green" alt="Version 1.24.3">
-  <img src="https://img.shields.io/badge/packs-74-blueviolet" alt="74 packs">
+  <img src="https://img.shields.io/badge/packs-70-blueviolet" alt="70 packs">
   <img src="https://img.shields.io/badge/tested%20with-Claude%20Code-8A2BE2" alt="Tested with Claude Code">
   <img src="https://img.shields.io/badge/scope-systems%20engineering-orange" alt="Scope: systems engineering">
   <a href="https://skills.sh/jgsystemsconsulting/jgs-se-knowledge-packs"><img src="https://skills.sh/b/jgsystemsconsulting/jgs-se-knowledge-packs" alt="skills.sh installs"></a>
@@ -194,11 +194,7 @@ always-loaded `SKILL.md` index inlined into one file. Full detail and the per-ag
 | `easa-rules` | EASA AMC 20-115D & AMC 20-152A (consolidated in AMC-20 Amendment 23) | Per-document EASA grant (attribution) | 🟡 2 | ✅ live (7 chapters) |
 | `faa-8110-49` | FAA Order 8110.49A + ACs 20-115D, 20-152A, 00-69 | Public domain (US gov) | 🟢 1 | ✅ live (13 chapters) |
 | `fda-med-device` | FDA device software guidance + QMSR final rule (89 FR 7496) | Public domain (US gov) | 🟢 1 | ✅ live (12 chapters) |
-| `jsp-376` | JSP 376 Defence Acquisition Safety Policy V1.1 | OGL v3.0 (UK MoD) | 🟡 2 | ✅ live (8 chapters) |
-| `jsp-936` | JSP 936 Dependable Artificial Intelligence (AI) in Defence, Part 1: Directive, V1.1 | OGL v3.0 (UK MoD) | 🟡 2 | ✅ live (8 chapters) |
-| `jsp-912` | JSP 912 Human Factors Integration in Defence Systems, Parts 1 and 2, V3.0 (March 2024) | OGL v3.0 (UK MoD) | 🟡 2 | ✅ live (9 chapters) |
 | `fhwa-its-se` | Systems Engineering for ITS, fourth generation (December 2022), FHWA | Public domain (US gov) | 🟢 1 | ✅ live (7 chapters) |
-| `jsp-815` | JSP 815 Defence Safety Management System V1.3 | OGL v3.0 (UK MoD) | 🟡 2 | ✅ live (10 chapters) |
 | `med-device-eu` | MDCG guidance (European Commission) + MHRA software guidance (UK) | CC BY 4.0 (EC) + OGL v3.0 (MHRA) | 🟡 2 | ✅ live (8 chapters) |
 | `nrc-nuclear` | NRC Regulatory Guides 1.168–1.173 + NUREG-0800 BTP 7-14 | Public domain (US gov) | 🟢 1 | ✅ live (8 chapters) |
 | `mit-ocw-se` | MIT OCW Fundamentals of Systems Engineering | CC BY-NC-SA | 🟡 2 | 🔜 planned |

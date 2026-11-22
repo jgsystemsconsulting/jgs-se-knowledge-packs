@@ -5,7 +5,7 @@ SPDX-License-Identifier: MIT
 
 # Source Freshness
 
-The catalogue's 74 live content packs were each built from one upstream document.
+The catalogue's 70 live content packs were each built from one upstream document.
 A content pack may pin more than one PDF when the publisher ships the document
 in parts (see the build rules in [PACK-SPEC.md](PACK-SPEC.md)). The watchlist
 stays one entry per live catalog pack, not one entry per PDF. Those documents

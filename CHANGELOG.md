@@ -11,6 +11,13 @@ All notable changes to this project are documented here. Format follows
 
 ## [Unreleased]
 
+
+## [1.24.4] - 2026-11-22
+
+### Removed
+
+- UK defence content packs moved to the dedicated repository `jgs-uk-defence-knowledge-packs`: `jsp-815`, `jsp-376`, `jsp-912`, and `jsp-936` (bare removal; no same-slug survivors and no signpost directories on the old slugs). Catalogue, plugin manifests, orchestrator routing, NOTICE, capability map, source watchlist, pack landing pages, and inventory counts drop the four slugs. Live catalogue is now 70 content packs, 8 signposts, and the `/se` orchestrator (79 skills).
+
 ## [1.24.3]: 2026-11-04
 
 ### Fixed

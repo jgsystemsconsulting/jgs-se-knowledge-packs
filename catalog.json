@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "repository": "jgs-se-knowledge-packs",
   "scope": "systems engineering",
-  "updated": "2026-10-14",
+  "updated": "2026-11-22",
   "packs": [
     {
       "slug": "faa-rma",
@@ -734,17 +734,6 @@
       "status": "live"
     },
     {
-      "slug": "jsp-815",
-      "title": "JSP 815: Defence Safety Management System (Framework and Direction and Guidance)",
-      "publisher": "Ministry of Defence",
-      "source_version": "JSP 815 Defence Safety Management System V1.3 (Framework, Elements 1-12, Annexes A-G, published 2026-09-01); Annex H Audit Manual V1.2 (published 2026-09-01)",
-      "license": "Open Government Licence v3.0",
-      "license_tier": 2,
-      "commercial_use": true,
-      "chapters": 10,
-      "status": "live"
-    },
-    {
       "slug": "nrc-nuclear",
       "title": "NRC Digital Safety-System Software Assurance",
       "publisher": "U.S. Nuclear Regulatory Commission",
@@ -775,39 +764,6 @@
       "license_tier": 2,
       "commercial_use": false,
       "chapters": 8,
-      "status": "live"
-    },
-    {
-      "slug": "jsp-376",
-      "title": "JSP 376: Defence Acquisition Safety Policy",
-      "publisher": "Ministry of Defence",
-      "source_version": "JSP 376 Defence Acquisition Safety Policy V1.1 (April 2024)",
-      "license": "Open Government Licence v3.0",
-      "license_tier": 2,
-      "commercial_use": true,
-      "chapters": 8,
-      "status": "live"
-    },
-    {
-      "slug": "jsp-936",
-      "title": "JSP 936: Dependable Artificial Intelligence (AI) in Defence, Part 1: Directive",
-      "publisher": "Ministry of Defence",
-      "source_version": "JSP 936 Dependable Artificial Intelligence (AI) in Defence, Part 1: Directive, V1.1 (November 2024)",
-      "license": "Open Government Licence v3.0",
-      "license_tier": 2,
-      "commercial_use": true,
-      "chapters": 8,
-      "status": "live"
-    },
-    {
-      "slug": "jsp-912",
-      "title": "JSP 912: Human Factors Integration in Defence Systems (Parts 1 and 2)",
-      "publisher": "Ministry of Defence",
-      "source_version": "JSP 912 Human Factors Integration in Defence Systems, Part 1 Directive and Part 2 Guidance, V3.0 (March 2024)",
-      "license": "Open Government Licence v3.0",
-      "license_tier": 2,
-      "commercial_use": true,
-      "chapters": 9,
       "status": "live"
     },
     {

@@ -24,13 +24,13 @@ Rules of construction:
 
 | Cluster | Entries |
 |---|---|
-| 1. Systems Thinking & Fundamentals | 28 |
-| 2. Requirements Engineering | 24 |
+| 1. Systems Thinking & Fundamentals | 27 |
+| 2. Requirements Engineering | 22 |
 | 3. Requirements Traceability & Allocation | 3 |
 | 4. Architecture & Design | 20 |
 | 5. Interface Management & ICIDs | 9 |
 | 6. Integration | 4 |
-| 7. Verification | 20 |
+| 7. Verification | 18 |
 | 8. Validation | 6 |
 | 9. Test & Evaluation | 17 |
 | 10. Modeling, MBSE & SysML | 20 |
@@ -41,22 +41,22 @@ Rules of construction:
 | 15. Opportunity/Benefit Management | 8 |
 | 16. Decision Analysis & Trade Studies | 5 |
 | 17. Technical Planning & Work Breakdown | 13 |
-| 18. Measurement & Technical Assessment | 38 |
+| 18. Measurement & Technical Assessment | 37 |
 | 19. Quality Assurance & Process Compliance | 7 |
-| 20. Safety, Reliability & Survivability | 99 |
+| 20. Safety, Reliability & Survivability | 96 |
 | 21. Cybersecurity & Security Engineering | 73 |
-| 22. Human Systems Integration / Human Factors | 30 |
+| 22. Human Systems Integration / Human Factors | 26 |
 | 23. Logistics, Supportability & Sustainment | 12 |
-| 24. Operations, Maintenance & Disposal | 16 |
-| 25. Training & Documentation Delivery | 13 |
+| 24. Operations, Maintenance & Disposal | 14 |
+| 25. Training & Documentation Delivery | 12 |
 | 26. Project/Program Management | 67 |
-| 27. Supplier, Procurement & Acquisition | 14 |
+| 27. Supplier, Procurement & Acquisition | 10 |
 | 28. Stakeholder Engagement & Needs | 3 |
-| 29. Governance, Reviews, Gates & Control Points | 30 |
-| 30. Standards, Tailoring & Process Models | 68 |
+| 29. Governance, Reviews, Gates & Control Points | 25 |
+| 30. Standards, Tailoring & Process Models | 61 |
 | 31. Specialty Engineering | 7 |
-| 32. Assurance & System Assurance | 16 |
-| **Total** | **745** |
+| 32. Assurance & System Assurance | 13 |
+| **Total** | **710** |
 
 ## 1. Systems Thinking & Fundamentals
 
@@ -85,7 +85,6 @@ Rules of construction:
 | sebok | ch32-sebok-se-software-engineering.md | SE and software engineering relationship |
 | sebok | ch35-sebok-implementation-examples.md | Implementation examples |
 | sebok | ch36-sebok-emerging-knowledge.md | Emerging SE knowledge |
-| jsp-936 | ch02-ai-in-defence-systems.md | How AI including RAS and digital systems is framed inside Defence systems from JSP 936 Part 1 |
 | dau-se-guidebook | ch01-dau-se-guidebook-introduction.md | September 2026 SE Guidebook introduction, purpose, and life-cycle framing. |
 | dau-se-guidebook | ch02-dau-se-guidebook-system-level.md | September 2026 SE Guidebook system-level considerations. |
 | dau-se-guidebook | ch03-dau-se-guidebook-se-modernization.md | September 2026 SE Guidebook SE modernization: digital engineering, MBSE, MOSA, Agile. |
@@ -116,9 +115,7 @@ Rules of construction:
 | requirements-writing | patterns.md (support file) | Patterns/practice heuristics |
 | fda-med-device | ch02-premarket-software-documentation.md | Content of Premarket Submissions for Device Software Functions, June 2023 guidance notes |
 | nrc-nuclear | ch03-software-requirements-specifications.md | Software requirements specification notes from RG 1.172 Rev 1 |
-| jsp-376 | ch03-safety-management-and-requirements.md | Safety Management Plan, safety KUR, and URD and SRD safety requirements across the lifecycle |
 | fhwa-its-se | ch06-systems-engineering-documentation.md | Supplies purpose, tailoring guidance, checklists, and templates for each systems engineering document, from Systems Engineering for ITS, December 2022. |
-| jsp-912 | ch05-user-need-and-system-requirements.md | Covers defining user needs and deriving HFI system requirements through processes HFI-1.0 and HFI-2.0, from JSP 912, March 2024. |
 
 ## 3. Requirements Traceability & Allocation
 
@@ -192,8 +189,6 @@ Rules of construction:
 | nrc-nuclear | ch06-test-documentation-and-unit-testing.md | Test documentation and unit testing notes from RG 1.170 Rev 1 and RG 1.171 Rev 1 |
 | med-device-eu | ch04-clinical-evidence-legacy-devices.md | What MDCG 2020-6 counts as sufficient clinical evidence for a legacy device |
 | med-device-eu | ch05-clinical-evaluation-assessment-report.md | MDCG 2020-13 template as a map of what a clinical evaluation assessment report contains |
-| jsp-376 | ch07-demonstration-and-manufacture.md | Demonstration evidence, Manufacture handover, and Duty Holder appointment before in-service |
-| jsp-912 | ch08-test-acceptance-in-service-feedback.md | Addresses test and acceptance of HFI requirements and in-service feedback through processes HFI-5.0 and HFI-6.0, from JSP 912, March 2024. |
 | faa-ams-vv | ch01-introduction-and-vv-philosophy.md | V&V scope, terms, and philosophy, with the V-Model and shift-left, from Version 4.0 January 2023. |
 | faa-ams-vv | ch02-implementation-guidance.md | V&V planning, performing, reporting, and decision support from Version 4.0 January 2023. |
 | faa-ams-vv | ch03-service-analysis-and-strategic-planning.md | V&V in Service Analysis and Strategic Planning with Table 1, from Version 4.0 January 2023. |
@@ -426,7 +421,6 @@ Rules of construction:
 | nist-stat-handbook | cheatsheet.md (support file) | Cheatsheet / quick reference |
 | nist-stat-handbook | glossary.md (support file) | Glossary for the pack |
 | nist-stat-handbook | patterns.md (support file) | Patterns/practice heuristics |
-| jsp-815 | ch09-performance-incidents-communication.md | Performance, incident, and communication notes from JSP 815 |
 | mrl-deskbook | ch01-mrl-deskbook-introduction.md | Version 2025 introduction, advisory status, and document map. |
 | mrl-deskbook | ch02-mrl-deskbook-scale-threads-and-trl.md | Version 2025 MRL scale, nine threads, environments, and TRL relationship. |
 | mrl-deskbook | ch03-mrl-deskbook-adaptive-acquisition-framework.md | Version 2025 MRL targets across MCA, MTA, and UCA pathways. |
@@ -542,9 +536,6 @@ Rules of construction:
 | nhtsa-vehicle | ch05-nhtsa-fmvss-brakes-lighting.md | FMVSS brake, stability, lighting, and driver-present selections |
 | nhtsa-vehicle | ch06-nhtsa-fmvss-fuel-ev.md | FMVSS fuel system integrity and EV electrical selections |
 | faa-8110-49 | ch13-design-level-error-handling.md | Design-level error handling notes from FAA airborne software guidance |
-| jsp-815 | ch05-risk-assessment-and-safety-cases.md | Risk assessment and safety-case notes from JSP 815 |
-| jsp-376 | ch04-test-evaluation-and-safety-case.md | ITEAP, certification strategy, and safety case ownership from Pre-Concept to handover |
-| jsp-936 | ch06-quality-safety-security.md | Quality, safety, and security expectations for AI systems from JSP 936 Part 1 |
 | mil-hdbk-516 | ch03-mil-hdbk-516-structures.md | MIL-HDBK-516D, 29 May 2026 structures criteria. |
 | mil-hdbk-516 | ch04-mil-hdbk-516-flight-technology.md | MIL-HDBK-516D, 29 May 2026 flight technology criteria. |
 | mil-hdbk-516 | ch05-mil-hdbk-516-propulsion.md | MIL-HDBK-516D, 29 May 2026 propulsion criteria. |
@@ -661,10 +652,6 @@ Rules of construction:
 | nasa-hsi | glossary.md (support file) | Glossary for the pack |
 | nasa-hsi | patterns.md (support file) | Patterns/practice heuristics |
 | nasa-se-handbook | ch05-2-6-human-systems-integration-hsi-in-the-se-process.md | HSI overview in SE processes |
-| jsp-936 | ch04-human-ai-teams.md | Human and AI teaming expectations across roles and human control from JSP 936 Part 1 |
-| jsp-912 | ch01-what-is-hfi-and-why-defence-mandates-it.md | Explains what Human Factors Integration is and why Defence policy mandates it across acquisition and through-life management, from JSP 912, March 2024. |
-| jsp-912 | ch03-hfi-and-systems-engineering.md | Positions HFI within the systems engineering life cycle and links it to DLODs and System Readiness Levels, from JSP 912, March 2024. |
-| jsp-912 | ch07-detailed-system-design-hfi-4-0.md | Applies human factors data to detailed system design through process HFI-4.0, from JSP 912, March 2024. |
 | mil-hdbk-516 | ch07-mil-hdbk-516-crew-systems-aerial-refueling.md | MIL-HDBK-516D, 29 May 2026 crew systems and aerial refueling criteria. |
 
 ## 23. Logistics, Supportability & Sustainment
@@ -701,8 +688,6 @@ Rules of construction:
 | nasa-std-8719-14 | ch06-reentry-surviving-debris.md | Reentry surviving-debris casualty risk and controlled-reentry keep-out |
 | nasa-std-8719-14 | ch07-special-classes-odar-eomp.md | Special-class debris limits plus ODAR/EOMP report governance (also Governance) |
 | sebok | ch18-sebok-system-maintenance.md | System maintenance (also sustainment) |
-| jsp-815 | ch08-equipment-and-infrastructure.md | Equipment and infrastructure safety notes from JSP 815 |
-| jsp-376 | ch08-in-service-and-disposal.md | In-service safety case reviews, the two-year review ceiling, and disposal and termination |
 | mil-hdbk-516 | ch10-mil-hdbk-516-maintenance.md | MIL-HDBK-516D, 29 May 2026 maintenance criteria. |
 
 ## 25. Training & Documentation Delivery
@@ -710,7 +695,6 @@ Rules of construction:
 | Pack | Chapter | Why it fits / one-line value |
 |---|---|---|
 | faa-std-025 | ch02-general-format-and-common-content.md | Shared IRD/ICD format, outline, and common content preparation rules |
-| jsp-815 | ch07-competence-and-delegation.md | Competence and delegation notes from JSP 815 |
 | mil-std-40051 | ch01-mil-std-40051-scope.md | MIL-STD-40051E w/Change 1, 30 July 2025 scope for page-based and electronic manuals. |
 | mil-std-40051 | ch02-mil-std-40051-applicable-documents.md | MIL-STD-40051E w/Change 1, 30 July 2025 applicable-document classes, not a quoted list. |
 | mil-std-40051 | ch03-mil-std-40051-general-requirements.md | MIL-STD-40051E w/Change 1, 30 July 2025 general requirements, including IETM functionality. |
@@ -805,10 +789,6 @@ Rules of construction:
 | nasa-npr-7123 | ch04-contracted-projects.md | Requirements flow to contracted projects |
 | faa-8110-49 | ch09-aeh-cots-ip.md | AEH COTS intellectual-property notes from AC 20-152A |
 | faa-8110-49 | ch10-cots-devices-and-cbas.md | COTS device and CBAS notes from the FAA airborne hardware guidance |
-| jsp-815 | ch06-supervision-contracting-control.md | Supervision, contracting, and control notes from JSP 815 |
-| jsp-376 | ch06-early-lifecycle-phases.md | Pre-Concept, Concept, and Assessment safety artefacts and SOC, OBC, and FBC evidence |
-| jsp-936 | ch07-suppliers.md | Supplier and procurement direction for acquiring AI systems from JSP 936 Part 1 |
-| jsp-912 | ch06-assess-tenders-hfi-3-0.md | Guides assessment of contractor tenders for human factors capability through process HFI-3.0, from JSP 912, March 2024. |
 | mrl-deskbook | ch06-mrl-deskbook-contract-language.md | Version 2025 contract language for MRL tasking. |
 | nasa-de-acquisition | ch05-nasa-de-acquisition-guiding-questions.md | NASA-HDBK-1004A, approved 2026-10-26 DE data guiding questions. |
 | nasa-de-acquisition | ch06-nasa-de-acquisition-contract-language.md | NASA-HDBK-1004A, approved 2026-10-26 DE data contract language. |
@@ -848,13 +828,8 @@ Rules of construction:
 | nist-csf | ch02-govern-gv.md | Govern function (cyber governance) |
 | faa-8110-49 | ch02-software-review-process.md | FAA software review process under Order 8110.49A, certification-staff notes |
 | faa-8110-49 | ch03-level-of-faa-involvement.md | Level of FAA involvement decisions under Order 8110.49A |
-| jsp-815 | ch03-leadership-and-organisation.md | Defence safety leadership and organisation notes from JSP 815 |
 | nrc-nuclear | ch07-btp-7-14-staff-software-review.md | BTP 7-14 Rev 6 staff software review notes for implementation and design outputs |
-| jsp-376 | ch02-roles-and-safety-in-the-programme.md | SRO and User safety accountabilities, the programme envelope, and the unpublished Chapter 4 gap |
-| jsp-936 | ch03-legal-ethics-governance.md | Legal, ethics, and governance direction for AI-enabled capability from JSP 936 Part 1 |
 | fhwa-its-se | ch04-managing-se-projects.md | Shows agencies how to size systems engineering effort to project risk and choose procurement and staffing approaches, from Systems Engineering for ITS, December 2022. |
-| jsp-912 | ch02-roles-and-responsibilities.md | Sets out the HFI roles and responsibilities for programme teams, HFI practitioners, and senior stakeholders, from JSP 912, March 2024. |
-| jsp-912 | ch09-competencies-ethics-conduct.md | Defines HFI practitioner competencies and the standards for research ethics and professional conduct, from JSP 912, March 2024. |
 | dau-se-guidebook | ch05-dau-se-guidebook-technical-reviews-audits.md | September 2026 SE Guidebook technical reviews and audits. |
 
 ## 30. Standards, Tailoring & Process Models
@@ -901,9 +876,6 @@ Rules of construction:
 | fda-med-device | ch12-submissions-estar.md | eSTAR program synthesis, program page content current 2026-09-21, page not copied |
 | faa-8110-49 | ch01-airborne-approval-map.md | FAA airborne approval map from Order 8110.49A and the three ACs; standards named, not quoted |
 | faa-8110-49 | ch05-do-178c-recognition-and-transition.md | AC 20-115D recognition of ED-12C and DO-178C, standard named and not quoted |
-| jsp-815 | ch01-defence-safety-jsp-map.md | JSP 815 map of the Defence SMS Framework and Direction and Guidance; ISO 45001 named, not quoted |
-| jsp-815 | ch02-sms-structure-and-assurance-stages.md | Defence SMS structure and assurance stages from JSP 815 |
-| jsp-815 | ch04-legislation-and-exemptions.md | Legislation and exemption notes from JSP 815; statute named, not reproduced as a substitute |
 | nrc-nuclear | ch01-nrc-software-assurance-framework.md | NRC software-assurance framework for digital safety systems; seven-document map |
 | nrc-nuclear | ch02-software-life-cycle-processes.md | Software life cycle process notes from RG 1.173 Rev 1 and BTP 7-14 planning review |
 | nrc-nuclear | ch08-endorsed-standards-and-adjacent-guidance.md | Endorsed IEEE, IEC, and IAEA standards named by designation and edition, not reproduced |
@@ -917,15 +889,11 @@ Rules of construction:
 | med-device-eu | ch03-mhra-software-qualification.md | MHRA qualification boundary for apps and stand-alone software, and where it diverges from the MDCG reading |
 | med-device-eu | glossary.md (support file) | SaMD, legacy device, PMCF, PMS, clinical evaluation, CEAR, MDR, IVDR, UKCA, MDCG, each pointing at the chapter that teaches it |
 | med-device-eu | cheatsheet.md (support file) | Which chapter answers the qualification question, which template to open, and which regime a question belongs to |
-| jsp-376 | ch01-acquisition-safety-policy.md | JSP 376 policy frame: ALARP, tolerability, exemptions, and the six acquisition safety concepts |
-| jsp-936 | ch01-introduction.md | Policy, scope, applicability, and tailoring direction for dependable AI from JSP 936 Part 1 |
-| jsp-936 | ch05-ai-lifecycles.md | Lifecycle direction for developing, deploying, and retiring AI systems from JSP 936 Part 1 |
 | fhwa-its-se | ch01-introduction.md | Orientation to the FHWA systems engineering guide for ITS, its purpose, audience, and navigation, from Systems Engineering for ITS, December 2022. |
 | fhwa-its-se | ch02-what-is-systems-engineering.md | Defines systems engineering and grounds it in transportation operations, from Systems Engineering for ITS, December 2022. |
 | fhwa-its-se | ch03-the-systems-engineering-process.md | Walks the Vee from regional planning to retirement with decision gates, tailoring guidance, and cross-cutting supports, from Systems Engineering for ITS, December 2022. |
 | fhwa-its-se | ch05-systems-engineering-resources.md | Curates ITS publications, systems engineering references, training providers, and US DOT tools, from Systems Engineering for ITS, December 2022. |
 | fhwa-its-se | ch07-glossary-and-acronyms.md | Defines the terms and acronyms used across the guide, from Systems Engineering for ITS, December 2022. |
-| jsp-912 | ch04-hfi-process-goals-activities-tailoring.md | Describes the HFI process goals and activities and how to tailor them to project scale and novelty, from JSP 912, March 2024. |
 | mil-hdbk-516 | ch01-mil-hdbk-516-scope.md | MIL-HDBK-516D, 29 May 2026 scope, tailoring, cited-publication classes, and notes. |
 | dau-se-guidebook | ch06-dau-se-guidebook-technical-management.md | September 2026 SE Guidebook technical management processes and the SEP. |
 | dau-se-guidebook | ch07-dau-se-guidebook-technical-processes.md | September 2026 SE Guidebook technical processes. |
@@ -955,10 +923,7 @@ Rules of construction:
 | nasa-system-safety | ch07-risc-evaluation.md | Safety case evaluation |
 | nist-ai-rmf | ch03-trustworthiness-characteristics.md | Trustworthiness characteristics of AI |
 | faa-8110-49 | ch07-aeh-custom-devices.md | AEH custom-device assurance notes from AC 20-152A, DO-254 named and not quoted |
-| jsp-815 | ch10-assurance-and-audit.md | Assurance and audit notes from JSP 815 Annex H V1.2 |
 | easa-rules | ch03-software-assurance-115d.md | Software life cycle assurance as AMC 20-115D frames it, plus process reuse and transition |
 | easa-rules | ch04-transition-tools-gm.md | Tool qualification pointer and GM1 to GM3 clarification material for AMC 20-115D |
 | easa-rules | ch06-aeh-objectives.md | AEH objectives AMC 20-152A adds for custom devices, COTS devices, and circuit board assemblies |
 | easa-rules | ch07-joint-sw-aeh-workflow.md | Joint software and hardware certification workflow and the PSAC/PHAC-style planning interfaces |
-| jsp-376 | ch05-supervision-assurance-approvals.md | Three lines of defence, the Safety Assurance Model, and safety inside the five-case business case |
-| jsp-936 | ch08-ai-assurance.md | Assurance expectations and evidence for dependable AI claims from JSP 936 Part 1 |

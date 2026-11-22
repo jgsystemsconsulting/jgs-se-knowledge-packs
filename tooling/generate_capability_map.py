@@ -32,8 +32,9 @@ RULES_PATH = ROOT / "docs" / "classification-rules.json"
 OVERRIDES_PATH = ROOT / "docs" / "capability-pack-map-note-overrides.json"
 # Single source for fail-closed notes-length checks and docstring (H-01).
 # History: 743 pre-cut - 6 dau-se-guidebook + 8 new chapter rows = 745.
-NOTES_COUNT = 743 - 6 + 8
-assert NOTES_COUNT == 745
+# History: 745 at 1.24.3, minus 35 jsp-{815,376,912,936} chapter rows moved to jgs-uk-defence-knowledge-packs.
+NOTES_COUNT = 745 - 35
+assert NOTES_COUNT == 710
 MAP_PATH = ROOT / "docs" / "capability-pack-map.json"
 MD_PATH = ROOT / "docs" / "capability-pack-map.md"
 

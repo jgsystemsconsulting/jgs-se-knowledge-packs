@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "map_version": "1.24.3",
-  "generated_on": "2026-11-03",
+  "map_version": "1.24.4",
+  "generated_on": "2026-11-22",
   "clusters": [
     {
       "name": "Systems Thinking & Fundamentals",
@@ -120,11 +120,6 @@
           "pack": "sebok",
           "chapter": "ch36-sebok-emerging-knowledge.md",
           "note": "Emerging SE knowledge"
-        },
-        {
-          "pack": "jsp-936",
-          "chapter": "ch02-ai-in-defence-systems.md",
-          "note": "How AI including RAS and digital systems is framed inside Defence systems from JSP 936 Part 1"
         },
         {
           "pack": "dau-se-guidebook",
@@ -257,19 +252,9 @@
           "note": "Software requirements specification notes from RG 1.172 Rev 1"
         },
         {
-          "pack": "jsp-376",
-          "chapter": "ch03-safety-management-and-requirements.md",
-          "note": "Safety Management Plan, safety KUR, and URD and SRD safety requirements across the lifecycle"
-        },
-        {
           "pack": "fhwa-its-se",
           "chapter": "ch06-systems-engineering-documentation.md",
           "note": "Supplies purpose, tailoring guidance, checklists, and templates for each systems engineering document, from Systems Engineering for ITS, December 2022."
-        },
-        {
-          "pack": "jsp-912",
-          "chapter": "ch05-user-need-and-system-requirements.md",
-          "note": "Covers defining user needs and deriving HFI system requirements through processes HFI-1.0 and HFI-2.0, from JSP 912, March 2024."
         }
       ]
     },
@@ -535,16 +520,6 @@
           "pack": "med-device-eu",
           "chapter": "ch05-clinical-evaluation-assessment-report.md",
           "note": "MDCG 2020-13 template as a map of what a clinical evaluation assessment report contains"
-        },
-        {
-          "pack": "jsp-376",
-          "chapter": "ch07-demonstration-and-manufacture.md",
-          "note": "Demonstration evidence, Manufacture handover, and Duty Holder appointment before in-service"
-        },
-        {
-          "pack": "jsp-912",
-          "chapter": "ch08-test-acceptance-in-service-feedback.md",
-          "note": "Addresses test and acceptance of HFI requirements and in-service feedback through processes HFI-5.0 and HFI-6.0, from JSP 912, March 2024."
         },
         {
           "pack": "faa-ams-vv",
@@ -1487,11 +1462,6 @@
           "note": "Patterns/practice heuristics"
         },
         {
-          "pack": "jsp-815",
-          "chapter": "ch09-performance-incidents-communication.md",
-          "note": "Performance, incident, and communication notes from JSP 815"
-        },
-        {
           "pack": "mrl-deskbook",
           "chapter": "ch01-mrl-deskbook-introduction.md",
           "note": "Version 2025 introduction, advisory status, and document map."
@@ -2025,21 +1995,6 @@
           "pack": "faa-8110-49",
           "chapter": "ch13-design-level-error-handling.md",
           "note": "Design-level error handling notes from FAA airborne software guidance"
-        },
-        {
-          "pack": "jsp-815",
-          "chapter": "ch05-risk-assessment-and-safety-cases.md",
-          "note": "Risk assessment and safety-case notes from JSP 815"
-        },
-        {
-          "pack": "jsp-376",
-          "chapter": "ch04-test-evaluation-and-safety-case.md",
-          "note": "ITEAP, certification strategy, and safety case ownership from Pre-Concept to handover"
-        },
-        {
-          "pack": "jsp-936",
-          "chapter": "ch06-quality-safety-security.md",
-          "note": "Quality, safety, and security expectations for AI systems from JSP 936 Part 1"
         },
         {
           "pack": "mil-hdbk-516",
@@ -2582,26 +2537,6 @@
           "note": "HSI overview in SE processes"
         },
         {
-          "pack": "jsp-936",
-          "chapter": "ch04-human-ai-teams.md",
-          "note": "Human and AI teaming expectations across roles and human control from JSP 936 Part 1"
-        },
-        {
-          "pack": "jsp-912",
-          "chapter": "ch01-what-is-hfi-and-why-defence-mandates-it.md",
-          "note": "Explains what Human Factors Integration is and why Defence policy mandates it across acquisition and through-life management, from JSP 912, March 2024."
-        },
-        {
-          "pack": "jsp-912",
-          "chapter": "ch03-hfi-and-systems-engineering.md",
-          "note": "Positions HFI within the systems engineering life cycle and links it to DLODs and System Readiness Levels, from JSP 912, March 2024."
-        },
-        {
-          "pack": "jsp-912",
-          "chapter": "ch07-detailed-system-design-hfi-4-0.md",
-          "note": "Applies human factors data to detailed system design through process HFI-4.0, from JSP 912, March 2024."
-        },
-        {
           "pack": "mil-hdbk-516",
           "chapter": "ch07-mil-hdbk-516-crew-systems-aerial-refueling.md",
           "note": "MIL-HDBK-516D, 29 May 2026 crew systems and aerial refueling criteria."
@@ -2742,16 +2677,6 @@
           "note": "System maintenance (also sustainment)"
         },
         {
-          "pack": "jsp-815",
-          "chapter": "ch08-equipment-and-infrastructure.md",
-          "note": "Equipment and infrastructure safety notes from JSP 815"
-        },
-        {
-          "pack": "jsp-376",
-          "chapter": "ch08-in-service-and-disposal.md",
-          "note": "In-service safety case reviews, the two-year review ceiling, and disposal and termination"
-        },
-        {
           "pack": "mil-hdbk-516",
           "chapter": "ch10-mil-hdbk-516-maintenance.md",
           "note": "MIL-HDBK-516D, 29 May 2026 maintenance criteria."
@@ -2765,11 +2690,6 @@
           "pack": "faa-std-025",
           "chapter": "ch02-general-format-and-common-content.md",
           "note": "Shared IRD/ICD format, outline, and common content preparation rules"
-        },
-        {
-          "pack": "jsp-815",
-          "chapter": "ch07-competence-and-delegation.md",
-          "note": "Competence and delegation notes from JSP 815"
         },
         {
           "pack": "mil-std-40051",
@@ -3202,26 +3122,6 @@
           "note": "COTS device and CBAS notes from the FAA airborne hardware guidance"
         },
         {
-          "pack": "jsp-815",
-          "chapter": "ch06-supervision-contracting-control.md",
-          "note": "Supervision, contracting, and control notes from JSP 815"
-        },
-        {
-          "pack": "jsp-376",
-          "chapter": "ch06-early-lifecycle-phases.md",
-          "note": "Pre-Concept, Concept, and Assessment safety artefacts and SOC, OBC, and FBC evidence"
-        },
-        {
-          "pack": "jsp-936",
-          "chapter": "ch07-suppliers.md",
-          "note": "Supplier and procurement direction for acquiring AI systems from JSP 936 Part 1"
-        },
-        {
-          "pack": "jsp-912",
-          "chapter": "ch06-assess-tenders-hfi-3-0.md",
-          "note": "Guides assessment of contractor tenders for human factors capability through process HFI-3.0, from JSP 912, March 2024."
-        },
-        {
           "pack": "mrl-deskbook",
           "chapter": "ch06-mrl-deskbook-contract-language.md",
           "note": "Version 2025 contract language for MRL tasking."
@@ -3377,39 +3277,14 @@
           "note": "Level of FAA involvement decisions under Order 8110.49A"
         },
         {
-          "pack": "jsp-815",
-          "chapter": "ch03-leadership-and-organisation.md",
-          "note": "Defence safety leadership and organisation notes from JSP 815"
-        },
-        {
           "pack": "nrc-nuclear",
           "chapter": "ch07-btp-7-14-staff-software-review.md",
           "note": "BTP 7-14 Rev 6 staff software review notes for implementation and design outputs"
         },
         {
-          "pack": "jsp-376",
-          "chapter": "ch02-roles-and-safety-in-the-programme.md",
-          "note": "SRO and User safety accountabilities, the programme envelope, and the unpublished Chapter 4 gap"
-        },
-        {
-          "pack": "jsp-936",
-          "chapter": "ch03-legal-ethics-governance.md",
-          "note": "Legal, ethics, and governance direction for AI-enabled capability from JSP 936 Part 1"
-        },
-        {
           "pack": "fhwa-its-se",
           "chapter": "ch04-managing-se-projects.md",
           "note": "Shows agencies how to size systems engineering effort to project risk and choose procurement and staffing approaches, from Systems Engineering for ITS, December 2022."
-        },
-        {
-          "pack": "jsp-912",
-          "chapter": "ch02-roles-and-responsibilities.md",
-          "note": "Sets out the HFI roles and responsibilities for programme teams, HFI practitioners, and senior stakeholders, from JSP 912, March 2024."
-        },
-        {
-          "pack": "jsp-912",
-          "chapter": "ch09-competencies-ethics-conduct.md",
-          "note": "Defines HFI practitioner competencies and the standards for research ethics and professional conduct, from JSP 912, March 2024."
         },
         {
           "pack": "dau-se-guidebook",
@@ -3622,21 +3497,6 @@
           "note": "AC 20-115D recognition of ED-12C and DO-178C, standard named and not quoted"
         },
         {
-          "pack": "jsp-815",
-          "chapter": "ch01-defence-safety-jsp-map.md",
-          "note": "JSP 815 map of the Defence SMS Framework and Direction and Guidance; ISO 45001 named, not quoted"
-        },
-        {
-          "pack": "jsp-815",
-          "chapter": "ch02-sms-structure-and-assurance-stages.md",
-          "note": "Defence SMS structure and assurance stages from JSP 815"
-        },
-        {
-          "pack": "jsp-815",
-          "chapter": "ch04-legislation-and-exemptions.md",
-          "note": "Legislation and exemption notes from JSP 815; statute named, not reproduced as a substitute"
-        },
-        {
           "pack": "nrc-nuclear",
           "chapter": "ch01-nrc-software-assurance-framework.md",
           "note": "NRC software-assurance framework for digital safety systems; seven-document map"
@@ -3702,21 +3562,6 @@
           "note": "Which chapter answers the qualification question, which template to open, and which regime a question belongs to"
         },
         {
-          "pack": "jsp-376",
-          "chapter": "ch01-acquisition-safety-policy.md",
-          "note": "JSP 376 policy frame: ALARP, tolerability, exemptions, and the six acquisition safety concepts"
-        },
-        {
-          "pack": "jsp-936",
-          "chapter": "ch01-introduction.md",
-          "note": "Policy, scope, applicability, and tailoring direction for dependable AI from JSP 936 Part 1"
-        },
-        {
-          "pack": "jsp-936",
-          "chapter": "ch05-ai-lifecycles.md",
-          "note": "Lifecycle direction for developing, deploying, and retiring AI systems from JSP 936 Part 1"
-        },
-        {
           "pack": "fhwa-its-se",
           "chapter": "ch01-introduction.md",
           "note": "Orientation to the FHWA systems engineering guide for ITS, its purpose, audience, and navigation, from Systems Engineering for ITS, December 2022."
@@ -3740,11 +3585,6 @@
           "pack": "fhwa-its-se",
           "chapter": "ch07-glossary-and-acronyms.md",
           "note": "Defines the terms and acronyms used across the guide, from Systems Engineering for ITS, December 2022."
-        },
-        {
-          "pack": "jsp-912",
-          "chapter": "ch04-hfi-process-goals-activities-tailoring.md",
-          "note": "Describes the HFI process goals and activities and how to tailor them to project scale and novelty, from JSP 912, March 2024."
         },
         {
           "pack": "mil-hdbk-516",
@@ -3852,11 +3692,6 @@
           "note": "AEH custom-device assurance notes from AC 20-152A, DO-254 named and not quoted"
         },
         {
-          "pack": "jsp-815",
-          "chapter": "ch10-assurance-and-audit.md",
-          "note": "Assurance and audit notes from JSP 815 Annex H V1.2"
-        },
-        {
           "pack": "easa-rules",
           "chapter": "ch03-software-assurance-115d.md",
           "note": "Software life cycle assurance as AMC 20-115D frames it, plus process reuse and transition"
@@ -3875,16 +3710,6 @@
           "pack": "easa-rules",
           "chapter": "ch07-joint-sw-aeh-workflow.md",
           "note": "Joint software and hardware certification workflow and the PSAC/PHAC-style planning interfaces"
-        },
-        {
-          "pack": "jsp-376",
-          "chapter": "ch05-supervision-assurance-approvals.md",
-          "note": "Three lines of defence, the Safety Assurance Model, and safety inside the five-case business case"
-        },
-        {
-          "pack": "jsp-936",
-          "chapter": "ch08-ai-assurance.md",
-          "note": "Assurance expectations and evidence for dependable AI claims from JSP 936 Part 1"
         }
       ]
     }

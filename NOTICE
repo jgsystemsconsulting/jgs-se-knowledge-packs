@@ -555,7 +555,6 @@ Terms  : Distribution A. No printed DOPSR case. Cover text layer has no copyrigh
            remain their publishers' copyright. Attribution to the FAA is courtesy, not
            obligation; the FAA does not endorse this pack. See packs/faa-rma/LICENSE.
 
-
 [pack: nist-800-171]
   Source : Protecting Controlled Unclassified Information in Nonfederal Systems and
            Organizations (NIST SP 800-171 Rev. 3), final 2024-05-14
@@ -764,58 +763,6 @@ Terms  : Distribution A. No printed DOPSR case. Cover text layer has no copyrigh
            DO-178C, DO-254, EUROCAE ED-12C and ED-80, and SAE ARP4754B and
            ARP4761A by reference; this pack reproduces none of that text. See
            packs/faa-8110-49/LICENSE.
-
-[pack: jsp-815]
-  Source : JSP 815 Defence Safety Management System V1.3 (Framework, Elements
-           1-12, Annexes A-G, published 2026-09-01); Annex H Audit Manual V1.2
-           (published 2026-09-01). Originating body: Directorate of Defence
-           Safety, Ministry of Defence. (c) Crown copyright.
-  Author : Ministry of Defence
-  Licence: Open Government Licence v3.0
-  Changes: reconstructed as synthesized reference notes (not a reproduction)
-  Terms  : attribution required. Contains public sector information licensed
-           under the Open Government Licence v3.0. The Ministry of Defence does
-           not endorse this pack. ISO 45001 is named and not reproduced. See
-           packs/jsp-815/LICENSE.
-
-[pack: jsp-376]
-  Source : JSP 376 Defence Acquisition Safety Policy V1.1 (April 2024).
-           Ministry of Defence, Crown copyright.
-  Author : Ministry of Defence
-  Licence: Open Government Licence v3.0
-  Changes: reconstructed as synthesized reference notes (not a reproduction)
-  Terms  : attribution required. Contains public sector information licensed
-           under the Open Government Licence v3.0. The Ministry of Defence does
-           not endorse this pack. Def Stan 00-056 and the other standards the
-           source cites are named and not reproduced. See
-           packs/jsp-376/LICENSE.
-
-[pack: jsp-936]
-
-  Source : JSP 936 Dependable Artificial Intelligence (AI) in Defence, Part 1:
-           Directive, V1.1 (November 2024). Ministry of Defence, Crown copyright.
-  Author : Ministry of Defence
-  Licence: Open Government Licence v3.0
-  Changes: reconstructed as synthesized reference notes (not a reproduction)
-  Terms  : attribution required. Contains public sector information licensed
-           under the Open Government Licence v3.0. The Ministry of Defence does
-           not endorse this pack. Other JSPs and third-party standards the
-           directive cites are named and not reproduced. Part 2 is not in this
-           pack. See packs/jsp-936/LICENSE.
-
-[pack: jsp-912]
-
-  Source : JSP 912 Human Factors Integration in Defence Systems, Part 1
-           Directive and Part 2 Guidance, V3.0 (March 2024). Ministry of
-           Defence, Crown copyright.
-  Author : Ministry of Defence
-  Licence: Open Government Licence v3.0
-  Changes: reconstructed synthesized reference notes (not a reproduction)
-  Terms  : attribution required. Contains public sector information licensed
-           under the Open Government Licence v3.0. The Ministry of Defence does
-           not endorse this pack. Other JSPs and third-party standards the
-           two parts cite are named and not reproduced. Both parts are in
-           this pack. See packs/jsp-912/LICENSE.
 
 [pack: fhwa-its-se]
 
