@@ -3,7 +3,7 @@
 This pack orients a reader in the EU and UK regulatory treatment of software: whether software qualifies as a medical device or an in vitro diagnostic device, how qualified software is classified, and what clinical evidence obligations run through the device lifecycle.
 It covers the European Union under the MDR and IVDR and Great Britain under the UKCA regime.
 It does not cover the United States.
-FDA questions, including 510(k) and De Novo pathways and FDA risk categorization of software as a medical device, belong to the fda-med-device pack and get no answer here.
+FDA questions, including 510(k) and De Novo pathways and FDA risk categorization of software as a medical device, belong to the US med-device sector repo (jgs-med-device-knowledge-packs) and get no answer here.
 
 The binding layer in the EU is the legislation itself.
 Regulation (EU) 2017/745, the MDR, covers medical devices.

@@ -17,4 +17,4 @@ Decision shortcuts. Each section names the chapter that carries the detail.
 ## Which regime does the question belong to? → ch01
 
 - First sort EU from UK: MDCG guidance answers EU questions, MHRA guidance answers Great Britain questions; the question-to-document map is ch01. (ch01)
-- A US FDA question belongs to the fda-med-device pack and gets no answer here. (ch01)
+- A US FDA question belongs to the US med-device sector repo (jgs-med-device-knowledge-packs) and gets no answer here. (ch01)

@@ -69,6 +69,6 @@ Post-market clinical follow-up is a continuous process that updates the clinical
 
 The binding text is the regulation: Regulation (EU) 2017/745 (MDR), Regulation (EU) 2017/746 (IVDR), and the UK Medical Devices Regulations 2002. This pack names them and does not reproduce them. A reader who needs the regulation text reads it on EUR-Lex or legislation.gov.uk.
 
-The US counterpart is `fda-med-device`. That pack owns FDA questions, including 510(k) and De Novo pathways and FDA risk categorization; this pack does not answer FDA questions.
+The US counterpart lives in the jgs-med-device-knowledge-packs sector repo. That sector owns FDA questions, including 510(k) and De Novo pathways and FDA risk categorization; this pack does not answer FDA questions.
 
 Scope limits, repeated: IEC 62304, ISO 13485, and ISO 14971 are named only and not reproduced; MDR and IVDR are named only and not reproduced; the pack is synthesized reference notes and not legal advice; MDCG guidance is not legally binding; MHRA guidance is UK-specific. These documents revise, so check for the current revision before relying on any single requirement.

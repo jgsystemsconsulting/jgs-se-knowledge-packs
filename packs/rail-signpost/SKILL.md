@@ -95,7 +95,7 @@ incoming edition. Do not quote a date this file does not print.
 ## Scope & Limits
 
 - No reproduced standards text. Rows carry designation, title, edition, owner, status, and URL only.
-- No in-repo pack is the open path. Do not send a reader to `mil-std-882`, `faa-8110-49`, or `nhtsa-vehicle` as a railway equivalent.
+- No in-repo pack is the open path. Do not send a reader to `mil-std-882`, or to aviation or automotive sector packs, as a railway equivalent.
 - EN 50129 is safety-related electronic systems for signalling. EN 50159 is the communication standard.
 - EN 50128 has no 2025 edition in this signpost. EN 50129 lists 2018 and 2026.
 - CSM and ORR rows are the free risk-process and UK regulatory framing. They do not replace EN lifecycle, software, or safety-case content.
