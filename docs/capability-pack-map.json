@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "map_version": "1.24.4",
-  "generated_on": "2026-11-22",
+  "map_version": "1.24.5",
+  "generated_on": "2026-11-23",
   "clusters": [
     {
       "name": "Systems Thinking & Fundamentals",
@@ -242,16 +242,6 @@
           "note": "Patterns/practice heuristics"
         },
         {
-          "pack": "fda-med-device",
-          "chapter": "ch02-premarket-software-documentation.md",
-          "note": "Content of Premarket Submissions for Device Software Functions, June 2023 guidance notes"
-        },
-        {
-          "pack": "nrc-nuclear",
-          "chapter": "ch03-software-requirements-specifications.md",
-          "note": "Software requirements specification notes from RG 1.172 Rev 1"
-        },
-        {
           "pack": "fhwa-its-se",
           "chapter": "ch06-systems-engineering-documentation.md",
           "note": "Supplies purpose, tailoring guidance, checklists, and templates for each systems engineering document, from Systems Engineering for ITS, December 2022."
@@ -475,41 +465,6 @@
           "pack": "nasa-se-handbook",
           "chapter": "ch23-5-3-product-verification.md",
           "note": "Product verification process"
-        },
-        {
-          "pack": "fda-med-device",
-          "chapter": "ch03-software-validation.md",
-          "note": "General Principles of Software Validation, January 2002, taught as the 2002 guidance not as CSA"
-        },
-        {
-          "pack": "fda-med-device",
-          "chapter": "ch04-computer-software-assurance.md",
-          "note": "Computer Software Assurance final guidance, February 2026, docket FDA-2022-D-0795"
-        },
-        {
-          "pack": "faa-8110-49",
-          "chapter": "ch04-software-conformity-inspection.md",
-          "note": "Software conformity inspection notes from Order 8110.49A"
-        },
-        {
-          "pack": "faa-8110-49",
-          "chapter": "ch08-aeh-verification-tools-reuse.md",
-          "note": "AEH verification, tools, and reuse notes from AC 20-152A"
-        },
-        {
-          "pack": "faa-8110-49",
-          "chapter": "ch12-data-and-control-coupling-practices.md",
-          "note": "Data and control coupling practices from FAA airborne software guidance"
-        },
-        {
-          "pack": "nrc-nuclear",
-          "chapter": "ch05-verification-validation-reviews-audits.md",
-          "note": "Verification, validation, review, and audit notes from RG 1.168 Rev 2"
-        },
-        {
-          "pack": "nrc-nuclear",
-          "chapter": "ch06-test-documentation-and-unit-testing.md",
-          "note": "Test documentation and unit testing notes from RG 1.170 Rev 1 and RG 1.171 Rev 1"
         },
         {
           "pack": "med-device-eu",
@@ -990,26 +945,6 @@
           "pack": "nasa-se-handbook",
           "chapter": "ch31-6-5-configuration-management.md",
           "note": "Configuration management process"
-        },
-        {
-          "pack": "fda-med-device",
-          "chapter": "ch10-software-changes-510k.md",
-          "note": "Software change decisions for 510(k) submissions under FDA device-software guidance"
-        },
-        {
-          "pack": "faa-8110-49",
-          "chapter": "ch06-legacy-software-fls-ums.md",
-          "note": "Field-loadable and user-modifiable software notes from Order 8110.49A"
-        },
-        {
-          "pack": "faa-8110-49",
-          "chapter": "ch11-software-change-impact-analysis.md",
-          "note": "Software change impact analysis notes from Order 8110.49A"
-        },
-        {
-          "pack": "nrc-nuclear",
-          "chapter": "ch04-software-configuration-management-plans.md",
-          "note": "Software configuration management plan notes from RG 1.169 Rev 1"
         },
         {
           "pack": "nasa-de-acquisition",
@@ -1527,11 +1462,6 @@
           "note": "SPC monitoring and control (quality control)"
         },
         {
-          "pack": "fda-med-device",
-          "chapter": "ch05-qmsr-quality-management.md",
-          "note": "QMSR amendments to 21 CFR 820, effective 2026-02-02, ISO 13485 named and not quoted"
-        },
-        {
           "pack": "med-device-eu",
           "chapter": "ch06-pmcf-plan.md",
           "note": "What an MDCG 2020-7 PMCF plan commits to"
@@ -1972,31 +1902,6 @@
           "note": "Assessing product reliability"
         },
         {
-          "pack": "nhtsa-vehicle",
-          "chapter": "ch03-nhtsa-ads-vision.md",
-          "note": "Synthesized notes from NHTSA ADS 2.0 with the currency caveat"
-        },
-        {
-          "pack": "nhtsa-vehicle",
-          "chapter": "ch04-nhtsa-fmvss-occupant.md",
-          "note": "FMVSS occupant protection selections: 201, 208, 209, 210, 214, 226"
-        },
-        {
-          "pack": "nhtsa-vehicle",
-          "chapter": "ch05-nhtsa-fmvss-brakes-lighting.md",
-          "note": "FMVSS brake, stability, lighting, and driver-present selections"
-        },
-        {
-          "pack": "nhtsa-vehicle",
-          "chapter": "ch06-nhtsa-fmvss-fuel-ev.md",
-          "note": "FMVSS fuel system integrity and EV electrical selections"
-        },
-        {
-          "pack": "faa-8110-49",
-          "chapter": "ch13-design-level-error-handling.md",
-          "note": "Design-level error handling notes from FAA airborne software guidance"
-        },
-        {
           "pack": "mil-hdbk-516",
           "chapter": "ch03-mil-hdbk-516-structures.md",
           "note": "MIL-HDBK-516D, 29 May 2026 structures criteria."
@@ -2380,26 +2285,6 @@
           "pack": "nist-sse",
           "chapter": "patterns.md (support file)",
           "note": "Patterns/practice heuristics"
-        },
-        {
-          "pack": "nhtsa-vehicle",
-          "chapter": "ch02-nhtsa-cyber-practices.md",
-          "note": "Synthesized notes from the NHTSA 2022 vehicle cybersecurity guidance"
-        },
-        {
-          "pack": "fda-med-device",
-          "chapter": "ch06-cybersecurity-qms.md",
-          "note": "Cybersecurity in Medical Devices QMS considerations, February 2026 final, one document with premarket content"
-        },
-        {
-          "pack": "fda-med-device",
-          "chapter": "ch07-cybersecurity-premarket.md",
-          "note": "Premarket cybersecurity submission content from the February 2026 cybersecurity guidance"
-        },
-        {
-          "pack": "fda-med-device",
-          "chapter": "ch09-premarket-cyber-documentation.md",
-          "note": "Premarket cyber documentation expectations from the February 2026 cybersecurity guidance"
         },
         {
           "pack": "mrl-deskbook",
@@ -3112,16 +2997,6 @@
           "note": "Requirements flow to contracted projects"
         },
         {
-          "pack": "faa-8110-49",
-          "chapter": "ch09-aeh-cots-ip.md",
-          "note": "AEH COTS intellectual-property notes from AC 20-152A"
-        },
-        {
-          "pack": "faa-8110-49",
-          "chapter": "ch10-cots-devices-and-cbas.md",
-          "note": "COTS device and CBAS notes from the FAA airborne hardware guidance"
-        },
-        {
           "pack": "mrl-deskbook",
           "chapter": "ch06-mrl-deskbook-contract-language.md",
           "note": "Version 2025 contract language for MRL tasking."
@@ -3265,21 +3140,6 @@
           "pack": "nist-csf",
           "chapter": "ch02-govern-gv.md",
           "note": "Govern function (cyber governance)"
-        },
-        {
-          "pack": "faa-8110-49",
-          "chapter": "ch02-software-review-process.md",
-          "note": "FAA software review process under Order 8110.49A, certification-staff notes"
-        },
-        {
-          "pack": "faa-8110-49",
-          "chapter": "ch03-level-of-faa-involvement.md",
-          "note": "Level of FAA involvement decisions under Order 8110.49A"
-        },
-        {
-          "pack": "nrc-nuclear",
-          "chapter": "ch07-btp-7-14-staff-software-review.md",
-          "note": "BTP 7-14 Rev 6 staff software review notes for implementation and design outputs"
         },
         {
           "pack": "fhwa-its-se",
@@ -3462,84 +3322,9 @@
           "note": "Enabling individuals (competency)"
         },
         {
-          "pack": "nhtsa-vehicle",
-          "chapter": "ch01-nhtsa-vehicle-introduction.md",
-          "note": "Scope statement for the NHTSA vehicle pack: three sources, pinned date, refusals"
-        },
-        {
-          "pack": "fda-med-device",
-          "chapter": "ch01-regulatory-landscape.md",
-          "note": "FDA device-software regulatory landscape and the QMSR incorporation of ISO 13485 by reference, standard not quoted"
-        },
-        {
-          "pack": "fda-med-device",
-          "chapter": "ch08-software-function-scope.md",
-          "note": "Which device software functions the premarket documentation guidance covers"
-        },
-        {
-          "pack": "fda-med-device",
-          "chapter": "ch11-clinical-decision-support.md",
-          "note": "Clinical Decision Support Software final guidance, January 2026, docket FDA-2017-D-6569"
-        },
-        {
-          "pack": "fda-med-device",
-          "chapter": "ch12-submissions-estar.md",
-          "note": "eSTAR program synthesis, program page content current 2026-09-21, page not copied"
-        },
-        {
-          "pack": "faa-8110-49",
-          "chapter": "ch01-airborne-approval-map.md",
-          "note": "FAA airborne approval map from Order 8110.49A and the three ACs; standards named, not quoted"
-        },
-        {
-          "pack": "faa-8110-49",
-          "chapter": "ch05-do-178c-recognition-and-transition.md",
-          "note": "AC 20-115D recognition of ED-12C and DO-178C, standard named and not quoted"
-        },
-        {
-          "pack": "nrc-nuclear",
-          "chapter": "ch01-nrc-software-assurance-framework.md",
-          "note": "NRC software-assurance framework for digital safety systems; seven-document map"
-        },
-        {
-          "pack": "nrc-nuclear",
-          "chapter": "ch02-software-life-cycle-processes.md",
-          "note": "Software life cycle process notes from RG 1.173 Rev 1 and BTP 7-14 planning review"
-        },
-        {
-          "pack": "nrc-nuclear",
-          "chapter": "ch08-endorsed-standards-and-adjacent-guidance.md",
-          "note": "Endorsed IEEE, IEC, and IAEA standards named by designation and edition, not reproduced"
-        },
-        {
-          "pack": "easa-rules",
-          "chapter": "ch01-moc-map.md",
-          "note": "Which AMC answers which question, with the ED Decision anchors and the AltMoC rule"
-        },
-        {
-          "pack": "easa-rules",
-          "chapter": "ch02-amc-20-115d-scope.md",
-          "note": "AMC 20-115D purpose, applicability, and its replacement of AMC 20-115C"
-        },
-        {
-          "pack": "easa-rules",
-          "chapter": "ch05-amc-20-152a-scope.md",
-          "note": "AMC 20-152A purpose, applicability, and DAL A-C coverage with the DAL D note"
-        },
-        {
-          "pack": "easa-rules",
-          "chapter": "glossary.md (support file)",
-          "note": "Key terms (AEH, AltMoC, CBA, COTS, DAL, ETSO, GM) with chapter references"
-        },
-        {
-          "pack": "easa-rules",
-          "chapter": "cheatsheet.md (support file)",
-          "note": "Decision rules for which AMC governs, which DAL row applies, and where the FAA twin sits"
-        },
-        {
           "pack": "med-device-eu",
           "chapter": "ch01-eu-uk-device-software-orientation.md",
-          "note": "Which MDCG or MHRA document answers which device-software question, and how this pack differs from fda-med-device"
+          "note": "Which MDCG or MHRA document answers which device-software question, and how this pack differs from FDA device-software guidance; the FDA pack's owner is the med-device repo"
         },
         {
           "pack": "med-device-eu",
@@ -3685,31 +3470,6 @@
           "pack": "nist-ai-rmf",
           "chapter": "ch03-trustworthiness-characteristics.md",
           "note": "Trustworthiness characteristics of AI"
-        },
-        {
-          "pack": "faa-8110-49",
-          "chapter": "ch07-aeh-custom-devices.md",
-          "note": "AEH custom-device assurance notes from AC 20-152A, DO-254 named and not quoted"
-        },
-        {
-          "pack": "easa-rules",
-          "chapter": "ch03-software-assurance-115d.md",
-          "note": "Software life cycle assurance as AMC 20-115D frames it, plus process reuse and transition"
-        },
-        {
-          "pack": "easa-rules",
-          "chapter": "ch04-transition-tools-gm.md",
-          "note": "Tool qualification pointer and GM1 to GM3 clarification material for AMC 20-115D"
-        },
-        {
-          "pack": "easa-rules",
-          "chapter": "ch06-aeh-objectives.md",
-          "note": "AEH objectives AMC 20-152A adds for custom devices, COTS devices, and circuit board assemblies"
-        },
-        {
-          "pack": "easa-rules",
-          "chapter": "ch07-joint-sw-aeh-workflow.md",
-          "note": "Joint software and hardware certification workflow and the PSAC/PHAC-style planning interfaces"
         }
       ]
     }

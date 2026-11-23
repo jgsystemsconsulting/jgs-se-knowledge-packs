@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "repository": "jgs-se-knowledge-packs",
   "scope": "systems engineering",
-  "updated": "2026-11-22",
+  "updated": "2026-11-23",
   "packs": [
     {
       "slug": "faa-rma",
@@ -61,7 +61,7 @@
     },
     {
       "slug": "nist-800-37",
-      "title": "NIST SP 800-37 Rev 2 — Risk Management Framework (RMF)",
+      "title": "NIST SP 800-37 Rev 2 \u2014 Risk Management Framework (RMF)",
       "publisher": "NIST (US Department of Commerce)",
       "source_version": "Revision 2 (December 2018)",
       "license": "Public Domain (US Government work)",
@@ -72,7 +72,7 @@
     },
     {
       "slug": "nist-sse",
-      "title": "NIST SP 800-160 — Systems Security Engineering (Vol 1 + Vol 2)",
+      "title": "NIST SP 800-160 \u2014 Systems Security Engineering (Vol 1 + Vol 2)",
       "publisher": "NIST (US Department of Commerce)",
       "source_version": "Vol 1 Rev 1 (2022) + Vol 2 Rev 1 (2021)",
       "license": "Public Domain (US Government work)",
@@ -160,7 +160,7 @@
     },
     {
       "slug": "nasa-npr-7123",
-      "title": "NASA NPR 7123.1D — Systems Engineering Processes and Requirements",
+      "title": "NASA NPR 7123.1D \u2014 Systems Engineering Processes and Requirements",
       "publisher": "NASA",
       "source_version": "Rev D w/Change 2 (2023)",
       "license": "Public Domain (US Government work)",
@@ -204,7 +204,7 @@
     },
     {
       "slug": "mil-std-882",
-      "title": "MIL-STD-882E — DoD Standard Practice: System Safety (w/Change 1)",
+      "title": "MIL-STD-882E \u2014 DoD Standard Practice: System Safety (w/Change 1)",
       "publisher": "US Department of Defense",
       "source_version": "Rev E w/Change 1 (2023)",
       "license": "Public Domain (US Government work)",
@@ -226,7 +226,7 @@
     },
     {
       "slug": "dodaf",
-      "title": "DoD Architecture Framework (DoDAF) 2.02 Change 1 — Volume II",
+      "title": "DoD Architecture Framework (DoDAF) 2.02 Change 1 \u2014 Volume II",
       "publisher": "US Department of Defense",
       "source_version": "2.02 Change 1 (2015)",
       "license": "Public Domain (US Government work)",
@@ -237,10 +237,10 @@
     },
     {
       "slug": "eu-ai-act",
-      "title": "EU Artificial Intelligence Act — Regulation (EU) 2024/1689",
+      "title": "EU Artificial Intelligence Act \u2014 Regulation (EU) 2024/1689",
       "publisher": "European Union (Official Journal)",
       "source_version": "Regulation (EU) 2024/1689",
-      "license": "EU OJ — reproduction authorised with source acknowledgement",
+      "license": "EU OJ \u2014 reproduction authorised with source acknowledgement",
       "license_tier": 2,
       "commercial_use": true,
       "chapters": 12,
@@ -270,7 +270,7 @@
     },
     {
       "slug": "dod-mosa",
-      "title": "DoD MOSA — Implementing a Modular Open Systems Approach in DoD Programs (OUSD R&E)",
+      "title": "DoD MOSA \u2014 Implementing a Modular Open Systems Approach in DoD Programs (OUSD R&E)",
       "publisher": "US Department of Defense (Office of the Under Secretary of Defense for Research and Engineering)",
       "source_version": "February 2025 (DOPSR 25-T-1210)",
       "license": "Public Domain (US Government work); Distribution A",
@@ -490,7 +490,7 @@
     },
     {
       "slug": "nasa-npr-7150",
-      "title": "NASA NPR 7150.2D — NASA Software Engineering Requirements",
+      "title": "NASA NPR 7150.2D \u2014 NASA Software Engineering Requirements",
       "publisher": "NASA",
       "source_version": "NPR 7150.2D (Effective March 08, 2022)",
       "license": "Public Domain (US Government work, 17 U.S.C. 105)",
@@ -701,61 +701,6 @@
       "status": "live"
     },
     {
-      "slug": "nhtsa-vehicle",
-      "title": "NHTSA Vehicle Safety: Cybersecurity Best Practices, ADS 2.0, and FMVSS Selections",
-      "publisher": "NHTSA (US Department of Transportation)",
-      "source_version": "Cyber 2022 final; ADS 2.0 (2017); 49 CFR Part 571 selections at eCFR 2025-01-01",
-      "license": "Public Domain (US Government work, 17 U.S.C. § 105)",
-      "license_tier": 1,
-      "commercial_use": true,
-      "chapters": 6,
-      "status": "live"
-    },
-    {
-      "slug": "fda-med-device",
-      "title": "FDA Medical Device Software Reference (QMSR and device software guidance)",
-      "publisher": "FDA (CDRH/CBER)",
-      "source_version": "QMSR final rule 89 FR 7496 (2024-01709, published 2024-02-02, effective 2026-02-02) amending 21 CFR 820; Content of Premarket Submissions for Device Software Functions (June 2023, FDA-2021-D-0775); General Principles of Software Validation (January 2002, FDA-1997-D-0029); Computer Software Assurance for Production and Quality Management System Software (February 2026, FDA-2022-D-0795); Cybersecurity in Medical Devices: Quality Management System Considerations and Content of Premarket Submissions (February 2026, FDA-2021-D-1158); Clinical Decision Support Software (January 2026, FDA-2017-D-6569); eSTAR program page (content current 2026-09-21)",
-      "license": "Public Domain (US Government work, 17 U.S.C. § 105)",
-      "license_tier": 1,
-      "commercial_use": true,
-      "chapters": 12,
-      "status": "live"
-    },
-    {
-      "slug": "faa-8110-49",
-      "title": "FAA Airborne Software and AEH Approval Guidance",
-      "publisher": "Federal Aviation Administration",
-      "source_version": "FAA Order 8110.49A, Software Approval Guidelines (effective 2018-03-29, cancels 8110.49 Change 2 dated 2017-04-10); AC 20-115D, Airborne Software Development Assurance Using EUROCAE ED-12() and RTCA DO-178() (issued 2017-07-21); AC 20-152A, Development Assurance for Airborne Electronic Hardware (issued 2022-10-07); AC 00-69, Best Practices for Airborne Software Development Assurance Using EUROCAE ED-12() and RTCA DO-178() (issued 2017-07-21)",
-      "license": "Public Domain (US Government work, 17 U.S.C. § 105)",
-      "license_tier": 1,
-      "commercial_use": true,
-      "chapters": 13,
-      "status": "live"
-    },
-    {
-      "slug": "nrc-nuclear",
-      "title": "NRC Digital Safety-System Software Assurance",
-      "publisher": "U.S. Nuclear Regulatory Commission",
-      "source_version": "RG 1.168 Rev 2, Verification, Validation, Reviews, and Audits for Digital Computer Software Used in Safety Systems of Nuclear Power Plants (July 2013, ML13073A210); RG 1.169 Rev 1, Configuration Management Plans for Digital Computer Software Used in Safety Systems of Nuclear Power Plants (July 2013, ML12355A642); RG 1.170 Rev 1, Software Test Documentation for Digital Computer Software Used in Safety Systems of Nuclear Power Plants (July 2013, ML13003A216); RG 1.171 Rev 1, Software Unit Testing for Digital Computer Software Used in Safety Systems of Nuclear Power Plants (July 2013, ML13004A375); RG 1.172 Rev 1, Software Requirements Specifications for Digital Computer Software Used in Safety Systems of Nuclear Power Plants (July 2013, ML13007A173); RG 1.173 Rev 1, Developing Software Life Cycle Processes for Digital Computer Software Used in Safety Systems of Nuclear Power Plants (July 2013, ML13009A190); NUREG-0800 BTP 7-14 Rev 6, Guidance on Software Reviews for Digital Computer-Based Instrumentation and Control Systems (August 2016, ML16019A308)",
-      "license": "Public Domain (US Government work, 17 U.S.C. § 105)",
-      "license_tier": 1,
-      "commercial_use": true,
-      "chapters": 8,
-      "status": "live"
-    },
-    {
-      "slug": "easa-rules",
-      "title": "EASA AMC 20-115D and AMC 20-152A (airborne software and AEH development assurance)",
-      "publisher": "European Union Aviation Safety Agency; reconstructed by JG Systems Consulting Ltd",
-      "source_version": "S1 AMC 20-115D (ED Decision 2017/020/R, AMC-20 Amendment 14; consolidated in Amendment 23); S2 AMC 20-152A (ED Decision 2020/010/R, AMC-20 Amendment 19; consolidated in Amendment 23); S3 EAR AMC-20 Amendment 23 (June 2023) as retrieval carrier; S5/S6 decision anchors. Pinned 2026-09-26.",
-      "license": "Per-document: EASA site reproduction-with-acknowledgement grant, qualified by ED Decision all-rights-reserved footers; reconstructed notes with attribution; official PDFs not redistributed; commercial use pending per-document determination",
-      "license_tier": 2,
-      "commercial_use": false,
-      "chapters": 7,
-      "status": "live"
-    },
-    {
       "slug": "med-device-eu",
       "title": "EU and UK Medical Device Software Reference (MDCG guidance and MHRA software guidance)",
       "publisher": "European Commission (MDCG) and UK MHRA",
@@ -771,7 +716,7 @@
       "title": "Systems Engineering for ITS",
       "publisher": "Federal Highway Administration",
       "source_version": "Systems Engineering for ITS, fourth generation (December 2022)",
-      "license": "Public Domain (US Government work, 17 U.S.C. § 105)",
+      "license": "Public Domain (US Government work, 17 U.S.C. \u00a7 105)",
       "license_tier": 1,
       "commercial_use": true,
       "chapters": 7,

@@ -11,6 +11,13 @@ All notable changes to this project are documented here. Format follows
 
 ## [Unreleased]
 
+## [1.24.5] - 2026-11-23
+
+Removed
+
+- Bare removal of eight sector slug copies. Content: `easa-rules`, `faa-8110-49`, `fda-med-device`, `nhtsa-vehicle`, `nrc-nuclear`. Signposts: `automotive-signpost`, `avionics-signpost`, `functional-safety-signpost`. No same-slug survivors and no replacement signposts. Owner repos already hold the canonical copies: aviation (`easa-rules`, `faa-8110-49`, `avionics-signpost`), med-device (`fda-med-device`), automotive (`nhtsa-vehicle`, `automotive-signpost`, `functional-safety-signpost`), nuclear (`nrc-nuclear`). Live catalogue is 65 content packs, 5 signposts, and the `/se` orchestrator (71 skills).
+- Consumers with both catalogues installed should update to SE v1.24.5 so the sector repo owns each slug alone. Until this tag is pushed and consumed, the old SE copies and the sector copies can coexist. Licence records for the removed packs live in the sector repos' NOTICE files and pack LICENSE files. `easa-rules` had no SE NOTICE block; the aviation copy is the record. No force-upgrade.
+
 
 ## [1.24.4] - 2026-11-22
 

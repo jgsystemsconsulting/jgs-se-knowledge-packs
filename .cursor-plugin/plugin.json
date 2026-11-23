@@ -2,7 +2,7 @@
   "name": "jgs-se-knowledge-packs",
   "displayName": "JGS SE Knowledge Packs",
   "description": "Licence-vetted systems-engineering knowledge-pack skills reconstructed from genuinely open, commercially-redistributable sources (NASA, NIST, DoD, GAO, FAA, EU AI Act). Ask a topic; the agent reads the right chapter and answers from reference notes, not a hazy recollection.",
-  "version": "1.24.4",
+  "version": "1.24.5",
   "author": {
     "name": "JG Systems Consulting Ltd."
   },
@@ -27,8 +27,6 @@
     "skills"
   ],
   "skills": [
-    "./packs/automotive-signpost/SKILL.md",
-    "./packs/avionics-signpost/SKILL.md",
     "./packs/rail-signpost/SKILL.md",
     "./packs/space-signpost/SKILL.md",
     "./packs/maritime-signpost/SKILL.md",
@@ -47,7 +45,6 @@
     "./packs/doe-sem/SKILL.md",
     "./packs/dote-te-guidebook/SKILL.md",
     "./packs/eu-ai-act/SKILL.md",
-    "./packs/faa-8110-49/SKILL.md",
     "./packs/faa-ams-vv/SKILL.md",
     "./packs/faa-hf-std/SKILL.md",
     "./packs/faa-req-handbook/SKILL.md",
@@ -55,9 +52,7 @@
     "./packs/faa-sem/SKILL.md",
     "./packs/faa-std-025/SKILL.md",
     "./packs/faa-system-safety/SKILL.md",
-    "./packs/fda-med-device/SKILL.md",
     "./packs/federal-bca/SKILL.md",
-    "./packs/functional-safety-signpost/SKILL.md",
     "./packs/gao-agile/SKILL.md",
     "./packs/gao-cost/SKILL.md",
     "./packs/gao-schedule/SKILL.md",
@@ -87,7 +82,6 @@
     "./packs/nasa-std-8719-14/SKILL.md",
     "./packs/nasa-system-safety/SKILL.md",
     "./packs/nasa-systems-modeling/SKILL.md",
-    "./packs/nhtsa-vehicle/SKILL.md",
     "./packs/nist-800-171/SKILL.md",
     "./packs/nist-800-37/SKILL.md",
     "./packs/nist-800-61/SKILL.md",
@@ -97,7 +91,6 @@
     "./packs/nist-ssdf/SKILL.md",
     "./packs/nist-sse/SKILL.md",
     "./packs/nist-stat-handbook/SKILL.md",
-    "./packs/nrc-nuclear/SKILL.md",
     "./packs/omg-signpost/SKILL.md",
     "./packs/requirements-writing/SKILL.md",
     "./packs/sd-22-dmsms/SKILL.md",

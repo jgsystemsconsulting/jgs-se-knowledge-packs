@@ -1,7 +1,7 @@
 {
   "name": "jgs-se-knowledge-packs",
   "description": "Licence-vetted systems-engineering knowledge-pack skills for coding agents, reconstructed from genuinely open sources. Tooling MIT; pack content under each source's own licence.",
-  "version": "1.24.4",
+  "version": "1.24.5",
   "author": {
     "name": "JG Systems Consulting Ltd."
   },
@@ -9,8 +9,6 @@
   "repository": "https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs",
   "license": "MIT",
   "skills": [
-    "./packs/automotive-signpost",
-    "./packs/avionics-signpost",
     "./packs/cisa-cpg",
     "./packs/dafman-63-119",
     "./packs/dau-se-guidebook",
@@ -25,9 +23,7 @@
     "./packs/doe-o-413-3",
     "./packs/doe-sem",
     "./packs/dote-te-guidebook",
-    "./packs/easa-rules",
     "./packs/eu-ai-act",
-    "./packs/faa-8110-49",
     "./packs/faa-ams-vv",
     "./packs/faa-hf-std",
     "./packs/faa-req-handbook",
@@ -35,9 +31,7 @@
     "./packs/faa-sem",
     "./packs/faa-std-025",
     "./packs/faa-system-safety",
-    "./packs/fda-med-device",
     "./packs/federal-bca",
-    "./packs/functional-safety-signpost",
     "./packs/gao-agile",
     "./packs/gao-cost",
     "./packs/gao-schedule",
@@ -69,7 +63,6 @@
     "./packs/nasa-std-8719-14",
     "./packs/nasa-system-safety",
     "./packs/nasa-systems-modeling",
-    "./packs/nhtsa-vehicle",
     "./packs/nist-800-171",
     "./packs/nist-800-37",
     "./packs/nist-800-61",
@@ -79,7 +72,6 @@
     "./packs/nist-ssdf",
     "./packs/nist-sse",
     "./packs/nist-stat-handbook",
-    "./packs/nrc-nuclear",
     "./packs/omg-signpost",
     "./packs/rail-signpost",
     "./packs/requirements-writing",
