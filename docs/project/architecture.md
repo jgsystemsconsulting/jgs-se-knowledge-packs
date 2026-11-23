@@ -53,3 +53,27 @@ status: verified
 source: 2026-11-04-retire-scaffold-offset-vocab
 
 The three non-template loci (build_pack.py docstring, printed next-step 2, README How a pack is built) adopt contents-list freeze wording and drop the retired token set outright: no offset-mapped, chapter-offset, or chapter offsets string survives in any of them. The jgs-reference-skill URL and extraction credit stay; only the retired mapping step changes name. Smoke verifies with source greps plus a template-string read that imports build_pack without calling main, so no packs/ directory is created.
+
+## AD-10
+status: accepted
+source: 2026-11-22-se-sector-pack-reconciliation
+
+Each sector repo already holds the canonical copy of its publications. nhtsa-vehicle and nrc-nuclear are more complete in the sector repos. easa-rules, faa-8110-49, and fda-med-device match chapter counts and still differ by hash. The three signposts are sector-canonical. SE diffs are drift evidence. This cut does not transplant, merge, or import those diffs into any sector repo.
+
+## AD-11
+status: accepted
+source: 2026-11-22-se-sector-pack-reconciliation
+
+Removal class matches SE v1.24.4, which removed four UK defence slugs as a patch. This cut removes five content packs and three signposts and ships as patch 1.24.5, not minor 1.25.0. The tag is local. Push of the SE tag, the reference-skill commit, and any pointer commit waits for owner say-so.
+
+## AD-12
+status: accepted
+source: 2026-11-22-se-sector-pack-reconciliation
+
+The slug checker is copied unchanged into jgs-reference-skill/tools/. The UK copy stays, with a one-line note that the reference-skill path is canonical. Pointer sentences go in docs/FLEET-CONVENTIONS.md of the aviation, med-device, and automotive repos. Those repos have no AGENTS.md. No CI change. The nuclear repo is 42 commits ahead of origin and receives no edit, including no pointer.
+
+## AD-13
+status: accepted
+source: 2026-11-22-se-sector-pack-reconciliation
+
+Classification assignments and note overrides for the five content packs are deleted, then the capability map is regenerated. Measured on 2026-11-22, those packs account for 48 rows: faa-8110-49 13, fda-med-device 12, easa-rules 9, nrc-nuclear 8, nhtsa-vehicle 6. NOTES_COUNT moves from 710 to 662 if no other row changes. Recompute at cut time. expected_signposts drops automotive-signpost, functional-safety-signpost, and avionics-signpost and keeps the other five in current order. THRESHOLDS floors are not lowered. SE has no EMPTY_TREE_PAIR, and validate.yml does not pin NOTES_COUNT. Do not invent those pins.
